@@ -1,0 +1,744 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r111 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	entities utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r111%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%3A%0A%09entities%20utils&In-Reply-To=%3C200805171742.m4HHg0Pv028550%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000105.html">
+   <LINK REL="Next"  HREF="000107.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r111 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	entities utils</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r111%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%3A%0A%09entities%20utils&In-Reply-To=%3C200805171742.m4HHg0Pv028550%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r111 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	entities utils">knitter at mail.berlios.de
+       </A><BR>
+    <I>Sat May 17 19:42:00 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000105.html">[Jfindmyfiles-commits] r110 - in trunk: media/icons/x16	media/icons/x32	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JCalendar	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32	project/JFindMyFiles/nbproject
+</A></li>
+        <LI>Next message: <A HREF="000107.html">[Jfindmyfiles-commits] r112 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#106">[ date ]</a>
+              <a href="thread.html#106">[ thread ]</a>
+              <a href="subject.html#106">[ subject ]</a>
+              <a href="author.html#106">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-17 19:41:26 +0200 (Sat, 17 May 2008)
+New Revision: 111
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/FileUtils.java
+Log:
+Alteradas as entidades do modelo para acomodarem alguns atributos que estavam em falta.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -29,6 +29,15 @@
+     private FileWrapper owner;
+     private byte[] data;
+ 
++    public AudioData() {
++        //DO NOTHING
++    }
++    
++    public AudioData(FileWrapper owner, byte[] data) {
++        this.owner = owner;
++        this.data = data;
++    }
++
+     public Long getId() {
+         return id;
+     }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -22,7 +22,7 @@
+     private Date creationDate;
+ 
+     public CatalogProperties() {
+-        //do nothing;
++        //DO NOTHING
+     }
+ 
+     //TODO: confirm if it's really necessary
+@@ -38,7 +38,23 @@
+         this.totalFolders = totalFolders;
+         this.creationDate = creationDate;
+     }
++    
++    public void increaseDiskNumber(int amount) {
++        diskNumber += amount;
++    }
++    
++    public void increaseTotalFiles(int amount) {
++        totalFiles += totalFiles;
++    }
++    
++    public void increaseTotalFolders(int amount) {
++        totalFolders += amount;
++    }
+ 
++    public void increaseTotalSize(long amount) {
++        totalSize += amount;
++    }   
++    
+     public Date getCreationDate() {
+         return creationDate;
+     }
+@@ -54,7 +70,7 @@
+     public void setDescription(String description) {
+         this.description = description;
+     }
+-
++    
+     public int getDiskNumber() {
+         return diskNumber;
+     }
+@@ -79,6 +95,7 @@
+         this.name = name;
+     }
+ 
++    
+     public long getTotalFiles() {
+         return totalFiles;
+     }
+@@ -86,7 +103,7 @@
+     public void setTotalFiles(long totalFiles) {
+         this.totalFiles = totalFiles;
+     }
+-
++        
+     public long getTotalFolders() {
+         return totalFolders;
+     }
+@@ -94,7 +111,7 @@
+     public void setTotalFolders(long totalFolders) {
+         this.totalFolders = totalFolders;
+     }
+-
++    
+     public long getTotalSize() {
+         return totalSize;
+     }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml	2008-05-17 17:41:26 UTC (rev 111)
+@@ -29,6 +29,7 @@
+         &lt;/id&gt;
+         &lt;property name=&quot;name&quot;/&gt;
+         &lt;property name=&quot;description&quot;/&gt;
++        &lt;property name=&quot;capacity&quot;/&gt;
+         
+         &lt;set name=&quot;groups&quot; inverse=&quot;true&quot; lazy=&quot;true&quot;&gt;
+             &lt;key column=&quot;PARENT_ID&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -28,11 +28,36 @@
+ public class DiskGroup {
+ 
+     private Long id;
++    //Base attributes
+     private String name;
+     private String description;
++    private long capacity;
++    //Attributes from relationships
+     private Set groups;
+     private DiskGroup parent;
+ 
++    public DiskGroup() {
++        //DO NOTHING
++    }
++
++    public DiskGroup(String name, String description, long capacity) {
++        this.name = name;
++        this.description = description;
++        this.capacity = capacity;
++    }
++    
++    public void increaseCapacity(long amount) {
++        capacity += amount;
++    }
++    
++    public long getCapacity() {
++        return capacity;
++    }
++    
++    public void setCapacity(long capacity) {
++        this.capacity = capacity;
++    }
++
+     public String getDescription() {
+         return description;
+     }
+@@ -84,10 +109,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
+-        if(this == obj) {
++        if (this == obj) {
+             return true;
+         }
+-        
++
+         if (!(obj instanceof DiskGroup)) {
+             return false;
+         }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml	2008-05-17 17:41:26 UTC (rev 111)
+@@ -29,13 +29,15 @@
+         &lt;/id&gt;
+         
+         &lt;property name=&quot;name&quot;/&gt;
++        &lt;property name=&quot;absolutePath&quot;/&gt;
++        &lt;property name=&quot;lastModified&quot;/&gt;
++        &lt;property name=&quot;description&quot;/&gt;  
++        &lt;property name=&quot;hidden&quot;/&gt;
+         &lt;property name=&quot;size&quot;/&gt;
++        &lt;property name=&quot;extension&quot;/&gt;
++
+         &lt;property name=&quot;file&quot;/&gt;
+         &lt;property name=&quot;folder&quot;/&gt;
+-        &lt;property name=&quot;absolutePath&quot;/&gt;
+-        &lt;property name=&quot;hidden&quot;/&gt;
+-        &lt;property name=&quot;lastModified&quot;/&gt;
+-        &lt;property name=&quot;description&quot;/&gt;  
+         
+         &lt;many-to-one name=&quot;disk&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Media&quot; column=&quot;MEDIA_ID&quot; not-null=&quot;true&quot;/&gt;
+         
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -29,25 +29,40 @@
+ public class FileWrapper {
+ 
+     private Long id;
+-    private Media disk;
+-    private long size;
+-    private boolean file;
+-    private boolean folder;
++    //Base attributes
+     private String name;
+     private String absolutePath;
+-    private boolean hidden;
+     private long lastModified;
+-    private Set children = new LinkedHashSet();
+-    private FileWrapper parent;
+     private String description;
++    private boolean hidden;
++    private long size;
++    private String extension;
+     private ImageData image;
+     private VideoData video;
+     private AudioData audio;
++    //Helpers    
++    private boolean file;
++    private boolean folder;
++    //Attributes from relationships    
++    private Set children = new LinkedHashSet();
++    private FileWrapper parent;
++    private Media disk;
+ 
+     public FileWrapper() {
+-        //do nothing
++        //DO NOTHING
+     }
+ 
++    /**
++     * 
++     * @param name
++     * @param absolutePath
++     * @param size
++     * @param file
++     * @param hidden
++     * @param lastModified
++     * @param disk
++     * @param parent
++     */
+     public FileWrapper(String name, String absolutePath, long size,
+             boolean file, boolean hidden, long lastModified, Media disk,
+             FileWrapper parent) {
+@@ -61,6 +76,10 @@
+         this.parent = parent;
+     }
+ 
++    /**
++     * 
++     * @param child
++     */
+     public void addChild(FileWrapper child) {
+         if (children == null) {
+             children = new LinkedHashSet();
+@@ -70,6 +89,10 @@
+ 
+     }
+ 
++    /**
++     * 
++     * @param child
++     */
+     public void removeChild(FileWrapper child) {
+         if (children != null) {
+             children.remove(child);
+@@ -116,6 +139,14 @@
+         this.disk = disk;
+     }
+ 
++    public String getExtension() {
++        return extension;
++    }
++
++    public void setExtension(String extension) {
++        this.extension = extension;
++    }
++
+     public boolean isFile() {
+         return file;
+     }
+@@ -207,10 +238,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
+-        if(this == obj) {
++        if (this == obj) {
+             return true;
+         }
+-        
++
+         if (!(obj instanceof FileWrapper)) {
+             return false;
+         }
+@@ -218,7 +249,7 @@
+         FileWrapper other = (FileWrapper) obj;
+         return size == other.size &amp;&amp; name.equals(other.name) &amp;&amp; absolutePath.equals(other.absolutePath);
+     }
+-    
++
+     //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+@@ -234,7 +265,7 @@
+         hash = 11 * hash + (this.absolutePath != null ? this.absolutePath.hashCode() : 0);
+         return hash;
+     }
+-    
++
+     @Override
+     public String toString() {
+         return name;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -28,6 +28,15 @@
+     private Long id;
+     private FileWrapper owner;
+     private byte[] data;
++    
++    public ImageData() {
++        //DO NOTHING
++    }
++    
++    public ImageData(FileWrapper owner, byte[] data) {
++        this.owner = owner;
++        this.data = data;
++    }
+ 
+     public Long getId() {
+         return id;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -28,8 +28,18 @@
+ public class Label {
+ 
+     private Long id;
++    //Base attributes
+     private String name;
++    //Attributes from relationships
+     private Set media;
++    
++    public Label() {
++        //DO NOTHING
++    }
++    
++    public Label(String name) {
++        this.name = name;
++    }
+ 
+     public Long getId() {
+         return id;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -32,6 +32,14 @@
+     private Date returned;
+     private User loanee;
+     private Media media;
++    
++    public Loan() {
++        //DO NOTHING
++    }
++    
++    public Loan(Date loaned) {
++        this.loaned = loaned;
++    }
+ 
+     public Long getId() {
+         return id;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-17 17:41:26 UTC (rev 111)
+@@ -27,9 +27,14 @@
+         &lt;id name=&quot;id&quot; column=&quot;MEDIA_ID&quot;&gt;
+             &lt;generator class=&quot;native&quot;/&gt;
+         &lt;/id&gt;
+-        
++                
+         &lt;property name=&quot;name&quot;/&gt;
++        &lt;property name=&quot;capacity&quot;/&gt;
++        &lt;property name=&quot;lastModified&quot;/&gt;
++
+         &lt;property name=&quot;description&quot;/&gt;
++        &lt;property name=&quot;freeSpace&quot;/&gt;
++        &lt;property name=&quot;location&quot;/&gt;
+         
+         &lt;set name=&quot;labels&quot; table=&quot;TBL_MEDIA_LABEL&quot;&gt;
+             &lt;key column=&quot;MEDIA_ID&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -28,12 +28,50 @@
+ public class Media {
+ 
+     private Long id;
++    //Base attributes
+     private String name;
++    private long capacity;
++    private long lastModified;
++    private String description;
++    private long freeSpace;
++    private String location;
++    //Attributes from relationships
+     private Set files;
+-    private String description;
+     private Set labels;
++    //Helpers
+     private Type type;
+ 
++    public Media() {
++        //DO NOTHING
++    }
++
++    public Media(String name, long capacity, long lastModified,
++            String description, long freeSpace, String location, Type type) {
++        this.name = name;
++        this.capacity = capacity;
++        this.lastModified = lastModified;
++        this.description = description;
++        this.freeSpace = freeSpace;
++        this.location = location;
++        this.type = type;
++    }
++    
++    public void increaseCapacity(long amount) {
++        capacity += amount;
++    }
++    
++    public void increaseFreeSpace(long amount) {
++        freeSpace += amount;
++    }
++    
++    public long getCapacity() {
++        return capacity;
++    }
++    
++    public void setCapacity(long capacity) {
++        this.capacity = capacity;
++    }
++
+     public String getDescription() {
+         return description;
+     }
+@@ -49,6 +87,14 @@
+     private void setFiles(Set files) {
+         this.files = files;
+     }
++    
++    public long getFreeSpace() {
++        return freeSpace;
++    }
++    
++    public void setFreeSpace(long freeSpace) {
++        this.freeSpace = freeSpace;
++    }
+ 
+     public Long getId() {
+         return id;
+@@ -65,6 +111,22 @@
+     private void setLabels(Set labels) {
+         this.labels = labels;
+     }
++    
++    public long getLastModified() {
++        return lastModified;
++    }
++    
++    public void setLastModified(long lastModified) {
++        this.lastModified = lastModified;
++    }
++    
++    public String getLocation() {
++        return location;
++    }
++    
++    public void setLocation(String location) {
++        this.location = location;
++    }
+ 
+     public String getName() {
+         return name;
+@@ -93,19 +155,18 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
+-        if(this == obj) {
++        if (this == obj) {
+             return true;
+         }
+-        
++
+         if (!(obj instanceof Media)) {
+             return false;
+         }
+ 
+         Media other = (Media) obj;
+-        return name.equals(other.name) &amp;&amp; description.equals(other.description) 
+-                &amp;&amp; type.equals(other.type);
++        return name.equals(other.name) &amp;&amp; description.equals(other.description) &amp;&amp; type.equals(other.type);
+     }
+-    
++
+     //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+@@ -121,7 +182,7 @@
+         hash = 31 * hash + (this.type != null ? this.type.hashCode() : 0);
+         return hash;
+     }
+-    
++
+     @Override
+     public String toString() {
+         return name;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -30,6 +30,14 @@
+     private long id;
+     private String name;
+     private Set media;
++    
++    public Type() {
++        //DO NOTHING
++    }            
++    
++    public Type(String name) {
++        this.name = name;
++    }
+ 
+     public long getId() {
+         return id;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -31,6 +31,15 @@
+     private String firstname;
+     private String surname;
+     private Set loans;
++    
++    public User() {
++        //DO NOTHING
++    }
++    
++    public User(String firstname, String surname) {
++        this.firstname = firstname;
++        this.surname = surname;
++    }
+ 
+     public String getFirstname() {
+         return firstname;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -29,6 +29,15 @@
+     private FileWrapper owner;
+     private byte[] data;
+ 
++    public VideoData() {
++        //DO NOTHING
++    }
++
++    public VideoData(FileWrapper owner, byte[] data) {
++        this.owner = owner;
++        this.data = data;
++    }
++
+     public Long getId() {
+         return id;
+     }
+@@ -44,15 +53,15 @@
+     public void setOwner(FileWrapper owner) {
+         this.owner = owner;
+     }
+-    
++
+     public byte[] getData() {
+         return data;
+     }
+-    
++
+     public void setData(byte[] data) {
+         this.data = data;
+     }
+-    
++
+     /**
+      * Equals method doesn't take into account the id of the object. Hibernate 
+      * only gives an id to a new object when that object is persisted, it is 
+@@ -64,17 +73,16 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
+-        if(this == obj) {
++        if (this == obj) {
+             return true;
+         }
+-        
+-        if(!(obj instanceof VideoData)) {
++
++        if (!(obj instanceof VideoData)) {
+             return false;
+         }
+-        VideoData other = (VideoData)obj;
+-        return owner.equals(other.owner) &amp;&amp; data.length == other.data.length 
+-                &amp;&amp; data == other.data;
+-                
++        VideoData other = (VideoData) obj;
++        return owner.equals(other.owner) &amp;&amp; data.length == other.data.length &amp;&amp; data == other.data;
++
+     }
+ 
+     //TODO: link for the equals method
+@@ -91,9 +99,9 @@
+         hash = 89 * hash + (this.data != null ? this.data.hashCode() : 0);
+         return hash;
+     }
+-    
++
+     @Override
+     public String toString() {
+         return super.toString() + &quot; &quot; + id + &quot; &quot; + data.length;
+-    }    
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/FileUtils.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/FileUtils.java	2008-05-17 15:24:43 UTC (rev 110)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/FileUtils.java	2008-05-17 17:41:26 UTC (rev 111)
+@@ -44,8 +44,13 @@
+     }
+     
+     public String fileCRC(File file) {
+-        //TODO: implement
++        //TODO: implement!
+         return new CRC32().toString();
+     }
++    
++    public String getIconFromExtension(String extension) {
++        //TODO: implement!
++        return &quot;&quot;;
++    }
+ 
+ }
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000105.html">[Jfindmyfiles-commits] r110 - in trunk: media/icons/x16	media/icons/x32	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JCalendar	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32	project/JFindMyFiles/nbproject
+</A></li>
+	<LI>Next message: <A HREF="000107.html">[Jfindmyfiles-commits] r112 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#106">[ date ]</a>
+              <a href="thread.html#106">[ thread ]</a>
+              <a href="subject.html#106">[ subject ]</a>
+              <a href="author.html#106">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

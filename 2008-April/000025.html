@@ -1,0 +1,1086 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r29 -	trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-April/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r29%20-%0A%09trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos&In-Reply-To=%3C200804102152.m3ALqxgI030249%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000024.html">
+   <LINK REL="Next"  HREF="000026.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r29 -	trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos</H1>
+    <B>tica at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r29%20-%0A%09trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos&In-Reply-To=%3C200804102152.m3ALqxgI030249%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r29 -	trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos">tica at mail.berlios.de
+       </A><BR>
+    <I>Thu Apr 10 23:52:59 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000024.html">[Jfindmyfiles-commits] r28 - trunk/docs
+</A></li>
+        <LI>Next message: <A HREF="000026.html">[Jfindmyfiles-commits] r30 - trunk/docs/15x5
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#25">[ date ]</a>
+              <a href="thread.html#25">[ thread ]</a>
+              <a href="subject.html#25">[ subject ]</a>
+              <a href="author.html#25">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: tica
+Date: 2008-04-10 23:52:42 +0200 (Thu, 10 Apr 2008)
+New Revision: 29
+
+Modified:
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.form
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.java
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.form
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.java
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.form
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.java
+Log:
+
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.form
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.form	2008-04-10 16:21:45 UTC (rev 28)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.form	2008-04-10 21:52:42 UTC (rev 29)
+@@ -21,26 +21,25 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;385&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;385&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace pref=&quot;223&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace pref=&quot;165&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; pref=&quot;62&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Component id=&quot;jButton2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;EmptySpace min=&quot;-2&quot; pref=&quot;19&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;346&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;346&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+           &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+               &lt;EmptySpace pref=&quot;312&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Component id=&quot;jButton2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+@@ -58,5 +57,10 @@
+         &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Cancelar&quot;/&gt;
+       &lt;/Properties&gt;
+     &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton3&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Ajuda&quot;/&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
+   &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.java
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.java	2008-04-10 16:21:45 UTC (rev 28)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.java	2008-04-10 21:52:42 UTC (rev 29)
+@@ -28,6 +28,7 @@
+ 
+         jButton1 = new javax.swing.JButton();
+         jButton2 = new javax.swing.JButton();
++        jButton3 = new javax.swing.JButton();
+ 
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
+@@ -35,28 +36,29 @@
+ 
+         jButton2.setText(&quot;Cancelar&quot;);
+ 
++        jButton3.setText(&quot;Ajuda&quot;);
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 385, Short.MAX_VALUE)
+-            .addGap(0, 385, Short.MAX_VALUE)
+-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                .addContainerGap(223, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap(165, Short.MAX_VALUE)
+                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addComponent(jButton2)
+-                .addGap(19, 19, 19))
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jButton3)
++                .addContainerGap())
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 346, Short.MAX_VALUE)
+-            .addGap(0, 346, Short.MAX_VALUE)
+             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                 .addContainerGap(312, Short.MAX_VALUE)
+                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jButton1)
+                     .addComponent(jButton2)
+-                    .addComponent(jButton1))
++                    .addComponent(jButton3))
+                 .addContainerGap())
+         );
+ 
+@@ -83,6 +85,7 @@
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JButton jButton1;
+     private javax.swing.JButton jButton2;
++    private javax.swing.JButton jButton3;
+     // End of variables declaration//GEN-END:variables
+     
+ }
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.form
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.form	2008-04-10 16:21:45 UTC (rev 28)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.form	2008-04-10 21:52:42 UTC (rev 29)
+@@ -21,24 +21,37 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+           &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace pref=&quot;238&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace pref=&quot;222&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; pref=&quot;62&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Component id=&quot;jButton2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;EmptySpace min=&quot;-2&quot; pref=&quot;19&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jPanel2&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jPanel1&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;1&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace pref=&quot;13&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+           &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace pref=&quot;266&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jPanel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace type=&quot;separate&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jPanel2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace pref=&quot;22&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Component id=&quot;jButton2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+@@ -56,5 +69,109 @@
+         &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Cancelar&quot;/&gt;
+       &lt;/Properties&gt;
+     &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton3&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Ajuda&quot;/&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++            &lt;TitledBorder title=&quot;Procura&quot;/&gt;
++          &lt;/Border&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jLabel2&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Component id=&quot;jLabel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;EmptySpace min=&quot;-2&quot; pref=&quot;35&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jTextField1&quot; min=&quot;-2&quot; pref=&quot;211&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                  &lt;/Group&gt;
++                  &lt;EmptySpace pref=&quot;114&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jLabel1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jTextField1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;EmptySpace type=&quot;separate&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jLabel2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel1&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Titulo: &quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel2&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Procurar em: &quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jTextField1&quot;&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel2&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++            &lt;TitledBorder/&gt;
++          &lt;/Border&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jLabel3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; pref=&quot;51&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jTextField2&quot; min=&quot;-2&quot; pref=&quot;214&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace pref=&quot;112&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; pref=&quot;33&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jLabel3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jTextField2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;EmptySpace pref=&quot;23&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel3&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;URL: &quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jTextField2&quot;&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
+   &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.java
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.java	2008-04-10 16:21:45 UTC (rev 28)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.java	2008-04-10 21:52:42 UTC (rev 29)
+@@ -28,6 +28,14 @@
+ 
+         jButton1 = new javax.swing.JButton();
+         jButton2 = new javax.swing.JButton();
++        jButton3 = new javax.swing.JButton();
++        jPanel1 = new javax.swing.JPanel();
++        jLabel1 = new javax.swing.JLabel();
++        jLabel2 = new javax.swing.JLabel();
++        jTextField1 = new javax.swing.JTextField();
++        jPanel2 = new javax.swing.JPanel();
++        jLabel3 = new javax.swing.JLabel();
++        jTextField2 = new javax.swing.JTextField();
+ 
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
+@@ -35,26 +43,95 @@
+ 
+         jButton2.setText(&quot;Cancelar&quot;);
+ 
++        jButton3.setText(&quot;Ajuda&quot;);
++
++        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(&quot;Procura&quot;));
++
++        jLabel1.setText(&quot;Titulo: &quot;);
++
++        jLabel2.setText(&quot;Procurar em: &quot;);
++
++        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jLabel2)
++                    .addGroup(jPanel1Layout.createSequentialGroup()
++                        .addComponent(jLabel1)
++                        .addGap(35, 35, 35)
++                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)))
++                .addContainerGap(114, Short.MAX_VALUE))
++        );
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jLabel1)
++                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addGap(18, 18, 18)
++                .addComponent(jLabel2)
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++        );
++
++        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(&quot;&quot;));
++
++        jLabel3.setText(&quot;URL: &quot;);
++
++        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
++        jPanel2.setLayout(jPanel2Layout);
++        jPanel2Layout.setHorizontalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel2Layout.createSequentialGroup()
++                .addComponent(jLabel3)
++                .addGap(51, 51, 51)
++                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addContainerGap(112, Short.MAX_VALUE))
++        );
++        jPanel2Layout.setVerticalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel2Layout.createSequentialGroup()
++                .addGap(33, 33, 33)
++                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jLabel3)
++                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addContainerGap(23, Short.MAX_VALUE))
++        );
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 400, Short.MAX_VALUE)
+             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                .addContainerGap(238, Short.MAX_VALUE)
++                .addContainerGap(222, Short.MAX_VALUE)
+                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addComponent(jButton2)
+-                .addGap(19, 19, 19))
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jButton3)
++                .addContainerGap())
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
++                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addContainerGap(13, Short.MAX_VALUE))
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 300, Short.MAX_VALUE)
+             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                .addContainerGap(266, Short.MAX_VALUE)
++                .addContainerGap()
++                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addGap(18, 18, 18)
++                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
+                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jButton1)
+                     .addComponent(jButton2)
+-                    .addComponent(jButton1))
++                    .addComponent(jButton3))
+                 .addContainerGap())
+         );
+ 
+@@ -81,6 +158,14 @@
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JButton jButton1;
+     private javax.swing.JButton jButton2;
++    private javax.swing.JButton jButton3;
++    private javax.swing.JLabel jLabel1;
++    private javax.swing.JLabel jLabel2;
++    private javax.swing.JLabel jLabel3;
++    private javax.swing.JPanel jPanel1;
++    private javax.swing.JPanel jPanel2;
++    private javax.swing.JTextField jTextField1;
++    private javax.swing.JTextField jTextField2;
+     // End of variables declaration//GEN-END:variables
+     
+ }
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.form
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.form	2008-04-10 16:21:45 UTC (rev 28)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.form	2008-04-10 21:52:42 UTC (rev 29)
+@@ -17,10 +17,21 @@
+         &lt;/Component&gt;
+       &lt;/SubComponents&gt;
+     &lt;/Container&gt;
++    &lt;Component class=&quot;javax.swing.ButtonGroup&quot; name=&quot;buttonGroup1&quot;&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JColorChooser&quot; name=&quot;jColorChooser2&quot;&gt;
++    &lt;/Component&gt;
+   &lt;/NonVisualComponents&gt;
+   &lt;Properties&gt;
+     &lt;Property name=&quot;defaultCloseOperation&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
++    &lt;Property name=&quot;title&quot; type=&quot;java.lang.String&quot; value=&quot;Geral&quot;/&gt;
++    &lt;Property name=&quot;background&quot; type=&quot;java.awt.Color&quot; editor=&quot;org.netbeans.beaninfo.editors.ColorEditor&quot;&gt;
++      &lt;Color blue=&quot;c0&quot; green=&quot;c0&quot; id=&quot;lightGray&quot; palette=&quot;1&quot; red=&quot;c0&quot; type=&quot;palette&quot;/&gt;
++    &lt;/Property&gt;
+   &lt;/Properties&gt;
++  &lt;AccessibilityProperties&gt;
++    &lt;Property name=&quot;AccessibleContext.accessibleName&quot; type=&quot;java.lang.String&quot; value=&quot;Geral&quot;/&gt;
++  &lt;/AccessibilityProperties&gt;
+   &lt;SyntheticProperties&gt;
+     &lt;SyntheticProperty name=&quot;formSizePolicy&quot; type=&quot;int&quot; value=&quot;1&quot;/&gt;
+   &lt;/SyntheticProperties&gt;
+@@ -39,33 +50,31 @@
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+           &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace pref=&quot;238&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace pref=&quot;394&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; pref=&quot;62&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Component id=&quot;jButton2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;EmptySpace min=&quot;-2&quot; pref=&quot;19&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace min=&quot;-2&quot; pref=&quot;18&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Component id=&quot;jLabel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;EmptySpace min=&quot;-2&quot; pref=&quot;41&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Component id=&quot;jComboBox1&quot; min=&quot;-2&quot; pref=&quot;125&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;EmptySpace pref=&quot;178&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jTabbedPane1&quot; min=&quot;-2&quot; pref=&quot;574&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace pref=&quot;30&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+           &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace min=&quot;-2&quot; pref=&quot;35&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jTabbedPane1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace pref=&quot;41&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jLabel1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jComboBox1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;/Group&gt;
+-              &lt;EmptySpace pref=&quot;211&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Component id=&quot;jButton2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+@@ -83,20 +92,260 @@
+         &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;OK&quot;/&gt;
+       &lt;/Properties&gt;
+     &lt;/Component&gt;
+-    &lt;Component class=&quot;javax.swing.JComboBox&quot; name=&quot;jComboBox1&quot;&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton3&quot;&gt;
+       &lt;Properties&gt;
+-        &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ComboBoxModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ComboBoxModelEditor&quot;&gt;
+-          &lt;StringArray count=&quot;2&quot;&gt;
+-            &lt;StringItem index=&quot;0&quot; value=&quot;Portugu&amp;#xea;s&quot;/&gt;
+-            &lt;StringItem index=&quot;1&quot; value=&quot;Ingl&amp;#xea;s&quot;/&gt;
+-          &lt;/StringArray&gt;
+-        &lt;/Property&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Ajuda&quot;/&gt;
+       &lt;/Properties&gt;
+     &lt;/Component&gt;
+-    &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel1&quot;&gt;
+-      &lt;Properties&gt;
+-        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;L&amp;#xed;ngua: &quot;/&gt;
+-      &lt;/Properties&gt;
+-    &lt;/Component&gt;
++    &lt;Container class=&quot;javax.swing.JTabbedPane&quot; name=&quot;jTabbedPane1&quot;&gt;
++
++      &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout&quot;/&gt;
++      &lt;SubComponents&gt;
++        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel1&quot;&gt;
++          &lt;Constraints&gt;
++            &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription&quot;&gt;
++              &lt;JTabbedPaneConstraints tabName=&quot;Geral&quot;&gt;
++                &lt;Property name=&quot;tabTitle&quot; type=&quot;java.lang.String&quot; value=&quot;Geral&quot;/&gt;
++              &lt;/JTabbedPaneConstraints&gt;
++            &lt;/Constraint&gt;
++          &lt;/Constraints&gt;
++
++          &lt;Layout&gt;
++            &lt;DimensionLayout dim=&quot;0&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Component id=&quot;jLabel2&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jLabel1&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jLabel3&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jLabel4&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Group type=&quot;103&quot; alignment=&quot;0&quot; groupAlignment=&quot;0&quot; max=&quot;-2&quot; attributes=&quot;0&quot;&gt;
++                              &lt;Component id=&quot;jComboBox1&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                              &lt;Component id=&quot;jComboBox2&quot; alignment=&quot;0&quot; pref=&quot;123&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                          &lt;/Group&gt;
++                          &lt;Component id=&quot;jComboBox3&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jColorChooser3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                      &lt;EmptySpace pref=&quot;62&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++            &lt;DimensionLayout dim=&quot;1&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;38&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Component id=&quot;jLabel1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jComboBox1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                      &lt;EmptySpace type=&quot;separate&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Component id=&quot;jLabel2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jComboBox2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;29&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Component id=&quot;jLabel3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jComboBox3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
++                              &lt;EmptySpace min=&quot;-2&quot; pref=&quot;34&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jLabel4&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;/Group&gt;
++                          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                              &lt;EmptySpace min=&quot;-2&quot; pref=&quot;10&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jColorChooser3&quot; min=&quot;-2&quot; pref=&quot;218&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;/Group&gt;
++                      &lt;/Group&gt;
++                      &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++          &lt;/Layout&gt;
++          &lt;SubComponents&gt;
++            &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel1&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;L&amp;#xed;ngua: &quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JComboBox&quot; name=&quot;jComboBox1&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ComboBoxModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ComboBoxModelEditor&quot;&gt;
++                  &lt;StringArray count=&quot;2&quot;&gt;
++                    &lt;StringItem index=&quot;0&quot; value=&quot;Portugu&amp;#xea;s&quot;/&gt;
++                    &lt;StringItem index=&quot;1&quot; value=&quot;Ingl&amp;#xea;s&quot;/&gt;
++                  &lt;/StringArray&gt;
++                &lt;/Property&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel2&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Tipo de letra:&quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JComboBox&quot; name=&quot;jComboBox2&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ComboBoxModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ComboBoxModelEditor&quot;&gt;
++                  &lt;StringArray count=&quot;2&quot;&gt;
++                    &lt;StringItem index=&quot;0&quot; value=&quot;Arial&quot;/&gt;
++                    &lt;StringItem index=&quot;1&quot; value=&quot;Times New Roman&quot;/&gt;
++                  &lt;/StringArray&gt;
++                &lt;/Property&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel3&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Tamanho:&quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JComboBox&quot; name=&quot;jComboBox3&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ComboBoxModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ComboBoxModelEditor&quot;&gt;
++                  &lt;StringArray count=&quot;7&quot;&gt;
++                    &lt;StringItem index=&quot;0&quot; value=&quot;8&quot;/&gt;
++                    &lt;StringItem index=&quot;1&quot; value=&quot;9&quot;/&gt;
++                    &lt;StringItem index=&quot;2&quot; value=&quot;10&quot;/&gt;
++                    &lt;StringItem index=&quot;3&quot; value=&quot;11&quot;/&gt;
++                    &lt;StringItem index=&quot;4&quot; value=&quot;12&quot;/&gt;
++                    &lt;StringItem index=&quot;5&quot; value=&quot;13&quot;/&gt;
++                    &lt;StringItem index=&quot;6&quot; value=&quot;14&quot;/&gt;
++                  &lt;/StringArray&gt;
++                &lt;/Property&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel4&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;C&amp;#xf4;r: &quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JColorChooser&quot; name=&quot;jColorChooser3&quot;&gt;
++            &lt;/Component&gt;
++          &lt;/SubComponents&gt;
++        &lt;/Container&gt;
++        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel2&quot;&gt;
++          &lt;Constraints&gt;
++            &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription&quot;&gt;
++              &lt;JTabbedPaneConstraints tabName=&quot;Cat&amp;#xe1;logo&quot;&gt;
++                &lt;Property name=&quot;tabTitle&quot; type=&quot;java.lang.String&quot; value=&quot;Cat&amp;#xe1;logo&quot;/&gt;
++              &lt;/JTabbedPaneConstraints&gt;
++            &lt;/Constraint&gt;
++          &lt;/Constraints&gt;
++
++          &lt;Layout&gt;
++            &lt;DimensionLayout dim=&quot;0&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;38&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Component id=&quot;jRadioButton3&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jRadioButton2&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jRadioButton1&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                      &lt;EmptySpace pref=&quot;278&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++            &lt;DimensionLayout dim=&quot;1&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;10&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jRadioButton1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace type=&quot;unrelated&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jRadioButton2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace type=&quot;unrelated&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jRadioButton3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;299&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++          &lt;/Layout&gt;
++          &lt;SubComponents&gt;
++            &lt;Component class=&quot;javax.swing.JRadioButton&quot; name=&quot;jRadioButton1&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;N&amp;#xe3;o abrir nenhum cat&amp;#xe1;logo ao abrir o programa&quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JRadioButton&quot; name=&quot;jRadioButton2&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Abrir o &amp;#xfa;ltimo cat&amp;#xe1;logo visto&quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JRadioButton&quot; name=&quot;jRadioButton3&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Abrir o cat&amp;#xe1;logo: &quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++          &lt;/SubComponents&gt;
++        &lt;/Container&gt;
++        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel3&quot;&gt;
++          &lt;Constraints&gt;
++            &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription&quot;&gt;
++              &lt;JTabbedPaneConstraints tabName=&quot;Arquivo&quot;&gt;
++                &lt;Property name=&quot;tabTitle&quot; type=&quot;java.lang.String&quot; value=&quot;Arquivo&quot;/&gt;
++              &lt;/JTabbedPaneConstraints&gt;
++            &lt;/Constraint&gt;
++          &lt;/Constraints&gt;
++
++          &lt;Layout&gt;
++            &lt;DimensionLayout dim=&quot;0&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;36&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Component id=&quot;jCheckBox4&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jCheckBox3&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jCheckBox2&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jCheckBox1&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                      &lt;EmptySpace pref=&quot;192&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++            &lt;DimensionLayout dim=&quot;1&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;18&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jCheckBox1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace type=&quot;unrelated&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jCheckBox2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace type=&quot;unrelated&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jCheckBox3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace type=&quot;unrelated&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jCheckBox4&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;265&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++          &lt;/Layout&gt;
++          &lt;SubComponents&gt;
++            &lt;Component class=&quot;javax.swing.JCheckBox&quot; name=&quot;jCheckBox1&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Esconder extens&amp;#xf5;es de ficheiro se a coluna de estens&amp;#xf5;es &amp;#xe9; vis&amp;#xed;vel&quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JCheckBox&quot; name=&quot;jCheckBox2&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Expandir para mostrar discos quando cat&amp;#xe1;logo &amp;#xe9; carregado&quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JCheckBox&quot; name=&quot;jCheckBox3&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;jCheckBox3&quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JCheckBox&quot; name=&quot;jCheckBox4&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;jCheckBox4&quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++          &lt;/SubComponents&gt;
++        &lt;/Container&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
+   &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.java
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.java	2008-04-10 16:21:45 UTC (rev 28)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.java	2008-04-10 21:52:42 UTC (rev 29)
+@@ -28,56 +28,207 @@
+ 
+         jScrollPane1 = new javax.swing.JScrollPane();
+         jTextArea1 = new javax.swing.JTextArea();
++        buttonGroup1 = new javax.swing.ButtonGroup();
++        jColorChooser2 = new javax.swing.JColorChooser();
+         jButton2 = new javax.swing.JButton();
+         jButton1 = new javax.swing.JButton();
++        jButton3 = new javax.swing.JButton();
++        jTabbedPane1 = new javax.swing.JTabbedPane();
++        jPanel1 = new javax.swing.JPanel();
++        jLabel1 = new javax.swing.JLabel();
+         jComboBox1 = new javax.swing.JComboBox();
+-        jLabel1 = new javax.swing.JLabel();
++        jLabel2 = new javax.swing.JLabel();
++        jComboBox2 = new javax.swing.JComboBox();
++        jLabel3 = new javax.swing.JLabel();
++        jComboBox3 = new javax.swing.JComboBox();
++        jLabel4 = new javax.swing.JLabel();
++        jColorChooser3 = new javax.swing.JColorChooser();
++        jPanel2 = new javax.swing.JPanel();
++        jRadioButton1 = new javax.swing.JRadioButton();
++        jRadioButton2 = new javax.swing.JRadioButton();
++        jRadioButton3 = new javax.swing.JRadioButton();
++        jPanel3 = new javax.swing.JPanel();
++        jCheckBox1 = new javax.swing.JCheckBox();
++        jCheckBox2 = new javax.swing.JCheckBox();
++        jCheckBox3 = new javax.swing.JCheckBox();
++        jCheckBox4 = new javax.swing.JCheckBox();
+ 
+         jTextArea1.setColumns(20);
+         jTextArea1.setRows(5);
+         jScrollPane1.setViewportView(jTextArea1);
+ 
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
++        setTitle(&quot;Geral&quot;);
++        setBackground(java.awt.Color.lightGray);
+ 
+         jButton2.setText(&quot;Cancelar&quot;);
+ 
+         jButton1.setText(&quot;OK&quot;);
+ 
+-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { &quot;Portugu&#234;s&quot;, &quot;Ingl&#234;s&quot; }));
++        jButton3.setText(&quot;Ajuda&quot;);
+ 
+         jLabel1.setText(&quot;L&#237;ngua: &quot;);
+ 
++        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { &quot;Portugu&#234;s&quot;, &quot;Ingl&#234;s&quot; }));
++
++        jLabel2.setText(&quot;Tipo de letra:&quot;);
++
++        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { &quot;Arial&quot;, &quot;Times New Roman&quot; }));
++
++        jLabel3.setText(&quot;Tamanho:&quot;);
++
++        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { &quot;8&quot;, &quot;9&quot;, &quot;10&quot;, &quot;11&quot;, &quot;12&quot;, &quot;13&quot;, &quot;14&quot; }));
++
++        jLabel4.setText(&quot;C&#244;r: &quot;);
++
++        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jLabel2)
++                    .addComponent(jLabel1)
++                    .addComponent(jLabel3)
++                    .addComponent(jLabel4))
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
++                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                        .addComponent(jComboBox2, 0, 123, Short.MAX_VALUE))
++                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                    .addComponent(jColorChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addContainerGap(62, Short.MAX_VALUE))
++        );
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addGap(38, 38, 38)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jLabel1)
++                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addGap(18, 18, 18)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jLabel2)
++                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addGap(29, 29, 29)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jLabel3)
++                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addGroup(jPanel1Layout.createSequentialGroup()
++                        .addGap(34, 34, 34)
++                        .addComponent(jLabel4))
++                    .addGroup(jPanel1Layout.createSequentialGroup()
++                        .addGap(10, 10, 10)
++                        .addComponent(jColorChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, 218, javax.swing.GroupLayout.PREFERRED_SIZE)))
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++        );
++
++        jTabbedPane1.addTab(&quot;Geral&quot;, jPanel1);
++
++        jRadioButton1.setText(&quot;N&#227;o abrir nenhum cat&#225;logo ao abrir o programa&quot;);
++
++        jRadioButton2.setText(&quot;Abrir o &#250;ltimo cat&#225;logo visto&quot;);
++
++        jRadioButton3.setText(&quot;Abrir o cat&#225;logo: &quot;);
++
++        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
++        jPanel2.setLayout(jPanel2Layout);
++        jPanel2Layout.setHorizontalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel2Layout.createSequentialGroup()
++                .addGap(38, 38, 38)
++                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jRadioButton3)
++                    .addComponent(jRadioButton2)
++                    .addComponent(jRadioButton1))
++                .addContainerGap(278, Short.MAX_VALUE))
++        );
++        jPanel2Layout.setVerticalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel2Layout.createSequentialGroup()
++                .addGap(10, 10, 10)
++                .addComponent(jRadioButton1)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                .addComponent(jRadioButton2)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                .addComponent(jRadioButton3)
++                .addContainerGap(299, Short.MAX_VALUE))
++        );
++
++        jTabbedPane1.addTab(&quot;Cat&#225;logo&quot;, jPanel2);
++
++        jCheckBox1.setText(&quot;Esconder extens&#245;es de ficheiro se a coluna de estens&#245;es &#233; vis&#237;vel&quot;);
++
++        jCheckBox2.setText(&quot;Expandir para mostrar discos quando cat&#225;logo &#233; carregado&quot;);
++
++        jCheckBox3.setText(&quot;jCheckBox3&quot;);
++
++        jCheckBox4.setText(&quot;jCheckBox4&quot;);
++
++        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
++        jPanel3.setLayout(jPanel3Layout);
++        jPanel3Layout.setHorizontalGroup(
++            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel3Layout.createSequentialGroup()
++                .addGap(36, 36, 36)
++                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jCheckBox4)
++                    .addComponent(jCheckBox3)
++                    .addComponent(jCheckBox2)
++                    .addComponent(jCheckBox1))
++                .addContainerGap(192, Short.MAX_VALUE))
++        );
++        jPanel3Layout.setVerticalGroup(
++            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel3Layout.createSequentialGroup()
++                .addGap(18, 18, 18)
++                .addComponent(jCheckBox1)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                .addComponent(jCheckBox2)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                .addComponent(jCheckBox3)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                .addComponent(jCheckBox4)
++                .addContainerGap(265, Short.MAX_VALUE))
++        );
++
++        jTabbedPane1.addTab(&quot;Arquivo&quot;, jPanel3);
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                .addContainerGap(238, Short.MAX_VALUE)
++                .addContainerGap(394, Short.MAX_VALUE)
+                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addComponent(jButton2)
+-                .addGap(19, 19, 19))
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jButton3)
++                .addContainerGap())
+             .addGroup(layout.createSequentialGroup()
+-                .addGap(18, 18, 18)
+-                .addComponent(jLabel1)
+-                .addGap(41, 41, 41)
+-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+-                .addContainerGap(178, Short.MAX_VALUE))
++                .addContainerGap()
++                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 574, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addContainerGap(30, Short.MAX_VALUE))
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                .addGap(35, 35, 35)
++                .addContainerGap()
++                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 41, Short.MAX_VALUE)
+                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+-                    .addComponent(jLabel1)
+-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
+-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jButton1)
+                     .addComponent(jButton2)
+-                    .addComponent(jButton1))
++                    .addComponent(jButton3))
+                 .addContainerGap())
+         );
+ 
++        getAccessibleContext().setAccessibleName(&quot;Geral&quot;);
++
+         pack();
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+     
+@@ -99,11 +250,31 @@
+     }
+     
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.ButtonGroup buttonGroup1;
+     private javax.swing.JButton jButton1;
+     private javax.swing.JButton jButton2;
++    private javax.swing.JButton jButton3;
++    private javax.swing.JCheckBox jCheckBox1;
++    private javax.swing.JCheckBox jCheckBox2;
++    private javax.swing.JCheckBox jCheckBox3;
++    private javax.swing.JCheckBox jCheckBox4;
++    private javax.swing.JColorChooser jColorChooser2;
++    private javax.swing.JColorChooser jColorChooser3;
+     private javax.swing.JComboBox jComboBox1;
++    private javax.swing.JComboBox jComboBox2;
++    private javax.swing.JComboBox jComboBox3;
+     private javax.swing.JLabel jLabel1;
++    private javax.swing.JLabel jLabel2;
++    private javax.swing.JLabel jLabel3;
++    private javax.swing.JLabel jLabel4;
++    private javax.swing.JPanel jPanel1;
++    private javax.swing.JPanel jPanel2;
++    private javax.swing.JPanel jPanel3;
++    private javax.swing.JRadioButton jRadioButton1;
++    private javax.swing.JRadioButton jRadioButton2;
++    private javax.swing.JRadioButton jRadioButton3;
+     private javax.swing.JScrollPane jScrollPane1;
++    private javax.swing.JTabbedPane jTabbedPane1;
+     private javax.swing.JTextArea jTextArea1;
+     // End of variables declaration//GEN-END:variables
+     
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000024.html">[Jfindmyfiles-commits] r28 - trunk/docs
+</A></li>
+	<LI>Next message: <A HREF="000026.html">[Jfindmyfiles-commits] r30 - trunk/docs/15x5
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#25">[ date ]</a>
+              <a href="thread.html#25">[ thread ]</a>
+              <a href="subject.html#25">[ subject ]</a>
+              <a href="author.html#25">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

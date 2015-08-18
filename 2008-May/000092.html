@@ -1,0 +1,266 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r97 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	. utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r97%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%3A%0A%09.%20utils&In-Reply-To=%3C200805081308.m48D8PfM012006%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000091.html">
+   <LINK REL="Next"  HREF="000093.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r97 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	. utils</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r97%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%3A%0A%09.%20utils&In-Reply-To=%3C200805081308.m48D8PfM012006%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r97 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	. utils">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu May  8 15:08:25 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000091.html">[Jfindmyfiles-commits] r96 - in	trunk/project/JFindMyFiles/Persistence: . nbproject
+</A></li>
+        <LI>Next message: <A HREF="000093.html">[Jfindmyfiles-commits] r98 - in trunk: media/icons media/icons/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	spikes/SPKlerDados/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#92">[ date ]</a>
+              <a href="thread.html#92">[ thread ]</a>
+              <a href="subject.html#92">[ subject ]</a>
+              <a href="author.html#92">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-08 15:08:22 +0200 (Thu, 08 May 2008)
+New Revision: 97
+
+Added:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/FileUtils.java
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+Log:
+
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-08 00:51:45 UTC (rev 96)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-08 13:08:22 UTC (rev 97)
+@@ -6,7 +6,10 @@
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.*;
+ import de.berlios.jfindmyfiles.catalog.utils.ConnectionManager;
++import java.io.File;
+ import java.util.Set;
++import java.util.Stack;
++import java.util.zip.CRC32;
+ import org.hibernate.Session;
+ 
+ /**
+@@ -14,7 +17,7 @@
+  * @author ei10635
+  */
+ public class CatalogEngine {
+-
++    
+     private static int count = 0;
+ 
+     public void runtest(boolean store) {
+@@ -29,34 +32,21 @@
+         ConnectionManager.getSessionFactory().close();
+     }
+     
+-    public void addDiskGroup(String name, String description, DiskGroup parent) {
+-        
++    public void addDiskGroup(String name, String description, DiskGroup parent) {      
+     }
+     
+-    public void addLabel(String name) {
+-        
++    public void addLabel(String name) {        
+     }
+     
+-    public void removeLabel(Long id) {
+-        
++    public void removeLabel(Label label) {        
+     }
+     
+-    public void removeLabel(Label label) {
+-        
++    public void addUser(String firstname, String surname) {        
+     }
+     
+-    public void addUser(String firstname, String surname) {
+-        
++    public void removeUser(User user) {        
+     }
+     
+-    public void removeUser(Long id) {
+-        
+-    }
+-    
+-    public void removeUser(User user) {
+-        
+-    }
+-    
+     public Set getLabels() {
+         return null;
+     }
+@@ -68,4 +58,86 @@
+     public Set getDiskGroups() {
+         return null;
+     }
++    
++    public void readDisk(File file) {
++    }
++    
++    private long calculateFileSize(File f) {
++        Stack&lt;File&gt; dados = new Stack&lt;File&gt;();
++        File temp;
++        long size = 0L;
++        dados.push(f);
++        while (!dados.empty()) {
++            temp = dados.pop();
++            if (temp.isDirectory()) {
++                File[] list = temp.listFiles();
++                if (list != null) {
++                    for (int i = list.length; i-- &gt; 0;) {
++                        if (list[i].isDirectory()) {
++                            dados.push(list[i]);
++                        } else {
++                            size += list[i].length();
++                        }
++                    }
++                }
++            }
++        }
++        return size;
++    }
++    /*    
++    private void pesquisar(String origem) {
++        File f = new File(origem);
++        long totalSize = 0L;
++        StringBuffer aux = new StringBuffer(700);
++        String tempo;
++        long tmp6 = 0L, tmp7 = 0L;
++        if (jchkListFirst.isSelected()) {
++            long tmp1 = System.currentTimeMillis();
++            totalSize = calculateFolderSizeListFirst(f);
++            long tmp2 = System.currentTimeMillis();
++            tempo = &quot;Tempo 1: &quot; + tmp1 + &quot;/&quot; + tmp2 + &quot;: &quot; + (tmp2 - tmp1);
++        } else {
++            long tmp1 = System.currentTimeMillis();
++            totalSize = calculateFolderSize(f);
++            long tmp2 = System.currentTimeMillis();
++            tempo = &quot;Tempo 1: &quot; + tmp1 + &quot;/&quot; + tmp2 + &quot;: &quot; + (tmp2 - tmp1);
++        }
++
++
++        aux.append(&quot;Nome: &quot; + f.getName() + &quot;\n&quot;);
++        aux.append(&quot;Caminho: &quot; + f.getPath() + &quot;\n&quot;);
++        aux.append(&quot;Caminho absoluto: &quot; + f.getAbsolutePath() + &quot;\n&quot;);
++        aux.append(&quot;Tamanho: &quot; + totalSize + &quot; bytes\n&quot;);
++        aux.append(&quot;Modificado em: &quot; + f.lastModified() + &quot;\n&quot;);
++        aux.append(&quot;--------------------------\n\n&quot;);
++
++        if (!jchkSizeOnly.isSelected()) {
++            Vector&lt;File&gt; list = new Vector&lt;File&gt;(100);
++
++            tmp6 = System.currentTimeMillis();
++            listAllFiles(f, list);
++            for (File f2 : list) {
++                aux.append(&quot;Nome: &quot; + f2.getName() + &quot;\n&quot;);
++                aux.append(&quot;Caminho: &quot; + f2.getPath() + &quot;\n&quot;);
++                aux.append(&quot;Caminho absoluto: &quot; + f2.getAbsolutePath() + &quot;\n&quot;);
++                if (!f2.isDirectory()) {
++                    aux.append(&quot;Tamanho: &quot; + f2.length() + &quot; bytes\n&quot;);
++                    aux.append(&quot;Extens&#227;o: &quot; + findExtension(f2) + &quot;\n&quot;);
++                }
++                aux.append(&quot;Modificado em: &quot; + f2.lastModified() + &quot;\n&quot;);
++                aux.append(&quot;Oculto: &quot; + (f2.isHidden() ? &quot;Sim&quot; : &quot;N&#227;o&quot;) + &quot;\n&quot;);
++                aux.append(&quot;--------------------------\n\n&quot;);
++            }
++            tmp7 = System.currentTimeMillis();
++        }
++        aux.append(&quot;Tempos:\n&quot;);
++        aux.append(tempo + &quot;\n&quot;);
++        aux.append(&quot;Tempo 2: &quot; + tmp6 + &quot;-&quot; + tmp7 + &quot;: &quot; + (tmp7 - tmp6) + &quot;\n&quot;);
++
++        //Get user info:
++        aux.append(&quot;Java: &quot; + System.getProperty(&quot;java.vendor&quot;) + &quot; &quot; + System.getProperty(&quot;java.vm.name&quot;) + &quot; &quot; + System.getProperty(&quot;java.specification.version&quot;) + &quot;(&quot; + System.getProperty(&quot;java.version&quot;) + &quot; &quot; + System.getProperty(&quot;java.vm.version&quot;) + &quot;)\n&quot;);
++        aux.append(&quot;SO: &quot; + System.getProperty(&quot;os.name&quot;) + &quot; &quot; + System.getProperty(&quot;os.arch&quot;) + &quot; &quot; + System.getProperty(&quot;os.version&quot;) + &quot;\n&quot;);
++        jtaresults.setText(aux.toString());
++
++    }*/    
+ }
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/FileUtils.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/FileUtils.java	2008-05-08 00:51:45 UTC (rev 96)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/FileUtils.java	2008-05-08 13:08:22 UTC (rev 97)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog.utils;
++
++import java.io.File;
++import java.util.zip.CRC32;
++
++/**
++ *
++ * @author knitter
++ */
++public abstract class FileUtils {
++    
++    /**
++     * Method that, given a file name, will return it's extension.
++     * A file extension has little meaning for some operating systems, being 
++     * relevant only on Windows OS. Nevertheless it is necessary to determine 
++     * the extension of a given file to use on the Description API.
++     * 
++     * @param filename the name of the file
++     * @return the extension or an empty string if this name has no extension
++     */
++    public static String findExtension(String filename) {
++        int x = -1;
++        return ((x = filename.lastIndexOf(&quot;.&quot;)) &gt; 0 ? filename.substring(x + 1) : &quot;&quot;);
++    }
++    
++    public String fileCRC(File file) {
++        //TODO: implement
++        return new CRC32().toString();
++    }
++
++}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000091.html">[Jfindmyfiles-commits] r96 - in	trunk/project/JFindMyFiles/Persistence: . nbproject
+</A></li>
+	<LI>Next message: <A HREF="000093.html">[Jfindmyfiles-commits] r98 - in trunk: media/icons media/icons/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	spikes/SPKlerDados/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#92">[ date ]</a>
+              <a href="thread.html#92">[ thread ]</a>
+              <a href="subject.html#92">[ subject ]</a>
+              <a href="author.html#92">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

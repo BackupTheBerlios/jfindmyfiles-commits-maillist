@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r123 - in trunk/docs: Iteracao5-CB02	Iteracao6-CB07
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r123%20-%20in%20trunk/docs%3A%20Iteracao5-CB02%0A%09Iteracao6-CB07&In-Reply-To=%3C200805282327.m4SNRd0O023212%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000117.html">
+   <LINK REL="Next"  HREF="000119.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r123 - in trunk/docs: Iteracao5-CB02	Iteracao6-CB07</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r123%20-%20in%20trunk/docs%3A%20Iteracao5-CB02%0A%09Iteracao6-CB07&In-Reply-To=%3C200805282327.m4SNRd0O023212%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r123 - in trunk/docs: Iteracao5-CB02	Iteracao6-CB07">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu May 29 01:27:39 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000117.html">[Jfindmyfiles-commits] r122 - in trunk: docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/nbproject	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	spikes/ExportWithTemplate/nbproject spikes/PluginAPI/nbproject	spikes/PluginAPI/src/de/berlios/jfindmyfiles	spikes/SimpleExport/nbproject	spikes/SimpleExport/src/de/berlios/jfindmyfiles
+</A></li>
+        <LI>Next message: <A HREF="000119.html">[Jfindmyfiles-commits] r124 -	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118">[ date ]</a>
+              <a href="thread.html#118">[ thread ]</a>
+              <a href="subject.html#118">[ subject ]</a>
+              <a href="author.html#118">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-29 01:27:37 +0200 (Thu, 29 May 2008)
+New Revision: 123
+
+Modified:
+   trunk/docs/Iteracao5-CB02/Iteracao5.txt
+   trunk/docs/Iteracao6-CB07/Iteracao6.txt
+   trunk/docs/Iteracao6-CB07/exemplo.xml
+Log:
+Acrescentado texto ?\195?\160 descri?\195?\167?\195?\163o da Iteracao 5 e criado a estrutura do ficheiro XML de exporta?\195?\167?\195?\163o.
+
+Modified: trunk/docs/Iteracao5-CB02/Iteracao5.txt
+===================================================================
+--- trunk/docs/Iteracao5-CB02/Iteracao5.txt	2008-05-28 22:33:46 UTC (rev 122)
++++ trunk/docs/Iteracao5-CB02/Iteracao5.txt	2008-05-28 23:27:37 UTC (rev 123)
+@@ -4,5 +4,5 @@
+ contenham op&#231;&#245;es significativas consoante o estado da aplica&#231;&#227;o.
+ &lt;==== Documentos produzidos ===================================================&gt;
+ Nenhum
+-&lt;==== 
++&lt;====
+ &lt;==== Avalia&#231;&#227;o ===============================================================&gt;
+
+Modified: trunk/docs/Iteracao6-CB07/Iteracao6.txt
+===================================================================
+--- trunk/docs/Iteracao6-CB07/Iteracao6.txt	2008-05-28 22:33:46 UTC (rev 122)
++++ trunk/docs/Iteracao6-CB07/Iteracao6.txt	2008-05-28 23:27:37 UTC (rev 123)
+@@ -14,4 +14,34 @@
+ 	exemplo.ods
+ 
+ &lt;==== 
++Dos v&#225;rios formatos para os quais poderia ser poss&#237;vel exportar dados do 
++sistema, os mais relevantes ser&#227;o os formatos que permitam interoperabilidade 
++com outras aplica&#231;&#245;es e sistemas. Assim ser&#227;o considerados os formatos: XML, que 
++pelas suas caracteristicas, nomeadamente por ser um formato de texto leg&#237;vel e 
++port&#225;vel para qualquer outra plataforma, bem como de f&#225;cil leitura por sistemas 
++inform&#225;ticos de forma a que os dados possam ser importados ou transformados 
++facilmente, se apresenta como uma escolha natural; CSV, um formato largamente 
++utilizado e suportado e que permite a f&#225;cil importa&#231;&#227;o por folhas de c&#225;lculo;
++XLS e ODS, os formatos de folhas de c&#225;lculo do MS Excel e do OpenOffice Calc. 
++Estes &#250;ltimos para que seja f&#225;cil a importa&#231;&#227;o e tratamento de dados usando 
++dois dos programas presentes em maior n&#250;mero em computadores pessoais.
++
++Tanto o formato XLS como o ODS v&#227;o exigir o uso de bibliotecas externas para a 
++exporta&#231;&#227;o de dados. A implementa&#231;&#227;o deste formato no sistema de exporta&#231;&#227;o &#233; 
++considerada de baixa relev&#226;ncia pelo que ser&#225; implementada no final da itera&#231;&#227;o, 
++caso seja poss&#237;vel.
++A n&#227;o implementa&#231;&#227;o da funcionalidade de exporta&#231;&#227;o para estes dois formatos 
++n&#227;o ser&#225; considerada como ponto negativo na itera&#231;&#227;o.
++
++O sistema permitir&#225; importar dados de ficheiros XML, exportados anteriormente e 
++de outras bases de dados criadas.
++
++Das aplica&#231;&#245;es analizadas no in&#237;cio do desenvolvimento, dever&#227;o ser escolhidas 
++as que se considerem mais relevantes, e criar a possibilidade de importar dados 
++desses sistemas.
++Na escolha dos sistemas dever&#227;o ser tidos em conta os seguintes crit&#233;rios:
++	- Licen&#231;a da aplica&#231;&#227;o;
++	- Proximidade dos campos guardados, quantos mais campos em comum existirem 
++	mais possibilidade ter&#225; a aplica&#231;&#227;o de ser escolhida;
++	- Quantidade de informa&#231;&#227;o perdida ou se efectuada a importa&#231;&#227;o;
+ &lt;==== Avalia&#231;&#227;o ===============================================================&gt;
+
+Modified: trunk/docs/Iteracao6-CB07/exemplo.xml
+===================================================================
+--- trunk/docs/Iteracao6-CB07/exemplo.xml	2008-05-28 22:33:46 UTC (rev 122)
++++ trunk/docs/Iteracao6-CB07/exemplo.xml	2008-05-28 23:27:37 UTC (rev 123)
+@@ -0,0 +1,80 @@
++
++&lt;catalog id=&quot;&quot;&gt;
++    &lt;name&gt;&lt;/name&gt;
++    &lt;creation-date&gt;&lt;/creation-date&gt;
++    &lt;description&gt;&lt;/description&gt;
++    &lt;total-size&gt;&lt;/total-size&gt;
++    &lt;disk-number&gt;&lt;/disk-number&gt;
++    &lt;total-folders&gt;&lt;/total-folders&gt;
++    &lt;file-list&gt;
++        &lt;file id=&quot;&quot;&gt;
++            &lt;name&gt;&lt;/name&gt;
++            &lt;absolute-path&gt;&lt;/absolute-path&gt;
++            &lt;last-modified&gt;&lt;/last-modified&gt;
++            &lt;description&gt;&lt;/description&gt;
++            &lt;hidden&gt;&lt;!-- true/false --&gt;
++            &lt;/hidden&gt;
++            &lt;size&gt;&lt;/size&gt;
++            &lt;extension&gt;&lt;/extension&gt;
++            &lt;image-thumb&gt;&lt;/image-thumb&gt;
++            &lt;video-preview&gt;&lt;/video-preview&gt;
++            &lt;audio-clip&gt;&lt;/audio-clip&gt;
++            &lt;is-file&gt;&lt;/is-file&gt;
++            &lt;children&gt;&lt;!-- file items --&gt;
++            &lt;/children&gt;
++            &lt;parent-id&gt;&lt;/parent-id&gt;
++            &lt;media-id&gt;&lt;/media-id&gt;
++        &lt;/file&gt;
++    &lt;/file-list&gt;
++    &lt;label-list&gt;
++        &lt;label id=&quot;&quot;&gt;
++            &lt;name&gt;&lt;/name&gt;
++        &lt;/label&gt;
++    &lt;/label-list&gt;
++    &lt;group-list&gt;
++        &lt;group id=&quot;&quot;&gt;
++            &lt;name&gt;&lt;/name&gt;
++            &lt;description&gt;&lt;/description&gt;
++            &lt;capacity&gt;&lt;/capacity&gt;
++            &lt;groups&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
++            &lt;/groups&gt;
++            &lt;parent-id&gt;&lt;/parent-id&gt;
++        &lt;/group&gt;
++    &lt;/group-list&gt;
++    &lt;loan-list&gt;
++        &lt;loan id=&quot;&quot;&gt;
++            &lt;date-loaned&gt;&lt;/date-loaned&gt;
++            &lt;date-returned&gt;&lt;/date-returned&gt;
++            &lt;user-id&gt;&lt;/user-id&gt;
++            &lt;media-id&gt;&lt;/media-id&gt;
++        &lt;/loan&gt;
++    &lt;/loan-list&gt;
++    &lt;media-list&gt;
++        &lt;media id=&quot;&quot;&gt;
++            &lt;name&gt;&lt;/name&gt;
++            &lt;capacity&gt;&lt;/capacity&gt;
++            &lt;last-modified&gt;&lt;/last-modified&gt;
++            &lt;description&gt;&lt;/description&gt;
++            &lt;free-space&gt;&lt;/free-space&gt;
++            &lt;location&gt;&lt;/location&gt;
++            &lt;files&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
++            &lt;/files&gt;
++            &lt;labels&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
++            &lt;/labels&gt;
++            &lt;type-id&gt;&lt;/type-id&gt;
++        &lt;/media&gt;
++    &lt;/media-list&gt;
++    &lt;type-list&gt;
++        &lt;type id=&quot;&quot;&gt;
++            &lt;name&gt;&lt;/name&gt;
++        &lt;/type&gt;
++    &lt;/type-list&gt;
++    &lt;user-list&gt;
++        &lt;user id=&quot;&quot;&gt;
++            &lt;first-name&gt;&lt;/first-name&gt;
++            &lt;loans&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
++            &lt;/loans&gt;
++            &lt;surname&gt;&lt;/surname&gt;
++        &lt;/user&gt;
++    &lt;/user-list&gt;
++&lt;/catalog&gt;
+\ No newline at end of file
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000117.html">[Jfindmyfiles-commits] r122 - in trunk: docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/nbproject	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	spikes/ExportWithTemplate/nbproject spikes/PluginAPI/nbproject	spikes/PluginAPI/src/de/berlios/jfindmyfiles	spikes/SimpleExport/nbproject	spikes/SimpleExport/src/de/berlios/jfindmyfiles
+</A></li>
+	<LI>Next message: <A HREF="000119.html">[Jfindmyfiles-commits] r124 -	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#118">[ date ]</a>
+              <a href="thread.html#118">[ thread ]</a>
+              <a href="subject.html#118">[ subject ]</a>
+              <a href="author.html#118">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

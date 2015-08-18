@@ -1,0 +1,278 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r15 - trunk/docs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-March/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r15%20-%20trunk/docs&In-Reply-To=%3C200803191627.m2JGR3Km028666%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000010.html">
+   <LINK REL="Next"  HREF="000016.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r15 - trunk/docs</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r15%20-%20trunk/docs&In-Reply-To=%3C200803191627.m2JGR3Km028666%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r15 - trunk/docs">knitter at mail.berlios.de
+       </A><BR>
+    <I>Wed Mar 19 17:27:03 CET 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000010.html">[Jfindmyfiles-commits] r14 - trunk/docs
+</A></li>
+        <LI>Next message: <A HREF="000016.html">[Jfindmyfiles-commits] r16 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#11">[ date ]</a>
+              <a href="thread.html#11">[ thread ]</a>
+              <a href="subject.html#11">[ subject ]</a>
+              <a href="author.html#11">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-03-19 17:26:58 +0100 (Wed, 19 Mar 2008)
+New Revision: 15
+
+Added:
+   trunk/docs/Relatorio do Projecto.odt
+   trunk/docs/[Justificacao] Linguagem Escolhida.txt
+Modified:
+   trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt
+   trunk/docs/[Justificacao] Uso de plataforma RCP.txt
+Log:
+Adicionada c?\195?\179pia do modelo de relat?\195?\179rio para altera?\195?\167?\195?\163o.
+
+Conclu?\195?\173das as justifica?\195?\181es sobre o uso e escolha de uma plataforma de desenvolvimento.
+
+Adicionado ficheiro para justificar escolha da linguagem, o texto nesse documento ?\195?\169 apenas provis?\195?\179rio e n?\195?\163o dever?\195?\161 ser tido em considera?\195?\167?\195?\163o.
+
+Added: trunk/docs/Relatorio do Projecto.odt
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Relatorio do Projecto.odt
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/docs/[Justificacao] Linguagem Escolhida.txt
+===================================================================
+--- trunk/docs/[Justificacao] Linguagem Escolhida.txt	2008-03-18 20:04:18 UTC (rev 14)
++++ trunk/docs/[Justificacao] Linguagem Escolhida.txt	2008-03-19 16:26:58 UTC (rev 15)
+@@ -0,0 +1,16 @@
++Um dos requisitos principais da aplica&#231;&#227;o &#233; que a mesma seja multiplataforma. 
++Isto &#233;, a aplica&#231;&#227;o ter&#225; de ser independente do sistema operativo e arquitectura f&#237;sica
++da m&#225;quina onde vai ser executada.
++
++Com base nesse requisito as linguagens de programa&#231;&#227;o a que podemos recorrer 
++s&#227;o ANSI C, C++, Python, Perl, PHP, C#, Object Pascal e Java.
++
++Perl e PHP s&#227;o duas linguagens de scripting que n&#227;o foram criadas com o objectivo 
++de desenvolver aplica&#231;&#245;es desktop e cujas ferramentas de desenvolvimento n&#227;o 
++est&#227;o preparadas para o tipo de aplica&#231;&#227;o que se pretende construir.
++
++De todas as linguagens apresentadas, Java, surge como a solu&#231;&#227;o os problemas que 
++as ditas linguagens possuem.
++
++
++[TODO O TEXTO &#201; INV&#193;LIO]
+
+Modified: trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt
+===================================================================
+--- trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt	2008-03-18 20:04:18 UTC (rev 14)
++++ trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt	2008-03-19 16:26:58 UTC (rev 15)
+@@ -12,27 +12,109 @@
+ pouco relavantes para a escolha, isto &#233;, atrav&#233;s da compara&#231;&#227;o das capacidades 
+ t&#233;cnicas das duas plataformas o resultado &#233; um empate.
+ 
+-Sendo assim, e tendo em conta os requisitos da aplica&#231;&#227;o efectuou-se a seguinte 
+-compara&#231;&#227;o:
+-[TABELA DE COMPARA&#199;&#195;O]
+-Eclipse RCP	Netbeans Platform
+-Documenta&#231;&#227;o oficial	Bastante extensa e completa	Bastante extensa e completa
+-Exemplos	In&#250;meros exemplos existentes, tanto na documenta&#231;&#227;o oficial como em documenta&#231;&#227;o fornecida pela comunidade	In&#250;meros exemplos existentes, tanto na documenta&#231;&#227;o oficial como em documenta&#231;&#227;o fornecida pela comunidade
+-Comunidade(Listas de discuss&#227;o, f&#243;runs, blogs, etc.)	Comunidade numerosa com bastantes recursos	Comunidade numerosa com bastantes recursos
+-IDEs poss&#237;veis	Eclipse IDE	Netbeans IDE
+-Toolkit gr&#225;fico	SWT	Swing
+-Portabilidade	Limitada devido ao toolkit gr&#225;fico usado.	Swing faz parte de todas as distribui&#231;&#245;es Java, &#233; standard na plataforma
+-Facilidade de integra&#231;&#227;o de componentes Swing	Limitada devido a bugs existentes no SWT	Extremamente f&#225;cil, comunica&#231;&#227;o entre dois elementos Swing
+-Conhecimento da API	Nenhum	Limitado
+-Conhecimento do Toolkit gr&#225;fico	Nenhum	Usado nas diversas cadeiras do curso onde a linguagem &#233; Java
+----------------
++Sendo assim, e tendo em conta os requisitos da aplica&#231;&#227;o efectuou-se uma 
++compara&#231;&#227;o baseada nos seguintes aspectos[1]:
+ 
++Disponibilidade de documenta&#231;&#227;o oficial.
++Exist&#234;ncia de exemplos pr&#225;ticos.
++Exist&#234;ncia de comunidade
++IDEs que se podem usar
++Sistema gr&#225;fico
++Portabilidade da plataforma
++Conhecimento que os elementos do grupo possuem sobre:
++	Plataforma
++	Sistema gr&#225;fico
++Outros pontos de relevo.
+ 
++- Disponibilidade de documenta&#231;&#227;o oficial, exist&#234;ncia de exemplos pr&#225;ticos.
+ 
++Ambas as plataformas possuem uma s&#243;lida documenta&#231;&#227;o oficial com bastantes 
++exemplos e caso de uso sobe o desenvolvimento de aplica&#231;&#245;es ricas. A documenta&#231;&#227;o
++existente &#233; actualizada e facilmente acess&#237;vel.
+ 
++Neste ponto a plataforma Netbeans leva um ligeira vantagem na medida em que 
++providencia pequenos tutoriais onde se desenvolvem aplica&#231;&#245;es completas sobre a 
++plataforma.
++Existe tamb&#233;m um m&#243;dulo para o IDE Netbeans que permite ter acesso directo, dentro 
++do IDE, &#224; documenta&#231;&#227;o da API em modo offline.
+ 
+-A escolha recaiu sobre a plataforma Netbeans.
++- Comunidade
+ 
++As comunidades das duas plataformas s&#227;o tamb&#233;m bastante vastas, com listas de 
++discuss&#227;o, f&#243;runs, e wikis onde as d&#250;vidas poder&#227;o ser respondidas r&#225;pidademente.
++
++- IDEs que se podem usar
++
++Infelizmente a escolha da plataforma ir&#225; limitar o tipo de IDEs que se poder&#227;o 
++usar, nesse sentido, a escolha da plataforma Eclipse RCP ir&#225; condicionar &#224; 
++utiliza&#231;&#227;o do IDE Eclipse, do mesmo modo que a escolha da plataforma Netbeans 
++ir&#225; condicionar &#224; utiliza&#231;&#227;o do IDE Netbeans.
++
++Nenhum outro IDE poder&#225; ser usado se o objectivo &#233; tirar partido das 
++funcionalidades e vantagens que o uso de uma plataforma deste g&#233;nero oferece.
++Embora seja te&#243;ricamente poss&#237;vel programar usando outros IDEs e outras 
++ferramentas na pr&#225;tica isso resultar&#225; na perda de todas as facilidades existentes, 
++como assistentes e gera&#231;&#227;o autom&#225;tica de c&#243;digo e aumentar&#225; a carga de trabalho 
++aos programadores.
++
++- Sistema gr&#225;fico
++
++A plataforma Netbeans &#233; desenvolvida e usar o sistema gr&#225;fico Swing, este sistema 
++est&#225; dispon&#237;vel com todas as edi&#231;&#245;es da plataforma Java e &#233; o standard nesta 
++tecnologia. Quest&#245;es de velocidade que assombravam este sistema est&#227;o actualmente
++ultrapassadas sendo este sistema cumpre o requisito de portabilidade imposto.
++
++A plataforma Eclipse RCP usa o sistema gr&#225;fico SWT. Apesar de ser anunciado como 
++um sistema nativo, r&#225;pido e multiplataforma, alguns problemas foram identidicados 
++que contradizem esse an&#250;ncio.
++A tecnlogia SWT n&#227;o &#233; enviada com a plataforma Java, n&#227;o fazendo parte desta, e 
++por esse mesmo motivo n&#227;o est&#225; t&#227;o rapidamente dispon&#237;vel em novos sistemas.
++A utiliza&#231;&#227;o desta tecnologia ir&#225; tamb&#233;m expor os programadores a bugs espec&#237;ficos 
++da plataforma aumentando assim a complexidade de desenvolvimento.
++
++- Portabilidade da plataforma
++
++A plataforma Netbeans n&#227;o apresenta problemas de portabilidade al&#233;m dos existentes 
++na tecnologia Java.
++
++A plataforma Eclipse RCP introduz alguns problemas espec&#237;ficos ao sistema gr&#225;fico 
++que usa, como indicado no ponto anterior e posteriormente.
++
++- Conhecimento que os elementos do grupo possuem sobre as plataformas e sistema gr&#225;fico
++
++Ambas as plataformas s&#227;o desconhecidas para os programadores, embora estes tenham 
++j&#225; alguma experi&#234;ncia com o sistema gr&#225;fico da plataforma Netbeans, Swing, e com 
++IDE Netbeans.
++
++O sistema gr&#225;fico da plataforma Eclipse RCP, SWT, &#233; completamente desconhecido 
++para os programadores. O uso do IDE Eclipse tamb&#233;m n&#227;o &#233; comum na equipa de 
++desenvolvimento.
++
++- Outros pontos de relevo.
++
++Ir&#225; ser necess&#225;ria a integra&#231;&#227;o de bibliotecas que foram desenvolvidas usando 
++Swing. No caso da escolha da plataforma Eclipse RCP essa integra&#231;&#227;o ficar&#225; limitada 
++a sistema Linux e Windows devido a alguns bugs existentes no sistema SWT que 
++impendem essa integra&#231;&#227;o de funcionar correctamente no sistemas operativos 
++Mac OS X.
++
++- Conclus&#227;o
++Tendo em conta os pontos acima indicados decidu-se a escolha da plataforma 
++Netbeans. Esta plataforma vai de encontro a todos os requisitos apresentados e 
++&#233; a plataforma que introduz menos problemas &#224; equipa de desenvolvimento
++
++[1]
++Al&#233;m dos aspectos apresentados foram tamb&#233;m tidas em conta, embora apenas como 
++refer&#234;ncia pontual as opini&#245;es deixadas por profissionais na &#224;rea que 
++desenvolveram software usando as duas plataformas e que apresentaram os 
++problemas que encontrados durante os v&#225;rios processos de desenvolvimento 
++na lista de discuss&#227;o <A HREF="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">nbusers at netbeans.org</A>, sob o t&#243;pico 
++&quot;Choosing Netbeans platform or Eclipse RCP&quot;.
++
++
+ [REFER&#202;NCIA]
+ Java Rich Client Platforms:Eclipse RCP compared withNetBeans Platform, Kai T&#246;dter - Siemens AGCT
+-
++<A HREF="https://bugs.eclipse.org/bugs/show_bug.cgi?id=221483">https://bugs.eclipse.org/bugs/show_bug.cgi?id=221483</A>
++<A HREF="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384">https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384</A>
++<A HREF="https://bugs.eclipse.org/bugs/show_bug.cgi?id=145890">https://bugs.eclipse.org/bugs/show_bug.cgi?id=145890</A>
++<A HREF="http://www.nabble.com/Choosing-Netbeans-platform-or-Eclipse-RCP-to16012394.html">http://www.nabble.com/Choosing-Netbeans-platform-or-Eclipse-RCP-to16012394.html</A>
+\ No newline at end of file
+
+Modified: trunk/docs/[Justificacao] Uso de plataforma RCP.txt
+===================================================================
+--- trunk/docs/[Justificacao] Uso de plataforma RCP.txt	2008-03-18 20:04:18 UTC (rev 14)
++++ trunk/docs/[Justificacao] Uso de plataforma RCP.txt	2008-03-19 16:26:58 UTC (rev 15)
+@@ -2,13 +2,13 @@
+ repetidas de aplica&#231;&#227;o para aplica&#231;&#227;o e que distraem o programador dos requisitos
+ que o seu sistema possui.
+ A r&#225;pida prototipagem e avalia&#231;&#227;o de conceitos &#233; tamb&#233;m limitada por esse tipo 
+-de tarefas que, embora n&#227;o esteja associadas ao problema a testar, s&#227;o necess&#225;rias 
++de tarefas que, embora n&#227;o estejam associadas ao problema a testar, s&#227;o necess&#225;rias 
+ implementar para que a ideia possa ser correctamente avaliada.
+ 
+ Plataformas de desenvolvimento de aplica&#231;&#245;es ricas, Rich Client Platform, RCP, 
+ s&#227;o frameworks que permitem retirar das m&#227;os do programador a necessidade de 
+ repetir as tarefas comuns a todas as aplica&#231;&#245;es desktop. Estas frameworks 
+-fornecem servi&#231;os comuns como gest&#227;o de janelas, menus, defini&#231;&#245;es da aplica&#231;&#227;o, 
++fornecem servi&#231;os como gest&#227;o de janelas, menus, defini&#231;&#245;es da aplica&#231;&#227;o, 
+ persist&#234;ncia e armazenamento, sistema de actualiza&#231;&#245;es e acesso a ficheiros.
+ 
+ Tendo em mente o requisito temporal associado ao projecto torna-se assim natural 
+@@ -19,11 +19,10 @@
+ a biblioteca Microsoft Foundation Class, MFC, a Eclipse Rich Client Platform, 
+ Eclipse RCP, a Spring Rich Client Platform, Spring-rich e a Netbeans Platform.
+ 
+-Dado a escolha da linguagem, a plataforma MFC foi imediatamente abandonada. A 
++Dada a escolha da linguagem, a plataforma MFC foi imediatamente abandonada. A 
+ Spring-rich foi rejeitada ap&#243;s ter sido avaliada a disponibilidade de documenta&#231;&#227;o, 
+-exemplos, e uso geral da plataforma.
+-Esta plataforma est&#225; ainda em desenvolvimento, com uma vers&#227;o est&#225;vel n&#227;o alpha/beta 
+-lan&#231;ada a 17 de Mar&#231;o de 2008.
++exemplos, e uso geral da plataforma. Esta plataforma est&#225; ainda em desenvolvimento, c
++om uma vers&#227;o est&#225;vel n&#227;o alpha/beta lan&#231;ada a 17 de Mar&#231;o de 2008.
+ O projecto encontra-se tamb&#233;m em fase de actualiza&#231;&#227;o com algum c&#243;digo a ser 
+ reescrito e reestruturado, sendo prevista uma primeira vers&#227;o do novo sistema para
+ Outubro de 2008.
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000010.html">[Jfindmyfiles-commits] r14 - trunk/docs
+</A></li>
+	<LI>Next message: <A HREF="000016.html">[Jfindmyfiles-commits] r16 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#11">[ date ]</a>
+              <a href="thread.html#11">[ thread ]</a>
+              <a href="subject.html#11">[ subject ]</a>
+              <a href="author.html#11">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

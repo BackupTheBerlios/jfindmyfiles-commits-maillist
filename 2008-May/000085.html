@@ -1,0 +1,328 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r90 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	. utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r90%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%3A%0A%09.%20utils&In-Reply-To=%3C200805080042.m480gIsJ032171%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000084.html">
+   <LINK REL="Next"  HREF="000086.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r90 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	. utils</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r90%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%3A%0A%09.%20utils&In-Reply-To=%3C200805080042.m480gIsJ032171%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r90 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	. utils">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu May  8 02:42:18 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000084.html">[Jfindmyfiles-commits] r89 - trunk/docs/Iteracao2-CB05
+</A></li>
+        <LI>Next message: <A HREF="000086.html">[Jfindmyfiles-commits] r91 - in trunk/project/JFindMyFiles: .	HSQLDB HSQLDB/nbproject HSQLDB/release HSQLDB/release/modules	HSQLDB/release/modules/ext HSQLDB/src HSQLDB/src/de	HSQLDB/src/de/berlios HSQLDB/src/de/berlios/jfindmyfiles	HSQLDB/src/de/berlios/jfindmyfiles/hsqldb
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#85">[ date ]</a>
+              <a href="thread.html#85">[ thread ]</a>
+              <a href="subject.html#85">[ subject ]</a>
+              <a href="author.html#85">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-08 02:42:13 +0200 (Thu, 08 May 2008)
+New Revision: 90
+
+Added:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mssql.cfg.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mysql.cfg.xml
+Removed:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.cfg.xml
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/ConnectionManager.java
+Log:
+Adicionados ficheiros de configura?\195?\167?\195?\163o para v?\195?\161rios motores de bases de dados. At?\195?\169 ao momento, para MsSQL, MySQL e HSQLDB.
+
+Alterada a configura?\195?\167?\195?\163o base para usar o motor interno, HSQLDB.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-07 23:38:28 UTC (rev 89)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-08 00:42:13 UTC (rev 90)
+@@ -29,6 +29,34 @@
+         ConnectionManager.getSessionFactory().close();
+     }
+     
++    public void addDiskGroup(String name, String description, DiskGroup parent) {
++        
++    }
++    
++    public void addLabel(String name) {
++        
++    }
++    
++    public void removeLabel(Long id) {
++        
++    }
++    
++    public void removeLabel(Label label) {
++        
++    }
++    
++    public void addUser(String firstname, String surname) {
++        
++    }
++    
++    public void removeUser(Long id) {
++        
++    }
++    
++    public void removeUser(User user) {
++        
++    }
++    
+     public Set getLabels() {
+         return null;
+     }
+@@ -36,4 +64,8 @@
+     public Set getUsers() {
+         return null;
+     }
++    
++    public Set getDiskGroups() {
++        return null;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/ConnectionManager.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/ConnectionManager.java	2008-05-07 23:38:28 UTC (rev 89)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/ConnectionManager.java	2008-05-08 00:42:13 UTC (rev 90)
+@@ -20,7 +20,8 @@
+         try {
+             // Create the SessionFactory from hibernate.cfg.xml
+             //TODO: correctly define config file
+-            sessionFactory = new Configuration().configure(&quot;de/berlios/jfindmyfiles/catalog/utils/hibernate.cfg.xml&quot;).buildSessionFactory();
++            //sessionFactory = new Configuration().configure(&quot;de/berlios/jfindmyfiles/catalog/utils/hibernate.mysql.cfg.xml&quot;).buildSessionFactory();
++            sessionFactory = new Configuration().configure(&quot;de/berlios/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml&quot;).buildSessionFactory();
+         } catch (Throwable ex) {
+             // Make sure you log the exception, as it might be swallowed
+             System.err.println(&quot;Initial SessionFactory creation failed.&quot; + ex);
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.cfg.xml	2008-05-07 23:38:28 UTC (rev 89)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.cfg.xml	2008-05-08 00:42:13 UTC (rev 90)
+@@ -1,55 +0,0 @@
+-&lt;?xml version='1.0' encoding='utf-8'?&gt;
+-
+-&lt;!--
+-    Document   : hibernate.cfg.xml
+-    Created on : 6 de Maio de 2008, 15:55
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+-&lt;!DOCTYPE hibernate-configuration PUBLIC
+-        &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
+-        &quot;<A HREF="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd</A>&quot;&gt;
+-
+-&lt;hibernate-configuration&gt;
+-
+-    &lt;session-factory&gt;
+-
+-        &lt;!-- Database connection settings --&gt;       
+-        &lt;property name=&quot;connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt;
+-        &lt;property name=&quot;connection.url&quot;&gt;jdbc:<A HREF="mysql://67.207.139.234:3306/jfindmyfilesdb&lt;/property">mysql://67.207.139.234:3306/jfindmyfilesdb&lt;/property</A>&gt;
+-        &lt;property name=&quot;connection.username&quot;&gt;jfindmyfilesuser&lt;/property&gt;
+-        &lt;property name=&quot;connection.password&quot;&gt;Jf1ndmYf1l3z!&lt;/property&gt;
+-
+-        &lt;!-- JDBC connection pool (use the built-in) --&gt;
+-        &lt;property name=&quot;connection.pool_size&quot;&gt;1&lt;/property&gt;
+-
+-        &lt;!-- SQL dialect --&gt;
+-        &lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;/property&gt;
+-
+-        &lt;!-- Enable Hibernate's automatic session context management --&gt;
+-        &lt;property name=&quot;current_session_context_class&quot;&gt;thread&lt;/property&gt;
+-
+-        &lt;!-- Disable the second-level cache  --&gt;
+-        &lt;property name=&quot;cache.provider_class&quot;&gt;org.hibernate.cache.NoCacheProvider&lt;/property&gt;
+-
+-        &lt;!-- Echo all executed SQL to stdout --&gt;
+-        &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt;
+-
+-        &lt;!-- Drop and re-create the database schema on startup --&gt;
+-        &lt;property name=&quot;hbm2ddl.auto&quot;&gt;create&lt;/property&gt;
+-
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml&quot;/&gt; 
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/User.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml&quot;/&gt;
+-    &lt;/session-factory&gt;
+-
+-&lt;/hibernate-configuration&gt;
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml	2008-05-07 23:38:28 UTC (rev 89)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml	2008-05-08 00:42:13 UTC (rev 90)
+@@ -0,0 +1,55 @@
++&lt;?xml version='1.0' encoding='utf-8'?&gt;
++
++&lt;!--
++    Document   : hibernate.cfg.xml
++    Created on : 6 de Maio de 2008, 15:55
++    Author     : ei10635
++    Description:
++        Purpose of the document follows.
++--&gt;
++
++&lt;!DOCTYPE hibernate-configuration PUBLIC
++        &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
++        &quot;<A HREF="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd</A>&quot;&gt;
++
++&lt;hibernate-configuration&gt;
++
++    &lt;session-factory&gt;
++
++        &lt;!-- Database connection settings --&gt;       
++        &lt;property name=&quot;connection.driver_class&quot;&gt;org.hsqldb.jdbcDriver&lt;/property&gt;
++        &lt;property name=&quot;connection.url&quot;&gt;jdbc:hsqldb:file:jfindmyfilesdb&lt;/property&gt;
++        &lt;property name=&quot;connection.username&quot;&gt;sa&lt;/property&gt;
++        &lt;property name=&quot;connection.password&quot;&gt;&lt;/property&gt;
++
++        &lt;!-- JDBC connection pool (use the built-in) --&gt;
++        &lt;property name=&quot;connection.pool_size&quot;&gt;1&lt;/property&gt;
++
++        &lt;!-- SQL dialect --&gt;
++        &lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.HSQLDialect&lt;/property&gt;
++
++        &lt;!-- Enable Hibernate's automatic session context management --&gt;
++        &lt;property name=&quot;current_session_context_class&quot;&gt;thread&lt;/property&gt;
++
++        &lt;!-- Disable the second-level cache  --&gt;
++        &lt;property name=&quot;cache.provider_class&quot;&gt;org.hibernate.cache.NoCacheProvider&lt;/property&gt;
++
++        &lt;!-- Echo all executed SQL to stdout --&gt;
++        &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt;
++
++        &lt;!-- Drop and re-create the database schema on startup --&gt;
++        &lt;property name=&quot;hbm2ddl.auto&quot;&gt;create&lt;/property&gt;
++
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml&quot;/&gt; 
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/User.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml&quot;/&gt;
++    &lt;/session-factory&gt;
++
++&lt;/hibernate-configuration&gt;
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mssql.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mssql.cfg.xml	2008-05-07 23:38:28 UTC (rev 89)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mssql.cfg.xml	2008-05-08 00:42:13 UTC (rev 90)
+@@ -0,0 +1,55 @@
++&lt;?xml version='1.0' encoding='utf-8'?&gt;
++
++&lt;!--
++    Document   : hibernate.cfg.xml
++    Created on : 6 de Maio de 2008, 15:55
++    Author     : ei10635
++    Description:
++        Purpose of the document follows.
++--&gt;
++
++&lt;!DOCTYPE hibernate-configuration PUBLIC
++        &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
++        &quot;<A HREF="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd</A>&quot;&gt;
++
++&lt;hibernate-configuration&gt;
++
++    &lt;session-factory&gt;
++
++        &lt;!-- Database connection settings --&gt;       
++        &lt;property name=&quot;connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt;
++        &lt;property name=&quot;connection.url&quot;&gt;jdbc:<A HREF="mysql://67.207.139.234:3306/jfindmyfilesdb&lt;/property">mysql://67.207.139.234:3306/jfindmyfilesdb&lt;/property</A>&gt;
++        &lt;property name=&quot;connection.username&quot;&gt;jfindmyfilesuser&lt;/property&gt;
++        &lt;property name=&quot;connection.password&quot;&gt;Jf1ndmYf1l3z!&lt;/property&gt;
++
++        &lt;!-- JDBC connection pool (use the built-in) --&gt;
++        &lt;property name=&quot;connection.pool_size&quot;&gt;1&lt;/property&gt;
++
++        &lt;!-- SQL dialect --&gt;
++        &lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;/property&gt;
++
++        &lt;!-- Enable Hibernate's automatic session context management --&gt;
++        &lt;property name=&quot;current_session_context_class&quot;&gt;thread&lt;/property&gt;
++
++        &lt;!-- Disable the second-level cache  --&gt;
++        &lt;property name=&quot;cache.provider_class&quot;&gt;org.hibernate.cache.NoCacheProvider&lt;/property&gt;
++
++        &lt;!-- Echo all executed SQL to stdout --&gt;
++        &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt;
++
++        &lt;!-- Drop and re-create the database schema on startup --&gt;
++        &lt;property name=&quot;hbm2ddl.auto&quot;&gt;create&lt;/property&gt;
++
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml&quot;/&gt; 
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/User.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml&quot;/&gt;
++    &lt;/session-factory&gt;
++
++&lt;/hibernate-configuration&gt;
+
+Copied: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mysql.cfg.xml (from rev 86, trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.cfg.xml)
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000084.html">[Jfindmyfiles-commits] r89 - trunk/docs/Iteracao2-CB05
+</A></li>
+	<LI>Next message: <A HREF="000086.html">[Jfindmyfiles-commits] r91 - in trunk/project/JFindMyFiles: .	HSQLDB HSQLDB/nbproject HSQLDB/release HSQLDB/release/modules	HSQLDB/release/modules/ext HSQLDB/src HSQLDB/src/de	HSQLDB/src/de/berlios HSQLDB/src/de/berlios/jfindmyfiles	HSQLDB/src/de/berlios/jfindmyfiles/hsqldb
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#85">[ date ]</a>
+              <a href="thread.html#85">[ thread ]</a>
+              <a href="subject.html#85">[ subject ]</a>
+              <a href="author.html#85">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

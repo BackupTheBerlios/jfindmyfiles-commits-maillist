@@ -1,0 +1,1694 @@
+From knitter at mail.berlios.de  Fri Aug  1 23:00:28 2008
+From: knitter at mail.berlios.de (knitter at mail.berlios.de)
+Date: Fri, 1 Aug 2008 23:00:28 +0200
+Subject: [Jfindmyfiles-commits] r263 - in trunk: . docs docs/Simple Export
+Message-ID: <200808012100.m71L0SMg012392@sheep.berlios.de>
+
+Author: knitter
+Date: 2008-08-01 22:58:57 +0200 (Fri, 01 Aug 2008)
+New Revision: 263
+
+Added:
+   trunk/docs/Heap-iterative.png
+   trunk/docs/Heap.png
+   trunk/docs/Simple Export/
+   trunk/docs/Simple Export/Simple Export.properties
+   trunk/docs/Simple Export/index.html
+   trunk/docs/Simple Export/preview.jpg
+   trunk/docs/Simple Export/style.css
+   trunk/docs/entities diagram.png
+   trunk/docs/example.amc
+   trunk/docs/export-exemplo.csv
+   trunk/docs/export-exemplo.xml
+   trunk/docs/export-exemplo.xsd
+   trunk/docs/extremeprogrammingorg.zip
+   trunk/docs/gpl-2.0.txt
+   trunk/docs/pluginapi.png
+   trunk/docs/plugins.png
+   trunk/docs/readingfiles.png
+   trunk/docs/rfc4180.txt
+   trunk/export-templates/
+   trunk/jfindmyfiles-plugins/
+Removed:
+   trunk/Plugins/
+   trunk/Templates/
+   trunk/docs/15x5/
+   trunk/docs/Apresentacao Publica - JFindMyFiles.ppt
+   trunk/docs/Apresentacao Publica Com Notas - JFindMyFiles.ppt
+   trunk/docs/Calendarizacao.gan
+   trunk/docs/Calendarizacao.png
+   trunk/docs/Demo/
+   trunk/docs/Documentos Externos/
+   trunk/docs/Ferramentas Usadas e Informacao Geral.txt
+   trunk/docs/Imagens Criadas/
+   trunk/docs/Iteracao1-CB09/
+   trunk/docs/Iteracao2-CB05/
+   trunk/docs/Iteracao3-CB03/
+   trunk/docs/Iteracao4-CB04/
+   trunk/docs/Iteracao5-CB02/
+   trunk/docs/Iteracao6-CB07/
+   trunk/docs/Iteracao7-CB06/
+   trunk/docs/Iteracao8-CB08/
+   trunk/docs/Iteracao9-CB01/
+   trunk/docs/JFindMyFiles - Final.pdf
+   trunk/docs/JFindMyFiles - Manual de Instala?\195?\167?\195?\163o.doc
+   trunk/docs/JFindMyFiles - Manual de Instala?\195?\167?\195?\163o.pdf
+   trunk/docs/JFindMyFiles - Manual de Programador.doc
+   trunk/docs/JFindMyFiles - Manual de Programador.pdf
+   trunk/docs/JFindMyFiles - Manual de Utilizador.doc
+   trunk/docs/JFindMyFiles - Manual de Utilizador.pdf
+   trunk/docs/JFindMyFiles.doc
+   trunk/docs/ReCalendarizacao Semanal.png
+   trunk/docs/ReCalendarizacao.gan
+   trunk/docs/ReCalendarizacao.png
+   trunk/docs/Testes de Usabilidade ao sistema JFindMyFiles - I.xls
+   trunk/docs/Testes de Usabilidade ao sistema JFindMyFiles - II.xls
+   trunk/docs/[Info] Bibliografia Consultada.txt
+   trunk/docs/[Info] Convecoes de codigo.txt
+   trunk/docs/[Info] Manual de Utilizador.txt
+   trunk/docs/[Info] Ordem das Iteracoes.txt
+   trunk/docs/[Info] Question?\195?\161rio de Usabilidade.txt
+   trunk/docs/[Justificacao] Estado da Arte.txt
+   trunk/docs/[Justificacao] Metodologia usada.txt
+   trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt
+   trunk/docs/[Justificacao] Tecnologia ORM escolhida.txt
+   trunk/docs/[Justificacao] Uso de plataforma RCP.txt
+   trunk/docs/[XPDoc] User Stories Combinadas.txt
+   trunk/docs/[XPDoc] User Stories.txt
+Modified:
+   trunk/installer script.xml
+Log:
+Layout changes to prepare for next development cycle.
+
+/usr/local/bin/commit-email.pl: `/usr/bin/svnlook diff /svnroot/repos/jfindmyfiles -r 263' failed with this output:
+Deleted: trunk/docs/Apresentacao Publica - JFindMyFiles.ppt
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/Apresentacao Publica Com Notas - JFindMyFiles.ppt
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/Calendarizacao.gan
+===================================================================
+--- trunk/docs/Calendarizacao.gan	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/Calendarizacao.gan	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,99 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project name="Untitled Gantt Project" company="" webLink="http://" view-date="2008-03-08" view-index="0" gantt-divider-location="247" resource-divider-location="284" version="2.0">
+-    <description/>
+-    <view zooming-state="default:2" id="gantt-chart"/>
+-    <view id="resource-table">
+-        <field id="0" name="Name" width="55" order="0"/>
+-        <field id="1" name="Default role" width="44" order="1"/>
+-    </view>
+-    <!-- -->
+-    <calendars>
+-        <day-types>
+-            <day-type id="0"/>
+-            <day-type id="1"/>
+-            <calendar id="1" name="default">
+-                <default-week sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+-                <overriden-day-types/>
+-                <days/>
+-            </calendar>
+-        </day-types>
+-    </calendars>
+-    <tasks color="#8cb6ce">
+-        <taskproperties>
+-            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+-            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+-            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+-            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+-            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+-            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+-            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+-            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+-            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+-            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+-        </taskproperties>
+-        <task id="23" name="An??lise" color="#8cb6ce" meeting="false" start="2008-03-11" duration="24" complete="0" priority="1" expand="true">
+-            <task id="6" name="An??lise e Escolha Metodologia" color="#8cb6ce" meeting="false" start="2008-03-11" duration="6" complete="0" thirdDate="2008-03-11" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="7" name="Obten????o de User Stories" color="#8cb6ce" meeting="false" start="2008-03-31" duration="5" complete="0" thirdDate="2008-03-31" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="8" name="Desenvolvimento de Prot??tipos" color="#8cb6ce" meeting="false" start="2008-03-31" duration="5" complete="0" thirdDate="2008-03-31" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="9" name="An??lise de Sistemas Existentes" color="#8cb6ce" meeting="false" start="2008-04-07" duration="5" complete="0" thirdDate="2008-04-07" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="10" name="Estudo e Escolha Plataforma RCP" color="#8cb6ce" meeting="false" start="2008-04-07" duration="5" complete="0" thirdDate="2008-04-07" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="11" name="Escolha de Ferramentas e Bibliotecas a Usar" color="#8cb6ce" meeting="false" start="2008-04-02" duration="3" complete="0" thirdDate="2008-04-02" thirdDate-constraint="0" priority="1" expand="true"/>
+-        </task>
+-        <task id="24" name="Planning Game" color="#8cb6ce" meeting="false" start="2008-04-14" duration="50" complete="0" priority="1" expand="true">
+-            <task id="12" name="Reuni??o &quot;Release Planning&quot;" color="#8cb6ce" meeting="false" start="2008-04-14" duration="1" complete="0" thirdDate="2008-04-14" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="25" name="Implementa????o" color="#8cb6ce" meeting="false" start="2008-04-14" duration="50" complete="0" priority="1" expand="true">
+-                <task id="13" name="Itera????o CB09" color="#8cb6ce" meeting="false" start="2008-04-14" duration="5" complete="0" priority="1" expand="true"/>
+-                <task id="14" name="Itera????o CB05" color="#8cb6ce" meeting="false" start="2008-04-21" duration="5" complete="0" thirdDate="2008-04-21" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="15" name="Itera????o CB03" color="#8cb6ce" meeting="false" start="2008-04-28" duration="10" complete="0" thirdDate="2008-04-28" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="16" name="Itera????o CB04" color="#8cb6ce" meeting="false" start="2008-05-12" duration="5" complete="0" thirdDate="2008-05-12" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="17" name="Itera????o CB02" color="#8cb6ce" meeting="false" start="2008-05-19" duration="5" complete="0" thirdDate="2008-05-19" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="18" name="Itera????o CB07" color="#8cb6ce" meeting="false" start="2008-05-26" duration="5" complete="0" thirdDate="2008-05-26" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="19" name="Itera????o CB06" color="#8cb6ce" meeting="false" start="2008-06-02" duration="5" complete="0" thirdDate="2008-06-02" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="20" name="Itera????o CB08" color="#8cb6ce" meeting="false" start="2008-06-09" duration="5" complete="0" thirdDate="2008-06-09" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="21" name="Itera????o CB01" color="#8cb6ce" meeting="false" start="2008-06-16" duration="5" complete="0" thirdDate="2008-06-16" thirdDate-constraint="0" priority="1" expand="true"/>
+-            </task>
+-        </task>
+-        <task id="22" name="Desenvolvimento de Relat??rio e outra Documenta????o" color="#8cb6ce" meeting="false" start="2008-03-11" duration="80" complete="0" thirdDate="2008-03-11" thirdDate-constraint="0" priority="1" expand="true"/>
+-    </tasks>
+-    <resources>
+-        <resource id="0" name="Patr??cia Monteiro" function="SoftwareDevelopment:10" contacts="ticamonteiro at gmail.com" phone=""/>
+-        <resource id="1" name="S??rgio Lopes" function="SoftwareDevelopment:10" contacts="knitter.is at gmail.com" phone=""/>
+-    </resources>
+-    <allocations>
+-        <allocation task-id="6" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="7" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="8" resource-id="0" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="9" resource-id="0" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="10" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="11" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="12" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="12" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="13" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="13" resource-id="0" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="15" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="15" resource-id="0" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="16" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="16" resource-id="0" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="17" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="17" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="18" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="18" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="19" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="19" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="20" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="20" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="21" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="21" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="22" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="22" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-    </allocations>
+-    <vacations/>
+-    <taskdisplaycolumns>
+-        <displaycolumn property-id="tpd3" order="0" width="138"/>
+-        <displaycolumn property-id="tpd4" order="1" width="44"/>
+-        <displaycolumn property-id="tpd5" order="2" width="43"/>
+-    </taskdisplaycolumns>
+-    <previous/>
+-    <roles roleset-name="Default"/>
+-    <roles roleset-name="SoftwareDevelopment"/>
+-</project>
+
+Deleted: trunk/docs/Calendarizacao.png
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/Ferramentas Usadas e Informacao Geral.txt
+===================================================================
+--- trunk/docs/Ferramentas Usadas e Informacao Geral.txt	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/Ferramentas Usadas e Informacao Geral.txt	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,42 +0,0 @@
+-P?gina do projecto: http://jfindmyfiles.berlios.de
+-P?gina do projecto no sistema berlios: http://developer.berlios.de/projects/jfindmyfiles/
+-URL do reposit?rio SVN: http://svn.berlios.de/svnroot/repos/jfindmyfiles/trunk/
+-URL do gestor de projectos: http://jfindmyfiles.berlios.de/pier - Sistema privado
+-
+-No desenvolvimento do projecto foram usadas as seguintes ferramentas:
+-
+-Netbeans IDE - IDE de desenvolvimento para, entre outras, a linguagem JAVA e que 
+-permite o uso da plataforma Netbeans.
+-URL: http://www.netbeans.org
+-
+-GanttProject - Elabora??o do planeamento e gr?fico de Gantt
+-URL: http://ganttproject.biz
+-
+-ProjectPier - Ferramenta de colabora??o e gest?o de projectos.
+-URL: http://www.projectpier.org
+-
+-TortoiseSVN - Cliente gr?fico, para sistemas operativos Windows, do sistema de 
+-vers?es Subversion.
+-URL: http://tortoisesvn.tigris.org
+-
+-Subversion - Cliente linha de comandos do sistema de vers?es Subversion. Vers?o 
+-	para sistemas operativos baseados em  Linux.
+-URL: http://subversion.tigris.org
+-
+-SmartSVN - Cliente gr?fico, multi-plataforma, do sistema de vers?es Subversion.
+-
+-Notepad++ - Editor de texto para sistemas operativos Windows
+-URL: http://notepad-plus.sourceforge.net
+-
+-Bibliotecas Externas/Outras Tecnologias
+-
+-Hibernate
+-URL: http://www.hibernate.org
+-
+-XTest
+-URL: http://xtest.netbeans.org
+-
+-HSQLDB - Motor de base de dado em Java
+-JCalendar - Widget para mostrar calend?rios
+-jacksum
+-metadata-extractor-2.3.1.jar
+
+Added: trunk/docs/Heap-iterative.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Heap-iterative.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/docs/Heap.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Heap.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Deleted: trunk/docs/JFindMyFiles - Final.pdf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Instala?\195?\167?\195?\163o.doc
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Instala?\195?\167?\195?\163o.pdf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Programador.doc
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Programador.pdf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Utilizador.doc
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Utilizador.pdf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles.doc
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/ReCalendarizacao Semanal.png
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/ReCalendarizacao.gan
+===================================================================
+--- trunk/docs/ReCalendarizacao.gan	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/ReCalendarizacao.gan	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,99 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project name="Untitled Gantt Project" company="" webLink="http://" view-date="2008-04-13" view-index="0" gantt-divider-location="247" resource-divider-location="284" version="2.0">
+-    <description/>
+-    <view zooming-state="default:2" id="gantt-chart"/>
+-    <view id="resource-table">
+-        <field id="0" name="Name" width="55" order="0"/>
+-        <field id="1" name="Default role" width="44" order="1"/>
+-    </view>
+-    <!-- -->
+-    <calendars>
+-        <day-types>
+-            <day-type id="0"/>
+-            <day-type id="1"/>
+-            <calendar id="1" name="default">
+-                <default-week sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+-                <overriden-day-types/>
+-                <days/>
+-            </calendar>
+-        </day-types>
+-    </calendars>
+-    <tasks color="#8cb6ce">
+-        <taskproperties>
+-            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+-            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+-            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+-            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+-            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+-            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+-            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+-            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+-            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+-            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+-        </taskproperties>
+-        <task id="23" name="An??lise" color="#8cb6ce" meeting="false" start="2008-03-11" duration="24" complete="0" priority="1" expand="true">
+-            <task id="6" name="An??lise e Escolha Metodologia" color="#8cb6ce" meeting="false" start="2008-03-11" duration="6" complete="0" thirdDate="2008-03-11" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="7" name="Obten????o de User Stories" color="#8cb6ce" meeting="false" start="2008-03-31" duration="5" complete="0" thirdDate="2008-03-31" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="8" name="Desenvolvimento de Prot??tipos" color="#8cb6ce" meeting="false" start="2008-03-31" duration="5" complete="0" thirdDate="2008-03-31" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="11" name="Escolha de Ferramentas e Bibliotecas a Usar" color="#8cb6ce" meeting="false" start="2008-04-02" duration="3" complete="0" thirdDate="2008-04-02" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="9" name="An??lise de Sistemas Existentes" color="#8cb6ce" meeting="false" start="2008-04-07" duration="5" complete="0" thirdDate="2008-04-07" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="10" name="Estudo e Escolha Plataforma RCP" color="#8cb6ce" meeting="false" start="2008-04-07" duration="5" complete="0" thirdDate="2008-04-07" thirdDate-constraint="0" priority="1" expand="true"/>
+-        </task>
+-        <task id="24" name="Planning Game" color="#8cb6ce" meeting="false" start="2008-04-14" duration="60" complete="0" priority="1" expand="true">
+-            <task id="12" name="Reuni??o &quot;Release Planning&quot;" color="#8cb6ce" meeting="false" start="2008-04-14" duration="1" complete="0" thirdDate="2008-04-14" thirdDate-constraint="0" priority="1" expand="true"/>
+-            <task id="25" name="Implementa????o" color="#8cb6ce" meeting="false" start="2008-04-14" duration="60" complete="0" priority="1" expand="true">
+-                <task id="13" name="Itera????o CB09" color="#8cb6ce" meeting="false" start="2008-04-14" duration="5" complete="0" priority="1" expand="true"/>
+-                <task id="14" name="Itera????o CB05" color="#8cb6ce" meeting="false" start="2008-04-21" duration="15" complete="0" thirdDate="2008-04-21" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="15" name="Itera????o CB03" color="#8cb6ce" meeting="false" start="2008-05-12" duration="5" complete="0" thirdDate="2008-04-28" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="16" name="Itera????o CB04" color="#8cb6ce" meeting="false" start="2008-05-19" duration="10" complete="0" thirdDate="2008-05-12" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="17" name="Itera????o CB02" color="#8cb6ce" meeting="false" start="2008-06-02" duration="5" complete="0" thirdDate="2008-05-19" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="18" name="Itera????o CB07" color="#8cb6ce" meeting="false" start="2008-06-09" duration="8" complete="0" thirdDate="2008-05-26" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="19" name="Itera????o CB06" color="#8cb6ce" meeting="false" start="2008-06-19" duration="6" complete="0" thirdDate="2008-06-02" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="20" name="Itera????o CB08" color="#8cb6ce" meeting="false" start="2008-06-27" duration="3" complete="0" thirdDate="2008-06-09" thirdDate-constraint="0" priority="1" expand="true"/>
+-                <task id="21" name="Itera????o CB01" color="#8cb6ce" meeting="false" start="2008-07-02" duration="3" complete="0" thirdDate="2008-06-16" thirdDate-constraint="0" priority="1" expand="true"/>
+-            </task>
+-        </task>
+-        <task id="22" name="Desenvolvimento de Relat??rio e outra Documenta????o" color="#8cb6ce" meeting="false" start="2008-03-11" duration="90" complete="0" thirdDate="2008-03-11" thirdDate-constraint="0" priority="1" expand="true"/>
+-    </tasks>
+-    <resources>
+-        <resource id="0" name="Patr??cia Monteiro" function="SoftwareDevelopment:10" contacts="ticamonteiro at gmail.com" phone=""/>
+-        <resource id="1" name="S??rgio Lopes" function="SoftwareDevelopment:10" contacts="knitter.is at gmail.com" phone=""/>
+-    </resources>
+-    <allocations>
+-        <allocation task-id="6" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="7" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="8" resource-id="0" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="11" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="9" resource-id="0" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="10" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="12" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="12" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="13" resource-id="0" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="13" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="15" resource-id="0" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="15" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="16" resource-id="0" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="16" resource-id="1" function="SoftwareDevelopment:10" responsible="true" load="100.0"/>
+-        <allocation task-id="17" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="17" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="18" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="18" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="19" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="19" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="20" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="20" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="21" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="21" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="22" resource-id="0" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-        <allocation task-id="22" resource-id="1" function="SoftwareDevelopment:10" responsible="false" load="100.0"/>
+-    </allocations>
+-    <vacations/>
+-    <taskdisplaycolumns>
+-        <displaycolumn property-id="tpd3" order="0" width="138"/>
+-        <displaycolumn property-id="tpd4" order="1" width="44"/>
+-        <displaycolumn property-id="tpd5" order="2" width="43"/>
+-    </taskdisplaycolumns>
+-    <previous/>
+-    <roles roleset-name="Default"/>
+-    <roles roleset-name="SoftwareDevelopment"/>
+-</project>
+
+Deleted: trunk/docs/ReCalendarizacao.png
+===================================================================
+(Binary files differ)
+
+Added: trunk/docs/Simple Export/Simple Export.properties
+===================================================================
+--- trunk/docs/Simple Export/Simple Export.properties	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/Simple Export/Simple Export.properties	2008-08-01 20:58:57 UTC (rev 263)
+@@ -0,0 +1,7 @@
++author=knitter
++version=1.0
++name=Just a Test
++#complete/single
++type=complete
++index=index.html
++style=style.css
+\ No newline at end of file
+
+Added: trunk/docs/Simple Export/index.html
+===================================================================
+--- trunk/docs/Simple Export/index.html	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/Simple Export/index.html	2008-08-01 20:58:57 UTC (rev 263)
+@@ -0,0 +1,87 @@
++<html>
++	<head>
++		<link rel=Stylesheet href="style.css" type="text/css">
++		<title>
++			?CATALOG_NAME?
++		</title>
++	</head>
++
++	<body>
++			<table class="catalog">
++				<th class="catalog" colspan="2">?CATALOG_NAME? Data</th>
++				<tr>
++					<td>Description</td>
++					<td>?CATALOG_DESCRIPTION?</td>
++				</tr>
++				<tr>
++					<td>Disk Number</td>
++					<td>?CATALOG_DISKNUMBER?</td>
++				</tr>
++				<tr>
++					<td>Creation Date</td>
++					<td>?CATALOG_CREATION?</td>
++				</tr>
++				<tr>
++					<td>Total Files</td>
++					<td>?CATALOG_FILES?</td>
++				</tr>
++				<tr>
++					<td>Total Folders</td>
++					<td>?CATALOG_FOLDERS?</td>
++				</tr>
++				<tr>
++					<td>Total Size</td>
++					<td>?CATALOG_SIZE?</td>
++				</tr>
++			</table>
++
++			?DISKGROUP_START?
++			<table class="media">
++				<th class="media" colspan="2">?DISKGROUP_NAME? DiskGroup</th>
++				<tr>
++					<td>Description</td>
++					<td>?DISKGROUP_DESCRIPTION?</td>
++				</tr>
++				<tr>
++					<td>Capacity</td>
++					<td>?DISKGROUP_CAPACITY?</td>
++				</tr>
++			</table>
++			?DISKGROUP_END?
++			
++			?MEDIA_START?
++			<table class="media">
++				<th class="media" colspan="2">?MEDIA_NAME? Media</th>
++				<tr>
++					<td>Description</td>
++					<td>?MEDIA_DESCRIPTION?</td>
++				</tr>
++				<tr>
++					<td>Capacity</td>
++					<td>?MEDIA_CAPACITY?</td>
++				</tr>
++				<tr>
++					<td>Free Space</td>
++					<td>?MEDIA_FREESPACE?</td>
++				</tr>
++				<tr>
++					<td>Last Modified</td>
++					<td>?MEDIA_LASTMODIFIED?</td>
++				</tr>
++				<tr>
++					<td>Location</td>
++					<td>?MEDIA_LOCATION?</td>
++				</tr>
++				<!--?FILE_START?
++				<tr class="filewrapper">
++					<td>?FILE_NAME?.?FILE_EXTENSION?</td>
++					<td>?FILE_DESCRIPTION?</td>
++					<td>?FILE_PATH?</td>
++					<td>?FILE_SIZE?</td>
++					<td>?FILE_LASTMODIFIED?</td>
++				</tr>
++				?FILE_END?--->
++			</table>
++			?MEDIA_END?
++	</body>
++</html>
+\ No newline at end of file
+
+Added: trunk/docs/Simple Export/preview.jpg
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Simple Export/preview.jpg
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/docs/Simple Export/style.css
+===================================================================
+--- trunk/docs/Simple Export/style.css	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/Simple Export/style.css	2008-08-01 20:58:57 UTC (rev 263)
+@@ -0,0 +1,33 @@
++body{
++	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
++	font-size: smaller;
++	text-align: center;
++}
++
++table.catalog{
++	background-color: #FAFAFA;
++	border: solid 1px #DDDDDD;
++	margin: 100px auto 15px;
++	padding: 10px;
++	width: 500px;
++}
++
++table.media{
++	background-color: #EAEAEA;
++	border: solid 1px #DDDDDD;
++	margin: 15px auto 15px;
++	padding: 10px;
++	width: 500px;
++}
++
++th.catalog{
++	background-color: #DDDDDD;
++	padding: 10px 0 10px 0;
++	text-align: center;
++}
++
++th.media{
++	background-color: #DDDDDD;
++	padding: 10px 0 10px 0;
++	text-align: center;
++}
+
+Deleted: trunk/docs/Testes de Usabilidade ao sistema JFindMyFiles - I.xls
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/Testes de Usabilidade ao sistema JFindMyFiles - II.xls
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/[Info] Bibliografia Consultada.txt
+===================================================================
+--- trunk/docs/[Info] Bibliografia Consultada.txt	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/[Info] Bibliografia Consultada.txt	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,7 +0,0 @@
+-Usability Engineering, Jakob Nielsen,Academic Press Limited, 19937
+-Agile Software Development, Principles, Patterns and Practices, Robert C. Martin, Prentice Hall, 2002
+-Agile Development with ICONIX process, People, Process, and Pragamatism,DougRosenberg, Matt Stephens and Mark Collins-Cope, Apress, 2005
+-
+-Descri??o de Swing: http://java.sun.com/j2se/1.5.0/docs/guide/swing/
+-Descri??o de Wiki: http://en.wikipedia.org/wiki/Wiki
+-www.extremeprogramming.org
+\ No newline at end of file
+
+Deleted: trunk/docs/[Info] Convecoes de codigo.txt
+===================================================================
+--- trunk/docs/[Info] Convecoes de codigo.txt	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/[Info] Convecoes de codigo.txt	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,27 +0,0 @@
+-O c?digo dever? ser escrito usando ingl?s para permitir o f?cil acesso por 
+-programadores externos aquando da abertura total do software.
+-
+-Todos os m?todos t?m de incluir um coment?rio usando a estrutura do sistema 
+-Javadoc para que seja poss?vel exportar documenta??o sobre o c?digo usando 
+-ferramentas pr?prias para o efeito.
+-O coment?rio deve conter, pelo menos, uma breve descri??o do objectivo, a 
+-descri??o dos par?metros de entrada e de sa?da e a indica??o de qualquer 
+-excep??o que possa ser lan?ada pelo m?todo.
+-Embora n?o seja obrigat?rio, a refer?ncia a classes relacionadas que sejam 
+-relevantes pode constituir uma ajuda na percep??o da estrutura do c?digo e deve 
+-ser feita sempre que poss?vel.
+-
+-Al?m das notas aqui descritas, devem ser seguidas as conve??es para a linguagem 
+-java definidas pela sun[1]
+-
+-M?todos que n?o sejam implementados ter?o de ter no seu corpo um coment?rio de 
+-linha no formato: //TODO: <mensagem>
+-e o c?digo necess?rios para lan?ar uma excep??o que indique que o m?todo ainda 
+-n?o se encontra completo:
+-throw new UnsupportedOperationException("Not implemented yet"); //NO I18N
+-
+-Caso seja necess?rio acrescentar notas no c?digo, por exemplo e linhas de 
+-c?digo que se pensam mudar mais tarde ou remover, dever? ser colocado um 
+-coment?rio de linha com o formato: //NOTE: <mensagem>
+-
+-[1] - http://java.sun.com/docs/codeconv/
+\ No newline at end of file
+
+Deleted: trunk/docs/[Info] Manual de Utilizador.txt
+===================================================================
+--- trunk/docs/[Info] Manual de Utilizador.txt	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/[Info] Manual de Utilizador.txt	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,204 +0,0 @@
+-[Pref?cio]
+-	Este documento de ajuda destina-se a todos os utilizadores do sistema 
+-	JFindMyfiles, e pretende ser um primeiro ponto de resolu??o das d?vidas 
+-	que surjam.
+-	
+-[Introdu??o]
+-	[O que ? o JFindMyFiles]
+-		JFindMyFiles ? um software de computador, multi-plataforma e 
+-		livre, que oferece a capacidade de cataloga??o e gest?o de 
+-		ficheiros digitais. Permitindo guardar informa??o sobre os 
+-		ficheiros de computador, torna mais f?cil e r?pida a pesquisa e 
+-		organiza??o por parte do utilizador informa??es, entre outros.
+-
+-	[Conceitos B?sicos]
+-		O programa organiza os dados em cat?logos, e permite que os 
+-		dispositivos de armazenamento sejam analizados no sentido de 
+-		guardar informa??es sobre os ficheiros e pastas contidos.
+-		Durante a fase de an?lise ? poss?vel usar extens?es, criadas 
+-		pelo utilizador, que fornecem descri??es extra sobre os 
+-		ficheiros lidos
+-
+-		Os suportes lidos s?o considerados discos para a aplica??o, e 
+-		podem ser organizados em grupos de discos.
+-
+-[Utiliza??o do programa]
+-	[Os cat?logos]
+-		[Criar]
+-			Para criar um novo cat?logo ? necess?rio decidir 
+-			primeiro o tipo de base de dados que ser? usada para 
+-			guardar as informa??es.
+-			
+-			Est?o dispon?veis v?rios motores de bases de dados, que 
+-			ter?o de ser configurados pelo utilizador, ou uma base 
+-			de dados interna, sem qualquer necessidade de 
+-			configura??o para o utilizador. A escolha depender? do 
+-			objectivo e das caracter?sticas do utilizador.
+-
+-			Se n?o tem conhecimentos sobre instala??o de servidores 
+-			de bases de dados, ? recomendado que escolha a op??o de 
+-			base de dados local. Se possui j? um servidor que 
+-			pretende usar, ent?o poder? escolher a op??o de rede e 
+-			introduzir os dados referentes ao servidor.
+-
+-			Na op??o de base de dados local, uma base de dados ser? 
+-			composta por v?rios ficheiros em disco, durante a 
+-			cria??o do cat?logo ser? criada um pasta onde esses 
+-			ficheiros ir?o residir. Por omiss?o essa pasta ser? 
+-			criada na pasta pessoal do utilizador. Esta localiza??o 
+-			poder? ser alterada na janela de cria??o de novos 
+-			cat?logos ou nas op??es da aplica??o.
+-
+-			!Para os utilizadores com conhecimentos avan?ados ? 
+-			necess?rio salientar que, a op??o de base de dados 
+-			local, n?o dever? ser confundida com o uso de um 
+-			servidor intalado na mesma m?quina onde a aplica??o 
+-			est? a ser executada. Um qualquer servidor, instalado 
+-			localmente, ? para a aplica??o, uma base de dados de 
+-			rede.
+-
+-			[Os diferentes tipos de base de dados]
+-				O programa suporta alguns motores de bases de 
+-				dados comuns. ? assim poss?vel escolher o 
+-				servidor que mais se adequar ? situa??o.
+-
+-				Ao escolher criar um novo cat?logo tem a 
+-				possibilidade de indicar qual o tipo de 
+-				servidor que pretende usar. ? necess?rio que 
+-				este servidor esteja j? configurado e que 
+-				exista uma base de dados e um utilizador com as 
+-				configura??es que indicar. ! O programa n?o 
+-				cria a base de dados, cria apenas as tabelas 
+-				que a compoem, todas as configura??es, como a 
+-				instala??o do servidor, cria??o de uma base de 
+-				dados e cria??o de um utilizador com as 
+-				permiss?es correctas, t?m de ser feitas antes 
+-				de se tentar criar um novo cat?logo.
+-
+-				Actualmente, os servidores suportados s?o: 
+-				MySQL, MSSQL 2005, Firebird, PostgreSQL. N?o 
+-				foi testa a vers?o 2008 do MSSQL, por esse 
+-				motivo a mesma n?o ? oficialmente suportada.
+-			<imagem para criar>
+-			<imagem das op??es>
+-		[Abrir]
+-			Para abrir um cat?logo, os passos s?o semalhantes ? 
+-			cria??o[LINK].
+-			
+-			Se estiver a usar a op??o de base de dados local, 
+-			poder? simplesmente navegar at? ? pasta que cont?m o 
+-			cat?logo e seleccionar essa pasta. O nome do cat?logo 
+-			ser? preenchido automaticamente.
+-
+-			<imagem para abrir>
+-		[Guardar]
+-			N?o existe uma op??o especifica para guardar os dados. 
+-			O programa regista todas as altera??es que s?o feitas 
+-			aos dados, n?o sendo por isso necess?rio ter o cuidado 
+-			de guardar os dados.
+-
+-	[Adicionar novos ficheiros]
+-		Novos ficheiros s?o adicionadas atrav?s da leitura de 
+-		dispositivos de amazenamento. N?o ? possivel adicionar apenas 
+-		um ficheiro, a adic??o ter? de ser sempre de novos discos, 
+-		novas pastas, ou outro dispositivo de armazenamento acess?vel 
+-		ao computador.
+-
+-		Ao adicionar um novo disco, ? poss?vel alterar o nome do disco 
+-		que ser? guardado no cat?logo, indicar o Grupo de Discos ao 
+-		qual o novo disco ser? adicionado e indicar se ser? feito o 
+-		c?lculo do c?digo SHA-1. Este c?digo ? usando em 
+-		funcionalidades avan?adas e embora a sua cria??o seja opcional, 
+-		essas funcionalidades n?o estar?o disponiveis em informa??es de 
+-		ficheiros sem o c?digo c?lculado.
+-
+-	[Pesquisar informa??es]
+-		? poss?vel pesquisar ficheiros catalogados atrav?s do seu nome, 
+-		ou de uma palavra ou frase presente na sua descri??o. A 
+-		pesquisa pode ser sens?vel a mai?sculas e ser restrita a um 
+-		grupo de discos.
+-		<imagem de janela de pesquisa>
+-
+-	[Importar dados]
+-		A importa??o de dados est? dispon?vel para ficheiros XML,
+-		previamente criados pelo JFindMyFiles.
+-		Para importar dados exportados anteriormente, basta indicar o 
+-		nome do ficheiro que cont?m os dados a exportar.
+-
+-		<imagem da janela de importa??o>
+-
+-	[Exportar dados]
+-		A exporta??o de dados est? dipon?vel em duas op??es, exporta??o 
+-		simples, usada para exportar todos os dados para um ficheiro de 
+-		texto num formato port?vel, XML ou CSV, e exporta??o usando 
+-		templates.
+-
+-		[Exporta??o simples]
+-			Para a exporta??o simples ? apenas necess?rio indicar o 
+-			nome do ficheiro destino.
+-			Caso pretenda exportar imagens, videos ou clips de 
+-			audio que existam no cat?logo, os mesmos ser?o copiados 
+-			para a pasta onde foi criado o ficheiro de exporta??o.
+-
+-			Tenha em aten??o, que se pretender usar o ficheiro de 
+-			exporta??o para mais tarde importar no JFindMyFiles, 
+-			todos os ficheiros de audio, video e imagem, necessitam 
+-			estar na mesma pasta que o ficheiro XML.
+-
+-			<imagem da janela de exporta??o>
+-		[Exportar usando templates]
+-			Para exportar os dados usando um template HTML, 
+-			necessita ter alguns templates instalados.
+-
+-			Todos os recursos indicanos no template ser?o copiados 
+-			para a pasta de destino da exporta??o.
+-
+-			<imagem da janela de exporta??o>
+-		[Obter mais templates]
+-			Caso pretende obter mais templates poder? consultar o 
+-			s?tio oficial da aplica??o.
+-
+-		Instalar Templates
+-			A instala??o dos templates faz-se colocando a pasta do 
+-			template na pasta configurada na janela de op??es. Se 
+-			n?o alterou a configuar??o estar? na sua pasta pessoal, 
+-			dentro da pasta .jfmfuserfiles/Templates.
+-
+-			Caso o seu template venha compactado, descompacte-o e 
+-			coloque a pasta com todos os ficheiros na pasta de 
+-			templates.
+-[Drives em Linux]
+-	Em linux n?o ? poss?vel, at? ao momento, determinar quais as drives 
+-	correspondentes a dispositivos de CD-ROM/DVD-ROM, FLAHS, discos 
+-	externos, etc.
+-	Por isso existe na sec??o de op??es, um conjunto de defini??es que pode 
+-	usar para configurar quais as pastas que deseja que sejam identificas 
+-	como dispositivos a ler.
+-
+-[Perguntas Frequentes]
+-
+-[Para Programadores e Designers]
+-	Esta se?c?o inclui algumas informa??es destinadas a utilizadores com 
+-	conhecimentos avan?ados e que pretendam expandir a aplica??o, quer 
+-	criando extens?es ao sistema de leitura, quer criando templates HTML 
+-	para o sistema de exporta??o de dados.
+-	
+-	[Expandir o sistema de leitura]
+-	
+-	[Criar Templates de exporta??o]
+-
+-[Sobre]
+-	JFindMyFiles surgiu da necessidade que os autores tinham de uma 
+-	aplica??o que lhes permitisse gerir os v?rios ficheiros que possuiam 
+-	espalhados por dezenas de CDs, DVDs e outros suportes. Ap?s a 
+-	utiliza??o de alguns sistemas de cataloga??o que se mostraram 
+-	insuficientes, quer em funcionalidades quer por se limitarem a apenas 
+-	um sistema operativo, os autores, decidiram propor o projecto ? cadeira 
+-	de Projecto Inform?tico da Escola Superior de Tecnologia e Gest?o do 
+-	Intituto Polit?cnico de Leiria.
+-
+-	Autores: Patr?cia Monteiro, S?rgio Lopes
+-
+-
+-
+-
+
+Deleted: trunk/docs/[Info] Ordem das Iteracoes.txt
+===================================================================
+--- trunk/docs/[Info] Ordem das Iteracoes.txt	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/[Info] Ordem das Iteracoes.txt	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,10 +0,0 @@
+-Planning Game
+-	Itera??o CB09 - 14/04 a 18/04
+-	Itera??o CB05 - 21/04 a 25/04
+-	Itera??o CB03 - 28/04 a 09/05
+-	Itera??o CB04 - 12/05 a 16/05
+-	Itera??o CB02 - 19/05 a 23/05
+-	Itera??o CB07 - 26/05 a 30/05
+-	Itera??o CB06 - 02/06 a 06/06
+-	Itera??o CB08 - 09/06 a 13/06
+-	Itera??o CB01 - 16/06 a 20/06
+\ No newline at end of file
+
+svnlook: Can't convert string from 'UTF-8' to native encoding:
+svnlook: /tmp/svnlook.1/trunk/docs/[Info] Question?\195?\161rio de Usabilidade.txt
+
+
+From knitter at mail.berlios.de  Fri Aug  8 16:38:56 2008
+From: knitter at mail.berlios.de (knitter at mail.berlios.de)
+Date: Fri, 8 Aug 2008 16:38:56 +0200
+Subject: [Jfindmyfiles-commits] r264 - trunk/docs
+Message-ID: <200808081438.m78Ecurn017184@sheep.berlios.de>
+
+Author: knitter
+Date: 2008-08-08 16:38:54 +0200 (Fri, 08 Aug 2008)
+New Revision: 264
+
+Removed:
+   trunk/docs/extremeprogrammingorg.zip
+Log:
+Removed the extremeprogrammingorg.zip file as it can be read on-line.
+
+Deleted: trunk/docs/extremeprogrammingorg.zip
+===================================================================
+(Binary files differ)
+
+
+
+From knitter at mail.berlios.de  Fri Aug  8 23:34:54 2008
+From: knitter at mail.berlios.de (knitter at mail.berlios.de)
+Date: Fri, 8 Aug 2008 23:34:54 +0200
+Subject: [Jfindmyfiles-commits] r265 - trunk
+Message-ID: <200808082134.m78LYsK5014627@sheep.berlios.de>
+
+Author: knitter
+Date: 2008-08-08 23:34:52 +0200 (Fri, 08 Aug 2008)
+New Revision: 265
+
+Removed:
+   trunk/TODO
+Log:
+Deleted old TODO file.
+
+Deleted: trunk/TODO
+===================================================================
+--- trunk/TODO	2008-08-08 14:38:54 UTC (rev 264)
++++ trunk/TODO	2008-08-08 21:34:52 UTC (rev 265)
+@@ -1,22 +0,0 @@
+-- Contextualizar as refer?ncias existentes.
+-- Na justifica??o da plataforma NB VS Eclipse RCP falta indicar o nome da revista.
+-http://www.xylax.net/hibernate/onetomany.html
+-Image taken from: http://www.drewnoakes.com/code/exif/index.html
+-
+-Itera??o 2:
+-	- Abrir cat?logo
+-	- Fechar cat?logo
+-	- Menus na descri??o da itera??o
+-Itera??o 3:
+-	- Manual do programador
+-	
+-Itera??o 4:
+-	- pesquisa de ficheiros duplicados em todo o cat?logo
+-	
+-Itera??o 5:
+-	- menus de contexto sens?veis
+-	- alterar algumas user stories para incluirem todas as op??es de menu que apareceram sem justifica??o
+-	- barras de ferramentas
+-TODOS:
+-	JUNIT - fazer testes
+-	XTest
+
+
+
+From knitter at mail.berlios.de  Sun Aug 17 01:45:28 2008
+From: knitter at mail.berlios.de (knitter at mail.berlios.de)
+Date: Sun, 17 Aug 2008 01:45:28 +0200
+Subject: [Jfindmyfiles-commits] r268 - trunk/site
+Message-ID: <200808162345.m7GNjSEI002331@sheep.berlios.de>
+
+Author: knitter
+Date: 2008-08-17 01:45:24 +0200 (Sun, 17 Aug 2008)
+New Revision: 268
+
+Modified:
+   trunk/site/bugs.html
+   trunk/site/contact.html
+   trunk/site/download.html
+   trunk/site/features.html
+   trunk/site/index.html
+   trunk/site/screenshots.html
+Log:
+Updated content.
+
+Modified: trunk/site/bugs.html
+===================================================================
+--- trunk/site/bugs.html	2008-08-13 16:16:00 UTC (rev 267)
++++ trunk/site/bugs.html	2008-08-16 23:45:24 UTC (rev 268)
+@@ -14,8 +14,8 @@
+                     <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+                     <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+                     <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+         </div>
+@@ -23,6 +23,9 @@
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+             <h1><img src="sys/images/bug.png"/>Reporting Bugs!</h1>
++            Reporting bugs
++To report bugs please use the berlios bug reporting system, you will need to be a registered user in order to submit bug information.
++http://developer.berlios.de/bugs/?group_id=9315
+         </div>
+         <div id="footer">
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">CSS valid</a> :: <a href="#">XHTML 1.0 Strict</a>
+
+Modified: trunk/site/contact.html
+===================================================================
+--- trunk/site/contact.html	2008-08-13 16:16:00 UTC (rev 267)
++++ trunk/site/contact.html	2008-08-16 23:45:24 UTC (rev 268)
+@@ -14,8 +14,8 @@
+                     <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+                     <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+                     <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+         </div>
+@@ -23,6 +23,8 @@
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+             <h1><img src="sys/images/easymoblog.png" />Contact us!</h1>
++            Mailing lists
++If you need to ask questions the users list is the best place to do it: https://lists.berlios.de/mailman/listinfo/jfindmyfiles-users
+         </div>
+         <div id="footer">
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">CSS valid</a> :: <a href="#">XHTML 1.0 Strict</a>
+
+Modified: trunk/site/download.html
+===================================================================
+--- trunk/site/download.html	2008-08-13 16:16:00 UTC (rev 267)
++++ trunk/site/download.html	2008-08-16 23:45:24 UTC (rev 268)
+@@ -14,15 +14,18 @@
+                     <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+                     <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+                     <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+         </div>
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/download.png" />Download</h1>
++            <h1><img src="sys/images/download.png" />Getting JFindMyFiles</h1>
++            <p>If you just want to use the software then use the following link and select the latest version available:</p>
++            <p>The project's source code and all documentation can be obtained with the command:
++            <code>svn checkout http://svn.berlios.de/svnroot/repos/jfindmyfiles/trunk</code>
+         </div>
+         <div id="footer">
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">CSS valid</a> :: <a href="#">XHTML 1.0 Strict</a>
+
+Modified: trunk/site/features.html
+===================================================================
+--- trunk/site/features.html	2008-08-13 16:16:00 UTC (rev 267)
++++ trunk/site/features.html	2008-08-16 23:45:24 UTC (rev 268)
+@@ -10,22 +10,61 @@
+             </div>
+             <div id="menu">
+                 <ul>
+-                    <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+-                    <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+-                    <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="contact.html">Contact</a></li>
++                    <li>
++                        <img src="sys/images/one.png"/><a href="index.html">Home</a>
++                    </li>
++                    <li>
++                        <img src="sys/images/two.png"/><a href="features.html">Features</a>
++                    </li>
++                    <li>
++                        <img src="sys/images/three.png"/><a href="download.html">Download</a>
++                    </li>
++                    <li>
++                        <img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a>
++                    </li>
++                    <li>
++                        <img src="sys/images/five.png"/><a href="bugs.html">Bugs</a>
++                    </li>
++                    <li>
++                        <img src="sys/images/six.png"/><a href="contact.html">Contact</a>
++                    </li>
+                 </ul>
+             </div>
+         </div>
+         <div class="clear">
+-        <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
++        <div id="search">
++            <form>
++                <label>
++                    search:
++                </label>
++                <input type="text"/><input type="submit" value=">>"/>
++            </form>
++        </div>
+         <div id="content">
+             <h1><img src="sys/images/kblackbox.png" />Features!</h1>
++            <p>
++                <ul>
++                    <li>
++                        platform independent software allowing you to use any operation system for which a Java is available;
++                    </li>
++                    <li>
++                        can catalog you hard drives, CD-ROM drives, floppies, mapped and normal network folders;
++                    </li>
++                    <li>
++                        allows for simple search or using regular expressions;
++                    </li>
++                    <li>
++                        allows exporting of data to XML and CSV formats and export using HTML templates that you can create;
++                    </li>
++                    <li>
++                        using the plugin API you can add new file types or provide information from different sources to known types
++                    </li>
++                </ul>
++            </p>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">CSS valid</a> :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">CSS valid</a>
++            :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
+     </body>
+ </html>
+
+Modified: trunk/site/index.html
+===================================================================
+--- trunk/site/index.html	2008-08-13 16:16:00 UTC (rev 267)
++++ trunk/site/index.html	2008-08-16 23:45:24 UTC (rev 268)
+@@ -14,8 +14,8 @@
+                     <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+                     <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+                     <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+         </div>
+
+Modified: trunk/site/screenshots.html
+===================================================================
+--- trunk/site/screenshots.html	2008-08-13 16:16:00 UTC (rev 267)
++++ trunk/site/screenshots.html	2008-08-16 23:45:24 UTC (rev 268)
+@@ -14,8 +14,8 @@
+                     <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+                     <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+                     <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+         </div>
+
+
+
+From knitter at mail.berlios.de  Sun Aug 31 21:51:40 2008
+From: knitter at mail.berlios.de (knitter at mail.berlios.de)
+Date: Sun, 31 Aug 2008 21:51:40 +0200
+Subject: [Jfindmyfiles-commits] r269 - in trunk: media site site/sys
+	site/sys/images
+Message-ID: <200808311951.m7VJpeLF027812@sheep.berlios.de>
+
+Author: knitter
+Date: 2008-08-31 21:50:06 +0200 (Sun, 31 Aug 2008)
+New Revision: 269
+
+Added:
+   trunk/media/logo-original.xcf
+   trunk/media/logo.xcf
+   trunk/media/logo3.xcf
+   trunk/media/rightcorners.xcf
+   trunk/site/sys/images/left.png
+Removed:
+   trunk/site/sys/images/bug.png
+   trunk/site/sys/images/download.png
+   trunk/site/sys/images/easymoblog.png
+   trunk/site/sys/images/kblackbox.png
+   trunk/site/sys/images/knewsticker.png
+   trunk/site/sys/images/lphoto.png
+   trunk/site/sys/images/reminders.png
+Modified:
+   trunk/site/bugs.html
+   trunk/site/contact.html
+   trunk/site/download.html
+   trunk/site/features.html
+   trunk/site/index.html
+   trunk/site/screenshots.html
+   trunk/site/sys/css.css
+   trunk/site/sys/images/logo.png
+Log:
+Changed site layout and removed unecessary images.
+Added xcf files to the media folder.
+
+Added: trunk/media/logo-original.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/logo-original.xcf
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/logo.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/logo.xcf
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/logo3.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/logo3.xcf
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/rightcorners.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/rightcorners.xcf
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/site/bugs.html
+===================================================================
+--- trunk/site/bugs.html	2008-08-16 23:45:24 UTC (rev 268)
++++ trunk/site/bugs.html	2008-08-31 19:50:06 UTC (rev 269)
+@@ -3,11 +3,15 @@
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
++        <title>JFindMyFiles :: Bugs</title>
+     </head>
+     <body>
++<div id="container">
+         <div id="top">
+-            <div id="top-left">
+-            </div>
++            <div id="top-left"></div>
++
++            <div id="empty-left"></div>
++
+             <div id="menu">
+                 <ul>
+                     <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+@@ -18,17 +22,19 @@
+                     <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
++
++           <div id="empty-right"></div>
++           <div id="top-right"></div>
++
+         </div>
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/bug.png"/>Reporting Bugs!</h1>
+-            Reporting bugs
+-To report bugs please use the berlios bug reporting system, you will need to be a registered user in order to submit bug information.
+-http://developer.berlios.de/bugs/?group_id=9315
++            <h1><img src="sys/images/knewsticker.png" />News</h1>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">CSS valid</a> :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
++</div>
+     </body>
+ </html>
+
+Modified: trunk/site/contact.html
+===================================================================
+--- trunk/site/contact.html	2008-08-16 23:45:24 UTC (rev 268)
++++ trunk/site/contact.html	2008-08-31 19:50:06 UTC (rev 269)
+@@ -3,11 +3,15 @@
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
++        <title>JFindMyFiles :: Send us a Message</title>
+     </head>
+     <body>
++<div id="container">
+         <div id="top">
+-            <div id="top-left">
+-            </div>
++            <div id="top-left"></div>
++
++            <div id="empty-left"></div>
++
+             <div id="menu">
+                 <ul>
+                     <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+@@ -18,16 +22,19 @@
+                     <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
++
++           <div id="empty-right"></div>
++           <div id="top-right"></div>
++
+         </div>
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/easymoblog.png" />Contact us!</h1>
+-            Mailing lists
+-If you need to ask questions the users list is the best place to do it: https://lists.berlios.de/mailman/listinfo/jfindmyfiles-users
++            <h1><img src="sys/images/knewsticker.png" />News</h1>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">CSS valid</a> :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
++</div>
+     </body>
+ </html>
+
+Modified: trunk/site/download.html
+===================================================================
+--- trunk/site/download.html	2008-08-16 23:45:24 UTC (rev 268)
++++ trunk/site/download.html	2008-08-31 19:50:06 UTC (rev 269)
+@@ -3,11 +3,15 @@
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
++        <title>JFindMyFiles :: Download</title>
+     </head>
+     <body>
++<div id="container">
+         <div id="top">
+-            <div id="top-left">
+-            </div>
++            <div id="top-left"></div>
++
++            <div id="empty-left"></div>
++
+             <div id="menu">
+                 <ul>
+                     <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+@@ -18,17 +22,19 @@
+                     <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
++
++           <div id="empty-right"></div>
++           <div id="top-right"></div>
++
+         </div>
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/download.png" />Getting JFindMyFiles</h1>
+-            <p>If you just want to use the software then use the following link and select the latest version available:</p>
+-            <p>The project's source code and all documentation can be obtained with the command:
+-            <code>svn checkout http://svn.berlios.de/svnroot/repos/jfindmyfiles/trunk</code>
++            <h1><img src="sys/images/knewsticker.png" />News</h1>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">CSS valid</a> :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
++</div>
+     </body>
+ </html>
+
+Modified: trunk/site/features.html
+===================================================================
+--- trunk/site/features.html	2008-08-16 23:45:24 UTC (rev 268)
++++ trunk/site/features.html	2008-08-31 19:50:06 UTC (rev 269)
+@@ -3,68 +3,38 @@
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
++        <title>JFindMyFiles :: Features</title>
+     </head>
+     <body>
++<div id="container">
+         <div id="top">
+-            <div id="top-left">
+-            </div>
++            <div id="top-left"></div>
++
++            <div id="empty-left"></div>
++
+             <div id="menu">
+                 <ul>
+-                    <li>
+-                        <img src="sys/images/one.png"/><a href="index.html">Home</a>
+-                    </li>
+-                    <li>
+-                        <img src="sys/images/two.png"/><a href="features.html">Features</a>
+-                    </li>
+-                    <li>
+-                        <img src="sys/images/three.png"/><a href="download.html">Download</a>
+-                    </li>
+-                    <li>
+-                        <img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a>
+-                    </li>
+-                    <li>
+-                        <img src="sys/images/five.png"/><a href="bugs.html">Bugs</a>
+-                    </li>
+-                    <li>
+-                        <img src="sys/images/six.png"/><a href="contact.html">Contact</a>
+-                    </li>
++                    <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
++                    <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
++                    <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
++                    <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
++                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
++
++           <div id="empty-right"></div>
++           <div id="top-right"></div>
++
+         </div>
+         <div class="clear">
+-        <div id="search">
+-            <form>
+-                <label>
+-                    search:
+-                </label>
+-                <input type="text"/><input type="submit" value=">>"/>
+-            </form>
+-        </div>
++        <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/kblackbox.png" />Features!</h1>
+-            <p>
+-                <ul>
+-                    <li>
+-                        platform independent software allowing you to use any operation system for which a Java is available;
+-                    </li>
+-                    <li>
+-                        can catalog you hard drives, CD-ROM drives, floppies, mapped and normal network folders;
+-                    </li>
+-                    <li>
+-                        allows for simple search or using regular expressions;
+-                    </li>
+-                    <li>
+-                        allows exporting of data to XML and CSV formats and export using HTML templates that you can create;
+-                    </li>
+-                    <li>
+-                        using the plugin API you can add new file types or provide information from different sources to known types
+-                    </li>
+-                </ul>
+-            </p>
++            <h1><img src="sys/images/knewsticker.png" />News</h1>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">CSS valid</a>
+-            :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
++</div>
+     </body>
+ </html>
+
+Modified: trunk/site/index.html
+===================================================================
+--- trunk/site/index.html	2008-08-16 23:45:24 UTC (rev 268)
++++ trunk/site/index.html	2008-08-31 19:50:06 UTC (rev 269)
+@@ -3,11 +3,15 @@
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
++        <title>JFindMyFiles :: Disk Cataloger Software</title>
+     </head>
+     <body>
++<div id="container">
+         <div id="top">
+-            <div id="top-left">
+-            </div>
++            <div id="top-left"></div>
++
++            <div id="empty-left"></div>
++
+             <div id="menu">
+                 <ul>
+                     <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+@@ -18,6 +22,10 @@
+                     <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
++
++           <div id="empty-right"></div>
++           <div id="top-right"></div>
++
+         </div>
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+@@ -25,7 +33,8 @@
+             <h1><img src="sys/images/knewsticker.png" />News</h1>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">CSS valid</a> :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
++</div>
+     </body>
+ </html>
+
+Modified: trunk/site/screenshots.html
+===================================================================
+--- trunk/site/screenshots.html	2008-08-16 23:45:24 UTC (rev 268)
++++ trunk/site/screenshots.html	2008-08-31 19:50:06 UTC (rev 269)
+@@ -3,11 +3,15 @@
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
++        <title>JFindMyFiles :: See usagem shots</title>
+     </head>
+     <body>
++<div id="container">
+         <div id="top">
+-            <div id="top-left">
+-            </div>
++            <div id="top-left"></div>
++
++            <div id="empty-left"></div>
++
+             <div id="menu">
+                 <ul>
+                     <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+@@ -18,14 +22,19 @@
+                     <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
++
++           <div id="empty-right"></div>
++           <div id="top-right"></div>
++
+         </div>
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/lphoto.png" />Screenshots</h1>
++            <h1><img src="sys/images/knewsticker.png" />News</h1>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">CSS valid</a> :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
++</div>
+     </body>
+ </html>
+
+Modified: trunk/site/sys/css.css
+===================================================================
+--- trunk/site/sys/css.css	2008-08-16 23:45:24 UTC (rev 268)
++++ trunk/site/sys/css.css	2008-08-31 19:50:06 UTC (rev 269)
+@@ -2,29 +2,57 @@
+     font-family: Arial, Helvetica, sans-serif;
+ }
+ 
++#container {
++    width: 940px;
++margin: 0 auto;
++}
++
+ #top {
+-    background-color: #2f4090;
+     width: 100%;
+-    margin-top: 2em;
++    margin-top: 1em;
++    height: 165px;
+ }
+ 
+ #top-left {
+     background: url(images/logo.png) no-repeat;
+-    background-color: inherit;
+-    height: 150px;
+-    width: 60%;
++    background-color: transparent;
++    height: 100%;
++    width: 370px;
+     float: left;
+ }
+ 
++#top-right {
++    height: 100%;
++    width: 59px;
++    background: url(images/left.png) no-repeat;
++    margin-left: 881px;
++}
++
++#empty-left {
++    background-color: #2f4090;
++    float: left;
++    width: 190px;
++    height: 100%;
++}
++
++#empty-right {
++    background-color: #2f4090;
++    float: left;
++    width: 101px;
++    height: 100%;
++}
++
+ #menu {
+     background-color: white;
+-    width: 12em;
+-    margin-left: 60%;
+-    height: 150px;
++    width: 220px;
++    /*width: 180px;*/
++    height: 100%;
++    float:left;
+ }
+ 
+ #menu ul {
+     margin-right: 1em;
++    margin-top: 0;
+ }
+ 
+ #menu ul li {
+@@ -42,13 +70,13 @@
+ 
+ #search {
+     margin: 1em auto;
+-    width: 95%;
+-    text-align: right;    
++    width: 99%;
++    text-align: right;
+ }
+ 
+ #content {
+     margin: 1em auto;
+-    width: 80%;
++    width: 100%;
+ }
+ 
+ #footer {
+@@ -57,7 +85,7 @@
+     border-top-style: solid;
+     border-top-color: black;
+     border-top-width: 1px;
+-    width: 50%;
++    width: 70%;
+     text-align: center;
+ }
+ 
+@@ -65,10 +93,11 @@
+     border: none;
+ }
+ 
+-a {
++a, a:visited{
+     text-decoration: none;
++    color: blue;
+ }
+ 
+ .clear {
+     clear: both;
+-}
+\ No newline at end of file
++}
+
+Deleted: trunk/site/sys/images/bug.png
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/site/sys/images/download.png
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/site/sys/images/easymoblog.png
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/site/sys/images/kblackbox.png
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/site/sys/images/knewsticker.png
+===================================================================
+(Binary files differ)
+
+Added: trunk/site/sys/images/left.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/site/sys/images/left.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/site/sys/images/logo.png
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/site/sys/images/lphoto.png
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/site/sys/images/reminders.png
+===================================================================
+(Binary files differ)
+
+
+

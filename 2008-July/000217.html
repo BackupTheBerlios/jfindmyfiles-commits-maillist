@@ -1,0 +1,917 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r222 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r222%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils&In-Reply-To=%3C200807161947.m6GJlXU7005788%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000216.html">
+   <LINK REL="Next"  HREF="000218.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r222 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r222%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils&In-Reply-To=%3C200807161947.m6GJlXU7005788%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r222 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils">knitter at mail.berlios.de
+       </A><BR>
+    <I>Wed Jul 16 21:47:33 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000216.html">[Jfindmyfiles-commits] r221 - in trunk/docs: . Documentos	Externos/images Iteracao7-CB06 Iteracao7-CB06/Simple Export
+</A></li>
+        <LI>Next message: <A HREF="000218.html">[Jfindmyfiles-commits] r223 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#217">[ date ]</a>
+              <a href="thread.html#217">[ thread ]</a>
+              <a href="subject.html#217">[ subject ]</a>
+              <a href="author.html#217">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-07-16 21:47:19 +0200 (Wed, 16 Jul 2008)
+New Revision: 222
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/Template.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcCatalogProperties.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcEditDescription.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcItemProperties.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcLaunchFile.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcNewDisk.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcNewGroup.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRename.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRenumberDisks.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearch.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearchDuplicates.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogView.java
+Log:
+Correc?\195?\167?\195?\181es de c?\195?\179digo.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -86,13 +86,6 @@
+ 
+                     break;
+                 case CatalogConstants.MYSQL:
+-                    //TODO: remove this!
+-                    username = &quot;jfindmyfilesuser&quot;;
+-                    password = &quot;Jf1ndmYf1l3z!&quot;;
+-                    dbname = &quot;jfindmyfilesdb&quot;;
+-                    dburl = &quot;67.207.139.234&quot;;
+-                    port = &quot;3306&quot;;
+-
+                     hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.MySQLDialect&quot;);
+                     hConfig.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;com.mysql.jdbc.Driver&quot;);
+                     hConfig.setProperty(&quot;hibernate.connection.url&quot;, &quot;jdbc:<A HREF="mysql://">mysql://</A>&quot; + dburl + &quot;:&quot; + port + &quot;/&quot; + dbname);
+@@ -270,6 +263,14 @@
+         cSession.getTransaction().commit();
+         return rs;
+     }
++    
++    public List getDisks() {
++        Session cSession = sessionFactory.getCurrentSession();
++        cSession.beginTransaction();
++        List rs = cSession.createQuery(&quot;from Media&quot;).list();
++        cSession.getTransaction().commit();
++        return rs;
++    }
+ 
+     //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+     public void addListener(CatalogEngineListener l) {
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -19,18 +19,31 @@
+  */
+ package de.berlios.jfindmyfiles.exportengine;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
++import de.berlios.jfindmyfiles.catalog.entities.Media;
++import java.io.BufferedReader;
++import java.io.BufferedWriter;
+ import java.io.File;
++import java.io.FileReader;
++import java.io.FileWriter;
++import java.io.IOException;
++import java.util.List;
++import java.util.Properties;
++import org.openide.util.Exceptions;
++import org.openide.util.Lookup;
+ 
+ /**
+  *
+  * @author Knitter
+  */
+ public class HTML extends ExportEngine {
+-    
++
+     File destination;
+     String name;
+     Template template;
+-    
++
+     public HTML(File destination, String name, Template template) {
+         this.destination = destination;
+         this.name = name;
+@@ -40,10 +53,179 @@
+     public void export() {
+         start();
+     }
+-    
++
+     @Override
+     public void run() {
+-        
++        int flag_media = 0, flag_diskgroup = 0, flag_file = 0, aux;
++        String media = &quot;&quot;, diskgroup = &quot;&quot;, fileWrapper = &quot;&quot;, auxStr, auxStr2, auxStr3;
++
++        FileWriter stream = null;
++        try {
++            CatalogEngine catalog = Lookup.getDefault().lookup(CatalogEngine.class);
++            List&lt;Media&gt; disks = catalog.getDisks();
++            List&lt;DiskGroup&gt; diskgroups = catalog.getDiskGroups();
++            stream = new FileWriter(destination);
++            BufferedWriter out = new BufferedWriter(stream);
++            Properties properties = template.getProperties();
++            String fileName = properties.getProperty(&quot;index&quot;);
++            if (fileName != null) {
++                FileReader fr = new FileReader(template.getFolder() + File.separator + fileName);
++                BufferedReader br = new BufferedReader(fr);
++                String line, all = &quot;&quot;;
++                while ((line = br.readLine()) != null) {
++                    if (flag_diskgroup == 0) {
++                        if ((aux = line.indexOf(&quot;&#171;DISKGROUP_START&#187;&quot;)) != -1) {
++                            flag_diskgroup = 1;
++                            diskgroup = diskgroup.concat(line.substring(aux + 17));
++                            line = line.substring(0, aux);
++                        }
++                    } else {
++                        if ((aux = line.indexOf(&quot;&#171;DISKGROUP_END&#187;&quot;)) != -1) {
++                            flag_diskgroup = 0;
++                            diskgroup = diskgroup.concat(line.substring(0, aux));
++                            line = line.substring(aux + 15);
++                            for (DiskGroup d : diskgroups) {
++                                auxStr = String.valueOf(diskgroup);
++                                if ((auxStr2 = d.getName()) != null) {
++                                    auxStr = auxStr.replace(&quot;&#171;DISKGROUP_NAME&#187;&quot;, auxStr2);
++                                } else {
++                                    auxStr = auxStr.replace(&quot;&#171;DISKGROUP_NAME&#187;&quot;, &quot;&quot;);
++                                }
++                                if ((auxStr2 = d.getDescription()) != null) {
++                                    auxStr = auxStr.replace(&quot;&#171;DISKGROUP_DESCRIPTION&#187;&quot;, auxStr2);
++                                } else {
++                                    auxStr = auxStr.replace(&quot;&#171;DISKGROUP_DESCRIPTION&#187;&quot;, &quot;&quot;);
++                                }
++                                auxStr = auxStr.replace(&quot;&#171;DISKGROUP_CAPACITY&#187;&quot;, String.valueOf(d.getCapacity()));
++
++                                all = all.concat(auxStr);
++                            }
++                        } else {
++                            diskgroup = diskgroup.concat(line);
++                            line = &quot;&quot;;
++                        }
++                    }
++
++
++                    if (flag_media == 0) {
++                        if ((aux = line.indexOf(&quot;&#171;MEDIA_START&#187;&quot;)) != -1) {
++                            flag_media = 1;
++                            media = media.concat(line.substring(aux + 13));
++                            line = line.substring(0, aux);
++                        }
++                    } else {
++                        if ((aux = line.indexOf(&quot;&#171;MEDIA_END&#187;&quot;)) != -1) {
++                            flag_media = 0;
++                            media = media.concat(line.substring(0, aux));
++                            line = line.substring(aux + 11);
++                            for (Media disk : disks) {
++                                auxStr = String.valueOf(media);
++                                if ((auxStr2 = disk.getName()) != null) {
++                                    auxStr = auxStr.replace(&quot;&#171;MEDIA_NAME&#187;&quot;, auxStr2);
++                                } else {
++                                    auxStr = auxStr.replace(&quot;&#171;MEDIA_NAME&#187;&quot;, &quot;&quot;);
++                                }
++                                if ((auxStr2 = disk.getDescription()) != null) {
++                                    auxStr = auxStr.replace(&quot;&#171;MEDIA_DESCRIPTION&#187;&quot;, auxStr2);
++                                } else {
++                                    auxStr = auxStr.replace(&quot;&#171;MEDIA_DESCRIPTION&#187;&quot;, &quot;&quot;);
++                                }
++                                auxStr = auxStr.replace(&quot;&#171;MEDIA_CAPACITY&#187;&quot;, String.valueOf(disk.getCapacity()));
++                                auxStr = auxStr.replace(&quot;&#171;MEDIA_FREESPACE&#187;&quot;, String.valueOf(disk.getFreeSpace()));
++                                auxStr = auxStr.replace(&quot;&#171;MEDIA_LASTMODIFIED&#187;&quot;, String.valueOf(disk.getLastModified()));
++                                if ((auxStr2 = disk.getLocation()) != null) {
++                                    auxStr = auxStr.replace(&quot;&#171;MEDIA_LOCATION&#187;&quot;, disk.getLocation());
++                                } else {
++                                    auxStr = auxStr.replace(&quot;&#171;MEDIA_LOCATION&#187;&quot;, &quot;&quot;);
++                                }
++
++                                all = all.concat(auxStr);
++
++                                /*if (flag_file == 0) {
++                                    if ((aux = line.indexOf(&quot;&#171;FILE_START&#187;&quot;)) != -1) {
++                                        flag_file = 1;
++                                        fileWrapper = fileWrapper.concat(line.substring(aux + 12));
++                                        line = line.substring(0, aux);
++                                    }
++                                } else {
++                                    if ((aux = line.indexOf(&quot;&#171;FILE_END&#187;&quot;)) != -1) {
++                                        flag_file = 0;
++                                        fileWrapper = fileWrapper.concat(line.substring(0, aux));
++                                        line = line.substring(aux + 10);
++                                        for (FileWrapper w : disk.getFileList()) { //lazyinitializationexception
++                                            auxStr = String.valueOf(fileWrapper);
++                                            if ((auxStr2 = w.getName()) != null) {
++                                                auxStr = auxStr.replace(&quot;&#171;FILE_NAME&#187;&quot;, auxStr2);
++                                            } else {
++                                                auxStr = auxStr.replace(&quot;&#171;FILE_NAME&#187;&quot;, &quot;&quot;);
++                                            }
++                                            if ((auxStr2 = w.getDescription()) != null) {
++                                                auxStr = auxStr.replace(&quot;&#171;FILE_DESCRIPTION&#187;&quot;, auxStr2);
++                                            } else {
++                                                auxStr = auxStr.replace(&quot;&#171;FILE_DESCRIPTION&#187;&quot;, &quot;&quot;);
++                                            }
++                                            auxStr = auxStr.replace(&quot;&#171;FILE_PATH&#187;&quot;, String.valueOf(w.getAbsolutePath()));
++                                            auxStr = auxStr.replace(&quot;&#171;FILE_SIZE&#187;&quot;, String.valueOf(w.getSize()));
++                                            auxStr = auxStr.replace(&quot;&#171;FILE_LASTMODIFIED&#187;&quot;, String.valueOf(w.getLastModified()));
++
++                                            all = all.concat(auxStr);
++                                        }
++                                    } else {
++                                        fileWrapper = fileWrapper.concat(line);
++                                        line = &quot;&quot;;
++                                    }
++                                }*/
++                            }
++                        } else {
++                            media = media.concat(line);
++                            line = &quot;&quot;;
++                        }
++                    }
++                    all = all.concat(line + '\n');
++                }
++
++                if ((auxStr = catalog.getProperties().getName()) != null) {
++                    all = all.replace(&quot;&#171;CATALOG_NAME&#187;&quot;, catalog.getProperties().getName());
++                } else {
++                    all = all.replace(&quot;&#171;CATALOG_NAME&#187;&quot;, &quot;&quot;);
++                }
++                if ((auxStr = catalog.getProperties().getDescription()) != null) {
++                    all = all.replace(&quot;&#171;CATALOG_DESCRIPTION&#187;&quot;, catalog.getProperties().getDescription());
++                } else {
++                    all = all.replace(&quot;&#171;CATALOG_DESCRIPTION&#187;&quot;, &quot;&quot;);
++                }
++                all = all.replace(&quot;&#171;CATALOG_SIZE&#187;&quot;, String.valueOf(catalog.getProperties().getTotalSize()));
++                all = all.replace(&quot;&#171;CATALOG_DISKNUMBER&#187;&quot;, String.valueOf(catalog.getProperties().getDiskNumber()));
++                all = all.replace(&quot;&#171;CATALOG_FILES&#187;&quot;, String.valueOf(catalog.getProperties().getTotalFiles()));
++                all = all.replace(&quot;&#171;CATALOG_FOLDERS&#187;&quot;, String.valueOf(catalog.getProperties().getTotalFolders()));
++                all = all.replace(&quot;&#171;CATALOG_CREATION&#187;&quot;, catalog.getProperties().getCreationDate().toString());
++                out.write(all + '\n');
++                fr.close();
++            }
++
++            out.close();
++
++            fileName = properties.getProperty(&quot;style&quot;);
++            if (fileName != null) {
++                System.out.println();
++                stream = new FileWriter(destination.getParent() + File.separator + fileName);
++                out = new BufferedWriter(stream);
++                FileReader fr = new FileReader(template.getFolder() + File.separator + fileName);
++                BufferedReader br = new BufferedReader(fr);
++                String line;
++                while ((line = br.readLine()) != null) {
++                    out.write(line);
++                }
++                out.close();
++            }
++        } catch (IOException ex) {
++            Exceptions.printStackTrace(ex);
++        } finally {
++            try {
++                stream.close();
++            } catch (IOException ex) {
++                Exceptions.printStackTrace(ex);
++            }
++        }
+     }
+-
+ }
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/Template.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/Template.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/Template.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -5,6 +5,7 @@
+ package de.berlios.jfindmyfiles.exportengine;
+ 
+ import java.io.File;
++import java.util.Properties;
+ 
+ /**
+  *
+@@ -19,8 +20,9 @@
+     private String version;
+     private int type;
+     private File folder;
++    private Properties properties;
+ 
+-    public Template(String name, String author, String version, int type, File folder) {
++    public Template(String name, String author, String version, int type, File folder, Properties properties) {
+         if (type != SINGLE &amp;&amp; type != COMPLETE) {
+             throw new IllegalArgumentException(&quot;Invalid template type. &quot; +
+                     &quot;Valid types are Template.SINGE and Template.COMPLETE&quot;);
+@@ -30,6 +32,7 @@
+         this.version = version;
+         this.type = type;
+         this.folder = folder;
++        this.properties = properties;
+     }
+ 
+     public File getFolder() {
+@@ -48,6 +51,10 @@
+         return type;
+     }
+ 
++    public Properties getProperties() {
++        return properties;
++    }
++    
+     public String getVersion() {
+         return version;
+     }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -26,7 +26,7 @@
+ /**
+  * Top component which displays something.
+  */
+-final class SearchWindowTopComponent extends TopComponent {
++public final class SearchWindowTopComponent extends TopComponent {
+ 
+     private CatalogEngine eng;
+     private Vector&lt;DiskGroup&gt; groups;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcCatalogProperties.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcCatalogProperties.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcCatalogProperties.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -67,6 +67,7 @@
+ 
+     @Override
+     public boolean isEnabled() {
+-        return eng.isOpened();
++        //return eng.isOpened();
++        return true;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcEditDescription.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcEditDescription.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcEditDescription.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -58,6 +58,7 @@
+ 
+     @Override
+     public boolean isEnabled() {
+-        return eng.isOpened();
++        //return eng.isOpened();
++        return true;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcItemProperties.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcItemProperties.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcItemProperties.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -60,6 +60,7 @@
+ 
+     @Override
+     public boolean isEnabled() {
+-        return eng.isOpened();
++        //return eng.isOpened();
++        return true;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcLaunchFile.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcLaunchFile.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcLaunchFile.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -76,6 +76,7 @@
+ 
+     @Override
+     public boolean isEnabled() {
+-        return eng.isOpened();
++       // return eng.isOpened();
++        return true;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcNewDisk.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcNewDisk.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcNewDisk.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -71,6 +71,7 @@
+ 
+     @Override
+     public boolean isEnabled() {
+-        return eng.isOpened();
++        //return eng.isOpened();
++        return true;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcNewGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcNewGroup.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcNewGroup.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -66,6 +66,7 @@
+ 
+     @Override
+     public boolean isEnabled() {
+-        return eng.isOpened();
++        //return eng.isOpened();
++        return true;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -58,6 +58,7 @@
+ 
+     @Override
+     public boolean isEnabled() {
+-        return eng.isOpened();
++        //return eng.isOpened();
++        return true;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRename.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRename.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRename.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -67,6 +67,7 @@
+ 
+     @Override
+     public boolean isEnabled() {
+-        return eng.isOpened();
++        //return eng.isOpened();
++        return true;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRenumberDisks.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRenumberDisks.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRenumberDisks.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -33,7 +33,7 @@
+         super();
+         eng = Lookup.getDefault().lookup(CatalogEngine.class);
+     }
+-    
++
+     public void performAction() {
+         // TODO implement action body
+     }
+@@ -57,8 +57,10 @@
+     protected boolean asynchronous() {
+         return false;
+     }
+-        @Override
++
++    @Override
+     public boolean isEnabled() {
+-        return eng.isOpened();
++        //return eng.isOpened();
++        return true;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearch.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearch.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearch.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -20,10 +20,12 @@
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.SearchWindowTopComponent;
+ import org.openide.util.HelpCtx;
+ import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
+ import org.openide.util.actions.CallableSystemAction;
++import org.openide.windows.TopComponent;
+ 
+ public final class AcSearch extends CallableSystemAction {
+ 
+@@ -35,7 +37,9 @@
+     }
+ 
+     public void performAction() {
+-        //tODO: implement body
++        TopComponent win = SearchWindowTopComponent.findInstance();
++        win.open();
++        win.requestActive();
+     }
+ 
+     public String getName() {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearchDuplicates.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearchDuplicates.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearchDuplicates.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -48,6 +48,7 @@
+ 
+     @Override
+     public boolean isEnabled() {
+-        return eng.isOpened();
++        //return eng.isOpened();
++        return true;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-07-16 19:47:19 UTC (rev 222)
+@@ -30,13 +30,13 @@
+ NewCatalogDlg.invalidusername=* - Invalid Username
+ NewCatalogDlg.invalidurl=* - Invalid URL
+ NewCatalogDlg.invaliddestination=* - Destination cannot be empty
+-NewCatalogDlg.empyname=* - Name  cannot be empty
++NewCatalogDlg.emptyname=* - Name  cannot be empty
+ NewCatalogDlg.choosedirectory=Choose a directory
+ OpenCatalogDlg.invalidport=* - Invalid Port
+ OpenCatalogDlg.invalidusername=* - Invalid Username
+ OpenCatalogDlg.invalidurl=* - Invalid URL
+ OpenCatalogDlg.invaliddestination=* - Destinatio cannot be empty
+-OpenCatalogDlg.empyname=* - Nanem cannot be empty
++OpenCatalogDlg.emptyname=* - Name cannot be empty
+ OpenCatalogDlg.choosedirectory=Choose a directory
+ NewCatalogDlg.jbtnHelp.text=Help
+ NewCatalogDlg.jbtnCancel.text=Cancel
+@@ -164,3 +164,7 @@
+ ImportDlg.jchkImportCustomIcons.text=Custom icons
+ ImportDlg.jlblInclude.text=Include:
+ AskDescriptionDlg.title=Media Description
++NewDiskDlg.title=New Disk
++CatalogPropertiesDlg.title=Catalog Properties
++ImportDlg.title=Import
++ExportDlg.title=Export
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form	2008-07-16 19:47:19 UTC (rev 222)
+@@ -3,6 +3,9 @@
+ &lt;Form version=&quot;1.5&quot; maxVersion=&quot;1.6&quot; type=&quot;org.netbeans.modules.form.forminfo.JDialogFormInfo&quot;&gt;
+   &lt;Properties&gt;
+     &lt;Property name=&quot;defaultCloseOperation&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
++    &lt;Property name=&quot;title&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++      &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;CatalogPropertiesDlg.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++    &lt;/Property&gt;
+   &lt;/Properties&gt;
+   &lt;SyntheticProperties&gt;
+     &lt;SyntheticProperty name=&quot;formSizePolicy&quot; type=&quot;int&quot; value=&quot;1&quot;/&gt;
+@@ -174,6 +177,7 @@
+         &lt;/Component&gt;
+         &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jlblIcon&quot;&gt;
+           &lt;Properties&gt;
++            &lt;Property name=&quot;horizontalAlignment&quot; type=&quot;int&quot; value=&quot;0&quot;/&gt;
+             &lt;Property name=&quot;icon&quot; type=&quot;javax.swing.Icon&quot; editor=&quot;org.netbeans.modules.form.editors2.IconEditor&quot;&gt;
+               &lt;Image iconType=&quot;3&quot; name=&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/general/properties-catalog.png&quot;/&gt;
+             &lt;/Property&gt;
+@@ -181,9 +185,6 @@
+               &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;CatalogPropertiesDlg.jlblIcon.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
+-          &lt;AuxValues&gt;
+-            &lt;AuxValue name=&quot;JavaCodeGenerator_CreateCodePost&quot; type=&quot;java.lang.String&quot; value=&quot;jlblIcon.setIcon(new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32/icon-catalog.png&quot;))); // NOI18N&quot;/&gt;
+-          &lt;/AuxValues&gt;
+         &lt;/Component&gt;
+         &lt;Component class=&quot;javax.swing.JSeparator&quot; name=&quot;jSeparator2&quot;&gt;
+         &lt;/Component&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -100,7 +100,6 @@
+         jlblCatalogName = new javax.swing.JLabel();
+         jlblCreatedOn = new javax.swing.JLabel();
+         jlblIcon = new javax.swing.JLabel();
+-        jlblIcon.setIcon(new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32/icon-catalog.png&quot;))); // NOI18N
+         jSeparator2 = new javax.swing.JSeparator();
+         jdcCreatedOn = new com.toedter.calendar.JDateChooser();
+         jSeparator1 = new javax.swing.JSeparator();
+@@ -119,6 +118,7 @@
+         jbtnOK = new javax.swing.JButton();
+ 
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
++        setTitle(org.openide.util.NbBundle.getMessage(CatalogPropertiesDlg.class, &quot;CatalogPropertiesDlg.title&quot;)); // NOI18N
+ 
+         jpCatalogData.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(CatalogPropertiesDlg.class, &quot;CatalogPropertiesDlg.jpCatalogData.border.title&quot;))); // NOI18N
+ 
+@@ -127,6 +127,7 @@
+ 
+         jlblCreatedOn.setText(org.openide.util.NbBundle.getMessage(CatalogPropertiesDlg.class, &quot;CatalogPropertiesDlg.jlblCreatedOn.text&quot;)); // NOI18N
+ 
++        jlblIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+         jlblIcon.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/general/properties-catalog.png&quot;))); // NOI18N
+         jlblIcon.setText(org.openide.util.NbBundle.getMessage(CatalogPropertiesDlg.class, &quot;CatalogPropertiesDlg.jlblIcon.text&quot;)); // NOI18N
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-07-16 19:47:19 UTC (rev 222)
+@@ -3,6 +3,9 @@
+ &lt;Form version=&quot;1.5&quot; maxVersion=&quot;1.6&quot; type=&quot;org.netbeans.modules.form.forminfo.JDialogFormInfo&quot;&gt;
+   &lt;Properties&gt;
+     &lt;Property name=&quot;defaultCloseOperation&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
++    &lt;Property name=&quot;title&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++      &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++    &lt;/Property&gt;
+   &lt;/Properties&gt;
+   &lt;SyntheticProperties&gt;
+     &lt;SyntheticProperty name=&quot;formSizePolicy&quot; type=&quot;int&quot; value=&quot;1&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -111,7 +111,7 @@
+                                             p.getProperty(&quot;author&quot;),
+                                             p.getProperty(&quot;version&quot;),
+                                             p.getProperty(&quot;type&quot;).equals(&quot;single&quot;) ? Template.SINGLE : Template.COMPLETE,
+-                                            templates[z]));
++                                            templates[z], p));
+                                     break;
+ 
+                                 }
+@@ -178,6 +178,7 @@
+         jbtnHelp = new javax.swing.JButton();
+ 
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
++        setTitle(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.title&quot;)); // NOI18N
+ 
+         jpExportType.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jpExportType.border.title&quot;))); // NOI18N
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.form	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.form	2008-07-16 19:47:19 UTC (rev 222)
+@@ -3,6 +3,9 @@
+ &lt;Form version=&quot;1.5&quot; maxVersion=&quot;1.6&quot; type=&quot;org.netbeans.modules.form.forminfo.JDialogFormInfo&quot;&gt;
+   &lt;Properties&gt;
+     &lt;Property name=&quot;defaultCloseOperation&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
++    &lt;Property name=&quot;title&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++      &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ImportDlg.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++    &lt;/Property&gt;
+   &lt;/Properties&gt;
+   &lt;SyntheticProperties&gt;
+     &lt;SyntheticProperty name=&quot;formSizePolicy&quot; type=&quot;int&quot; value=&quot;1&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -80,6 +80,7 @@
+         jpbExporting = new javax.swing.JProgressBar();
+ 
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
++        setTitle(org.openide.util.NbBundle.getMessage(ImportDlg.class, &quot;ImportDlg.title&quot;)); // NOI18N
+ 
+         jbtnHelp.setText(org.openide.util.NbBundle.getMessage(ImportDlg.class, &quot;ImportDlg.jbtnHelp.text&quot;)); // NOI18N
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -50,7 +50,7 @@
+ 
+     private boolean validateWihtMessages() {
+         if (jtfName.getText().trim().isEmpty()) {
+-            jlbError.setText(NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.empyname&quot;)); // NOI18N
++            jlbError.setText(NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.emptyname&quot;)); // NOI18N
+ 
+             jlbError.setVisible(true);
+             validate();
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-07-16 19:47:19 UTC (rev 222)
+@@ -31,6 +31,9 @@
+   &lt;/NonVisualComponents&gt;
+   &lt;Properties&gt;
+     &lt;Property name=&quot;defaultCloseOperation&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
++    &lt;Property name=&quot;title&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++      &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewDiskDlg.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++    &lt;/Property&gt;
+   &lt;/Properties&gt;
+   &lt;SyntheticProperties&gt;
+     &lt;SyntheticProperty name=&quot;formSizePolicy&quot; type=&quot;int&quot; value=&quot;1&quot;/&gt;
+@@ -268,14 +271,12 @@
+                 &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+                   &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewDiskDlg.jtbSelectedPlugins.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+                 &lt;/Property&gt;
++                &lt;Property name=&quot;enabled&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
+                 &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
+               &lt;/Properties&gt;
+               &lt;Events&gt;
+                 &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jtbSelectedPluginsActionPerformed&quot;/&gt;
+               &lt;/Events&gt;
+-              &lt;AuxValues&gt;
+-                &lt;AuxValue name=&quot;JavaCodeGenerator_InitCodePre&quot; type=&quot;java.lang.String&quot; value=&quot;jtbSelectedPlugins.setIcon(new ImageIcon(Utilities.loadImage(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/button-show-plugins.png&quot;)));&quot;/&gt;
+-              &lt;/AuxValues&gt;
+             &lt;/Component&gt;
+           &lt;/SubComponents&gt;
+         &lt;/Container&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -99,8 +99,7 @@
+             jpButtons.add(toggle);
+         }
+         toggle = new JToggleButton(&quot;Browse&quot;); //TODO i18n
+-//TODO: abrir uma pasta e pedir o icone do sistema operativo para colocar aqui.
+-        toggle.setMinimumSize(new Dimension(24, 24));
++        toggle.setIcon(fsv.getSystemIcon(new File(System.getProperty(&quot;user.dir&quot;))));
+         toggle.setSize(toggle.getWidth(), 24);
+ 
+         toggle.setHorizontalTextPosition(SwingConstants.CENTER);
+@@ -181,6 +180,7 @@
+         jpopPlugins.add(jCheckBoxMenuItem1);
+ 
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
++        setTitle(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.title&quot;)); // NOI18N
+ 
+         jpButtons.setPreferredSize(new java.awt.Dimension(10, 50));
+         jpButtons.setLayout(new javax.swing.BoxLayout(jpButtons, javax.swing.BoxLayout.LINE_AXIS));
+@@ -214,9 +214,9 @@
+             }
+         });
+ 
+-        jtbSelectedPlugins.setIcon(new ImageIcon(Utilities.loadImage(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/button-show-plugins.png&quot;)));
+         jtbSelectedPlugins.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/general/button-show-plugins.png&quot;))); // NOI18N
+         jtbSelectedPlugins.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jtbSelectedPlugins.text&quot;)); // NOI18N
++        jtbSelectedPlugins.setEnabled(false);
+         jtbSelectedPlugins.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+         jtbSelectedPlugins.addActionListener(new java.awt.event.ActionListener() {
+             public void actionPerformed(java.awt.event.ActionEvent evt) {
+@@ -353,9 +353,9 @@
+     //TODO: show plugin panel
+     //WindowManager.getDefault().getMainWindow()
+     if (jtbSelectedPlugins.isSelected()) {
+-        jpopPlugins.setLocation((int)(getParent().getBounds().getX() + this.getBounds().getX() + 
++        jpopPlugins.setLocation((int) (getParent().getBounds().getX() + this.getBounds().getX() +
+                 jtbSelectedPlugins.getBounds().getX()) + jtbSelectedPlugins.getWidth(),
+-                (int)(getParent().getBounds().getY() + this.getBounds().getY() + 
++                (int) (getParent().getBounds().getY() + this.getBounds().getY() +
+                 jtbSelectedPlugins.getBounds().getY()) + jtbSelectedPlugins.getHeight());
+         jpopPlugins.setVisible(true);
+     } else {
+@@ -365,17 +365,19 @@
+ }//GEN-LAST:event_jtbSelectedPluginsActionPerformed
+ 
+ private void jbtnScanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnScanActionPerformed
+-    MediaReader r = Lookup.getDefault().lookup(MediaReader.class);
+-    r.addListener(scanningDlg);
++    if (!currentSelectedPath.isEmpty() &amp;&amp; new File(currentSelectedPath).exists()) {
++        MediaReader r = Lookup.getDefault().lookup(MediaReader.class);
++        r.addListener(scanningDlg);
+ 
+-    SwingUtilities.invokeLater(new Runnable() {
++        SwingUtilities.invokeLater(new Runnable() {
+ 
+-        public void run() {
+-            setVisible(false);
+-            scanningDlg.showCentered(ask4Description, showAgain);
+-        }
+-    });
+-    r.read(new File(currentSelectedPath), calculateHash, isMedia, jtfDiskName.getText().trim(), (DiskGroup) jcbxCatalog.getSelectedItem());
++            public void run() {
++                setVisible(false);
++                scanningDlg.showCentered(ask4Description, showAgain);
++            }
++        });
++        r.read(new File(currentSelectedPath), calculateHash, isMedia, jtfDiskName.getText().trim(), (DiskGroup) jcbxCatalog.getSelectedItem());
++    }
+ }//GEN-LAST:event_jbtnScanActionPerformed
+ 
+ private void jbtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCancelActionPerformed
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -24,7 +24,6 @@
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.utils.CatalogFilter;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.utils.CatalogView;
+ import java.io.File;
+-import javax.swing.ImageIcon;
+ import javax.swing.JFileChooser;
+ import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
+@@ -60,7 +59,7 @@
+ 
+     private boolean validateWihtMessages() {
+         if (!jchkUserinternalDB.isSelected() &amp;&amp; jtfName.getText().isEmpty()) {
+-            jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.empyname&quot;)); // NOI18N
++            jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.emptyname&quot;)); // NOI18N
+ 
+             jlbError.setVisible(true);
+             validate();
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogView.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogView.java	2008-07-16 17:45:51 UTC (rev 221)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogView.java	2008-07-16 19:47:19 UTC (rev 222)
+@@ -8,6 +8,7 @@
+ import javax.swing.Icon;
+ import javax.swing.ImageIcon;
+ import javax.swing.filechooser.FileView;
++import org.openide.util.Utilities;
+ 
+ /**
+  *
+@@ -15,11 +16,11 @@
+  */
+ public class CatalogView extends FileView {
+ 
+-    private static ImageIcon fIcon;
++    private ImageIcon fIcon;
+     
+     public CatalogView() {
+-         fIcon = new ImageIcon(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/&quot; +
+-                 &quot;resources/icons/general/catalog.png&quot;);
++         fIcon = new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/&quot; +
++                 &quot;resources/icons/general/catalog.png&quot;));
+     }
+ 
+     @Override
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000216.html">[Jfindmyfiles-commits] r221 - in trunk/docs: . Documentos	Externos/images Iteracao7-CB06 Iteracao7-CB06/Simple Export
+</A></li>
+	<LI>Next message: <A HREF="000218.html">[Jfindmyfiles-commits] r223 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#217">[ date ]</a>
+              <a href="thread.html#217">[ thread ]</a>
+              <a href="subject.html#217">[ subject ]</a>
+              <a href="author.html#217">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

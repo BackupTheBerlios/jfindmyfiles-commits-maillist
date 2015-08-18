@@ -1,0 +1,286 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r179 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r179%20-%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui&In-Reply-To=%3C200807011447.m61Eld0r030154%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000173.html">
+   <LINK REL="Next"  HREF="000175.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r179 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r179%20-%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui&In-Reply-To=%3C200807011447.m61Eld0r030154%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r179 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui">knitter at mail.berlios.de
+       </A><BR>
+    <I>Tue Jul  1 16:47:39 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000173.html">[Jfindmyfiles-commits] r178 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui
+</A></li>
+        <LI>Next message: <A HREF="000175.html">[Jfindmyfiles-commits] r180 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. nodes utils
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#174">[ date ]</a>
+              <a href="thread.html#174">[ thread ]</a>
+              <a href="subject.html#174">[ subject ]</a>
+              <a href="author.html#174">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-07-01 16:47:37 +0200 (Tue, 01 Jul 2008)
+New Revision: 179
+
+Modified:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java
+Log:
+
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-07-01 02:07:16 UTC (rev 178)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-07-01 14:47:37 UTC (rev 179)
+@@ -97,3 +97,4 @@
+ LinuxPanel.jbtnRemove.text=Remove
+ LinuxPanel.jtbnBrowse.text=...
+ LinuxPanel.jchkScanMedia.text=Scan /media to find CD-ROM, DVD-ROM and FLASH disks?
++WindowTestingTopComponent.jpTableView.border.title=TableView
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form	2008-07-01 02:07:16 UTC (rev 178)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form	2008-07-01 14:47:37 UTC (rev 179)
+@@ -15,12 +15,25 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;Component id=&quot;jScrollPane1&quot; alignment=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jpTableView&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jScrollPane1&quot; alignment=&quot;0&quot; pref=&quot;376&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;Component id=&quot;jScrollPane1&quot; alignment=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jScrollPane1&quot; min=&quot;-2&quot; pref=&quot;93&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jpTableView&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
+@@ -38,11 +51,32 @@
+               &lt;Connection code=&quot;ntModel&quot; type=&quot;code&quot;/&gt;
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
+-          &lt;AuxValues&gt;
+-            &lt;AuxValue name=&quot;JavaCodeGenerator_CreateCodePost&quot; type=&quot;java.lang.String&quot; value=&quot;jTable1.setDefaultRenderer(Node.Property.class, new PropertyCellRenderer());&amp;#xd;&amp;#xa;jTable1.setDefaultRenderer(Media.class, new MediaCellRenderer());&quot;/&gt;
+-          &lt;/AuxValues&gt;
+         &lt;/Component&gt;
+       &lt;/SubComponents&gt;
+     &lt;/Container&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jpTableView&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++            &lt;TitledBorder title=&quot;TableView&quot;&gt;
++              &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;WindowTestingTopComponent.jpTableView.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/TitledBorder&gt;
++          &lt;/Border&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace min=&quot;0&quot; pref=&quot;364&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace min=&quot;0&quot; pref=&quot;150&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++    &lt;/Container&gt;
+   &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java	2008-07-01 02:07:16 UTC (rev 178)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java	2008-07-01 14:47:37 UTC (rev 179)
+@@ -11,9 +11,8 @@
+ import java.util.logging.Logger;
+ import javax.swing.JLabel;
+ import javax.swing.JTable;
+-import javax.swing.table.TableCellRenderer;
+ import javax.swing.event.TableModelEvent;
+-import org.openide.explorer.propertysheet.PropertyPanel;
++import javax.swing.event.TableModelListener;
+ import javax.swing.table.TableCellRenderer;
+ import org.openide.explorer.propertysheet.PropertyPanel;
+ import org.openide.explorer.view.NodeTableModel;
+@@ -41,16 +40,17 @@
+         ntModel.addTableModelListener(new TableModelListener() {
+ 
+             public void tableChanged(TableModelEvent e) {
+-                System.err.println(&quot;TABLE CHANGED: &quot; + e.getType());
+                 System.err.println(&quot;VALUE CLASS: &quot; + ntModel.getColumnClass(e.getColumn()));
+             }
+         });
+-        Lookup.Result r = Utilities.actionsGlobalContext().lookup(new Lookup.Template(Media.class));
++        Lookup.Result r = Utilities.actionsGlobalContext().lookup(new Lookup.Template&lt;Media&gt;(Media.class));
+         r.addLookupListener(this);
+         initComponents();
+         setName(NbBundle.getMessage(WindowTestingTopComponent.class, &quot;CTL_WindowTestingTopComponent&quot;));
+         setToolTipText(NbBundle.getMessage(WindowTestingTopComponent.class, &quot;HINT_WindowTestingTopComponent&quot;));
+-        jTable1.setDefaultRenderer(Property.class, new PropertyCellRenderer());
++        //
++        //WORK DAMN YOU!!!!!!!!!!!!!!!!!!!
++        jTable1.setDefaultRenderer(Node.Property.class, new MyPropertyCellRenderer());
+ //        setIcon(Utilities.loadImage(ICON_PATH, true));
+     }
+ 
+@@ -64,26 +64,49 @@
+ 
+         jScrollPane1 = new javax.swing.JScrollPane();
+         jTable1 = new javax.swing.JTable();
+-        jTable1.setDefaultRenderer(Node.Property.class, new PropertyCellRenderer());
+-        jTable1.setDefaultRenderer(Media.class, new MediaCellRenderer());
++        jpTableView = new javax.swing.JPanel();
+ 
+         jTable1.setModel(ntModel);
+         jScrollPane1.setViewportView(jTable1);
+ 
++        jpTableView.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(WindowTestingTopComponent.class, &quot;WindowTestingTopComponent.jpTableView.border.title&quot;))); // NOI18N
++
++        javax.swing.GroupLayout jpTableViewLayout = new javax.swing.GroupLayout(jpTableView);
++        jpTableView.setLayout(jpTableViewLayout);
++        jpTableViewLayout.setHorizontalGroup(
++            jpTableViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 364, Short.MAX_VALUE)
++        );
++        jpTableViewLayout.setVerticalGroup(
++            jpTableViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 150, Short.MAX_VALUE)
++        );
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+         this.setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
++                    .addComponent(jpTableView, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE))
++                .addContainerGap())
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jpTableView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                .addContainerGap())
+         );
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JScrollPane jScrollPane1;
+     private javax.swing.JTable jTable1;
++    private javax.swing.JPanel jpTableView;
+     // End of variables declaration//GEN-END:variables
+     /**
+      * Gets default instance. Do not use directly: reserved for *.settings files only,
+@@ -123,7 +146,7 @@
+ 
+     @Override
+     public void componentOpened() {
+-        Lookup.Result r = Utilities.actionsGlobalContext().lookup(new Lookup.Template(Media.class));
++        Lookup.Result r = Utilities.actionsGlobalContext().lookup(new Lookup.Template&lt;Media&gt;(Media.class));
+         r.addLookupListener(this);
+     }
+ 
+@@ -156,6 +179,7 @@
+         TopComponent.Registry registry = TopComponent.getRegistry();
+         Node[] act = registry.getActivatedNodes();
+         ntModel.setNodes(act);
++        ntModel.fireTableStructureChanged();
+         for (Node n : act) {
+             System.out.println(n);
+         }
+@@ -163,8 +187,7 @@
+ 
+     class PropertyCellRenderer implements TableCellRenderer {
+ 
+-        public Component getTableCellRendererComponent(JTable table,
+-                Object value, boolean isSelected, boolean hasFocus, int row, int column) {
++        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+             try {
+                 PropertyPanel panel = new PropertyPanel((Property) value);
+                 panel.setPreferences(PropertyPanel.PREF_TABLEUI);
+@@ -179,7 +202,7 @@
+             }
+         }
+     }
+-    
++
+     class MyPropertyCellRenderer extends JLabel implements TableCellRenderer {
+ 
+         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+@@ -192,6 +215,6 @@
+             } catch (InvocationTargetException ex) {
+                 return null;
+             }
+-        }        
++        }
+     }
+ }
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000173.html">[Jfindmyfiles-commits] r178 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui
+</A></li>
+	<LI>Next message: <A HREF="000175.html">[Jfindmyfiles-commits] r180 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. nodes utils
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#174">[ date ]</a>
+              <a href="thread.html#174">[ thread ]</a>
+              <a href="subject.html#174">[ subject ]</a>
+              <a href="author.html#174">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

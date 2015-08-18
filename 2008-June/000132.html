@@ -1,0 +1,1595 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r137 - in trunk: docs media	project/JFindMyFiles/ExportEngine/nbproject	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JaCKSum	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r137%20-%20in%20trunk%3A%20docs%20media%0A%09project/JFindMyFiles/ExportEngine/nbproject%0A%09project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09project/JFindMyFiles/JFindMyFilesGui/nbproject%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/JaCKSum%0A%09project/JFindMyFiles/ReadingFiles/nbproject%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles&In-Reply-To=%3C200806101447.m5AElD0D008480%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000131.html">
+   <LINK REL="Next"  HREF="000133.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r137 - in trunk: docs media	project/JFindMyFiles/ExportEngine/nbproject	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JaCKSum	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r137%20-%20in%20trunk%3A%20docs%20media%0A%09project/JFindMyFiles/ExportEngine/nbproject%0A%09project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09project/JFindMyFiles/JFindMyFilesGui/nbproject%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/JaCKSum%0A%09project/JFindMyFiles/ReadingFiles/nbproject%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles&In-Reply-To=%3C200806101447.m5AElD0D008480%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r137 - in trunk: docs media	project/JFindMyFiles/ExportEngine/nbproject	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JaCKSum	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles">knitter at mail.berlios.de
+       </A><BR>
+    <I>Tue Jun 10 16:47:13 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000131.html">[Jfindmyfiles-commits] r136 - in	trunk/project/JFindMyFiles/JaCKSum: . nbproject release	release/modules release/modules/ext
+</A></li>
+        <LI>Next message: <A HREF="000133.html">[Jfindmyfiles-commits] r138 - in trunk: media/icons/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#132">[ date ]</a>
+              <a href="thread.html#132">[ thread ]</a>
+              <a href="subject.html#132">[ subject ]</a>
+              <a href="author.html#132">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-10 16:46:39 +0200 (Tue, 10 Jun 2008)
+New Revision: 137
+
+Added:
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportListener.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java
+Removed:
+   trunk/media/logo.gif
+Modified:
+   trunk/docs/TODO
+   trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ExportEngine/nbproject/project.xml
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEngine.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ODS.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/SQL.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XML.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+   trunk/project/JFindMyFiles/JaCKSum/
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+Log:
+Adicionado projecto com biblioteca para gerar hashing SHA-1.
+Implementado algum c?\195?\179digo no sistema de exporta?\195?\167?\195?\163o.
+
+In?\195?\173cio de trabalho para limpar todos os pontos pendentes.
+
+Modified: trunk/docs/TODO
+===================================================================
+--- trunk/docs/TODO	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/docs/TODO	2008-06-10 14:46:39 UTC (rev 137)
+@@ -45,6 +45,8 @@
+ 	- exportar para ODS
+ 	- importar dados de outras aplica&#231;&#245;es
+ 
++TODOS:
++	Todos os eventos t&#234;m de extender de EventObject e todas as interfaces de listeners de EventListener
+ NOTAS:
+ 	Aten&#231;&#227;o ao nome dos paineis e componentes na internacionaliza&#231;&#227;o
+ 	Criar painel para escolher a l&#237;ngua?
+\ No newline at end of file
+
+Deleted: trunk/media/logo.gif
+===================================================================
+(Binary files differ)
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties	2008-06-10 14:46:39 UTC (rev 137)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=7c8d24ad
++build.xml.data.CRC32=16a189e5
+ build.xml.script.CRC32=10cb03f3
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=7c8d24ad
++nbproject/build-impl.xml.data.CRC32=16a189e5
+ nbproject/build-impl.xml.script.CRC32=336d2087
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/nbproject/project.xml	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ExportEngine/nbproject/project.xml	2008-06-10 14:46:39 UTC (rev 137)
+@@ -22,8 +22,18 @@
+                         &lt;specification-version&gt;1.0&lt;/specification-version&gt;
+                     &lt;/run-dependency&gt;
+                 &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.util&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;7.12.0.1&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
+             &lt;/module-dependencies&gt;
+-            &lt;public-packages/&gt;
++            &lt;public-packages&gt;
++                &lt;package&gt;de.berlios.jfindmyfiles.exportengine&lt;/package&gt;
++            &lt;/public-packages&gt;
+         &lt;/data&gt;
+     &lt;/configuration&gt;
+ &lt;/project&gt;
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -32,7 +32,7 @@
+  *
+  * @author Knitter
+  */
+-public class CSV extends Thread implements ExportContract {
++public class CSV extends ExportEngine {
+ 
+     private File file;
+     
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEngine.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEngine.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -19,39 +19,51 @@
+  */
+ package de.berlios.jfindmyfiles.exportengine;
+ 
+-import java.io.File;
+-import java.util.List;
++import java.util.Vector;
+ 
+-public abstract class ExportEngine {
++public abstract class ExportEngine extends Thread implements ExportContract {
+ 
+-    protected List groups;
+-    protected List types;
+-    protected List labels;
+-    
+-    private ExportEngine() {
+-    }
+-    
+-    public final void queryData() {
+-        //
+-    }
++    private Vector&lt;ExportListener&gt; listeners;
+ 
+-    public static void exportToXML(File file) {
+-        new XML(file).start();//.export()
++    public ExportEngine() {
++        listeners = new Vector&lt;ExportListener&gt;();
+     }
+ 
+-    public static void exportToCSV(File file) {
+-        new CSV(file).start();//.export()
++    public void addListener(ExportListener l) {
++        if(listeners == null) {
++            listeners = new Vector&lt;ExportListener&gt;();
++        }
++        
++        listeners.add(l);
+     }
+ 
+-    public static void exportToODS(File file) {
+-        new ODS(file).start();//.export()
++    public void removeListener(ExportListener l) {
++        if(listeners != null) {
++            listeners.remove(l);
++        }
+     }
+ 
+-    public static void exportToSQL(File file) {
+-        new SQL(file).start();//.export()
++    protected void fireExportStarted() {
++        if (listeners != null) {
++            for (ExportListener l : listeners) {
++                l.exportStarted();
++            }
++        }
+     }
+ 
+-    public static void exportToHTML(File destination, String name, String template) {
+-        new HTML(destination, name, template).start();//.export()
++    protected void fireExportFinished() {
++        if (listeners != null) {
++            for (ExportListener l : listeners) {
++                l.exportFinished();
++            }
++        }
+     }
++    
++    protected void fireExportError() {
++        if (listeners != null) {
++            for (ExportListener l : listeners) {
++                l.exportError();
++            }
++        }
++    }    
+ }
+
+Added: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportListener.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportListener.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportListener.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -0,0 +1,18 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.exportengine;
++
++/**
++ *
++ * @author Knitter
++ */
++public interface ExportListener {
++    
++    void exportStarted();
++    void exportFinished();
++    void exportError();
++
++}
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -25,7 +25,7 @@
+  *
+  * @author Knitter
+  */
+-public class HTML extends Thread implements ExportContract {
++public class HTML extends ExportEngine {
+     
+     File destination;
+     String name;
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ODS.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ODS.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ODS.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -25,7 +25,7 @@
+  *
+  * @author Knitter
+  */
+-public class ODS extends Thread implements ExportContract {
++public class ODS extends ExportEngine {
+ 
+     private File file;
+     
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/SQL.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/SQL.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/SQL.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -21,7 +21,7 @@
+ 
+ import java.io.File;
+ 
+-public class SQL extends Thread implements ExportContract {
++public class SQL extends ExportEngine {
+ 
+     File file;
+     
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -19,7 +19,7 @@
+  */
+ package de.berlios.jfindmyfiles.exportengine;
+ 
+-public class XLS extends Thread implements ExportContract {
++public class XLS extends ExportEngine {
+ 
+     public void export() {
+         start();
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XML.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XML.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XML.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -19,8 +19,10 @@
+  */
+ package de.berlios.jfindmyfiles.exportengine;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import java.io.File;
+ import java.io.FileNotFoundException;
++import java.io.IOException;
+ import java.io.PrintWriter;
+ import javax.xml.transform.OutputKeys;
+ import javax.xml.transform.Transformer;
+@@ -28,6 +30,7 @@
+ import javax.xml.transform.sax.SAXTransformerFactory;
+ import javax.xml.transform.sax.TransformerHandler;
+ import javax.xml.transform.stream.StreamResult;
++import org.openide.util.Lookup;
+ import org.xml.sax.SAXException;
+ import org.xml.sax.helpers.AttributesImpl;
+ 
+@@ -35,7 +38,7 @@
+  *
+  * @author Knitter
+  */
+-public class XML extends Thread implements ExportContract {
++public class XML extends ExportEngine {
+ 
+     private File file;
+ 
+@@ -49,12 +52,10 @@
+ 
+     @Override
+     public void run() {
+-
++        StreamResult sr = null;
+         try {
+-            PrintWriter out = new PrintWriter(file);
+-
+-            StreamResult sr = new StreamResult(out);
+-
++            fireExportStarted();
++            sr = new StreamResult(new PrintWriter(file));
+             SAXTransformerFactory tf = (SAXTransformerFactory) SAXTransformerFactory.newInstance();
+ 
+             // SAX2.0 ContentHandler.
+@@ -68,107 +69,158 @@
+             hd.startDocument();
+             AttributesImpl atts = new AttributesImpl();
+ 
+-           /* // USERS tag.
+-            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;USERS&quot;, atts);
++            CatalogEngine eng = Lookup.getDefault().lookup(CatalogEngine.class);
+ 
+-            // USER tags.
+-            String[] id = {&quot;PWD122&quot;, &quot;MX787&quot;, &quot;A4Q45&quot;};
+-            String[] type = {&quot;customer&quot;, &quot;manager&quot;, &quot;employee&quot;};
+-            String[] desc = {&quot;<A HREF="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">Tim at Home</A>&quot;, &quot;Jack&amp;Moud&quot;, &quot;John D'o&#195;&#169;&quot;};
++            hd.startDocument();
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;catalog&quot;, atts);//&lt;catalog&gt;
++            //CATALOG INFO
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;name&quot;, atts);//&lt;name&gt;
++            hd.characters(eng.getProperties().getName().toCharArray(), 0, eng.getProperties().getName().length());
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;name&quot;);//&lt;/name&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;creation-date&quot;, atts);//&lt;creation-date&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;creation-date&quot;);//&lt;/creation-date&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;description&quot;, atts);//&lt;description&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;description&quot;);//&lt;/description&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;total-size&quot;, atts);//&lt;total-size&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;total-size&quot;);//&lt;/total-size&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;disk-number&quot;, atts);//&lt;disk-number&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;disk-number&quot;);//&lt;/disk-number&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;total-folders&quot;, atts);//&lt;total-folders&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;total-folders&quot;);//&lt;/total-folders&gt;
++            //END CATALOG INFO
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;file-list&quot;, atts);//&lt;file-list&gt;
++            //START FILE LIST
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;file&quot;, atts);//&lt;file id=&quot;&quot;&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;name&quot;, atts);//&lt;name&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;name&quot;);//&lt;/name&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;absolute-path&quot;, atts);//&lt;absolute-path&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;absolute-path&quot;);//&lt;/absolute-path&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;last-modified&quot;, atts);//&lt;last-modified&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;last-modified&quot;);//&lt;/last-modified&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;description&quot;, atts);//&lt;description&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;description&quot;);//&lt;/description&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;hidden&quot;, atts);//&lt;hidden&gt;&lt;!-- true/false --&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;hidden&quot;);//&lt;/hidden&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;size&quot;, atts);//&lt;size&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;size&quot;);//&lt;/size&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;extension&quot;, atts);//&lt;extension&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;extension&quot;);//&lt;/extension&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;image-thumb&quot;, atts);//&lt;image-thumb&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;image-thumb&quot;);//&lt;/image-thumb&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;video-preview&quot;, atts);//&lt;video-preview&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;video-preview&quot;);//&lt;/video-preview&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;audio-clip&quot;, atts);//&lt;audio-clip&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;audio-clip&quot;);//&lt;/audio-clip&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;is-file&quot;, atts);//&lt;is-file&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;is-file&quot;);//&lt;/is-file&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;children&quot;, atts);//&lt;children&gt;&lt;!-- file items --&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;children&quot;);//&lt;/children&gt;//TODO: ?
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;parent-id&quot;, atts);//&lt;parent-id&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;parent-id&quot;);//&lt;/parent-id&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;media-id&quot;, atts);//&lt;media-id&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;media-id&quot;);//&lt;/media-id&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;&quot;);//&lt;/file&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;file-list&quot;);//&lt;/file-list
++            //END FILE LIST
++            //TODO: atts
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;label-list&quot;, atts);//&lt;label-list&gt;
++            //START LABEL LIST
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;label&quot;, atts);//&lt;label id=&quot;&quot;&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;name&quot;, atts);//&lt;name&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;name&quot;);//&lt;/name&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;label&quot;);//&lt;/label&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;label-list&quot;);//&lt;/label-list&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;group-list&quot;, atts);//&lt;group-list&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;group&quot;, atts);//&lt;group id=&quot;&quot;&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;name&quot;, atts);//&lt;name&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;name&quot;);//&lt;/name&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;description&quot;, atts);//&lt;description&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;description&quot;);//&lt;/description&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;capacity&quot;, atts);//&lt;capacity&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;capacity&quot;);//&lt;/capacity&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;groups&quot;, atts);//&lt;groups&gt; &lt; !--ids separdos por ponto e virgula --&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;groups&quot;);//&lt;/groups&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;parent-id&quot;, atts);//&lt;parent-id&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;parent-id&quot;);//&lt;/parent-id&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;group&quot;);//&lt;/group&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;group-list&quot;);//&lt;/group-list&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;loan-list&quot;, atts);//&lt;loan-list&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;loan&quot;, atts);//&lt;loan id=&quot;&quot;&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;loaned-date&quot;, atts);//&lt;loaned-date &gt; 
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;loaned-date&quot;);//&lt;/loaned-date&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;returned-date&quot;, atts);//&lt;returned-date&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;returned-date&quot;);//&lt;/returned-date&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;user-id&quot;, atts);//&lt;user-id &gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;user-id&quot;);//&lt;/user-id &gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;media-id&quot;, atts);//&lt;media-id &gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;media-id&quot;);//&lt;/media-id &gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;loan&quot;, atts);//&lt;/loan&gt; 
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;loan-list&quot;);//&lt;/loan-list&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;media-list&quot;, atts);//&lt;media-list&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;media&quot;, atts);//&lt;media id=&quot;&quot;&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;name&quot;, atts);//&lt;name&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;name&quot;);//&lt;/name&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;capacity&quot;, atts);//&lt;capacity&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;capacity&quot;);//&lt;/capacity&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;last-modified&quot;, atts);//&lt;last-modified&gt; 
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;last-modified&quot;);//&lt;/last-modified&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;description&quot;, atts);//&lt;description&gt;
+ 
+-            for (int i = 0; i &lt; id.length; i++) {
+-                atts.clear();
+-                atts.addAttribute(&quot;&quot;, &quot;&quot;, &quot;ID&quot;, &quot;CDATA&quot;, id[i]);
+-                atts.addAttribute(&quot;&quot;, &quot;&quot;, &quot;TYPE&quot;, &quot;CDATA&quot;, type[i]);
+-                hd.startElement(&quot;&quot;, &quot;&quot;, &quot;USER&quot;, atts);
+-                hd.characters(desc[i].toCharArray(), 0, desc[i].length());
+-                hd.endElement(&quot;&quot;, &quot;&quot;, &quot;USER&quot;);
+-            }
+-            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;USERS&quot;);
+-            hd.endDocument();*/
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;description&quot;);//&lt;/description&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;free-space&quot;, atts);//&lt;free-space&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;free-space&quot;);// &lt;/free-space&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;location&quot;, atts);//&lt;location&gt;
++
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;location&quot;);//&lt;/location&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;files&quot;, atts);//&lt;files&gt; &lt; !--ids separdos por ponto e virgula --&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;/files&quot;);//&lt;/files&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;labels&quot;, atts);//&lt;labels&gt; ids separdos por ponto e virgula
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;labels&quot;);//&lt;/labels&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;type-id&quot;, atts);//&lt;type-id&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;type-id&quot;);//&lt;/type-id&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;media&quot;);//&lt;/media&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;media-list&quot;);//&lt;/media-list&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;type-list&quot;, atts);//&lt;type-list&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;type&quot;, atts);//&lt;type id=&quot;&quot;&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;naeme&quot;, atts);//&lt;name&gt;
++
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;name&quot;);//&lt;/name&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;type&quot;, atts);//&lt;/type&gt; 
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;type-list&quot;);//&lt;/type-list&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;user-list&quot;, atts);//&lt;user-list&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;user&quot;, atts);//&lt;user  id=&quot;&quot;&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;firstname&quot;, atts);//&lt;firstname&gt; 
++
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;firstname&quot;);//&lt;/firstname&gt;
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;surname&quot;, atts);//&lt;surname&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;surname&quot;);//&lt;/surname&gt;
++
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;loans&quot;, atts);//&lt;loans&gt; &lt; !--ids separdos por ponto e virgula --&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;loans&quot;);//&lt;/loans&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;user&quot;);//&lt;/user&gt;
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;user-list&quot;);//&lt;/user-list&gt;
++            //END TOP LEVEL
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;catalog&quot;);//&lt;/catalog&gt;
++            hd.endDocument();
++            sr.getOutputStream().flush();
++
++            fireExportFinished();
+         } catch (FileNotFoundException ex) {
++            fireExportError();
++        } catch (IOException ex) {
++            fireExportError();
+         } catch (TransformerConfigurationException ex) {
++            fireExportError();
+         } catch (SAXException ex) {
++            fireExportError();
++        } finally {
++            try {
++                if (sr != null) {
++                    sr.getOutputStream().close();
++                }
++            } catch (Exception ex) {
++                //IGNORE
++            }
+         }
+     }
+-    /*
+-    &lt;catalog&gt;
+-    &lt;name&gt;&lt;/name&gt;
+-    &lt;creation-date&gt;&lt;/creation-date&gt;
+-    &lt;description&gt;&lt;/description&gt;
+-    &lt;total-size&gt;&lt;/total-size&gt;
+-    &lt;disk-number&gt;&lt;/disk-number&gt;
+-    &lt;total-folders&gt;&lt;/total-folders&gt;
+-    &lt;file-list&gt;
+-    &lt;file id=&quot;&quot;&gt;
+-    &lt;name&gt;&lt;/name&gt;
+-    &lt;absolute-path&gt;&lt;/absolute-path&gt;
+-    &lt;last-modified&gt;&lt;/last-modified&gt;
+-    &lt;description&gt;&lt;/description&gt;
+-    &lt;hidden&gt;&lt;!-- true/false --&gt;
+-    &lt;/hidden&gt;
+-    &lt;size&gt;&lt;/size&gt;
+-    &lt;extension&gt;&lt;/extension&gt;
+-    &lt;image-thumb&gt;&lt;/image-thumb&gt;
+-    &lt;video-preview&gt;&lt;/video-preview&gt;
+-    &lt;audio-clip&gt;&lt;/audio-clip&gt;
+-    &lt;is-file&gt;&lt;/is-file&gt;
+-    &lt;children&gt;&lt;!-- file items --&gt;
+-    &lt;/children&gt;
+-    &lt;parent-id&gt;&lt;/parent-id&gt;
+-    &lt;media-id&gt;&lt;/media-id&gt;
+-    &lt;/file&gt;
+-    &lt;/file-list&gt;
+-    &lt;label-list&gt;
+-    &lt;label id=&quot;&quot;&gt;
+-    &lt;name&gt;&lt;/name&gt;
+-    &lt;/label&gt;
+-    &lt;/label-list&gt;
+-    &lt;group-list&gt;
+-    &lt;group id=&quot;&quot;&gt;
+-    &lt;name&gt;&lt;/name&gt;
+-    &lt;description&gt;&lt;/description&gt;
+-    &lt;capacity&gt;&lt;/capacity&gt;
+-    &lt;groups&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
+-    &lt;/groups&gt;
+-    &lt;parent-id&gt;&lt;/parent-id&gt;
+-    &lt;/group&gt;
+-    &lt;/group-list&gt;
+-    &lt;loan-list&gt;
+-    &lt;loan id=&quot;&quot;&gt;
+-    &lt;date-loaned&gt;&lt;/date-loaned&gt;
+-    &lt;date-returned&gt;&lt;/date-returned&gt;
+-    &lt;user-id&gt;&lt;/user-id&gt;
+-    &lt;media-id&gt;&lt;/media-id&gt;
+-    &lt;/loan&gt;
+-    &lt;/loan-list&gt;
+-    &lt;media-list&gt;
+-    &lt;media id=&quot;&quot;&gt;
+-    &lt;name&gt;&lt;/name&gt;
+-    &lt;capacity&gt;&lt;/capacity&gt;
+-    &lt;last-modified&gt;&lt;/last-modified&gt;
+-    &lt;description&gt;&lt;/description&gt;
+-    &lt;free-space&gt;&lt;/free-space&gt;
+-    &lt;location&gt;&lt;/location&gt;
+-    &lt;files&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
+-    &lt;/files&gt;
+-    &lt;labels&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
+-    &lt;/labels&gt;
+-    &lt;type-id&gt;&lt;/type-id&gt;
+-    &lt;/media&gt;
+-    &lt;/media-list&gt;
+-    &lt;type-list&gt;
+-    &lt;type id=&quot;&quot;&gt;
+-    &lt;name&gt;&lt;/name&gt;
+-    &lt;/type&gt;
+-    &lt;/type-list&gt;
+-    &lt;user-list&gt;
+-    &lt;user id=&quot;&quot;&gt;
+-    &lt;first-name&gt;&lt;/first-name&gt;
+-    &lt;loans&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
+-    &lt;/loans&gt;
+-    &lt;surname&gt;&lt;/surname&gt;
+-    &lt;/user&gt;
+-    &lt;/user-list&gt;
+-    &lt;/catalog&gt;*/
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-06-10 14:46:39 UTC (rev 137)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=d520b34f
++build.xml.data.CRC32=1fbf194b
+ build.xml.script.CRC32=6fe2168f
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=d520b34f
++nbproject/build-impl.xml.data.CRC32=1fbf194b
+ nbproject/build-impl.xml.script.CRC32=fc3c2090
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-06-10 14:46:39 UTC (rev 137)
+@@ -23,6 +23,14 @@
+                     &lt;/run-dependency&gt;
+                 &lt;/dependency&gt;
+                 &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.exportengine&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
+                     &lt;code-name-base&gt;de.berlios.jfindmyfiles.persistence&lt;/code-name-base&gt;
+                     &lt;build-prerequisite/&gt;
+                     &lt;compile-dependency/&gt;
+@@ -32,6 +40,8 @@
+                 &lt;/dependency&gt;
+                 &lt;dependency&gt;
+                     &lt;code-name-base&gt;de.berlios.jfindmyfiles.readingfiles&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
+                     &lt;run-dependency&gt;
+                         &lt;specification-version&gt;1.0&lt;/specification-version&gt;
+                     &lt;/run-dependency&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.form	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.form	2008-06-10 14:46:39 UTC (rev 137)
+@@ -21,13 +21,28 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;401&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jpbReadingProgress&quot; pref=&quot;381&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;70&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jpbReadingProgress&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Component class=&quot;javax.swing.JProgressBar&quot; name=&quot;jpbReadingProgress&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;indeterminate&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++  &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -17,7 +17,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs;
+ 
+ /**
+@@ -25,13 +24,19 @@
+  * @author  ei10635
+  */
+ public class ActiveScanningDlg extends javax.swing.JDialog {
+-    
++
+     /** Creates new form ActiveScanningDlg */
+     public ActiveScanningDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+         initComponents();
+     }
+-    
++
++    public void showCentered() {
++        setLocation(getParent().getX() + (getParent().getWidth() / 2) - (getWidth() / 2),
++                getParent().getY() + (getParent().getHeight() / 2) - (getHeight() / 2));
++        setVisible(true);
++    }
++
+     /** This method is called from within the constructor to
+      * initialize the form.
+      * WARNING: Do NOT modify this code. The content of this method is
+@@ -40,23 +45,32 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jpbReadingProgress = new javax.swing.JProgressBar();
++
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
++        jpbReadingProgress.setIndeterminate(true);
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 401, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addComponent(jpbReadingProgress, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
++                .addContainerGap())
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 70, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addComponent(jpbReadingProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+         );
+ 
+         pack();
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+-    
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JProgressBar jpbReadingProgress;
+     // End of variables declaration//GEN-END:variables
+-    
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-10 14:46:39 UTC (rev 137)
+@@ -20,7 +20,6 @@
+ NewDiskDlg.toogle.text=Select a folder to scan
+ NewDiskDlg.jchkShowAgain.text=Show this dialog again
+ NewDiskDlg.jchkAskDescription.text=Ask for disk description in the end
+-NewDiskDlg.jchkCalculateCRC.text=Calculate SHA-1 for files
+ NewDiskDlg.jlblCatalog.text=Disk Group:
+ NewDiskDlg.jlblDiskName.text=Disk Name:
+ NewDiskDlg.jlblDiskNumber.text=Nr.:
+@@ -121,3 +120,7 @@
+ ExportDlg.jbtnHelp.text=Help
+ ExportDlg.jpTemplateExport.border.title=Template Export
+ ExportDlg.jpFileExport.border.title=Export to 
++NewDiskDlg.jchkCalculateHash.text=Calculate SHA-1 for files
++ExportDlg.jlblDestination.text=Destination:
++ExportDlg.jtfDestination.text=
++ExportDlg.jbtnBrowse.text=...
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-06-10 14:46:39 UTC (rev 137)
+@@ -93,7 +93,7 @@
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jpExportType&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jpExportOptions&quot; pref=&quot;408&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jpExportOptions&quot; pref=&quot;377&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jbtnExport&quot; linkSize=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -112,7 +112,7 @@
+           &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jpExportOptions&quot; pref=&quot;426&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                  &lt;Component id=&quot;jpExportOptions&quot; pref=&quot;330&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
+                   &lt;Component id=&quot;jpExportType&quot; alignment=&quot;1&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
+               &lt;/Group&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -151,7 +151,7 @@
+         &lt;DimensionLayout dim=&quot;1&quot;&gt;
+           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+               &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jScrollPane1&quot; pref=&quot;385&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jScrollPane1&quot; pref=&quot;289&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+@@ -211,15 +211,57 @@
+           &lt;Layout&gt;
+             &lt;DimensionLayout dim=&quot;0&quot;&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;392&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jlblDestination&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jtfDestination&quot; pref=&quot;228&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jbtnBrowse&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+             &lt;DimensionLayout dim=&quot;1&quot;&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;396&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Component id=&quot;jlblDestination&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jbtnBrowse&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jtfDestination&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                      &lt;EmptySpace pref=&quot;266&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+           &lt;/Layout&gt;
++          &lt;SubComponents&gt;
++            &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jlblDestination&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++                  &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jlblDestination.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++                &lt;/Property&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jtfDestination&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++                  &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jtfDestination.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++                &lt;/Property&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++            &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnBrowse&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++                  &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jbtnBrowse.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++                &lt;/Property&gt;
++              &lt;/Properties&gt;
++              &lt;Events&gt;
++                &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnBrowseActionPerformed&quot;/&gt;
++              &lt;/Events&gt;
++            &lt;/Component&gt;
++          &lt;/SubComponents&gt;
+         &lt;/Container&gt;
+         &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jpTemplateExport&quot;&gt;
+           &lt;Properties&gt;
+@@ -240,12 +282,12 @@
+           &lt;Layout&gt;
+             &lt;DimensionLayout dim=&quot;0&quot;&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;392&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;361&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+             &lt;DimensionLayout dim=&quot;1&quot;&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;396&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+           &lt;/Layout&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -19,10 +19,18 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs;
+ 
++import com.sun.org.apache.xerces.internal.util.XML11Char;
++import de.berlios.jfindmyfiles.exportengine.CSV;
++import de.berlios.jfindmyfiles.exportengine.ExportListener;
++import de.berlios.jfindmyfiles.exportengine.SQL;
++import de.berlios.jfindmyfiles.exportengine.XML;
+ import java.awt.BorderLayout;
+ import java.awt.CardLayout;
+ import java.awt.Component;
++import java.io.File;
++import java.io.IOException;
+ import javax.swing.ImageIcon;
++import javax.swing.JFileChooser;
+ import javax.swing.JLabel;
+ import javax.swing.JList;
+ import javax.swing.ListCellRenderer;
+@@ -33,7 +41,7 @@
+  *
+  * @author  knitter
+  */
+-public class ExportDlg extends javax.swing.JDialog {
++public class ExportDlg extends javax.swing.JDialog implements ExportListener {
+ 
+     /*private static final int EXPORT_CVS = 0;
+     private static final int EXPORT_HTML = 1;
+@@ -42,6 +50,7 @@
+     private static final int EXPORT_XML = 4;
+     private static final int EXPORT_SQL = 5;*/
+     private Integer[] values = new Integer[]{0, 1, 2, 3, 4, 5};
++    private File selectedFile;
+ 
+     /** Creates new form ExportDlg */
+     public ExportDlg(java.awt.Frame parent, boolean modal) {
+@@ -79,6 +88,9 @@
+         jlstExportTypes = new JList(values);
+         jpExportOptions = new javax.swing.JPanel();
+         jpFileExport = new javax.swing.JPanel();
++        jlblDestination = new javax.swing.JLabel();
++        jtfDestination = new javax.swing.JTextField();
++        jbtnBrowse = new javax.swing.JButton();
+         jpTemplateExport = new javax.swing.JPanel();
+         jbtnCancel = new javax.swing.JButton();
+         jbtnExport = new javax.swing.JButton();
+@@ -149,7 +161,7 @@
+         jpExportTypeLayout.setVerticalGroup(
+             jpExportTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(jpExportTypeLayout.createSequentialGroup()
+-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
++                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 289, Short.MAX_VALUE)
+                 .addContainerGap())
+         );
+ 
+@@ -157,15 +169,39 @@
+ 
+         jpFileExport.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jpFileExport.border.title&quot;))); // NOI18N
+ 
++        jlblDestination.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jlblDestination.text&quot;)); // NOI18N
++
++        jtfDestination.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jtfDestination.text&quot;)); // NOI18N
++
++        jbtnBrowse.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jbtnBrowse.text&quot;)); // NOI18N
++        jbtnBrowse.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbtnBrowseActionPerformed(evt);
++            }
++        });
++
+         javax.swing.GroupLayout jpFileExportLayout = new javax.swing.GroupLayout(jpFileExport);
+         jpFileExport.setLayout(jpFileExportLayout);
+         jpFileExportLayout.setHorizontalGroup(
+             jpFileExportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 392, Short.MAX_VALUE)
++            .addGroup(jpFileExportLayout.createSequentialGroup()
++                .addContainerGap()
++                .addComponent(jlblDestination)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jtfDestination, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jbtnBrowse)
++                .addContainerGap())
+         );
+         jpFileExportLayout.setVerticalGroup(
+             jpFileExportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 396, Short.MAX_VALUE)
++            .addGroup(jpFileExportLayout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(jpFileExportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jlblDestination)
++                    .addComponent(jbtnBrowse)
++                    .addComponent(jtfDestination, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addContainerGap(266, Short.MAX_VALUE))
+         );
+ 
+         jpExportOptions.add(jpFileExport, &quot;card2&quot;);
+@@ -176,11 +212,11 @@
+         jpTemplateExport.setLayout(jpTemplateExportLayout);
+         jpTemplateExportLayout.setHorizontalGroup(
+             jpTemplateExportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 392, Short.MAX_VALUE)
++            .addGap(0, 361, Short.MAX_VALUE)
+         );
+         jpTemplateExportLayout.setVerticalGroup(
+             jpTemplateExportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 396, Short.MAX_VALUE)
++            .addGap(0, 300, Short.MAX_VALUE)
+         );
+ 
+         jpExportOptions.add(jpTemplateExport, &quot;card3&quot;);
+@@ -216,7 +252,7 @@
+                     .addGroup(layout.createSequentialGroup()
+                         .addComponent(jpExportType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jpExportOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE))
++                        .addComponent(jpExportOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 377, Short.MAX_VALUE))
+                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                         .addComponent(jbtnExport)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+@@ -233,7 +269,7 @@
+             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                 .addContainerGap()
+                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+-                    .addComponent(jpExportOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
++                    .addComponent(jpExportOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                     .addComponent(jpExportType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+@@ -247,12 +283,12 @@
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+ 
+ private void jlstExportTypesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jlstExportTypesValueChanged
+-    if (jlstExportTypes.getSelectedIndex() == 0) {
++    if (jlstExportTypes.getSelectedIndex() == 1) {
+         CardLayout lay = (CardLayout) jpExportOptions.getLayout();
+-        lay.first(jpExportOptions);
++        lay.last(jpExportOptions);
+     } else {
+         CardLayout lay = (CardLayout) jpExportOptions.getLayout();
+-        lay.last(jpExportOptions);
++        lay.first(jpExportOptions);
+     }
+ }//GEN-LAST:event_jlstExportTypesValueChanged
+ 
+@@ -261,28 +297,55 @@
+ }//GEN-LAST:event_jbtnCancelActionPerformed
+ 
+ private void jbtnExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnExportActionPerformed
+-// TODO add your handling code here:
++    //csv html sql ods xls xml
++    switch (jlstExportTypes.getSelectedIndex()) {
++        case 0://CSV
++            new CSV(selectedFile).export();
++            break;
++        case 1://HTML
++            break;
++        case 2://SQL
++            new SQL(selectedFile).export();
++            break;
++        case 3://ODS
++            break;
++        case 4://XLS
++            break;
++        case 5://XML
++            new XML(selectedFile).export();
++
++    }
+ }//GEN-LAST:event_jbtnExportActionPerformed
+ 
+ private void jbtnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnHelpActionPerformed
+ // TODO add your handling code here:
+ }//GEN-LAST:event_jbtnHelpActionPerformed
++
++private void jbtnBrowseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBrowseActionPerformed
++    JFileChooser jfc = new JFileChooser();
++    if (jfc.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
++        selectedFile = jfc.getSelectedFile();
++        jtfDestination.setText(selectedFile.getAbsolutePath());
++    }
++}//GEN-LAST:event_jbtnBrowseActionPerformed
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JLabel jLabel1;
+     private javax.swing.JLabel jLabel2;
+     private javax.swing.JPanel jPanel1;
+     private javax.swing.JPanel jPanel2;
+     private javax.swing.JScrollPane jScrollPane1;
++    private javax.swing.JButton jbtnBrowse;
+     private javax.swing.JButton jbtnCancel;
+     private javax.swing.JButton jbtnExport;
+     private javax.swing.JButton jbtnHelp;
++    private javax.swing.JLabel jlblDestination;
+     private javax.swing.JList jlstExportTypes;
+     private javax.swing.JPanel jpExportOptions;
+     private javax.swing.JPanel jpExportType;
+     private javax.swing.JPanel jpFileExport;
+     private javax.swing.JPanel jpTemplateExport;
++    private javax.swing.JTextField jtfDestination;
+     // End of variables declaration//GEN-END:variables
+-    
+     /**
+      * Renderer class for showing icons on the list of existing export options
+      */
+@@ -295,9 +358,9 @@
+                         new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x48/export-import-csv.png&quot;)),
+                         new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x48/export-import-html.png&quot;)),
+                         new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x48/export-import-ods.png&quot;)),
++                        new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x48/export-import-sql.png&quot;)),
+                         new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x48/export-import-xls.png&quot;)),
+-                        new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x48/export-import-xml.png&quot;)),
+-                        new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x48/export-import-sql.png&quot;))
++                        new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x48/export-import-xml.png&quot;))
+                     };
+ 
+             setOpaque(true);
+@@ -323,4 +386,19 @@
+             return this;
+         }
+     }
++
++    public void exportStarted() {
++        //TODO:
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void exportFinished() {
++        //TODO:
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void exportError() {
++        //TODO:
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-06-10 14:46:39 UTC (rev 137)
+@@ -201,7 +201,7 @@
+                   &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                          &lt;Component id=&quot;jchkCalculateCRC&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jchkCalculateHash&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Component id=&quot;jchkAskDescription&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Component id=&quot;jchkShowAgain&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Component id=&quot;jSeparator1&quot; alignment=&quot;0&quot; pref=&quot;443&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+@@ -215,7 +215,7 @@
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jchkCalculateCRC&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jchkCalculateHash&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jchkAskDescription&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -230,10 +230,10 @@
+             &lt;/DimensionLayout&gt;
+           &lt;/Layout&gt;
+           &lt;SubComponents&gt;
+-            &lt;Component class=&quot;javax.swing.JCheckBox&quot; name=&quot;jchkCalculateCRC&quot;&gt;
++            &lt;Component class=&quot;javax.swing.JCheckBox&quot; name=&quot;jchkCalculateHash&quot;&gt;
+               &lt;Properties&gt;
+                 &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-                  &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewDiskDlg.jchkCalculateCRC.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++                  &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewDiskDlg.jchkCalculateHash.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+                 &lt;/Property&gt;
+               &lt;/Properties&gt;
+             &lt;/Component&gt;
+@@ -258,7 +258,6 @@
+                 &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+                   &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewDiskDlg.jtbSelectedPlugins.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+                 &lt;/Property&gt;
+-                &lt;Property name=&quot;enabled&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
+                 &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
+               &lt;/Properties&gt;
+               &lt;Events&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -21,6 +21,7 @@
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import de.berlios.jfindmyfiles.readingfiles.MediaReader;
+ import java.awt.event.ActionEvent;
+ import java.awt.event.ActionListener;
+ import java.io.File;
+@@ -36,6 +37,7 @@
+ import javax.swing.filechooser.FileSystemView;
+ import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
++import org.openide.windows.WindowManager;
+ 
+ /**
+  *
+@@ -150,7 +152,7 @@
+         jcbxCatalog = new JComboBox(listDiskGroups());
+         jlblCatalog = new javax.swing.JLabel();
+         jpScanningOptions = new javax.swing.JPanel();
+-        jchkCalculateCRC = new javax.swing.JCheckBox();
++        jchkCalculateHash = new javax.swing.JCheckBox();
+         jchkAskDescription = new javax.swing.JCheckBox();
+         jchkShowAgain = new javax.swing.JCheckBox();
+         jSeparator1 = new javax.swing.JSeparator();
+@@ -182,7 +184,7 @@
+ 
+         jpScanningOptions.setBorder(javax.swing.BorderFactory.createTitledBorder(&quot;Options &quot;));
+ 
+-        jchkCalculateCRC.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jchkCalculateCRC.text&quot;)); // NOI18N
++        jchkCalculateHash.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jchkCalculateHash.text&quot;)); // NOI18N
+ 
+         jchkAskDescription.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jchkAskDescription.text&quot;)); // NOI18N
+ 
+@@ -190,7 +192,6 @@
+ 
+         jtbSelectedPlugins.setIcon(new ImageIcon(Utilities.loadImage(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/button-show-plugins.png&quot;)));
+         jtbSelectedPlugins.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jtbSelectedPlugins.text&quot;)); // NOI18N
+-        jtbSelectedPlugins.setEnabled(false);
+         jtbSelectedPlugins.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+         jtbSelectedPlugins.addActionListener(new java.awt.event.ActionListener() {
+             public void actionPerformed(java.awt.event.ActionEvent evt) {
+@@ -205,7 +206,7 @@
+             .addGroup(jpScanningOptionsLayout.createSequentialGroup()
+                 .addContainerGap()
+                 .addGroup(jpScanningOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-                    .addComponent(jchkCalculateCRC)
++                    .addComponent(jchkCalculateHash)
+                     .addComponent(jchkAskDescription)
+                     .addComponent(jchkShowAgain)
+                     .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 443, Short.MAX_VALUE)
+@@ -216,7 +217,7 @@
+             jpScanningOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(jpScanningOptionsLayout.createSequentialGroup()
+                 .addContainerGap()
+-                .addComponent(jchkCalculateCRC)
++                .addComponent(jchkCalculateHash)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addComponent(jchkAskDescription)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+@@ -325,6 +326,7 @@
+ 
+ private void jtbSelectedPluginsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbSelectedPluginsActionPerformed
+     //TODO: show plugin panel
++    //WindowManager.getDefault().getMainWindow().
+     if (jtbSelectedPlugins.isSelected()) {
+         jpopPlugins.setLocation(getParent().getX() + this.getX() + jtbSelectedPlugins.getX() + jtbSelectedPlugins.getWidth(),
+                 getParent().getY() + this.getY() + jtbSelectedPlugins.getY() + jtbSelectedPlugins.getHeight() + 48);
+@@ -336,10 +338,10 @@
+ }//GEN-LAST:event_jtbSelectedPluginsActionPerformed
+ 
+ private void jbtnScanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnScanActionPerformed
+-    if (eng != null) {
+-        //TODO: eng.readDisk(new File(currentSelectedPath), (DiskGroup)jcbxCatalog.getSelectedItem());
+-        eng.readDisk(new File(currentSelectedPath), null, false);
+-    }
++    MediaReader r = Lookup.getDefault().lookup(MediaReader.class);
++    ActiveScanningDlg scanningDlg = new ActiveScanningDlg(WindowManager.getDefault().getMainWindow(), true);
++    r.read(new File(currentSelectedPath), jchkCalculateHash.isSelected());
++    scanningDlg.showCentered();
+ }//GEN-LAST:event_jbtnScanActionPerformed
+ 
+ private void jbtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCancelActionPerformed
+@@ -361,7 +363,7 @@
+     private javax.swing.ButtonGroup jbtngrpDrives;
+     private javax.swing.JComboBox jcbxCatalog;
+     private javax.swing.JCheckBox jchkAskDescription;
+-    private javax.swing.JCheckBox jchkCalculateCRC;
++    private javax.swing.JCheckBox jchkCalculateHash;
+     private javax.swing.JCheckBox jchkShowAgain;
+     private javax.swing.JFormattedTextField jffDiskNumber;
+     private javax.swing.JLabel jlblCatalog;
+
+
+Property changes on: trunk/project/JFindMyFiles/JaCKSum
+___________________________________________________________________
+Name: svn:ignore
+   + build
+
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-06-10 14:46:39 UTC (rev 137)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=e6ceb647
++build.xml.data.CRC32=3279c8b7
+ build.xml.script.CRC32=78d85b23
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=e6ceb647
++nbproject/build-impl.xml.data.CRC32=3279c8b7
+ nbproject/build-impl.xml.script.CRC32=a04a2658
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-06-10 14:46:39 UTC (rev 137)
+@@ -15,6 +15,14 @@
+                     &lt;/run-dependency&gt;
+                 &lt;/dependency&gt;
+                 &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.persistence&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
+                     &lt;code-name-base&gt;jonelo.jacksum&lt;/code-name-base&gt;
+                     &lt;build-prerequisite/&gt;
+                     &lt;compile-dependency/&gt;
+@@ -23,7 +31,9 @@
+                     &lt;/run-dependency&gt;
+                 &lt;/dependency&gt;
+             &lt;/module-dependencies&gt;
+-            &lt;public-packages/&gt;
++            &lt;public-packages&gt;
++                &lt;package&gt;de.berlios.jfindmyfiles.readingfiles&lt;/package&gt;
++            &lt;/public-packages&gt;
+         &lt;/data&gt;
+     &lt;/configuration&gt;
+ &lt;/project&gt;
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -4,72 +4,123 @@
+  */
+ package de.berlios.jfindmyfiles.readingfiles;
+ 
++import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
++import de.berlios.jfindmyfiles.catalog.entities.Media;
+ import java.io.File;
++import java.util.Stack;
++import java.util.Vector;
+ 
+ /**
+  *
+  * @author Knitter
+  */
+ public class MediaReader {
+-    
++
++    private Vector&lt;ReadingListener&gt; listeners;
++    private MediaReader me = this;
++
++    public MediaReader() {
++        listeners = new Vector&lt;ReadingListener&gt;();
++    }
++
+     public void read(File source, boolean sha) {
+-        
++        final File file = source;
++        final boolean isMedia = false;//?
++
++        new Thread(new Runnable() {
++
++            public void run() {
++                fireReadingFile(new ReadingEvent(me, &quot;&quot;));
++
++                Stack&lt;File&gt; directories = new Stack&lt;File&gt;();
++                File current, listing[];
++                long totalSize = 0L, childSize = 0L;
++                FileWrapper fw, child;
++                int z;
++                //?
++                Media container = null;
++
++                if (isMedia) {
++                    container = new Media();
++                }//?
++
++                if (file.isDirectory()) {//NOTE: this protections may be dropped
++                    fw = new FileWrapper(file.getName(),
++                            file.getAbsolutePath(), 0, file.isFile(), file.isHidden(),
++                            file.lastModified(), container, null);
++
++                    if ((listing = file.listFiles()) != null) {
++                        for (z = listing.length; z-- &gt; 0;) {
++                            if (listing[z].isDirectory()) {
++                                directories.push(listing[z]);
++                            } else {
++                                totalSize += listing[z].length();
++                                fw.addChild(new FileWrapper(listing[z].getName(),
++                                        listing[z].getAbsolutePath(),
++                                        listing[z].length(), listing[z].isFile(),
++                                        listing[z].isHidden(),
++                                        listing[z].lastModified(), container, fw));
++                            }
++                        }
++                    }
++
++                    while (!directories.empty()) {
++                        current = directories.pop();
++                        childSize = 0;
++                        child = new FileWrapper(current.getName(),
++                                current.getAbsolutePath(), 0, current.isFile(),
++                                current.isHidden(), current.lastModified(),
++                                container, null);
++
++                        if ((listing = current.listFiles()) != null) {
++                            for (z = listing.length; z-- &gt; 0;) {
++                                if (listing[z].isDirectory()) {
++                                    directories.push(listing[z]);
++                                } else {
++                                    childSize += listing[z].length();
++                                    child.addChild(new FileWrapper(listing[z].getName(),
++                                            listing[z].getAbsolutePath(),
++                                            listing[z].length(), listing[z].isFile(),
++                                            listing[z].isHidden(),
++                                            listing[z].lastModified(), container, fw));
++                                }
++                            }
++                        }
++                        child.setSize(childSize);
++                    }
++                    fw.setSize(totalSize);
++                }
++                
++                
++                //insert all inside the db?
++            }
++        }).start();
++        fireReadingStopped(new ReadingEvent(this, &quot;&quot;));
+     }
+-    /*Stack&lt;File&gt; directories = new Stack&lt;File&gt;();
+-    File current, listing[];
+-    long totalSize = 0L, childSize = 0L;
+-    FileWrapper fw, child;
+-    int z;
+-    /*Media container = null;
+-    
+-    if(isMedia) {
+-    container = new Media();            
+-    }*/
+ 
+-    /*if (file.isDirectory()) {//NOTE: this protections may be dropped
+-    fw = new FileWrapper(file.getName(),
+-    file.getAbsolutePath(), 0, file.isFile(), file.isHidden(),
+-    file.lastModified(), container, null);
+-    
+-    if ((listing = file.listFiles()) != null) {
+-    for (z = listing.length; z-- &gt; 0;) {
+-    if (listing[z].isDirectory()) {
+-    directories.push(listing[z]);
+-    } else {
+-    totalSize += listing[z].length();
+-    fw.addChild(new FileWrapper(listing[z].getName(),
+-    listing[z].getAbsolutePath(),
+-    listing[z].length(), listing[z].isFile(),
+-    listing[z].isHidden(),
+-    listing[z].lastModified(), container, fw));
++    public void addListener(ReadingListener l) {
++        if (listeners == null) {
++            listeners = new Vector&lt;ReadingListener&gt;();
++        }
++
++        listeners.add(l);
+     }
++
++    public void removeListener(ReadingListener l) {
++        if (listeners != null) {
++            listeners.remove(l);
++        }
+     }
++
++    private void fireReadingFile(ReadingEvent evt) {
++        for (ReadingListener l : listeners) {
++            l.readingFile(evt);
++        }
+     }
+-    
+-    while (!directories.empty()) {
+-    current = directories.pop();
+-    childSize = 0;
+-    child = new FileWrapper(current.getName(),
+-    current.getAbsolutePath(), 0, current.isFile(),
+-    current.isHidden(), current.lastModified(),
+-    container, null);
+-    
+-    if ((listing = current.listFiles()) != null) {
+-    for (z = listing.length; z-- &gt; 0;) {
+-    if (listing[z].isDirectory()) {
+-    directories.push(listing[z]);
+-    } else {
+-    childSize += listing[z].length();
+-    child.addChild(new FileWrapper(listing[z].getName(),
+-    listing[z].getAbsolutePath(),
+-    listing[z].length(), listing[z].isFile(),
+-    listing[z].isHidden(),
+-    listing[z].lastModified(), container, fw));
++
++    private void fireReadingStopped(ReadingEvent evt) {
++        for (ReadingListener l : listeners) {
++            l.readingStopped(evt);
++        }
+     }
+-    }
+-    }
+-    child.setSize(childSize);
+-    }
+-    fw.setSize(totalSize);
+-    }*/
+ }
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -0,0 +1,27 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.readingfiles;
++
++import java.util.EventObject;
++
++/**
++ *
++ * @author Knitter
++ */
++public class ReadingEvent extends EventObject {
++    
++    private String currentFileName;
++    
++    public ReadingEvent(MediaReader source, String currentFileName) {
++        super(source);
++        this.currentFileName = currentFileName;
++    }
++    
++    public String getCurrentFileName() {
++        return currentFileName;
++    }
++
++}
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java	2008-06-07 19:39:31 UTC (rev 136)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java	2008-06-10 14:46:39 UTC (rev 137)
+@@ -0,0 +1,18 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.readingfiles;
++
++/**
++ *
++ * @author Knitter
++ */
++public interface ReadingListener {
++    
++    void readingFile(ReadingEvent evt);
++    void readingStopped(ReadingEvent evt);
++    void readingAborted(ReadingEvent evt);
++
++}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000131.html">[Jfindmyfiles-commits] r136 - in	trunk/project/JFindMyFiles/JaCKSum: . nbproject release	release/modules release/modules/ext
+</A></li>
+	<LI>Next message: <A HREF="000133.html">[Jfindmyfiles-commits] r138 - in trunk: media/icons/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#132">[ date ]</a>
+              <a href="thread.html#132">[ thread ]</a>
+              <a href="subject.html#132">[ subject ]</a>
+              <a href="author.html#132">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

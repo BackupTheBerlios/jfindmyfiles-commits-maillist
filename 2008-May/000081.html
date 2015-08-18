@@ -1,0 +1,713 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r86 - in	trunk/project/JFindMyFiles/Catalog/src: .	de/berlios/jfindmyfiles/catalog/entities	de/berlios/jfindmyfiles/catalog/utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r86%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src%3A%20.%0A%09de/berlios/jfindmyfiles/catalog/entities%0A%09de/berlios/jfindmyfiles/catalog/utils&In-Reply-To=%3C200805072308.m47N8XJo024074%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000080.html">
+   <LINK REL="Next"  HREF="000082.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r86 - in	trunk/project/JFindMyFiles/Catalog/src: .	de/berlios/jfindmyfiles/catalog/entities	de/berlios/jfindmyfiles/catalog/utils</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r86%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src%3A%20.%0A%09de/berlios/jfindmyfiles/catalog/entities%0A%09de/berlios/jfindmyfiles/catalog/utils&In-Reply-To=%3C200805072308.m47N8XJo024074%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r86 - in	trunk/project/JFindMyFiles/Catalog/src: .	de/berlios/jfindmyfiles/catalog/entities	de/berlios/jfindmyfiles/catalog/utils">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu May  8 01:08:33 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000080.html">[Jfindmyfiles-commits] r85 - trunk/docs/Iteracao2-CB05/Diagrama de	Classes/nbproject/private
+</A></li>
+        <LI>Next message: <A HREF="000082.html">[Jfindmyfiles-commits] r87 - in trunk/docs: . Iteracao2-CB05	Iteracao2-CB05/Diagrama de Classes
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#81">[ date ]</a>
+              <a href="thread.html#81">[ thread ]</a>
+              <a href="subject.html#81">[ subject ]</a>
+              <a href="author.html#81">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-08 01:08:22 +0200 (Thu, 08 May 2008)
+New Revision: 86
+
+Added:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.cfg.xml
+Removed:
+   trunk/project/JFindMyFiles/Catalog/src/hibernate.cfg.xml
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/ConnectionManager.java
+Log:
+Efectuados todos os mapeamentos de objectos a tabelas, faltam apenas os mapeamentos recursivos.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml	2008-05-07 23:08:22 UTC (rev 86)
+@@ -16,7 +16,9 @@
+         &lt;id name=&quot;id&quot; column=&quot;AUDIO_ID&quot;&gt;
+             &lt;generator class=&quot;native&quot;/&gt;
+         &lt;/id&gt;
+-        &lt;!-- &lt;property name=&quot;owner&quot;/&gt; --&gt;
+-        &lt;property name=&quot;data&quot;/&gt;        
++
++        &lt;property name=&quot;data&quot;/&gt;
++        
++        &lt;many-to-one name=&quot;owner&quot; column=&quot;FILE_ID&quot; unique=&quot;true&quot; not-null=&quot;true&quot;/&gt;
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml	2008-05-07 23:08:22 UTC (rev 86)
+@@ -18,8 +18,8 @@
+             &lt;generator class=&quot;native&quot;/&gt;
+         &lt;/id&gt;
+         &lt;property name=&quot;name&quot;/&gt;
+-        &lt;!-- &lt;property name=&quot;description&quot;/&gt;
+-        &lt;property name=&quot;groups&quot;/&gt;
+-        &lt;property name=&quot;files&quot;/&gt; --&gt;
++        &lt;property name=&quot;description&quot;/&gt;
++        
++        &lt;!-- &lt;property name=&quot;groups&quot;/&gt; mapeamento recursivo--&gt;
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+\ No newline at end of file
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-05-07 23:08:22 UTC (rev 86)
+@@ -4,7 +4,6 @@
+  */
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
+-import java.util.List;
+ import java.util.Set;
+ 
+ /**
+@@ -16,8 +15,7 @@
+     private Long id;
+     private String name;
+     private String description;
+-    private Set&lt;DiskGroup&gt; groups;
+-    private List&lt;FileWrapper&gt; files;
++    private Set groups;
+     
+     public String getDescription() {
+         return description;
+@@ -27,19 +25,11 @@
+         this.description = description;
+     }
+ 
+-    private List&lt;FileWrapper&gt; getFiles() {
+-        return files;
+-    }
+-
+-    private void setFiles(List&lt;FileWrapper&gt; files) {
+-        this.files = files;
+-    }
+-
+-    private Set&lt;DiskGroup&gt; getGroups() {
++    private Set getGroups() {
+         return groups;
+     }
+ 
+-    private void setGroups(Set&lt;DiskGroup&gt; groups) {
++    private void setGroups(Set groups) {
+         this.groups = groups;
+     }
+ 
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml	2008-05-07 23:08:22 UTC (rev 86)
+@@ -17,17 +17,24 @@
+         &lt;id name=&quot;id&quot; column=&quot;FILE_ID&quot;&gt;
+             &lt;generator class=&quot;native&quot;/&gt;
+         &lt;/id&gt;
+-        &lt;!-- &lt;property name=&quot;disk&quot;/&gt;
++        
++        &lt;property name=&quot;name&quot;/&gt;
+         &lt;property name=&quot;size&quot;/&gt;
+         &lt;property name=&quot;file&quot;/&gt;
+         &lt;property name=&quot;folder&quot;/&gt;
+-        &lt;property name=&quot;name&quot;/&gt;
+         &lt;property name=&quot;absolutePath&quot;/&gt;
+         &lt;property name=&quot;hidden&quot;/&gt;
+         &lt;property name=&quot;lastModified&quot;/&gt;
+-        &lt;property name=&quot;labels&quot;/&gt;
+-        &lt;property name=&quot;children&quot;/&gt;
+-        &lt;property name=&quot;parent&quot;/&gt;
+-        &lt;property name=&quot;description&quot;/&gt; --&gt;
++        &lt;property name=&quot;description&quot;/&gt;  
++        
++        &lt;many-to-one name=&quot;disk&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Media&quot; column=&quot;MEDIA_ID&quot; not-null=&quot;true&quot;/&gt;
++        
++        &lt;one-to-one name=&quot;image&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.ImageData&quot; property-ref=&quot;owner&quot;/&gt;
++        &lt;one-to-one name=&quot;video&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.VideoData&quot; property-ref=&quot;owner&quot;/&gt;
++        &lt;one-to-one name=&quot;audio&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.AudioData&quot; property-ref=&quot;owner&quot;/&gt;
++                
++        &lt;!-- &lt;property name=&quot;children&quot;/&gt; Mapeamento recursivo? --&gt;
++        &lt;!-- &lt;property name=&quot;parent&quot; /&gt; Mapeamento recursivo? --&gt;
++        
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-05-07 23:08:22 UTC (rev 86)
+@@ -5,7 +5,7 @@
+ 
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
+-import java.util.List;
++import java.util.Set;
+ 
+ /**
+  *
+@@ -22,10 +22,12 @@
+     private String absolutePath;
+     private boolean hidden;
+     private long lastModified;
+-    private List&lt;Label&gt; labels;
+-    private List&lt;FileWrapper&gt; children;
++    private Set children;
+     private FileWrapper parent;
+-    private String description;     
++    private String description;
++    private ImageData image;
++    private VideoData video;
++    private AudioData audio;
+ 
+     public String getAbsolutePath() {
+         return absolutePath;
+@@ -34,12 +36,20 @@
+     public void setAbsolutePath(String absolutePath) {
+         this.absolutePath = absolutePath;
+     }
++    
++    public AudioData getAudio() {
++        return audio;
++    }
++    
++    public void setAudio(AudioData audio) {
++        this.audio = audio;
++    }
+ 
+-    private List&lt;FileWrapper&gt; getChildren() {
++    private Set getChildren() {
+         return children;
+     }
+ 
+-    private void setChildren(List&lt;FileWrapper&gt; children) {
++    private void setChildren(Set children) {
+         this.children = children;
+     }
+ 
+@@ -90,15 +100,15 @@
+     private void setId(Long id) {
+         this.id = id;
+     }
+-
+-    private List&lt;Label&gt; getLabel() {
+-        return labels;
++    
++    public ImageData getImage() {
++        return image;
+     }
+ 
+-    private void setLabel(List&lt;Label&gt; labels) {
+-        this.labels = labels;
++    public void setImage(ImageData image) {
++        this.image = image;
+     }
+-
++    
+     public long getLastModified() {
+         return lastModified;
+     }
+@@ -129,5 +139,13 @@
+ 
+     public void setSize(long size) {
+         this.size = size;
+-    }   
++    }
++    
++    public VideoData getVideo() {
++        return video;
++    }
++    
++    public void setVideo(VideoData video) {
++        this.video = video;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml	2008-05-07 23:08:22 UTC (rev 86)
+@@ -17,7 +17,10 @@
+         &lt;id name=&quot;id&quot; column=&quot;IMAGE_ID&quot;&gt;
+             &lt;generator class=&quot;native&quot;/&gt;
+         &lt;/id&gt;
+-        &lt;!-- &lt;property name=&quot;owner&quot;/&gt; --&gt;
+-        &lt;property name=&quot;data&quot;/&gt;        
++
++        &lt;property name=&quot;data&quot;/&gt;
++        
++        &lt;many-to-one name=&quot;owner&quot; column=&quot;FILE_ID&quot; unique=&quot;true&quot; not-null=&quot;true&quot;/&gt;
++
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml	2008-05-07 23:08:22 UTC (rev 86)
+@@ -18,5 +18,9 @@
+             &lt;generator class=&quot;native&quot;/&gt;
+         &lt;/id&gt;
+         &lt;property name=&quot;name&quot;/&gt;
++        &lt;set name=&quot;media&quot; table=&quot;TBL_MEDIA_LABEL&quot; inverse=&quot;true&quot;&gt;
++            &lt;key column=&quot;LABEL_ID&quot;/&gt;
++            &lt;many-to-many column=&quot;MEDIA_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Media&quot;/&gt;
++        &lt;/set&gt;
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-05-07 23:08:22 UTC (rev 86)
+@@ -4,6 +4,8 @@
+  */
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
++import java.util.Set;
++
+ /**
+  *
+  * @author ei10635
+@@ -12,6 +14,7 @@
+ 
+     private Long id;
+     private String name;
++    private Set media;
+ 
+     public Long getId() {
+         return id;
+@@ -20,6 +23,14 @@
+     private void setId(Long id) {
+         this.id = id;
+     }
++    
++    private Set getMedia() {
++        return media;
++    }
++    
++    private void setMedia(Set media) {
++        this.media = media;
++    }
+ 
+     public String getName() {
+         return name;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml	2008-05-07 23:08:22 UTC (rev 86)
+@@ -19,8 +19,7 @@
+         &lt;/id&gt;
+         &lt;property name=&quot;loaned&quot; type=&quot;date&quot;/&gt;
+         &lt;property name=&quot;returned&quot; type=&quot;date&quot;/&gt;
+-        &lt;property name=&quot;loanee&quot;/&gt;
+         &lt;!-- TODO:&lt;property name=&quot;media&quot;/&gt; --&gt;
+-        &lt;many-to-one name=&quot;loanee&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Loan&quot; column=&quot;USER_ID&quot;/&gt;          
++        &lt;many-to-one name=&quot;loanee&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.User&quot; column=&quot;USER_ID&quot;/&gt;          
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-05-07 23:08:22 UTC (rev 86)
+@@ -17,7 +17,7 @@
+     private Date loaned;
+     private Date returned;
+     private User loanee;
+-    private Media medium;
++    private Media media;
+     
+     public Long getId() {
+         return id;
+@@ -44,11 +44,11 @@
+     }
+ 
+     public Media getMedium() {
+-        return medium;
++        return media;
+     }
+ 
+-    public void setMedium(Media medium) {
+-        this.medium = medium;
++    public void setMedium(Media media) {
++        this.media = media;
+     }
+ 
+     public Date getReturned() {
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-07 23:08:22 UTC (rev 86)
+@@ -17,7 +17,16 @@
+         &lt;id name=&quot;id&quot; column=&quot;MEDIA_ID&quot;&gt;
+             &lt;generator class=&quot;native&quot;/&gt;
+         &lt;/id&gt;
++        
+         &lt;property name=&quot;description&quot;/&gt;
++        
++        &lt;set name=&quot;labels&quot; table=&quot;TBL_MEDIA_LABEL&quot;&gt;
++            &lt;key column=&quot;MEDIA_ID&quot;/&gt;
++            &lt;many-to-many column=&quot;LABEL_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Label&quot;/&gt;
++        &lt;/set&gt;
++        
++        &lt;many-to-one name=&quot;type&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Type&quot; column=&quot;TYPE_ID&quot; not-null=&quot;true&quot;/&gt;
++        
+         &lt;!-- TODO: other properties --&gt;        
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-05-07 23:08:22 UTC (rev 86)
+@@ -16,6 +16,8 @@
+     private Long id;
+     private Set files;
+     private String description;
++    private Set labels;
++    private Type type;
+     
+     public String getDescription() {
+         return description;
+@@ -40,5 +42,21 @@
+     private void setId(Long id) {
+         this.id = id;
+     }
++    
++    private Set getLabels() {
++        return labels;
++    }
++    
++    private void setLabels(Set labels) {
++        this.labels = labels;
++    }
++    
++    public Type getType() {
++        return type;
++    }
++    
++    public void setType(Type type) {
++        this.type = type;
++    }
+ 
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml	2008-05-07 23:08:22 UTC (rev 86)
+@@ -9,14 +9,21 @@
+ --&gt;
+ 
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+-    'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+-    '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
++'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
++'<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+     
+ &lt;hibernate-mapping&gt;
+-    &lt;class name=&quot;de.berlios.jfindmyfiles.catalog.entities.Type&quot; table=&quot;TBL_MEDIUM_TYPE&quot;&gt;
++    &lt;class name=&quot;de.berlios.jfindmyfiles.catalog.entities.Type&quot; table=&quot;TBL_TYPE&quot;&gt;
+         &lt;id name=&quot;id&quot; column=&quot;TYPE_ID&quot;&gt;
+             &lt;generator class=&quot;native&quot;/&gt;
+         &lt;/id&gt;
++        
+         &lt;property name=&quot;name&quot;/&gt;
++        
++        &lt;set name=&quot;media&quot; table=&quot;TBL_MEDIA&quot;&gt;
++            &lt;key column=&quot;MEDIA_ID&quot;/&gt;
++            &lt;one-to-many  class=&quot;de.berlios.jfindmyfiles.catalog.entities.Media&quot;/&gt;
++        &lt;/set&gt;
++        
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-05-07 23:08:22 UTC (rev 86)
+@@ -5,6 +5,8 @@
+ 
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
++import java.util.Set;
++
+ /**
+  *
+  * @author ei10635
+@@ -13,6 +15,7 @@
+ 
+     private long id;
+     private String name;
++    private Set media;
+ 
+     public long getId() {
+         return id;
+@@ -21,6 +24,14 @@
+     private void setId(long id) {
+         this.id = id;
+     }
++    
++    private Set getMedia() {
++        return media;
++    }
++    
++    private void setMedia(Set media) {
++        this.media = media;
++    } 
+ 
+     public String getName() {
+         return name;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-05-07 23:08:22 UTC (rev 86)
+@@ -34,11 +34,11 @@
+         this.id = id;
+     }
+ 
+-    private Set&lt;Loan&gt; getLoans() {
++    private Set getLoans() {
+         return loans;
+     }
+ 
+-    private void setLoans(Set&lt;Loan&gt; loans) {
++    private void setLoans(Set loans) {
+         this.loans = loans;
+     }
+ 
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml	2008-05-07 23:08:22 UTC (rev 86)
+@@ -17,7 +17,9 @@
+         &lt;id name=&quot;id&quot; column=&quot;VIDEO_ID&quot;&gt;
+             &lt;generator class=&quot;native&quot;/&gt;
+         &lt;/id&gt;
+-        &lt;!-- &lt;property name=&quot;owner&quot;/&gt; --&gt;
++        
+         &lt;property name=&quot;data&quot;/&gt;
++        
++        &lt;many-to-one name=&quot;owner&quot; column=&quot;FILE_ID&quot; unique=&quot;true&quot; not-null=&quot;true&quot;/&gt;
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/ConnectionManager.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/ConnectionManager.java	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/ConnectionManager.java	2008-05-07 23:08:22 UTC (rev 86)
+@@ -19,7 +19,8 @@
+     static {
+         try {
+             // Create the SessionFactory from hibernate.cfg.xml
+-            sessionFactory = new Configuration().configure().buildSessionFactory();
++            //TODO: correctly define config file
++            sessionFactory = new Configuration().configure(&quot;de/berlios/jfindmyfiles/catalog/utils/hibernate.cfg.xml&quot;).buildSessionFactory();
+         } catch (Throwable ex) {
+             // Make sure you log the exception, as it might be swallowed
+             System.err.println(&quot;Initial SessionFactory creation failed.&quot; + ex);
+
+Copied: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.cfg.xml (from rev 83, trunk/project/JFindMyFiles/Catalog/src/hibernate.cfg.xml)
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/hibernate.cfg.xml	2008-05-07 16:09:03 UTC (rev 83)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.cfg.xml	2008-05-07 23:08:22 UTC (rev 86)
+@@ -0,0 +1,55 @@
++&lt;?xml version='1.0' encoding='utf-8'?&gt;
++
++&lt;!--
++    Document   : hibernate.cfg.xml
++    Created on : 6 de Maio de 2008, 15:55
++    Author     : ei10635
++    Description:
++        Purpose of the document follows.
++--&gt;
++
++&lt;!DOCTYPE hibernate-configuration PUBLIC
++        &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
++        &quot;<A HREF="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd</A>&quot;&gt;
++
++&lt;hibernate-configuration&gt;
++
++    &lt;session-factory&gt;
++
++        &lt;!-- Database connection settings --&gt;       
++        &lt;property name=&quot;connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt;
++        &lt;property name=&quot;connection.url&quot;&gt;jdbc:<A HREF="mysql://67.207.139.234:3306/jfindmyfilesdb&lt;/property">mysql://67.207.139.234:3306/jfindmyfilesdb&lt;/property</A>&gt;
++        &lt;property name=&quot;connection.username&quot;&gt;jfindmyfilesuser&lt;/property&gt;
++        &lt;property name=&quot;connection.password&quot;&gt;Jf1ndmYf1l3z!&lt;/property&gt;
++
++        &lt;!-- JDBC connection pool (use the built-in) --&gt;
++        &lt;property name=&quot;connection.pool_size&quot;&gt;1&lt;/property&gt;
++
++        &lt;!-- SQL dialect --&gt;
++        &lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;/property&gt;
++
++        &lt;!-- Enable Hibernate's automatic session context management --&gt;
++        &lt;property name=&quot;current_session_context_class&quot;&gt;thread&lt;/property&gt;
++
++        &lt;!-- Disable the second-level cache  --&gt;
++        &lt;property name=&quot;cache.provider_class&quot;&gt;org.hibernate.cache.NoCacheProvider&lt;/property&gt;
++
++        &lt;!-- Echo all executed SQL to stdout --&gt;
++        &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt;
++
++        &lt;!-- Drop and re-create the database schema on startup --&gt;
++        &lt;property name=&quot;hbm2ddl.auto&quot;&gt;create&lt;/property&gt;
++
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml&quot;/&gt; 
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/User.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml&quot;/&gt;
++    &lt;/session-factory&gt;
++
++&lt;/hibernate-configuration&gt;
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/hibernate.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/hibernate.cfg.xml	2008-05-07 21:50:19 UTC (rev 85)
++++ trunk/project/JFindMyFiles/Catalog/src/hibernate.cfg.xml	2008-05-07 23:08:22 UTC (rev 86)
+@@ -1,61 +0,0 @@
+-&lt;?xml version='1.0' encoding='utf-8'?&gt;
+-
+-&lt;!--
+-    Document   : hibernate.cfg.xml
+-    Created on : 6 de Maio de 2008, 15:55
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+-&lt;!DOCTYPE hibernate-configuration PUBLIC
+-        &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
+-        &quot;<A HREF="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd</A>&quot;&gt;
+-
+-&lt;hibernate-configuration&gt;
+-
+-    &lt;session-factory&gt;
+-
+-        &lt;!-- Database connection settings --&gt;
+-        &lt;!-- &lt;property name=&quot;connection.driver_class&quot;&gt;org.hsqldb.jdbcDriver&lt;/property&gt;
+-        &lt;property name=&quot;connection.url&quot;&gt;jdbc:hsqldb:<A HREF="hsql://localhost&lt;/property">hsql://localhost&lt;/property</A>&gt;
+-        &lt;property name=&quot;connection.username&quot;&gt;sa&lt;/property&gt;
+-        &lt;property name=&quot;connection.password&quot;&gt;&lt;/property&gt; --&gt;
+-        
+-        &lt;property name=&quot;connection.driver_class&quot;&gt;com.mysql.jdbc.Driver&lt;/property&gt;
+-        &lt;property name=&quot;connection.url&quot;&gt;jdbc:<A HREF="mysql://67.207.139.234:3306/jfindmyfilesdb&lt;/property">mysql://67.207.139.234:3306/jfindmyfilesdb&lt;/property</A>&gt;
+-        &lt;property name=&quot;connection.username&quot;&gt;jfindmyfilesuser&lt;/property&gt;
+-        &lt;property name=&quot;connection.password&quot;&gt;Jf1ndmYf1l3z!&lt;/property&gt;
+-
+-        &lt;!-- JDBC connection pool (use the built-in) --&gt;
+-        &lt;property name=&quot;connection.pool_size&quot;&gt;1&lt;/property&gt;
+-
+-        &lt;!-- SQL dialect --&gt;
+-        &lt;property name=&quot;dialect&quot;&gt;org.hibernate.dialect.MySQLDialect&lt;/property&gt;
+-
+-        &lt;!-- Enable Hibernate's automatic session context management --&gt;
+-        &lt;property name=&quot;current_session_context_class&quot;&gt;thread&lt;/property&gt;
+-
+-        &lt;!-- Disable the second-level cache  --&gt;
+-        &lt;property name=&quot;cache.provider_class&quot;&gt;org.hibernate.cache.NoCacheProvider&lt;/property&gt;
+-
+-        &lt;!-- Echo all executed SQL to stdout --&gt;
+-        &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt;
+-
+-        &lt;!-- Drop and re-create the database schema on startup --&gt;
+-        &lt;property name=&quot;hbm2ddl.auto&quot;&gt;create&lt;/property&gt;
+-
+-        &lt;!-- &lt;mapping resource=&quot;events/Event.hbm.xml&quot;/&gt; --&gt;
+-        &lt;!-- &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml&quot;/&gt; --&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml&quot;/&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml&quot;/&gt;
+-        &lt;!-- &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml&quot;/&gt; --&gt;
+-        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/User.hbm.xml&quot;/&gt;
+-        &lt;!-- &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml&quot;/&gt;    --&gt;    
+-    &lt;/session-factory&gt;
+-
+-&lt;/hibernate-configuration&gt;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000080.html">[Jfindmyfiles-commits] r85 - trunk/docs/Iteracao2-CB05/Diagrama de	Classes/nbproject/private
+</A></li>
+	<LI>Next message: <A HREF="000082.html">[Jfindmyfiles-commits] r87 - in trunk/docs: . Iteracao2-CB05	Iteracao2-CB05/Diagrama de Classes
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#81">[ date ]</a>
+              <a href="thread.html#81">[ thread ]</a>
+              <a href="subject.html#81">[ subject ]</a>
+              <a href="author.html#81">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

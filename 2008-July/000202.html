@@ -1,0 +1,448 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r207 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r207%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images&In-Reply-To=%3C200807141949.m6EJnFqc017593%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000201.html">
+   <LINK REL="Next"  HREF="000203.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r207 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r207%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images&In-Reply-To=%3C200807141949.m6EJnFqc017593%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r207 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images">knitter at mail.berlios.de
+       </A><BR>
+    <I>Mon Jul 14 21:49:15 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000201.html">[Jfindmyfiles-commits] r206 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. actions dialogs nodes resources/icons/nodes utils
+</A></li>
+        <LI>Next message: <A HREF="000203.html">[Jfindmyfiles-commits] r208 - in trunk: media media/icons	media/icons/actions media/icons/general	media/icons/importexport media/icons/nodes	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/general	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#202">[ date ]</a>
+              <a href="thread.html#202">[ thread ]</a>
+              <a href="subject.html#202">[ subject ]</a>
+              <a href="author.html#202">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-07-14 21:49:05 +0200 (Mon, 14 Jul 2008)
+New Revision: 207
+
+Added:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SomeAction.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/logo.png
+Removed:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/splash.png
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+Log:
+Actualizado c?\195?\179digo para as ac?\195?\167?\195?\181es, n?\195?\163o est?\195?\161 a funcionar e est?\195?\161 a ocorrer excep?\195?\167?\195?\181es de acesso nos listeners.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-07-14 18:17:53 UTC (rev 206)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-07-14 19:49:05 UTC (rev 207)
+@@ -205,6 +205,7 @@
+         dg.setParent(parent);
+         cSession.save(dg);
+         cSession.getTransaction().commit();
++        fireDiskGroupAdded(new CatalogEngineEvent(this, &quot;&quot;, null, dg, null, null));
+     }
+ 
+     public void addLabel(String name) {
+@@ -267,20 +268,20 @@
+     }
+ 
+     //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+-    public void addListener(CatalogEngineListener l) {
++    public synchronized void addListener(CatalogEngineListener l) {
+         if (listeners == null) {
+             listeners = new Vector&lt;CatalogEngineListener&gt;();
+         }
+         listeners.add(l);
+     }
+     
+-    public void removeListener(CatalogEngineListener l) {
++    public synchronized void removeListener(CatalogEngineListener l) {
+         if(listeners != null) {
+             listeners.remove(l);
+         }
+     }
+ 
+-    private void fireCatalogCreated(CatalogEngineEvent evt) {
++    private synchronized void fireCatalogCreated(CatalogEngineEvent evt) {
+         if (listeners != null) {
+             for (CatalogEngineListener l : listeners) {
+                 l.catalogCreated(evt);
+@@ -288,7 +289,7 @@
+         }
+     }
+ 
+-    private void fireCatalogOpened(CatalogEngineEvent evt) {
++    private synchronized void fireCatalogOpened(CatalogEngineEvent evt) {
+         if (listeners != null) {
+             for (CatalogEngineListener l : listeners) {
+                 l.catalogOpened(evt);
+@@ -296,14 +297,21 @@
+         }
+     }
+ 
+-    private void fireCatalogClosed(CatalogEngineEvent evt) {
++    private synchronized void fireCatalogClosed(CatalogEngineEvent evt) {
+         if (listeners != null) {
+             for (CatalogEngineListener l : listeners) {
+                 l.catalogClosed(evt);
+             }
+         }
+     }
+-
++    
++    private synchronized void fireDiskGroupAdded(CatalogEngineEvent evt) {
++        if (listeners != null) {
++            for (CatalogEngineListener l : listeners) {
++                l.diskGroupAdded(evt);
++            }
++        }
++    }
+     /**
+      * In overriding the finalize method we try to garantee that data is 
+      * flushed and all resources are released.
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-07-14 18:17:53 UTC (rev 206)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-07-14 19:49:05 UTC (rev 207)
+@@ -33,6 +33,7 @@
+ CTL_SearchWindowTopComponent=SearchWindow Window
+ CTL_SingleViewAction=SingleView
+ CTL_SingleViewTopComponent=SingleView Window
++CTL_SomeAction=SomeAction
+ CTL_StatisticsAction=Statistics
+ CTL_StatisticsTopComponent=Statistics Window
+ CTL_WindowTestingAction=WindowTesting
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java	2008-07-14 18:17:53 UTC (rev 206)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java	2008-07-14 19:49:05 UTC (rev 207)
+@@ -18,8 +18,8 @@
+     
+     public DuplicateResultsAction() {
+         super(NbBundle.getMessage(DuplicateResultsAction.class, &quot;CTL_DuplicateResultsAction&quot;));
+-        putValue(SMALL_ICON, new ImageIcon(Utilities.loadImage(&quot;de/berlios/&quot; +
+-                &quot;jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-search.png&quot;, true)));
++        /*putValue(SMALL_ICON, new ImageIcon(Utilities.loadImage(&quot;de/berlios/&quot; +
++                &quot;jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-search.png&quot;, true)));*/
+     }
+ 
+     public void actionPerformed(ActionEvent evt) {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-07-14 18:17:53 UTC (rev 206)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-07-14 19:49:05 UTC (rev 207)
+@@ -181,22 +181,22 @@
+     }
+ 
+     public void diskGroupAdded(CatalogEngineEvent evt) {
+-        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
+     }
+ 
+     public void diskGroupRemoved(CatalogEngineEvent evt) {
+-        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
+     }
+ 
+     public void diskGroupRenamed(CatalogEngineEvent evt) {
+-        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
+     }
+ 
+     public void diskAdded(CatalogEngineEvent evt) {
+-        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
+     }
+ 
+     public void diskRemoved(CatalogEngineEvent evt) {
+-        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
+     }
+ }
+\ No newline at end of file
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SomeAction.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SomeAction.java	2008-07-14 18:17:53 UTC (rev 206)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SomeAction.java	2008-07-14 19:49:05 UTC (rev 207)
+@@ -0,0 +1,34 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class SomeAction extends CallableSystemAction {
++
++    public void performAction() {
++        // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(SomeAction.class, &quot;CTL_SomeAction&quot;);
++    }
++
++    @Override
++    protected String iconResource() {
++        return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/actions/empty.png&quot;;
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java	2008-07-14 18:17:53 UTC (rev 206)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java	2008-07-14 19:49:05 UTC (rev 207)
+@@ -57,14 +57,13 @@
+     @Override
+     protected void initialize() {
+         super.initialize();
+-        putValue(&quot;iconBase&quot;, &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/actions/new-disk.png&quot;);
++        //putValue(&quot;iconBase&quot;, &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/actions/new-disk.png&quot;);
+     }
+     
+-    /*@Override
++    @Override
+     protected String iconResource() {
+-        return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/&quot; +
+-                &quot;icon-media-drive-optical.png&quot;;
+-    }*/
++        return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/actions/new-disk.png&quot;;
++    }
+     
+     public HelpCtx getHelpCtx() {
+         return HelpCtx.DEFAULT_HELP;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-07-14 18:17:53 UTC (rev 206)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-07-14 19:49:05 UTC (rev 207)
+@@ -26,7 +26,6 @@
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDisk.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDiskGroup.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenumberDisks.instance&quot;/&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-SomeAction.instance&quot;/&gt;
+         &lt;/folder&gt;
+         &lt;folder name=&quot;File&quot;&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionClose.instance&quot;/&gt;
+@@ -36,6 +35,9 @@
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionOpenCatalog.instance&quot;/&gt;
+         &lt;/folder&gt;
+         &lt;folder name=&quot;Help&quot;/&gt;
++        &lt;folder name=&quot;Other&quot;&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-SomeAction.instance&quot;/&gt;
++        &lt;/folder&gt;
+         &lt;folder name=&quot;Search&quot;&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindInThisDiskGroup.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionScanForDuplicates.instance&quot;/&gt;
+@@ -112,6 +114,10 @@
+             &lt;file name=&quot;org-openide-actions-UndoAction.instance_hidden&quot;/&gt;
+         &lt;/folder&gt;
+         &lt;folder name=&quot;File&quot;&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-SomeAction.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Other/de-berlios-jfindmyfiles-jfindmyfilesgui-SomeAction.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;1200&quot;/&gt;
++            &lt;/file&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionClose.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionClose.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;1850&quot;/&gt;
+@@ -132,10 +138,6 @@
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionOpenCatalog.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;1325&quot;/&gt;
+             &lt;/file&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-SomeAction.shadow&quot;&gt;
+-                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-SomeAction.instance&quot;/&gt;
+-                &lt;attr name=&quot;position&quot; intvalue=&quot;1200&quot;/&gt;
+-            &lt;/file&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-separatorAfter.instance&quot;&gt;
+                 &lt;attr name=&quot;instanceClass&quot; stringvalue=&quot;javax.swing.JSeparator&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;2125&quot;/&gt;
+@@ -252,11 +254,13 @@
+     &lt;/folder&gt;
+     &lt;folder name=&quot;Toolbars&quot;&gt;
+         &lt;folder name=&quot;JFindMyFiles&quot;&gt;
+-            &lt;file name=&quot;NewDisk.shadow&quot;&gt;
++            &lt;attr name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-SomeAction.shadow/Description.shadow&quot; boolvalue=&quot;true&quot;/&gt;
++            &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDisk.instance&quot; boolvalue=&quot;true&quot;/&gt;
++            &lt;!-- &lt;file name=&quot;NewDisk.shadow&quot;&gt;
+                     &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDisk.instance&quot;/&gt;
+-            &lt;/file&gt;
++            &lt;/file&gt; --&gt;
+             &lt;file name=&quot;NewDiskGroup.shadow&quot;&gt;
+-                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDiskGroup.instance&quot;/&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDiskGroup.instance&quot; boolvalue=&quot;true&quot;/&gt;
+             &lt;/file&gt;
+             &lt;file name=&quot;RenumberDisks.shadow&quot;&gt;
+                     &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenumberDisks.instance&quot;/&gt;
+@@ -282,6 +286,9 @@
+             &lt;file name=&quot;RenameDisk.shadow&quot;&gt;
+                     &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenameDisk.instance&quot;/&gt;
+             &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-SomeAction.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Other/de-berlios-jfindmyfiles-jfindmyfilesgui-SomeAction.instance&quot;/&gt;
++            &lt;/file&gt;
+         &lt;/folder&gt;
+     &lt;/folder&gt;
+     &lt;folder name=&quot;Windows2&quot;&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java	2008-07-14 18:17:53 UTC (rev 206)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java	2008-07-14 19:49:05 UTC (rev 207)
+@@ -5,6 +5,8 @@
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.CatalogEngineEvent;
++import de.berlios.jfindmyfiles.catalog.CatalogEngineListener;
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
+ import java.util.LinkedList;
+@@ -18,7 +20,7 @@
+  *
+  * @author Knitter
+  */
+-public class CatalogChildren extends Children.Keys {
++public class CatalogChildren extends Children.Keys implements CatalogEngineListener {
+ 
+     private CatalogNode parent;
+     private List items;
+@@ -29,6 +31,7 @@
+         this.parent = parent;
+         items = new LinkedList();
+         eng = Lookup.getDefault().lookup(CatalogEngine.class);
++        eng.addListener(this);
+         Session s = eng.sessionFactory.getCurrentSession();
+         s.beginTransaction();
+         items.addAll(s.createQuery(&quot;from DiskGroup where parent.id is null&quot;).list());
+@@ -63,4 +66,37 @@
+         }
+         return null;
+     }
++
++    public void catalogCreated(CatalogEngineEvent evt) {
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void catalogOpened(CatalogEngineEvent evt) {
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void catalogClosed(CatalogEngineEvent evt) {
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void diskGroupAdded(CatalogEngineEvent evt) {
++        items.add(evt.getNewDiskGroup());
++        addNotify();
++    }
++
++    public void diskGroupRemoved(CatalogEngineEvent evt) {
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void diskGroupRenamed(CatalogEngineEvent evt) {
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void diskAdded(CatalogEngineEvent evt) {
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void diskRemoved(CatalogEngineEvent evt) {
++        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-07-14 18:17:53 UTC (rev 206)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-07-14 19:49:05 UTC (rev 207)
+@@ -20,6 +20,8 @@
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.CatalogEngineEvent;
++import de.berlios.jfindmyfiles.catalog.CatalogEngineListener;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionAddNewDisk;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionAddNewDiskGroup;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionCatalogProperties;
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/splash.png
+===================================================================
+(Binary files differ)
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/logo.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/logo.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000201.html">[Jfindmyfiles-commits] r206 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. actions dialogs nodes resources/icons/nodes utils
+</A></li>
+	<LI>Next message: <A HREF="000203.html">[Jfindmyfiles-commits] r208 - in trunk: media media/icons	media/icons/actions media/icons/general	media/icons/importexport media/icons/nodes	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/general	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#202">[ date ]</a>
+              <a href="thread.html#202">[ thread ]</a>
+              <a href="subject.html#202">[ subject ]</a>
+              <a href="author.html#202">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

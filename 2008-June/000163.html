@@ -1,0 +1,1153 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r168 - in trunk: docs docs/Iteracao3-CB03	docs/Iteracao4-CB04	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r168%20-%20in%20trunk%3A%20docs%20docs/Iteracao3-CB03%0A%09docs/Iteracao4-CB04%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils&In-Reply-To=%3C200806241854.m5OIsldF012634%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000162.html">
+   <LINK REL="Next"  HREF="000164.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r168 - in trunk: docs docs/Iteracao3-CB03	docs/Iteracao4-CB04	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r168%20-%20in%20trunk%3A%20docs%20docs/Iteracao3-CB03%0A%09docs/Iteracao4-CB04%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils&In-Reply-To=%3C200806241854.m5OIsldF012634%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r168 - in trunk: docs docs/Iteracao3-CB03	docs/Iteracao4-CB04	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils">knitter at mail.berlios.de
+       </A><BR>
+    <I>Tue Jun 24 20:54:47 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000162.html">[Jfindmyfiles-commits] r167 - in trunk: docs/Iteracao6-CB07	media/icons/x16	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins	spikes
+</A></li>
+        <LI>Next message: <A HREF="000164.html">[Jfindmyfiles-commits] r169 - trunk/docs/Iteracao3-CB03
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#163">[ date ]</a>
+              <a href="thread.html#163">[ thread ]</a>
+              <a href="subject.html#163">[ subject ]</a>
+              <a href="author.html#163">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-24 20:54:26 +0200 (Tue, 24 Jun 2008)
+New Revision: 168
+
+Added:
+   trunk/docs/Iteracao3-CB03/Manual do Programador.txt
+Removed:
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/layer.xml
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml
+Modified:
+   trunk/docs/Iteracao3-CB03/Iteracao 3.txt
+   trunk/docs/Iteracao4-CB04/Iteracao 4.txt
+   trunk/docs/TODO
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCatalogProperties.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExport.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionImport.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRemoveFromCatalog.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenameDisk.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenumberDisks.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionScanForDuplicates.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/DescriptionValues.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/Reader.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java
+Log:
+Escrita mais documenta?\195?\167?\195?\163o das itera?\195?\167?\195?\181es anteriores. Adicionado o documento para conter o manual do programador.
+Escrita documenta?\195?\167?\195?\163o por todas as classes, implementadas ac?\195?\167?\195?\181es baseadas no contexto da aplica?\195?\167?\195?\163o.
+
+Modified: trunk/docs/Iteracao3-CB03/Iteracao 3.txt
+===================================================================
+--- trunk/docs/Iteracao3-CB03/Iteracao 3.txt	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/docs/Iteracao3-CB03/Iteracao 3.txt	2008-06-24 18:54:26 UTC (rev 168)
+@@ -14,53 +14,75 @@
+ 		exporta&#231;&#227;o dos diagramas de classes.
+ 	example.amc - Ficheiro de Ant Movie Catalog usado para testar a API.
+ 	DSC00165.JPG - Imagem JPG usada para testar a API
++	Manual do Programador.txt - Ficheiro de texto com o manual a seguir pelos 
++		programadores que pretendem desenvolver extens&#245;es para a aplica&#231;&#227;o.
+ 
+ &lt;==== 
+-Ser&#225; criada uma API que possibilite a cria&#231;&#227;o de plugins, classes Java, que 
+-consigam fornecer descri&#231;&#245;es de novos tipos de ficheiros ou acrescentar novas 
+-iniforma&#231;&#245;es &#224;s descri&#231;&#245;es j&#225; obtidas pela aplica&#231;&#227;o.
++Ser&#225; criada uma API que possibilite a cria&#231;&#227;o de extens&#245;es &#224; aplica&#231;&#227;o, classes 
++Java, que consigam fornecer descri&#231;&#245;es de novos tipos de ficheiros ou 
++acrescentar novas informa&#231;&#245;es &#224;s descri&#231;&#245;es j&#225; obtidas pela aplica&#231;&#227;o.
+ Esta API far&#225; parte do m&#243;dulo que permite a leitura e introdu&#231;&#227;o das informa&#231;&#245;es 
+ na base de dados.
+ 
+ A API vai ser conseguida atrav&#233;s de um conjunto de interfaces que forne&#231;am um 
+ contracto com as classes que pretendam adicionar novas descri&#231;&#245;es, e um 
+-conjunto de classes de ajuda, que permitiram verificar quais os plugins 
+-existentes, quais os que se encontram activos, etc.
++conjunto de classes de ajuda, que permitiram verificar quais as extens&#245;es 
++existentes, quais as que se encontram activos, etc.
+ 
+ Considera-se que os dados mais importantes a serem lidos s&#227;o: descri&#231;&#245;es 
+ textuais do ficheiro, n&#227;o acess&#237;veis atrav&#233;s do sistema de ficheiros do sistema 
+ operativo; Pequenos excertos do ficheiro, quando se trata de ficheiros 
+ multim&#233;dia.
+-Assim, a API, dever&#225; permitir que um plugin forne&#231;a uma descri&#231;&#227;o em texto, um 
+-excerto de video, caso o ficheiro seja um video, um excerto de audio, caso o 
++Assim, a API, dever&#225; permitir que uma extens&#227;o forne&#231;a uma descri&#231;&#227;o em texto, 
++um excerto de video, caso o ficheiro seja um video, um excerto de audio, caso o 
+ ficheiro seja um ficheiro de audio, e uma miniatura, caso o ficheiro seja uma 
+ imagem.
+ 
+-Um plugin pode ser fornecido com a aplica&#231;&#227;o, fazendo parte da estrutura de 
++Uma extens&#227;o pode ser fornecido com a aplica&#231;&#227;o, fazendo parte da estrutura de 
+ packages da mesma, ou adicionado pelo utilizador. Neste &#250;ltimo caso, por omiss&#227;o 
+-a aplica&#231;&#227;o dever&#225; estabelecer como local predefinido para procurar plugins, uma 
+-pasta dentro da pessoal do utilizador. No entanto, deve ser dada oportunidade 
+-ao utilizador para definir onde pretende que os plugins seja procurados.
+-Daqui se depreende que os plugins s&#227;o definidos para um utilizador apenas e n&#227;o 
+-ser&#227;o, por omiss&#227;o, partilhados por v&#225;rios utilizadores com acesso ao mesmo 
+-computador. Caso se pretenda a partilha ou uso dos mesmos plugins por parte de 
+-v&#225;rios utilizadores, estes ter&#227;o de configurar, individualmente, a pasta a usar 
+-de forma a que todos definam a mesma pasta.
++a aplica&#231;&#227;o dever&#225; estabelecer como local predefinido para procurar extens&#245;es, 
++uma pasta dentro da pessoal do utilizador. No entanto, deve ser dada 
++oportunidade ao utilizador para definir onde pretende que as extens&#245;es sejam 
++procuradas.
++Daqui se depreende que as extens&#245;es s&#227;o definidos para um utilizador apenas e 
++n&#227;o ser&#227;o, por omiss&#227;o, partilhados por v&#225;rios utilizadores com acesso ao mesmo 
++computador. Caso se pretenda a partilha ou uso das mesmas extens&#245;es por parte 
++de v&#225;rios utilizadores, estes ter&#227;o de configurar, individualmente, a pasta a 
++usar de forma a que todos definam a mesma pasta.
+ 
+-A API dever&#225; permitir que um plugin identifique o tipo de ficheiro que ir&#225; ler, 
+-atrav&#233;s da extens&#227;o, o nome do plugin e o nome do autor.
++A API dever&#225; permitir que uma extens&#227;o identifique o tipo de ficheiro que ir&#225; 
++ler, atrav&#233;s da extens&#227;o, o nome da extens&#227;o, a vers&#227;o e o nome do autor.
+ 
+-Dever&#225; existir uma interface com o utilizador que permita saber quais os 
+-plugins reconhecidos pela aplica&#231;&#227;o, qual o seu estado, (activo/inactivo), e 
+-que permita altera esse estado.
++Dever&#225; existir uma interface com o utilizador que permita saber quais as 
++extens&#245;es reconhecidos pela aplica&#231;&#227;o, qual o seu estado, (activo/inactivo), e 
++que possibilite a altera&#231;&#227;o desse estado.
+ 
+-Dever&#227;o ser criados, pelo menos, dois tipos de plugins para verificar a 
++Dever&#227;o ser criados, pelo menos, dois tipos de extens&#245;es para verificar a 
+ viabilidade da API desenhada.
+-Um plugin dever&#225; apenas importar apenas a descri&#231;&#227;o textual de um ficheiro, 
+-outro dever&#225; importar uma das descri&#231;&#245;es multim&#233;dia, seja audio, video ou 
+-imagem.
++Uma extens&#227;o dever&#225; importar apenas a descri&#231;&#227;o textual de um ficheiro, 
++outra dever&#225; importar, pelo menos, uma das descri&#231;&#245;es multim&#233;dia, seja audio, 
++video ou imagem.
+ &lt;==== Avalia&#231;&#227;o ===============================================================&gt;
+ Esta itera&#231;&#227;o revelou-se bastante mais simples que o inicialmente pensado. 
+ Muito devido ao facto de, ap&#243;s avalia&#231;&#227;o das user stories e da experi&#234;ncia que 
+-a equipa de programa&#231;&#227;o tinha com o software de refer&#234;ncia, se verificou que 
+-seria suficiente limitar o tipo de informa&#231;&#227;o a guardar.
+\ No newline at end of file
++a equipa de programa&#231;&#227;o tinha com o software de refer&#234;ncia, se verificar que 
++seria suficiente limitar o tipo de informa&#231;&#227;o a guardar.
++
++O sistema de extens&#245;es permite criar extens&#245;es que obtenham informa&#231;&#227;o sobre 
++ficheiros na forma de clips de audio, clips de video, imagens e descri&#231;&#245;es 
++textuais do ficheiro. Permite tamb&#233;m que seja alterado pela extens&#227;o, o &#237;cone a 
++usar, substitu&#237;ndo assim o &#237;cone fornecido pela aplica&#231;&#227;o.
++
++A descoberta de extens&#245;es &#233; feita automaticamente, sendo apenas necess&#225;rio que 
++o utilizador coloque as classes compiladas dentro da pasta indicada no painel 
++de op&#231;&#245;es ou que uso a pasta criada por omiss&#227;o na instala&#231;&#227;o da aplica&#231;&#227;o.
++
++N&#227;o foram detectadas dificuldades que tenham provodado o atraso da itera&#231;&#227;o.
++
++A implementa&#231;&#227;o do sistema de extens&#245;es n&#227;o permite que existam duas extens&#245;es 
++diferentes para o mesmo tipo de ficheiro.
++
++
++
++
++
+
+Added: trunk/docs/Iteracao3-CB03/Manual do Programador.txt
+===================================================================
+
+Modified: trunk/docs/Iteracao4-CB04/Iteracao 4.txt
+===================================================================
+--- trunk/docs/Iteracao4-CB04/Iteracao 4.txt	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/docs/Iteracao4-CB04/Iteracao 4.txt	2008-06-24 18:54:26 UTC (rev 168)
+@@ -49,15 +49,21 @@
+ multiplataforma.
+ &lt;==== Avalia&#231;&#227;o ===============================================================&gt;
+ N&#227;o foi resolvido o problema das pesquisas com express&#245;es regulares.
+-Dado que se pretende independ&#234;ncia do motor de bases de dados que apoia o 
++Uma vez que se pretende independ&#234;ncia do motor de bases de dados que apoia o 
+ sistema de persist&#234;ncia, n&#227;o poder&#225; ser usada nenhuma funcionalidade da 
+ linguagem SQL que n&#227;o seja standard. Assim, n&#227;o &#233; poss&#237;vel tirar partido do 
+ suporte para express&#245;es regulares que alguns motores de bases de dados oferecem.
+-[...]
+ 
+ A introdu&#231;&#227;o do algoritmo de c&#225;lculo do c&#243;digo hash provocou um aumento da 
+ mem&#243;ria consumida e do tempo necess&#225;rio para efectuar a leitura dos dados dos 
+-ficheiros.
++ficheiros. Quando o suporte a ser lido cont&#233;m muitos ficheiros e pastas &#233; 
++poss&#237;vel que a mem&#243;ria, definida por omiss&#227;o para a JVM, n&#227;o seja suficiente 
++para a execu&#231;&#227;o do processo de leitura.
+ 
++O sistema que permite abrir/executar um ficheiro, est&#225; dependente do sistema
++operativo. Apesar de ser ter usado uma funcionalidade da plataforma Java, 
++presente desde o Java 6, n&#227;o &#233; feita nenhuma garantia que a funcionalidade 
++esteja dispon&#237;vel em todos os sistemas operativos e plataformas.
+ 
+ 
++
+
+Modified: trunk/docs/TODO
+===================================================================
+--- trunk/docs/TODO	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/docs/TODO	2008-06-24 18:54:26 UTC (rev 168)
+@@ -13,13 +13,17 @@
+ 	- Abrir cat&#225;logo
+ 	- Fechar cat&#225;logo
+ 	- Menus na descri&#231;&#227;o da itera&#231;&#227;o
+-
++Itera&#231;&#227;o 3:
++	- sistema de seguran&#231;a para evitar execu&#231;&#227;o de c&#243;digo n&#227;o seguro.
++	- Manual do programador
++	
+ Itera&#231;&#227;o 4:
+ 	- pesquisa de ficheiros duplicados em todo o cat&#225;logo
+ 	
+ Itera&#231;&#227;o 5:
+ 	- menus de contexto sens&#237;veis
+ 	- alterar algumas user stories para incluirem todas as op&#231;&#245;es de menu que apareceram sem justifica&#231;&#227;o
++	- barras de ferramentas
+ 
+ Itera&#231;&#227;o 6:
+ 	- importar dados de XML
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -36,6 +36,7 @@
+     private CatalogProperties properties;
+     private Vector&lt;CatalogEngineListener&gt; listeners;
+     private static final Logger logger = Logger.getLogger(CatalogEngine.class.getName());
++    private boolean opened;
+ 
+     /**
+      * Empty construtor so that this class can be instanciated using reflection 
+@@ -118,9 +119,10 @@
+             }
+ 
+             sessionFactory = hConfig.buildSessionFactory();
+-
++            opened = true;
+         } catch (Exception ex) {
+             logger.log(Level.SEVERE, &quot;HIBERNATE: Initial SessionFactory creation failed.&quot;, ex);
++            opened = false;
+             throw new ExceptionInInitializerError(ex);
+         }
+ 
+@@ -180,6 +182,7 @@
+         if (sessionFactory != null) {
+             sessionFactory.close();
+             sessionFactory = null;
++            opened = false;
+             fireCatalogClosed(new CatalogEngineEvent(this, properties.getName(), null, null, null, null));
+         }
+     }
+@@ -187,7 +190,12 @@
+     public CatalogProperties getProperties() {
+         return properties;
+     }
+-
++    
++    public boolean isOpened() {
++        return opened;
++    }
++    
++    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
+     public void addDiskGroup(String name, String description, DiskGroup parent) {
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+
+Deleted: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/layer.xml	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/layer.xml	2008-06-24 18:54:26 UTC (rev 168)
+@@ -1,4 +0,0 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
+-&lt;filesystem&gt;
+-&lt;/filesystem&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -18,12 +18,14 @@
+     
+     public DuplicateResultsAction() {
+         super(NbBundle.getMessage(DuplicateResultsAction.class, &quot;CTL_DuplicateResultsAction&quot;));
+-//        putValue(SMALL_ICON, new ImageIcon(Utilities.loadImage(DuplicateResultsTopComponent.ICON_PATH, true)));
++        putValue(SMALL_ICON, new ImageIcon(Utilities.loadImage(&quot;de/berlios/&quot; +
++                &quot;jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-search.png&quot;, true)));
+     }
+ 
+     public void actionPerformed(ActionEvent evt) {
+         TopComponent win = DuplicateResultsTopComponent.findInstance();
+         win.open();
+         win.requestActive();
++        ((DuplicateResultsTopComponent)win).startSearching();
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -19,18 +19,33 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs.NewDiskDlg;
+ import org.openide.util.HelpCtx;
++import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
+ import org.openide.util.actions.CallableSystemAction;
+ import org.openide.windows.WindowManager;
+ 
+ public final class ActionAddNewDisk extends CallableSystemAction {
+ 
++    private CatalogEngine eng;
++    
++    public ActionAddNewDisk() {
++        super();
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);    
++    }
++    
++    /**
++     * Action to be performed by this action class.
++     * An ActionAddNewDisk will open a JDialog allowing the user to scan a new 
++     * disk or folder and add the information gathered to the database.
++     */
+     public void performAction() {
+         java.awt.EventQueue.invokeLater(new Runnable() {
+             public void run() {
+-                new NewDiskDlg(WindowManager.getDefault().getMainWindow(), true).showCentered();
++                new NewDiskDlg(WindowManager.getDefault().getMainWindow(), 
++                        true).showCentered();
+             }
+         });
+     }
+@@ -38,15 +53,11 @@
+     public String getName() {
+         return NbBundle.getMessage(ActionAddNewDisk.class, &quot;CTL_ActionAddNewDisk&quot;);
+     }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-    }
+     
+     @Override
+     protected String iconResource() {
+-        return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-media-drive-optical.png&quot;;
++        return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/&quot; +
++                &quot;icon-media-drive-optical.png&quot;;
+     }
+     
+     public HelpCtx getHelpCtx() {
+@@ -57,4 +68,9 @@
+     protected boolean asynchronous() {
+         return false;
+     }
++    
++    @Override
++    public boolean isEnabled() {
++        return eng.isOpened();
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -20,21 +20,29 @@
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
+ import javax.swing.JOptionPane;
+ import org.openide.util.HelpCtx;
+ import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
++import org.openide.util.Utilities;
+ import org.openide.util.actions.CallableSystemAction;
+ import org.openide.windows.WindowManager;
+ 
+ public final class ActionAddNewDiskGroup extends CallableSystemAction {
+ 
++    private CatalogEngine eng;
++
++    public ActionAddNewDiskGroup() {
++        super();
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
++    }
++
+     public void performAction() {
+-        String name = JOptionPane.showInputDialog(WindowManager.getDefault().getMainWindow(), NbBundle.getMessage(ActionAddNewDiskGroup.class, &quot;AddNewDiskGroupInputMessage&quot;));
+-
++        String name = JOptionPane.showInputDialog(WindowManager.getDefault().getMainWindow(),
++                NbBundle.getMessage(ActionAddNewDiskGroup.class, &quot;AddNewDiskGroupInputMessage&quot;));
+         if (name != null &amp;&amp; !name.isEmpty()) {
+-            CatalogEngine eng = Lookup.getDefault().lookup(CatalogEngine.class);
+-            eng.addDiskGroup(name, &quot;&quot;, null);//TODO: get the correct group
++            eng.addDiskGroup(name, &quot;&quot;, Utilities.actionsGlobalContext().lookup(DiskGroup.class));
+         }
+     }
+ 
+@@ -43,11 +51,6 @@
+     }
+ 
+     @Override
+-    protected void initialize() {
+-        super.initialize();
+-    }
+-
+-    @Override
+     protected String iconResource() {
+         return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-disk-group.png&quot;;
+     }
+@@ -60,4 +63,8 @@
+     protected boolean asynchronous() {
+         return false;
+     }
++
++    public boolean isActive() {
++        return eng.isOpened();
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCatalogProperties.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCatalogProperties.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCatalogProperties.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -19,14 +19,24 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs.CatalogPropertiesDlg;
+ import org.openide.util.HelpCtx;
++import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
+ import org.openide.util.actions.CallableSystemAction;
+ import org.openide.windows.WindowManager;
+ 
+ public final class ActionCatalogProperties extends CallableSystemAction {
+ 
++    private CatalogEngine eng;
++    
++    public ActionCatalogProperties() {
++        super();
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
++    }
++    
++    
+     public void performAction() {
+         java.awt.EventQueue.invokeLater(new Runnable() {
+             public void run() {
+@@ -42,7 +52,6 @@
+     @Override
+     protected void initialize() {
+         super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+         putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+     }
+ 
+@@ -54,4 +63,9 @@
+     protected boolean asynchronous() {
+         return false;
+     }
++    
++    @Override
++    public boolean isEnabled() {
++        return eng.isOpened();
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExport.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExport.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExport.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -19,14 +19,23 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs.ExportDlg;
+ import org.openide.util.HelpCtx;
++import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
+ import org.openide.util.actions.CallableSystemAction;
+ import org.openide.windows.WindowManager;
+ 
+ public final class ActionExport extends CallableSystemAction {
+ 
++    private CatalogEngine eng;
++    
++    public ActionExport() {
++        super();
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
++    }
++    
+     public void performAction() {
+         java.awt.EventQueue.invokeLater(new Runnable() {
+             public void run() {
+@@ -38,11 +47,6 @@
+     public String getName() {
+         return NbBundle.getMessage(ActionExport.class, &quot;CTL_ActionExport&quot;);
+     }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-    }
+     
+     @Override
+     protected String iconResource() {
+@@ -57,4 +61,9 @@
+     protected boolean asynchronous() {
+         return false;
+     }
++    
++    @Override
++    public boolean isEnabled() {
++        return eng.isOpened();
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionImport.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionImport.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionImport.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -38,11 +38,6 @@
+     public String getName() {
+         return NbBundle.getMessage(ActionImport.class, &quot;CTL_ActionImport&quot;);
+     }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-    }
+     
+     @Override
+     protected String iconResource() {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRemoveFromCatalog.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRemoveFromCatalog.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRemoveFromCatalog.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -26,7 +26,7 @@
+ public final class ActionRemoveFromCatalog extends CallableSystemAction {
+ 
+     public void performAction() {
+-    // TODO implement action body
++        // TODO implement action body
+     }
+ 
+     public String getName() {
+@@ -36,7 +36,6 @@
+     @Override
+     protected void initialize() {
+         super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+         putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+     }
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenameDisk.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenameDisk.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenameDisk.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -19,14 +19,29 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import javax.swing.JOptionPane;
++import org.hibernate.Session;
+ import org.openide.util.HelpCtx;
++import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
++import org.openide.util.Utilities;
+ import org.openide.util.actions.CallableSystemAction;
++import org.openide.windows.WindowManager;
+ 
+ public final class ActionRenameDisk extends CallableSystemAction {
+ 
+     public void performAction() {
+-    // TODO implement action body
++        String name = JOptionPane.showInputDialog(WindowManager.getDefault().getMainWindow(), &quot;New name:&quot;);//TODO: i18n
++        if (name != null &amp;&amp; !name.isEmpty()) {
++            Session s = Lookup.getDefault().lookup(CatalogEngine.class).sessionFactory.getCurrentSession();
++            s.beginTransaction();
++            DiskGroup g = Utilities.actionsGlobalContext().lookup(DiskGroup.class);
++            g.setName(name);
++            s.merge(g);
++            s.getTransaction().commit();
++        }
+     }
+ 
+     public String getName() {
+@@ -36,7 +51,6 @@
+     @Override
+     protected void initialize() {
+         super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+         putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+     }
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenumberDisks.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenumberDisks.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenumberDisks.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -19,14 +19,23 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import org.openide.util.HelpCtx;
++import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
+ import org.openide.util.actions.CallableSystemAction;
+ 
+ public final class ActionRenumberDisks extends CallableSystemAction {
+ 
++    private CatalogEngine eng;
++
++    public ActionRenumberDisks() {
++        super();
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
++    }
++
+     public void performAction() {
+-    // TODO implement action body
++        // TODO implement action body
+     }
+ 
+     public String getName() {
+@@ -36,7 +45,6 @@
+     @Override
+     protected void initialize() {
+         super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+         putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+     }
+ 
+@@ -48,4 +56,9 @@
+     protected boolean asynchronous() {
+         return false;
+     }
++
++    @Override
++    public boolean isEnabled() {
++        return eng.isOpened();
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionScanForDuplicates.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionScanForDuplicates.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionScanForDuplicates.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -19,31 +19,38 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import org.openide.util.HelpCtx;
+ import org.openide.util.NbBundle;
+ import org.openide.util.actions.CallableSystemAction;
+ import org.openide.windows.TopComponent;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.DuplicateResultsTopComponent;
++import org.openide.util.Lookup;
+ 
+ public final class ActionScanForDuplicates extends CallableSystemAction {
+-
++    
++    private CatalogEngine eng;
++    
++    public ActionScanForDuplicates() {
++        super();
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
++    }
++    
+     public void performAction() {
+         TopComponent win = DuplicateResultsTopComponent.findInstance();
+         win.open();
+         win.requestActive();
+-        ((DuplicateResultsTopComponent)win).startSearching();//TODO: get hash from selected files
++        ((DuplicateResultsTopComponent)win).startSearching();
+     }
+ 
+     public String getName() {
+         return NbBundle.getMessage(ActionScanForDuplicates.class, &quot;CTL_ActionScanForDuplicates&quot;);
+     }
+-
++    
+     @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
++    protected String iconResource() {
++        return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-search.png&quot;;
++    }    
+ 
+     public HelpCtx getHelpCtx() {
+         return HelpCtx.DEFAULT_HELP;
+@@ -53,4 +60,9 @@
+     protected boolean asynchronous() {
+         return false;
+     }
++    
++    @Override
++    public boolean isEnabled() {
++        return eng.isOpened();
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -45,8 +45,6 @@
+     private SystemAction[] sysact;
+ 
+     public CatalogNode(String name, boolean created) {
+-        //super(Children.create(new CatalogChildNodesFactory(), true));
+-        //TODO: populate child nodes
+         super(created ? Children.LEAF : new CatalogChildren(null), Lookups.singleton(Lookup.getDefault().lookup(CatalogEngine.class)));
+ 
+         CatalogEngine eng = Lookup.getDefault().lookup(CatalogEngine.class);
+@@ -58,10 +56,6 @@
+                     lo.lookup(ActionAddNewDisk.class), lo.lookup(ActionAddNewDiskGroup.class), lo.lookup(ActionClose.class),
+                     lo.lookup(ActionExport.class), lo.lookup(ActionImport.class)
+                 };
+-
+-
+-    //Collections.sort(sysact);
+-    //Arrays.sort(sysact);
+     }
+ 
+     @Override
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -23,8 +23,7 @@
+ import java.util.EventObject;
+ 
+ /**
+- *
+- * @author Knitter
++ * Reading event for all listeners.
+  */
+ public class ReadingEvent extends EventObject {
+     
+@@ -37,10 +36,21 @@
+         this.media = media;
+     }
+     
++    /**
++     * Gets the name of the current file.
++     * 
++     * @return String representing the file being read or null if this event 
++     * does not represent a file being read.
++     */
+     public String getCurrentFileName() {
+         return currentFileName;
+     }
+     
++    /**
++     * Gets the media being scanned.
++     * 
++     * @return Media being scanned.
++     */
+     public Media getMedia() {
+         return media;
+     }
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -22,14 +22,36 @@
+ import java.util.EventListener;
+ 
+ /**
+- *
+- * @author Knitter
++ * Provides reading events
+  */
+ public interface ReadingListener extends EventListener {
+     
++    /**
++     * Reading has started.
++     * 
++     * @param evt reading event.
++     */
+     void readingStarted(ReadingEvent evt);
++    
++    /**
++     * Identifies the file currently being read.
++     * 
++     * @param evt reading event.
++     */
+     void readingFile(ReadingEvent evt);
++    
++    /**
++     * Reading has stopped normally.
++     * 
++     * @param evt reading event.
++     */
+     void readingStopped(ReadingEvent evt);
++    
++    /**
++     * The reading was aborted.
++     * 
++     * @param evt reading event.
++     */
+     void readingAborted(ReadingEvent evt);
+ 
+ }
+
+Deleted: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml	2008-06-24 18:54:26 UTC (rev 168)
+@@ -1,26 +0,0 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!--
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- --&gt;
+-&lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
+-&lt;filesystem&gt;
+-    &lt;folder name=&quot;Menu&quot;&gt;
+-        &lt;folder name=&quot;File&quot;/&gt;
+-    &lt;/folder&gt;
+-&lt;/filesystem&gt;
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/DescriptionValues.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/DescriptionValues.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/DescriptionValues.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -21,6 +21,9 @@
+ 
+ import javax.swing.ImageIcon;
+ 
++/**
++ * Utility class that aggregates the information extracted by a Reader.
++ */
+ public class DescriptionValues {
+ 
+     private String description;
+@@ -29,6 +32,9 @@
+     private byte[] video;
+     private ImageIcon icon;
+     
++    /**
++     * Default constructor creating empty attributes.
++     */
+     public DescriptionValues() {
+         this(&quot;&quot;, null, null, null, null);
+     }
+@@ -41,22 +47,48 @@
+         this.icon = icon;
+     }
+ 
++    /**
++     * Gets audio data.
++     * 
++     * @return byte[] or null if this plugin doesn't provide audio data.
++     */
+     public byte[] getAudio() {
+         return audio;
+     }
+ 
++    /**
++     * Gets the text description
++     * 
++     * @return String with the description or an empty string if no textual 
++     * description was gathered.
++     */
+     public String getDescription() {
+         return description;
+     }
+ 
++    /**
++     * Gets the custom icon for this file type.
++     * 
++     * @return ImageIcon representing the icon or null if no icon is available.
++     */
+     public ImageIcon getIcon() {
+         return icon;
+     }
+ 
++    /**
++     * Gets image data.
++     * 
++     * @return byte[] or null if this plugin doesn't provide image data.
++     */
+     public byte[] getImage() {
+         return image;
+     }
+ 
++    /**
++     * Gets video data.
++     * 
++     * @return byte[] or null if this plugin doesn't provide video data.
++     */
+     public byte[] getVideo() {
+         return video;
+     }
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -18,8 +18,8 @@
+ import org.openide.util.NbPreferences;
+ 
+ /**
+- *
+- * @author Knitter
++ * Controller class responsible for loading and providing the existing plugins 
++ * to any other entity that queries for them.
+  */
+ public class PluginCache {
+ 
+@@ -27,6 +27,9 @@
+     private static final Logger logger = Logger.getLogger(PluginCache.class.getName());
+     private Preferences p;
+     
++    /**
++     * Constructs the cache loading all available plugins.
++     */
+     public PluginCache() {
+         cache = new Hashtable&lt;String, Reader&gt;();
+         p = NbPreferences.forModule(PluginCache.class);
+@@ -88,14 +91,34 @@
+         }
+     }
+ 
++    /**
++     * Gets the available plugin, if any, for the given extension.
++     * 
++     * @param extension string representing the extension that identifies the 
++     * reader.
++     * 
++     * @return Reader for the extension or null if non exists.
++     * 
++     * @see Hashtable.get(Object key)
++     */
+     public Reader readerFor(String extension) {
+         return cache.get(extension);
+     }
+ 
++    /**
++     * Provides the number of registered and loaded plugins.
++     * 
++     * @return int with the number of plugins loaded at creation time.
++     */
+     public int pluginCount() {
+         return cache.size();
+     }
+ 
++    /**
++     * Returns all loaded plugins.
++     * 
++     * @return List with all plugins.
++     */
+     public List&lt;Reader&gt; listAll() {
+         ArrayList&lt;Reader&gt; temp = new ArrayList&lt;Reader&gt;();
+         for (Reader r : cache.values()) {
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/Reader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/Reader.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/Reader.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -21,6 +21,11 @@
+ 
+ import java.io.File;
+ 
++/**
++ * This interface define the behavior of a file reader. An extension that reads 
++ * information on files unknown to the application or provides extra 
++ * information on those files already known.
++ */
+ public interface Reader {
+     
+     /**
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -15,8 +15,7 @@
+ import java.util.logging.Logger;
+ 
+ /**
+- *
+- * @author Knitter
++ * Plugin that provides description from Ant Movie Catalog database files.
+  */
+ public class AntMovieCatalogerPlugin implements Reader {
+ 
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -24,8 +24,7 @@
+ import javax.swing.ImageIcon;
+ 
+ /**
+- *
+- * @author Knitter
++ * Plugin that allows the reading of JPG image files
+  */
+ public class JPGPlugin implements Reader {
+ 
+@@ -44,6 +43,10 @@
+         bas = new ByteArrayOutputStream();
+     }
+ 
++    /**
++     * 
++     * @return
++     */
+     public String getName() {
+         return NAME;
+     }
+@@ -52,6 +55,7 @@
+         return AUTHOR;
+     }
+ 
++
+     public String pluginFor() {
+         return EXT;
+     }
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java	2008-06-24 16:09:55 UTC (rev 167)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java	2008-06-24 18:54:26 UTC (rev 168)
+@@ -27,8 +27,7 @@
+ import jonelo.jacksum.algorithm.AbstractChecksum;
+ 
+ /**
+- *
+- * @author Knitter
++ * Utility class that provides several useful methods used when reading files.
+  */
+ public class ReadingUtils {
+ 
+@@ -50,7 +49,7 @@
+      * Calculates a file's hashing code using the SHA-1 algorithm.
+      * It uses the Jacksum library to compute the hash code.
+      * 
+-     * @param file File to calculate the hash for.
++     * @param file the file to calculate the hash for.
+      * @return A String with the calculated hash code or an empty string if an 
+      * error occorred.
+      */
+@@ -71,8 +70,8 @@
+      * Some assumptions are made regarding drive naming in MS Windows operationg 
+      * systems. Such assumptions may provide incorrect results.
+      * 
+-     * @param absolutepath the absolute path to the file
+-     * @return an int define by the &lt;code&gt;CatalogConstants&lt;/code&gt; interface
++     * @param absolutepath the absolute path to the file.
++     * @return an int define by the &lt;code&gt;CatalogConstants&lt;/code&gt; interface.
+      * 
+      * @see de.berlios.jfindmyfiles.catalog.CatalogConstants
+      */
+@@ -90,9 +89,14 @@
+     }
+ 
+     /**
++     * Removes the file extension from a filename.
++     * Note that, given a file with, at least, a dot and no extension, the text 
++     * after the last dot will be removed, thus the resulting name can be 
++     * invalid.
+      * 
+-     * @param filename
+-     * @return
++     * @param filename the name of the file to be read.
++     * @return String constructed by removind the text after the last dot, or 
++     * an empty string if the filename had no dots.
+      */
+     public static String stripFileExtension(String filename) {
+         int x = -1;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000162.html">[Jfindmyfiles-commits] r167 - in trunk: docs/Iteracao6-CB07	media/icons/x16	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins	spikes
+</A></li>
+	<LI>Next message: <A HREF="000164.html">[Jfindmyfiles-commits] r169 - trunk/docs/Iteracao3-CB03
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#163">[ date ]</a>
+              <a href="thread.html#163">[ thread ]</a>
+              <a href="subject.html#163">[ subject ]</a>
+              <a href="author.html#163">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

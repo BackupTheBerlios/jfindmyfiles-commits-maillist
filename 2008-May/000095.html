@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r100 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	entitymanagers utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r100%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%3A%0A%09entitymanagers%20utils&In-Reply-To=%3C200805081736.m48HalYW028121%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000094.html">
+   <LINK REL="Next"  HREF="000096.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r100 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	entitymanagers utils</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r100%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%3A%0A%09entitymanagers%20utils&In-Reply-To=%3C200805081736.m48HalYW028121%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r100 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	entitymanagers utils">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu May  8 19:36:47 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000094.html">[Jfindmyfiles-commits] r99 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+        <LI>Next message: <A HREF="000096.html">[Jfindmyfiles-commits] r101 - in trunk: media/icons/x16	project/JFindMyFiles/Catalog project/JFindMyFiles/Catalog/nbproject	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/ReadingFiles	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#95">[ date ]</a>
+              <a href="thread.html#95">[ thread ]</a>
+              <a href="subject.html#95">[ subject ]</a>
+              <a href="author.html#95">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-08 19:36:41 +0200 (Thu, 08 May 2008)
+New Revision: 100
+
+Added:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entitymanagers/GenericManager.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml
+Log:
+Adicionada super classe que representa todos os gestores DAO/DAL
+Adicionado ficheiro de configura?\195?\167?\195?\163o de hibernate com valores gen?\195?\169ricos para qualquer motor de bases de dados.
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entitymanagers/GenericManager.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entitymanagers/GenericManager.java	2008-05-08 17:33:35 UTC (rev 99)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entitymanagers/GenericManager.java	2008-05-08 17:36:41 UTC (rev 100)
+@@ -0,0 +1,14 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog.entitymanagers;
++
++/**
++ *
++ * @author knitter
++ */
++public class GenericManager {
++
++}
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml	2008-05-08 17:33:35 UTC (rev 99)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml	2008-05-08 17:36:41 UTC (rev 100)
+@@ -0,0 +1,45 @@
++&lt;?xml version='1.0' encoding='utf-8'?&gt;
++
++&lt;!--
++    Document   : hibernate.cfg.xml
++    Created on : 6 de Maio de 2008, 15:55
++    Author     : ei10635
++    Description:
++        Purpose of the document follows.
++--&gt;
++
++&lt;!DOCTYPE hibernate-configuration PUBLIC
++        &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
++        &quot;<A HREF="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd</A>&quot;&gt;
++
++&lt;hibernate-configuration&gt;
++
++    &lt;session-factory&gt;
++        &lt;!-- JDBC connection pool (use the built-in) --&gt;
++        &lt;property name=&quot;connection.pool_size&quot;&gt;1&lt;/property&gt;
++
++        &lt;!-- Enable Hibernate's automatic session context management --&gt;
++        &lt;property name=&quot;current_session_context_class&quot;&gt;thread&lt;/property&gt;
++
++        &lt;!-- Disable the second-level cache  --&gt;
++        &lt;property name=&quot;cache.provider_class&quot;&gt;org.hibernate.cache.NoCacheProvider&lt;/property&gt;
++
++        &lt;!-- Echo all executed SQL to stdout --&gt;
++        &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt;
++
++        &lt;!-- Drop and re-create the database schema on startup --&gt;
++        &lt;property name=&quot;hbm2ddl.auto&quot;&gt;create&lt;/property&gt;
++
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml&quot;/&gt; 
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/User.hbm.xml&quot;/&gt;
++        &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml&quot;/&gt;
++    &lt;/session-factory&gt;
++
++&lt;/hibernate-configuration&gt;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000094.html">[Jfindmyfiles-commits] r99 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+	<LI>Next message: <A HREF="000096.html">[Jfindmyfiles-commits] r101 - in trunk: media/icons/x16	project/JFindMyFiles/Catalog project/JFindMyFiles/Catalog/nbproject	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/ReadingFiles	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#95">[ date ]</a>
+              <a href="thread.html#95">[ thread ]</a>
+              <a href="subject.html#95">[ subject ]</a>
+              <a href="author.html#95">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,2298 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r164 - in trunk: docs docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r164%20-%20in%20trunk%3A%20docs%20docs/Iteracao2-CB05%0A%09docs/Iteracao2-CB05/Diagrama%20de%20Classes%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins&In-Reply-To=%3C200806231532.m5NFWu6l020840%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000158.html">
+   <LINK REL="Next"  HREF="000160.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r164 - in trunk: docs docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r164%20-%20in%20trunk%3A%20docs%20docs/Iteracao2-CB05%0A%09docs/Iteracao2-CB05/Diagrama%20de%20Classes%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins&In-Reply-To=%3C200806231532.m5NFWu6l020840%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r164 - in trunk: docs docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins">knitter at mail.berlios.de
+       </A><BR>
+    <I>Mon Jun 23 17:32:56 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000158.html">[Jfindmyfiles-commits] r163 - in trunk:	docs/Iteracao3-CB03/APIOverview	docs/Iteracao3-CB03/APIOverview/nbproject	spikes/ExecutarFicheiro spikes/ExecutarFicheiro/nbproject
+</A></li>
+        <LI>Next message: <A HREF="000160.html">[Jfindmyfiles-commits] r165 - in trunk: docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	spikes spikes/TemplateExport spikes/TemplateExport/nbproject	spikes/TemplateExport/src spikes/TemplateExport/src/de	spikes/TemplateExport/src/de/berlios	spikes/TemplateExport/src/de/berlios/jfindmyfiles	spikes/TemplateExport/src/de/berlios/jfindmyfiles/templateexport
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#159">[ date ]</a>
+              <a href="thread.html#159">[ thread ]</a>
+              <a href="subject.html#159">[ subject ]</a>
+              <a href="author.html#159">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-23 17:32:40 +0200 (Mon, 23 Jun 2008)
+New Revision: 164
+
+Added:
+   trunk/docs/Iteracao2-CB05/entities diagram.png
+Removed:
+   trunk/docs/Iteracao2-CB05/DER.dia
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/RecentCatalog.java
+Modified:
+   trunk/docs/Iteracao2-CB05/Diagrama de Classes/Diagrama de Classes.etd
+   trunk/docs/Iteracao2-CB05/Diagrama de Classes/Entities Diagram_1214175140513.etld
+   trunk/docs/Iteracao2-CB05/Diagrama de Classes/Entities Diagram_1214175140513.etlp
+   trunk/docs/Iteracao2-CB05/Iteracao 2.txt
+   trunk/docs/TODO
+   trunk/docs/[Info] Convecoes de codigo.txt
+   trunk/docs/[XPDoc] User Stories Combinadas.txt
+   trunk/docs/[XPDoc] User Stories.txt
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentWstcref.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindInThisDiskGroup.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionLaunchFile.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchParentNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchResultNode.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java
+Log:
+Alterado diagrama de classes representativo do modelo de dominio.
+Tentativa de implementar um lookup listener para mostrar dados na janela de detalhes.
+
+Deleted: trunk/docs/Iteracao2-CB05/DER.dia
+===================================================================
+(Binary files differ)
+
+Modified: trunk/docs/Iteracao2-CB05/Diagrama de Classes/Diagrama de Classes.etd
+===================================================================
+--- trunk/docs/Iteracao2-CB05/Diagrama de Classes/Diagrama de Classes.etd	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/docs/Iteracao2-CB05/Diagrama de Classes/Diagrama de Classes.etd	2008-06-23 15:32:40 UTC (rev 164)
+@@ -2,62 +2,86 @@
+ &lt;!-- &lt;!DOCTYPE XMI SYSTEM &quot;C:\Documents and Settings\ei10635\.netbeans\6.0\.uml\config\UML_2.0EMBT.dtd&quot;&gt; --&gt;&lt;XMI xmlns:UML=&quot;omg.org/UML/1.4&quot; xmi.version=&quot;2.0&quot;&gt; &lt;XMI.header&gt; &lt;XMI.metamodel xmi.name=&quot;UML&quot; xmi.version=&quot;1.4&quot;/&gt; &lt;XMI.documentation&gt; &lt;XMI.exporter&gt; Embarcadero's Describe &lt;/XMI.exporter&gt; &lt;XMI.exporterVersion&gt; 6.0 &lt;/XMI.exporterVersion&gt; &lt;/XMI.documentation&gt; &lt;/XMI.header&gt; &lt;XMI.content&gt; &lt;UML:Project xmi.id=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; mode=&quot;Design&quot; defaultLanguage=&quot;UML&quot; projVersion=&quot;6.1.4.837&quot; name=&quot;Diagrama de Classes&quot;&gt;&lt;UML:Element.ownedElement&gt;
+ 
+ 
+-&lt;UML:Class xmi.id=&quot;DCE.21C435E2-58FD-2C08-57ED-752AEA37F848&quot; name=&quot;Label&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.3F1B6B26-0805-5F75-49D7-0E67F75CA86E&quot;&gt;&lt;UML:Element.presentation&gt;
++&lt;UML:Class xmi.id=&quot;DCE.21C435E2-58FD-2C08-57ED-752AEA37F848&quot; name=&quot;Label&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.3F1B6B26-0805-5F75-49D7-0E67F75CA86E DCE.970C8E78-0009-7C3D-02DC-6003D4D9B9B1 DCE.E1CE94FD-0157-EC2B-E46C-8F0F0A135CD5&quot;&gt;&lt;UML:Element.presentation&gt;
+ 
+ 
+ 
+ 
+ 
++
++
++
+ &lt;/UML:Element.presentation&gt;&lt;/UML:Class&gt;
+-&lt;UML:Class xmi.id=&quot;DCE.732EADE8-666B-2194-BD62-707D0FE746A5&quot; name=&quot;FileWrapper&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.BE2F683A-7C94-20B6-24CC-23CCA84752E7 DCE.5E59560A-C84B-FFF1-D69C-D2C18AC9D7F7 DCE.A2F39D24-1C48-29E4-56F8-4667FE881295 DCE.89E0E5A9-5292-09B1-7B86-67C79F3B9BC3 DCE.06E68AA6-B0DD-DE18-9346-542A29B23027 DCE.2B95DA2A-F8DA-BA23-2E40-0800148141D3 DCE.6F9D1625-4B87-2EB8-3429-532207121225 DCE.04EBA8FD-36CC-1611-2863-625C79855B25 DCE.F1120595-EF0C-6E85-33AC-E9B3B012EFC8 DCE.1C25A4CE-2906-2B39-5E8B-9EB03FDB04A9 DCE.F37F8834-25F5-810E-5B74-78D75596CA2D DCE.4FF4DE52-A069-211F-A986-6C3A3CB71AAA&quot;&gt;&lt;UML:Element.presentation&gt;
++&lt;UML:Class xmi.id=&quot;DCE.732EADE8-666B-2194-BD62-707D0FE746A5&quot; name=&quot;FileWrapper&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.BE2F683A-7C94-20B6-24CC-23CCA84752E7 DCE.5E59560A-C84B-FFF1-D69C-D2C18AC9D7F7 DCE.A2F39D24-1C48-29E4-56F8-4667FE881295 DCE.89E0E5A9-5292-09B1-7B86-67C79F3B9BC3 DCE.06E68AA6-B0DD-DE18-9346-542A29B23027 DCE.2B95DA2A-F8DA-BA23-2E40-0800148141D3 DCE.6F9D1625-4B87-2EB8-3429-532207121225 DCE.04EBA8FD-36CC-1611-2863-625C79855B25 DCE.F1120595-EF0C-6E85-33AC-E9B3B012EFC8 DCE.1C25A4CE-2906-2B39-5E8B-9EB03FDB04A9 DCE.F37F8834-25F5-810E-5B74-78D75596CA2D DCE.4FF4DE52-A069-211F-A986-6C3A3CB71AAA DCE.29C6FFAF-8C31-476A-3837-D9ABA06B94B2 DCE.888F0EDE-C3EF-5FF3-AE36-151C39E32AEE DCE.E9B06C3B-B2D2-8E7F-CBAF-28CBF0AB0858 DCE.2BE42642-7206-5ED6-9860-BA85471DAD4C DCE.DE86907B-9671-C1FC-7002-16A727E60BE4 DCE.226F09E1-2098-B510-2C68-10344124BF7F DCE.324A3A9E-B511-6E9C-77D0-7823140390BC DCE.580B9B6D-C11F-C1C7-916A-A143496C67D3 DCE.C8065655-03E4-CDAF-!
+ C1F0-8675EFC68AA3 DCE.C416C585-87B2-85CF-5B73-9CD5474B390F DCE.1383FCA4-DBB2-89E2-910D-8A7AE54A2B34 DCE.B46B85F1-2B5F-9545-E6B7-F77BD0277233 DCE.BF6A4A56-01C2-2E46-0864-7FFAE5B88D74 DCE.70E59312-7864-07E0-1D0D-75B501B90A9E DCE.75B92E85-E10C-946D-9C3F-057FF16EC73B DCE.D373EF28-27EB-4B3F-3115-146C56D79230 DCE.FA9B8573-0A22-EA36-4682-5931BFD98F6A DCE.0C4040EE-578E-22EA-491C-E5B66BE7FBA2 DCE.7A4D6F40-A548-498C-F903-AA67FAB72133 DCE.E17EF45D-C287-46BE-30D9-93801524459D&quot;&gt;&lt;UML:Element.presentation&gt;
+ 
+ 
+ 
+ 
+ 
++
++
++
+ &lt;/UML:Element.presentation&gt;&lt;/UML:Class&gt;
+-&lt;UML:Class xmi.id=&quot;DCE.2A6211B0-FE3F-0126-B952-B7615612CB12&quot; name=&quot;DiskGroup&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.09CF37AA-FD65-57D5-593D-414338289A4C DCE.363F2BCF-12E8-C52B-84D4-6B7C9E98D1E4 DCE.731D4E5D-0C9E-3D92-E6CE-F4A662FC17FA&quot;&gt;&lt;UML:Element.presentation&gt;
++&lt;UML:Class xmi.id=&quot;DCE.2A6211B0-FE3F-0126-B952-B7615612CB12&quot; name=&quot;DiskGroup&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.09CF37AA-FD65-57D5-593D-414338289A4C DCE.363F2BCF-12E8-C52B-84D4-6B7C9E98D1E4 DCE.731D4E5D-0C9E-3D92-E6CE-F4A662FC17FA DCE.F7640A6B-874C-3084-81AF-39B4DC473566 DCE.0A85B70B-709D-7C95-13FB-8160C9B5B88F DCE.C178EB7A-60AC-380F-8E6D-FACA07597FF4&quot;&gt;&lt;UML:Element.presentation&gt;
+ 
+ 
+ 
+ 
+ 
++
++
++
+ &lt;/UML:Element.presentation&gt;&lt;/UML:Class&gt;
+-&lt;UML:Class xmi.id=&quot;DCE.5F7AA292-F194-81C2-4110-10D7DD253C72&quot; name=&quot;ImageData&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.FA828E1F-99E8-58AD-5C56-F78D2A8504C7 DCE.77E31007-9278-EA13-61A4-8009F1EF0321&quot; clientDependency=&quot;DCE.0238CF67-A93C-654C-1B85-ABEB87572A13&quot;&gt;&lt;UML:Element.presentation&gt;
++&lt;UML:Class xmi.id=&quot;DCE.5F7AA292-F194-81C2-4110-10D7DD253C72&quot; name=&quot;ImageData&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.FA828E1F-99E8-58AD-5C56-F78D2A8504C7 DCE.77E31007-9278-EA13-61A4-8009F1EF0321 DCE.1E294995-9B2D-65BC-5160-7600FD53505D DCE.43F04288-EA50-C7B1-B7DF-4D857F0B5D3B&quot; clientDependency=&quot;DCE.0238CF67-A93C-654C-1B85-ABEB87572A13&quot;&gt;&lt;UML:Element.presentation&gt;
+ 
+ 
+ 
+ 
+ 
++
++
++
+ &lt;/UML:Element.presentation&gt;&lt;/UML:Class&gt;
+-&lt;UML:Class xmi.id=&quot;DCE.48F3150F-57D8-5A8D-317E-A1B7EE3F618B&quot; name=&quot;User&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.A95BDF65-8093-3AA2-39C3-71CF2DF73EDA DCE.0F8AF3D1-AB49-2C8B-A518-FB3581FDB1A3&quot;&gt;&lt;UML:Element.presentation&gt;
++&lt;UML:Class xmi.id=&quot;DCE.48F3150F-57D8-5A8D-317E-A1B7EE3F618B&quot; name=&quot;User&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.A95BDF65-8093-3AA2-39C3-71CF2DF73EDA DCE.0F8AF3D1-AB49-2C8B-A518-FB3581FDB1A3 DCE.B96B09DD-C167-A96A-FAE0-6C058734AA8E DCE.03307384-9381-FCCD-DED5-90740DF00321&quot;&gt;&lt;UML:Element.presentation&gt;
+ 
+ 
+ 
+ 
+ 
++
++
++
+ &lt;/UML:Element.presentation&gt;&lt;/UML:Class&gt;
+-&lt;UML:Class xmi.id=&quot;DCE.046EB9B2-1ACF-A303-00A0-F32F15BB25B6&quot; name=&quot;AudioData&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.7FB36E74-62A3-CFF3-1905-53EC7DFB0220 DCE.CF040AE5-8EE8-CC02-0E52-259C1143E47C&quot; clientDependency=&quot;DCE.F7C8C33D-FAC1-5F77-B907-3835D7BFCF92&quot;&gt;&lt;UML:Element.presentation&gt;
++&lt;UML:Class xmi.id=&quot;DCE.046EB9B2-1ACF-A303-00A0-F32F15BB25B6&quot; name=&quot;AudioData&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.7FB36E74-62A3-CFF3-1905-53EC7DFB0220 DCE.CF040AE5-8EE8-CC02-0E52-259C1143E47C DCE.44D58EDF-78B4-C6C5-4CE5-A81081D05CA7 DCE.A5C4E6AE-AAB4-3326-542B-F75941AD925F DCE.F499093E-6B15-6BC7-0841-0D7C94038860 DCE.8A6425C2-DAEF-0148-26D4-5DBA5B6F826C DCE.9C63B5E7-82F3-2E57-3A85-FD49E7455659 DCE.A53FB815-8730-1805-447E-15D50C23460F DCE.EA6047C1-3927-1F38-C2E6-FA154C731128&quot; clientDependency=&quot;DCE.F7C8C33D-FAC1-5F77-B907-3835D7BFCF92&quot;&gt;&lt;UML:Element.presentation&gt;
+ 
+ 
+ 
+ 
+ 
++
++
++
+ &lt;/UML:Element.presentation&gt;&lt;/UML:Class&gt;
+-&lt;UML:Class xmi.id=&quot;DCE.5F94B700-AFC2-7F7C-1B24-8B223015B7E3&quot; name=&quot;Media&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.8C2DCBB3-9C13-739C-F55A-742C4E5FEE5B DCE.E21B0637-A568-231F-241E-9F2706A52419 DCE.ECEF4D84-E594-602F-F4B1-64B2132A1507 DCE.58D8FF81-9FDD-B9AF-D3E6-8F9C5F656794 DCE.756CE676-CEFF-A1EC-5D41-7B9D86B17892 DCE.A65C87EF-8157-17FC-D8E0-D2CE54F4E411 DCE.E8AA7BFD-210E-26E7-1E3D-EE8BDCCA8255&quot;&gt;&lt;UML:Element.presentation&gt;
++&lt;UML:Class xmi.id=&quot;DCE.5F94B700-AFC2-7F7C-1B24-8B223015B7E3&quot; name=&quot;Media&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.8C2DCBB3-9C13-739C-F55A-742C4E5FEE5B DCE.E21B0637-A568-231F-241E-9F2706A52419 DCE.ECEF4D84-E594-602F-F4B1-64B2132A1507 DCE.58D8FF81-9FDD-B9AF-D3E6-8F9C5F656794 DCE.756CE676-CEFF-A1EC-5D41-7B9D86B17892 DCE.A65C87EF-8157-17FC-D8E0-D2CE54F4E411 DCE.E8AA7BFD-210E-26E7-1E3D-EE8BDCCA8255 DCE.55434228-613A-DC2F-CEDD-662F91554B05 DCE.469C60E0-3D71-6E57-FFF8-D8A8CDC1E74C DCE.35C66211-31B0-A531-EAAA-846BCCABB6FA DCE.A83D4AFE-0467-57B1-86F7-FCB68784119A DCE.407591C5-25F5-4F10-4C42-9FF37E7A90D2 DCE.BEAF39E0-3546-D826-5F14-8BC74079C3B5 DCE.921210A4-EE9A-C0FE-3CF4-CC7A066D8E62 DCE.C8B5B2CA-88F9-E611-4770-B91F2ACF4815&quot; isActive=&quot;false&quot;&gt;&lt;UML:Element.presentation&gt;
+ 
+ 
+ 
+ 
+ 
++
++
++
+ &lt;/UML:Element.presentation&gt;&lt;/UML:Class&gt;
+ 
+-&lt;UML:Class xmi.id=&quot;DCE.80B6A4DC-A4A6-12D5-774B-6A5D0E178390&quot; name=&quot;VideoData&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.E79689C7-CCD5-FFA2-6EAE-AE3759DE6650 DCE.83F15A85-460B-A594-72D9-50D4C4F24A20&quot; clientDependency=&quot;DCE.5E60E041-E9C5-3A16-3434-9811F6103DD4&quot;&gt;&lt;UML:Element.presentation&gt;
++&lt;UML:Class xmi.id=&quot;DCE.80B6A4DC-A4A6-12D5-774B-6A5D0E178390&quot; name=&quot;VideoData&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.E79689C7-CCD5-FFA2-6EAE-AE3759DE6650 DCE.83F15A85-460B-A594-72D9-50D4C4F24A20 DCE.46A27BD0-728C-95EE-2E76-6BFA15221660 DCE.E4650B29-939C-74E5-945E-CB1479FC98FB&quot; clientDependency=&quot;DCE.5E60E041-E9C5-3A16-3434-9811F6103DD4&quot;&gt;&lt;UML:Element.presentation&gt;
+ 
+ 
+ 
+ 
+ 
++
++
++
+ &lt;/UML:Element.presentation&gt;&lt;/UML:Class&gt;
+ 
+ 
+@@ -80,18 +104,147 @@
+ 
+ 
+ &lt;UML:Class xmi.id=&quot;DCE.6120E9DC-F882-BF97-CDC5-845C1E4D8036&quot; name=&quot;CatalogProperties&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Element.presentation&gt;
++
++
++
+ &lt;/UML:Element.presentation&gt;&lt;/UML:Class&gt;
+-&lt;UML:Class xmi.id=&quot;DCE.5C39FCEB-0FF9-A3DF-799A-3FA1D5E517CE&quot; name=&quot;CustomFileIcon&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Element.presentation&gt;
++&lt;UML:Class xmi.id=&quot;DCE.5C39FCEB-0FF9-A3DF-799A-3FA1D5E517CE&quot; name=&quot;CustomFileIcon&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; associationEnd=&quot;DCE.2AC8E9C2-8AB0-AC28-626B-3126DCDC78CE DCE.567A749D-B23A-B7AD-2191-EC0D390EAACC&quot;&gt;&lt;UML:Element.presentation&gt;
++
++
++
+ &lt;/UML:Element.presentation&gt;&lt;/UML:Class&gt;
+ 
+-&lt;UML:AssociationClass xmi.id=&quot;DCE.9AEDB15F-ADDB-6A2C-5942-D36728D8B13C&quot; name=&quot;Loan&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Association.end&gt;
+-&lt;UML:AssociationEnd xmi.id=&quot;DCE.E8AA7BFD-210E-26E7-1E3D-EE8BDCCA8255&quot; visibility=&quot;private&quot; association=&quot;DCE.9AEDB15F-ADDB-6A2C-5942-D36728D8B13C&quot; type=&quot;DCE.5F94B700-AFC2-7F7C-1B24-8B223015B7E3&quot;/&gt;
+-&lt;UML:AssociationEnd xmi.id=&quot;DCE.0F8AF3D1-AB49-2C8B-A518-FB3581FDB1A3&quot; visibility=&quot;private&quot; association=&quot;DCE.9AEDB15F-ADDB-6A2C-5942-D36728D8B13C&quot; type=&quot;DCE.48F3150F-57D8-5A8D-317E-A1B7EE3F618B&quot;/&gt;&lt;/UML:Association.end&gt;&lt;UML:Element.presentation&gt;
+ 
+ 
+ 
+ 
+-&lt;/UML:Element.presentation&gt;&lt;/UML:AssociationClass&gt;&lt;/UML:Element.ownedElement&gt;&lt;UML:Package.packageImport&gt;
++
++
++
++
++
++
++
++
++
++
++
++
++&lt;UML:Association xmi.id=&quot;DCE.836F3C06-DF8E-654A-A74E-26B28E09D0EC&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Association.end&gt;
++
++&lt;UML:AssociationEnd xmi.id=&quot;DCE.407591C5-25F5-4F10-4C42-9FF37E7A90D2&quot; visibility=&quot;private&quot; association=&quot;DCE.836F3C06-DF8E-654A-A74E-26B28E09D0EC&quot; type=&quot;DCE.5F94B700-AFC2-7F7C-1B24-8B223015B7E3&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.351EA9E4-F679-4ED0-7C1C-2B3414F162EB&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.C1E2F877-D3E9-D03D-0AA7-D5DF1662C402&quot; lower=&quot;0&quot; upper=&quot;*&quot; collectionType=&quot;As Set&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.FE1E793D-7204-1A15-11B5-6640A617E886&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:AssociationEnd&gt;&lt;UML:NavigableEnd xmi.id=&quot;DCE.E1CE94FD-0157-EC2B-E46C-8F0F0A135CD5&quot; visibility=&quot;private&quot; association=&quot;DCE.836F3C06-DF8E-654A-A74E-26B28E09D0EC&quot; type=&quot;DCE.21C435E2-58FD-2C08-57ED-752AEA37F848&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.DB322DC1-E019-7D9B-BDC7-517637F9298A&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.C7F8FB9B-2D0B-869D-F6E8-B1B08F9F6709&quot; lower=&quot;0&quot; upper=&quot;*&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.CB91D9B5-1D7B-2E51-7809-955DA995BAFB&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;/UML:Association.end&gt;&lt;UML:Element.presentation&gt;
++
++
++&lt;/UML:Element.presentation&gt;&lt;/UML:Association&gt;
++&lt;UML:Association xmi.id=&quot;DCE.E6A2F899-8740-43E5-C6F4-17A9F98DC675&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Association.end&gt;
++&lt;UML:AssociationEnd xmi.id=&quot;DCE.BEAF39E0-3546-D826-5F14-8BC74079C3B5&quot; visibility=&quot;private&quot; association=&quot;DCE.E6A2F899-8740-43E5-C6F4-17A9F98DC675&quot; type=&quot;DCE.5F94B700-AFC2-7F7C-1B24-8B223015B7E3&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.45A1099C-D326-AF0B-9A25-3BF00059B0E1&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.6AA63F40-3ABF-4ED2-D99D-06F62BFFE36B&quot; lower=&quot;0&quot; upper=&quot;*&quot; collectionType=&quot;As Set&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;/UML:AssociationEnd&gt;
++&lt;UML:NavigableEnd xmi.id=&quot;DCE.C178EB7A-60AC-380F-8E6D-FACA07597FF4&quot; visibility=&quot;private&quot; association=&quot;DCE.E6A2F899-8740-43E5-C6F4-17A9F98DC675&quot; type=&quot;DCE.2A6211B0-FE3F-0126-B952-B7615612CB12&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.70162FC9-91A7-9319-B4A2-4F1E35F8BD15&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.1A182153-6993-1195-E8D6-02DB41AB134F&quot; lower=&quot;0&quot; upper=&quot;1&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.2B663F9F-ACCE-C7CB-9C41-C5D2CF91361C&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;/UML:Association.end&gt;&lt;UML:Element.presentation&gt;
++
++
++&lt;/UML:Element.presentation&gt;&lt;/UML:Association&gt;
++&lt;UML:AssociationClass xmi.id=&quot;DCE.34AF7258-822B-874C-48C2-9C2431AE3AD7&quot; name=&quot;Loan&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Association.end&gt;
++&lt;UML:AssociationEnd xmi.id=&quot;DCE.03307384-9381-FCCD-DED5-90740DF00321&quot; visibility=&quot;private&quot; association=&quot;DCE.34AF7258-822B-874C-48C2-9C2431AE3AD7&quot; type=&quot;DCE.48F3150F-57D8-5A8D-317E-A1B7EE3F618B&quot;/&gt;
++&lt;UML:AssociationEnd xmi.id=&quot;DCE.921210A4-EE9A-C0FE-3CF4-CC7A066D8E62&quot; visibility=&quot;private&quot; association=&quot;DCE.34AF7258-822B-874C-48C2-9C2431AE3AD7&quot; type=&quot;DCE.5F94B700-AFC2-7F7C-1B24-8B223015B7E3&quot;/&gt;&lt;/UML:Association.end&gt;&lt;UML:Element.presentation&gt;
++
++
++
++
++
++
++
++
++
++
++
++
++
++
++&lt;/UML:Element.presentation&gt;&lt;/UML:AssociationClass&gt;
++&lt;UML:Association xmi.id=&quot;DCE.D5D0306F-84A7-36FB-9CE9-991EAD04C989&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Association.end&gt;
++
++&lt;UML:NavigableEnd xmi.id=&quot;DCE.C8B5B2CA-88F9-E611-4770-B91F2ACF4815&quot; visibility=&quot;private&quot; association=&quot;DCE.D5D0306F-84A7-36FB-9CE9-991EAD04C989&quot; type=&quot;DCE.5F94B700-AFC2-7F7C-1B24-8B223015B7E3&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.5F4EC7EA-E462-8640-EF2D-1EF245A9A85D&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.024DEFE9-DA73-C7E0-FBEF-5F3802E9C87F&quot; lower=&quot;1&quot; upper=&quot;1&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.C99FE9D7-EC47-2710-AF66-250A73B1C177&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;UML:NavigableEnd xmi.id=&quot;DCE.C416C585-87B2-85CF-5B73-9CD5474B390F&quot; visibility=&quot;private&quot; association=&quot;DCE.D5D0306F-84A7-36FB-9CE9-991EAD04C989&quot; type=&quot;DCE.732EADE8-666B-2194-BD62-707D0FE746A5&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.E722441C-BCD4-D0A0-2A66-3647A7F1899E&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.EF1CA8A6-A39B-C745-6D37-A6677D67FCE2&quot; lower=&quot;0&quot; upper=&quot;*&quot; collectionType=&quot;As Set&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.0A00621A-B49E-E860-D4CE-0B557DFACCC1&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;/UML:Association.end&gt;&lt;UML:Element.presentation&gt;
++
++
++&lt;/UML:Element.presentation&gt;&lt;/UML:Association&gt;
++&lt;UML:Association xmi.id=&quot;DCE.ED16F24E-D50C-C05C-962B-EC0295946C71&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Association.end&gt;
++
++&lt;UML:NavigableEnd xmi.id=&quot;DCE.1383FCA4-DBB2-89E2-910D-8A7AE54A2B34&quot; visibility=&quot;private&quot; association=&quot;DCE.ED16F24E-D50C-C05C-962B-EC0295946C71&quot; type=&quot;DCE.732EADE8-666B-2194-BD62-707D0FE746A5&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.96393BA3-85AA-BA07-E7FF-EB80C1A96AE9&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.BD64320B-3E5D-FDA2-7755-2FC6D9878E19&quot; lower=&quot;1&quot; upper=&quot;1&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.FD636FF1-A7F5-EFF2-FD63-C508C3CEB677&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;UML:NavigableEnd xmi.id=&quot;DCE.EA6047C1-3927-1F38-C2E6-FA154C731128&quot; visibility=&quot;private&quot; association=&quot;DCE.ED16F24E-D50C-C05C-962B-EC0295946C71&quot; type=&quot;DCE.046EB9B2-1ACF-A303-00A0-F32F15BB25B6&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.D9CD9D58-2378-7BBF-0D7E-CBAE1B121472&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.F95331FA-859E-0298-EB17-4D5EEEE5A4EE&quot; lower=&quot;0&quot; upper=&quot;1&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.7B5F5EB2-D33E-63DA-4C64-3675C1842E82&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;/UML:Association.end&gt;&lt;UML:Element.presentation&gt;
++
++
++&lt;/UML:Element.presentation&gt;&lt;/UML:Association&gt;
++&lt;UML:Association xmi.id=&quot;DCE.8628AE1D-C11D-1595-6D82-27D9E7FB0F8F&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Association.end&gt;
++
++&lt;UML:NavigableEnd xmi.id=&quot;DCE.43F04288-EA50-C7B1-B7DF-4D857F0B5D3B&quot; visibility=&quot;private&quot; association=&quot;DCE.8628AE1D-C11D-1595-6D82-27D9E7FB0F8F&quot; type=&quot;DCE.5F7AA292-F194-81C2-4110-10D7DD253C72&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.B38695B8-FF06-2D23-7551-0C21A56A736C&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.35A7142E-B874-F8EA-283F-0F679F5B58A0&quot; lower=&quot;0&quot; upper=&quot;1&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.0C47BAED-612C-734E-EBAF-1659BCF6E0B4&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;UML:NavigableEnd xmi.id=&quot;DCE.B46B85F1-2B5F-9545-E6B7-F77BD0277233&quot; visibility=&quot;private&quot; association=&quot;DCE.8628AE1D-C11D-1595-6D82-27D9E7FB0F8F&quot; type=&quot;DCE.732EADE8-666B-2194-BD62-707D0FE746A5&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.CCBB1385-79E5-B720-8C55-B2E95AA44AA1&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.662F1214-6020-D2EC-C0D5-FF6AC7B8C4AC&quot; lower=&quot;1&quot; upper=&quot;1&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.26834E25-8647-3832-7C2F-4661ACC41839&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;/UML:Association.end&gt;&lt;UML:Element.presentation&gt;
++
++
++&lt;/UML:Element.presentation&gt;&lt;/UML:Association&gt;
++&lt;UML:Association xmi.id=&quot;DCE.D81B384F-52E0-16C5-C94F-DD8DFDA0CDC3&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Association.end&gt;
++
++&lt;UML:NavigableEnd xmi.id=&quot;DCE.567A749D-B23A-B7AD-2191-EC0D390EAACC&quot; visibility=&quot;private&quot; association=&quot;DCE.D81B384F-52E0-16C5-C94F-DD8DFDA0CDC3&quot; type=&quot;DCE.5C39FCEB-0FF9-A3DF-799A-3FA1D5E517CE&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.089FC665-0D6B-635E-2A14-7621A7EBABDD&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.E3C4A5FF-7FAE-DFAB-CE86-76A487DC8887&quot; lower=&quot;0&quot; upper=&quot;1&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.4225A9CA-B446-8A30-943C-3AAF011EEAC0&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;UML:NavigableEnd xmi.id=&quot;DCE.BF6A4A56-01C2-2E46-0864-7FFAE5B88D74&quot; visibility=&quot;private&quot; association=&quot;DCE.D81B384F-52E0-16C5-C94F-DD8DFDA0CDC3&quot; type=&quot;DCE.732EADE8-666B-2194-BD62-707D0FE746A5&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.2A4AB313-7644-7229-6B58-32DFBCDD6705&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.F5B6646A-AB84-FA14-1683-86FE1E466560&quot; lower=&quot;1&quot; upper=&quot;1&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.47E59D51-D2F3-69E7-6BF0-C742E5E0F55E&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;/UML:Association.end&gt;&lt;UML:Element.presentation&gt;
++
++
++&lt;/UML:Element.presentation&gt;&lt;/UML:Association&gt;
++&lt;UML:Association xmi.id=&quot;DCE.A8E85482-AF25-1A77-7082-72E61806E669&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Association.end&gt;
++
++&lt;UML:NavigableEnd xmi.id=&quot;DCE.70E59312-7864-07E0-1D0D-75B501B90A9E&quot; visibility=&quot;private&quot; association=&quot;DCE.A8E85482-AF25-1A77-7082-72E61806E669&quot; type=&quot;DCE.732EADE8-666B-2194-BD62-707D0FE746A5&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.5F12372C-DFB5-0252-9942-DD4C96F0F683&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.1CA301E8-E413-4C60-1752-638FD3CE3499&quot; lower=&quot;1&quot; upper=&quot;1&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.528BA6E8-ABD8-5604-DA7A-2CAC5E10304C&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;UML:NavigableEnd xmi.id=&quot;DCE.E4650B29-939C-74E5-945E-CB1479FC98FB&quot; visibility=&quot;private&quot; association=&quot;DCE.A8E85482-AF25-1A77-7082-72E61806E669&quot; type=&quot;DCE.80B6A4DC-A4A6-12D5-774B-6A5D0E178390&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.02C27BE0-A3BE-20B3-E61C-05332AEFA460&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.0CCD4C22-A85B-0EC6-C973-CB4C6A99A337&quot; lower=&quot;0&quot; upper=&quot;1&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.F310C40C-CDC1-6D4E-1EB7-BA646F79A96D&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;/UML:Association.end&gt;&lt;UML:Element.presentation&gt;
++
++
++&lt;/UML:Element.presentation&gt;&lt;/UML:Association&gt;
++
++
++&lt;UML:Association xmi.id=&quot;DCE.1A2C2F43-C5F2-0077-500E-7AF28D578D62&quot; owner=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:Association.end&gt;
++
++&lt;UML:NavigableEnd xmi.id=&quot;DCE.E17EF45D-C287-46BE-30D9-93801524459D&quot; visibility=&quot;private&quot; association=&quot;DCE.1A2C2F43-C5F2-0077-500E-7AF28D578D62&quot; type=&quot;DCE.732EADE8-666B-2194-BD62-707D0FE746A5&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.BACBAABE-6422-9200-CE67-7EC8855B7461&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.6D844EF2-7F5B-8669-55CB-E52F5756CA26&quot; lower=&quot;0&quot; upper=&quot;1&quot;/&gt;
++&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.F8F19602-8FD7-481E-073A-C8D1D4B64A0A&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;UML:NavigableEnd xmi.id=&quot;DCE.7A4D6F40-A548-498C-F903-AA67FAB72133&quot; visibility=&quot;private&quot; association=&quot;DCE.1A2C2F43-C5F2-0077-500E-7AF28D578D62&quot; type=&quot;DCE.732EADE8-666B-2194-BD62-707D0FE746A5&quot;&gt;&lt;UML:TypedElement.multiplicity&gt;
++&lt;UML:Multiplicity xmi.id=&quot;DCE.ACB328FE-0B6B-2D03-EBBA-617AD3CCAA16&quot;&gt;&lt;UML:Multiplicity.range&gt;
++&lt;UML:MultiplicityRange xmi.id=&quot;DCE.8955B75E-0B74-981F-6EDA-720FAD54F79C&quot; lower=&quot;0&quot; upper=&quot;*&quot; collectionType=&quot;As Set&quot;/&gt;&lt;/UML:Multiplicity.range&gt;&lt;/UML:Multiplicity&gt;&lt;/UML:TypedElement.multiplicity&gt;&lt;UML:Attribute.default&gt;
++&lt;UML:Expression xmi.id=&quot;DCE.40C9613A-C103-520B-43FC-51418AADE430&quot;/&gt;&lt;/UML:Attribute.default&gt;&lt;/UML:NavigableEnd&gt;&lt;/UML:Association.end&gt;&lt;UML:Element.presentation&gt;
++
++&lt;/UML:Element.presentation&gt;&lt;/UML:Association&gt;&lt;/UML:Element.ownedElement&gt;&lt;UML:Package.packageImport&gt;
+ &lt;UML:PackageImport xmi.id=&quot;DCE.EE7EAB1E-E0E1-B50E-EEE6-2793F959B2C3&quot; importingPackage=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot;&gt;&lt;UML:PackageImport.importedPackage&gt;
+ &lt;UML:Profile xmi.id=&quot;DCE.9F960BBD-DB2E-44F2-AC5F-485BB4E586E3&quot; name=&quot;Unnamed&quot; isCloned=&quot;true&quot; href=&quot;.\Diagrama de Classes.etup#//*[@xmi.id=&apos;DCE.9F960BBD-DB2E-44F2-AC5F-485BB4E586E3&apos;]&quot; isDirty=&quot;false&quot;/&gt;&lt;/UML:PackageImport.importedPackage&gt;&lt;UML:Element.ownedElement&gt;
+ &lt;UML:TaggedValue xmi.id=&quot;DCE.44BD55A7-A28B-BCCC-73D1-3D5962E8131A&quot; owner=&quot;DCE.EE7EAB1E-E0E1-B50E-EEE6-2793F959B2C3&quot; name=&quot;autoCreated&quot;&gt;
+
+Modified: trunk/docs/Iteracao2-CB05/Diagrama de Classes/Entities Diagram_1214175140513.etld
+===================================================================
+--- trunk/docs/Iteracao2-CB05/Diagrama de Classes/Entities Diagram_1214175140513.etld	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/docs/Iteracao2-CB05/Diagrama de Classes/Entities Diagram_1214175140513.etld	2008-06-23 15:32:40 UTC (rev 164)
+@@ -18,10 +18,46 @@
+             &lt;graphs&gt;
+                 &lt;graph id=&quot;3&quot;&gt;
+                     &lt;name/&gt;
++                    &lt;margins&gt;
++                        &lt;proportional bottom=&quot;0.0&quot; left=&quot;0.0&quot; right=&quot;0.0&quot; top=&quot;0.0&quot;/&gt;
++                        &lt;constant bottom=&quot;20.0&quot; left=&quot;20.0&quot; right=&quot;20.0&quot; top=&quot;20.0&quot;/&gt;
++                    &lt;/margins&gt;
++                    &lt;url/&gt;
++                    &lt;graphics type=&quot;basicGraph&quot;&gt;
++                        &lt;backgroundColor value=&quot;255 255 255&quot;/&gt;
++                        &lt;imageUsed/&gt;
++                        &lt;imageTiled value=&quot;false&quot;/&gt;
++                        &lt;imageStyle value=&quot;WORLD_OFFSET&quot;/&gt;
++                        &lt;imageMinTileStep value=&quot;25&quot;/&gt;
++                        &lt;imageX value=&quot;0.0&quot;/&gt;
++                        &lt;imageY value=&quot;0.0&quot;/&gt;
++                        &lt;drawNodesBeforeEdges value=&quot;true&quot;/&gt;
++                    &lt;/graphics&gt;
++                &lt;/graph&gt;
++                &lt;graph id=&quot;4&quot;&gt;
++                    &lt;name/&gt;
++                    &lt;margins&gt;
++                        &lt;proportional bottom=&quot;0.0&quot; left=&quot;0.0&quot; right=&quot;0.0&quot; top=&quot;0.0&quot;/&gt;
++                        &lt;constant bottom=&quot;20.0&quot; left=&quot;20.0&quot; right=&quot;20.0&quot; top=&quot;20.0&quot;/&gt;
++                    &lt;/margins&gt;
++                    &lt;url/&gt;
++                    &lt;graphics type=&quot;basicGraph&quot;&gt;
++                        &lt;backgroundColor value=&quot;255 255 255&quot;/&gt;
++                        &lt;imageUsed/&gt;
++                        &lt;imageTiled value=&quot;false&quot;/&gt;
++                        &lt;imageStyle value=&quot;WORLD_OFFSET&quot;/&gt;
++                        &lt;imageMinTileStep value=&quot;25&quot;/&gt;
++                        &lt;imageX value=&quot;0.0&quot;/&gt;
++                        &lt;imageY value=&quot;0.0&quot;/&gt;
++                        &lt;drawNodesBeforeEdges value=&quot;true&quot;/&gt;
++                    &lt;/graphics&gt;
++                &lt;/graph&gt;
++                &lt;graph id=&quot;5&quot;&gt;
++                    &lt;name/&gt;
+                     &lt;nodes&gt;
+-                        &lt;node id=&quot;4&quot;&gt;
++                        &lt;node id=&quot;6&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;-236.0&quot; y=&quot;17.0&quot;/&gt;
++                            &lt;center x=&quot;-317.0&quot; y=&quot;108.0&quot;/&gt;
+                             &lt;size height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;originalSize height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -40,9 +76,9 @@
+                                 &lt;PEID value=&quot;DCE.15CA7F32-F36F-A69A-D598-A75D10C233B2&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+-                        &lt;node id=&quot;5&quot;&gt;
++                        &lt;node id=&quot;7&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;-215.0&quot; y=&quot;239.0&quot;/&gt;
++                            &lt;center x=&quot;-308.0&quot; y=&quot;298.0&quot;/&gt;
+                             &lt;size height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;originalSize height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -61,9 +97,9 @@
+                                 &lt;PEID value=&quot;DCE.C91D5FEB-1339-4953-30BA-3E3BDB4BFAF3&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+-                        &lt;node id=&quot;6&quot;&gt;
++                        &lt;node id=&quot;8&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;10.0&quot; y=&quot;17.0&quot;/&gt;
++                            &lt;center x=&quot;-53.0&quot; y=&quot;108.0&quot;/&gt;
+                             &lt;size height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;originalSize height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -82,9 +118,9 @@
+                                 &lt;PEID value=&quot;DCE.27A17420-BD3C-DD7A-0EAE-317BD4D95723&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+-                        &lt;node id=&quot;7&quot;&gt;
++                        &lt;node id=&quot;9&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;248.0&quot; y=&quot;17.0&quot;/&gt;
++                            &lt;center x=&quot;185.0&quot; y=&quot;108.0&quot;/&gt;
+                             &lt;size height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;originalSize height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -103,9 +139,9 @@
+                                 &lt;PEID value=&quot;DCE.EAD1F0B8-10D6-43EA-67ED-F4C788C87666&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+-                        &lt;node id=&quot;8&quot;&gt;
++                        &lt;node id=&quot;10&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;1.0&quot; y=&quot;415.0&quot;/&gt;
++                            &lt;center x=&quot;-57.0&quot; y=&quot;516.0&quot;/&gt;
+                             &lt;size height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;originalSize height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -124,9 +160,9 @@
+                                 &lt;PEID value=&quot;DCE.16D27172-2A41-7BA6-B58B-084F30402538&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+-                        &lt;node id=&quot;9&quot;&gt;
++                        &lt;node id=&quot;11&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;9.0&quot; y=&quot;236.0&quot;/&gt;
++                            &lt;center x=&quot;-56.0&quot; y=&quot;298.0&quot;/&gt;
+                             &lt;size height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;originalSize height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -145,9 +181,9 @@
+                                 &lt;PEID value=&quot;DCE.D711D19C-628C-F39D-91C9-F597F92FC33B&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+-                        &lt;node id=&quot;10&quot;&gt;
++                        &lt;node id=&quot;12&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;377.0&quot; y=&quot;239.0&quot;/&gt;
++                            &lt;center x=&quot;326.0&quot; y=&quot;298.0&quot;/&gt;
+                             &lt;size height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;originalSize height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -166,9 +202,9 @@
+                                 &lt;PEID value=&quot;DCE.857A62FA-6E45-DC53-B2EF-E198459B05CA&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+-                        &lt;node id=&quot;11&quot;&gt;
++                        &lt;node id=&quot;13&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;-118.0&quot; y=&quot;-210.0&quot;/&gt;
++                            &lt;center x=&quot;-184.0&quot; y=&quot;-121.0&quot;/&gt;
+                             &lt;size height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;originalSize height=&quot;104.0&quot; width=&quot;124.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -187,9 +223,9 @@
+                                 &lt;PEID value=&quot;DCE.20B17E4F-B832-9A85-42E3-F101D0CF2C05&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+-                        &lt;node id=&quot;12&quot;&gt;
++                        &lt;node id=&quot;14&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;-352.0&quot; y=&quot;430.5&quot;/&gt;
++                            &lt;center x=&quot;-370.0&quot; y=&quot;516.5&quot;/&gt;
+                             &lt;size height=&quot;112.0&quot; width=&quot;160.0&quot;/&gt;
+                             &lt;originalSize height=&quot;112.0&quot; width=&quot;160.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -208,9 +244,9 @@
+                                 &lt;PEID value=&quot;DCE.B0DE2DB1-7733-4A82-DB34-D07612FC5F1D&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+-                        &lt;node id=&quot;13&quot;&gt;
++                        &lt;node id=&quot;15&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;96.0&quot; y=&quot;-209.5&quot;/&gt;
++                            &lt;center x=&quot;78.0&quot; y=&quot;-124.5&quot;/&gt;
+                             &lt;size height=&quot;112.0&quot; width=&quot;142.0&quot;/&gt;
+                             &lt;originalSize height=&quot;112.0&quot; width=&quot;142.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -229,9 +265,9 @@
+                                 &lt;PEID value=&quot;DCE.6250F4F9-A3CA-6530-A2AD-302304EB3CA9&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+-                        &lt;node id=&quot;14&quot;&gt;
++                        &lt;node id=&quot;16&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;188.0&quot; y=&quot;399.0&quot;/&gt;
++                            &lt;center x=&quot;130.0&quot; y=&quot;461.0&quot;/&gt;
+                             &lt;size height=&quot;112.0&quot; width=&quot;128.0&quot;/&gt;
+                             &lt;originalSize height=&quot;112.0&quot; width=&quot;128.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -247,12 +283,12 @@
+                                 &lt;textColor value=&quot;0 0 0&quot;/&gt;
+                                 &lt;justification value=&quot;CENTER&quot;/&gt;
+                                 &lt;childGraphMark value=&quot;true&quot;/&gt;
+-                                &lt;PEID value=&quot;DCE.401D680A-CF26-FB60-9C74-FE03E0DE3D39&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.7EF1C688-3F62-A460-5477-46F0591A8239&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+-                        &lt;node id=&quot;15&quot;&gt;
++                        &lt;node id=&quot;17&quot;&gt;
+                             &lt;name/&gt;
+-                            &lt;center x=&quot;192.5&quot; y=&quot;237.5&quot;/&gt;
++                            &lt;center x=&quot;129.5&quot; y=&quot;298.5&quot;/&gt;
+                             &lt;size height=&quot;10.0&quot; width=&quot;10.0&quot;/&gt;
+                             &lt;originalSize height=&quot;11.0&quot; width=&quot;11.0&quot;/&gt;
+                             &lt;shape resource=&quot;0&quot;/&gt;
+@@ -268,12 +304,12 @@
+                                 &lt;textColor value=&quot;0 0 0&quot;/&gt;
+                                 &lt;justification value=&quot;CENTER&quot;/&gt;
+                                 &lt;childGraphMark value=&quot;true&quot;/&gt;
+-                                &lt;PEID value=&quot;DCE.5CAE9BF4-0528-6F30-6D28-91DBC53E39A6&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.BD322858-A4F5-3C81-B85C-27562FD4CDA0&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/node&gt;
+                     &lt;/nodes&gt;
+                     &lt;edges&gt;
+-                        &lt;edge id=&quot;16&quot; source=&quot;9&quot; target=&quot;15&quot;&gt;
++                        &lt;edge id=&quot;18&quot; source=&quot;10&quot; target=&quot;11&quot;&gt;
+                             &lt;sourceClipping/&gt;
+                             &lt;targetClipping/&gt;
+                             &lt;url/&gt;
+@@ -286,10 +322,10 @@
+                                 &lt;bendWidth value=&quot;5.0&quot;/&gt;
+                                 &lt;bendHeight value=&quot;5.0&quot;/&gt;
+                                 &lt;antiAliasing value=&quot;false&quot;/&gt;
+-                                &lt;PEID value=&quot;DCE.21B5F820-A043-7DF6-4A38-700E62723B38&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.3CE9A209-65A2-1881-DBDE-003F8DD1DD51&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/edge&gt;
+-                        &lt;edge id=&quot;17&quot; source=&quot;15&quot; target=&quot;10&quot;&gt;
++                        &lt;edge id=&quot;19&quot; source=&quot;11&quot; target=&quot;7&quot;&gt;
+                             &lt;sourceClipping/&gt;
+                             &lt;targetClipping/&gt;
+                             &lt;url/&gt;
+@@ -302,10 +338,10 @@
+                                 &lt;bendWidth value=&quot;5.0&quot;/&gt;
+                                 &lt;bendHeight value=&quot;5.0&quot;/&gt;
+                                 &lt;antiAliasing value=&quot;false&quot;/&gt;
+-                                &lt;PEID value=&quot;DCE.2A47916D-834F-184B-2541-ADB9FFB0F3C4&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.D790AF80-3921-45A8-92E8-D8A5DCCC0CED&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/edge&gt;
+-                        &lt;edge id=&quot;18&quot; source=&quot;15&quot; target=&quot;14&quot;&gt;
++                        &lt;edge id=&quot;20&quot; source=&quot;17&quot; target=&quot;11&quot;&gt;
+                             &lt;sourceClipping/&gt;
+                             &lt;targetClipping/&gt;
+                             &lt;url/&gt;
+@@ -318,9 +354,146 @@
+                                 &lt;bendWidth value=&quot;5.0&quot;/&gt;
+                                 &lt;bendHeight value=&quot;5.0&quot;/&gt;
+                                 &lt;antiAliasing value=&quot;false&quot;/&gt;
+-                                &lt;PEID value=&quot;DCE.F128A61E-8DFE-39F3-9FF1-57864D54AD69&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.DD34FF7F-BE48-C97F-B023-CDE27758BAD7&quot;/&gt;
+                             &lt;/graphics&gt;
+                         &lt;/edge&gt;
++                        &lt;edge id=&quot;21&quot; source=&quot;17&quot; target=&quot;16&quot;&gt;
++                            &lt;sourceClipping/&gt;
++                            &lt;targetClipping/&gt;
++                            &lt;url/&gt;
++                            &lt;visible value=&quot;true&quot;/&gt;
++                            &lt;graphics type=&quot;relationEdge&quot;&gt;
++                                &lt;lineColor value=&quot;0 0 0&quot;/&gt;
++                                &lt;arrowWidth value=&quot;6.0&quot;/&gt;
++                                &lt;arrowHeight value=&quot;6.0&quot;/&gt;
++                                &lt;arrowType value=&quot;NO_ARROW&quot;/&gt;
++                                &lt;bendWidth value=&quot;5.0&quot;/&gt;
++                                &lt;bendHeight value=&quot;5.0&quot;/&gt;
++                                &lt;antiAliasing value=&quot;false&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.A0015AB3-296C-02EE-233D-014EE1E71B28&quot;/&gt;
++                            &lt;/graphics&gt;
++                        &lt;/edge&gt;
++                        &lt;edge id=&quot;22&quot; source=&quot;11&quot; target=&quot;8&quot;&gt;
++                            &lt;sourceClipping/&gt;
++                            &lt;targetClipping/&gt;
++                            &lt;url/&gt;
++                            &lt;visible value=&quot;true&quot;/&gt;
++                            &lt;graphics type=&quot;relationEdge&quot;&gt;
++                                &lt;lineColor value=&quot;0 0 0&quot;/&gt;
++                                &lt;arrowWidth value=&quot;6.0&quot;/&gt;
++                                &lt;arrowHeight value=&quot;6.0&quot;/&gt;
++                                &lt;arrowType value=&quot;NO_ARROW&quot;/&gt;
++                                &lt;bendWidth value=&quot;5.0&quot;/&gt;
++                                &lt;bendHeight value=&quot;5.0&quot;/&gt;
++                                &lt;antiAliasing value=&quot;false&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.227897C3-1866-46F6-B1C1-E3A2EFF4E920&quot;/&gt;
++                            &lt;/graphics&gt;
++                        &lt;/edge&gt;
++                        &lt;edge id=&quot;23&quot; source=&quot;8&quot; target=&quot;6&quot;&gt;
++                            &lt;sourceClipping/&gt;
++                            &lt;targetClipping/&gt;
++                            &lt;url/&gt;
++                            &lt;visible value=&quot;true&quot;/&gt;
++                            &lt;graphics type=&quot;relationEdge&quot;&gt;
++                                &lt;lineColor value=&quot;0 0 0&quot;/&gt;
++                                &lt;arrowWidth value=&quot;6.0&quot;/&gt;
++                                &lt;arrowHeight value=&quot;6.0&quot;/&gt;
++                                &lt;arrowType value=&quot;NO_ARROW&quot;/&gt;
++                                &lt;bendWidth value=&quot;5.0&quot;/&gt;
++                                &lt;bendHeight value=&quot;5.0&quot;/&gt;
++                                &lt;antiAliasing value=&quot;false&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.1E5A552D-3B7D-A46F-D522-E43617950D6C&quot;/&gt;
++                            &lt;/graphics&gt;
++                        &lt;/edge&gt;
++                        &lt;edge id=&quot;24&quot; source=&quot;8&quot; target=&quot;9&quot;&gt;
++                            &lt;sourceClipping/&gt;
++                            &lt;targetClipping/&gt;
++                            &lt;bends&gt;
++                                &lt;point x=&quot;45.5&quot; y=&quot;109.0&quot;/&gt;
++                            &lt;/bends&gt;
++                            &lt;url/&gt;
++                            &lt;visible value=&quot;true&quot;/&gt;
++                            &lt;graphics type=&quot;relationEdge&quot;&gt;
++                                &lt;lineColor value=&quot;0 0 0&quot;/&gt;
++                                &lt;arrowWidth value=&quot;6.0&quot;/&gt;
++                                &lt;arrowHeight value=&quot;6.0&quot;/&gt;
++                                &lt;arrowType value=&quot;NO_ARROW&quot;/&gt;
++                                &lt;bendWidth value=&quot;5.0&quot;/&gt;
++                                &lt;bendHeight value=&quot;5.0&quot;/&gt;
++                                &lt;antiAliasing value=&quot;false&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.AED8FDE1-CD87-CBC6-6D6A-17C1CE0BEE4B&quot;/&gt;
++                            &lt;/graphics&gt;
++                        &lt;/edge&gt;
++                        &lt;edge id=&quot;25&quot; source=&quot;8&quot; target=&quot;15&quot;&gt;
++                            &lt;sourceClipping/&gt;
++                            &lt;targetClipping/&gt;
++                            &lt;url/&gt;
++                            &lt;visible value=&quot;true&quot;/&gt;
++                            &lt;graphics type=&quot;relationEdge&quot;&gt;
++                                &lt;lineColor value=&quot;0 0 0&quot;/&gt;
++                                &lt;arrowWidth value=&quot;6.0&quot;/&gt;
++                                &lt;arrowHeight value=&quot;6.0&quot;/&gt;
++                                &lt;arrowType value=&quot;NO_ARROW&quot;/&gt;
++                                &lt;bendWidth value=&quot;5.0&quot;/&gt;
++                                &lt;bendHeight value=&quot;5.0&quot;/&gt;
++                                &lt;antiAliasing value=&quot;false&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.CE0DB0E4-1311-42A6-1122-72FB4C83D085&quot;/&gt;
++                            &lt;/graphics&gt;
++                        &lt;/edge&gt;
++                        &lt;edge id=&quot;26&quot; source=&quot;8&quot; target=&quot;13&quot;&gt;
++                            &lt;sourceClipping/&gt;
++                            &lt;targetClipping/&gt;
++                            &lt;url/&gt;
++                            &lt;visible value=&quot;true&quot;/&gt;
++                            &lt;graphics type=&quot;relationEdge&quot;&gt;
++                                &lt;lineColor value=&quot;0 0 0&quot;/&gt;
++                                &lt;arrowWidth value=&quot;6.0&quot;/&gt;
++                                &lt;arrowHeight value=&quot;6.0&quot;/&gt;
++                                &lt;arrowType value=&quot;NO_ARROW&quot;/&gt;
++                                &lt;bendWidth value=&quot;5.0&quot;/&gt;
++                                &lt;bendHeight value=&quot;5.0&quot;/&gt;
++                                &lt;antiAliasing value=&quot;false&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.0D2F2363-B89B-BD41-7009-2872062910A8&quot;/&gt;
++                            &lt;/graphics&gt;
++                        &lt;/edge&gt;
++                        &lt;edge id=&quot;27&quot; source=&quot;8&quot; target=&quot;8&quot;&gt;
++                            &lt;sourceClipping/&gt;
++                            &lt;targetClipping/&gt;
++                            &lt;bends&gt;
++                                &lt;point x=&quot;-17.5&quot; y=&quot;194.0&quot;/&gt;
++                                &lt;point x=&quot;43.5&quot; y=&quot;193.0&quot;/&gt;
++                                &lt;point x=&quot;43.5&quot; y=&quot;150.0&quot;/&gt;
++                                &lt;point x=&quot;43.5&quot; y=&quot;127.0&quot;/&gt;
++                            &lt;/bends&gt;
++                            &lt;url/&gt;
++                            &lt;visible value=&quot;true&quot;/&gt;
++                            &lt;graphics type=&quot;relationEdge&quot;&gt;
++                                &lt;lineColor value=&quot;0 0 0&quot;/&gt;
++                                &lt;arrowWidth value=&quot;6.0&quot;/&gt;
++                                &lt;arrowHeight value=&quot;6.0&quot;/&gt;
++                                &lt;arrowType value=&quot;NO_ARROW&quot;/&gt;
++                                &lt;bendWidth value=&quot;5.0&quot;/&gt;
++                                &lt;bendHeight value=&quot;5.0&quot;/&gt;
++                                &lt;antiAliasing value=&quot;false&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.40986746-9A66-F515-5224-A9B13B0FCB7A&quot;/&gt;
++                            &lt;/graphics&gt;
++                        &lt;/edge&gt;
++                        &lt;edge id=&quot;28&quot; source=&quot;12&quot; target=&quot;17&quot;&gt;
++                            &lt;sourceClipping/&gt;
++                            &lt;targetClipping/&gt;
++                            &lt;url/&gt;
++                            &lt;visible value=&quot;true&quot;/&gt;
++                            &lt;graphics type=&quot;relationEdge&quot;&gt;
++                                &lt;lineColor value=&quot;0 0 0&quot;/&gt;
++                                &lt;arrowWidth value=&quot;6.0&quot;/&gt;
++                                &lt;arrowHeight value=&quot;6.0&quot;/&gt;
++                                &lt;arrowType value=&quot;NO_ARROW&quot;/&gt;
++                                &lt;bendWidth value=&quot;5.0&quot;/&gt;
++                                &lt;bendHeight value=&quot;5.0&quot;/&gt;
++                                &lt;antiAliasing value=&quot;false&quot;/&gt;
++                                &lt;PEID value=&quot;DCE.AD711E0E-3305-BF4F-525E-CD21A53CCC44&quot;/&gt;
++                            &lt;/graphics&gt;
++                        &lt;/edge&gt;
+                     &lt;/edges&gt;
+                     &lt;margins&gt;
+                         &lt;proportional bottom=&quot;0.0&quot; left=&quot;0.0&quot; right=&quot;0.0&quot; top=&quot;0.0&quot;/&gt;
+@@ -339,7 +512,7 @@
+                     &lt;/graphics&gt;
+                 &lt;/graph&gt;
+             &lt;/graphs&gt;
+-            &lt;rootGraph value=&quot;3&quot;/&gt;
++            &lt;rootGraph value=&quot;5&quot;/&gt;
+         &lt;/instances&gt;
+     &lt;/graphManager&gt;
+     &lt;serviceInput type=&quot;jlayout&quot;&gt;
+
+Modified: trunk/docs/Iteracao2-CB05/Diagrama de Classes/Entities Diagram_1214175140513.etlp
+===================================================================
+--- trunk/docs/Iteracao2-CB05/Diagrama de Classes/Entities Diagram_1214175140513.etlp	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/docs/Iteracao2-CB05/Diagrama de Classes/Entities Diagram_1214175140513.etlp	2008-06-23 15:32:40 UTC (rev 164)
+@@ -529,6 +529,646 @@
+       &lt;entry combinedstringid=&quot;63,6&quot; colorid=&quot;96&quot;/&gt;
+     &lt;/ColorIDs&gt;
+     &lt;ColorTable&gt;
++      &lt;entry colorid=&quot;961&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;960&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;959&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;958&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;957&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;956&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;955&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;954&quot; colorref=&quot;254,254,254&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;953&quot; colorref=&quot;251,233,126&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;952&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;951&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;950&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;949&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;948&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;947&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;946&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;945&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;944&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;943&quot; colorref=&quot;188,223,198&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;942&quot; colorref=&quot;105,191,105&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;941&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;940&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;939&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;938&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;937&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;936&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;935&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;934&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;933&quot; colorref=&quot;254,254,254&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;932&quot; colorref=&quot;251,233,126&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;931&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;930&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;929&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;928&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;927&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;926&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;925&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;924&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;923&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;922&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;921&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;920&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;919&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;918&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;917&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;916&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;915&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;914&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;913&quot; colorref=&quot;254,254,254&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;912&quot; colorref=&quot;251,233,126&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;911&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;910&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;909&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;908&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;907&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;906&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;905&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;904&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;903&quot; colorref=&quot;254,254,254&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;902&quot; colorref=&quot;251,233,126&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;901&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;900&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;899&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;898&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;897&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;896&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;895&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;894&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;893&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;892&quot; colorref=&quot;223,233,243&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;891&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;890&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;889&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;888&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;887&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;886&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;885&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;884&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;883&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;882&quot; colorref=&quot;0,0,128&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;881&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;880&quot; colorref=&quot;211,227,244&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;879&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;878&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;877&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;876&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;875&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;874&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;873&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;872&quot; colorref=&quot;255,128,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;871&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;870&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;869&quot; colorref=&quot;211,227,244&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;868&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;867&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;866&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;865&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;864&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;863&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;862&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;861&quot; colorref=&quot;213,237,213&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;860&quot; colorref=&quot;103,190,103&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;859&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;858&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;857&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;856&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;855&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;854&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;853&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;852&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;851&quot; colorref=&quot;254,243,168&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;850&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;849&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;848&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;847&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;846&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;845&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;844&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;843&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;842&quot; colorref=&quot;204,216,227&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;841&quot; colorref=&quot;163,184,204&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;840&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;839&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;838&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;837&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;836&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;835&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;834&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;833&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;832&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;831&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;830&quot; colorref=&quot;255,128,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;829&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;828&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;827&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;826&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;825&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;824&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;823&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;822&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;821&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;820&quot; colorref=&quot;170,244,243&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;819&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;818&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;817&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;816&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;815&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;814&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;813&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;812&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;811&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;810&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;809&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;808&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;807&quot; colorref=&quot;220,239,244&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;806&quot; colorref=&quot;142,203,219&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;805&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;804&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;803&quot; colorref=&quot;255,51,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;802&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;801&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;800&quot; colorref=&quot;255,153,51&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;799&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;798&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;797&quot; colorref=&quot;102,102,204&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;796&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;795&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;794&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;793&quot; colorref=&quot;238,247,238&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;792&quot; colorref=&quot;0,146,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;791&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;790&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;789&quot; colorref=&quot;255,255,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;788&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;787&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;786&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;785&quot; colorref=&quot;101,154,210&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;784&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;783&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;782&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;781&quot; colorref=&quot;167,240,240&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;780&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;779&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;778&quot; colorref=&quot;255,51,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;777&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;776&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;775&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;774&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;773&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;772&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;771&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;770&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;769&quot; colorref=&quot;255,128,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;768&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;767&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;766&quot; colorref=&quot;211,227,244&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;765&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;764&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;763&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;762&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;761&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;760&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;759&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;758&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;757&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;756&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;755&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;754&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;753&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;752&quot; colorref=&quot;211,227,244&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;751&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;750&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;749&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;748&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;747&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;746&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;745&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;744&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;743&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;742&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;741&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;740&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;739&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;738&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;737&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;736&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;735&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;734&quot; colorref=&quot;195,226,203&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;733&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;732&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;731&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;730&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;729&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;728&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;727&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;726&quot; colorref=&quot;183,207,188&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;725&quot; colorref=&quot;72,132,84&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;724&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;723&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;722&quot; colorref=&quot;153,0,51&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;721&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;720&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;719&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;718&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;717&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;716&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;715&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;714&quot; colorref=&quot;254,241,187&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;713&quot; colorref=&quot;255,204,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;712&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;711&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;710&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;709&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;708&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;707&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;706&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;705&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;704&quot; colorref=&quot;105,191,105&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;703&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;702&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;701&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;700&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;699&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;698&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;697&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;696&quot; colorref=&quot;255,239,208&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;695&quot; colorref=&quot;255,182,105&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;694&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;693&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;692&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;691&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;690&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;689&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;688&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;687&quot; colorref=&quot;191,235,235&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;686&quot; colorref=&quot;50,199,199&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;685&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;684&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;683&quot; colorref=&quot;167,240,240&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;682&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;681&quot; colorref=&quot;255,225,217&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;680&quot; colorref=&quot;255,51,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;679&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;678&quot; colorref=&quot;255,225,217&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;677&quot; colorref=&quot;255,51,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;676&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;675&quot; colorref=&quot;116,189,136&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;674&quot; colorref=&quot;26,120,51&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;673&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;672&quot; colorref=&quot;191,235,235&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;671&quot; colorref=&quot;50,199,199&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;670&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;669&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;668&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;667&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;666&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;665&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;664&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;663&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;662&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;661&quot; colorref=&quot;225,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;660&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;659&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;658&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;657&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;656&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;655&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;654&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;653&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;652&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;651&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;650&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;649&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;648&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;647&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;646&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;645&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;644&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;643&quot; colorref=&quot;254,254,254&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;642&quot; colorref=&quot;251,233,127&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;641&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;640&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;639&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;638&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;637&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;636&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;635&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;634&quot; colorref=&quot;254,254,254&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;633&quot; colorref=&quot;251,233,126&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;632&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;631&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;630&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;629&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;628&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;627&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;626&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;625&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;624&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;623&quot; colorref=&quot;188,223,198&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;622&quot; colorref=&quot;105,191,105&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;621&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;620&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;619&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;618&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;617&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;616&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;615&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;614&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;613&quot; colorref=&quot;254,254,254&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;612&quot; colorref=&quot;251,233,126&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;611&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;610&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;609&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;608&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;607&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;606&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;605&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;604&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;603&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;602&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;601&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;600&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;599&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;598&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;597&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;596&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;595&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;594&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;593&quot; colorref=&quot;254,254,254&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;592&quot; colorref=&quot;251,233,126&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;591&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;590&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;589&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;588&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;587&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;586&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;585&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;584&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;583&quot; colorref=&quot;254,254,254&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;582&quot; colorref=&quot;251,233,126&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;581&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;580&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;579&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;578&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;577&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;576&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;575&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;574&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;573&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;572&quot; colorref=&quot;223,233,243&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;571&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;570&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;569&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;568&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;567&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;566&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;565&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;564&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;563&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;562&quot; colorref=&quot;0,0,128&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;561&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;560&quot; colorref=&quot;211,227,244&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;559&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;558&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;557&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;556&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;555&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;554&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;553&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;552&quot; colorref=&quot;255,128,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;551&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;550&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;549&quot; colorref=&quot;211,227,244&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;548&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;547&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;546&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;545&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;544&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;543&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;542&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;541&quot; colorref=&quot;213,237,213&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;540&quot; colorref=&quot;103,190,103&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;539&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;538&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;537&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;536&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;535&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;534&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;533&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;532&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;531&quot; colorref=&quot;254,243,168&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;530&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;529&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;528&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;527&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;526&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;525&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;524&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;523&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;522&quot; colorref=&quot;204,216,227&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;521&quot; colorref=&quot;163,184,204&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;520&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;519&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;518&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;517&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;516&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;515&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;514&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;513&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;512&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;511&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;510&quot; colorref=&quot;255,128,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;509&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;508&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;507&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;506&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;505&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;504&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;503&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;502&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;501&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;500&quot; colorref=&quot;170,244,243&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;499&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;498&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;497&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;496&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;495&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;494&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;493&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;492&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;491&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;490&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;489&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;488&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;487&quot; colorref=&quot;220,239,244&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;486&quot; colorref=&quot;142,203,219&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;485&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;484&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;483&quot; colorref=&quot;255,51,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;482&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;481&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;480&quot; colorref=&quot;255,153,51&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;479&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;478&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;477&quot; colorref=&quot;102,102,204&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;476&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;475&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;474&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;473&quot; colorref=&quot;238,247,238&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;472&quot; colorref=&quot;0,146,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;471&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;470&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;469&quot; colorref=&quot;255,255,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;468&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;467&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;466&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;465&quot; colorref=&quot;101,154,210&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;464&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;463&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;462&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;461&quot; colorref=&quot;167,240,240&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;460&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;459&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;458&quot; colorref=&quot;255,51,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;457&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;456&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;455&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;454&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;453&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;452&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;451&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;450&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;449&quot; colorref=&quot;255,128,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;448&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;447&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;446&quot; colorref=&quot;211,227,244&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;445&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;444&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;443&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;442&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;441&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;440&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;439&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;438&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;437&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;436&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;435&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;434&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;433&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;432&quot; colorref=&quot;211,227,244&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;431&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;430&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;429&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;428&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;427&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;426&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;425&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;424&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;423&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;422&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;421&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;420&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;419&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;418&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;417&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;416&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;415&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;414&quot; colorref=&quot;195,226,203&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;413&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;412&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;411&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;410&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;409&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;408&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;407&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;406&quot; colorref=&quot;183,207,188&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;405&quot; colorref=&quot;72,132,84&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;404&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;403&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;402&quot; colorref=&quot;153,0,51&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;401&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;400&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;399&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;398&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;397&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;396&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;395&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;394&quot; colorref=&quot;254,241,187&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;393&quot; colorref=&quot;255,204,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;392&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;391&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;390&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;389&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;388&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;387&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;386&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;385&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;384&quot; colorref=&quot;105,191,105&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;383&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;382&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;381&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;380&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;379&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;378&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;377&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;376&quot; colorref=&quot;255,239,208&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;375&quot; colorref=&quot;255,182,105&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;374&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;373&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;372&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;371&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;370&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;369&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;368&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;367&quot; colorref=&quot;191,235,235&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;366&quot; colorref=&quot;50,199,199&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;365&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;364&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;363&quot; colorref=&quot;167,240,240&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;362&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;361&quot; colorref=&quot;255,225,217&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;360&quot; colorref=&quot;255,51,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;359&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;358&quot; colorref=&quot;255,225,217&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;357&quot; colorref=&quot;255,51,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;356&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;355&quot; colorref=&quot;116,189,136&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;354&quot; colorref=&quot;26,120,51&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;353&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;352&quot; colorref=&quot;191,235,235&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;351&quot; colorref=&quot;50,199,199&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;350&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;349&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;348&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;347&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;346&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;345&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;344&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;343&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;342&quot; colorref=&quot;255,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;341&quot; colorref=&quot;225,255,255&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;340&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;339&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;338&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;337&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;336&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;335&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;334&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;333&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;332&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;331&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;330&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;329&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;328&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;327&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;326&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;325&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;324&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;323&quot; colorref=&quot;254,254,254&quot; combinedstringid=&quot;0,0&quot;/&gt;
++      &lt;entry colorid=&quot;322&quot; colorref=&quot;251,233,127&quot; combinedstringid=&quot;0,0&quot;/&gt;
+       &lt;entry colorid=&quot;321&quot; colorref=&quot;254,254,254&quot; combinedstringid=&quot;0,0&quot;/&gt;
+       &lt;entry colorid=&quot;320&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
+       &lt;entry colorid=&quot;319&quot; colorref=&quot;0,0,0&quot; combinedstringid=&quot;0,0&quot;/&gt;
+@@ -1224,7 +1864,7 @@
+       &lt;entry fontholderid=&quot;1&quot; name=&quot;SansSerif&quot; CharSet=&quot;0&quot; Height=&quot;12&quot; Italic=&quot;false&quot; Strikeout=&quot;false&quot; Underline=&quot;false&quot; Weight=&quot;400&quot;/&gt;
+     &lt;/FontHolderTable&gt;
+   &lt;/resources&gt;
+-  &lt;diagramInfo zoom=&quot;1.0&quot; xPos=&quot;-10.0&quot; yPos=&quot;197.0&quot; name=&quot;Entities Diagram&quot; alias=&quot;&quot; docs=&quot;&quot; diagramKind=&quot;Class Diagram&quot; lastShowAliasState=&quot;false&quot; namespaceToplevelID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; namespaceMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; diagramXMIID=&quot;DCE.E4BF9270-E95F-BC0C-E81A-276F9176D00A&quot;/&gt;
++  &lt;diagramInfo zoom=&quot;1.0&quot; xPos=&quot;-26.0&quot; yPos=&quot;309.0&quot; name=&quot;Entities Diagram&quot; alias=&quot;&quot; docs=&quot;&quot; diagramKind=&quot;Class Diagram&quot; lastShowAliasState=&quot;false&quot; namespaceToplevelID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; namespaceMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; diagramXMIID=&quot;DCE.E4BF9270-E95F-BC0C-E81A-276F9176D00A&quot;/&gt;
+   &lt;DCE.15CA7F32-F36F-A69A-D598-A75D10C233B2 PEID=&quot;DCE.15CA7F32-F36F-A69A-D598-A75D10C233B2&quot; MEID=&quot;DCE.046EB9B2-1ACF-A303-00A0-F32F15BB25B6&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.ETGenericNodeUI Class&quot;&gt;
+     &lt;engine name=&quot;ClassDrawEngine&quot; editLocked=&quot;false&quot;&gt;
+       &lt;resources&gt;
+@@ -1491,7 +2131,7 @@
+       &lt;/compartment&gt;
+     &lt;/engine&gt;
+   &lt;/DCE.6250F4F9-A3CA-6530-A2AD-302304EB3CA9&gt;
+-  &lt;DCE.401D680A-CF26-FB60-9C74-FE03E0DE3D39 PEID=&quot;DCE.401D680A-CF26-FB60-9C74-FE03E0DE3D39&quot; MEID=&quot;DCE.9AEDB15F-ADDB-6A2C-5942-D36728D8B13C&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.ETGenericNodeUI AssociationClass&quot;&gt;
++  &lt;DCE.7EF1C688-3F62-A460-5477-46F0591A8239 PEID=&quot;DCE.7EF1C688-3F62-A460-5477-46F0591A8239&quot; MEID=&quot;DCE.34AF7258-822B-874C-48C2-9C2431AE3AD7&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.ETGenericNodeUI AssociationClass&quot;&gt;
+     &lt;engine name=&quot;ClassDrawEngine&quot; editLocked=&quot;false&quot;&gt;
+       &lt;resources&gt;
+         &lt;resource type=&quot;font&quot; resourceStringID=&quot;6&quot; fontID=&quot;2&quot;/&gt;
+@@ -1500,9 +2140,9 @@
+         &lt;resource type=&quot;color&quot; resourceStringID=&quot;201&quot; colorID=&quot;321&quot;/&gt;
+         &lt;resource type=&quot;color&quot; resourceStringID=&quot;2&quot; colorID=&quot;1&quot;/&gt;
+       &lt;/resources&gt;
+-      &lt;compartment name=&quot;1&quot; MEID=&quot;DCE.9AEDB15F-ADDB-6A2C-5942-D36728D8B13C&quot; value=&quot;&quot; textStyles=&quot;VCENTER|HCENTER|SINGLELINE&quot; DefaultCompartment=&quot;ADClassNameCompartment&quot; staticText=&quot;&quot;&gt;
++      &lt;compartment name=&quot;1&quot; MEID=&quot;DCE.34AF7258-822B-874C-48C2-9C2431AE3AD7&quot; value=&quot;&quot; textStyles=&quot;VCENTER|HCENTER|SINGLELINE&quot; DefaultCompartment=&quot;ADClassNameCompartment&quot; staticText=&quot;&quot;&gt;
+         &lt;resources/&gt;
+-        &lt;compartment name=&quot;2&quot; MEID=&quot;DCE.9AEDB15F-ADDB-6A2C-5942-D36728D8B13C&quot; value=&quot;Loan&quot; textStyles=&quot;VCENTER|HCENTER|SINGLELINE&quot; nameCompartmentBorderKind=&quot;0&quot;&gt;
++        &lt;compartment name=&quot;2&quot; MEID=&quot;DCE.34AF7258-822B-874C-48C2-9C2431AE3AD7&quot; value=&quot;Loan&quot; textStyles=&quot;VCENTER|HCENTER|SINGLELINE&quot; nameCompartmentBorderKind=&quot;0&quot;&gt;
+           &lt;resources&gt;
+             &lt;resource type=&quot;font&quot; resourceStringID=&quot;6&quot; fontID=&quot;2&quot;/&gt;
+             &lt;resource type=&quot;color&quot; resourceStringID=&quot;6&quot; colorID=&quot;5&quot;/&gt;
+@@ -1516,31 +2156,87 @@
+         &lt;resources/&gt;
+       &lt;/compartment&gt;
+     &lt;/engine&gt;
+-  &lt;/DCE.401D680A-CF26-FB60-9C74-FE03E0DE3D39&gt;
+-  &lt;DCE.5CAE9BF4-0528-6F30-6D28-91DBC53E39A6 PEID=&quot;DCE.5CAE9BF4-0528-6F30-6D28-91DBC53E39A6&quot; MEID=&quot;DCE.9AEDB15F-ADDB-6A2C-5942-D36728D8B13C&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.ETGenericNodeUI AssociationClassConnectorDrawEngine&quot;&gt;
++  &lt;/DCE.7EF1C688-3F62-A460-5477-46F0591A8239&gt;
++  &lt;DCE.BD322858-A4F5-3C81-B85C-27562FD4CDA0 PEID=&quot;DCE.BD322858-A4F5-3C81-B85C-27562FD4CDA0&quot; MEID=&quot;DCE.34AF7258-822B-874C-48C2-9C2431AE3AD7&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.ETGenericNodeUI AssociationClassConnectorDrawEngine&quot;&gt;
+     &lt;engine name=&quot;AssociationClassConnectorDrawEngine&quot; editLocked=&quot;false&quot;&gt;
+       &lt;resources/&gt;
+     &lt;/engine&gt;
+-  &lt;/DCE.5CAE9BF4-0528-6F30-6D28-91DBC53E39A6&gt;
+-  &lt;DCE.21B5F820-A043-7DF6-4A38-700E62723B38 PEID=&quot;DCE.21B5F820-A043-7DF6-4A38-700E62723B38&quot; MEID=&quot;DCE.9AEDB15F-ADDB-6A2C-5942-D36728D8B13C&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge AssociationEnd&quot;&gt;
++  &lt;/DCE.BD322858-A4F5-3C81-B85C-27562FD4CDA0&gt;
++  &lt;DCE.3CE9A209-65A2-1881-DBDE-003F8DD1DD51 PEID=&quot;DCE.3CE9A209-65A2-1881-DBDE-003F8DD1DD51&quot; MEID=&quot;DCE.836F3C06-DF8E-654A-A74E-26B28E09D0EC&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge Association NN NN&quot;&gt;
+     &lt;engine name=&quot;AssociationEdgeDrawEngine&quot;&gt;
+       &lt;resources&gt;
+         &lt;resource type=&quot;color&quot; resourceStringID=&quot;145&quot; colorID=&quot;209&quot;/&gt;
+       &lt;/resources&gt;
+     &lt;/engine&gt;
+-  &lt;/DCE.21B5F820-A043-7DF6-4A38-700E62723B38&gt;
+-  &lt;DCE.2A47916D-834F-184B-2541-ADB9FFB0F3C4 PEID=&quot;DCE.2A47916D-834F-184B-2541-ADB9FFB0F3C4&quot; MEID=&quot;DCE.9AEDB15F-ADDB-6A2C-5942-D36728D8B13C&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge AssociationEnd&quot;&gt;
++  &lt;/DCE.3CE9A209-65A2-1881-DBDE-003F8DD1DD51&gt;
++  &lt;DCE.D790AF80-3921-45A8-92E8-D8A5DCCC0CED PEID=&quot;DCE.D790AF80-3921-45A8-92E8-D8A5DCCC0CED&quot; MEID=&quot;DCE.E6A2F899-8740-43E5-C6F4-17A9F98DC675&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge Association NN NN&quot;&gt;
+     &lt;engine name=&quot;AssociationEdgeDrawEngine&quot;&gt;
+       &lt;resources&gt;
+         &lt;resource type=&quot;color&quot; resourceStringID=&quot;145&quot; colorID=&quot;209&quot;/&gt;
+       &lt;/resources&gt;
+     &lt;/engine&gt;
+-  &lt;/DCE.2A47916D-834F-184B-2541-ADB9FFB0F3C4&gt;
+-  &lt;DCE.F128A61E-8DFE-39F3-9FF1-57864D54AD69 PEID=&quot;DCE.F128A61E-8DFE-39F3-9FF1-57864D54AD69&quot; MEID=&quot;DCE.9AEDB15F-ADDB-6A2C-5942-D36728D8B13C&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge AssociationEnd&quot;&gt;
++  &lt;/DCE.D790AF80-3921-45A8-92E8-D8A5DCCC0CED&gt;
++  &lt;DCE.DD34FF7F-BE48-C97F-B023-CDE27758BAD7 PEID=&quot;DCE.DD34FF7F-BE48-C97F-B023-CDE27758BAD7&quot; MEID=&quot;DCE.34AF7258-822B-874C-48C2-9C2431AE3AD7&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge AssociationEnd&quot;&gt;
+     &lt;engine name=&quot;AssociationEdgeDrawEngine&quot;&gt;
+       &lt;resources&gt;
+         &lt;resource type=&quot;color&quot; resourceStringID=&quot;145&quot; colorID=&quot;209&quot;/&gt;
+       &lt;/resources&gt;
+     &lt;/engine&gt;
+-  &lt;/DCE.F128A61E-8DFE-39F3-9FF1-57864D54AD69&gt;
++  &lt;/DCE.DD34FF7F-BE48-C97F-B023-CDE27758BAD7&gt;
++  &lt;DCE.A0015AB3-296C-02EE-233D-014EE1E71B28 PEID=&quot;DCE.A0015AB3-296C-02EE-233D-014EE1E71B28&quot; MEID=&quot;DCE.34AF7258-822B-874C-48C2-9C2431AE3AD7&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge AssociationEnd&quot;&gt;
++    &lt;engine name=&quot;AssociationEdgeDrawEngine&quot;&gt;
++      &lt;resources&gt;
++        &lt;resource type=&quot;color&quot; resourceStringID=&quot;145&quot; colorID=&quot;209&quot;/&gt;
++      &lt;/resources&gt;
++    &lt;/engine&gt;
++  &lt;/DCE.A0015AB3-296C-02EE-233D-014EE1E71B28&gt;
++  &lt;DCE.227897C3-1866-46F6-B1C1-E3A2EFF4E920 PEID=&quot;DCE.227897C3-1866-46F6-B1C1-E3A2EFF4E920&quot; MEID=&quot;DCE.D5D0306F-84A7-36FB-9CE9-991EAD04C989&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge Association NN NN&quot;&gt;
++    &lt;engine name=&quot;AssociationEdgeDrawEngine&quot;&gt;
++      &lt;resources&gt;
++        &lt;resource type=&quot;color&quot; resourceStringID=&quot;145&quot; colorID=&quot;209&quot;/&gt;
++      &lt;/resources&gt;
++    &lt;/engine&gt;
++  &lt;/DCE.227897C3-1866-46F6-B1C1-E3A2EFF4E920&gt;
++  &lt;DCE.1E5A552D-3B7D-A46F-D522-E43617950D6C PEID=&quot;DCE.1E5A552D-3B7D-A46F-D522-E43617950D6C&quot; MEID=&quot;DCE.ED16F24E-D50C-C05C-962B-EC0295946C71&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge Association NN NN&quot;&gt;
++    &lt;engine name=&quot;AssociationEdgeDrawEngine&quot;&gt;
++      &lt;resources&gt;
++        &lt;resource type=&quot;color&quot; resourceStringID=&quot;145&quot; colorID=&quot;209&quot;/&gt;
++      &lt;/resources&gt;
++    &lt;/engine&gt;
++  &lt;/DCE.1E5A552D-3B7D-A46F-D522-E43617950D6C&gt;
++  &lt;DCE.AED8FDE1-CD87-CBC6-6D6A-17C1CE0BEE4B PEID=&quot;DCE.AED8FDE1-CD87-CBC6-6D6A-17C1CE0BEE4B&quot; MEID=&quot;DCE.8628AE1D-C11D-1595-6D82-27D9E7FB0F8F&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge Association NN NN&quot;&gt;
++    &lt;engine name=&quot;AssociationEdgeDrawEngine&quot;&gt;
++      &lt;resources&gt;
++        &lt;resource type=&quot;color&quot; resourceStringID=&quot;145&quot; colorID=&quot;209&quot;/&gt;
++      &lt;/resources&gt;
++    &lt;/engine&gt;
++  &lt;/DCE.AED8FDE1-CD87-CBC6-6D6A-17C1CE0BEE4B&gt;
++  &lt;DCE.CE0DB0E4-1311-42A6-1122-72FB4C83D085 PEID=&quot;DCE.CE0DB0E4-1311-42A6-1122-72FB4C83D085&quot; MEID=&quot;DCE.D81B384F-52E0-16C5-C94F-DD8DFDA0CDC3&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge Association NN NN&quot;&gt;
++    &lt;engine name=&quot;AssociationEdgeDrawEngine&quot;&gt;
++      &lt;resources&gt;
++        &lt;resource type=&quot;color&quot; resourceStringID=&quot;145&quot; colorID=&quot;209&quot;/&gt;
++      &lt;/resources&gt;
++    &lt;/engine&gt;
++  &lt;/DCE.CE0DB0E4-1311-42A6-1122-72FB4C83D085&gt;
++  &lt;DCE.0D2F2363-B89B-BD41-7009-2872062910A8 PEID=&quot;DCE.0D2F2363-B89B-BD41-7009-2872062910A8&quot; MEID=&quot;DCE.A8E85482-AF25-1A77-7082-72E61806E669&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge Association NN NN&quot;&gt;
++    &lt;engine name=&quot;AssociationEdgeDrawEngine&quot;&gt;
++      &lt;resources&gt;
++        &lt;resource type=&quot;color&quot; resourceStringID=&quot;145&quot; colorID=&quot;209&quot;/&gt;
++      &lt;/resources&gt;
++    &lt;/engine&gt;
++  &lt;/DCE.0D2F2363-B89B-BD41-7009-2872062910A8&gt;
++  &lt;DCE.40986746-9A66-F515-5224-A9B13B0FCB7A PEID=&quot;DCE.40986746-9A66-F515-5224-A9B13B0FCB7A&quot; MEID=&quot;DCE.1A2C2F43-C5F2-0077-500E-7AF28D578D62&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge Association NN NN&quot;&gt;
++    &lt;engine name=&quot;AssociationEdgeDrawEngine&quot;&gt;
++      &lt;resources&gt;
++        &lt;resource type=&quot;color&quot; resourceStringID=&quot;145&quot; colorID=&quot;209&quot;/&gt;
++      &lt;/resources&gt;
++    &lt;/engine&gt;
++  &lt;/DCE.40986746-9A66-F515-5224-A9B13B0FCB7A&gt;
++  &lt;DCE.AD711E0E-3305-BF4F-525E-CD21A53CCC44 PEID=&quot;DCE.AD711E0E-3305-BF4F-525E-CD21A53CCC44&quot; MEID=&quot;DCE.34AF7258-822B-874C-48C2-9C2431AE3AD7&quot; toplevelMEID=&quot;DCE.EF72B0EA-755C-D925-ABD4-1472E2BF2F86&quot; initString=&quot;org.netbeans.modules.uml.ui.products.ad.viewfactory.RelationEdge AssociationEnd&quot;&gt;
++    &lt;engine name=&quot;AssociationEdgeDrawEngine&quot;&gt;
++      &lt;resources&gt;
++        &lt;resource type=&quot;color&quot; resourceStringID=&quot;145&quot; colorID=&quot;209&quot;/&gt;
++      &lt;/resources&gt;
++    &lt;/engine&gt;
++  &lt;/DCE.AD711E0E-3305-BF4F-525E-CD21A53CCC44&gt;
+ &lt;/EMBT:DiagramArchive&gt;
+
+Modified: trunk/docs/Iteracao2-CB05/Iteracao 2.txt
+===================================================================
+--- trunk/docs/Iteracao2-CB05/Iteracao 2.txt	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/docs/Iteracao2-CB05/Iteracao 2.txt	2008-06-23 15:32:40 UTC (rev 164)
+@@ -11,7 +11,9 @@
+ Ser&#225; tamb&#233;m incorporado o c&#243;digo da itera&#231;&#227;o anterior.
+ &lt;==== Documentos produzidos ===================================================&gt;
+ Modelo de dados:
+-	DER.dia - Diagrama Entidade Relacionamento em formato Dia;
++	Diagrama de Classes - Projecto Netbeans com o modelo de dados.
++	entities diagram.png - Imagem obtida pela exporta&#231;&#227;o do diagrama do modelo 
++		de dados
+ 	
+ Spikes:
+ 	Prototipo - Prot&#243;tipo de aplica&#231;&#227;o
+
+Added: trunk/docs/Iteracao2-CB05/entities diagram.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Iteracao2-CB05/entities diagram.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/docs/TODO
+===================================================================
+--- trunk/docs/TODO	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/docs/TODO	2008-06-23 15:32:40 UTC (rev 164)
+@@ -10,10 +10,9 @@
+ Image taken from: <A HREF="http://www.drewnoakes.com/code/exif/index.html">http://www.drewnoakes.com/code/exif/index.html</A>
+ 
+ Itera&#231;&#227;o 2:
+-	- Fazer DER e modelo de dominio com base no esquema usado para o mapeamento
+ 	- Abrir cat&#225;logo
+ 	- Fechar cat&#225;logo
+-	- Manter registo de cat&#225;logos recentes
++	- Menus na descri&#231;&#227;o da itera&#231;&#227;o
+ 
+ Itera&#231;&#227;o 4:
+ 	- pesquisa de ficheiros duplicados em todo o cat&#225;logo
+
+Modified: trunk/docs/[Info] Convecoes de codigo.txt
+===================================================================
+--- trunk/docs/[Info] Convecoes de codigo.txt	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/docs/[Info] Convecoes de codigo.txt	2008-06-23 15:32:40 UTC (rev 164)
+@@ -12,7 +12,7 @@
+ ser feita sempre que poss&#237;vel.
+ 
+ Al&#233;m das notas aqui descritas, devem ser seguidas as conve&#231;&#245;es para a linguagem 
+-java definidas pela sun, <A HREF="http://java.sun.com/docs/codeconv/">http://java.sun.com/docs/codeconv/</A>
++java definidas pela sun[1]
+ 
+ M&#233;todos que n&#227;o sejam implementados ter&#227;o de ter no seu corpo um coment&#225;rio de 
+ linha no formato: //TODO: &lt;mensagem&gt;
+@@ -23,3 +23,5 @@
+ Caso seja necess&#225;rio acrescentar notas no c&#243;digo, por exemplo e linhas de 
+ c&#243;digo que se pensam mudar mais tarde ou remover, dever&#225; ser colocado um 
+ coment&#225;rio de linha com o formato: //NOTE: &lt;mensagem&gt;
++
++[1] - <A HREF="http://java.sun.com/docs/codeconv/">http://java.sun.com/docs/codeconv/</A>
+\ No newline at end of file
+
+Modified: trunk/docs/[XPDoc] User Stories Combinadas.txt
+===================================================================
+--- trunk/docs/[XPDoc] User Stories Combinadas.txt	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/docs/[XPDoc] User Stories Combinadas.txt	2008-06-23 15:32:40 UTC (rev 164)
+@@ -27,8 +27,8 @@
+ - Deve ser poss&#237;vel procurar ficheiros duplicados, o nome n&#227;o deve ser limita&#231;&#227;o.
+ 
+ CB05: ST4, ST5, ST7
+-- O programa tem de permitir criar cat&#225;logos, abrir cat&#225;logos, manter um registo 
+-de cat&#225;logos recentes, fechar e guardar cat&#225;logos.
++- O programa tem de permitir criar cat&#225;logos, abrir cat&#225;logos, fechar e guardar 
++cat&#225;logos.
+ - Os discos e pastas podem ser catalogados usando etiquetas, o sistema deve ser 
+ independente das categorias e grupos de discos e permitir que o mesmo disco 
+ tenha mais que uma categoria.
+
+Modified: trunk/docs/[XPDoc] User Stories.txt
+===================================================================
+--- trunk/docs/[XPDoc] User Stories.txt	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/docs/[XPDoc] User Stories.txt	2008-06-23 15:32:40 UTC (rev 164)
+@@ -11,8 +11,8 @@
+ localiza&#231;&#227;o f&#237;sica do disco.
+ 
+ ST4:
+-O programa tem de permitir criar cat&#225;logos, abrir cat&#225;logos, manter um registo 
+-de cat&#225;logos recentes, fechar e guardar cat&#225;logos.
++O programa tem de permitir criar cat&#225;logos, abrir cat&#225;logos, fechar e guardar 
++cat&#225;logos.
+ 
+ ST5:
+ Os discos e pastas podem ser catalogados usando etiquetas, o sistema deve ser 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form	2008-06-23 15:32:40 UTC (rev 164)
+@@ -15,13 +15,31 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Component id=&quot;jscpDetailsScroll&quot; alignment=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Component id=&quot;jscpDetailsScroll&quot; alignment=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Container class=&quot;javax.swing.JScrollPane&quot; name=&quot;jscpDetailsScroll&quot;&gt;
++      &lt;AuxValues&gt;
++        &lt;AuxValue name=&quot;autoScrollPane&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
++      &lt;/AuxValues&gt;
++
++      &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout&quot;/&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JTable&quot; name=&quot;jtDetailsTable&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;model&quot; type=&quot;javax.swing.table.TableModel&quot; editor=&quot;org.netbeans.modules.form.RADConnectionPropertyEditor&quot;&gt;
++              &lt;Connection code=&quot;ntModel&quot; type=&quot;code&quot;/&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++  &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -19,10 +19,23 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
++import de.berlios.jfindmyfiles.catalog.entities.Media;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.CatalogNode;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.DiskGroupNode;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.DiskNode;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.FileWrapperNode;
+ import java.io.Serializable;
++import java.util.Collection;
+ import java.util.logging.Logger;
+-import org.openide.explorer.ExplorerManager;
++import org.openide.explorer.view.NodeTableModel;
++import org.openide.util.Lookup;
++import org.openide.util.LookupEvent;
++import org.openide.util.LookupListener;
+ import org.openide.util.NbBundle;
++import org.openide.util.Utilities;
+ import org.openide.windows.TopComponent;
+ import org.openide.windows.WindowManager;
+ 
+@@ -30,16 +43,20 @@
+ /**
+  * Top component which displays something.
+  */
+-final class DetailsViewTopComponent extends TopComponent {
++final class DetailsViewTopComponent extends TopComponent implements LookupListener {
+ 
+     private static DetailsViewTopComponent instance;
+-    private final ExplorerManager manager = new ExplorerManager();
+-    //private final TableView view = new TableView();
+     /** path to the icon used by the component and its open action */
+ //    static final String ICON_PATH = &quot;SET/PATH/TO/ICON/HERE&quot;;
+     private static final String PREFERRED_ID = &quot;DetailsViewTopComponent&quot;;
++    private NodeTableModel ntModel;
++    private Lookup.Result catalogResult = null;
++    private Lookup.Result diskResult = null;
++    private Lookup.Result groupResult = null;
++    private Lookup.Result fileResult = null;
+ 
+     private DetailsViewTopComponent() {
++        ntModel = new NodeTableModel();
+         initComponents();
+         setName(NbBundle.getMessage(DetailsViewTopComponent.class, &quot;CTL_DetailsViewTopComponent&quot;));
+         setToolTipText(NbBundle.getMessage(DetailsViewTopComponent.class, &quot;HINT_DetailsViewTopComponent&quot;));
+@@ -51,23 +68,30 @@
+      * WARNING: Do NOT modify this code. The content of this method is
+      * always regenerated by the Form Editor.
+      */
+-    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot; Generated Code &quot;&gt;//GEN-BEGIN:initComponents
++    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jscpDetailsScroll = new javax.swing.JScrollPane();
++        jtDetailsTable = new javax.swing.JTable();
++
++        jtDetailsTable.setModel(ntModel);
++        jscpDetailsScroll.setViewportView(jtDetailsTable);
++
+         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(this);
+         this.setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+-            .add(0, 400, Short.MAX_VALUE)
++            .add(jscpDetailsScroll, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+-            .add(0, 300, Short.MAX_VALUE)
++            .add(jscpDetailsScroll, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+         );
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JScrollPane jscpDetailsScroll;
++    private javax.swing.JTable jtDetailsTable;
+     // End of variables declaration//GEN-END:variables
+-
+     /**
+      * Gets default instance. Do not use directly: reserved for *.settings files only,
+      * i.e. deserialization routines; otherwise you could get a non-deserialized instance.
+@@ -106,12 +130,41 @@
+ 
+     @Override
+     public void componentOpened() {
+-        // TODO add custom code on component opening
++        /*diskResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(DiskNode.class));
++        diskResult.addLookupListener(this);
++        
++        catalogResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(CatalogNode.class));
++        catalogResult.addLookupListener(this);
++        
++        fileResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(FileWrapperNode.class));
++        fileResult.addLookupListener(this);
++        
++        groupResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(DiskGroupNode.class));
++        groupResult.addLookupListener(this);*/
++
++        diskResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(Media.class));
++        diskResult.addLookupListener(this);
++
++        catalogResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(CatalogEngine.class));
++        catalogResult.addLookupListener(this);
++
++        fileResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(FileWrapper.class));
++        fileResult.addLookupListener(this);
++
++        groupResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(DiskGroup.class));
++        groupResult.addLookupListener(this);
+     }
+ 
+     @Override
+     public void componentClosed() {
+-        // TODO add custom code on component closing
++        diskResult.removeLookupListener(this);
++        diskResult = null;
++        catalogResult.removeLookupListener(this);
++        catalogResult = null;
++        fileResult.removeLookupListener(this);
++        fileResult = null;
++        groupResult.removeLookupListener(this);
++        groupResult = null;
+     }
+ 
+     /** replaces this in object stream */
+@@ -134,7 +187,16 @@
+         }
+     }
+ 
+-    public ExplorerManager getExplorerManager() {
+-        return manager;
+-    }    
++    public void resultChanged(LookupEvent evt) {
++        System.err.println(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; EVENT! EVENT! EVENT! EVENT! EVENT! EVENT!&quot;);
++        Lookup.Result r = (Lookup.Result) evt.getSource();
++        Collection c = r.allInstances();
++        if (!c.isEmpty()) {
++            /*            APIObject o = (APIObject) c.iterator().next();
++            jLabel1.setText(Integer.toString(o.getIndex()));
++            jLabel2.setText(o.getDate().toString());*/
++            System.err.println(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; SELECTED: &quot; + c.iterator().next());
++        }
++        //ntModel.setNodes(null);
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentWstcref.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentWstcref.xml	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentWstcref.xml	2008-06-23 15:32:40 UTC (rev 164)
+@@ -22,5 +22,5 @@
+ &lt;tc-ref version=&quot;2.0&quot; &gt;
+     &lt;module name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui&quot; spec=&quot;1.0&quot;/&gt;
+     &lt;tc-id id=&quot;DetailsViewTopComponent&quot;/&gt;
+-    &lt;state opened=&quot;true&quot;/&gt;
++    &lt;state opened=&quot;false&quot;/&gt;
+ &lt;/tc-ref&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -41,7 +41,6 @@
+ import org.openide.windows.TopComponent;
+ import org.openide.windows.WindowManager;
+ //import org.openide.util.Utilities;
+-
+ /**
+  * Top component which displays an explorer like tree with currently opened 
+  * catalogs and all stored information.
+@@ -54,9 +53,7 @@
+     private static NavigationTreeTopComponent instance;
+     /** path to the icon used by the component and its open action */
+ //    static final String ICON_PATH = &quot;SET/PATH/TO/ICON/HERE&quot;;
+-    private static final String PREFERRED_ID = &quot;NavigationTreeTopComponent&quot;;
+-    
+-    //
++    private static final String PREFERRED_ID = &quot;NavigationTreeTopComponent&quot;;    //
+     private CatalogEngine eng;
+ 
+     private NavigationTreeTopComponent() {
+@@ -72,17 +69,7 @@
+         setLayout(new BorderLayout());
+         add(view, BorderLayout.CENTER);
+         view.setRootVisible(true);
+-      //manager.setRootContext(new CatalogNode());
+-    //Code from the feed reader example, needs to be rewritten
+-        /*try {
+-    //manager.setRootContext(new RssNode.RootRssNode());
+-    } catch (DataObjectNotFoundException ex) {
+-    ErrorManager.getDefault().notify(ex);
+-    }*/
+-    
+-    ActionMap map = getActionMap();
+-    //map.put(&quot;delete&quot;, ExplorerUtils.actionDelete(manager, true));
+-    //associateLookup(ExplorerUtils.createLookup(manager, map));
++        associateLookup(ExplorerUtils.createLookup(manager, getActionMap()));
+     }
+ 
+     /** This method is called from within the constructor to
+@@ -184,7 +171,7 @@
+     public void catalogOpened(CatalogEngineEvent evt) {
+         manager.setRootContext(new CatalogNode(evt.getName(), false));//TODO:
+     }
+-    
++
+     public void catalogClosed(CatalogEngineEvent evt) {
+         try {
+             manager.getRootContext().destroy(); //TODO:
+@@ -192,7 +179,7 @@
+             Exceptions.printStackTrace(ex);
+         }
+     }
+-    
++
+     public void diskGroupAdded(CatalogEngineEvent evt) {
+         throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
+     }
+@@ -212,4 +199,4 @@
+     public void diskRemoved(CatalogEngineEvent evt) {
+         throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
+     }
+-}
++}
+\ No newline at end of file
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindInThisDiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindInThisDiskGroup.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindInThisDiskGroup.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -26,7 +26,7 @@
+ public final class ActionFindInThisDiskGroup extends CallableSystemAction {
+ 
+     public void performAction() {
+-        //TODO:
++        //TODO: perform find in disk group option
+     }
+ 
+     public String getName() {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionLaunchFile.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionLaunchFile.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionLaunchFile.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -22,23 +22,29 @@
+ import java.awt.Desktop;
+ import java.io.File;
+ import java.io.IOException;
++import java.util.logging.Level;
++import java.util.logging.Logger;
++import javax.swing.JOptionPane;
+ import org.openide.util.HelpCtx;
+ import org.openide.util.NbBundle;
+ import org.openide.util.actions.CallableSystemAction;
++import org.openide.windows.WindowManager;
+ 
+ public final class ActionLaunchFile extends CallableSystemAction {
++    
++    private static final Logger logger = Logger.getLogger(ActionLaunchFile.class.getName());
+ 
+     public void performAction() {
+         if(Desktop.isDesktopSupported()) {
+-            Desktop d = Desktop.getDesktop();
+-            try {
+-                d.open(new File(&quot;&quot;));
++            Desktop dsk = Desktop.getDesktop();
++            try {//TODO: get the file
++                dsk.open(new File(&quot;&quot;));
+             } catch (IOException ex) {
+-                //TODO: proper logging
+-                //TODO: message for file not found or action not allowed
++                logger.log(Level.FINE, &quot;Operation not supported or file not found&quot;, ex);//TODO: i18n
++                JOptionPane.showMessageDialog(WindowManager.getDefault().getMainWindow(), &quot;&quot;, &quot;&quot;, JOptionPane.ERROR_MESSAGE);
+             }
+-        } else {
+-            //TODO: message for operation not supporteds
++        } else {//TODO: i18n
++            JOptionPane.showMessageDialog(WindowManager.getDefault().getMainWindow(), &quot;&quot;, &quot;&quot;, JOptionPane.INFORMATION_MESSAGE);
+         }
+     }
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-23 15:32:40 UTC (rev 164)
+@@ -139,7 +139,7 @@
+ SearchForDuplicatesDlg.jLabel1.text=Found {0} in {1} examined files
+ SearchForDuplicatesDlg.jButton1.text=jButton1
+ SearchForDuplicatesDlg.jButton2.text=jButton2
+-ExportDlg.jchkOpenAfter.text=Open after export
++ExportDlg.jchkOpenAfter.text=Open after export (this action is platform dependent)
+ ExportDlg.jlblInclude.text=Include:
+ ExportDlg.jchkIncludeImages.text=Image thumbnails
+ ExportDlg.jchkIncludeAudioC.text=Audio clips
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -28,13 +28,19 @@
+ import de.berlios.jfindmyfiles.exportengine.XML;
+ import java.awt.CardLayout;
+ import java.awt.Component;
++import java.awt.Desktop;
+ import java.io.File;
++import java.io.IOException;
++import java.util.logging.Level;
++import java.util.logging.Logger;
+ import javax.swing.ImageIcon;
+ import javax.swing.JFileChooser;
+ import javax.swing.JLabel;
+ import javax.swing.JList;
++import javax.swing.JOptionPane;
+ import javax.swing.ListCellRenderer;
+ import javax.swing.SwingConstants;
++import org.openide.util.Exceptions;
+ import org.openide.util.Utilities;
+ 
+ /**
+@@ -52,6 +58,8 @@
+     private Integer[] values = new Integer[]{0, 1, 2, 3, 4, 5};
+     private File selectedFile;
+     private int visiblePanel = 0,  previousPanel = 0;
++    private static final Logger logger = Logger.getLogger(ExportDlg.class.getName());
++    private boolean openAfterExport;
+ 
+     /** Creates new form ExportDlg */
+     public ExportDlg(java.awt.Frame parent, boolean modal) {
+@@ -527,9 +535,8 @@
+ }//GEN-LAST:event_jcbxSelectTemplateActionPerformed
+ 
+ private void jchkOpenAfterStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jchkOpenAfterStateChanged
+-//TODO: open file after exporting
++    openAfterExport = jchkOpenAfter.isSelected();
+ }//GEN-LAST:event_jchkOpenAfterStateChanged
+-
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JScrollPane jScrollPane1;
+     private javax.swing.JSeparator jSeparator1;
+@@ -581,11 +588,20 @@
+             lay.previous(jpExportOptions);
+         }
+         visiblePanel = previousPanel;
++        if (openAfterExport) {
++            if (Desktop.isDesktopSupported()) {
++                try {
++                    Desktop.getDesktop().open(selectedFile);
++                } catch (IOException ex) {
++                    logger.log(Level.FINE, &quot;Desktop not supported&quot;, ex);
++                }
++            }
++        }
+     }
+ 
+     public void exportError() {
+-        //TODO: show error message
+-        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++        //TODO: i18n
++        JOptionPane.showMessageDialog(this, &quot;&quot;, &quot;&quot;, JOptionPane.ERROR_MESSAGE);
+     }
+ 
+     /**
+@@ -628,13 +644,13 @@
+             return this;
+         }
+     }
+-    
++
+     private class Template {
+-        
++
+         private ImageIcon preview;
+         private String author;
+         private String name;
+-        
++
+         public Template(ImageIcon preview, String author, String name) {
+             this.preview = preview;
+             this.author = author;
+@@ -652,7 +668,7 @@
+         public ImageIcon getPreview() {
+             return preview;
+         }
+-        
++
+         @Override
+         public String toString() {
+             return name;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -47,7 +47,7 @@
+     public CatalogNode(String name, boolean created) {
+         //super(Children.create(new CatalogChildNodesFactory(), true));
+         //TODO: populate child nodes
+-        super(created ? Children.LEAF : new CatalogChildren(null));
++        super(created ? Children.LEAF : new CatalogChildren(null), Lookups.singleton(Lookup.getDefault().lookup(CatalogEngine.class)));
+ 
+         CatalogEngine eng = Lookup.getDefault().lookup(CatalogEngine.class);
+         setName(eng.getProperties().getName());
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -42,7 +42,7 @@
+     private SystemAction[] sysact;
+ 
+     public DiskGroupNode(DiskGroup group, boolean leaf) {
+-        super((leaf ? Children.LEAF : new DiskGroupChildren(group.getId())));
++        super((leaf ? Children.LEAF : new DiskGroupChildren(group.getId())), Lookups.singleton(group));
+         setName(group.getName());
+ 
+         Lookup lo = Lookups.forPath(&quot;/Actions&quot;);//TODO: sort actions correctly and add separators
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -27,6 +27,7 @@
+ import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
+ import org.openide.util.actions.SystemAction;
++import org.openide.util.lookup.AbstractLookup;
+ import org.openide.util.lookup.Lookups;
+ 
+ /**
+@@ -39,7 +40,7 @@
+     private Media media;
+ 
+     public DiskNode(Media media) {
+-        super(new DiskChildren(media.getId(), true));
++        super(new DiskChildren(media.getId(), true), Lookups.singleton(media));
+         this.media = media;
+         setName(media.getName());
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -11,6 +11,7 @@
+ import org.openide.nodes.AbstractNode;
+ import org.openide.nodes.Children;
+ import org.openide.util.Utilities;
++import org.openide.util.lookup.Lookups;
+ 
+ /**
+  *
+@@ -21,7 +22,7 @@
+     private FileWrapper folder;
+     
+     public FileWrapperNode(FileWrapper folder, boolean leaf) {
+-        super(leaf ? Children.LEAF : new DiskChildren(folder.getId(), false));
++        super(leaf ? Children.LEAF : new DiskChildren(folder.getId(), false), Lookups.singleton(folder));
+         this.folder = folder;
+         setName(folder.getName());
+     }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchParentNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchParentNode.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchParentNode.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -34,7 +34,7 @@
+ 
+     @Override
+     public SystemAction[] getActions(boolean bool) {
+-        //TODO:
++        //TODO: system actions
+         return new SystemAction[]{};
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchResultNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchResultNode.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchResultNode.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -38,7 +38,7 @@
+ 
+     @Override
+     public SystemAction[] getActions(boolean bool) {
+-        //TODO:
++        //TODO: system action
+         return new SystemAction[]{};
+     }
+ }
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/RecentCatalog.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/RecentCatalog.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/RecentCatalog.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -1,56 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.utils;
+-
+-import java.io.Serializable;
+-
+-public class RecentCatalog implements Serializable {
+-    
+-    private String name;
+-    private boolean local;
+-    private String address;
+-    private String user;
+-    private String password;
+-    private int port;
+-
+-    public RecentCatalog(String name, boolean local, String address, String user, String password, int port) {
+-        this.name = name;
+-        this.local = local;
+-        this.address = address;
+-        this.user = user;
+-        this.password = password;
+-        this.port = port;
+-    }
+-
+-    public String getAddress() {
+-        return address;
+-    }
+-
+-    public boolean isLocal() {
+-        return local;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public String getPassword() {
+-        return password;
+-    }
+-
+-    public int getPort() {
+-        return port;
+-    }
+-
+-    public String getUser() {
+-        return user;
+-    }
+-    
+-    @Override
+-    public String toString() {
+-        return name;
+-    }
+-}
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -13,6 +13,8 @@
+ import java.util.Hashtable;
+ import java.util.List;
+ import java.util.Properties;
++import java.util.logging.Level;
++import java.util.logging.Logger;
+ import org.openide.util.NbPreferences;
+ 
+ /**
+@@ -23,10 +25,11 @@
+ 
+     private Hashtable&lt;String, Reader&gt; cache;
+     private Properties active;
++    private static final Logger logger = Logger.getLogger(PluginCache.class.getName());
+ 
+     public PluginCache() {
+         cache = new Hashtable&lt;String, Reader&gt;();
+-        //TODO:
++        //TODO: how to know if a given plugin is active
+         active = new Properties();
+         loadPlugins();
+     }
+@@ -73,13 +76,13 @@
+             reader = (Reader) tClass.newInstance();
+             cache.put(reader.pluginFor(), reader);
+         } catch (MalformedURLException ex) {
+-            //TODO: logging
++            logger.log(Level.WARNING, &quot;Unable to read plugin cache&quot;, ex);
+         } catch (ClassNotFoundException ex) {
+-            //TODO: logging
++            logger.log(Level.WARNING, &quot;Unable to read plugin cache&quot;, ex);
+         } catch (InstantiationException ex) {
+-            //TODO: logging
++            logger.log(Level.WARNING, &quot;Unable to read plugin cache&quot;, ex);
+         } catch (IllegalAccessException ex) {
+-            //TODO: logging
++            logger.log(Level.WARNING, &quot;Unable to read plugin cache&quot;, ex);
+         }
+     }
+ 
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java	2008-06-22 23:06:57 UTC (rev 163)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java	2008-06-23 15:32:40 UTC (rev 164)
+@@ -18,6 +18,8 @@
+ import java.io.File;
+ import java.io.IOException;
+ import java.util.Iterator;
++import java.util.logging.Level;
++import java.util.logging.Logger;
+ import javax.imageio.ImageIO;
+ import javax.swing.ImageIcon;
+ 
+@@ -33,6 +35,7 @@
+     private ImageIcon ic;
+     private BufferedImage bimg;
+     private ByteArrayOutputStream bas;
++    private static final Logger logger = Logger.getLogger(JPGPlugin.class.getName());
+ 
+     public JPGPlugin() {
+         ic = new ImageIcon();
+@@ -101,10 +104,9 @@
+ 
+             return new DescriptionValues(buf.toString(), data, null, null, null);
+         } catch (JpegProcessingException ex) {
+-            //TODO: logging
++            logger.log(Level.WARNING, &quot;JPGPlugin failed&quot;, ex);
+         } catch (IOException ex) {
+-            //TODO: logging
+-            //Logger.getLogger(JPGPlugin.class.getName()).log(Level.SEVERE, null, ex);
++            logger.log(Level.WARNING, &quot;JPGPlugin failed&quot;, ex);
+         }
+         return new DescriptionValues();
+     }
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000158.html">[Jfindmyfiles-commits] r163 - in trunk:	docs/Iteracao3-CB03/APIOverview	docs/Iteracao3-CB03/APIOverview/nbproject	spikes/ExecutarFicheiro spikes/ExecutarFicheiro/nbproject
+</A></li>
+	<LI>Next message: <A HREF="000160.html">[Jfindmyfiles-commits] r165 - in trunk: docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	spikes spikes/TemplateExport spikes/TemplateExport/nbproject	spikes/TemplateExport/src spikes/TemplateExport/src/de	spikes/TemplateExport/src/de/berlios	spikes/TemplateExport/src/de/berlios/jfindmyfiles	spikes/TemplateExport/src/de/berlios/jfindmyfiles/templateexport
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#159">[ date ]</a>
+              <a href="thread.html#159">[ thread ]</a>
+              <a href="subject.html#159">[ subject ]</a>
+              <a href="author.html#159">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

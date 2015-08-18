@@ -1,0 +1,2963 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r145 - in trunk: docs/Iteracao3-CB03	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/META-INF/services	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils	spikes/PluginAPI spikes/PluginAPI/nbproject spikes/PluginAPI/src	spikes/PluginAPI/src/de/berlios/jfindmyfiles	spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities	spikes/PluginAPI/src/pluginapi
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r145%20-%20in%20trunk%3A%20docs/Iteracao3-CB03%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/ReadingFiles/nbproject%0A%09project/JFindMyFiles/ReadingFiles/src/META-INF/services%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils%0A%09spikes/PluginAPI%20spikes/PluginAPI/nbproject%20spikes/PluginAPI/src%0A%09spikes/PluginAPI/src/de/berlios/jfindmyfiles%0A%09spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities%0A%09spikes/PluginAPI/src/pluginapi&In-Reply-To=%3C200806121724.m5CHOfst019510%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000139.html">
+   <LINK REL="Next"  HREF="000141.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r145 - in trunk: docs/Iteracao3-CB03	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/META-INF/services	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils	spikes/PluginAPI spikes/PluginAPI/nbproject spikes/PluginAPI/src	spikes/PluginAPI/src/de/berlios/jfindmyfiles	spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities	spikes/PluginAPI/src/pluginapi</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r145%20-%20in%20trunk%3A%20docs/Iteracao3-CB03%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/ReadingFiles/nbproject%0A%09project/JFindMyFiles/ReadingFiles/src/META-INF/services%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils%0A%09spikes/PluginAPI%20spikes/PluginAPI/nbproject%20spikes/PluginAPI/src%0A%09spikes/PluginAPI/src/de/berlios/jfindmyfiles%0A%09spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities%0A%09spikes/PluginAPI/src/pluginapi&In-Reply-To=%3C200806121724.m5CHOfst019510%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r145 - in trunk: docs/Iteracao3-CB03	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/META-INF/services	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils	spikes/PluginAPI spikes/PluginAPI/nbproject spikes/PluginAPI/src	spikes/PluginAPI/src/de/berlios/jfindmyfiles	spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities	spikes/PluginAPI/src/pluginapi">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu Jun 12 19:24:41 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000139.html">[Jfindmyfiles-commits] r144 - in trunk: docs docs/Iteracao4-CB04	docs/Iteracao6-CB07 docs/Iteracao7-CB06 docs/Iteracao8-CB08	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	spikes/Prototipos/src/de/berlios/kcookb/imagens
+</A></li>
+        <LI>Next message: <A HREF="000141.html">[Jfindmyfiles-commits] r146 - in trunk: docs	project/JFindMyFiles/ExportEngine/nbproject	project/JFindMyFiles/JFindMyFilesGui	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#140">[ date ]</a>
+              <a href="thread.html#140">[ thread ]</a>
+              <a href="subject.html#140">[ subject ]</a>
+              <a href="author.html#140">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-12 19:24:17 +0200 (Thu, 12 Jun 2008)
+New Revision: 145
+
+Added:
+   trunk/docs/Iteracao3-CB03/example.amc
+   trunk/project/JFindMyFiles/ReadingFiles/src/META-INF/services/de.berlios.jfindmyfiles.readingfiles.pluginapi.PluginCache
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/DescriptionValues.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/Reader.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java
+   trunk/spikes/PluginAPI/example.amc
+   trunk/spikes/PluginAPI/src/Run.java
+   trunk/spikes/PluginAPI/src/pluginapi/
+   trunk/spikes/PluginAPI/src/pluginapi/AntMovieCatalogerPlugin.java
+   trunk/spikes/PluginAPI/src/pluginapi/DescriptionValues.java
+   trunk/spikes/PluginAPI/src/pluginapi/PluginCache.java
+   trunk/spikes/PluginAPI/src/pluginapi/Reader.java
+Removed:
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java
+   trunk/spikes/PluginAPI/Anime.amc
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Controller.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/DescriptionValues.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/PluginAPI.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Reader.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.java
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java
+   trunk/spikes/PluginAPI/
+   trunk/spikes/PluginAPI/nbproject/project.properties
+Log:
+Base do sistema de plugins implementada.
+
+Added: trunk/docs/Iteracao3-CB03/example.amc
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Iteracao3-CB03/example.amc
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -66,7 +66,7 @@
+      */
+     public FileWrapper(String name, String absolutePath, long size,
+             boolean file, boolean hidden, long lastModified, Media disk,
+-            FileWrapper parent, String sha1, String extension) {
++            FileWrapper parent, String sha1, String extension, String description) {
+         this.name = name;
+         this.absolutePath = absolutePath;
+         this.size = size;
+@@ -77,6 +77,7 @@
+         this.parent = parent;
+         this.sha1 = sha1;
+         this.extension = extension;
++        this.description = description;
+     }
+ 
+     /**
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-06-12 17:24:17 UTC (rev 145)
+@@ -50,3 +50,6 @@
+ MiscUserPanel.jPanel1.border.title=Personal Data
+ MiscUserPanel.jPanel2.border.title=Exit Behavior
+ MiscUserPanel.jCheckBox1.text=Show confirmation dialog
++PluginsPanel.jLabel1.text=Plugin Folder:
++PluginsPanel.jTextField1.text=
++PluginsPanel.jButton1.text=...
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.form	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.form	2008-06-12 17:24:17 UTC (rev 145)
+@@ -15,13 +15,89 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;202&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jScrollPane1&quot; alignment=&quot;0&quot; min=&quot;-2&quot; pref=&quot;408&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jSeparator1&quot; alignment=&quot;0&quot; pref=&quot;413&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jLabel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jTextField1&quot; pref=&quot;293&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;68&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jLabel1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jTextField1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jSeparator1&quot; min=&quot;-2&quot; pref=&quot;10&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jScrollPane1&quot; pref=&quot;263&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;PluginsPanel.jLabel1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jTextField1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;PluginsPanel.jTextField1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;PluginsPanel.jButton1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jButton1ActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JSeparator&quot; name=&quot;jSeparator1&quot;&gt;
++    &lt;/Component&gt;
++    &lt;Container class=&quot;javax.swing.JScrollPane&quot; name=&quot;jScrollPane1&quot;&gt;
++      &lt;AuxValues&gt;
++        &lt;AuxValue name=&quot;autoScrollPane&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
++      &lt;/AuxValues&gt;
++
++      &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout&quot;/&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JTable&quot; name=&quot;jTable1&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;model&quot; type=&quot;javax.swing.table.TableModel&quot; editor=&quot;org.netbeans.modules.form.editors2.TableModelEditor&quot;&gt;
++              &lt;Table columnCount=&quot;4&quot; rowCount=&quot;4&quot;&gt;
++                &lt;Column editable=&quot;true&quot; title=&quot;Title 1&quot; type=&quot;java.lang.Object&quot;/&gt;
++                &lt;Column editable=&quot;true&quot; title=&quot;Title 2&quot; type=&quot;java.lang.Object&quot;/&gt;
++                &lt;Column editable=&quot;true&quot; title=&quot;Title 3&quot; type=&quot;java.lang.Object&quot;/&gt;
++                &lt;Column editable=&quot;true&quot; title=&quot;Title 4&quot; type=&quot;java.lang.Object&quot;/&gt;
++              &lt;/Table&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;rowSelectionAllowed&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++  &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -2,17 +2,26 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.jfindmyfilesgui;
+ 
++import de.berlios.jfindmyfiles.readingfiles.pluginapi.PluginCache;
++import de.berlios.jfindmyfiles.readingfiles.pluginapi.Reader;
++import java.util.List;
++import javax.swing.event.TableModelListener;
++import javax.swing.table.AbstractTableModel;
++import javax.swing.table.TableModel;
++import org.openide.util.Lookup;
++
+ final class PluginsPanel extends javax.swing.JPanel {
+ 
+     private final PluginsPanelController controller;
++    private PluginCache cache;
+ 
+     PluginsPanel(PluginsPanelController controller) {
+         this.controller = controller;
++        cache = Lookup.getDefault().lookup(PluginCache.class);
+         initComponents();
+-        // TODO listen to changes in form fields and call controller.changed()
++    // TODO listen to changes in form fields and call controller.changed()
+     }
+ 
+     /** This method is called from within the constructor to
+@@ -23,18 +32,75 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jLabel1 = new javax.swing.JLabel();
++        jTextField1 = new javax.swing.JTextField();
++        jButton1 = new javax.swing.JButton();
++        jSeparator1 = new javax.swing.JSeparator();
++        jScrollPane1 = new javax.swing.JScrollPane();
++        jTable1 = new javax.swing.JTable();
++
++        org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(PluginsPanel.class, &quot;PluginsPanel.jLabel1.text&quot;)); // NOI18N
++
++        jTextField1.setText(org.openide.util.NbBundle.getMessage(PluginsPanel.class, &quot;PluginsPanel.jTextField1.text&quot;)); // NOI18N
++
++        org.openide.awt.Mnemonics.setLocalizedText(jButton1, org.openide.util.NbBundle.getMessage(PluginsPanel.class, &quot;PluginsPanel.jButton1.text&quot;)); // NOI18N
++        jButton1.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jButton1ActionPerformed(evt);
++            }
++        });
++
++        jTable1.setModel(new javax.swing.table.DefaultTableModel(
++            new Object [][] {
++                {null, null, null, null},
++                {null, null, null, null},
++                {null, null, null, null},
++                {null, null, null, null}
++            },
++            new String [] {
++                &quot;Title 1&quot;, &quot;Title 2&quot;, &quot;Title 3&quot;, &quot;Title 4&quot;
++            }
++        ));
++        jTable1.setRowSelectionAllowed(false);
++        jScrollPane1.setViewportView(jTable1);
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+         this.setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 202, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
++                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
++                    .addGroup(layout.createSequentialGroup()
++                        .addComponent(jLabel1)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                        .addComponent(jButton1)))
++                .addContainerGap())
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 68, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jLabel1)
++                    .addComponent(jButton1)
++                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
++                .addContainerGap())
+         );
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+ 
++private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
++// TODO add your handling code here:
++}//GEN-LAST:event_jButton1ActionPerformed
++
+     void load() {
+         // TODO read settings and initialize GUI
+         // Example:        
+@@ -61,5 +127,68 @@
+     }
+ 
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JLabel jLabel1;
++    private javax.swing.JScrollPane jScrollPane1;
++    private javax.swing.JSeparator jSeparator1;
++    private javax.swing.JTable jTable1;
++    private javax.swing.JTextField jTextField1;
+     // End of variables declaration//GEN-END:variables
++
++    private class PluginModel extends AbstractTableModel {
++
++        private List&lt;Reader&gt; values = cache.listAll();
++       
++        private int rowCount;
++        
++        public PluginModel() {
++            super();
++            rowCount = cache.pluginCount();
++        }
++        
++        @Override
++        public int getRowCount() {
++            return rowCount;
++        }
++
++        @Override
++        public int getColumnCount() {
++            return 4;
++        }
++
++        @Override
++        public Object getValueAt(int rowIndex, int columnIndex) {
++            switch(columnIndex) {
++                case 0:
++                    return values.get(rowIndex).getName();
++                case 1:
++                    return values.get(rowIndex).pluginFor();
++                case 2:
++                    return values.get(rowIndex).getAuthor();
++                case 3:
++                    return null;//TODO:
++            }
++            return null;
++        }
++        
++        @Override
++        public Class getColumnClass(int c) {
++            switch(c) {
++                case 0:
++                    return String.class;
++                case 1:
++                    return String.class;
++                case 2:
++                    return String.class;
++                case 3:
++                    return Boolean.class;
++            }
++            return Object.class;
++        }
++    
++        @Override
++        public boolean isCellEditable(int l, int c) {
++            return c == 3;
++        }        
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=e12938b8
++build.xml.data.CRC32=6c2a2beb
+ build.xml.script.CRC32=78d85b23
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=e12938b8
++nbproject/build-impl.xml.data.CRC32=6c2a2beb
+ nbproject/build-impl.xml.script.CRC32=a04a2658
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-06-12 17:24:17 UTC (rev 145)
+@@ -41,6 +41,8 @@
+             &lt;/module-dependencies&gt;
+             &lt;public-packages&gt;
+                 &lt;package&gt;de.berlios.jfindmyfiles.readingfiles&lt;/package&gt;
++                &lt;package&gt;de.berlios.jfindmyfiles.readingfiles.pluginapi&lt;/package&gt;
++                &lt;package&gt;de.berlios.jfindmyfiles.readingfiles.plugins&lt;/package&gt;
+             &lt;/public-packages&gt;
+         &lt;/data&gt;
+     &lt;/configuration&gt;
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/META-INF/services/de.berlios.jfindmyfiles.readingfiles.pluginapi.PluginCache
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/META-INF/services/de.berlios.jfindmyfiles.readingfiles.pluginapi.PluginCache	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/META-INF/services/de.berlios.jfindmyfiles.readingfiles.pluginapi.PluginCache	2008-06-12 17:24:17 UTC (rev 145)
+@@ -0,0 +1 @@
++de.berlios.jfindmyfiles.readingfiles.pluginapi.PluginCache
+\ No newline at end of file
+
+Deleted: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,26 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.readingfiles;
+-
+-public interface Controller {
+-    
+-    void sendDescriptionValues(DescriptionValues values);
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,34 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.readingfiles;
+-
+-import de.berlios.jfindmyfiles.catalog.entities.AudioData;
+-import de.berlios.jfindmyfiles.catalog.entities.ImageData;
+-import de.berlios.jfindmyfiles.catalog.entities.VideoData;
+-import javax.swing.ImageIcon;
+-
+-public interface DescriptionValues {
+-    
+-    String getTextDescription();
+-    ImageIcon getIcon();
+-    AudioData getAudioData();
+-    VideoData getVideoData();
+-    ImageData getThumbnail();
+-}
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -23,6 +23,8 @@
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
+ import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
++import de.berlios.jfindmyfiles.readingfiles.pluginapi.PluginCache;
++import de.berlios.jfindmyfiles.readingfiles.pluginapi.Reader;
+ import de.berlios.jfindmyfiles.readingfiles.utils.ReadingUtils;
+ import java.io.File;
+ import java.util.Stack;
+@@ -47,6 +49,7 @@
+             public void run() {
+                 fireReadingStarted(new ReadingEvent(me, &quot;&quot;, null));
+                 Session s = Lookup.getDefault().lookup(CatalogEngine.class).sessionFactory.getCurrentSession();
++                PluginCache cache = Lookup.getDefault().lookup(PluginCache.class);
+                 s.beginTransaction();
+                 Stack&lt;CompositeFile&gt; directories = new Stack&lt;CompositeFile&gt;();
+                 File current, listing[];
+@@ -54,6 +57,8 @@
+                 long childSize = 0L, totalSize = 0L;
+                 FileWrapper fw, temp;
+                 int z;
++                String tExt;
++                Reader reader;
+                 Media container = new Media();
+                 container.setName(mediaName);
+                 container.setType(ReadingUtils.findFileType(file.getAbsolutePath()));
+@@ -72,7 +77,8 @@
+                                     listing[z].isHidden(),
+                                     listing[z].lastModified(), container, null,
+                                     (sha ? ReadingUtils.calculateSHA1HashString(listing[z]) : &quot;&quot;),
+-                                    ReadingUtils.findExtension(listing[z].getName()));
++                                    (tExt = ReadingUtils.findExtension(listing[z].getName())), //TODO: same for other attributes
++                                    (reader = cache.readerFor(tExt)) != null ? reader.read(listing[z]).getDescription() : &quot;&quot;);
+                             s.save(temp);
+                             container.addFile(temp);
+                         }
+@@ -86,7 +92,7 @@
+                     fw = new FileWrapper(current.getName(),
+                             current.getAbsolutePath(), 0, current.isFile(),
+                             current.isHidden(), current.lastModified(),
+-                            container, cf.parent, &quot;&quot;, &quot;&quot;);//NOTE: should we hash a directory?
++                            container, cf.parent, &quot;&quot;, &quot;&quot;, &quot;&quot;);//NOTE: should we hash a directory?
+                     s.save(fw);
+                     if ((listing = current.listFiles()) != null) {
+                         for (z = listing.length; z-- &gt; 0;) {
+@@ -101,7 +107,8 @@
+                                         listing[z].isHidden(),
+                                         listing[z].lastModified(), container, fw,
+                                         (sha ? ReadingUtils.calculateSHA1HashString(listing[z]) : &quot;&quot;),
+-                                        ReadingUtils.findExtension(listing[z].getName()));
++                                        (tExt = ReadingUtils.findExtension(listing[z].getName())), //TODO: same for other attributes
++                                        (reader = cache.readerFor(tExt)) != null ? reader.read(listing[z]).getDescription() : &quot;&quot;);
+                                 s.save(temp);
+                                 fw.addChild(temp);
+                             }
+
+Deleted: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,30 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.readingfiles;
+-
+-import java.io.File;
+-
+-public interface Reader {
+-    
+-    String getName();
+-    int getType();
+-    void setController(Controller controller);
+-    void read(File file);   
+-}
+
+Copied: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/DescriptionValues.java (from rev 144, trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java)
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/DescriptionValues.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -0,0 +1,63 @@
++/**
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.readingfiles.pluginapi;
++
++import javax.swing.ImageIcon;
++
++public class DescriptionValues {
++
++    private String description;
++    private byte[] image;
++    private byte[] audio;
++    private byte[] video;
++    private ImageIcon icon;
++    
++    public DescriptionValues() {
++        this(&quot;&quot;, null, null, null, null);
++    }
++
++    public DescriptionValues(String description, byte[] image, byte[] audio, byte[] video, ImageIcon icon) {
++        this.description = description;
++        this.image = image;
++        this.audio = audio;
++        this.video = video;
++        this.icon = icon;
++    }
++
++    public byte[] getAudio() {
++        return audio;
++    }
++
++    public String getDescription() {
++        return description;
++    }
++
++    public ImageIcon getIcon() {
++        return icon;
++    }
++
++    public byte[] getImage() {
++        return image;
++    }
++
++    public byte[] getVideo() {
++        return video;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/PluginCache.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -0,0 +1,63 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.readingfiles.pluginapi;
++
++import java.io.File;
++import java.net.MalformedURLException;
++import java.net.URL;
++import java.net.URLClassLoader;
++import java.util.ArrayList;
++import java.util.Hashtable;
++import java.util.List;
++import org.openide.util.Exceptions;
++
++/**
++ *
++ * @author Knitter
++ */
++public class PluginCache {
++
++    private Hashtable&lt;String, Reader&gt; cache;
++
++    public PluginCache() {
++        cache = new Hashtable&lt;String, Reader&gt;();
++    //loadPlugins();
++    }
++
++    private void loadPlugins() {
++        try {
++            File f = new File(&quot;C:\\Documents and Settings\\Knitter\\Desktop\\PLGIN\\&quot;);
++            String s = &quot;pluginapi.AntMovieCatalogerPlugin&quot;;
++            URLClassLoader ucl = new URLClassLoader(new URL[]{f.toURI().toURL()}, ClassLoader.getSystemClassLoader());
++            Class tClass = Class.forName(s, true, ucl);
++            Reader reader = (Reader) tClass.newInstance();
++            cache.put(reader.pluginFor(), reader);
++        } catch (MalformedURLException ex) {
++            //TODO: logging
++        } catch (ClassNotFoundException ex) {
++            Exceptions.printStackTrace(ex);
++        } catch (InstantiationException ex) {
++            Exceptions.printStackTrace(ex);
++        } catch (IllegalAccessException ex) {
++            Exceptions.printStackTrace(ex);
++        }
++    }
++
++    public Reader readerFor(String extension) {
++        return cache.get(extension);
++    }
++    
++    public int pluginCount() {
++        return cache.size();
++    }
++    
++    public List listAll() {
++        ArrayList&lt;Reader&gt; temp = new ArrayList&lt;Reader&gt;();
++        for(Reader r : cache.values()) {
++            temp.add(r);
++        }
++        return temp;
++    }
++}
+
+Copied: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/Reader.java (from rev 144, trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java)
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi/Reader.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -0,0 +1,30 @@
++/**
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.readingfiles.pluginapi;
++
++import java.io.File;
++
++public interface Reader {
++    
++    String getName();
++    String getAuthor();
++    String pluginFor();
++    DescriptionValues read(File file);   
++}
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -0,0 +1,38 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.readingfiles.plugins;
++
++import de.berlios.jfindmyfiles.readingfiles.pluginapi.DescriptionValues;
++import de.berlios.jfindmyfiles.readingfiles.pluginapi.Reader;
++import java.io.File;
++
++/**
++ *
++ * @author Knitter
++ */
++public class AntMovieCatalogerPlugin implements Reader {
++    
++    private static final String NAME = &quot;Ant Movie Cataloger Reader&quot;;
++    private static final String AUTHOR = &quot;Sergio Lopes&quot;;//TODO: provide correct author info
++    private static final String EXT = &quot;amc&quot;;
++
++    public String getName() {
++        return NAME;
++    }
++
++    public String getAuthor() {
++        return AUTHOR;
++    }
++
++    public String pluginFor() {
++        return EXT;
++    }
++
++    public DescriptionValues read(File file) {
++        return new DescriptionValues();
++    }
++
++}
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -33,7 +33,7 @@
+ public class ReadingUtils {
+ 
+     /**
+-     * Method that, given a file name, will return it's extension.
++     * Method that, given a file name, will return it's extension in lower case.
+      * A file extension has little meaning for some operating systems, being 
+      * relevant only on Windows OS. Nevertheless it is necessary to determine 
+      * the extension of a given file to use on the Description API.
+@@ -43,7 +43,7 @@
+      */
+     public static String findExtension(String filename) {
+         int x = -1;
+-        return ((x = filename.lastIndexOf(&quot;.&quot;)) &gt; 0 ? filename.substring(x + 1) : &quot;&quot;);
++        return ((x = filename.lastIndexOf(&quot;.&quot;)) &gt; 0 ? filename.substring(x + 1) : &quot;&quot;).toLowerCase();
+     }
+ 
+     /**
+
+
+Property changes on: trunk/spikes/PluginAPI
+___________________________________________________________________
+Name: svn:ignore
+   + build
+dist
+
+
+Deleted: trunk/spikes/PluginAPI/Anime.amc
+===================================================================
+(Binary files differ)
+
+Added: trunk/spikes/PluginAPI/example.amc
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/PluginAPI/example.amc
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/spikes/PluginAPI/nbproject/project.properties
+===================================================================
+--- trunk/spikes/PluginAPI/nbproject/project.properties	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/nbproject/project.properties	2008-06-12 17:24:17 UTC (rev 145)
+@@ -40,7 +40,7 @@
+ javadoc.use=true
+ javadoc.version=false
+ javadoc.windowtitle=
+-main.class=
++main.class=Run
+ manifest.file=manifest.mf
+ meta.inf.dir=${src.dir}/META-INF
+ platform.active=default_platform
+
+Added: trunk/spikes/PluginAPI/src/Run.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/Run.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/Run.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -0,0 +1,33 @@
++
++import java.io.File;
++import java.net.MalformedURLException;
++import java.util.logging.Level;
++import java.util.logging.Logger;
++import pluginapi.*;
++
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++/**
++ *
++ * @author Knitter
++ */
++public class Run {
++
++    /**
++     * @param args the command line arguments
++     */
++    public static void main(String[] args) {
++        try {
++            PluginCache c = new PluginCache();
++            Reader r = c.readerFor(&quot;AMC&quot;.toLowerCase());
++            DescriptionValues d = r.read(new File(&quot;example.amc&quot;));
++            System.out.println(d.getDescription());
++        } catch (MalformedURLException ex) {
++            Logger.getLogger(Run.class.getName()).log(Level.SEVERE, null, ex);
++        }
++    }
++
++}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Controller.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Controller.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Controller.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,16 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public interface Controller {
+-    
+-    void sendDescriptionValues(DescriptionValues values);
+-
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/DescriptionValues.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/DescriptionValues.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/DescriptionValues.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,24 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles;
+-
+-import de.berlios.jfindmyfiles.catalog.entities.AudioData;
+-import de.berlios.jfindmyfiles.catalog.entities.ImageData;
+-import de.berlios.jfindmyfiles.catalog.entities.VideoData;
+-import javax.swing.ImageIcon;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public interface DescriptionValues {
+-    
+-    String getTextDescription();
+-    ImageIcon getIcon();
+-    AudioData getAudioData();
+-    VideoData getVideoData();
+-    ImageData getThumbnail();
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/PluginAPI.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/PluginAPI.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/PluginAPI.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,21 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles;
+-
+-/**
+- *
+- * @author Knitter
+- */
+-public class PluginAPI {
+-
+-    /**
+-     * @param args the command line arguments
+-     */
+-    public static void main(String[] args) {
+-        // TODO code application logic here
+-    }
+-
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Reader.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Reader.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Reader.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,31 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-
+-package de.berlios.jfindmyfiles;
+-
+-import java.io.File;
+-
+-public interface Reader {
+-    
+-    String getName();
+-    int getType();
+-    void setController(Controller controller);
+-    void read(File file);   
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,107 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.catalog.entities;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class AudioData {
+-
+-    private Long id;
+-    private FileWrapper owner;
+-    private byte[] data;
+-
+-    public AudioData() {
+-        //DO NOTHING
+-    }
+-    
+-    public AudioData(FileWrapper owner, byte[] data) {
+-        this.owner = owner;
+-        this.data = data;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    private void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    public FileWrapper getOwner() {
+-        return owner;
+-    }
+-
+-    public void setOwner(FileWrapper owner) {
+-        this.owner = owner;
+-    }
+-
+-    public byte[] getData() {
+-        return data;
+-    }
+-
+-    public void setData(byte[] data) {
+-        this.data = data;
+-    }
+-
+-    /**
+-     * Equals method doesn't take into account the id of the object. Hibernate 
+-     * only gives an id to a new object when that object is persisted, it is 
+-     * therefor not possible to use the id attribute.
+-     * 
+-     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
+-     * @param obj the object to compare
+-     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
+-     */
+-    @Override
+-    public boolean equals(Object obj) {
+-        if(this == obj) {
+-            return true;
+-        }
+-        
+-        if (!(obj instanceof AudioData)) {
+-            return false;
+-        }
+-
+-        AudioData other = (AudioData) obj;
+-        return owner.equals(other.owner) &amp;&amp; data.length == other.data.length &amp;&amp; data == other.data;
+-    }
+-
+-    //TODO: link for the equals method
+-    /**
+-     * HashCode for this object, excluding the id field.
+-     * @return integer representing the hashcode
+-     * 
+-     * @see equals
+-     */
+-    @Override
+-    public int hashCode() {
+-        int hash = 5;
+-        hash = 83 * hash + (this.owner != null ? this.owner.hashCode() : 0);
+-        hash = 83 * hash + (this.data != null ? this.data.hashCode() : 0);
+-        return hash;
+-    }
+-    
+-    @Override
+-    public String toString() {
+-        return super.toString() + &quot; &quot; + data.length;
+-    }
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,166 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-package de.berlios.jfindmyfiles.catalog.entities;
+-
+-import java.util.Date;
+-
+-/**
+- *
+- * @author knitter
+- */
+-public class CatalogProperties {
+-
+-    private Long id;
+-    private String name;
+-    private String description;
+-    private long totalSize;
+-    private int diskNumber;
+-    private long totalFiles;
+-    private long totalFolders;
+-    private Date creationDate;
+-
+-    public CatalogProperties() {
+-        //DO NOTHING
+-    }
+-
+-    //TODO: confirm if it's really necessary
+-    public CatalogProperties(String name, String description, long totalSize,
+-            int diskNumber, long totalFiles, long totalFolders,
+-            Date creationDate) {
+-
+-        this.name = name;
+-        this.description = description;
+-        this.totalSize = totalSize;
+-        this.diskNumber = diskNumber;
+-        this.totalFiles = totalFiles;
+-        this.totalFolders = totalFolders;
+-        this.creationDate = creationDate;
+-    }
+-    
+-    public void increaseDiskNumber(int amount) {
+-        diskNumber += amount;
+-    }
+-    
+-    public void increaseTotalFiles(int amount) {
+-        totalFiles += totalFiles;
+-    }
+-    
+-    public void increaseTotalFolders(int amount) {
+-        totalFolders += amount;
+-    }
+-
+-    public void increaseTotalSize(long amount) {
+-        totalSize += amount;
+-    }   
+-    
+-    public Date getCreationDate() {
+-        return creationDate;
+-    }
+-
+-    public void setCreationDate(Date creationDate) {
+-        this.creationDate = creationDate;
+-    }
+-
+-    public String getDescription() {
+-        return description;
+-    }
+-
+-    public void setDescription(String description) {
+-        this.description = description;
+-    }
+-    
+-    public int getDiskNumber() {
+-        return diskNumber;
+-    }
+-
+-    public void setDiskNumber(int diskNumber) {
+-        this.diskNumber = diskNumber;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    private void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    
+-    public long getTotalFiles() {
+-        return totalFiles;
+-    }
+-
+-    public void setTotalFiles(long totalFiles) {
+-        this.totalFiles = totalFiles;
+-    }
+-        
+-    public long getTotalFolders() {
+-        return totalFolders;
+-    }
+-
+-    public void setTotalFolders(long totalFolders) {
+-        this.totalFolders = totalFolders;
+-    }
+-    
+-    public long getTotalSize() {
+-        return totalSize;
+-    }
+-
+-    public void setTotalSize(long totalSize) {
+-        this.totalSize = totalSize;
+-    }
+-
+-    /**
+-     * Equals method doesn't take into account the id of the object. Hibernate 
+-     * only gives an id to a new object when that object is persisted, it is 
+-     * therefor not possible to use the id attribute.
+-     * 
+-     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
+-     * @param obj the object to compare
+-     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
+-     */
+-    @Override
+-    public boolean equals(Object obj) {
+-        if (!(obj instanceof CatalogProperties)) {
+-            return false;
+-        }
+-
+-        CatalogProperties other = (CatalogProperties) obj;
+-        //All attributes are ignored, except for the name
+-        return this.name.equals(other.name);
+-    }
+-
+-    //TODO: link for the equals method
+-    /**
+-     * HashCode for this object, excluding the id field.
+-     * @return integer representing the hashcode
+-     * 
+-     * @see equals
+-     */
+-    @Override
+-    public int hashCode() {
+-        int hash = 3;
+-        hash = 71 * hash + (this.name != null ? this.name.hashCode() : 0);
+-        hash = 71 * hash + (this.description != null ? this.description.hashCode() : 0);
+-        hash = 71 * hash + (int) (this.totalSize ^ (this.totalSize &gt;&gt;&gt; 32));
+-        hash = 71 * hash + this.diskNumber;
+-        hash = 71 * hash + (int) (this.totalFiles ^ (this.totalFiles &gt;&gt;&gt; 32));
+-        hash = 71 * hash + (int) (this.totalFolders ^ (this.totalFolders &gt;&gt;&gt; 32));
+-        return hash;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return name;
+-    }
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,145 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.catalog.entities;
+-
+-import java.util.Set;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class DiskGroup {
+-
+-    private Long id;
+-    //Base attributes
+-    private String name;
+-    private String description;
+-    private long capacity;
+-    //Attributes from relationships
+-    private Set groups;
+-    private DiskGroup parent;
+-
+-    public DiskGroup() {
+-        //DO NOTHING
+-    }
+-
+-    public DiskGroup(String name, String description, long capacity) {
+-        this.name = name;
+-        this.description = description;
+-        this.capacity = capacity;
+-    }
+-    
+-    public void increaseCapacity(long amount) {
+-        capacity += amount;
+-    }
+-    
+-    public long getCapacity() {
+-        return capacity;
+-    }
+-    
+-    public void setCapacity(long capacity) {
+-        this.capacity = capacity;
+-    }
+-
+-    public String getDescription() {
+-        return description;
+-    }
+-
+-    public void setDescription(String description) {
+-        this.description = description;
+-    }
+-
+-    private Set getGroups() {
+-        return groups;
+-    }
+-
+-    private void setGroups(Set groups) {
+-        this.groups = groups;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    private void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public DiskGroup getParent() {
+-        return parent;
+-    }
+-
+-    public void setParent(DiskGroup parent) {
+-        this.parent = parent;
+-    }
+-
+-    /**
+-     * Equals method doesn't take into account the id of the object. Hibernate 
+-     * only gives an id to a new object when that object is persisted, it is 
+-     * therefor not possible to use the id attribute.
+-     * 
+-     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
+-     * @param obj the object to compare
+-     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
+-     */
+-    @Override
+-    public boolean equals(Object obj) {
+-        if (this == obj) {
+-            return true;
+-        }
+-
+-        if (!(obj instanceof DiskGroup)) {
+-            return false;
+-        }
+-
+-        DiskGroup other = (DiskGroup) obj;
+-        return name.equals(other.name) &amp;&amp; description.equals(other.description) &amp;&amp; parent.equals(other.parent);
+-    }
+-
+-    //TODO: link for the equals method
+-    /**
+-     * HashCode for this object, excluding the id field.
+-     * @return integer representing the hashcode
+-     * 
+-     * @see equals
+-     */
+-    @Override
+-    public int hashCode() {
+-        int hash = 3;
+-        hash = 83 * hash + (this.name != null ? this.name.hashCode() : 0);
+-        hash = 83 * hash + (this.description != null ? this.description.hashCode()
+-                : 0);
+-        hash = 83 * hash + (this.parent != null ? this.parent.hashCode() : 0);
+-        return hash;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return name;
+-    }
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,273 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.catalog.entities;
+-
+-import java.util.LinkedHashSet;
+-import java.util.Set;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class FileWrapper {
+-
+-    private Long id;
+-    //Base attributes
+-    private String name;
+-    private String absolutePath;
+-    private long lastModified;
+-    private String description;
+-    private boolean hidden;
+-    private long size;
+-    private String extension;
+-    private ImageData image;
+-    private VideoData video;
+-    private AudioData audio;
+-    //Helpers    
+-    private boolean file;
+-    private boolean folder;
+-    //Attributes from relationships    
+-    private Set children = new LinkedHashSet();
+-    private FileWrapper parent;
+-    private Media disk;
+-
+-    public FileWrapper() {
+-        //DO NOTHING
+-    }
+-
+-    /**
+-     * 
+-     * @param name
+-     * @param absolutePath
+-     * @param size
+-     * @param file
+-     * @param hidden
+-     * @param lastModified
+-     * @param disk
+-     * @param parent
+-     */
+-    public FileWrapper(String name, String absolutePath, long size,
+-            boolean file, boolean hidden, long lastModified, Media disk,
+-            FileWrapper parent) {
+-        this.name = name;
+-        this.absolutePath = absolutePath;
+-        this.size = size;
+-        this.folder = !(this.file = file);
+-        this.hidden = hidden;
+-        this.lastModified = lastModified;
+-        this.disk = disk;
+-        this.parent = parent;
+-    }
+-
+-    /**
+-     * 
+-     * @param child
+-     */
+-    public void addChild(FileWrapper child) {
+-        if (children == null) {
+-            children = new LinkedHashSet();
+-        }
+-
+-        children.add(child);
+-
+-    }
+-
+-    /**
+-     * 
+-     * @param child
+-     */
+-    public void removeChild(FileWrapper child) {
+-        if (children != null) {
+-            children.remove(child);
+-        }
+-    }
+-
+-    public String getAbsolutePath() {
+-        return absolutePath;
+-    }
+-
+-    public void setAbsolutePath(String absolutePath) {
+-        this.absolutePath = absolutePath;
+-    }
+-
+-    public AudioData getAudio() {
+-        return audio;
+-    }
+-
+-    public void setAudio(AudioData audio) {
+-        this.audio = audio;
+-    }
+-
+-    private Set getChildren() {
+-        return children;
+-    }
+-
+-    private void setChildren(Set children) {
+-        this.children = children;
+-    }
+-
+-    public String getDescription() {
+-        return description;
+-    }
+-
+-    public void setDescription(String description) {
+-        this.description = description;
+-    }
+-
+-    public Media getDisk() {
+-        return disk;
+-    }
+-
+-    public void setDisk(Media disk) {
+-        this.disk = disk;
+-    }
+-
+-    public String getExtension() {
+-        return extension;
+-    }
+-
+-    public void setExtension(String extension) {
+-        this.extension = extension;
+-    }
+-
+-    public boolean isFile() {
+-        return file;
+-    }
+-
+-    public void setFile(boolean file) {
+-        this.file = file;
+-    }
+-
+-    public boolean isFolder() {
+-        return folder;
+-    }
+-
+-    public void setFolder(boolean folder) {
+-        this.folder = folder;
+-    }
+-
+-    public boolean isHidden() {
+-        return hidden;
+-    }
+-
+-    public void setHidden(boolean hidden) {
+-        this.hidden = hidden;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    private void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    public ImageData getImage() {
+-        return image;
+-    }
+-
+-    public void setImage(ImageData image) {
+-        this.image = image;
+-    }
+-
+-    public long getLastModified() {
+-        return lastModified;
+-    }
+-
+-    public void setLastModified(long lastModified) {
+-        this.lastModified = lastModified;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public FileWrapper getParent() {
+-        return parent;
+-    }
+-
+-    public void setParent(FileWrapper parent) {
+-        this.parent = parent;
+-    }
+-
+-    public long getSize() {
+-        return size;
+-    }
+-
+-    public void setSize(long size) {
+-        this.size = size;
+-    }
+-
+-    public VideoData getVideo() {
+-        return video;
+-    }
+-
+-    public void setVideo(VideoData video) {
+-        this.video = video;
+-    }
+-
+-    /**
+-     * Equals method doesn't take into account the id of the object. Hibernate 
+-     * only gives an id to a new object when that object is persisted, it is 
+-     * therefor not possible to use the id attribute.
+-     * 
+-     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
+-     * @param obj the object to compare
+-     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
+-     */
+-    @Override
+-    public boolean equals(Object obj) {
+-        if (this == obj) {
+-            return true;
+-        }
+-
+-        if (!(obj instanceof FileWrapper)) {
+-            return false;
+-        }
+-
+-        FileWrapper other = (FileWrapper) obj;
+-        return size == other.size &amp;&amp; name.equals(other.name) &amp;&amp; absolutePath.equals(other.absolutePath);
+-    }
+-
+-    //TODO: link for the equals method
+-    /**
+-     * HashCode for this object, excluding the id field.
+-     * @return integer representing the hashcode
+-     * 
+-     * @see equals
+-     */
+-    @Override
+-    public int hashCode() {
+-        int hash = 5;
+-        hash = 11 * hash + (int) (this.size ^ (this.size &gt;&gt;&gt; 32));
+-        hash = 11 * hash + (this.name != null ? this.name.hashCode() : 0);
+-        hash = 11 * hash + (this.absolutePath != null ? this.absolutePath.hashCode() : 0);
+-        return hash;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return name;
+-    }
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,107 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.catalog.entities;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class ImageData {
+-
+-    private Long id;
+-    private FileWrapper owner;
+-    private byte[] data;
+-    
+-    public ImageData() {
+-        //DO NOTHING
+-    }
+-    
+-    public ImageData(FileWrapper owner, byte[] data) {
+-        this.owner = owner;
+-        this.data = data;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    private void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    public FileWrapper getOwner() {
+-        return owner;
+-    }
+-
+-    public void setOwner(FileWrapper owner) {
+-        this.owner = owner;
+-    }
+-
+-    public byte[] getData() {
+-        return data;
+-    }
+-
+-    public void setData(byte[] data) {
+-        this.data = data;
+-    }
+-
+-    /**
+-     * Equals method doesn't take into account the id of the object. Hibernate 
+-     * only gives an id to a new object when that object is persisted, it is 
+-     * therefor not possible to use the id attribute.
+-     * 
+-     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
+-     * @param obj the object to compare
+-     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
+-     */
+-    @Override
+-    public boolean equals(Object obj) {
+-        if(this == obj) {
+-            return true;
+-        }
+-        
+-        if (!(obj instanceof ImageData)) {
+-            return false;
+-        }
+-
+-        ImageData other = (ImageData) obj;
+-        return owner.equals(other.owner) &amp;&amp; data.length == other.data.length &amp;&amp; data == data;
+-    }
+-
+-    //TODO: link for the equals method
+-    /**
+-     * HashCode for this object, excluding the id field.
+-     * @return integer representing the hashcode
+-     * 
+-     * @see equals
+-     */
+-    @Override
+-    public int hashCode() {
+-        int hash = 5;
+-        hash = 97 * hash + (this.owner != null ? this.owner.hashCode() : 0);
+-        hash = 97 * hash + (this.data != null ? this.data.hashCode() : 0);
+-        return hash;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return super.toString() + &quot; &quot; + data.length;
+-    }
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,109 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.catalog.entities;
+-
+-import java.util.Set;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Label {
+-
+-    private Long id;
+-    //Base attributes
+-    private String name;
+-    //Attributes from relationships
+-    private Set media;
+-    
+-    public Label() {
+-        //DO NOTHING
+-    }
+-    
+-    public Label(String name) {
+-        this.name = name;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    private void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    private Set getMedia() {
+-        return media;
+-    }
+-
+-    private void setMedia(Set media) {
+-        this.media = media;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    /**
+-     * Equals method doesn't take into account the id of the object. Hibernate 
+-     * only gives an id to a new object when that object is persisted, it is 
+-     * therefor not possible to use the id attribute.
+-     * 
+-     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
+-     * @param obj the object to compare
+-     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
+-     */
+-    @Override
+-    public boolean equals(Object obj) {
+-        if(this == obj) {
+-            return true;
+-        }
+-        
+-        if (!(obj instanceof Label)) {
+-            return false;
+-        }
+-
+-        Label other = (Label) obj;
+-        return name.equals(other.name);
+-    }
+-
+-    //TODO: link for the equals method
+-    /**
+-     * HashCode for this object, excluding the id field.
+-     * @return integer representing the hashcode
+-     * 
+-     * @see equals
+-     */
+-    @Override
+-    public int hashCode() {
+-        int hash = 5;
+-        hash = 37 * hash + (this.name != null ? this.name.hashCode() : 0);
+-        return hash;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return super.toString() + &quot; &quot; + id + &quot; &quot; + name;
+-    }
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,132 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.catalog.entities;
+-
+-import java.util.Date;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Loan {
+-
+-    private Long id;
+-    private Date loaned;
+-    private Date returned;
+-    private User loanee;
+-    private Media media;
+-    
+-    public Loan() {
+-        //DO NOTHING
+-    }
+-    
+-    public Loan(Date loaned) {
+-        this.loaned = loaned;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    private void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    public Date getLoaned() {
+-        return loaned;
+-    }
+-
+-    public void setLoaned(Date loaned) {
+-        this.loaned = loaned;
+-    }
+-
+-    public User getLoanee() {
+-        return loanee;
+-    }
+-
+-    public void setLoanee(User loanee) {
+-        this.loanee = loanee;
+-    }
+-
+-    public Media getMedium() {
+-        return media;
+-    }
+-
+-    public void setMedium(Media media) {
+-        this.media = media;
+-    }
+-
+-    public Date getReturned() {
+-        return returned;
+-    }
+-
+-    public void setReturned(Date returned) {
+-        this.returned = returned;
+-    }
+-
+-    /**
+-     * Equals method doesn't take into account the id of the object. Hibernate 
+-     * only gives an id to a new object when that object is persisted, it is 
+-     * therefor not possible to use the id attribute.
+-     * 
+-     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
+-     * @param obj the object to compare
+-     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
+-     */
+-    @Override
+-    public boolean equals(Object obj) {
+-        if (this == obj) {
+-            return true;
+-        }
+-
+-        if (!(obj instanceof Loan)) {
+-            return false;
+-        }
+-
+-        Loan other = (Loan) obj;
+-        return loaned.equals(other.loaned) &amp;&amp; loanee.equals(other.loaned) 
+-                &amp;&amp; media.equals(other.media) 
+-                &amp;&amp; (returned != null ? returned.equals(other.returned) 
+-                : (other.returned != null ? false : true));
+-    }
+-    
+-    //TODO: link for the equals method
+-    /**
+-     * HashCode for this object, excluding the id field.
+-     * @return integer representing the hashcode
+-     * 
+-     * @see equals
+-     */    
+-    @Override
+-    public int hashCode() {
+-        int hash = 7;
+-        hash = 59 * hash + (this.loaned != null ? this.loaned.hashCode() : 0);
+-        hash = 59 * hash + (this.returned != null ? this.returned.hashCode() : 0);
+-        hash = 59 * hash + (this.loanee != null ? this.loanee.hashCode() : 0);
+-        hash = 59 * hash + (this.media != null ? this.media.hashCode() : 0);
+-        return hash;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return super.toString() + &quot; &quot; + id + &quot; &quot; + loaned.toString() + &quot; &quot; 
+-                + loanee.toString();
+-    }
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,190 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.catalog.entities;
+-
+-import java.util.Set;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Media {
+-
+-    private Long id;
+-    //Base attributes
+-    private String name;
+-    private long capacity;
+-    private long lastModified;
+-    private String description;
+-    private long freeSpace;
+-    private String location;
+-    //Attributes from relationships
+-    private Set files;
+-    private Set labels;
+-    //Helpers
+-    private Type type;
+-
+-    public Media() {
+-        //DO NOTHING
+-    }
+-
+-    public Media(String name, long capacity, long lastModified,
+-            String description, long freeSpace, String location, Type type) {
+-        this.name = name;
+-        this.capacity = capacity;
+-        this.lastModified = lastModified;
+-        this.description = description;
+-        this.freeSpace = freeSpace;
+-        this.location = location;
+-        this.type = type;
+-    }
+-    
+-    public void increaseCapacity(long amount) {
+-        capacity += amount;
+-    }
+-    
+-    public void increaseFreeSpace(long amount) {
+-        freeSpace += amount;
+-    }
+-    
+-    public long getCapacity() {
+-        return capacity;
+-    }
+-    
+-    public void setCapacity(long capacity) {
+-        this.capacity = capacity;
+-    }
+-
+-    public String getDescription() {
+-        return description;
+-    }
+-
+-    public void setDescription(String description) {
+-        this.description = description;
+-    }
+-
+-    private Set getFiles() {
+-        return files;
+-    }
+-
+-    private void setFiles(Set files) {
+-        this.files = files;
+-    }
+-    
+-    public long getFreeSpace() {
+-        return freeSpace;
+-    }
+-    
+-    public void setFreeSpace(long freeSpace) {
+-        this.freeSpace = freeSpace;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    private void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    private Set getLabels() {
+-        return labels;
+-    }
+-
+-    private void setLabels(Set labels) {
+-        this.labels = labels;
+-    }
+-    
+-    public long getLastModified() {
+-        return lastModified;
+-    }
+-    
+-    public void setLastModified(long lastModified) {
+-        this.lastModified = lastModified;
+-    }
+-    
+-    public String getLocation() {
+-        return location;
+-    }
+-    
+-    public void setLocation(String location) {
+-        this.location = location;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public Type getType() {
+-        return type;
+-    }
+-
+-    public void setType(Type type) {
+-        this.type = type;
+-    }
+-
+-    /**
+-     * Equals method doesn't take into account the id of the object. Hibernate 
+-     * only gives an id to a new object when that object is persisted, it is 
+-     * therefor not possible to use the id attribute.
+-     * 
+-     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
+-     * @param obj the object to compare
+-     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
+-     */
+-    @Override
+-    public boolean equals(Object obj) {
+-        if (this == obj) {
+-            return true;
+-        }
+-
+-        if (!(obj instanceof Media)) {
+-            return false;
+-        }
+-
+-        Media other = (Media) obj;
+-        return name.equals(other.name) &amp;&amp; description.equals(other.description) &amp;&amp; type.equals(other.type);
+-    }
+-
+-    //TODO: link for the equals method
+-    /**
+-     * HashCode for this object, excluding the id field.
+-     * @return integer representing the hashcode
+-     * 
+-     * @see equals
+-     */
+-    @Override
+-    public int hashCode() {
+-        int hash = 7;
+-        hash = 31 * hash + (this.name != null ? this.name.hashCode() : 0);
+-        hash = 31 * hash + (this.description != null ? this.description.hashCode() : 0);
+-        hash = 31 * hash + (this.type != null ? this.type.hashCode() : 0);
+-        return hash;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return name;
+-    }
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,107 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.catalog.entities;
+-
+-import java.util.Set;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Type {
+-
+-    private long id;
+-    private String name;
+-    private Set media;
+-    
+-    public Type() {
+-        //DO NOTHING
+-    }            
+-    
+-    public Type(String name) {
+-        this.name = name;
+-    }
+-
+-    public long getId() {
+-        return id;
+-    }
+-
+-    private void setId(long id) {
+-        this.id = id;
+-    }
+-
+-    private Set getMedia() {
+-        return media;
+-    }
+-
+-    private void setMedia(Set media) {
+-        this.media = media;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    /**
+-     * Equals method doesn't take into account the id of the object. Hibernate 
+-     * only gives an id to a new object when that object is persisted, it is 
+-     * therefor not possible to use the id attribute.
+-     * 
+-     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
+-     * @param obj the object to compare
+-     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
+-     */
+-    @Override
+-    public boolean equals(Object obj) {
+-        if (this == obj) {
+-            return true;
+-        }
+-
+-        if (!(obj instanceof Type)) {
+-            return false;
+-        }
+-
+-        Type other = (Type) obj;
+-        return name.equals(other.name);
+-    }
+-    
+-    //TODO: link for the equals method
+-    /**
+-     * HashCode for this object, excluding the id field.
+-     * @return integer representing the hashcode
+-     * 
+-     * @see equals
+-     */
+-    @Override
+-    public int hashCode() {
+-        int hash = 7;
+-        hash = 61 * hash + (this.name != null ? this.name.hashCode() : 0);
+-        return hash;
+-    }
+-    
+-    @Override
+-    public String toString() {
+-        return name;
+-    }
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,118 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.catalog.entities;
+-
+-import java.util.Set;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class User {
+-
+-    private Long id;
+-    private String firstname;
+-    private String surname;
+-    private Set loans;
+-    
+-    public User() {
+-        //DO NOTHING
+-    }
+-    
+-    public User(String firstname, String surname) {
+-        this.firstname = firstname;
+-        this.surname = surname;
+-    }
+-
+-    public String getFirstname() {
+-        return firstname;
+-    }
+-
+-    public void setFirstname(String firstname) {
+-        this.firstname = firstname;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    private void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    private Set getLoans() {
+-        return loans;
+-    }
+-
+-    private void setLoans(Set loans) {
+-        this.loans = loans;
+-    }
+-
+-    public String getSurname() {
+-        return surname;
+-    }
+-
+-    public void setSurname(String surname) {
+-        this.surname = surname;
+-    }
+-
+-    /**
+-     * Equals method doesn't take into account the id of the object. Hibernate 
+-     * only gives an id to a new object when that object is persisted, it is 
+-     * therefor not possible to use the id attribute.
+-     * 
+-     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
+-     * @param obj the object to compare
+-     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
+-     */
+-    @Override
+-    public boolean equals(Object obj) {
+-        if (this == obj) {
+-            return true;
+-        }
+-
+-        if (!(obj instanceof User)) {
+-            return false;
+-        }
+-
+-        User other = (User) obj;
+-        return firstname.equals(other.firstname) &amp;&amp; surname.equals(other.surname);
+-    }
+-
+-    //TODO: link for the equals method
+-    /**
+-     * HashCode for this object, excluding the id field.
+-     * @return integer representing the hashcode
+-     * 
+-     * @see equals
+-     */
+-    @Override
+-    public int hashCode() {
+-        int hash = 3;
+-        hash = 11 * hash + (this.firstname != null ? this.firstname.hashCode() : 0);
+-        hash = 11 * hash + (this.surname != null ? this.surname.hashCode() : 0);
+-        return hash;
+-    }
+-    
+-    @Override
+-    public String toString() {
+-        return firstname + &quot; &quot; + surname;
+-    }
+-}
+
+Deleted: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -1,107 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.catalog.entities;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class VideoData {
+-
+-    private Long id;
+-    private FileWrapper owner;
+-    private byte[] data;
+-
+-    public VideoData() {
+-        //DO NOTHING
+-    }
+-
+-    public VideoData(FileWrapper owner, byte[] data) {
+-        this.owner = owner;
+-        this.data = data;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    private void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    public FileWrapper getOwner() {
+-        return owner;
+-    }
+-
+-    public void setOwner(FileWrapper owner) {
+-        this.owner = owner;
+-    }
+-
+-    public byte[] getData() {
+-        return data;
+-    }
+-
+-    public void setData(byte[] data) {
+-        this.data = data;
+-    }
+-
+-    /**
+-     * Equals method doesn't take into account the id of the object. Hibernate 
+-     * only gives an id to a new object when that object is persisted, it is 
+-     * therefor not possible to use the id attribute.
+-     * 
+-     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
+-     * @param obj the object to compare
+-     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
+-     */
+-    @Override
+-    public boolean equals(Object obj) {
+-        if (this == obj) {
+-            return true;
+-        }
+-
+-        if (!(obj instanceof VideoData)) {
+-            return false;
+-        }
+-        VideoData other = (VideoData) obj;
+-        return owner.equals(other.owner) &amp;&amp; data.length == other.data.length &amp;&amp; data == other.data;
+-
+-    }
+-
+-    //TODO: link for the equals method
+-    /**
+-     * HashCode for this object, excluding the id field.
+-     * @return integer representing the hashcode
+-     * 
+-     * @see equals
+-     */
+-    @Override
+-    public int hashCode() {
+-        int hash = 5;
+-        hash = 89 * hash + (this.owner != null ? this.owner.hashCode() : 0);
+-        hash = 89 * hash + (this.data != null ? this.data.hashCode() : 0);
+-        return hash;
+-    }
+-
+-    @Override
+-    public String toString() {
+-        return super.toString() + &quot; &quot; + id + &quot; &quot; + data.length;
+-    }
+-}
+
+Added: trunk/spikes/PluginAPI/src/pluginapi/AntMovieCatalogerPlugin.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/pluginapi/AntMovieCatalogerPlugin.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/pluginapi/AntMovieCatalogerPlugin.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -0,0 +1,81 @@
++package pluginapi;
++
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++
++import java.io.BufferedInputStream;
++import java.io.File;
++import java.io.FileInputStream;
++import java.io.FileNotFoundException;
++import java.io.IOException;
++
++/**
++ *
++ * @author Knitter
++ */
++public class AntMovieCatalogerPlugin implements Reader {
++
++    private static final String NAME = &quot;Ant Movie Cataloger Reader&quot;;
++    private static final String AUTHOR = &quot;Sergio Lopes&quot;;//TODO: provide correct author info
++    private static final String EXT = &quot;amc&quot;;
++
++    public String getName() {
++        return NAME;
++    }
++
++    public String getAuthor() {
++        return AUTHOR;
++    }
++
++    public String pluginFor() {
++        return EXT;
++    }
++
++    public DescriptionValues read(File file) {
++        byte[] sixtyfivebytes = new byte[65];
++        try {
++            BufferedInputStream bin = new BufferedInputStream(new FileInputStream(file));
++
++            //Reading AMC file version
++            bin.read(sixtyfivebytes);
++            StringBuffer buff = new StringBuffer();
++            buff.append(&quot;AMC Version format: &quot;);
++            for (int z = 0; z &lt; 65; z++) {
++                buff.append(new Character((char) ((int) sixtyfivebytes[z])));
++            }
++            
++            buff.append(&quot;\nOwner: &quot; + readString(bin));//owner
++            buff.append(&quot;\nSite: &quot; + readString(bin));//site
++            buff.append(&quot;\nE-Mail: &quot; + readString(bin));//mail
++            buff.append(&quot;\n\n&quot; + readString(bin));//description
++
++            return new DescriptionValues(buff.toString(), null, null, null, null);
++        } catch (FileNotFoundException ex) {
++            return null;
++        } catch (IOException ex) {
++            return null;
++        }
++    }
++
++    //TODO: this needs not be a separated method
++    private String readString(BufferedInputStream bin) throws IOException {
++        byte[] fourbytes = new byte[4];
++        StringBuffer buff = new StringBuffer();
++        int size = 0;
++        byte[] stringtemp;
++
++        bin.read(fourbytes);
++        size = ((fourbytes[0] &amp; 0xff)) | ((fourbytes[1] &amp; 0xff) &lt;&lt; 8) | ((fourbytes[2] &amp; 0xff) &lt;&lt; 16) | ((fourbytes[3] &amp; 0xff) &lt;&lt; 24);
++        stringtemp = new byte[size];
++        bin.read(stringtemp);
++
++        buff = new StringBuffer();
++        for (int y = 0; y &lt; size; y++) {
++            buff.append(new Character((char) ((int) stringtemp[y])));
++        }
++        return buff.toString();
++    }
++}
+
+Added: trunk/spikes/PluginAPI/src/pluginapi/DescriptionValues.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/pluginapi/DescriptionValues.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/pluginapi/DescriptionValues.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -0,0 +1,63 @@
++/**
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package pluginapi;
++
++import javax.swing.ImageIcon;
++
++public class DescriptionValues {
++
++    private String description;
++    private byte[] image;
++    private byte[] audio;
++    private byte[] video;
++    private ImageIcon icon;
++    
++    public DescriptionValues() {
++        this(&quot;&quot;, null, null, null, null);
++    }
++
++    public DescriptionValues(String description, byte[] image, byte[] audio, byte[] video, ImageIcon icon) {
++        this.description = description;
++        this.image = image;
++        this.audio = audio;
++        this.video = video;
++        this.icon = icon;
++    }
++
++    public byte[] getAudio() {
++        return audio;
++    }
++
++    public String getDescription() {
++        return description;
++    }
++
++    public ImageIcon getIcon() {
++        return icon;
++    }
++
++    public byte[] getImage() {
++        return image;
++    }
++
++    public byte[] getVideo() {
++        return video;
++    }
++}
+
+Added: trunk/spikes/PluginAPI/src/pluginapi/PluginCache.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/pluginapi/PluginCache.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/pluginapi/PluginCache.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -0,0 +1,63 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package pluginapi;
++
++import java.io.File;
++import java.net.MalformedURLException;
++import java.net.URL;
++import java.net.URLClassLoader;
++import java.util.Hashtable;
++
++/**
++ *
++ * @author Knitter
++ */
++public class PluginCache {
++
++    private Hashtable&lt;String, Reader&gt; cache;
++
++    public PluginCache() throws MalformedURLException {
++        cache = new Hashtable&lt;String, Reader&gt;();
++        loadPlugins();
++    }
++
++    private void loadPlugins() throws MalformedURLException {
++        try {
++            //class for name
++            //class.newInstance
++            //do something
++            //Load Internal plugins
++            //Reader r = new AntMovieCatalogerPlugin();
++
++            //Class c = Class.forName(&quot;pluginapi.AntMovieCatalogerPlugin&quot;);
++            /*URL u = new URL(&quot;&quot;);
++            URLClassLoader ucl = new URLClassLoader(new URL[] {}, ClassLoader.getSystemClassLoader());
++            String s = &quot;pluginapi.AntMovieCatalogerPlugin&quot;;
++            
++            Class c = Class.forName(s, true, ucl);
++            Reader r = (Reader) c.newInstance();
++            cache.put(r.pluginFor(), r);*/
++
++            File f = new File(&quot;C:\\Documents and Settings\\Knitter\\Desktop\\PLGIN\\&quot;);
++            URLClassLoader ucl = new URLClassLoader(new URL[]{f.toURI().toURL()}, ClassLoader.getSystemClassLoader());
++            String s = &quot;pluginapi.AntMovieCatalogerPlugin&quot;;
++
++            Class c = Class.forName(s, true, ucl);
++            Reader r = (Reader) c.newInstance();
++            cache.put(r.pluginFor(), r);
++
++        } catch (ClassNotFoundException ex) {
++            ex.printStackTrace();
++        } catch (InstantiationException ex) {
++            ex.printStackTrace();
++        } catch (IllegalAccessException ex) {
++            ex.printStackTrace();
++        }
++    }
++
++    public Reader readerFor(String extension) {
++        return cache.get(extension);
++    }
++}
+
+Added: trunk/spikes/PluginAPI/src/pluginapi/Reader.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/pluginapi/Reader.java	2008-06-12 01:17:02 UTC (rev 144)
++++ trunk/spikes/PluginAPI/src/pluginapi/Reader.java	2008-06-12 17:24:17 UTC (rev 145)
+@@ -0,0 +1,30 @@
++/**
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package pluginapi;
++
++import java.io.File;
++
++public interface Reader {
++    
++    String getName();
++    String getAuthor();
++    String pluginFor();
++    DescriptionValues read(File file);   
++}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000139.html">[Jfindmyfiles-commits] r144 - in trunk: docs docs/Iteracao4-CB04	docs/Iteracao6-CB07 docs/Iteracao7-CB06 docs/Iteracao8-CB08	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	spikes/Prototipos/src/de/berlios/kcookb/imagens
+</A></li>
+	<LI>Next message: <A HREF="000141.html">[Jfindmyfiles-commits] r146 - in trunk: docs	project/JFindMyFiles/ExportEngine/nbproject	project/JFindMyFiles/JFindMyFilesGui	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#140">[ date ]</a>
+              <a href="thread.html#140">[ thread ]</a>
+              <a href="subject.html#140">[ subject ]</a>
+              <a href="author.html#140">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,622 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r75 - in trunk:	project/JFindMyFiles/Catalog/nbproject	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model	project/JFindMyFiles/ExportEngine	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-April/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r75%20-%20in%20trunk%3A%0A%09project/JFindMyFiles/Catalog/nbproject%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model%0A%09project/JFindMyFiles/ExportEngine%0A%09project/JFindMyFiles/JFindMyFilesGui/nbproject%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils%0A%09project/JFindMyFiles/ReadingFiles/nbproject%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados&In-Reply-To=%3C200804301516.m3UFGKCU007024%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000069.html">
+   <LINK REL="Next"  HREF="000071.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r75 - in trunk:	project/JFindMyFiles/Catalog/nbproject	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model	project/JFindMyFiles/ExportEngine	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r75%20-%20in%20trunk%3A%0A%09project/JFindMyFiles/Catalog/nbproject%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model%0A%09project/JFindMyFiles/ExportEngine%0A%09project/JFindMyFiles/JFindMyFilesGui/nbproject%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils%0A%09project/JFindMyFiles/ReadingFiles/nbproject%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados&In-Reply-To=%3C200804301516.m3UFGKCU007024%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r75 - in trunk:	project/JFindMyFiles/Catalog/nbproject	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model	project/JFindMyFiles/ExportEngine	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados">knitter at mail.berlios.de
+       </A><BR>
+    <I>Wed Apr 30 17:16:20 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000069.html">[Jfindmyfiles-commits] r74 - in trunk: project/JFindMyFiles	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal	project/JFindMyFiles/ExportEngine	project/JFindMyFiles/ExportEngine/nbproject	project/JFindMyFiles/ExportEngine/src	project/JFindMyFiles/ExportEngine/src/de	project/JFindMyFiles/ExportEngine/src/de/berlios	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/ExportEngine/test	project/JFindMyFiles/ExportEngine/test/unit	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/nbproject spikes/Fedd/feedreader	spikes/Fedd/feedreader/FeedReader spikes/Fedd/feedreader/jdom	spikes/Fedd/feedreader/rome spikes/Fedd/feedreader/rome-fetcher
+</A></li>
+        <LI>Next message: <A HREF="000071.html">[Jfindmyfiles-commits] r76 - in trunk/project/JFindMyFiles:	Catalog/nbproject ExportEngine/nbproject JFindMyFilesGui/nbproject	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/panels	ReadingFiles/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#70">[ date ]</a>
+              <a href="thread.html#70">[ thread ]</a>
+              <a href="subject.html#70">[ subject ]</a>
+              <a href="author.html#70">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-04-30 17:16:08 +0200 (Wed, 30 Apr 2008)
+New Revision: 75
+
+Added:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogManager.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Ficheiro.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java
+Modified:
+   trunk/project/JFindMyFiles/Catalog/nbproject/
+   trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/Catalog/nbproject/project.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Ficheiro.java
+   trunk/project/JFindMyFiles/ExportEngine/
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NewDiskPanel.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NewDiskPanel.java
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+   trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.java
+Log:
+
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+Modified: trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties	2008-04-30 15:16:08 UTC (rev 75)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=69bb58de
++build.xml.data.CRC32=ba51afc3
+ build.xml.script.CRC32=986962b5
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=69bb58de
++nbproject/build-impl.xml.data.CRC32=ba51afc3
+ nbproject/build-impl.xml.script.CRC32=ff140e4d
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/Catalog/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/project.xml	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/project.xml	2008-04-30 15:16:08 UTC (rev 75)
+@@ -6,7 +6,9 @@
+             &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
+             &lt;suite-component/&gt;
+             &lt;module-dependencies/&gt;
+-            &lt;public-packages/&gt;
++            &lt;public-packages&gt;
++                &lt;package&gt;de.berlios.jfindmyfiles.catalog.model&lt;/package&gt;
++            &lt;/public-packages&gt;
+         &lt;/data&gt;
+     &lt;/configuration&gt;
+ &lt;/project&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/CatalogEngine.java	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/CatalogEngine.java	2008-04-30 15:16:08 UTC (rev 75)
+@@ -5,6 +5,8 @@
+ 
+ package de.berlios.jfindmyfiles.catalog.model;
+ 
++import java.util.List;
++
+ /**
+  *
+  * @author ei10635
+@@ -17,6 +19,7 @@
+         
+     }
+     
+-    
+-
++    public List&lt;String&gt; openedCatalogs() {
++        return null;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Ficheiro.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Ficheiro.java	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Ficheiro.java	2008-04-30 15:16:08 UTC (rev 75)
+@@ -2,18 +2,150 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.catalog.model;
+ 
++import java.util.List;
++
+ /**
+  *
+  * @author ei10635
+  */
+ public class Ficheiro {
+-    
++
+     private Long id;
+     private Suporte disk;
++    private long size;
++    private boolean file;
++    private boolean folder;
++    private String name;
++    private String absolutePath;
++    private boolean hidden;
++    private long lastModified;
++    private List&lt;Etiqueta&gt; label;
++    private List&lt;Imagem&gt; thumb;
++    private List&lt;Som&gt; audioClip;
++    private List&lt;Video&gt; videoClip;
+     
++    private List&lt;Ficheiro&gt; children;
++
+     public Ficheiro() {
+     }
++
++    public Ficheiro(Suporte disk, long size, boolean file, boolean folder,
++            String name, String absolutePath, boolean hidden, long lastModified) {
++
++        this.disk = disk;
++        this.size = size;
++        this.file = file;
++        this.folder = folder;
++        this.name = name;
++        this.absolutePath = absolutePath;
++        this.hidden = hidden;
++        this.lastModified = lastModified;
++    }
++
++    public String getAbsolutePath() {
++        return absolutePath;
++    }
++
++    public void setAbsolutePath(String absolutePath) {
++        this.absolutePath = absolutePath;
++    }
++
++    public List&lt;Som&gt; getAudioClip() {
++        return audioClip;
++    }
++
++    public void setAudioClip(List&lt;Som&gt; audioClip) {
++        this.audioClip = audioClip;
++    }
++
++    public Suporte getDisk() {
++        return disk;
++    }
++
++    public void setDisk(Suporte disk) {
++        this.disk = disk;
++    }
++
++    public boolean isFile() {
++        return file;
++    }
++
++    public void setFile(boolean file) {
++        this.file = file;
++    }
++
++    public boolean isFolder() {
++        return folder;
++    }
++
++    public void setFolder(boolean folder) {
++        this.folder = folder;
++    }
++
++    public boolean isHidden() {
++        return hidden;
++    }
++
++    public void setHidden(boolean hidden) {
++        this.hidden = hidden;
++    }
++
++    public Long getId() {
++        return id;
++    }
++
++    public void setId(Long id) {
++        this.id = id;
++    }
++
++    public List&lt;Etiqueta&gt; getLabel() {
++        return label;
++    }
++
++    public void setLabel(List&lt;Etiqueta&gt; label) {
++        this.label = label;
++    }
++
++    public long getLastModified() {
++        return lastModified;
++    }
++
++    public void setLastModified(long lastModified) {
++        this.lastModified = lastModified;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public long getSize() {
++        return size;
++    }
++
++    public void setSize(long size) {
++        this.size = size;
++    }
++
++    public List&lt;Imagem&gt; getThumb() {
++        return thumb;
++    }
++
++    public void setThumb(List&lt;Imagem&gt; thumb) {
++        this.thumb = thumb;
++    }
++
++    public List&lt;Video&gt; getVideoClip() {
++        return videoClip;
++    }
++
++    public void setVideoClip(List&lt;Video&gt; videoClip) {
++        this.videoClip = videoClip;
++    }
++    
+ }
+
+
+Property changes on: trunk/project/JFindMyFiles/ExportEngine
+___________________________________________________________________
+Name: svn:ignore
+   + build
+
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-04-30 15:16:08 UTC (rev 75)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=715fb58a
++build.xml.data.CRC32=c2eae95a
+ build.xml.script.CRC32=6fe2168f
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=715fb58a
++nbproject/build-impl.xml.data.CRC32=c2eae95a
+ nbproject/build-impl.xml.script.CRC32=599e93ee
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-04-30 15:16:08 UTC (rev 75)
+@@ -8,6 +8,8 @@
+             &lt;module-dependencies&gt;
+                 &lt;dependency&gt;
+                     &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
+                     &lt;run-dependency&gt;
+                         &lt;specification-version&gt;1.0&lt;/specification-version&gt;
+                     &lt;/run-dependency&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NewDiskPanel.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NewDiskPanel.form	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NewDiskPanel.form	2008-04-30 15:16:08 UTC (rev 75)
+@@ -112,14 +112,12 @@
+     &lt;Component class=&quot;javax.swing.JComboBox&quot; name=&quot;jcbxCatalog&quot;&gt;
+       &lt;Properties&gt;
+         &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ComboBoxModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ComboBoxModelEditor&quot;&gt;
+-          &lt;StringArray count=&quot;4&quot;&gt;
+-            &lt;StringItem index=&quot;0&quot; value=&quot;Item 1&quot;/&gt;
+-            &lt;StringItem index=&quot;1&quot; value=&quot;Item 2&quot;/&gt;
+-            &lt;StringItem index=&quot;2&quot; value=&quot;Item 3&quot;/&gt;
+-            &lt;StringItem index=&quot;3&quot; value=&quot;Item 4&quot;/&gt;
+-          &lt;/StringArray&gt;
++          &lt;StringArray count=&quot;0&quot;/&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
++      &lt;AuxValues&gt;
++        &lt;AuxValue name=&quot;JavaCodeGenerator_CreateCodeCustom&quot; type=&quot;java.lang.String&quot; value=&quot;new JComboBox(listOpenCatalogs());&quot;/&gt;
++      &lt;/AuxValues&gt;
+     &lt;/Component&gt;
+     &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jlblCatalog&quot;&gt;
+       &lt;Properties&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NewDiskPanel.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NewDiskPanel.java	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NewDiskPanel.java	2008-04-30 15:16:08 UTC (rev 75)
+@@ -5,9 +5,12 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui;
+ 
++import de.berlios.jfindmyfiles.catalog.model.CatalogEngine;
+ import java.awt.event.ActionEvent;
+ import java.awt.event.ActionListener;
+ import java.io.File;
++import java.util.List;
++import javax.swing.JComboBox;
+ import javax.swing.JToggleButton;
+ import javax.swing.SwingConstants;
+ import javax.swing.filechooser.FileSystemView;
+@@ -17,7 +20,9 @@
+  * @author  ei10635
+  */
+ public class NewDiskPanel extends javax.swing.JPanel {
+-
++    
++    private CatalogEngine eng;
++    
+     /** Creates new form NewDiskPanel */
+     public NewDiskPanel() {
+         initComponents();
+@@ -62,9 +67,8 @@
+     }
+ 
+     private String[] listOpenCatalogs() {
+-        //TODO: get open catalog list and return a useful structure to be used 
+-        //by a JComboBox
+-        throw new UnsupportedOperationException(&quot;Not implemented yet&quot;);
++        List&lt;String&gt; opended = eng.openedCatalogs();
++        return opended.toArray(new String[opended.size()]);
+     }
+ 
+     /** This method is called from within the constructor to
+@@ -82,7 +86,7 @@
+         jffDiskNumber = new javax.swing.JFormattedTextField();
+         jlblDiskName = new javax.swing.JLabel();
+         jtfDiskName = new javax.swing.JTextField();
+-        jcbxCatalog = new javax.swing.JComboBox();
++        jcbxCatalog = new JComboBox(listOpenCatalogs());
+         jlblCatalog = new javax.swing.JLabel();
+         jpScanningOptions = new javax.swing.JPanel();
+         jchkCalculateCRC = new javax.swing.JCheckBox();
+@@ -102,8 +106,6 @@
+ 
+         jtfDiskName.setText(org.openide.util.NbBundle.getMessage(NewDiskPanel.class, &quot;NewDiskPanel.jtfDiskName.text&quot;)); // NOI18N
+ 
+-        jcbxCatalog.setModel(new javax.swing.DefaultComboBoxModel(new String[] { &quot;Item 1&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;, &quot;Item 4&quot; }));
+-
+         jlblCatalog.setText(org.openide.util.NbBundle.getMessage(NewDiskPanel.class, &quot;NewDiskPanel.jlblCatalog.text&quot;)); // NOI18N
+ 
+         jpScanningOptions.setBorder(javax.swing.BorderFactory.createTitledBorder(&quot;Options &quot;));
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogManager.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogManager.java	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogManager.java	2008-04-30 15:16:08 UTC (rev 75)
+@@ -0,0 +1,26 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.jfindmyfilesgui.utils;
++
++/**
++ *
++ * @author ei10635
++ */
++public class CatalogManager {
++    
++    /*private static CatalogEngine catalog;
++    
++    private CatalogManager() {
++        
++    }
++    
++    public static void initManager() {
++        catalog 
++    }
++    
++    public */
++
++}
+
+
+Property changes on: trunk/project/JFindMyFiles/ReadingFiles/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-04-30 15:16:08 UTC (rev 75)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=562df296
++build.xml.data.CRC32=fd93f566
+ build.xml.script.CRC32=78d85b23
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=562df296
++nbproject/build-impl.xml.data.CRC32=fd93f566
+ nbproject/build-impl.xml.script.CRC32=05e89526
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-04-30 15:16:08 UTC (rev 75)
+@@ -5,7 +5,14 @@
+         &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
+             &lt;code-name-base&gt;de.berlios.jfindmyfiles.readingfiles&lt;/code-name-base&gt;
+             &lt;suite-component/&gt;
+-            &lt;module-dependencies/&gt;
++            &lt;module-dependencies&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++            &lt;/module-dependencies&gt;
+             &lt;public-packages/&gt;
+         &lt;/data&gt;
+     &lt;/configuration&gt;
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Ficheiro.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Ficheiro.java	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Ficheiro.java	2008-04-30 15:16:08 UTC (rev 75)
+@@ -0,0 +1,14 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.readingfiles;
++
++/**
++ *
++ * @author ei10635
++ */
++class Ficheiro {
++
++}
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java	2008-04-30 15:16:08 UTC (rev 75)
+@@ -0,0 +1,56 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.readingfiles;
++
++import java.io.File;
++import java.util.ArrayList;
++import java.util.List;
++import java.util.Stack;
++
++/**
++ *
++ * @author ei10635
++ */
++public class Reader {
++    
++    private static Reader reader;
++    
++    private Reader() {
++    }
++    
++    public static Reader getReader() {
++        if(reader == null) {
++            reader = new Reader();
++        }
++        return reader;
++    }
++    
++    public List&lt;Ficheiro&gt; read(File parent) {
++        //TODO: correctly read folders and file info.
++        Stack&lt;File&gt; dados = new Stack&lt;File&gt;();
++        ArrayList&lt;Ficheiro&gt; fileList = new ArrayList&lt;Ficheiro&gt;();
++        File f2 = parent;
++        long size = 0L;
++        do {
++            if (f2.isDirectory()) {
++                File[] listing = f2.listFiles();
++                if (listing != null) {
++                    size = 0;
++                    for (int i = listing.length; i-- &gt; 0;) {
++                        if (listing[i].isDirectory()) {
++                            dados.push(listing[i]);
++                        } else {
++                            size += listing[i].length();
++                        }
++                    }
++                }
++            }            
++        }while(!dados.empty());
++        
++        return fileList;
++    }
++
++}
+
+Modified: trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.java
+===================================================================
+--- trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.java	2008-04-30 12:28:46 UTC (rev 74)
++++ trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.java	2008-04-30 15:16:08 UTC (rev 75)
+@@ -12,6 +12,7 @@
+ import java.util.Stack;
+ import java.util.Vector;
+ import javax.swing.JFileChooser;
++import javax.swing.JOptionPane;
+ import javax.swing.UIManager;
+ 
+ /**
+@@ -378,15 +379,19 @@
+     }//GEN-LAST:event_jbtnCloseActionPerformed
+ 
+     private void jbtnSomethingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSomethingActionPerformed
+-        JFileChooser jfc = new JFileChooser();
++        /*JFileChooser jfc = new JFileChooser();
+         jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+         if (jfc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
+             //listAllFilesIntoHash(jfc.getSelectedFile());
+             jtaresults.setText(String.valueOf(iterativeCalc(jfc.getSelectedFile())));
+-        }
++        }*/
+     /*for(File f : files.values()) {
+     System.out.println(f.getAbsolutePath());
++     * if(9
+     }*/
++        
++        String mesg = (new File(&quot;C:\\&quot;).isDirectory()? &quot;Sim&quot; : &quot;nao&quot;);
++        JOptionPane.showMessageDialog(this, mesg);
+     }//GEN-LAST:event_jbtnSomethingActionPerformed
+ 
+     /**
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000069.html">[Jfindmyfiles-commits] r74 - in trunk: project/JFindMyFiles	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal	project/JFindMyFiles/ExportEngine	project/JFindMyFiles/ExportEngine/nbproject	project/JFindMyFiles/ExportEngine/src	project/JFindMyFiles/ExportEngine/src/de	project/JFindMyFiles/ExportEngine/src/de/berlios	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/ExportEngine/test	project/JFindMyFiles/ExportEngine/test/unit	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/nbproject spikes/Fedd/feedreader	spikes/Fedd/feedreader/FeedReader spikes/Fedd/feedreader/jdom	spikes/Fedd/feedreader/rome spikes/Fedd/feedreader/rome-fetcher
+</A></li>
+	<LI>Next message: <A HREF="000071.html">[Jfindmyfiles-commits] r76 - in trunk/project/JFindMyFiles:	Catalog/nbproject ExportEngine/nbproject JFindMyFilesGui/nbproject	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/panels	ReadingFiles/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#70">[ date ]</a>
+              <a href="thread.html#70">[ thread ]</a>
+              <a href="subject.html#70">[ subject ]</a>
+              <a href="author.html#70">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

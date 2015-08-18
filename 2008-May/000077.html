@@ -1,0 +1,112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r82 - in trunk/project/JFindMyFiles: .	JDBCDrivers Persistence Persistence/nbproject
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r82%20-%20in%20trunk/project/JFindMyFiles%3A%20.%0A%09JDBCDrivers%20Persistence%20Persistence/nbproject&In-Reply-To=%3C200805071245.m47CjBNv010195%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000076.html">
+   <LINK REL="Next"  HREF="000078.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r82 - in trunk/project/JFindMyFiles: .	JDBCDrivers Persistence Persistence/nbproject</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r82%20-%20in%20trunk/project/JFindMyFiles%3A%20.%0A%09JDBCDrivers%20Persistence%20Persistence/nbproject&In-Reply-To=%3C200805071245.m47CjBNv010195%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r82 - in trunk/project/JFindMyFiles: .	JDBCDrivers Persistence Persistence/nbproject">knitter at mail.berlios.de
+       </A><BR>
+    <I>Wed May  7 14:45:12 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000076.html">[Jfindmyfiles-commits] r81 - in trunk: . libs project/JFindMyFiles project/JFindMyFiles/Catalog project/JFindMyFiles/Catalog/nbproject project/JFindMyFiles/Catalog/src project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils project/JFindMyFiles/HibernateLibs project/JFindMyFiles/JDBCDrivers project/JFindMyFiles/JDBCDrivers/nbproject project/JFindMyFiles/JDBCDrivers/release project/JFindMyFiles/JDBCDrivers/release/modules project/JFindMyFiles/JDBCDrivers/release/modules/ext project/JFindMyFiles/JDBCDrivers/src project/JFindMyFiles/JDBCDrivers/src/de project/JFindMyFiles/JDBCDrivers/src/de/berlios project/JFindMyFiles/JDBCDrivers/src/de/berlios/jfindmyfiles project/JFindMyFiles/JDBCDrivers/src/de/berlios/jfindmyfiles/jdbcdrivers project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions project/JFindMyFiles/Persi! stence project/JFindMyFiles/Persistence/nbproject project/JFindMyFiles/Persistence/release project/JFindMyFiles/Persistence/release/modules project/JFindMyFiles/Persistence/release/modules/ext project/JFindMyFiles/Persistence/src project/JFindMyFiles/Persistence/src/de project/JFindMyFiles/Persistence/src/de/berlios project/JFindMyFiles/Persistence/src/de/berlios/jfindmyfiles project/JFindMyFiles/Persistence/src/de/berlios/jfindmyfiles/persistence project/JFindMyFiles/nbproject
+</A></li>
+        <LI>Next message: <A HREF="000078.html">[Jfindmyfiles-commits] r83 - in trunk: docs docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes	docs/Iteracao2-CB05/Diagrama de Classes/nbproject	docs/Iteracao3-CB03 project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/src	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entitymanagers	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#77">[ date ]</a>
+              <a href="thread.html#77">[ thread ]</a>
+              <a href="subject.html#77">[ subject ]</a>
+              <a href="author.html#77">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-07 14:45:07 +0200 (Wed, 07 May 2008)
+New Revision: 82
+
+Added:
+   trunk/project/JFindMyFiles/JDBCDrivers/build.xml
+Removed:
+   trunk/project/JFindMyFiles/HibernateLibs/
+Modified:
+   trunk/project/JFindMyFiles/JDBCDrivers/
+   trunk/project/JFindMyFiles/Persistence/
+   trunk/project/JFindMyFiles/Persistence/nbproject/
+Log:
+Removido projecto com bibliotecas de hibernate que estava a causar conflitos.
+Adicionadas pastas build e private de v?\195?\161rios projectos ?\195?\160 lista de ficheiros a ignorar pelo svn.
+
+
+Property changes on: trunk/project/JFindMyFiles/JDBCDrivers
+___________________________________________________________________
+Name: svn:ignore
+   + build
+
+
+Added: trunk/project/JFindMyFiles/JDBCDrivers/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JDBCDrivers/build.xml	2008-05-07 11:41:49 UTC (rev 81)
++++ trunk/project/JFindMyFiles/JDBCDrivers/build.xml	2008-05-07 12:45:07 UTC (rev 82)
+@@ -0,0 +1,8 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.jdbcdrivers&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project de.berlios.jfindmyfiles.jdbcdrivers.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++&lt;/project&gt;
+
+
+Property changes on: trunk/project/JFindMyFiles/Persistence
+___________________________________________________________________
+Name: svn:ignore
+   + build
+
+
+
+Property changes on: trunk/project/JFindMyFiles/Persistence/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000076.html">[Jfindmyfiles-commits] r81 - in trunk: . libs project/JFindMyFiles project/JFindMyFiles/Catalog project/JFindMyFiles/Catalog/nbproject project/JFindMyFiles/Catalog/src project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils project/JFindMyFiles/HibernateLibs project/JFindMyFiles/JDBCDrivers project/JFindMyFiles/JDBCDrivers/nbproject project/JFindMyFiles/JDBCDrivers/release project/JFindMyFiles/JDBCDrivers/release/modules project/JFindMyFiles/JDBCDrivers/release/modules/ext project/JFindMyFiles/JDBCDrivers/src project/JFindMyFiles/JDBCDrivers/src/de project/JFindMyFiles/JDBCDrivers/src/de/berlios project/JFindMyFiles/JDBCDrivers/src/de/berlios/jfindmyfiles project/JFindMyFiles/JDBCDrivers/src/de/berlios/jfindmyfiles/jdbcdrivers project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions project/JFindMyFiles/Persi! stence project/JFindMyFiles/Persistence/nbproject project/JFindMyFiles/Persistence/release project/JFindMyFiles/Persistence/release/modules project/JFindMyFiles/Persistence/release/modules/ext project/JFindMyFiles/Persistence/src project/JFindMyFiles/Persistence/src/de project/JFindMyFiles/Persistence/src/de/berlios project/JFindMyFiles/Persistence/src/de/berlios/jfindmyfiles project/JFindMyFiles/Persistence/src/de/berlios/jfindmyfiles/persistence project/JFindMyFiles/nbproject
+</A></li>
+	<LI>Next message: <A HREF="000078.html">[Jfindmyfiles-commits] r83 - in trunk: docs docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes	docs/Iteracao2-CB05/Diagrama de Classes/nbproject	docs/Iteracao3-CB03 project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/src	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entitymanagers	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#77">[ date ]</a>
+              <a href="thread.html#77">[ thread ]</a>
+              <a href="subject.html#77">[ subject ]</a>
+              <a href="author.html#77">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

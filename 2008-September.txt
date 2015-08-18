@@ -1,0 +1,1160 @@
+From knitter at mail.berlios.de  Mon Sep  1 00:35:43 2008
+From: knitter at mail.berlios.de (knitter at mail.berlios.de)
+Date: Mon, 1 Sep 2008 00:35:43 +0200
+Subject: [Jfindmyfiles-commits] r270 - in trunk: docs media
+	media/site-images media/xcfs site site/sys site/sys/images
+Message-ID: <200808312235.m7VMZhSH022677@sheep.berlios.de>
+
+Author: knitter
+Date: 2008-09-01 00:25:03 +0200 (Mon, 01 Sep 2008)
+New Revision: 270
+
+Added:
+   trunk/docs/credits.txt
+   trunk/media/site-images/
+   trunk/media/site-images/bslogo.png
+   trunk/media/site-images/contact.png
+   trunk/media/site-images/dialog-warning.png
+   trunk/media/site-images/download.png
+   trunk/media/site-images/home.png
+   trunk/media/site-images/screenshots.png
+   trunk/media/site-images/text.png
+   trunk/media/xcfs/
+   trunk/media/xcfs/logo-all.xcf
+   trunk/media/xcfs/logo-base.xcf
+   trunk/media/xcfs/logo-original.xcf
+   trunk/media/xcfs/logo.xcf
+   trunk/media/xcfs/logo3.xcf
+   trunk/media/xcfs/rightcorners.xcf
+   trunk/site/sys/images/bslogo.png
+   trunk/site/sys/images/contact.png
+   trunk/site/sys/images/credits.png
+   trunk/site/sys/images/dialog-warning.png
+   trunk/site/sys/images/download.png
+   trunk/site/sys/images/home.png
+   trunk/site/sys/images/screenshots.png
+   trunk/site/sys/images/text.png
+Removed:
+   trunk/media/logo-all.xcf
+   trunk/media/logo-base.xcf
+   trunk/media/logo-original.xcf
+   trunk/media/logo.xcf
+   trunk/media/logo3.xcf
+   trunk/media/rightcorners.xcf
+   trunk/media/system-file-manager.png
+Modified:
+   trunk/site/bugs.html
+   trunk/site/contact.html
+   trunk/site/download.html
+   trunk/site/features.html
+   trunk/site/index.html
+   trunk/site/screenshots.html
+   trunk/site/sys/css.css
+Log:
+Continued work on site layout.
+Choosed other graphics and images and reorganized media folder.
+
+Added: trunk/docs/credits.txt
+===================================================================
+
+
+Property changes on: trunk/docs/credits.txt
+___________________________________________________________________
+Name: svn:eol-style
+   + native
+
+Deleted: trunk/media/logo-all.xcf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/media/logo-base.xcf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/media/logo-original.xcf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/media/logo.xcf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/media/logo3.xcf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/media/rightcorners.xcf
+===================================================================
+(Binary files differ)
+
+Added: trunk/media/site-images/bslogo.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/site-images/bslogo.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/site-images/contact.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/site-images/contact.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/site-images/dialog-warning.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/site-images/dialog-warning.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/site-images/download.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/site-images/download.png
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/site-images/home.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/site-images/home.png
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/site-images/screenshots.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/site-images/screenshots.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/site-images/text.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/site-images/text.png
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Deleted: trunk/media/system-file-manager.png
+===================================================================
+(Binary files differ)
+
+Added: trunk/media/xcfs/logo-all.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/xcfs/logo-all.xcf
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/xcfs/logo-base.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/xcfs/logo-base.xcf
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/xcfs/logo-original.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/xcfs/logo-original.xcf
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/xcfs/logo.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/xcfs/logo.xcf
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/xcfs/logo3.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/xcfs/logo3.xcf
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/media/xcfs/rightcorners.xcf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/xcfs/rightcorners.xcf
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/site/bugs.html
+===================================================================
+--- trunk/site/bugs.html	2008-08-31 19:50:06 UTC (rev 269)
++++ trunk/site/bugs.html	2008-08-31 22:25:03 UTC (rev 270)
+@@ -30,8 +30,29 @@
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/knewsticker.png" />News</h1>
++            <h1 id="bugs-title">Bugs</h1>
++<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec faucibus volutpat lectus. Integer egestas porta nunc. Cras hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean consectetuer. Cras pharetra. Duis lobortis gravida lorem. Mauris convallis dui sit amet urna. Fusce lacinia erat at tortor. Nulla eget ipsum ac neque dignissim aliquet. Aliquam id purus. Nulla at odio id purus posuere viverra. Vivamus magna tellus, bibendum et, lobortis sed, facilisis et, lacus. Nam eros orci, semper nec, sagittis eu, pretium vel, sapien. Suspendisse dapibus, quam ut pharetra eleifend, metus ante euismod pede, nec scelerisque nibh urna id ligula. Aliquam facilisis porttitor purus. Nulla facilisi. Suspendisse dapibus ligula non nunc. Praesent at odio. Donec eget libero.</p>
++
++<p>Ut id elit. Integer commodo porttitor diam. Ut interdum mauris et elit. Vestibulum augue. Etiam ligula. Proin ultrices. Curabitur blandit. Quisque dapibus mi vel mi mattis accumsan. Cras id mi. Mauris egestas sapien sit amet turpis. Donec id sem eget tellus dapibus mollis. Nam vel orci facilisis felis fermentum imperdiet.</p>
++
++<p>Phasellus vehicula. Vestibulum a neque vel mi gravida lobortis. Sed ac diam. Integer vehicula ornare elit. Nullam leo. Donec rhoncus vehicula metus. Integer ac odio. Aliquam eros est, auctor nec, luctus at, facilisis eget, felis. Sed quis quam. Cras molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam quis sapien. Ut urna. Nunc at ligula. Duis bibendum erat sed tellus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis eget nisi. Nunc laoreet. Proin odio. In bibendum auctor nibh.</p>
++
++<p>Submitting a bug is something very important for developers. They are often in need of feedback on their projects. You can in BerliOS submit a bug for any project. For this, you just need to be logged in.
++
++Submitting a bug
++
++Just go on the Bug Tracking system for a project, and then click on Submit.
++
++First, you must choose a category and a group for the bug you will submit. Categories and groups are set up by a project administrator. Categories are equivalent to project parts (i.e : Server, Graphics, Engine , ...), and Bug groups define types of bugs (i.e : Unreproducible, Missing Feature ...). If no categories or bug groups are defined, just let "none" and a project administrator will classify the bug himself.
++
++After that, enter a quick description of the bug in the summary field. This description must be as clear as possible.
++
++Then enter the details in the details Box. And click on the Submit button to end this bug report. You'll be noticed when the bug will be closed. </p>
+         </div>
++        <div id="bslogo">
++            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="BerliOS Logo" />
++            <a href="http://developer.berlios.de" ><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++        </div>
+         <div id="footer">
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
+
+Modified: trunk/site/contact.html
+===================================================================
+--- trunk/site/contact.html	2008-08-31 19:50:06 UTC (rev 269)
++++ trunk/site/contact.html	2008-08-31 22:25:03 UTC (rev 270)
+@@ -30,8 +30,19 @@
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/knewsticker.png" />News</h1>
++            <h1 id="contact-title">Contact us</h1>
++            <p><form method="post" action="contactus.php">
++                <label for="name">Your Name: </label><input id="name" name="name" type="text" /><span class="required">*</span><br />
++                <label for="email">Your Email: </label><input id="email" name="email" type="text" /><span class="required">*</span><br />
++                <label for="subject">Message Subject: </label><input id="subject" name="subject" type="text" /><br />
++                <label for="message">Message:</label><textarea id="message" name="messagem"></textarea><span class="required">*</span><br />
++                <input id="send" name="send" type="submit" value="Send Message" /> <input id="clear" name="clear" type="reset" />
++            </form></p>
+         </div>
++        <div id="bslogo">
++            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="BerliOS Logo" />
++            <a href="http://developer.berlios.de" title="BerliOS Developer"><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++        </div>
+         <div id="footer">
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
+
+Modified: trunk/site/download.html
+===================================================================
+--- trunk/site/download.html	2008-08-31 19:50:06 UTC (rev 269)
++++ trunk/site/download.html	2008-08-31 22:25:03 UTC (rev 270)
+@@ -30,8 +30,12 @@
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/knewsticker.png" />News</h1>
++            <h1 id="download-title">Download JFindMyFiles</h1>
+         </div>
++        <div id="bslogo">
++            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="Hidden BerliOS Logo" />
++            <a href="http://developer.berlios.de" title="BerliOS Developer"><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++        </div>
+         <div id="footer">
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
+
+Modified: trunk/site/features.html
+===================================================================
+--- trunk/site/features.html	2008-08-31 19:50:06 UTC (rev 269)
++++ trunk/site/features.html	2008-08-31 22:25:03 UTC (rev 270)
+@@ -30,8 +30,23 @@
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/knewsticker.png" />News</h1>
++            <h1 id="features-title">JFindMyFiles Feature List</h1>
++<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec faucibus volutpat lectus. Integer egestas porta nunc. Cras hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean consectetuer. Cras pharetra. Duis lobortis gravida lorem. Mauris convallis dui sit amet urna. Fusce lacinia erat at tortor. Nulla eget ipsum ac neque dignissim aliquet. Aliquam id purus. Nulla at odio id purus posuere viverra. Vivamus magna tellus, bibendum et, lobortis sed, facilisis et, lacus. Nam eros orci, semper nec, sagittis eu, pretium vel, sapien. Suspendisse dapibus, quam ut pharetra eleifend, metus ante euismod pede, nec scelerisque nibh urna id ligula. Aliquam facilisis porttitor purus. Nulla facilisi. Suspendisse dapibus ligula non nunc. Praesent at odio. Donec eget libero.</p>
++
++            <ul>
++                <li>Platform independent software allowing you to use any operation system for which a Java is available;</li>
++                <li>Can catalog you hard drives, CD-ROM drives, floppies, mapped and normal network folders;</li>
++                <li>Allows for simple search or using regular expressions;</li>
++                <li>Allows exporting of data to XML and CSV formats and export using HTML templates that you can create;</li>
++                <li>Using the plugin API you can add new file types or provide information from different sources to known types.</li>
++            </ul>
++
++<p>Phasellus vehicula. Vestibulum a neque vel mi gravida lobortis. Sed ac diam. Integer vehicula ornare elit. Nullam leo. Donec rhoncus vehicula metus. Integer ac odio. Aliquam eros est, auctor nec, luctus at, facilisis eget, felis. Sed quis quam. Cras molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam quis sapien. Ut urna. Nunc at ligula. Duis bibendum erat sed tellus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis eget nisi. Nunc laoreet. Proin odio. In bibendum auctor nibh.</p>
+         </div>
++        <div id="bslogo">
++            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="BerliOS Logo" />
++            <a href="http://developer.berlios.de" title="BerliOS Developer"><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++        </div>
+         <div id="footer">
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
+
+Modified: trunk/site/index.html
+===================================================================
+--- trunk/site/index.html	2008-08-31 19:50:06 UTC (rev 269)
++++ trunk/site/index.html	2008-08-31 22:25:03 UTC (rev 270)
+@@ -30,8 +30,21 @@
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/knewsticker.png" />News</h1>
++            <h1 id="home-title">News</h1>
++<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec faucibus volutpat lectus. Integer egestas porta nunc. Cras hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean consectetuer. Cras pharetra. Duis lobortis gravida lorem. Mauris convallis dui sit amet urna. Fusce lacinia erat at tortor. Nulla eget ipsum ac neque dignissim aliquet. Aliquam id purus. Nulla at odio id purus posuere viverra. Vivamus magna tellus, bibendum et, lobortis sed, facilisis et, lacus. Nam eros orci, semper nec, sagittis eu, pretium vel, sapien. Suspendisse dapibus, quam ut pharetra eleifend, metus ante euismod pede, nec scelerisque nibh urna id ligula. Aliquam facilisis porttitor purus. Nulla facilisi. Suspendisse dapibus ligula non nunc. Praesent at odio. Donec eget libero.</p>
++
++<p>Ut id elit. Integer commodo porttitor diam. Ut interdum mauris et elit. Vestibulum augue. Etiam ligula. Proin ultrices. Curabitur blandit. Quisque dapibus mi vel mi mattis accumsan. Cras id mi. Mauris egestas sapien sit amet turpis. Donec id sem eget tellus dapibus mollis. Nam vel orci facilisis felis fermentum imperdiet.</p>
++
++<p>Phasellus vehicula. Vestibulum a neque vel mi gravida lobortis. Sed ac diam. Integer vehicula ornare elit. Nullam leo. Donec rhoncus vehicula metus. Integer ac odio. Aliquam eros est, auctor nec, luctus at, facilisis eget, felis. Sed quis quam. Cras molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam quis sapien. Ut urna. Nunc at ligula. Duis bibendum erat sed tellus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis eget nisi. Nunc laoreet. Proin odio. In bibendum auctor nibh.</p>
++
++<p>Vestibulum aliquet pede. Proin nec diam. Vestibulum non metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer laoreet. Cras lacinia. Nullam fringilla, arcu ullamcorper commodo molestie, tellus neque tempor dolor, non feugiat diam felis nec purus. Proin nisl arcu, viverra a, fringilla eget, hendrerit id, lorem. Nulla feugiat eros id sapien. Curabitur consequat tincidunt ante. Praesent vitae orci. Vivamus feugiat viverra arcu. Sed nec enim a mauris ullamcorper auctor. Aenean semper tempor nulla. Morbi lectus. Aenean malesuada mi ac orci. Aliquam turpis sapien, molestie facilisis, imperdiet vitae, hendrerit eu, dui. Quisque scelerisque malesuada tortor. Donec augue neque, tempor a, placerat ac, condimentum ac, metus.</p>
++
++<p>In hendrerit cursus purus. Donec nibh. Proin condimentum. Aliquam erat volutpat. Fusce id massa at nunc sodales porttitor. Nullam non justo sed ante imperdiet malesuada. In pretium suscipit mi. In leo pede, tempor mollis, tristique suscipit, luctus et, est. Quisque ipsum. In hac habitasse platea dictumst. Donec volutpat. Ut est. Suspendisse sem. Nullam justo. Nunc nulla metus, egestas ac, pharetra sit amet, aliquam vitae, lectus.</p>
+         </div>
++        <div id="bslogo">
++            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="BerliOS Logo" />
++            <a href="http://developer.berlios.de" title="BerliOS Developer"><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++        </div>
+         <div id="footer">
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
+
+Modified: trunk/site/screenshots.html
+===================================================================
+--- trunk/site/screenshots.html	2008-08-31 19:50:06 UTC (rev 269)
++++ trunk/site/screenshots.html	2008-08-31 22:25:03 UTC (rev 270)
+@@ -30,8 +30,12 @@
+         <div class="clear">
+         <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1><img src="sys/images/knewsticker.png" />News</h1>
++            <h1 id="screenshots-title">See the Screenshots</h1>
+         </div>
++        <div id="bslogo">
++            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="BerliOS Logo" />
++            <a href="http://developer.berlios.de" title="BerliOS Developer"><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++        </div>
+         <div id="footer">
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+         </div>
+
+Modified: trunk/site/sys/css.css
+===================================================================
+--- trunk/site/sys/css.css	2008-08-31 19:50:06 UTC (rev 269)
++++ trunk/site/sys/css.css	2008-08-31 22:25:03 UTC (rev 270)
+@@ -4,12 +4,12 @@
+ 
+ #container {
+     width: 940px;
+-margin: 0 auto;
++    margin: 0 auto;
+ }
+ 
+ #top {
+     width: 100%;
+-    margin-top: 1em;
++    margin-top: 0.5em;
+     height: 165px;
+ }
+ 
+@@ -45,7 +45,6 @@
+ #menu {
+     background-color: white;
+     width: 220px;
+-    /*width: 180px;*/
+     height: 100%;
+     float:left;
+ }
+@@ -85,7 +84,7 @@
+     border-top-style: solid;
+     border-top-color: black;
+     border-top-width: 1px;
+-    width: 70%;
++    width: 75%;
+     text-align: center;
+ }
+ 
+@@ -101,3 +100,89 @@
+ .clear {
+     clear: both;
+ }
++
++#home-title {
++    background: transparent url(images/home.png) no-repeat;
++    border-bottom-style: solid;
++    border-bottom-color: blue;
++    border-bottom-width: 1px;
++    height: 128px;
++    padding-left: 128px;
++    line-height: 128px;
++}
++
++#features-title {
++    background: transparent url(images/text.png) no-repeat;
++    border-bottom-style: solid;
++    border-bottom-color: blue;
++    border-bottom-width: 1px;
++    height: 128px;
++    padding-left: 128px;
++    line-height: 128px;
++}
++
++#download-title {
++    background: transparent url(images/download.png) no-repeat;
++    border-bottom-style: solid;
++    border-bottom-color: blue;
++    border-bottom-width: 1px;
++    height: 128px;
++    padding-left: 128px;
++    line-height: 128px;
++}
++
++#screenshots-title {
++    background: transparent url(images/screenshots.png) no-repeat;
++    border-bottom-style: solid;
++    border-bottom-color: blue;
++    border-bottom-width: 1px;
++    height: 128px;
++    padding-left: 128px;
++    line-height: 128px;
++}
++
++#bugs-title {
++    background: transparent url(images/dialog-warning.png) no-repeat;
++    border-bottom-style: solid;
++    border-bottom-color: blue;
++    border-bottom-width: 1px;
++    height: 128px;
++    padding-left: 128px;
++    line-height: 128px;
++}
++
++#contact-title {
++    background: transparent url(images/contact.png) no-repeat;
++    border-bottom-style: solid;
++    border-bottom-color: blue;
++    border-bottom-width: 1px;
++    height: 128px;
++    padding-left: 128px;
++    line-height: 128px;
++}
++
++#credits-title {
++    background: transparent url(images/emblem-note.png) no-repeat;
++    border-bottom-style: solid;
++    border-bottom-color: blue;
++    border-bottom-width: 1px;
++    height: 128px;
++    padding-left: 128px;
++    line-height: 128px;
++}
++
++#hidden-berlioslogo {
++    width:0;
++    height:0;
++    display:none;
++}
++
++#bslogo {
++    text-align: right;
++    height: 32px;
++    width: 100%;
++}
++
++.required {
++    color: red;
++}
+\ No newline at end of file
+
+Added: trunk/site/sys/images/bslogo.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/site/sys/images/bslogo.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/site/sys/images/contact.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/site/sys/images/contact.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/site/sys/images/credits.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/site/sys/images/credits.png
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/site/sys/images/dialog-warning.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/site/sys/images/dialog-warning.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/site/sys/images/download.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/site/sys/images/download.png
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/site/sys/images/home.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/site/sys/images/home.png
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/site/sys/images/screenshots.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/site/sys/images/screenshots.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/site/sys/images/text.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/site/sys/images/text.png
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+
+
+From knitter at mail.berlios.de  Thu Sep 18 01:20:36 2008
+From: knitter at mail.berlios.de (knitter at mail.berlios.de)
+Date: Thu, 18 Sep 2008 01:20:36 +0200
+Subject: [Jfindmyfiles-commits] r271 - in trunk: media/site-images site
+	site/sys
+Message-ID: <200809172320.m8HNKaEg003024@sheep.berlios.de>
+
+Author: knitter
+Date: 2008-09-18 01:19:06 +0200 (Thu, 18 Sep 2008)
+New Revision: 271
+
+Added:
+   trunk/media/site-images/credits.png
+   trunk/site/credits.html
+Modified:
+   trunk/site/bugs.html
+   trunk/site/contact.html
+   trunk/site/download.html
+   trunk/site/features.html
+   trunk/site/index.html
+   trunk/site/screenshots.html
+   trunk/site/sys/css.css
+Log:
+Completed the new site.
+
+Added: trunk/media/site-images/credits.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/site-images/credits.png
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/site/bugs.html
+===================================================================
+--- trunk/site/bugs.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/bugs.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -17,7 +17,7 @@
+                     <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+                     <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+                     <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
++                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
+                     <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+                     <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+@@ -28,33 +28,22 @@
+ 
+         </div>
+         <div class="clear">
+-        <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1 id="bugs-title">Bugs</h1>
+-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec faucibus volutpat lectus. Integer egestas porta nunc. Cras hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean consectetuer. Cras pharetra. Duis lobortis gravida lorem. Mauris convallis dui sit amet urna. Fusce lacinia erat at tortor. Nulla eget ipsum ac neque dignissim aliquet. Aliquam id purus. Nulla at odio id purus posuere viverra. Vivamus magna tellus, bibendum et, lobortis sed, facilisis et, lacus. Nam eros orci, semper nec, sagittis eu, pretium vel, sapien. Suspendisse dapibus, quam ut pharetra eleifend, metus ante euismod pede, nec scelerisque nibh urna id ligula. Aliquam facilisis porttitor purus. Nulla facilisi. Suspendisse dapibus ligula non nunc. Praesent at odio. Donec eget libero.</p>
++            <h1 id="bugs" class="title">Bugs</h1>
++            <div id="text">
++                <p>Identifying and submitting bugs is one of the most helpful and useful tasks a user can undertake to contribute to this project. While developing JFindMyFiles, even with all the testing, some problems go unnoticed.</p>
+ 
+-<p>Ut id elit. Integer commodo porttitor diam. Ut interdum mauris et elit. Vestibulum augue. Etiam ligula. Proin ultrices. Curabitur blandit. Quisque dapibus mi vel mi mattis accumsan. Cras id mi. Mauris egestas sapien sit amet turpis. Donec id sem eget tellus dapibus mollis. Nam vel orci facilisis felis fermentum imperdiet.</p>
+-
+-<p>Phasellus vehicula. Vestibulum a neque vel mi gravida lobortis. Sed ac diam. Integer vehicula ornare elit. Nullam leo. Donec rhoncus vehicula metus. Integer ac odio. Aliquam eros est, auctor nec, luctus at, facilisis eget, felis. Sed quis quam. Cras molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam quis sapien. Ut urna. Nunc at ligula. Duis bibendum erat sed tellus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis eget nisi. Nunc laoreet. Proin odio. In bibendum auctor nibh.</p>
+-
+-<p>Submitting a bug is something very important for developers. They are often in need of feedback on their projects. You can in BerliOS submit a bug for any project. For this, you just need to be logged in.
+-
+-Submitting a bug
+-
+-Just go on the Bug Tracking system for a project, and then click on Submit.
+-
+-First, you must choose a category and a group for the bug you will submit. Categories and groups are set up by a project administrator. Categories are equivalent to project parts (i.e : Server, Graphics, Engine , ...), and Bug groups define types of bugs (i.e : Unreproducible, Missing Feature ...). If no categories or bug groups are defined, just let "none" and a project administrator will classify the bug himself.
+-
+-After that, enter a quick description of the bug in the summary field. This description must be as clear as possible.
+-
+-Then enter the details in the details Box. And click on the Submit button to end this bug report. You'll be noticed when the bug will be closed. </p>
++                <p><h2>Submitting a bug</h2>
++                To submit a bug you need to be registered in <a href="http://developer.berlios.de">berliOS</a> so that you can use the report system page available to every project.</p>
++                
++                <p>After you have registered and logged in please follow <a href="http://developer.berlios.de/bugs/?group_id=9315">this link</a> and place you bug if it's not already there.</p>
++            </div>
+         </div>
+         <div id="bslogo">
+-            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="BerliOS Logo" />
+-            <a href="http://developer.berlios.de" ><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++            <a href="http://developer.berlios.de"><img id="berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=9315" alt="BerliOS Logo" /></a>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="credits.html">Credits</a> :: <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all">Valid CSS</a> :: <a href="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/bugs.html">XHTML 1.0 Strict</a>
+         </div>
+ </div>
+     </body>
+
+Modified: trunk/site/contact.html
+===================================================================
+--- trunk/site/contact.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/contact.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -17,7 +17,7 @@
+                     <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+                     <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+                     <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
++                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
+                     <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+                     <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+@@ -28,23 +28,18 @@
+ 
+         </div>
+         <div class="clear">
+-        <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1 id="contact-title">Contact us</h1>
+-            <p><form method="post" action="contactus.php">
+-                <label for="name">Your Name: </label><input id="name" name="name" type="text" /><span class="required">*</span><br />
+-                <label for="email">Your Email: </label><input id="email" name="email" type="text" /><span class="required">*</span><br />
+-                <label for="subject">Message Subject: </label><input id="subject" name="subject" type="text" /><br />
+-                <label for="message">Message:</label><textarea id="message" name="messagem"></textarea><span class="required">*</span><br />
+-                <input id="send" name="send" type="submit" value="Send Message" /> <input id="clear" name="clear" type="reset" />
+-            </form></p>
++            <h1 id="contact" class="title">Contact us</h1>
++            <div id="text">
++                <p>There is a <a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-users">mailing list for users</a>, where you can ask questions and provide any feedback you want. This is the preferred way to get help.</p>
++                <p>Besides the mailing list you can send me a message using the <a href="http://developer.berlios.de">berliOS</a> system, you just need to be a registered user to be able to send me e-mails. I'll try to reply to you as soon as possible, but please understand that replying to every e-mail I get takes some time.</p>
++            </div>
+         </div>
+         <div id="bslogo">
+-            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="BerliOS Logo" />
+-            <a href="http://developer.berlios.de" title="BerliOS Developer"><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++            <a href="http://developer.berlios.de"><img id="berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=9315" alt="BerliOS Logo" /></a>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="credits.html">Credits</a> :: <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all">Valid CSS</a> :: <a href="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/contact.html">XHTML 1.0 Strict</a>
+         </div>
+ </div>
+     </body>
+
+Added: trunk/site/credits.html
+===================================================================
+--- trunk/site/credits.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/credits.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -0,0 +1,47 @@
++<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
++<html>
++    <head>
++        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
++        <link rel="stylesheet" type="text/css" href="sys/css.css" />
++        <title>JFindMyFiles :: Credits</title>
++    </head>
++    <body>
++<div id="container">
++        <div id="top">
++            <div id="top-left"></div>
++
++            <div id="empty-left"></div>
++
++            <div id="menu">
++                <ul>
++                    <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
++                    <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
++                    <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
++                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
++                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
++                </ul>
++            </div>
++
++           <div id="empty-right"></div>
++           <div id="top-right"></div>
++
++        </div>
++        <div class="clear">
++        <div id="content">
++            <h1 id="credits" class="title">Due Credits</h1>
++            <div id="text">
++                <p>This site uses icons from the <a href="http://gnome-look.org/content/show.php/Desert?content=87416">Desert III</a> icon pack created by <a href="http://rodolphe.bachelart1.free.fr/">Rodolphe</a></p>
++
++                <p>Current JFindMyFiles icons are taken from the official <a href="http://www.gnome.org/">Gnome</a> Theme.</p>
++            </div>
++        </div>
++        <div id="bslogo">
++            <a href="http://developer.berlios.de"><img id="berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=9315" alt="BerliOS Logo" /></a>
++        </div>
++        <div id="footer">
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="credits.html">Credits</a> :: <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all">Valid CSS</a> :: <a href="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/credits.html">XHTML 1.0 Strict</a>
++        </div>
++</div>
++    </body>
++</html>
+
+Modified: trunk/site/download.html
+===================================================================
+--- trunk/site/download.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/download.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -17,7 +17,7 @@
+                     <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+                     <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+                     <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
++                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
+                     <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+                     <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+@@ -28,16 +28,29 @@
+ 
+         </div>
+         <div class="clear">
+-        <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1 id="download-title">Download JFindMyFiles</h1>
++            <h1 id="download" class="title">Download JFindMyFiles</h1>
++            <div id="text">
++                <p>The current version of JFindMyFiles, 0.5.254, is a developer version, this means it's a release that has testing purposes and is not suitable for end users.</p>
++                <p>You can download the lastest developer version as a:
++                    <ul>
++                        <li><a href="http://prdownload.berlios.de/jfindmyfiles/jfindmyfiles.0.5.254_installer.jar">installer jar</a></li>
++                        <li><a href="http://prdownload.berlios.de/jfindmyfiles/jfindmyfiles.0.5.254.zip">zip file</a></li>
++                    </ul>
++                    A list of all available files can be found <a href="http://developer.berlios.de/project/showfiles.php?group_id=9315">here</a>.
++                </p>
++                <p>If you're interested in the code you'll need an SVN client. Windows users should try <a href="http://tortoisesvn.tigris.org/">TortoiseSVN</a>, a graphical client that integrates with Windows' shell, for Linux and Mac OS, a graphical choice can be <a href="http://www.syntevo.com/smartsvn/index.html">SmartSVN</a>.</p>
++                <p>Anonymous SVN access can be achieved using the SVN protocol,<br />
++                <code>svn checkout svn://svn.berlios.de/jfindmyfiles/trunk</code> <br /><br />or through HTTP, <br /> <code>http://svn.berlios.de/svnroot/repos/jfindmyfiles/trunk</code>
++                </p>
++                <p>If you only want to browse the source, and not download it, you can use <a href="http://svn.berlios.de/wsvn/jfindmyfiles">WebSVN</a>, <a href="http://svn.berlios.de/viewcvs/jfindmyfiles/">ViewCVS</a> or simply <a href="http://svn.berlios.de/svnroot/repos/jfindmyfiles/">HTTP</a></p>
++            </div>
+         </div>
+         <div id="bslogo">
+-            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="Hidden BerliOS Logo" />
+-            <a href="http://developer.berlios.de" title="BerliOS Developer"><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++            <a href="http://developer.berlios.de"><img id="berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=9315" alt="BerliOS Logo" /></a>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="credits.html">Credits</a> :: <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all">Valid CSS</a> :: <a href="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/download.html">XHTML 1.0 Strict</a>
+         </div>
+ </div>
+     </body>
+
+Modified: trunk/site/features.html
+===================================================================
+--- trunk/site/features.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/features.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -17,7 +17,7 @@
+                     <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+                     <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+                     <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
++                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
+                     <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+                     <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+@@ -28,27 +28,24 @@
+ 
+         </div>
+         <div class="clear">
+-        <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1 id="features-title">JFindMyFiles Feature List</h1>
+-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec faucibus volutpat lectus. Integer egestas porta nunc. Cras hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean consectetuer. Cras pharetra. Duis lobortis gravida lorem. Mauris convallis dui sit amet urna. Fusce lacinia erat at tortor. Nulla eget ipsum ac neque dignissim aliquet. Aliquam id purus. Nulla at odio id purus posuere viverra. Vivamus magna tellus, bibendum et, lobortis sed, facilisis et, lacus. Nam eros orci, semper nec, sagittis eu, pretium vel, sapien. Suspendisse dapibus, quam ut pharetra eleifend, metus ante euismod pede, nec scelerisque nibh urna id ligula. Aliquam facilisis porttitor purus. Nulla facilisi. Suspendisse dapibus ligula non nunc. Praesent at odio. Donec eget libero.</p>
+-
+-            <ul>
+-                <li>Platform independent software allowing you to use any operation system for which a Java is available;</li>
+-                <li>Can catalog you hard drives, CD-ROM drives, floppies, mapped and normal network folders;</li>
+-                <li>Allows for simple search or using regular expressions;</li>
+-                <li>Allows exporting of data to XML and CSV formats and export using HTML templates that you can create;</li>
+-                <li>Using the plugin API you can add new file types or provide information from different sources to known types.</li>
+-            </ul>
+-
+-<p>Phasellus vehicula. Vestibulum a neque vel mi gravida lobortis. Sed ac diam. Integer vehicula ornare elit. Nullam leo. Donec rhoncus vehicula metus. Integer ac odio. Aliquam eros est, auctor nec, luctus at, facilisis eget, felis. Sed quis quam. Cras molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam quis sapien. Ut urna. Nunc at ligula. Duis bibendum erat sed tellus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis eget nisi. Nunc laoreet. Proin odio. In bibendum auctor nibh.</p>
++            <h1 id="features" class="title">JFindMyFiles Feature List</h1>
++            <div id="text">
++                <p>The listed features are those I intend to provide in the software and not those already available, as stated in the <a href="index.html">home page</a>, I'm having a break from the development, until then, you can at leat see what the software will have.</p>
++                <ul>
++                    <li>Platform independent software allowing you to use any operation system for which a Java is available;</li>
++                    <li>Can catalog you hard drives, CD-ROM drives, floppies, mapped and normal network folders;</li>
++                    <li>Allows for simple search or using regular expressions;</li>
++                    <li>Allows exporting of data to XML and CSV formats and export using HTML templates that you can create;</li>
++                    <li>Using the Plugin API you can add new file types or provide information from different sources to known types.</li>
++                </ul>
++            </div>
+         </div>
+         <div id="bslogo">
+-            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="BerliOS Logo" />
+-            <a href="http://developer.berlios.de" title="BerliOS Developer"><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++            <a href="http://developer.berlios.de"><img id="berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=9315" alt="BerliOS Logo" /></a>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="credits.html">Credits</a> :: <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all">Valid CSS</a> :: <a href="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/features.html">XHTML 1.0 Strict</a>
+         </div>
+ </div>
+     </body>
+
+Modified: trunk/site/index.html
+===================================================================
+--- trunk/site/index.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/index.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -17,7 +17,7 @@
+                     <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+                     <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+                     <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
++                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
+                     <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+                     <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
+                 </ul>
+@@ -28,25 +28,26 @@
+ 
+         </div>
+         <div class="clear">
+-        <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1 id="home-title">News</h1>
+-<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec faucibus volutpat lectus. Integer egestas porta nunc. Cras hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean consectetuer. Cras pharetra. Duis lobortis gravida lorem. Mauris convallis dui sit amet urna. Fusce lacinia erat at tortor. Nulla eget ipsum ac neque dignissim aliquet. Aliquam id purus. Nulla at odio id purus posuere viverra. Vivamus magna tellus, bibendum et, lobortis sed, facilisis et, lacus. Nam eros orci, semper nec, sagittis eu, pretium vel, sapien. Suspendisse dapibus, quam ut pharetra eleifend, metus ante euismod pede, nec scelerisque nibh urna id ligula. Aliquam facilisis porttitor purus. Nulla facilisi. Suspendisse dapibus ligula non nunc. Praesent at odio. Donec eget libero.</p>
++            <h1 id="home" class="title">News</h1>
++            <div id="text">
++                <h3>JfindMyFiles is released!</h3>
++                <p>After about 4 months of development the first official release is here. Not much of a release I must admit, but with the end of my course's project, and my graduation, I plan to improve the existing code and work hard on the software so that all objectives are achieved.</p>
+ 
+-<p>Ut id elit. Integer commodo porttitor diam. Ut interdum mauris et elit. Vestibulum augue. Etiam ligula. Proin ultrices. Curabitur blandit. Quisque dapibus mi vel mi mattis accumsan. Cras id mi. Mauris egestas sapien sit amet turpis. Donec id sem eget tellus dapibus mollis. Nam vel orci facilisis felis fermentum imperdiet.</p>
++                <p>The current release targets developers and not end users as the software is not yet usable, though much of what were the objectives set forth in the beginning are implemented, there are lots of usability and stability issues to consider this software usable.</p>
+ 
+-<p>Phasellus vehicula. Vestibulum a neque vel mi gravida lobortis. Sed ac diam. Integer vehicula ornare elit. Nullam leo. Donec rhoncus vehicula metus. Integer ac odio. Aliquam eros est, auctor nec, luctus at, facilisis eget, felis. Sed quis quam. Cras molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam quis sapien. Ut urna. Nunc at ligula. Duis bibendum erat sed tellus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis eget nisi. Nunc laoreet. Proin odio. In bibendum auctor nibh.</p>
++                <p>Along with the release comes the new site, the HTML pages that were here before had no information, just a bunch or ranting on what I wanted to create.</p>
+ 
+-<p>Vestibulum aliquet pede. Proin nec diam. Vestibulum non metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer laoreet. Cras lacinia. Nullam fringilla, arcu ullamcorper commodo molestie, tellus neque tempor dolor, non feugiat diam felis nec purus. Proin nisl arcu, viverra a, fringilla eget, hendrerit id, lorem. Nulla feugiat eros id sapien. Curabitur consequat tincidunt ante. Praesent vitae orci. Vivamus feugiat viverra arcu. Sed nec enim a mauris ullamcorper auctor. Aenean semper tempor nulla. Morbi lectus. Aenean malesuada mi ac orci. Aliquam turpis sapien, molestie facilisis, imperdiet vitae, hendrerit eu, dui. Quisque scelerisque malesuada tortor. Donec augue neque, tempor a, placerat ac, condimentum ac, metus.</p>
++                <p>Now I'm going to take a brake from all my projects, JFindMyFiles included, and after a period in which I intend to recharge my batteries, I'll come back to update the software to a new platform, correct many of the existing bugs and release the 1.0 version. See you soon.</p>
+ 
+-<p>In hendrerit cursus purus. Donec nibh. Proin condimentum. Aliquam erat volutpat. Fusce id massa at nunc sodales porttitor. Nullam non justo sed ante imperdiet malesuada. In pretium suscipit mi. In leo pede, tempor mollis, tristique suscipit, luctus et, est. Quisque ipsum. In hac habitasse platea dictumst. Donec volutpat. Ut est. Suspendisse sem. Nullam justo. Nunc nulla metus, egestas ac, pharetra sit amet, aliquam vitae, lectus.</p>
++                <p></p>
++            </div>
+         </div>
+         <div id="bslogo">
+-            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="BerliOS Logo" />
+-            <a href="http://developer.berlios.de" title="BerliOS Developer"><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++            <a href="http://developer.berlios.de"><img id="berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=9315" alt="BerliOS Logo" /></a>
+         </div>
+         <div id="footer">
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="credits.html">Credits</a> :: <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all">Valid CSS</a> :: <a href="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de">XHTML 1.0 Strict</a>
+         </div>
+ </div>
+     </body>
+
+Modified: trunk/site/screenshots.html
+===================================================================
+--- trunk/site/screenshots.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/screenshots.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -28,13 +28,14 @@
+ 
+         </div>
+         <div class="clear">
+-        <div id="search"><form><label>search:</label> <input type="text"/> <input type="submit" value=">>"/></form></div>
+         <div id="content">
+-            <h1 id="screenshots-title">See the Screenshots</h1>
++            <h1 id="screenshots" class="title">See the Screenshots</h1>
++            <div id="text">
++                <p>Screenshots are avalable through the project page at berliOS, please <a href="http://developer.berlios.de/screenshots/?group_id=9315">see them here</a></p>
++            </div>
+         </div>
+         <div id="bslogo">
+-            <img id="hidden-berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" border="0" alt="BerliOS Logo" />
+-            <a href="http://developer.berlios.de" title="BerliOS Developer"><img src="sys/images/bslogo.png" alt="BerliOS Logo"/></a>
++            <a href="http://developer.berlios.de"><img id="berlioslogo" src="http://developer.berlios.de/bslogo.php?group_id=0" alt="BerliOS Logo" /></a>
+         </div>
+         <div id="footer">
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="#">Credits</a> :: <a href="#">Valid CSS</a> :: <a href="#">XHTML 1.0 Strict</a>
+
+Modified: trunk/site/sys/css.css
+===================================================================
+--- trunk/site/sys/css.css	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/sys/css.css	2008-09-17 23:19:06 UTC (rev 271)
+@@ -31,27 +31,27 @@
+ #empty-left {
+     background-color: #2f4090;
+     float: left;
+-    width: 190px;
++    width: 200px;
+     height: 100%;
+ }
+ 
+ #empty-right {
+     background-color: #2f4090;
+     float: left;
+-    width: 101px;
++    width: 141px;
+     height: 100%;
+ }
+ 
+ #menu {
+     background-color: white;
+-    width: 220px;
++    width: 170px;
+     height: 100%;
+     float:left;
+ }
+ 
+ #menu ul {
+-    margin-right: 1em;
+-    margin-top: 0;
++    margin: 0;
++    padding: 0;
+ }
+ 
+ #menu ul li {
+@@ -64,6 +64,7 @@
+ 
+ #menu li img {
+     margin-right: 1em;
++    margin-left: 1em;
+     margin-bottom: 0;
+ }
+ 
+@@ -78,6 +79,11 @@
+     width: 100%;
+ }
+ 
++#text {
++    margin: 0 auto;
++    width: 95%;
++}
++
+ #footer {
+     margin: 2em auto;
+     background-color: inherit;
+@@ -92,97 +98,47 @@
+     border: none;
+ }
+ 
+-a, a:visited{
++a, a:visited {
+     text-decoration: none;
+     color: blue;
+ }
+ 
++a:hover {
++    text-decoration: underline;
++}
++
+ .clear {
+     clear: both;
+ }
+ 
+-#home-title {
+-    background: transparent url(images/home.png) no-repeat;
++.title {
+     border-bottom-style: solid;
+     border-bottom-color: blue;
+     border-bottom-width: 1px;
+     height: 128px;
+     padding-left: 128px;
+     line-height: 128px;
++    text-align: right;
+ }
+ 
+-#features-title {
+-    background: transparent url(images/text.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
++#home {background: transparent url(images/home.png) no-repeat;}
++#features {background: transparent url(images/text.png) no-repeat;}
++#download {background: transparent url(images/download.png) no-repeat;}
++#screenshots {background: transparent url(images/screenshots.png) no-repeat;}
++#bugs {background: transparent url(images/dialog-warning.png) no-repeat;}
++#contact {background: transparent url(images/contact.png) no-repeat;}
++#credits {background: transparent url(images/credits.png) no-repeat;}
+ 
+-#download-title {
+-    background: transparent url(images/download.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
+-
+-#screenshots-title {
+-    background: transparent url(images/screenshots.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
+-
+-#bugs-title {
+-    background: transparent url(images/dialog-warning.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
+-
+-#contact-title {
+-    background: transparent url(images/contact.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
+-
+-#credits-title {
+-    background: transparent url(images/emblem-note.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
+-
+-#hidden-berlioslogo {
+-    width:0;
+-    height:0;
+-    display:none;
+-}
+-
+ #bslogo {
+     text-align: right;
+     height: 32px;
+     width: 100%;
+ }
+ 
+-.required {
+-    color: red;
++h1 {
++    color: #42515e;
++}
++
++h3 {
++    color: green;
+ }
+\ No newline at end of file
+
+
+

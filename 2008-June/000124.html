@@ -1,0 +1,279 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r129 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/utils	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r129%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/utils%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs&In-Reply-To=%3C200806031741.m53Hfknj016900%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000123.html">
+   <LINK REL="Next"  HREF="000125.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r129 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/utils	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r129%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/utils%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs&In-Reply-To=%3C200806031741.m53Hfknj016900%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r129 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/utils	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs">knitter at mail.berlios.de
+       </A><BR>
+    <I>Tue Jun  3 19:41:46 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000123.html">[Jfindmyfiles-commits] r128 - in trunk:	docs/Iteracao2-CB05/TestingDB project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+        <LI>Next message: <A HREF="000125.html">[Jfindmyfiles-commits] r130 - trunk/docs/Iteracao2-CB05/TestingDB
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#124">[ date ]</a>
+              <a href="thread.html#124">[ thread ]</a>
+              <a href="subject.html#124">[ subject ]</a>
+              <a href="author.html#124">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-03 19:41:41 +0200 (Tue, 03 Jun 2008)
+New Revision: 129
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java
+Log:
+C?\195?\179digo de pesquisa n?\195?\163o est?\195?\161 a funcionar correctamente.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-03 11:21:50 UTC (rev 128)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-03 17:41:41 UTC (rev 129)
+@@ -114,7 +114,7 @@
+                     hConfig.setProperty(&quot;hibernate.connection.username&quot;, &quot;sa&quot;);//Default user for every HSQLDB database
+ 
+                     //Try to shutdown the database as soon as there all connections are gone
+-                    hConfig.setProperty(&quot;hibernate.connection.shutdown&quot;, &quot;true&quot;);
++                    //hConfig.setProperty(&quot;hibernate.connection.shutdown&quot;, &quot;true&quot;);
+                     
+                     hConfig.setProperty(&quot;hibernate.connection.password&quot;, &quot;&quot;);//HSQLDB has a user with no password
+ 
+@@ -375,9 +375,6 @@
+     @Override
+     public void finalize() {
+         if (sessionFactory != null &amp;&amp; !sessionFactory.isClosed()) {
+-            Session s = sessionFactory.getCurrentSession();
+-            s.beginTransaction();
+-            //s.createSQLQuery(&quot;SHUTDOWN&quot;).
+             sessionFactory.close();
+         }
+     }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml	2008-06-03 11:21:50 UTC (rev 128)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml	2008-06-03 17:41:41 UTC (rev 129)
+@@ -45,8 +45,8 @@
+         
+         &lt;!-- //TODO: remove this line and replace with proper one --&gt;
+         &lt;!-- &lt;property name=&quot;hbm2ddl.auto&quot;&gt;create&lt;/property&gt; --&gt;
+-        &lt;!-- 
+-        &lt;property name=&quot;hibernate.connection.shutdown&quot;&gt;true&lt;/property&gt; --&gt;
++        
++        &lt;property name=&quot;connection.shutdown&quot;&gt;true&lt;/property&gt;
+ 
+         &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml&quot;/&gt;
+         &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-03 11:21:50 UTC (rev 128)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-03 17:41:41 UTC (rev 129)
+@@ -111,3 +111,4 @@
+ StatisticsDlg.jButton2.text=jButton2
+ StatisticsDlg.jButton3.text=jButton3
+ StatisticsDlg.jButton4.text=jButton4
++SearchDlg.jpbProgress.string=searching...
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form	2008-06-03 11:21:50 UTC (rev 128)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form	2008-06-03 17:41:41 UTC (rev 129)
+@@ -31,8 +31,8 @@
+                   &lt;Component id=&quot;jpTopPanel&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;2&quot;/&gt;
+                   &lt;Component id=&quot;jpResults&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;2&quot;/&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;Component id=&quot;jpbProgress&quot; pref=&quot;275&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;203&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jpbProgress&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;332&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jbtnClose&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+               &lt;/Group&gt;
+@@ -323,8 +323,8 @@
+           &lt;SubComponents&gt;
+             &lt;Component class=&quot;javax.swing.JList&quot; name=&quot;jlstResults&quot;&gt;
+               &lt;Properties&gt;
+-                &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ListModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ListModelEditor&quot;&gt;
+-                  &lt;StringArray count=&quot;0&quot;/&gt;
++                &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ListModel&quot; editor=&quot;org.netbeans.modules.form.RADConnectionPropertyEditor&quot;&gt;
++                  &lt;Connection code=&quot;listModel = new DefaultListModel()&quot; type=&quot;code&quot;/&gt;
+                 &lt;/Property&gt;
+               &lt;/Properties&gt;
+             &lt;/Component&gt;
+@@ -344,7 +344,11 @@
+     &lt;/Component&gt;
+     &lt;Component class=&quot;javax.swing.JProgressBar&quot; name=&quot;jpbProgress&quot;&gt;
+       &lt;Properties&gt;
+-        &lt;Property name=&quot;value&quot; type=&quot;int&quot; value=&quot;50&quot;/&gt;
++        &lt;Property name=&quot;indeterminate&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
++        &lt;Property name=&quot;string&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;SearchDlg.jpbProgress.string&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++        &lt;Property name=&quot;stringPainted&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
+       &lt;/Properties&gt;
+     &lt;/Component&gt;
+   &lt;/SubComponents&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java	2008-06-03 11:21:50 UTC (rev 128)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java	2008-06-03 17:41:41 UTC (rev 129)
+@@ -22,12 +22,17 @@
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
++import java.util.Iterator;
+ import java.util.LinkedList;
+ import java.util.List;
+ import java.util.Vector;
+ import javax.swing.DefaultListModel;
+ import javax.swing.JComboBox;
++import org.hibernate.Criteria;
+ import org.hibernate.Session;
++import org.hibernate.criterion.MatchMode;
++import org.hibernate.criterion.Restrictions;
+ import org.openide.util.Lookup;
+ 
+ /**
+@@ -38,12 +43,14 @@
+ 
+     private CatalogEngine eng;
+     private Vector&lt;DiskGroup&gt; groups;
++    private DefaultListModel listModel;
+     
++    
+     /** Creates new form SearchDlg */
+     public SearchDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+         eng = Lookup.getDefault().lookup(CatalogEngine.class);
+-        populateDiskGroupBox();
++        obtainDiskGroupNames();
+         initComponents();
+         jpbProgress.setVisible(false);
+     }
+@@ -68,7 +75,7 @@
+     }
+     
+     @SuppressWarnings(&quot;unchecked&quot;)
+-    private void populateDiskGroupBox() {
++    private void obtainDiskGroupNames() {
+         groups = new Vector&lt;DiskGroup&gt;();
+         Session s = eng.sessionFactory.getCurrentSession();
+         s.beginTransaction();
+@@ -78,6 +85,7 @@
+     
+     @SuppressWarnings(&quot;unchecked&quot;)
+     private void search() {
++        listModel.clear();
+         boolean inDescriptions = jchkSearchInDesc.isSelected();
+         boolean caseSensitive = jchkCaseSensitive.isSelected();
+         boolean useRegular = jchkUseReGex.isSelected();
+@@ -85,11 +93,24 @@
+         List l = new LinkedList();
+         Session s = eng.sessionFactory.getCurrentSession();
+         s.beginTransaction();
+-        l.addAll(s.createQuery(&quot;from FileWrapper file where file.name like %?%&quot;).list());
++        Criteria c = s.createCriteria(FileWrapper.class).add(Restrictions.ilike(&quot;name&quot;, jtfSearchText.getText().trim(), MatchMode.ANYWHERE));
++        //l.addAll(c.list());*/
++        /*l.addAll(s.createQuery(&quot;from FileWrapper file where file.name like '%:name%'&quot;).setString(&quot;name&quot;, jtfSearchText.getText().trim()).list());*/
++        
++        /*for(Object o : l) {
++            //System.err.println(&quot;FOUND: &quot; + o);
++            listModel.addElement(o);
++        }*/
++       for(Object o : c.list()) {
++            //System.err.println(&quot;FOUND: &quot; + o);
++            listModel.addElement(o);
++        }
++        /*Iterator it = s.createQuery(&quot;from FileWrapper file where file.name like ?&quot;).setString(0, &quot;%&quot;
++                + jtfSearchText.getText().trim()+&quot;%&quot;).iterate();
++        while(it.hasNext()) {
++            listModel.addElement(it.next());
++        }*/
+         s.getTransaction().commit();
+-        for(Object o : l) {
+-            ((DefaultListModel)jlstResults.getModel()).addElement(o);
+-        }
+         jpbProgress.setVisible(false);
+     }
+     /** This method is called from within the constructor to
+@@ -247,6 +268,7 @@
+ 
+         jpResults.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(SearchDlg.class, &quot;SearchDlg.jpResults.border.title&quot;))); // NOI18N
+ 
++        jlstResults.setModel(listModel = new DefaultListModel());
+         jscrResults.setViewportView(jlstResults);
+ 
+         javax.swing.GroupLayout jpResultsLayout = new javax.swing.GroupLayout(jpResults);
+@@ -272,7 +294,9 @@
+             }
+         });
+ 
+-        jpbProgress.setValue(50);
++        jpbProgress.setIndeterminate(true);
++        jpbProgress.setString(org.openide.util.NbBundle.getMessage(SearchDlg.class, &quot;SearchDlg.jpbProgress.string&quot;)); // NOI18N
++        jpbProgress.setStringPainted(true);
+ 
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+@@ -284,8 +308,8 @@
+                     .addComponent(jpTopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                     .addComponent(jpResults, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                        .addComponent(jpbProgress, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
+-                        .addGap(203, 203, 203)
++                        .addComponent(jpbProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 332, Short.MAX_VALUE)
+                         .addComponent(jbtnClose)))
+                 .addContainerGap())
+         );
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000123.html">[Jfindmyfiles-commits] r128 - in trunk:	docs/Iteracao2-CB05/TestingDB project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+	<LI>Next message: <A HREF="000125.html">[Jfindmyfiles-commits] r130 - trunk/docs/Iteracao2-CB05/TestingDB
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#124">[ date ]</a>
+              <a href="thread.html#124">[ thread ]</a>
+              <a href="subject.html#124">[ subject ]</a>
+              <a href="author.html#124">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

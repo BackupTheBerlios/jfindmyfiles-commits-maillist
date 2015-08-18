@@ -1,0 +1,183 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r125 -	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r125%20-%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities&In-Reply-To=%3C200805301602.m4UG2uV1017665%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000119.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r125 -	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r125%20-%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities&In-Reply-To=%3C200805301602.m4UG2uV1017665%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r125 -	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities">knitter at mail.berlios.de
+       </A><BR>
+    <I>Fri May 30 18:02:56 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000119.html">[Jfindmyfiles-commits] r124 -	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120">[ date ]</a>
+              <a href="thread.html#120">[ thread ]</a>
+              <a href="subject.html#120">[ subject ]</a>
+              <a href="author.html#120">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-30 18:02:53 +0200 (Fri, 30 May 2008)
+New Revision: 125
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+Log:
+Corrigido problema no mapeamento das classes para o sistema hibernate.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml	2008-05-30 02:48:54 UTC (rev 124)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml	2008-05-30 16:02:53 UTC (rev 125)
+@@ -36,6 +36,11 @@
+             &lt;one-to-many class=&quot;de.berlios.jfindmyfiles.catalog.entities.DiskGroup&quot;/&gt;
+         &lt;/set&gt;
+ 
+-        &lt;many-to-one name=&quot;parent&quot; column=&quot;PARENT_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.DiskGroup&quot;/&gt;       
++        &lt;many-to-one name=&quot;parent&quot; column=&quot;PARENT_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.DiskGroup&quot;/&gt;
++        
++        &lt;set name=&quot;disks&quot; table=&quot;TBL_GROUP_MEDIA&quot;&gt;
++            &lt;key column=&quot;GROUP_ID&quot;/&gt;
++            &lt;many-to-many column=&quot;MEDIA_ID&quot; unique=&quot;true&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Media&quot;/&gt;
++        &lt;/set&gt;
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+\ No newline at end of file
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml	2008-05-30 02:48:54 UTC (rev 124)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml	2008-05-30 16:02:53 UTC (rev 125)
+@@ -21,7 +21,6 @@
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+ 'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+ '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+-
+ &lt;hibernate-mapping&gt;
+     &lt;class name=&quot;de.berlios.jfindmyfiles.catalog.entities.Loan&quot; table=&quot;TBL_LOAN&quot;&gt;
+         &lt;id name=&quot;id&quot; column=&quot;LOAN_ID&quot;&gt;
+@@ -29,9 +28,7 @@
+         &lt;/id&gt;
+         &lt;property name=&quot;loaned&quot; type=&quot;date&quot;/&gt;
+         &lt;property name=&quot;returned&quot; type=&quot;date&quot;/&gt;
+-        
+         &lt;many-to-one name=&quot;media&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Media&quot; column=&quot;MEDIA_ID&quot; not-null=&quot;true&quot;/&gt;
+-        
+-        &lt;many-to-one name=&quot;loanee&quot; column=&quot;USER_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.User&quot; not-null=&quot;true&quot;/&gt;          
++        &lt;many-to-one name=&quot;loanee&quot; column=&quot;USER_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.User&quot; not-null=&quot;true&quot;/&gt;
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-05-30 02:48:54 UTC (rev 124)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-05-30 16:02:53 UTC (rev 125)
+@@ -65,11 +65,11 @@
+         this.loanee = loanee;
+     }
+ 
+-    public Media getMedium() {
++    public Media getMedia() {
+         return media;
+     }
+ 
+-    public void setMedium(Media media) {
++    public void setMedia(Media media) {
+         this.media = media;
+     }
+ 
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-30 02:48:54 UTC (rev 124)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-30 16:02:53 UTC (rev 125)
+@@ -21,41 +21,35 @@
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+ 'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+ '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+-
+ &lt;hibernate-mapping&gt;
+     &lt;class name=&quot;de.berlios.jfindmyfiles.catalog.entities.Media&quot; table=&quot;TBL_MEDIA&quot;&gt;
+         &lt;id name=&quot;id&quot; column=&quot;MEDIA_ID&quot;&gt;
+             &lt;generator class=&quot;native&quot;/&gt;
+         &lt;/id&gt;
+-                
+         &lt;property name=&quot;name&quot;/&gt;
+         &lt;property name=&quot;capacity&quot;/&gt;
+         &lt;property name=&quot;lastModified&quot;/&gt;
+-
+         &lt;property name=&quot;description&quot;/&gt;
+         &lt;property name=&quot;freeSpace&quot;/&gt;
+         &lt;property name=&quot;location&quot;/&gt;
+-        
+         &lt;set name=&quot;loans&quot; table=&quot;TBL_LOANS&quot; inverse=&quot;true&quot;&gt;
+             &lt;key column=&quot;MEDIA_ID&quot;/&gt;
+             &lt;one-to-many class=&quot;de.berlios.jfindmyfiles.catalog.entities.Loan&quot;/&gt;
+         &lt;/set&gt;
+-        
+         &lt;set name=&quot;labels&quot; table=&quot;TBL_MEDIA_LABEL&quot;&gt;
+             &lt;key column=&quot;MEDIA_ID&quot;/&gt;
+             &lt;many-to-many column=&quot;LABEL_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Label&quot;/&gt;
+         &lt;/set&gt;
+-        
+         &lt;set name=&quot;files&quot; inverse=&quot;true&quot;&gt;
+             &lt;key column=&quot;MEDIA_ID&quot;/&gt;
+             &lt;one-to-many class=&quot;de.berlios.jfindmyfiles.catalog.entities.FileWrapper&quot;/&gt;
+         &lt;/set&gt;
++
++        &lt;many-to-one name=&quot;type&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Type&quot; column=&quot;TYPE_ID&quot; not-null=&quot;true&quot;/&gt;
+         
+         &lt;join table=&quot;TBL_GROUP_MEDIA&quot; optional=&quot;true&quot;&gt;
+-            &lt;key column=&quot;MEDIA_ID&quot; unique=&quot;true&quot;/&gt;
++            &lt;key column=&quot;MEDIA_ID&quot;/&gt;
+             &lt;many-to-one name=&quot;group&quot; column=&quot;GROUP_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.DiskGroup&quot; not-null=&quot;true&quot;/&gt;
+         &lt;/join&gt;
+-        
+-        &lt;many-to-one name=&quot;type&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Type&quot; column=&quot;TYPE_ID&quot; not-null=&quot;true&quot;/&gt;
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000119.html">[Jfindmyfiles-commits] r124 -	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#120">[ date ]</a>
+              <a href="thread.html#120">[ thread ]</a>
+              <a href="subject.html#120">[ subject ]</a>
+              <a href="author.html#120">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

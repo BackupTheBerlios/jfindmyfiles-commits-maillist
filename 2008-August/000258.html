@@ -1,0 +1,908 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r263 - in trunk: . docs docs/Simple Export
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-August/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r263%20-%20in%20trunk%3A%20.%20docs%20docs/Simple%20Export&In-Reply-To=%3C200808012100.m71L0SMg012392%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000259.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r263 - in trunk: . docs docs/Simple Export</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r263%20-%20in%20trunk%3A%20.%20docs%20docs/Simple%20Export&In-Reply-To=%3C200808012100.m71L0SMg012392%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r263 - in trunk: . docs docs/Simple Export">knitter at mail.berlios.de
+       </A><BR>
+    <I>Fri Aug  1 23:00:28 CEST 2008</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000259.html">[Jfindmyfiles-commits] r264 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#258">[ date ]</a>
+              <a href="thread.html#258">[ thread ]</a>
+              <a href="subject.html#258">[ subject ]</a>
+              <a href="author.html#258">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-08-01 22:58:57 +0200 (Fri, 01 Aug 2008)
+New Revision: 263
+
+Added:
+   trunk/docs/Heap-iterative.png
+   trunk/docs/Heap.png
+   trunk/docs/Simple Export/
+   trunk/docs/Simple Export/Simple Export.properties
+   trunk/docs/Simple Export/index.html
+   trunk/docs/Simple Export/preview.jpg
+   trunk/docs/Simple Export/style.css
+   trunk/docs/entities diagram.png
+   trunk/docs/example.amc
+   trunk/docs/export-exemplo.csv
+   trunk/docs/export-exemplo.xml
+   trunk/docs/export-exemplo.xsd
+   trunk/docs/extremeprogrammingorg.zip
+   trunk/docs/gpl-2.0.txt
+   trunk/docs/pluginapi.png
+   trunk/docs/plugins.png
+   trunk/docs/readingfiles.png
+   trunk/docs/rfc4180.txt
+   trunk/export-templates/
+   trunk/jfindmyfiles-plugins/
+Removed:
+   trunk/Plugins/
+   trunk/Templates/
+   trunk/docs/15x5/
+   trunk/docs/Apresentacao Publica - JFindMyFiles.ppt
+   trunk/docs/Apresentacao Publica Com Notas - JFindMyFiles.ppt
+   trunk/docs/Calendarizacao.gan
+   trunk/docs/Calendarizacao.png
+   trunk/docs/Demo/
+   trunk/docs/Documentos Externos/
+   trunk/docs/Ferramentas Usadas e Informacao Geral.txt
+   trunk/docs/Imagens Criadas/
+   trunk/docs/Iteracao1-CB09/
+   trunk/docs/Iteracao2-CB05/
+   trunk/docs/Iteracao3-CB03/
+   trunk/docs/Iteracao4-CB04/
+   trunk/docs/Iteracao5-CB02/
+   trunk/docs/Iteracao6-CB07/
+   trunk/docs/Iteracao7-CB06/
+   trunk/docs/Iteracao8-CB08/
+   trunk/docs/Iteracao9-CB01/
+   trunk/docs/JFindMyFiles - Final.pdf
+   trunk/docs/JFindMyFiles - Manual de Instala?\195?\167?\195?\163o.doc
+   trunk/docs/JFindMyFiles - Manual de Instala?\195?\167?\195?\163o.pdf
+   trunk/docs/JFindMyFiles - Manual de Programador.doc
+   trunk/docs/JFindMyFiles - Manual de Programador.pdf
+   trunk/docs/JFindMyFiles - Manual de Utilizador.doc
+   trunk/docs/JFindMyFiles - Manual de Utilizador.pdf
+   trunk/docs/JFindMyFiles.doc
+   trunk/docs/ReCalendarizacao Semanal.png
+   trunk/docs/ReCalendarizacao.gan
+   trunk/docs/ReCalendarizacao.png
+   trunk/docs/Testes de Usabilidade ao sistema JFindMyFiles - I.xls
+   trunk/docs/Testes de Usabilidade ao sistema JFindMyFiles - II.xls
+   trunk/docs/[Info] Bibliografia Consultada.txt
+   trunk/docs/[Info] Convecoes de codigo.txt
+   trunk/docs/[Info] Manual de Utilizador.txt
+   trunk/docs/[Info] Ordem das Iteracoes.txt
+   trunk/docs/[Info] Question?\195?\161rio de Usabilidade.txt
+   trunk/docs/[Justificacao] Estado da Arte.txt
+   trunk/docs/[Justificacao] Metodologia usada.txt
+   trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt
+   trunk/docs/[Justificacao] Tecnologia ORM escolhida.txt
+   trunk/docs/[Justificacao] Uso de plataforma RCP.txt
+   trunk/docs/[XPDoc] User Stories Combinadas.txt
+   trunk/docs/[XPDoc] User Stories.txt
+Modified:
+   trunk/installer script.xml
+Log:
+Layout changes to prepare for next development cycle.
+
+/usr/local/bin/commit-email.pl: `/usr/bin/svnlook diff /svnroot/repos/jfindmyfiles -r 263' failed with this output:
+Deleted: trunk/docs/Apresentacao Publica - JFindMyFiles.ppt
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/Apresentacao Publica Com Notas - JFindMyFiles.ppt
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/Calendarizacao.gan
+===================================================================
+--- trunk/docs/Calendarizacao.gan	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/Calendarizacao.gan	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,99 +0,0 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;project name=&quot;Untitled Gantt Project&quot; company=&quot;&quot; webLink=&quot;<A HREF="http://">http://</A>&quot; view-date=&quot;2008-03-08&quot; view-index=&quot;0&quot; gantt-divider-location=&quot;247&quot; resource-divider-location=&quot;284&quot; version=&quot;2.0&quot;&gt;
+-    &lt;description/&gt;
+-    &lt;view zooming-state=&quot;default:2&quot; id=&quot;gantt-chart&quot;/&gt;
+-    &lt;view id=&quot;resource-table&quot;&gt;
+-        &lt;field id=&quot;0&quot; name=&quot;Name&quot; width=&quot;55&quot; order=&quot;0&quot;/&gt;
+-        &lt;field id=&quot;1&quot; name=&quot;Default role&quot; width=&quot;44&quot; order=&quot;1&quot;/&gt;
+-    &lt;/view&gt;
+-    &lt;!-- --&gt;
+-    &lt;calendars&gt;
+-        &lt;day-types&gt;
+-            &lt;day-type id=&quot;0&quot;/&gt;
+-            &lt;day-type id=&quot;1&quot;/&gt;
+-            &lt;calendar id=&quot;1&quot; name=&quot;default&quot;&gt;
+-                &lt;default-week sun=&quot;1&quot; mon=&quot;0&quot; tue=&quot;0&quot; wed=&quot;0&quot; thu=&quot;0&quot; fri=&quot;0&quot; sat=&quot;1&quot;/&gt;
+-                &lt;overriden-day-types/&gt;
+-                &lt;days/&gt;
+-            &lt;/calendar&gt;
+-        &lt;/day-types&gt;
+-    &lt;/calendars&gt;
+-    &lt;tasks color=&quot;#8cb6ce&quot;&gt;
+-        &lt;taskproperties&gt;
+-            &lt;taskproperty id=&quot;tpd0&quot; name=&quot;type&quot; type=&quot;default&quot; valuetype=&quot;icon&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd1&quot; name=&quot;priority&quot; type=&quot;default&quot; valuetype=&quot;icon&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd2&quot; name=&quot;info&quot; type=&quot;default&quot; valuetype=&quot;icon&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd3&quot; name=&quot;name&quot; type=&quot;default&quot; valuetype=&quot;text&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd4&quot; name=&quot;begindate&quot; type=&quot;default&quot; valuetype=&quot;date&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd5&quot; name=&quot;enddate&quot; type=&quot;default&quot; valuetype=&quot;date&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd6&quot; name=&quot;duration&quot; type=&quot;default&quot; valuetype=&quot;int&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd7&quot; name=&quot;completion&quot; type=&quot;default&quot; valuetype=&quot;int&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd8&quot; name=&quot;coordinator&quot; type=&quot;default&quot; valuetype=&quot;text&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd9&quot; name=&quot;predecessorsr&quot; type=&quot;default&quot; valuetype=&quot;text&quot;/&gt;
+-        &lt;/taskproperties&gt;
+-        &lt;task id=&quot;23&quot; name=&quot;An&#195;&#161;lise&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-03-11&quot; duration=&quot;24&quot; complete=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;&gt;
+-            &lt;task id=&quot;6&quot; name=&quot;An&#195;&#161;lise e Escolha Metodologia&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-03-11&quot; duration=&quot;6&quot; complete=&quot;0&quot; thirdDate=&quot;2008-03-11&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;7&quot; name=&quot;Obten&#195;&#167;&#195;&#163;o de User Stories&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-03-31&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-03-31&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;8&quot; name=&quot;Desenvolvimento de Prot&#195;&#179;tipos&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-03-31&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-03-31&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;9&quot; name=&quot;An&#195;&#161;lise de Sistemas Existentes&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-07&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-07&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;10&quot; name=&quot;Estudo e Escolha Plataforma RCP&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-07&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-07&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;11&quot; name=&quot;Escolha de Ferramentas e Bibliotecas a Usar&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-02&quot; duration=&quot;3&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-02&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-        &lt;/task&gt;
+-        &lt;task id=&quot;24&quot; name=&quot;Planning Game&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-14&quot; duration=&quot;50&quot; complete=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;&gt;
+-            &lt;task id=&quot;12&quot; name=&quot;Reuni&#195;&#163;o &quot;Release Planning&quot;&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-14&quot; duration=&quot;1&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-14&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;25&quot; name=&quot;Implementa&#195;&#167;&#195;&#163;o&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-14&quot; duration=&quot;50&quot; complete=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;&gt;
+-                &lt;task id=&quot;13&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB09&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-14&quot; duration=&quot;5&quot; complete=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;14&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB05&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-21&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-21&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;15&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB03&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-28&quot; duration=&quot;10&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-28&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;16&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB04&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-05-12&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-05-12&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;17&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB02&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-05-19&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-05-19&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;18&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB07&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-05-26&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-05-26&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;19&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB06&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-06-02&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-06-02&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;20&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB08&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-06-09&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-06-09&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;21&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB01&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-06-16&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-06-16&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;/task&gt;
+-        &lt;/task&gt;
+-        &lt;task id=&quot;22&quot; name=&quot;Desenvolvimento de Relat&#195;&#179;rio e outra Documenta&#195;&#167;&#195;&#163;o&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-03-11&quot; duration=&quot;80&quot; complete=&quot;0&quot; thirdDate=&quot;2008-03-11&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-    &lt;/tasks&gt;
+-    &lt;resources&gt;
+-        &lt;resource id=&quot;0&quot; name=&quot;Patr&#195;&#173;cia Monteiro&quot; function=&quot;SoftwareDevelopment:10&quot; contacts=&quot;<A HREF="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">ticamonteiro at gmail.com</A>&quot; phone=&quot;&quot;/&gt;
+-        &lt;resource id=&quot;1&quot; name=&quot;S&#195;&#169;rgio Lopes&quot; function=&quot;SoftwareDevelopment:10&quot; contacts=&quot;<A HREF="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">knitter.is at gmail.com</A>&quot; phone=&quot;&quot;/&gt;
+-    &lt;/resources&gt;
+-    &lt;allocations&gt;
+-        &lt;allocation task-id=&quot;6&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;7&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;8&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;9&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;10&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;11&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;12&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;12&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;13&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;13&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;15&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;15&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;16&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;16&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;17&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;17&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;18&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;18&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;19&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;19&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;20&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;20&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;21&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;21&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;22&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;22&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-    &lt;/allocations&gt;
+-    &lt;vacations/&gt;
+-    &lt;taskdisplaycolumns&gt;
+-        &lt;displaycolumn property-id=&quot;tpd3&quot; order=&quot;0&quot; width=&quot;138&quot;/&gt;
+-        &lt;displaycolumn property-id=&quot;tpd4&quot; order=&quot;1&quot; width=&quot;44&quot;/&gt;
+-        &lt;displaycolumn property-id=&quot;tpd5&quot; order=&quot;2&quot; width=&quot;43&quot;/&gt;
+-    &lt;/taskdisplaycolumns&gt;
+-    &lt;previous/&gt;
+-    &lt;roles roleset-name=&quot;Default&quot;/&gt;
+-    &lt;roles roleset-name=&quot;SoftwareDevelopment&quot;/&gt;
+-&lt;/project&gt;
+
+Deleted: trunk/docs/Calendarizacao.png
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/Ferramentas Usadas e Informacao Geral.txt
+===================================================================
+--- trunk/docs/Ferramentas Usadas e Informacao Geral.txt	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/Ferramentas Usadas e Informacao Geral.txt	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,42 +0,0 @@
+-P&#225;gina do projecto: <A HREF="http://jfindmyfiles.berlios.de">http://jfindmyfiles.berlios.de</A>
+-P&#225;gina do projecto no sistema berlios: <A HREF="http://developer.berlios.de/projects/jfindmyfiles/">http://developer.berlios.de/projects/jfindmyfiles/</A>
+-URL do reposit&#243;rio SVN: <A HREF="http://svn.berlios.de/svnroot/repos/jfindmyfiles/trunk/">http://svn.berlios.de/svnroot/repos/jfindmyfiles/trunk/</A>
+-URL do gestor de projectos: <A HREF="http://jfindmyfiles.berlios.de/pier">http://jfindmyfiles.berlios.de/pier</A> - Sistema privado
+-
+-No desenvolvimento do projecto foram usadas as seguintes ferramentas:
+-
+-Netbeans IDE - IDE de desenvolvimento para, entre outras, a linguagem JAVA e que 
+-permite o uso da plataforma Netbeans.
+-URL: <A HREF="http://www.netbeans.org">http://www.netbeans.org</A>
+-
+-GanttProject - Elabora&#231;&#227;o do planeamento e gr&#225;fico de Gantt
+-URL: <A HREF="http://ganttproject.biz">http://ganttproject.biz</A>
+-
+-ProjectPier - Ferramenta de colabora&#231;&#227;o e gest&#227;o de projectos.
+-URL: <A HREF="http://www.projectpier.org">http://www.projectpier.org</A>
+-
+-TortoiseSVN - Cliente gr&#225;fico, para sistemas operativos Windows, do sistema de 
+-vers&#245;es Subversion.
+-URL: <A HREF="http://tortoisesvn.tigris.org">http://tortoisesvn.tigris.org</A>
+-
+-Subversion - Cliente linha de comandos do sistema de vers&#245;es Subversion. Vers&#227;o 
+-	para sistemas operativos baseados em  Linux.
+-URL: <A HREF="http://subversion.tigris.org">http://subversion.tigris.org</A>
+-
+-SmartSVN - Cliente gr&#225;fico, multi-plataforma, do sistema de vers&#245;es Subversion.
+-
+-Notepad++ - Editor de texto para sistemas operativos Windows
+-URL: <A HREF="http://notepad-plus.sourceforge.net">http://notepad-plus.sourceforge.net</A>
+-
+-Bibliotecas Externas/Outras Tecnologias
+-
+-Hibernate
+-URL: <A HREF="http://www.hibernate.org">http://www.hibernate.org</A>
+-
+-XTest
+-URL: <A HREF="http://xtest.netbeans.org">http://xtest.netbeans.org</A>
+-
+-HSQLDB - Motor de base de dado em Java
+-JCalendar - Widget para mostrar calend&#225;rios
+-jacksum
+-metadata-extractor-2.3.1.jar
+
+Added: trunk/docs/Heap-iterative.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Heap-iterative.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/docs/Heap.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Heap.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Deleted: trunk/docs/JFindMyFiles - Final.pdf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Instala?\195?\167?\195?\163o.doc
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Instala?\195?\167?\195?\163o.pdf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Programador.doc
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Programador.pdf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Utilizador.doc
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles - Manual de Utilizador.pdf
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/JFindMyFiles.doc
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/ReCalendarizacao Semanal.png
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/ReCalendarizacao.gan
+===================================================================
+--- trunk/docs/ReCalendarizacao.gan	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/ReCalendarizacao.gan	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,99 +0,0 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;project name=&quot;Untitled Gantt Project&quot; company=&quot;&quot; webLink=&quot;<A HREF="http://">http://</A>&quot; view-date=&quot;2008-04-13&quot; view-index=&quot;0&quot; gantt-divider-location=&quot;247&quot; resource-divider-location=&quot;284&quot; version=&quot;2.0&quot;&gt;
+-    &lt;description/&gt;
+-    &lt;view zooming-state=&quot;default:2&quot; id=&quot;gantt-chart&quot;/&gt;
+-    &lt;view id=&quot;resource-table&quot;&gt;
+-        &lt;field id=&quot;0&quot; name=&quot;Name&quot; width=&quot;55&quot; order=&quot;0&quot;/&gt;
+-        &lt;field id=&quot;1&quot; name=&quot;Default role&quot; width=&quot;44&quot; order=&quot;1&quot;/&gt;
+-    &lt;/view&gt;
+-    &lt;!-- --&gt;
+-    &lt;calendars&gt;
+-        &lt;day-types&gt;
+-            &lt;day-type id=&quot;0&quot;/&gt;
+-            &lt;day-type id=&quot;1&quot;/&gt;
+-            &lt;calendar id=&quot;1&quot; name=&quot;default&quot;&gt;
+-                &lt;default-week sun=&quot;1&quot; mon=&quot;0&quot; tue=&quot;0&quot; wed=&quot;0&quot; thu=&quot;0&quot; fri=&quot;0&quot; sat=&quot;1&quot;/&gt;
+-                &lt;overriden-day-types/&gt;
+-                &lt;days/&gt;
+-            &lt;/calendar&gt;
+-        &lt;/day-types&gt;
+-    &lt;/calendars&gt;
+-    &lt;tasks color=&quot;#8cb6ce&quot;&gt;
+-        &lt;taskproperties&gt;
+-            &lt;taskproperty id=&quot;tpd0&quot; name=&quot;type&quot; type=&quot;default&quot; valuetype=&quot;icon&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd1&quot; name=&quot;priority&quot; type=&quot;default&quot; valuetype=&quot;icon&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd2&quot; name=&quot;info&quot; type=&quot;default&quot; valuetype=&quot;icon&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd3&quot; name=&quot;name&quot; type=&quot;default&quot; valuetype=&quot;text&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd4&quot; name=&quot;begindate&quot; type=&quot;default&quot; valuetype=&quot;date&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd5&quot; name=&quot;enddate&quot; type=&quot;default&quot; valuetype=&quot;date&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd6&quot; name=&quot;duration&quot; type=&quot;default&quot; valuetype=&quot;int&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd7&quot; name=&quot;completion&quot; type=&quot;default&quot; valuetype=&quot;int&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd8&quot; name=&quot;coordinator&quot; type=&quot;default&quot; valuetype=&quot;text&quot;/&gt;
+-            &lt;taskproperty id=&quot;tpd9&quot; name=&quot;predecessorsr&quot; type=&quot;default&quot; valuetype=&quot;text&quot;/&gt;
+-        &lt;/taskproperties&gt;
+-        &lt;task id=&quot;23&quot; name=&quot;An&#195;&#161;lise&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-03-11&quot; duration=&quot;24&quot; complete=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;&gt;
+-            &lt;task id=&quot;6&quot; name=&quot;An&#195;&#161;lise e Escolha Metodologia&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-03-11&quot; duration=&quot;6&quot; complete=&quot;0&quot; thirdDate=&quot;2008-03-11&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;7&quot; name=&quot;Obten&#195;&#167;&#195;&#163;o de User Stories&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-03-31&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-03-31&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;8&quot; name=&quot;Desenvolvimento de Prot&#195;&#179;tipos&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-03-31&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-03-31&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;11&quot; name=&quot;Escolha de Ferramentas e Bibliotecas a Usar&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-02&quot; duration=&quot;3&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-02&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;9&quot; name=&quot;An&#195;&#161;lise de Sistemas Existentes&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-07&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-07&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;10&quot; name=&quot;Estudo e Escolha Plataforma RCP&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-07&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-07&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-        &lt;/task&gt;
+-        &lt;task id=&quot;24&quot; name=&quot;Planning Game&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-14&quot; duration=&quot;60&quot; complete=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;&gt;
+-            &lt;task id=&quot;12&quot; name=&quot;Reuni&#195;&#163;o &quot;Release Planning&quot;&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-14&quot; duration=&quot;1&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-14&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;task id=&quot;25&quot; name=&quot;Implementa&#195;&#167;&#195;&#163;o&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-14&quot; duration=&quot;60&quot; complete=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;&gt;
+-                &lt;task id=&quot;13&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB09&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-14&quot; duration=&quot;5&quot; complete=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;14&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB05&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-04-21&quot; duration=&quot;15&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-21&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;15&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB03&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-05-12&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-04-28&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;16&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB04&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-05-19&quot; duration=&quot;10&quot; complete=&quot;0&quot; thirdDate=&quot;2008-05-12&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;17&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB02&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-06-02&quot; duration=&quot;5&quot; complete=&quot;0&quot; thirdDate=&quot;2008-05-19&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;18&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB07&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-06-09&quot; duration=&quot;8&quot; complete=&quot;0&quot; thirdDate=&quot;2008-05-26&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;19&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB06&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-06-19&quot; duration=&quot;6&quot; complete=&quot;0&quot; thirdDate=&quot;2008-06-02&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;20&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB08&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-06-27&quot; duration=&quot;3&quot; complete=&quot;0&quot; thirdDate=&quot;2008-06-09&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-                &lt;task id=&quot;21&quot; name=&quot;Itera&#195;&#167;&#195;&#163;o CB01&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-07-02&quot; duration=&quot;3&quot; complete=&quot;0&quot; thirdDate=&quot;2008-06-16&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-            &lt;/task&gt;
+-        &lt;/task&gt;
+-        &lt;task id=&quot;22&quot; name=&quot;Desenvolvimento de Relat&#195;&#179;rio e outra Documenta&#195;&#167;&#195;&#163;o&quot; color=&quot;#8cb6ce&quot; meeting=&quot;false&quot; start=&quot;2008-03-11&quot; duration=&quot;90&quot; complete=&quot;0&quot; thirdDate=&quot;2008-03-11&quot; thirdDate-constraint=&quot;0&quot; priority=&quot;1&quot; expand=&quot;true&quot;/&gt;
+-    &lt;/tasks&gt;
+-    &lt;resources&gt;
+-        &lt;resource id=&quot;0&quot; name=&quot;Patr&#195;&#173;cia Monteiro&quot; function=&quot;SoftwareDevelopment:10&quot; contacts=&quot;<A HREF="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">ticamonteiro at gmail.com</A>&quot; phone=&quot;&quot;/&gt;
+-        &lt;resource id=&quot;1&quot; name=&quot;S&#195;&#169;rgio Lopes&quot; function=&quot;SoftwareDevelopment:10&quot; contacts=&quot;<A HREF="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">knitter.is at gmail.com</A>&quot; phone=&quot;&quot;/&gt;
+-    &lt;/resources&gt;
+-    &lt;allocations&gt;
+-        &lt;allocation task-id=&quot;6&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;7&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;8&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;11&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;9&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;10&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;12&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;12&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;13&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;13&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;15&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;15&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;16&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;16&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;true&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;17&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;17&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;18&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;18&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;19&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;19&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;20&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;20&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;21&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;21&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;22&quot; resource-id=&quot;0&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-        &lt;allocation task-id=&quot;22&quot; resource-id=&quot;1&quot; function=&quot;SoftwareDevelopment:10&quot; responsible=&quot;false&quot; load=&quot;100.0&quot;/&gt;
+-    &lt;/allocations&gt;
+-    &lt;vacations/&gt;
+-    &lt;taskdisplaycolumns&gt;
+-        &lt;displaycolumn property-id=&quot;tpd3&quot; order=&quot;0&quot; width=&quot;138&quot;/&gt;
+-        &lt;displaycolumn property-id=&quot;tpd4&quot; order=&quot;1&quot; width=&quot;44&quot;/&gt;
+-        &lt;displaycolumn property-id=&quot;tpd5&quot; order=&quot;2&quot; width=&quot;43&quot;/&gt;
+-    &lt;/taskdisplaycolumns&gt;
+-    &lt;previous/&gt;
+-    &lt;roles roleset-name=&quot;Default&quot;/&gt;
+-    &lt;roles roleset-name=&quot;SoftwareDevelopment&quot;/&gt;
+-&lt;/project&gt;
+
+Deleted: trunk/docs/ReCalendarizacao.png
+===================================================================
+(Binary files differ)
+
+Added: trunk/docs/Simple Export/Simple Export.properties
+===================================================================
+--- trunk/docs/Simple Export/Simple Export.properties	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/Simple Export/Simple Export.properties	2008-08-01 20:58:57 UTC (rev 263)
+@@ -0,0 +1,7 @@
++author=knitter
++version=1.0
++name=Just a Test
++#complete/single
++type=complete
++index=index.html
++style=style.css
+\ No newline at end of file
+
+Added: trunk/docs/Simple Export/index.html
+===================================================================
+--- trunk/docs/Simple Export/index.html	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/Simple Export/index.html	2008-08-01 20:58:57 UTC (rev 263)
+@@ -0,0 +1,87 @@
++&lt;html&gt;
++	&lt;head&gt;
++		&lt;link rel=Stylesheet href=&quot;style.css&quot; type=&quot;text/css&quot;&gt;
++		&lt;title&gt;
++			&#171;CATALOG_NAME&#187;
++		&lt;/title&gt;
++	&lt;/head&gt;
++
++	&lt;body&gt;
++			&lt;table class=&quot;catalog&quot;&gt;
++				&lt;th class=&quot;catalog&quot; colspan=&quot;2&quot;&gt;&#171;CATALOG_NAME&#187; Data&lt;/th&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Description&lt;/td&gt;
++					&lt;td&gt;&#171;CATALOG_DESCRIPTION&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Disk Number&lt;/td&gt;
++					&lt;td&gt;&#171;CATALOG_DISKNUMBER&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Creation Date&lt;/td&gt;
++					&lt;td&gt;&#171;CATALOG_CREATION&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Total Files&lt;/td&gt;
++					&lt;td&gt;&#171;CATALOG_FILES&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Total Folders&lt;/td&gt;
++					&lt;td&gt;&#171;CATALOG_FOLDERS&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Total Size&lt;/td&gt;
++					&lt;td&gt;&#171;CATALOG_SIZE&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++			&lt;/table&gt;
++
++			&#171;DISKGROUP_START&#187;
++			&lt;table class=&quot;media&quot;&gt;
++				&lt;th class=&quot;media&quot; colspan=&quot;2&quot;&gt;&#171;DISKGROUP_NAME&#187; DiskGroup&lt;/th&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Description&lt;/td&gt;
++					&lt;td&gt;&#171;DISKGROUP_DESCRIPTION&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Capacity&lt;/td&gt;
++					&lt;td&gt;&#171;DISKGROUP_CAPACITY&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++			&lt;/table&gt;
++			&#171;DISKGROUP_END&#187;
++			
++			&#171;MEDIA_START&#187;
++			&lt;table class=&quot;media&quot;&gt;
++				&lt;th class=&quot;media&quot; colspan=&quot;2&quot;&gt;&#171;MEDIA_NAME&#187; Media&lt;/th&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Description&lt;/td&gt;
++					&lt;td&gt;&#171;MEDIA_DESCRIPTION&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Capacity&lt;/td&gt;
++					&lt;td&gt;&#171;MEDIA_CAPACITY&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Free Space&lt;/td&gt;
++					&lt;td&gt;&#171;MEDIA_FREESPACE&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Last Modified&lt;/td&gt;
++					&lt;td&gt;&#171;MEDIA_LASTMODIFIED&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&lt;tr&gt;
++					&lt;td&gt;Location&lt;/td&gt;
++					&lt;td&gt;&#171;MEDIA_LOCATION&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&lt;!--&#171;FILE_START&#187;
++				&lt;tr class=&quot;filewrapper&quot;&gt;
++					&lt;td&gt;&#171;FILE_NAME&#187;.&#171;FILE_EXTENSION&#187;&lt;/td&gt;
++					&lt;td&gt;&#171;FILE_DESCRIPTION&#187;&lt;/td&gt;
++					&lt;td&gt;&#171;FILE_PATH&#187;&lt;/td&gt;
++					&lt;td&gt;&#171;FILE_SIZE&#187;&lt;/td&gt;
++					&lt;td&gt;&#171;FILE_LASTMODIFIED&#187;&lt;/td&gt;
++				&lt;/tr&gt;
++				&#171;FILE_END&#187;---&gt;
++			&lt;/table&gt;
++			&#171;MEDIA_END&#187;
++	&lt;/body&gt;
++&lt;/html&gt;
+\ No newline at end of file
+
+Added: trunk/docs/Simple Export/preview.jpg
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Simple Export/preview.jpg
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/docs/Simple Export/style.css
+===================================================================
+--- trunk/docs/Simple Export/style.css	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/Simple Export/style.css	2008-08-01 20:58:57 UTC (rev 263)
+@@ -0,0 +1,33 @@
++body{
++	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
++	font-size: smaller;
++	text-align: center;
++}
++
++table.catalog{
++	background-color: #FAFAFA;
++	border: solid 1px #DDDDDD;
++	margin: 100px auto 15px;
++	padding: 10px;
++	width: 500px;
++}
++
++table.media{
++	background-color: #EAEAEA;
++	border: solid 1px #DDDDDD;
++	margin: 15px auto 15px;
++	padding: 10px;
++	width: 500px;
++}
++
++th.catalog{
++	background-color: #DDDDDD;
++	padding: 10px 0 10px 0;
++	text-align: center;
++}
++
++th.media{
++	background-color: #DDDDDD;
++	padding: 10px 0 10px 0;
++	text-align: center;
++}
+
+Deleted: trunk/docs/Testes de Usabilidade ao sistema JFindMyFiles - I.xls
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/Testes de Usabilidade ao sistema JFindMyFiles - II.xls
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/[Info] Bibliografia Consultada.txt
+===================================================================
+--- trunk/docs/[Info] Bibliografia Consultada.txt	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/[Info] Bibliografia Consultada.txt	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,7 +0,0 @@
+-Usability Engineering, Jakob Nielsen,Academic Press Limited, 19937
+-Agile Software Development, Principles, Patterns and Practices, Robert C. Martin, Prentice Hall, 2002
+-Agile Development with ICONIX process, People, Process, and Pragamatism,DougRosenberg, Matt Stephens and Mark Collins-Cope, Apress, 2005
+-
+-Descri&#231;&#227;o de Swing: <A HREF="http://java.sun.com/j2se/1.5.0/docs/guide/swing/">http://java.sun.com/j2se/1.5.0/docs/guide/swing/</A>
+-Descri&#231;&#227;o de Wiki: <A HREF="http://en.wikipedia.org/wiki/Wiki">http://en.wikipedia.org/wiki/Wiki</A>
+-www.extremeprogramming.org
+\ No newline at end of file
+
+Deleted: trunk/docs/[Info] Convecoes de codigo.txt
+===================================================================
+--- trunk/docs/[Info] Convecoes de codigo.txt	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/[Info] Convecoes de codigo.txt	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,27 +0,0 @@
+-O c&#243;digo dever&#225; ser escrito usando ingl&#234;s para permitir o f&#225;cil acesso por 
+-programadores externos aquando da abertura total do software.
+-
+-Todos os m&#233;todos t&#234;m de incluir um coment&#225;rio usando a estrutura do sistema 
+-Javadoc para que seja poss&#237;vel exportar documenta&#231;&#227;o sobre o c&#243;digo usando 
+-ferramentas pr&#243;prias para o efeito.
+-O coment&#225;rio deve conter, pelo menos, uma breve descri&#231;&#227;o do objectivo, a 
+-descri&#231;&#227;o dos par&#226;metros de entrada e de sa&#237;da e a indica&#231;&#227;o de qualquer 
+-excep&#231;&#227;o que possa ser lan&#231;ada pelo m&#233;todo.
+-Embora n&#227;o seja obrigat&#243;rio, a refer&#234;ncia a classes relacionadas que sejam 
+-relevantes pode constituir uma ajuda na percep&#231;&#227;o da estrutura do c&#243;digo e deve 
+-ser feita sempre que poss&#237;vel.
+-
+-Al&#233;m das notas aqui descritas, devem ser seguidas as conve&#231;&#245;es para a linguagem 
+-java definidas pela sun[1]
+-
+-M&#233;todos que n&#227;o sejam implementados ter&#227;o de ter no seu corpo um coment&#225;rio de 
+-linha no formato: //TODO: &lt;mensagem&gt;
+-e o c&#243;digo necess&#225;rios para lan&#231;ar uma excep&#231;&#227;o que indique que o m&#233;todo ainda 
+-n&#227;o se encontra completo:
+-throw new UnsupportedOperationException(&quot;Not implemented yet&quot;); //NO I18N
+-
+-Caso seja necess&#225;rio acrescentar notas no c&#243;digo, por exemplo e linhas de 
+-c&#243;digo que se pensam mudar mais tarde ou remover, dever&#225; ser colocado um 
+-coment&#225;rio de linha com o formato: //NOTE: &lt;mensagem&gt;
+-
+-[1] - <A HREF="http://java.sun.com/docs/codeconv/">http://java.sun.com/docs/codeconv/</A>
+\ No newline at end of file
+
+Deleted: trunk/docs/[Info] Manual de Utilizador.txt
+===================================================================
+--- trunk/docs/[Info] Manual de Utilizador.txt	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/[Info] Manual de Utilizador.txt	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,204 +0,0 @@
+-[Pref&#225;cio]
+-	Este documento de ajuda destina-se a todos os utilizadores do sistema 
+-	JFindMyfiles, e pretende ser um primeiro ponto de resolu&#231;&#227;o das d&#250;vidas 
+-	que surjam.
+-	
+-[Introdu&#231;&#227;o]
+-	[O que &#233; o JFindMyFiles]
+-		JFindMyFiles &#233; um software de computador, multi-plataforma e 
+-		livre, que oferece a capacidade de cataloga&#231;&#227;o e gest&#227;o de 
+-		ficheiros digitais. Permitindo guardar informa&#231;&#227;o sobre os 
+-		ficheiros de computador, torna mais f&#225;cil e r&#225;pida a pesquisa e 
+-		organiza&#231;&#227;o por parte do utilizador informa&#231;&#245;es, entre outros.
+-
+-	[Conceitos B&#225;sicos]
+-		O programa organiza os dados em cat&#225;logos, e permite que os 
+-		dispositivos de armazenamento sejam analizados no sentido de 
+-		guardar informa&#231;&#245;es sobre os ficheiros e pastas contidos.
+-		Durante a fase de an&#225;lise &#233; poss&#237;vel usar extens&#245;es, criadas 
+-		pelo utilizador, que fornecem descri&#231;&#245;es extra sobre os 
+-		ficheiros lidos
+-
+-		Os suportes lidos s&#227;o considerados discos para a aplica&#231;&#227;o, e 
+-		podem ser organizados em grupos de discos.
+-
+-[Utiliza&#231;&#227;o do programa]
+-	[Os cat&#225;logos]
+-		[Criar]
+-			Para criar um novo cat&#225;logo &#233; necess&#225;rio decidir 
+-			primeiro o tipo de base de dados que ser&#225; usada para 
+-			guardar as informa&#231;&#245;es.
+-			
+-			Est&#227;o dispon&#237;veis v&#225;rios motores de bases de dados, que 
+-			ter&#227;o de ser configurados pelo utilizador, ou uma base 
+-			de dados interna, sem qualquer necessidade de 
+-			configura&#231;&#227;o para o utilizador. A escolha depender&#225; do 
+-			objectivo e das caracter&#237;sticas do utilizador.
+-
+-			Se n&#227;o tem conhecimentos sobre instala&#231;&#227;o de servidores 
+-			de bases de dados, &#233; recomendado que escolha a op&#231;&#227;o de 
+-			base de dados local. Se possui j&#225; um servidor que 
+-			pretende usar, ent&#227;o poder&#225; escolher a op&#231;&#227;o de rede e 
+-			introduzir os dados referentes ao servidor.
+-
+-			Na op&#231;&#227;o de base de dados local, uma base de dados ser&#225; 
+-			composta por v&#225;rios ficheiros em disco, durante a 
+-			cria&#231;&#227;o do cat&#225;logo ser&#225; criada um pasta onde esses 
+-			ficheiros ir&#227;o residir. Por omiss&#227;o essa pasta ser&#225; 
+-			criada na pasta pessoal do utilizador. Esta localiza&#231;&#227;o 
+-			poder&#225; ser alterada na janela de cria&#231;&#227;o de novos 
+-			cat&#225;logos ou nas op&#231;&#245;es da aplica&#231;&#227;o.
+-
+-			!Para os utilizadores com conhecimentos avan&#231;ados &#233; 
+-			necess&#225;rio salientar que, a op&#231;&#227;o de base de dados 
+-			local, n&#227;o dever&#225; ser confundida com o uso de um 
+-			servidor intalado na mesma m&#225;quina onde a aplica&#231;&#227;o 
+-			est&#225; a ser executada. Um qualquer servidor, instalado 
+-			localmente, &#233; para a aplica&#231;&#227;o, uma base de dados de 
+-			rede.
+-
+-			[Os diferentes tipos de base de dados]
+-				O programa suporta alguns motores de bases de 
+-				dados comuns. &#201; assim poss&#237;vel escolher o 
+-				servidor que mais se adequar &#224; situa&#231;&#227;o.
+-
+-				Ao escolher criar um novo cat&#225;logo tem a 
+-				possibilidade de indicar qual o tipo de 
+-				servidor que pretende usar. &#201; necess&#225;rio que 
+-				este servidor esteja j&#225; configurado e que 
+-				exista uma base de dados e um utilizador com as 
+-				configura&#231;&#245;es que indicar. ! O programa n&#227;o 
+-				cria a base de dados, cria apenas as tabelas 
+-				que a compoem, todas as configura&#231;&#245;es, como a 
+-				instala&#231;&#227;o do servidor, cria&#231;&#227;o de uma base de 
+-				dados e cria&#231;&#227;o de um utilizador com as 
+-				permiss&#245;es correctas, t&#234;m de ser feitas antes 
+-				de se tentar criar um novo cat&#225;logo.
+-
+-				Actualmente, os servidores suportados s&#227;o: 
+-				MySQL, MSSQL 2005, Firebird, PostgreSQL. N&#227;o 
+-				foi testa a vers&#227;o 2008 do MSSQL, por esse 
+-				motivo a mesma n&#227;o &#233; oficialmente suportada.
+-			&lt;imagem para criar&gt;
+-			&lt;imagem das op&#231;&#245;es&gt;
+-		[Abrir]
+-			Para abrir um cat&#225;logo, os passos s&#227;o semalhantes &#224; 
+-			cria&#231;&#227;o[LINK].
+-			
+-			Se estiver a usar a op&#231;&#227;o de base de dados local, 
+-			poder&#225; simplesmente navegar at&#233; &#224; pasta que cont&#233;m o 
+-			cat&#225;logo e seleccionar essa pasta. O nome do cat&#225;logo 
+-			ser&#225; preenchido automaticamente.
+-
+-			&lt;imagem para abrir&gt;
+-		[Guardar]
+-			N&#227;o existe uma op&#231;&#227;o especifica para guardar os dados. 
+-			O programa regista todas as altera&#231;&#245;es que s&#227;o feitas 
+-			aos dados, n&#227;o sendo por isso necess&#225;rio ter o cuidado 
+-			de guardar os dados.
+-
+-	[Adicionar novos ficheiros]
+-		Novos ficheiros s&#227;o adicionadas atrav&#233;s da leitura de 
+-		dispositivos de amazenamento. N&#227;o &#233; possivel adicionar apenas 
+-		um ficheiro, a adic&#231;&#227;o ter&#225; de ser sempre de novos discos, 
+-		novas pastas, ou outro dispositivo de armazenamento acess&#237;vel 
+-		ao computador.
+-
+-		Ao adicionar um novo disco, &#233; poss&#237;vel alterar o nome do disco 
+-		que ser&#225; guardado no cat&#225;logo, indicar o Grupo de Discos ao 
+-		qual o novo disco ser&#225; adicionado e indicar se ser&#225; feito o 
+-		c&#225;lculo do c&#243;digo SHA-1. Este c&#243;digo &#233; usando em 
+-		funcionalidades avan&#231;adas e embora a sua cria&#231;&#227;o seja opcional, 
+-		essas funcionalidades n&#227;o estar&#227;o disponiveis em informa&#231;&#245;es de 
+-		ficheiros sem o c&#243;digo c&#225;lculado.
+-
+-	[Pesquisar informa&#231;&#245;es]
+-		&#201; poss&#237;vel pesquisar ficheiros catalogados atrav&#233;s do seu nome, 
+-		ou de uma palavra ou frase presente na sua descri&#231;&#227;o. A 
+-		pesquisa pode ser sens&#237;vel a mai&#250;sculas e ser restrita a um 
+-		grupo de discos.
+-		&lt;imagem de janela de pesquisa&gt;
+-
+-	[Importar dados]
+-		A importa&#231;&#227;o de dados est&#225; dispon&#237;vel para ficheiros XML,
+-		previamente criados pelo JFindMyFiles.
+-		Para importar dados exportados anteriormente, basta indicar o 
+-		nome do ficheiro que cont&#233;m os dados a exportar.
+-
+-		&lt;imagem da janela de importa&#231;&#227;o&gt;
+-
+-	[Exportar dados]
+-		A exporta&#231;&#227;o de dados est&#225; dipon&#237;vel em duas op&#231;&#245;es, exporta&#231;&#227;o 
+-		simples, usada para exportar todos os dados para um ficheiro de 
+-		texto num formato port&#225;vel, XML ou CSV, e exporta&#231;&#227;o usando 
+-		templates.
+-
+-		[Exporta&#231;&#227;o simples]
+-			Para a exporta&#231;&#227;o simples &#233; apenas necess&#225;rio indicar o 
+-			nome do ficheiro destino.
+-			Caso pretenda exportar imagens, videos ou clips de 
+-			audio que existam no cat&#225;logo, os mesmos ser&#227;o copiados 
+-			para a pasta onde foi criado o ficheiro de exporta&#231;&#227;o.
+-
+-			Tenha em aten&#231;&#227;o, que se pretender usar o ficheiro de 
+-			exporta&#231;&#227;o para mais tarde importar no JFindMyFiles, 
+-			todos os ficheiros de audio, video e imagem, necessitam 
+-			estar na mesma pasta que o ficheiro XML.
+-
+-			&lt;imagem da janela de exporta&#231;&#227;o&gt;
+-		[Exportar usando templates]
+-			Para exportar os dados usando um template HTML, 
+-			necessita ter alguns templates instalados.
+-
+-			Todos os recursos indicanos no template ser&#227;o copiados 
+-			para a pasta de destino da exporta&#231;&#227;o.
+-
+-			&lt;imagem da janela de exporta&#231;&#227;o&gt;
+-		[Obter mais templates]
+-			Caso pretende obter mais templates poder&#225; consultar o 
+-			s&#237;tio oficial da aplica&#231;&#227;o.
+-
+-		Instalar Templates
+-			A instala&#231;&#227;o dos templates faz-se colocando a pasta do 
+-			template na pasta configurada na janela de op&#231;&#245;es. Se 
+-			n&#227;o alterou a configuar&#231;&#227;o estar&#225; na sua pasta pessoal, 
+-			dentro da pasta .jfmfuserfiles/Templates.
+-
+-			Caso o seu template venha compactado, descompacte-o e 
+-			coloque a pasta com todos os ficheiros na pasta de 
+-			templates.
+-[Drives em Linux]
+-	Em linux n&#227;o &#233; poss&#237;vel, at&#233; ao momento, determinar quais as drives 
+-	correspondentes a dispositivos de CD-ROM/DVD-ROM, FLAHS, discos 
+-	externos, etc.
+-	Por isso existe na sec&#231;&#227;o de op&#231;&#245;es, um conjunto de defini&#231;&#245;es que pode 
+-	usar para configurar quais as pastas que deseja que sejam identificas 
+-	como dispositivos a ler.
+-
+-[Perguntas Frequentes]
+-
+-[Para Programadores e Designers]
+-	Esta se&#231;c&#227;o inclui algumas informa&#231;&#245;es destinadas a utilizadores com 
+-	conhecimentos avan&#231;ados e que pretendam expandir a aplica&#231;&#227;o, quer 
+-	criando extens&#245;es ao sistema de leitura, quer criando templates HTML 
+-	para o sistema de exporta&#231;&#227;o de dados.
+-	
+-	[Expandir o sistema de leitura]
+-	
+-	[Criar Templates de exporta&#231;&#227;o]
+-
+-[Sobre]
+-	JFindMyFiles surgiu da necessidade que os autores tinham de uma 
+-	aplica&#231;&#227;o que lhes permitisse gerir os v&#225;rios ficheiros que possuiam 
+-	espalhados por dezenas de CDs, DVDs e outros suportes. Ap&#243;s a 
+-	utiliza&#231;&#227;o de alguns sistemas de cataloga&#231;&#227;o que se mostraram 
+-	insuficientes, quer em funcionalidades quer por se limitarem a apenas 
+-	um sistema operativo, os autores, decidiram propor o projecto &#224; cadeira 
+-	de Projecto Inform&#225;tico da Escola Superior de Tecnologia e Gest&#227;o do 
+-	Intituto Polit&#233;cnico de Leiria.
+-
+-	Autores: Patr&#237;cia Monteiro, S&#233;rgio Lopes
+-
+-
+-
+-
+
+Deleted: trunk/docs/[Info] Ordem das Iteracoes.txt
+===================================================================
+--- trunk/docs/[Info] Ordem das Iteracoes.txt	2008-07-28 10:41:59 UTC (rev 262)
++++ trunk/docs/[Info] Ordem das Iteracoes.txt	2008-08-01 20:58:57 UTC (rev 263)
+@@ -1,10 +0,0 @@
+-Planning Game
+-	Itera&#231;&#227;o CB09 - 14/04 a 18/04
+-	Itera&#231;&#227;o CB05 - 21/04 a 25/04
+-	Itera&#231;&#227;o CB03 - 28/04 a 09/05
+-	Itera&#231;&#227;o CB04 - 12/05 a 16/05
+-	Itera&#231;&#227;o CB02 - 19/05 a 23/05
+-	Itera&#231;&#227;o CB07 - 26/05 a 30/05
+-	Itera&#231;&#227;o CB06 - 02/06 a 06/06
+-	Itera&#231;&#227;o CB08 - 09/06 a 13/06
+-	Itera&#231;&#227;o CB01 - 16/06 a 20/06
+\ No newline at end of file
+
+svnlook: Can't convert string from 'UTF-8' to native encoding:
+svnlook: /tmp/svnlook.1/trunk/docs/[Info] Question?\195?\161rio de Usabilidade.txt
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000259.html">[Jfindmyfiles-commits] r264 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#258">[ date ]</a>
+              <a href="thread.html#258">[ thread ]</a>
+              <a href="subject.html#258">[ subject ]</a>
+              <a href="author.html#258">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

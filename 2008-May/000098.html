@@ -1,0 +1,899 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r103 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	Catalog/src/de/berlios/jfindmyfiles/catalog/utils	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	HSQLDB/nbproject JDBCDrivers/nbproject JFindMyFilesGui/nbproject	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r103%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/utils%0A%09ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09HSQLDB/nbproject%20JDBCDrivers/nbproject%20JFindMyFilesGui/nbproject%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles&In-Reply-To=%3C200805122125.m4CLPVGF003763%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000097.html">
+   <LINK REL="Next"  HREF="000099.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r103 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	Catalog/src/de/berlios/jfindmyfiles/catalog/utils	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	HSQLDB/nbproject JDBCDrivers/nbproject JFindMyFilesGui/nbproject	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r103%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/utils%0A%09ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09HSQLDB/nbproject%20JDBCDrivers/nbproject%20JFindMyFilesGui/nbproject%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles&In-Reply-To=%3C200805122125.m4CLPVGF003763%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r103 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	Catalog/src/de/berlios/jfindmyfiles/catalog/utils	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	HSQLDB/nbproject JDBCDrivers/nbproject JFindMyFilesGui/nbproject	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles">knitter at mail.berlios.de
+       </A><BR>
+    <I>Mon May 12 23:25:31 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000097.html">[Jfindmyfiles-commits] r102 - in trunk: docs media/icons media/icons/x16 media/icons/x22 project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entitymanagers project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine project/JFindMyFiles/HSQLDB/src/de/berlios/jfindmyfiles/hsqldb project/JFindMyFiles/JDBCDrivers/src/de/berlios/jfindmyfiles/jdbcdrivers project/JFindMyFiles/JFindMyFilesGui/nbproject project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images project/J! FindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16 project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x22 project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils project/JFindMyFiles/Persistence/src/de/berlios/jfindmyfiles/persistence project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+        <LI>Next message: <A HREF="000099.html">[Jfindmyfiles-commits] r104 - in trunk: media/icons/x16	media/icons/x22 media/icons/x32	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x22	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#98">[ date ]</a>
+              <a href="thread.html#98">[ thread ]</a>
+              <a href="subject.html#98">[ subject ]</a>
+              <a href="author.html#98">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-12 23:25:12 +0200 (Mon, 12 May 2008)
+New Revision: 103
+
+Added:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mssql.cfg.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mysql.cfg.xml
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/layer.xml
+   trunk/project/JFindMyFiles/HSQLDB/nbproject/
+   trunk/project/JFindMyFiles/JDBCDrivers/nbproject/
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentSettings.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentWstcref.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponentSettings.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponentWstcref.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml
+Log:
+Adicionadas classes para representar n?\195?\179s na janela principal.
+
+Corrigido um erro introduzido pelos coment?\195?\161rios colocados nos ficheiros anteriormente.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,15 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-
+-&lt;!--
+-    Document   : AudioData.hbm.xml
+-    Created on : 6 de Maio de 2008, 15:45
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+     'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+     '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,16 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-
+-&lt;!--
+-    Document   : DiskGroup.hbm.xml
+-    Created on : 6 de Maio de 2008, 15:46
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+ 'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+ '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.hbm.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,16 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-
+-&lt;!--
+-    Document   : FileWrapper.hbm.xml
+-    Created on : 6 de Maio de 2008, 15:46
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+ 'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+ '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.hbm.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,16 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-
+-&lt;!--
+-    Document   : ImageData.hbm.xml
+-    Created on : 6 de Maio de 2008, 15:46
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+     'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+     '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.hbm.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,16 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-
+-&lt;!--
+-    Document   : Label.hbm.xml
+-    Created on : 6 de Maio de 2008, 15:47
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+     'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+     '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.hbm.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,13 +1,23 @@
+ &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-
+ &lt;!--
+-    Document   : Loan.hbm.xml
+-    Created on : 6 de Maio de 2008, 15:47
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ --&gt;
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+ 'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+ '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,16 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-
+-&lt;!--
+-    Document   : Medium.hbm.xml
+-    Created on : 6 de Maio de 2008, 15:47
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+ 'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+ '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,16 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-
+-&lt;!--
+-    Document   : Type.hbm.xml
+-    Created on : 6 de Maio de 2008, 15:37
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+ 'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+ '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.hbm.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.hbm.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,16 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-
+-&lt;!--
+-    Document   : User.hbm.xml
+-    Created on : 6 de Maio de 2008, 15:47
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+ 'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+ '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.hbm.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,16 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-
+-&lt;!--
+-    Document   : VideoData.hbm.xml
+-    Created on : 6 de Maio de 2008, 15:47
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+ &lt;!DOCTYPE hibernate-mapping PUBLIC 
+     'PUBLIC:-//Hibernate/Hibernate Mapping DTD 3.0//EN' 
+     '<A HREF="http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd</A>'&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,7 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
+ &lt;filesystem&gt;
+ &lt;/filesystem&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version='1.0' encoding='utf-8'?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,16 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version='1.0' encoding='utf-8'?&gt;
+-
+-&lt;!--
+-    Document   : hibernate.cfg.xml
+-    Created on : 6 de Maio de 2008, 15:55
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+ &lt;!DOCTYPE hibernate-configuration PUBLIC
+         &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
+         &quot;<A HREF="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd</A>&quot;&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version='1.0' encoding='utf-8'?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,17 +18,7 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version='1.0' encoding='utf-8'?&gt;
+-
+-&lt;!--
+-    Document   : hibernate.cfg.xml
+-    Created on : 6 de Maio de 2008, 15:55
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
+-&lt;!DOCTYPE hibernate-configuration PUBLIC
++ &lt;!DOCTYPE hibernate-configuration PUBLIC
+         &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
+         &quot;<A HREF="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd</A>&quot;&gt;
+ 
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mssql.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mssql.cfg.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mssql.cfg.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,13 +1,23 @@
+ &lt;?xml version='1.0' encoding='utf-8'?&gt;
+-
+ &lt;!--
+-    Document   : hibernate.cfg.xml
+-    Created on : 6 de Maio de 2008, 15:55
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ --&gt;
+ &lt;!DOCTYPE hibernate-configuration PUBLIC
+         &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
+         &quot;<A HREF="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd</A>&quot;&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mysql.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mysql.cfg.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.mysql.cfg.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,13 +1,23 @@
+ &lt;?xml version='1.0' encoding='utf-8'?&gt;
+-
+ &lt;!--
+-    Document   : hibernate.cfg.xml
+-    Created on : 6 de Maio de 2008, 15:55
+-    Author     : ei10635
+-    Description:
+-        Purpose of the document follows.
+---&gt;
+-
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ --&gt;
+ &lt;!DOCTYPE hibernate-configuration PUBLIC
+         &quot;-//Hibernate/Hibernate Configuration DTD 3.0//EN&quot;
+         &quot;<A HREF="http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd</A>&quot;&gt;
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/layer.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/layer.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,22 +1,3 @@
+-&lt;!--
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- --&gt;
+ &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
+ &lt;filesystem&gt;
+
+
+Property changes on: trunk/project/JFindMyFiles/HSQLDB/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+
+Property changes on: trunk/project/JFindMyFiles/JDBCDrivers/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=e83012f9
++build.xml.data.CRC32=a55e209a
+ build.xml.script.CRC32=6fe2168f
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=e83012f9
++nbproject/build-impl.xml.data.CRC32=a55e209a
+ nbproject/build-impl.xml.script.CRC32=599e93ee
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -79,6 +79,14 @@
+                     &lt;/run-dependency&gt;
+                 &lt;/dependency&gt;
+                 &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.nodes&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;7.3.0.1&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
+                     &lt;code-name-base&gt;org.openide.util&lt;/code-name-base&gt;
+                     &lt;build-prerequisite/&gt;
+                     &lt;compile-dependency/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentSettings.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentSettings.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentSettings.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,12 +18,7 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!--
+-To change this template, choose Tools | Templates
+-and open the template in the editor.
+---&gt;
+-&lt;!DOCTYPE settings PUBLIC &quot;-//NetBeans//DTD Session settings 1.0//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">http://www.netbeans.org/dtds/sessionsettings-1_0.dtd</A>&quot;&gt;
++ &lt;!DOCTYPE settings PUBLIC &quot;-//NetBeans//DTD Session settings 1.0//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">http://www.netbeans.org/dtds/sessionsettings-1_0.dtd</A>&quot;&gt;
+ &lt;settings version=&quot;1.0&quot;&gt;
+     &lt;module name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui&quot; spec=&quot;1.0&quot;/&gt;
+     &lt;instanceof class=&quot;org.openide.windows.TopComponent&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentWstcref.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentWstcref.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponentWstcref.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,11 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!--
+-To change this template, choose Tools | Templates
+-and open the template in the editor.
+---&gt;
+ &lt;!DOCTYPE tc-ref PUBLIC &quot;-//NetBeans//DTD Top Component in Mode Properties 2.0//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/tc-ref2_0.dtd">http://www.netbeans.org/dtds/tc-ref2_0.dtd</A>&quot;&gt;
+ &lt;tc-ref version=&quot;2.0&quot; &gt;
+     &lt;module name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui&quot; spec=&quot;1.0&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-05-12 21:25:12 UTC (rev 103)
+@@ -19,6 +19,7 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui;
+ 
++import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.DiskNode;
+ import java.awt.BorderLayout;
+ import java.io.Serializable;
+ import java.util.logging.Logger;
+@@ -56,6 +57,7 @@
+         add(view, BorderLayout.CENTER);
+         view.setRootVisible(true);
+ 
++        manager.setRootContext(new DiskNode());
+         //Code from the feed reader example, needs to be rewritten
+         /*try {
+             //manager.setRootContext(new RssNode.RootRssNode());
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponentSettings.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponentSettings.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponentSettings.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,11 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!--
+-To change this template, choose Tools | Templates
+-and open the template in the editor.
+---&gt;
+ &lt;!DOCTYPE settings PUBLIC &quot;-//NetBeans//DTD Session settings 1.0//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">http://www.netbeans.org/dtds/sessionsettings-1_0.dtd</A>&quot;&gt;
+ &lt;settings version=&quot;1.0&quot;&gt;
+     &lt;module name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui&quot; spec=&quot;1.0&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponentWstcref.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponentWstcref.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponentWstcref.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,11 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!--
+-To change this template, choose Tools | Templates
+-and open the template in the editor.
+---&gt;
+ &lt;!DOCTYPE tc-ref PUBLIC &quot;-//NetBeans//DTD Top Component in Mode Properties 2.0//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/tc-ref2_0.dtd">http://www.netbeans.org/dtds/tc-ref2_0.dtd</A>&quot;&gt;
+ &lt;tc-ref version=&quot;2.0&quot; &gt;
+     &lt;module name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui&quot; spec=&quot;1.0&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,7 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
+ &lt;filesystem&gt;
+     &lt;attr name=&quot;Menu\File\Separator2.instance\position&quot; intvalue=&quot;1425&quot;/&gt;
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-05-12 21:25:12 UTC (rev 103)
+@@ -0,0 +1,35 @@
++/**
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
++
++import org.openide.nodes.AbstractNode;
++import org.openide.nodes.Children;
++
++/**
++ *
++ * @author knitter
++ */
++public class CatalogNode extends AbstractNode {
++    
++    public CatalogNode() {
++        super(Children.LEAF);
++    }
++
++}
+
+
+Property changes on: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+___________________________________________________________________
+Name: svn:eol-style
+   + native
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-05-12 21:25:12 UTC (rev 103)
+@@ -0,0 +1,36 @@
++/**
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++
++package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
++
++import org.openide.nodes.AbstractNode;
++import org.openide.nodes.Children;
++
++/**
++ *
++ * @author knitter
++ */
++public class DiskGroupNode extends AbstractNode {
++    
++    public DiskGroupNode() {
++        super(Children.LEAF);
++    }
++
++}
+
+
+Property changes on: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+___________________________________________________________________
+Name: svn:eol-style
+   + native
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-05-12 21:25:12 UTC (rev 103)
+@@ -0,0 +1,36 @@
++/**
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++
++package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
++
++import org.openide.nodes.AbstractNode;
++import org.openide.nodes.Children;
++
++/**
++ *
++ * @author knitter
++ */
++public class DiskNode extends AbstractNode {
++    
++    public DiskNode() {
++        super(Children.LEAF);
++    }
++
++}
+
+
+Property changes on: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+___________________________________________________________________
+Name: svn:eol-style
+   + native
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml	2008-05-12 14:59:20 UTC (rev 102)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml	2008-05-12 21:25:12 UTC (rev 103)
+@@ -1,3 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!--
+  *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+  *
+@@ -17,8 +18,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  --&gt;
+- 
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
+ &lt;filesystem&gt;
+     &lt;folder name=&quot;Menu&quot;&gt;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000097.html">[Jfindmyfiles-commits] r102 - in trunk: docs media/icons media/icons/x16 media/icons/x22 project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entitymanagers project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine project/JFindMyFiles/HSQLDB/src/de/berlios/jfindmyfiles/hsqldb project/JFindMyFiles/JDBCDrivers/src/de/berlios/jfindmyfiles/jdbcdrivers project/JFindMyFiles/JFindMyFilesGui/nbproject project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images project/J! FindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16 project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x22 project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils project/JFindMyFiles/Persistence/src/de/berlios/jfindmyfiles/persistence project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+	<LI>Next message: <A HREF="000099.html">[Jfindmyfiles-commits] r104 - in trunk: media/icons/x16	media/icons/x22 media/icons/x32	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x22	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#98">[ date ]</a>
+              <a href="thread.html#98">[ thread ]</a>
+              <a href="subject.html#98">[ subject ]</a>
+              <a href="author.html#98">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,355 @@
+From knitter at mail.berlios.de  Sat Nov  8 20:23:43 2008
+From: knitter at mail.berlios.de (knitter at mail.berlios.de)
+Date: Sat, 8 Nov 2008 20:23:43 +0100
+Subject: [Jfindmyfiles-commits] r273 - trunk/site
+Message-ID: <200811081923.mA8JNh66016915@sheep.berlios.de>
+
+Author: knitter
+Date: 2008-11-08 20:23:35 +0100 (Sat, 08 Nov 2008)
+New Revision: 273
+
+Modified:
+   trunk/site/bugs.html
+   trunk/site/contact.html
+   trunk/site/credits.html
+   trunk/site/download.html
+   trunk/site/features.html
+   trunk/site/index.html
+   trunk/site/screenshots.html
+Log:
+Update site files.
+
+Modified: trunk/site/bugs.html
+===================================================================
+--- trunk/site/bugs.html	2008-10-25 13:15:26 UTC (rev 272)
++++ trunk/site/bugs.html	2008-11-08 19:23:35 UTC (rev 273)
+@@ -1,5 +1,5 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+-<html>
++<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
+@@ -14,12 +14,12 @@
+ 
+             <div id="menu">
+                 <ul>
+-                    <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+-                    <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+-                    <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/one.png" alt="menu image 1" /><a href="index.html">Home</a></li>
++                    <li><img src="sys/images/two.png" alt="menu image 2" /><a href="features.html">Features</a></li>
++                    <li><img src="sys/images/three.png" alt="menu image 3" /><a href="download.html">Download</a></li>
++                    <li><img src="sys/images/four.png" alt="menu image 4" /><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
++                    <li><img src="sys/images/five.png" alt="menu image 5" /><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png" alt="menu image 6" /><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+ 
+@@ -27,14 +27,14 @@
+            <div id="top-right"></div>
+ 
+         </div>
+-        <div class="clear">
++        <div class="clear"></div>
+         <div id="content">
+             <h1 id="bugs" class="title">Bugs</h1>
+             <div id="text">
+                 <p>Identifying and submitting bugs is one of the most helpful and useful tasks a user can undertake to contribute to this project. While developing JFindMyFiles, even with all the testing, some problems go unnoticed.</p>
+ 
+-                <p><h2>Submitting a bug</h2>
+-                To submit a bug you need to be registered in <a href="http://developer.berlios.de">berliOS</a> so that you can use the report system page available to every project.</p>
++                <h2>Submitting a bug</h2>
++                <p>To submit a bug you need to be registered in <a href="http://developer.berlios.de">berliOS</a> so that you can use the report system page available to every project.</p>
+                 
+                 <p>After you have registered and logged in please follow <a href="http://developer.berlios.de/bugs/?group_id=9315">this link</a> and place you bug if it's not already there.</p>
+             </div>
+
+Modified: trunk/site/contact.html
+===================================================================
+--- trunk/site/contact.html	2008-10-25 13:15:26 UTC (rev 272)
++++ trunk/site/contact.html	2008-11-08 19:23:35 UTC (rev 273)
+@@ -1,5 +1,5 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+-<html>
++<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
+@@ -14,12 +14,12 @@
+ 
+             <div id="menu">
+                 <ul>
+-                    <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+-                    <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+-                    <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/one.png" alt="menu image 1" /><a href="index.html">Home</a></li>
++                    <li><img src="sys/images/two.png" alt="menu image 2" /><a href="features.html">Features</a></li>
++                    <li><img src="sys/images/three.png" alt="menu image 3" /><a href="download.html">Download</a></li>
++                    <li><img src="sys/images/four.png" alt="menu image 4" /><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
++                    <li><img src="sys/images/five.png" alt="menu image 5" /><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png" alt="menu image 6" /><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+ 
+@@ -27,7 +27,7 @@
+            <div id="top-right"></div>
+ 
+         </div>
+-        <div class="clear">
++        <div class="clear"></div>
+         <div id="content">
+             <h1 id="contact" class="title">Contact us</h1>
+             <div id="text">
+
+Modified: trunk/site/credits.html
+===================================================================
+--- trunk/site/credits.html	2008-10-25 13:15:26 UTC (rev 272)
++++ trunk/site/credits.html	2008-11-08 19:23:35 UTC (rev 273)
+@@ -1,12 +1,12 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+-<html>
++<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
+         <title>JFindMyFiles :: Credits</title>
+     </head>
+-    <body>
+-<div id="container">
++<body>
++	<div id="container">
+         <div id="top">
+             <div id="top-left"></div>
+ 
+@@ -14,21 +14,22 @@
+ 
+             <div id="menu">
+                 <ul>
+-                    <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+-                    <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+-                    <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/one.png" alt="menu image 1" /><a href="index.html">Home</a></li>
++                    <li><img src="sys/images/two.png" alt="menu image 2" /><a href="features.html">Features</a></li>
++                    <li><img src="sys/images/three.png" alt="menu image 3" /><a href="download.html">Download</a></li>
++                    <li><img src="sys/images/four.png" alt="menu image 4" /><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
++                    <li><img src="sys/images/five.png" alt="menu image 5" /><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png" alt="menu image 6" /><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+ 
+            <div id="empty-right"></div>
+            <div id="top-right"></div>
+-
+         </div>
+-        <div class="clear">
+-        <div id="content">
++		
++        <div class="clear"></div>
++        
++		<div id="content">
+             <h1 id="credits" class="title">Due Credits</h1>
+             <div id="text">
+                 <p>This site uses icons from the <a href="http://gnome-look.org/content/show.php/Desert?content=87416">Desert III</a> icon pack created by <a href="http://rodolphe.bachelart1.free.fr/">Rodolphe</a></p>
+@@ -42,6 +43,6 @@
+         <div id="footer">
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: <a href="credits.html">Credits</a> :: <a href="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all">Valid CSS</a> :: <a href="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/credits.html">XHTML 1.0 Strict</a>
+         </div>
+-</div>
+-    </body>
++	</div>
++</body>
+ </html>
+
+Modified: trunk/site/download.html
+===================================================================
+--- trunk/site/download.html	2008-10-25 13:15:26 UTC (rev 272)
++++ trunk/site/download.html	2008-11-08 19:23:35 UTC (rev 273)
+@@ -1,12 +1,12 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+-<html>
++<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
+         <title>JFindMyFiles :: Download</title>
+     </head>
+-    <body>
+-<div id="container">
++<body>
++	<div id="container">
+         <div id="top">
+             <div id="top-left"></div>
+ 
+@@ -14,12 +14,12 @@
+ 
+             <div id="menu">
+                 <ul>
+-                    <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+-                    <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+-                    <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/one.png" alt="menu image 1" /><a href="index.html">Home</a></li>
++                    <li><img src="sys/images/two.png" alt="menu image 2" /><a href="features.html">Features</a></li>
++                    <li><img src="sys/images/three.png" alt="menu image 3" /><a href="download.html">Download</a></li>
++                    <li><img src="sys/images/four.png" alt="menu image 4" /><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
++                    <li><img src="sys/images/five.png" alt="menu image 5" /><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png" alt="menu image 6" /><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+ 
+@@ -27,17 +27,17 @@
+            <div id="top-right"></div>
+ 
+         </div>
+-        <div class="clear">
++        <div class="clear"></div>
+         <div id="content">
+             <h1 id="download" class="title">Download JFindMyFiles</h1>
+             <div id="text">
+                 <p>The current version of JFindMyFiles, 0.5.254, is a developer version, this means it's a release that has testing purposes and is not suitable for end users.</p>
+-                <p>You can download the lastest developer version as a:
++                <p>You can download the lastest developer version as a:</p>
+                     <ul>
+                         <li><a href="http://prdownload.berlios.de/jfindmyfiles/jfindmyfiles.0.5.254_installer.jar">installer jar</a></li>
+                         <li><a href="http://prdownload.berlios.de/jfindmyfiles/jfindmyfiles.0.5.254.zip">zip file</a></li>
+                     </ul>
+-                    A list of all available files can be found <a href="http://developer.berlios.de/project/showfiles.php?group_id=9315">here</a>.
++                   <p> A list of all available files can be found <a href="http://developer.berlios.de/project/showfiles.php?group_id=9315">here</a>.
+                 </p>
+                 <p>If you're interested in the code you'll need an SVN client. Windows users should try <a href="http://tortoisesvn.tigris.org/">TortoiseSVN</a>, a graphical client that integrates with Windows' shell, for Linux and Mac OS, a graphical choice can be <a href="http://www.syntevo.com/smartsvn/index.html">SmartSVN</a>.</p>
+                 <p>Anonymous SVN access can be achieved using the SVN protocol,<br />
+
+Modified: trunk/site/features.html
+===================================================================
+--- trunk/site/features.html	2008-10-25 13:15:26 UTC (rev 272)
++++ trunk/site/features.html	2008-11-08 19:23:35 UTC (rev 273)
+@@ -1,5 +1,5 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+-<html>
++<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
+@@ -14,12 +14,12 @@
+ 
+             <div id="menu">
+                 <ul>
+-                    <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+-                    <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+-                    <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/one.png" alt="menu image 1" /><a href="index.html">Home</a></li>
++                    <li><img src="sys/images/two.png" alt="menu image 2" /><a href="features.html">Features</a></li>
++                    <li><img src="sys/images/three.png" alt="menu image 3" /><a href="download.html">Download</a></li>
++                    <li><img src="sys/images/four.png" alt="menu image 4" /><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
++                    <li><img src="sys/images/five.png" alt="menu image 5" /><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png" alt="menu image 6" /><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+ 
+@@ -27,7 +27,7 @@
+            <div id="top-right"></div>
+ 
+         </div>
+-        <div class="clear">
++        <div class="clear"></div>
+         <div id="content">
+             <h1 id="features" class="title">JFindMyFiles Feature List</h1>
+             <div id="text">
+
+Modified: trunk/site/index.html
+===================================================================
+--- trunk/site/index.html	2008-10-25 13:15:26 UTC (rev 272)
++++ trunk/site/index.html	2008-11-08 19:23:35 UTC (rev 273)
+@@ -1,5 +1,5 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+-<html>
++<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
+@@ -14,12 +14,12 @@
+ 
+             <div id="menu">
+                 <ul>
+-                    <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+-                    <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+-                    <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/one.png" alt="menu image 1" /><a href="index.html">Home</a></li>
++                    <li><img src="sys/images/two.png" alt="menu image 2" /><a href="features.html">Features</a></li>
++                    <li><img src="sys/images/three.png" alt="menu image 3" /><a href="download.html">Download</a></li>
++                    <li><img src="sys/images/four.png" alt="menu image 4" /><a href="http://developer.berlios.de/screenshots/?group_id=9315">Screenshots</a></li>
++                    <li><img src="sys/images/five.png" alt="menu image 5" /><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png" alt="menu image 6" /><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+ 
+@@ -27,7 +27,7 @@
+            <div id="top-right"></div>
+ 
+         </div>
+-        <div class="clear">
++        <div class="clear"></div>
+         <div id="content">
+             <h1 id="home" class="title">News</h1>
+             <div id="text">
+
+Modified: trunk/site/screenshots.html
+===================================================================
+--- trunk/site/screenshots.html	2008-10-25 13:15:26 UTC (rev 272)
++++ trunk/site/screenshots.html	2008-11-08 19:23:35 UTC (rev 273)
+@@ -1,5 +1,5 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+-<html>
++<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+     <head>
+         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+         <link rel="stylesheet" type="text/css" href="sys/css.css" />
+@@ -14,12 +14,12 @@
+ 
+             <div id="menu">
+                 <ul>
+-                    <li><img src="sys/images/one.png"/><a href="index.html">Home</a></li>
+-                    <li><img src="sys/images/two.png"/><a href="features.html">Features</a></li>
+-                    <li><img src="sys/images/three.png"/><a href="download.html">Download</a></li>
+-                    <li><img src="sys/images/four.png"/><a href="screenshots.html">Screenshots</a></li>
+-                    <li><img src="sys/images/five.png"/><a href="bugs.html">Bugs</a></li>
+-                    <li><img src="sys/images/six.png"/><a href="contact.html">Contact</a></li>
++                    <li><img src="sys/images/one.png" alt="menu image 1" /><a href="index.html">Home</a></li>
++                    <li><img src="sys/images/two.png" alt="menu image 2" /><a href="features.html">Features</a></li>
++                    <li><img src="sys/images/three.png" alt="menu image 3" /><a href="download.html">Download</a></li>
++                    <li><img src="sys/images/four.png" alt="menu image 4" /><a href="screenshots.html">Screenshots</a></li>
++                    <li><img src="sys/images/five.png" alt="menu image 5" /><a href="bugs.html">Bugs</a></li>
++                    <li><img src="sys/images/six.png" alt="menu image 6" /><a href="contact.html">Contact</a></li>
+                 </ul>
+             </div>
+ 
+@@ -27,7 +27,7 @@
+            <div id="top-right"></div>
+ 
+         </div>
+-        <div class="clear">
++        <div class="clear"></div>
+         <div id="content">
+             <h1 id="screenshots" class="title">See the Screenshots</h1>
+             <div id="text">
+
+
+

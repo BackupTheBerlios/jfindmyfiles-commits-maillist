@@ -1,0 +1,1009 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r153 - in trunk: docs docs/Iteracao3-CB03	libs project/JFindMyFiles	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/MetadataExtractor	project/JFindMyFiles/MetadataExtractor/nbproject	project/JFindMyFiles/MetadataExtractor/release	project/JFindMyFiles/MetadataExtractor/release/modules	project/JFindMyFiles/MetadataExtractor/release/modules/ext	project/JFindMyFiles/MetadataExtractor/src	project/JFindMyFiles/MetadataExtractor/src/com	project/JFindMyFiles/MetadataExtractor/src/com/drew	project/JFindMyFiles/MetadataExtractor/src/com/drew/lang	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins	project/JFindMyFiles/nbproject spikes/PluginAPI	spikes/PluginAPI/lib spikes/PluginAPI/nbproject	spikes/PluginAPI/src spikes/PluginAPI/src/pluginapi
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r153%20-%20in%20trunk%3A%20docs%20docs/Iteracao3-CB03%0A%09libs%20project/JFindMyFiles%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/MetadataExtractor%0A%09project/JFindMyFiles/MetadataExtractor/nbproject%0A%09project/JFindMyFiles/MetadataExtractor/release%0A%09project/JFindMyFiles/MetadataExtractor/release/modules%0A%09project/JFindMyFiles/MetadataExtractor/release/modules/ext%0A%09project/JFindMyFiles/MetadataExtractor/src%0A%09project/JFindMyFiles/MetadataExtractor/src/com%0A%09project/JFindMyFiles/MetadataExtractor/src/com/drew%0A%09project/JFindMyFiles/MetadataExtractor/src/com/drew/lang%0A%09project/JFindMyFiles/ReadingFiles/nbproject%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins%0A%09project/JFindMyFiles/nbproject%20spikes/PluginAPI%0A%09spikes/PluginAPI/lib%20spikes/PluginAPI/nbproject%0A%09spikes/PluginAPI/src%20spikes/PluginAPI/src/pluginapi&In-Reply-To=%3C200806191622.m5JGM4x8029802%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000147.html">
+   <LINK REL="Next"  HREF="000149.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r153 - in trunk: docs docs/Iteracao3-CB03	libs project/JFindMyFiles	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/MetadataExtractor	project/JFindMyFiles/MetadataExtractor/nbproject	project/JFindMyFiles/MetadataExtractor/release	project/JFindMyFiles/MetadataExtractor/release/modules	project/JFindMyFiles/MetadataExtractor/release/modules/ext	project/JFindMyFiles/MetadataExtractor/src	project/JFindMyFiles/MetadataExtractor/src/com	project/JFindMyFiles/MetadataExtractor/src/com/drew	project/JFindMyFiles/MetadataExtractor/src/com/drew/lang	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins	project/JFindMyFiles/nbproject spikes/PluginAPI	spikes/PluginAPI/lib spikes/PluginAPI/nbproject	spikes/PluginAPI/src spikes/PluginAPI/src/pluginapi</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r153%20-%20in%20trunk%3A%20docs%20docs/Iteracao3-CB03%0A%09libs%20project/JFindMyFiles%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/MetadataExtractor%0A%09project/JFindMyFiles/MetadataExtractor/nbproject%0A%09project/JFindMyFiles/MetadataExtractor/release%0A%09project/JFindMyFiles/MetadataExtractor/release/modules%0A%09project/JFindMyFiles/MetadataExtractor/release/modules/ext%0A%09project/JFindMyFiles/MetadataExtractor/src%0A%09project/JFindMyFiles/MetadataExtractor/src/com%0A%09project/JFindMyFiles/MetadataExtractor/src/com/drew%0A%09project/JFindMyFiles/MetadataExtractor/src/com/drew/lang%0A%09project/JFindMyFiles/ReadingFiles/nbproject%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins%0A%09project/JFindMyFiles/nbproject%20spikes/PluginAPI%0A%09spikes/PluginAPI/lib%20spikes/PluginAPI/nbproject%0A%09spikes/PluginAPI/src%20spikes/PluginAPI/src/pluginapi&In-Reply-To=%3C200806191622.m5JGM4x8029802%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r153 - in trunk: docs docs/Iteracao3-CB03	libs project/JFindMyFiles	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/MetadataExtractor	project/JFindMyFiles/MetadataExtractor/nbproject	project/JFindMyFiles/MetadataExtractor/release	project/JFindMyFiles/MetadataExtractor/release/modules	project/JFindMyFiles/MetadataExtractor/release/modules/ext	project/JFindMyFiles/MetadataExtractor/src	project/JFindMyFiles/MetadataExtractor/src/com	project/JFindMyFiles/MetadataExtractor/src/com/drew	project/JFindMyFiles/MetadataExtractor/src/com/drew/lang	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins	project/JFindMyFiles/nbproject spikes/PluginAPI	spikes/PluginAPI/lib spikes/PluginAPI/nbproject	spikes/PluginAPI/src spikes/PluginAPI/src/pluginapi">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu Jun 19 18:22:04 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000147.html">[Jfindmyfiles-commits] r152 - in trunk/docs/Documentos Externos: .	images
+</A></li>
+        <LI>Next message: <A HREF="000149.html">[Jfindmyfiles-commits] r154 - in	trunk/project/JFindMyFiles/MetadataExtractor: . build
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#148">[ date ]</a>
+              <a href="thread.html#148">[ thread ]</a>
+              <a href="subject.html#148">[ subject ]</a>
+              <a href="author.html#148">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-19 18:21:24 +0200 (Thu, 19 Jun 2008)
+New Revision: 153
+
+Added:
+   trunk/docs/Iteracao3-CB03/DSC00165.JPG
+   trunk/libs/metadata-extractor-2.3.1.jar
+   trunk/project/JFindMyFiles/MetadataExtractor/
+   trunk/project/JFindMyFiles/MetadataExtractor/build/
+   trunk/project/JFindMyFiles/MetadataExtractor/manifest.mf
+   trunk/project/JFindMyFiles/MetadataExtractor/nbproject/
+   trunk/project/JFindMyFiles/MetadataExtractor/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/MetadataExtractor/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.properties
+   trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.xml
+   trunk/project/JFindMyFiles/MetadataExtractor/nbproject/suite.properties
+   trunk/project/JFindMyFiles/MetadataExtractor/release/
+   trunk/project/JFindMyFiles/MetadataExtractor/release/modules/
+   trunk/project/JFindMyFiles/MetadataExtractor/release/modules/ext/
+   trunk/project/JFindMyFiles/MetadataExtractor/release/modules/ext/metadata-extractor-2.3.1.jar
+   trunk/project/JFindMyFiles/MetadataExtractor/src/
+   trunk/project/JFindMyFiles/MetadataExtractor/src/com/
+   trunk/project/JFindMyFiles/MetadataExtractor/src/com/drew/
+   trunk/project/JFindMyFiles/MetadataExtractor/src/com/drew/lang/
+   trunk/project/JFindMyFiles/MetadataExtractor/src/com/drew/lang/Bundle.properties
+   trunk/spikes/PluginAPI/Canon PowerShot G2 (1).jpg
+   trunk/spikes/PluginAPI/DSC00165.JPG
+   trunk/spikes/PluginAPI/lib/
+   trunk/spikes/PluginAPI/lib/metadata-extractor-2.3.1.jar
+   trunk/spikes/PluginAPI/src/Bundle.properties
+   trunk/spikes/PluginAPI/src/ImageDlg.form
+   trunk/spikes/PluginAPI/src/ImageDlg.java
+   trunk/spikes/PluginAPI/src/pluginapi/JPGPlugin.java
+Modified:
+   trunk/docs/TODO
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java
+   trunk/project/JFindMyFiles/nbproject/project.properties
+   trunk/spikes/PluginAPI/nbproject/project.properties
+   trunk/spikes/PluginAPI/src/Run.java
+   trunk/spikes/PluginAPI/src/pluginapi/PluginCache.java
+Log:
+Adicionado novo plugin que permite a leitura de imagens e descri?\195?\167?\195?\163o das mesmas.
+
+Added: trunk/docs/Iteracao3-CB03/DSC00165.JPG
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Iteracao3-CB03/DSC00165.JPG
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/docs/TODO
+===================================================================
+--- trunk/docs/TODO	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/docs/TODO	2008-06-19 16:21:24 UTC (rev 153)
+@@ -10,8 +10,10 @@
+ 
+ <A HREF="http://www.xylax.net/hibernate/onetomany.html">http://www.xylax.net/hibernate/onetomany.html</A>
+ <A HREF="http://www.hibernate.org/hib_docs/v3/reference/en/html_single/#mapping">http://www.hibernate.org/hib_docs/v3/reference/en/html_single/#mapping</A>
+-<A HREF="http://www.hibernate.org/hib_docs/v3/reference/en/html/tutorial.html">http://www.hibernate.org/hib_docs/v3/reference/en/html/tutorial.html</A>
++<A HREF="http://www.hibernate.org/hib_docs/v3/reference/en/html/tutorial.html">http://www.hibernate.org/hib_docs/v3/reference/en/html/tutorial.html</A>
+ 
++Image taken from: <A HREF="http://www.drewnoakes.com/code/exif/index.html">http://www.drewnoakes.com/code/exif/index.html</A>
++
+ Itera&#231;&#227;o 2:
+ 	- Fazer DER e modelo de dominio com base no esquema usado para o mapeamento
+ 	- Abrir cat&#225;logo
+
+Added: trunk/libs/metadata-extractor-2.3.1.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/libs/metadata-extractor-2.3.1.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.java	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/PluginsPanel.java	2008-06-19 16:21:24 UTC (rev 153)
+@@ -6,14 +6,8 @@
+ 
+ import de.berlios.jfindmyfiles.readingfiles.pluginapi.PluginCache;
+ import de.berlios.jfindmyfiles.readingfiles.pluginapi.Reader;
+-import de.berlios.jfindmyfiles.readingfiles.utils.ReadingUtils;
+-import java.io.File;
+ import java.util.List;
+-import javax.swing.event.DocumentEvent;
+-import javax.swing.event.DocumentListener;
+-import javax.swing.event.TableModelListener;
+ import javax.swing.table.AbstractTableModel;
+-import javax.swing.table.TableModel;
+ import org.openide.util.Lookup;
+ import org.openide.util.NbPreferences;
+ 
+@@ -26,7 +20,6 @@
+         this.controller = controller;
+         cache = Lookup.getDefault().lookup(PluginCache.class);
+         initComponents();
+-        myInitComponents();
+     // TODO listen to changes in form fields and call controller.changed()
+         /*jtfPluginFolder.getDocument().addDocumentListener(new DocumentListener() {
+     
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java	2008-06-19 16:21:24 UTC (rev 153)
+@@ -17,6 +17,7 @@
+ import org.hibernate.criterion.MatchMode;
+ import org.hibernate.criterion.Restrictions;
+ import org.openide.util.NbBundle;
++import org.openide.util.Utilities;
+ import org.openide.windows.TopComponent;
+ import org.openide.windows.WindowManager;
+ //import org.openide.util.Utilities;
+@@ -39,7 +40,7 @@
+         initComponents();
+         setName(NbBundle.getMessage(SearchWindowTopComponent.class, &quot;CTL_SearchWindowTopComponent&quot;));
+         setToolTipText(NbBundle.getMessage(SearchWindowTopComponent.class, &quot;HINT_SearchWindowTopComponent&quot;));
+-//        setIcon(Utilities.loadImage(ICON_PATH, true));
++        //setIcon(Utilities.loadImage(&quot;&quot;, true));
+     }
+ 
+     @SuppressWarnings(&quot;unchecked&quot;)
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-06-19 16:21:24 UTC (rev 153)
+@@ -475,15 +475,15 @@
+ }//GEN-LAST:event_jbtnTemplateBrowseActionPerformed
+ 
+ private void jchkOpenAfterStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jchkOpenAfterStateChanged
+-// TODO add your handling code here:
++    //TODO: open file after exporting
+ }//GEN-LAST:event_jchkOpenAfterStateChanged
+ 
+ private void jchkTemplateOpenAfterStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jchkTemplateOpenAfterStateChanged
+-// TODO add your handling code here:
++    //TODO: open HTML file after exporting
+ }//GEN-LAST:event_jchkTemplateOpenAfterStateChanged
+ 
+ private void jcbxSelectTemplateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbxSelectTemplateActionPerformed
+-// TODO add your handling code here:
++//Change the selected template
+ }//GEN-LAST:event_jcbxSelectTemplateActionPerformed
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JScrollPane jScrollPane1;
+
+Added: trunk/project/JFindMyFiles/MetadataExtractor/manifest.mf
+===================================================================
+--- trunk/project/JFindMyFiles/MetadataExtractor/manifest.mf	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/MetadataExtractor/manifest.mf	2008-06-19 16:21:24 UTC (rev 153)
+@@ -0,0 +1,5 @@
++Manifest-Version: 1.0
++OpenIDE-Module: com.drew.lang
++OpenIDE-Module-Localizing-Bundle: com/drew/lang/Bundle.properties
++OpenIDE-Module-Specification-Version: 1.0
++
+
+Added: trunk/project/JFindMyFiles/MetadataExtractor/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/MetadataExtractor/nbproject/build-impl.xml	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/MetadataExtractor/nbproject/build-impl.xml	2008-06-19 16:21:24 UTC (rev 153)
+@@ -0,0 +1,30 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;com.drew.lang-impl&quot; basedir=&quot;..&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; name=&quot;property&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property value=&quot;${@{value}}&quot; name=&quot;@{name}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; name=&quot;harness.dir&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; name=&quot;netbeans.dest.dir&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available type=&quot;dir&quot; file=&quot;${harness.dir}&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/MetadataExtractor/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/MetadataExtractor/nbproject/genfiles.properties	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/MetadataExtractor/nbproject/genfiles.properties	2008-06-19 16:21:24 UTC (rev 153)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=c62b5b00
++build.xml.script.CRC32=27bcb6c6
++build.xml.stylesheet.CRC32=79c3b980
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=c62b5b00
++nbproject/build-impl.xml.script.CRC32=8a47ae3c
++nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Added: trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.properties	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.properties	2008-06-19 16:21:24 UTC (rev 153)
+@@ -0,0 +1 @@
++is.autoload=true
+
+Added: trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.xml	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.xml	2008-06-19 16:21:24 UTC (rev 153)
+@@ -0,0 +1,24 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
++            &lt;code-name-base&gt;com.drew.lang&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies/&gt;
++            &lt;public-packages&gt;
++                &lt;package&gt;com.drew.imaging&lt;/package&gt;
++                &lt;package&gt;com.drew.imaging.jpeg&lt;/package&gt;
++                &lt;package&gt;com.drew.lang&lt;/package&gt;
++                &lt;package&gt;com.drew.metadata&lt;/package&gt;
++                &lt;package&gt;com.drew.metadata.exif&lt;/package&gt;
++                &lt;package&gt;com.drew.metadata.iptc&lt;/package&gt;
++                &lt;package&gt;com.drew.metadata.jpeg&lt;/package&gt;
++            &lt;/public-packages&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/metadata-extractor-2.3.1.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/metadata-extractor-2.3.1.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/MetadataExtractor/nbproject/suite.properties
+===================================================================
+--- trunk/project/JFindMyFiles/MetadataExtractor/nbproject/suite.properties	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/MetadataExtractor/nbproject/suite.properties	2008-06-19 16:21:24 UTC (rev 153)
+@@ -0,0 +1 @@
++suite.dir=${basedir}/..
+
+Added: trunk/project/JFindMyFiles/MetadataExtractor/release/modules/ext/metadata-extractor-2.3.1.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/MetadataExtractor/release/modules/ext/metadata-extractor-2.3.1.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/MetadataExtractor/src/com/drew/lang/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/MetadataExtractor/src/com/drew/lang/Bundle.properties	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/MetadataExtractor/src/com/drew/lang/Bundle.properties	2008-06-19 16:21:24 UTC (rev 153)
+@@ -0,0 +1 @@
++OpenIDE-Module-Name=MetadataExtractor
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-06-19 16:21:24 UTC (rev 153)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=4875de8e
++build.xml.data.CRC32=3c88f267
+ build.xml.script.CRC32=78d85b23
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=4875de8e
++nbproject/build-impl.xml.data.CRC32=3c88f267
+ nbproject/build-impl.xml.script.CRC32=a04a2658
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-06-19 16:21:24 UTC (rev 153)
+@@ -7,6 +7,14 @@
+             &lt;suite-component/&gt;
+             &lt;module-dependencies&gt;
+                 &lt;dependency&gt;
++                    &lt;code-name-base&gt;com.drew.lang&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
+                     &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
+                     &lt;build-prerequisite/&gt;
+                     &lt;compile-dependency/&gt;
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/AntMovieCatalogerPlugin.java	2008-06-19 16:21:24 UTC (rev 153)
+@@ -16,7 +16,7 @@
+ public class AntMovieCatalogerPlugin implements Reader {
+     
+     private static final String NAME = &quot;Ant Movie Cataloger Reader&quot;;
+-    private static final String AUTHOR = &quot;Sergio Lopes&quot;;//TODO: provide correct author info
++    private static final String AUTHOR = &quot;JFindMyFiles&quot;;
+     private static final String EXT = &quot;amc&quot;;
+ 
+     public String getName() {
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins/JPGPlugin.java	2008-06-19 16:21:24 UTC (rev 153)
+@@ -2,12 +2,24 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.readingfiles.plugins;
+ 
++import com.drew.imaging.jpeg.JpegMetadataReader;
++import com.drew.imaging.jpeg.JpegProcessingException;
++import com.drew.metadata.Directory;
++import com.drew.metadata.Metadata;
++import com.drew.metadata.Tag;
+ import de.berlios.jfindmyfiles.readingfiles.pluginapi.DescriptionValues;
+ import de.berlios.jfindmyfiles.readingfiles.pluginapi.Reader;
++import java.awt.Image;
++import java.awt.Toolkit;
++import java.awt.image.BufferedImage;
++import java.io.ByteArrayOutputStream;
+ import java.io.File;
++import java.io.IOException;
++import java.util.Iterator;
++import javax.imageio.ImageIO;
++import javax.swing.ImageIcon;
+ 
+ /**
+  *
+@@ -16,9 +28,18 @@
+ public class JPGPlugin implements Reader {
+ 
+     private static final String NAME = &quot;JPG Reader&quot;;
+-    private static final String AUTHOR = &quot;Sergio Lopes&quot;;//TODO: provide correct author info
++    private static final String AUTHOR = &quot;JFindMyFiles&quot;;
+     private static final String EXT = &quot;jpg&quot;;
+-    
++    private ImageIcon ic;
++    private BufferedImage bimg;
++    private ByteArrayOutputStream bas;
++
++    public JPGPlugin() {
++        ic = new ImageIcon();
++        bimg = new BufferedImage(100, 75, BufferedImage.TYPE_INT_RGB);
++        bas = new ByteArrayOutputStream();
++    }
++
+     public String getName() {
+         return NAME;
+     }
+@@ -32,8 +53,59 @@
+     }
+ 
+     public DescriptionValues read(File file) {
+-        //TODO: create plugin
++        try {
++            StringBuffer buf = new StringBuffer();
++            Metadata metadata = JpegMetadataReader.readMetadata(file);
++
++            //iterate through metadata directories
++            Iterator directories = metadata.getDirectoryIterator();
++            Tag tag;
++            while (directories.hasNext()) {
++                Directory directory = (Directory) directories.next();
++                // iterate through tags and print to System.out  
++                Iterator tags = directory.getTagIterator();
++                while (tags.hasNext()) {
++                    tag = (Tag) tags.next();
++                    if (tag.getTagName().equals(&quot;Make&quot;) ||
++                            tag.getTagName().equals(&quot;Model&quot;) ||
++                            tag.getTagName().equals(&quot;Date/Time&quot;) ||
++                            tag.getTagName().equals(&quot;Exposure Time&quot;) ||
++                            tag.getTagName().equals(&quot;F-Number&quot;) ||
++                            tag.getTagName().equals(&quot;ISO Speed Ratings&quot;) ||
++                            tag.getTagName().equals(&quot;Flash&quot;) ||
++                            tag.getTagName().equals(&quot;Exif Image Width&quot;) ||
++                            tag.getTagName().equals(&quot;Exif Image Height&quot;) ||
++                            tag.getTagName().equals(&quot;Exposure Mode&quot;) ||
++                            tag.getTagName().equals(&quot;White Balance&quot;) ||
++                            tag.getTagName().equals(&quot;Digital Zoom Ratio&quot;) ||
++                            tag.getTagName().equals(&quot;Scene Capture Type&quot;) ||
++                            tag.getTagName().equals(&quot; Exif Version&quot;)) {
++
++                        buf.append(tag.toString() + &quot;\n&quot;);
++                    }
++                }
++            }
++
++            Image img = Toolkit.getDefaultToolkit().createImage(file.getAbsolutePath()).
++                    getScaledInstance(100, 75, Image.SCALE_FAST);
++
++            //NOTE: Another ugly hack!
++            ic.setImage(img);
++            bimg.getGraphics().dispose();
++            bimg.createGraphics().drawImage(img, 0, 0, null);
++
++            bas.reset();
++            ImageIO.write(bimg, &quot;jpeg&quot;, bas);
++            byte[] data = bas.toByteArray();
++            bas.flush();
++
++            return new DescriptionValues(buf.toString(), data, null, null, null);
++        } catch (JpegProcessingException ex) {
++            //TODO: logging
++        } catch (IOException ex) {
++            //TODO: logging
++            //Logger.getLogger(JPGPlugin.class.getName()).log(Level.SEVERE, null, ex);
++        }
+         return new DescriptionValues();
+     }
+-
+ }
+
+Modified: trunk/project/JFindMyFiles/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/project.properties	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/project/JFindMyFiles/nbproject/project.properties	2008-06-19 16:21:24 UTC (rev 153)
+@@ -12,7 +12,9 @@
+     ${project.de.berlios.jfindmyfiles.hsqldb}:\
+     ${project.com.toedter.plaf}:\
+     ${project.de.berlios.jfindmyfiles.importengine}:\
+-    ${project.jonelo.jacksum}
++    ${project.jonelo.jacksum}:\
++    ${project.com.drew.lang}
++project.com.drew.lang=MetadataExtractor
+ project.com.toedter.plaf=JCalendar
+ project.de.berlios.jfindmyfiles.catalog=Catalog
+ project.de.berlios.jfindmyfiles.exportengine=ExportEngine
+
+Added: trunk/spikes/PluginAPI/Canon PowerShot G2 (1).jpg
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/PluginAPI/Canon PowerShot G2 (1).jpg
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/PluginAPI/DSC00165.JPG
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/PluginAPI/DSC00165.JPG
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/PluginAPI/lib/metadata-extractor-2.3.1.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/PluginAPI/lib/metadata-extractor-2.3.1.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/spikes/PluginAPI/nbproject/project.properties
+===================================================================
+--- trunk/spikes/PluginAPI/nbproject/project.properties	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/spikes/PluginAPI/nbproject/project.properties	2008-06-19 16:21:24 UTC (rev 153)
+@@ -1,3 +1,5 @@
++application.title=PluginAPI
++application.vendor=Knitter
+ build.classes.dir=${build.dir}/classes
+ build.classes.excludes=**/*.java,**/*.form
+ # This directory is removed when the project is cleaned:
+@@ -16,9 +18,11 @@
+ dist.jar=${dist.dir}/PluginAPI.jar
+ dist.javadoc.dir=${dist.dir}/javadoc
+ excludes=
++file.reference.metadata-extractor-2.3.1.jar=C:\\System\\Working\\MyProjects\\JFindMyFiles\\spikes\\PluginAPI\\lib\\metadata-extractor-2.3.1.jar
+ includes=**
+ jar.compress=false
+-javac.classpath=
++javac.classpath=\
++    ${file.reference.metadata-extractor-2.3.1.jar}
+ # Space-separated list of extra javac options
+ javac.compilerargs=
+ javac.deprecation=false
+
+Added: trunk/spikes/PluginAPI/src/Bundle.properties
+===================================================================
+--- trunk/spikes/PluginAPI/src/Bundle.properties	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/spikes/PluginAPI/src/Bundle.properties	2008-06-19 16:21:24 UTC (rev 153)
+@@ -0,0 +1,3 @@
++ImageDlg.jLabel1.text=
++ImageDlg.jButton1.text=jButton1
++ImageDlg.jLabel2.text=
+
+Added: trunk/spikes/PluginAPI/src/ImageDlg.form
+===================================================================
+--- trunk/spikes/PluginAPI/src/ImageDlg.form	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/spikes/PluginAPI/src/ImageDlg.form	2008-06-19 16:21:24 UTC (rev 153)
+@@ -0,0 +1,75 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
++
++&lt;Form version=&quot;1.5&quot; maxVersion=&quot;1.6&quot; type=&quot;org.netbeans.modules.form.forminfo.JDialogFormInfo&quot;&gt;
++  &lt;Properties&gt;
++    &lt;Property name=&quot;defaultCloseOperation&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
++  &lt;/Properties&gt;
++  &lt;SyntheticProperties&gt;
++    &lt;SyntheticProperty name=&quot;formSizePolicy&quot; type=&quot;int&quot; value=&quot;1&quot;/&gt;
++  &lt;/SyntheticProperties&gt;
++  &lt;AuxValues&gt;
++    &lt;AuxValue name=&quot;FormSettings_autoResourcing&quot; type=&quot;java.lang.Integer&quot; value=&quot;1&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_autoSetComponentName&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_generateMnemonicsCode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_i18nAutoMode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_layoutCodeTarget&quot; type=&quot;java.lang.Integer&quot; value=&quot;1&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_listenerGenerationStyle&quot; type=&quot;java.lang.Integer&quot; value=&quot;0&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_variablesLocal&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_variablesModifier&quot; type=&quot;java.lang.Integer&quot; value=&quot;2&quot;/&gt;
++  &lt;/AuxValues&gt;
++
++  &lt;Layout&gt;
++    &lt;DimensionLayout dim=&quot;0&quot;&gt;
++      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++          &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jLabel1&quot; alignment=&quot;0&quot; pref=&quot;380&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jLabel2&quot; alignment=&quot;1&quot; pref=&quot;380&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++      &lt;/Group&gt;
++    &lt;/DimensionLayout&gt;
++    &lt;DimensionLayout dim=&quot;1&quot;&gt;
++      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jLabel1&quot; min=&quot;-2&quot; pref=&quot;114&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace type=&quot;unrelated&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jLabel2&quot; min=&quot;-2&quot; pref=&quot;114&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace type=&quot;unrelated&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++      &lt;/Group&gt;
++    &lt;/DimensionLayout&gt;
++  &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;Bundle.properties&quot; key=&quot;ImageDlg.jLabel1.text&quot; replaceFormat=&quot;java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;Bundle.properties&quot; key=&quot;ImageDlg.jButton1.text&quot; replaceFormat=&quot;java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jButton1ActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel2&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;Bundle.properties&quot; key=&quot;ImageDlg.jLabel2.text&quot; replaceFormat=&quot;java.util.ResourceBundle.getBundle(&quot;{bundleNameSlashes}&quot;).getString(&quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++  &lt;/SubComponents&gt;
++&lt;/Form&gt;
+
+Added: trunk/spikes/PluginAPI/src/ImageDlg.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/ImageDlg.java	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/spikes/PluginAPI/src/ImageDlg.java	2008-06-19 16:21:24 UTC (rev 153)
+@@ -0,0 +1,116 @@
++
++import java.awt.event.WindowAdapter;
++import java.awt.event.WindowListener;
++import java.awt.image.BufferedImage;
++import java.io.ByteArrayInputStream;
++import java.io.IOException;
++import java.util.logging.Level;
++import java.util.logging.Logger;
++import javax.imageio.ImageIO;
++import javax.swing.ImageIcon;
++
++/*
++ * ImageDlg.java
++ *
++ * Created on 17 de Junho de 2008, 1:07
++ */
++import javax.swing.WindowConstants;
++
++/**
++ *
++ * @author  Knitter
++ */
++public class ImageDlg extends javax.swing.JDialog {
++
++    private ImageIcon icon;
++    private ImageIcon icon2;
++
++    /** Creates new form ImageDlg */
++    public ImageDlg(java.awt.Frame parent, boolean modal) {
++        super(parent, modal);
++        initComponents();
++        setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
++    }
++
++    public void setDisplayImage(byte[] img, byte[] img2) {
++        /*try {
++        //BufferedImage image = ImageIO.read(new ByteArrayInputStream(img));
++        //icon = new ImageIcon(image);
++        } catch (IOException ex) {
++        Logger.getLogger(ImageDlg.class.getName()).log(Level.SEVERE, null, ex);
++        }*/
++        icon = new ImageIcon(img);
++        icon2 = new ImageIcon(img2);
++    }
++
++    public void showVisible() {
++        jLabel1.setIcon(icon);
++        jLabel2.setIcon(icon2);
++        setVisible(true);
++    }
++
++    /** This method is called from within the constructor to
++     * initialize the form.
++     * WARNING: Do NOT modify this code. The content of this method is
++     * always regenerated by the Form Editor.
++     */
++    @SuppressWarnings(&quot;unchecked&quot;)
++    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
++    private void initComponents() {
++
++        jLabel1 = new javax.swing.JLabel();
++        jButton1 = new javax.swing.JButton();
++        jLabel2 = new javax.swing.JLabel();
++
++        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
++
++        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle(&quot;Bundle&quot;); // NOI18N
++        jLabel1.setText(bundle.getString(&quot;ImageDlg.jLabel1.text&quot;)); // NOI18N
++
++        jButton1.setText(bundle.getString(&quot;ImageDlg.jButton1.text&quot;)); // NOI18N
++        jButton1.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jButton1ActionPerformed(evt);
++            }
++        });
++
++        jLabel2.setText(bundle.getString(&quot;ImageDlg.jLabel2.text&quot;)); // NOI18N
++
++        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
++        getContentPane().setLayout(layout);
++        layout.setHorizontalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
++                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 380, Short.MAX_VALUE)
++                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING))
++                .addContainerGap())
++        );
++        layout.setVerticalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
++                .addComponent(jButton1)
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++        );
++
++        pack();
++    }// &lt;/editor-fold&gt;//GEN-END:initComponents
++
++private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
++    jLabel1.setIcon(icon);
++    jLabel2.setIcon(icon2);
++    validate();
++}//GEN-LAST:event_jButton1ActionPerformed
++    // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JLabel jLabel1;
++    private javax.swing.JLabel jLabel2;
++    // End of variables declaration//GEN-END:variables
++}
+
+Modified: trunk/spikes/PluginAPI/src/Run.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/Run.java	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/spikes/PluginAPI/src/Run.java	2008-06-19 16:21:24 UTC (rev 153)
+@@ -3,13 +3,13 @@
+ import java.net.MalformedURLException;
+ import java.util.logging.Level;
+ import java.util.logging.Logger;
++import javax.swing.ImageIcon;
+ import pluginapi.*;
+ 
+ /*
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ /**
+  *
+  * @author Knitter
+@@ -22,12 +22,26 @@
+     public static void main(String[] args) {
+         try {
+             PluginCache c = new PluginCache();
+-            Reader r = c.readerFor(&quot;AMC&quot;.toLowerCase());
+-            DescriptionValues d = r.read(new File(&quot;example.amc&quot;));
+-            System.out.println(d.getDescription());
++            /*Reader r = c.readerFor(&quot;AMC&quot;.toLowerCase());
++            DescriptionValues d = r.read(new File(&quot;example.amc&quot;));*/
++
++            Reader r = c.readerFor(&quot;JPG&quot;.toLowerCase());
++            final DescriptionValues d1 = r.read(new File(&quot;DSC00165.JPG&quot;));
++            final DescriptionValues d2 = r.read(new File(&quot;Canon PowerShot G2 (1).jpg&quot;));
++
++            System.out.println(&quot;&lt;========================= DSC00165.JPG =====================&gt;&quot;);
++            System.out.println(d1.getDescription());
++            System.out.println(&quot;&lt;========================= Canon PowerShot G2 (1).jpg =====================&gt;&quot;);
++            System.out.println(d2.getDescription());
++
++            System.out.println(&quot;###############################################&quot;);
++            
++            ImageDlg dialog = new ImageDlg(new javax.swing.JFrame(), true);
++            dialog.setDisplayImage(d2.getImage(), d1.getImage());
++            dialog.showVisible();
++
+         } catch (MalformedURLException ex) {
+             Logger.getLogger(Run.class.getName()).log(Level.SEVERE, null, ex);
+         }
+     }
+-
+ }
+
+Added: trunk/spikes/PluginAPI/src/pluginapi/JPGPlugin.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/pluginapi/JPGPlugin.java	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/spikes/PluginAPI/src/pluginapi/JPGPlugin.java	2008-06-19 16:21:24 UTC (rev 153)
+@@ -0,0 +1,139 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package pluginapi;
++
++import com.drew.imaging.jpeg.JpegMetadataReader;
++import com.drew.imaging.jpeg.JpegProcessingException;
++import com.drew.metadata.Directory;
++import com.drew.metadata.Metadata;
++import com.drew.metadata.Tag;
++import java.awt.Color;
++import java.awt.Graphics;
++import java.awt.Image;
++import java.awt.MediaTracker;
++import java.awt.Toolkit;
++import java.awt.image.BufferedImage;
++import java.awt.image.ImageObserver;
++import java.awt.image.IndexColorModel;
++import java.awt.image.PixelGrabber;
++import java.awt.image.renderable.ParameterBlock;
++import java.io.ByteArrayOutputStream;
++import java.io.File;
++import java.io.FileInputStream;
++import java.io.IOException;
++import java.util.Iterator;
++import java.util.logging.Level;
++import java.util.logging.Logger;
++import javax.imageio.IIOImage;
++import javax.imageio.ImageIO;
++import javax.swing.ImageIcon;
++import javax.swing.JOptionPane;
++
++/**
++ *
++ * @author Knitter
++ */
++public class JPGPlugin implements Reader {
++
++    private static final String NAME = &quot;JPG Reader&quot;;
++    private static final String AUTHOR = &quot;JFindMyFiles&quot;;
++    private static final String EXT = &quot;jpg&quot;;
++    private ImageIcon ic;
++    private BufferedImage bimg;
++    private ByteArrayOutputStream bas;
++
++    public JPGPlugin() {
++        ic = new ImageIcon();
++        bimg = new BufferedImage(100, 75, BufferedImage.TYPE_INT_RGB);
++        bas = new ByteArrayOutputStream();
++    }
++
++    public String getName() {
++        return NAME;
++    }
++
++    public String getAuthor() {
++        return AUTHOR;
++    }
++
++    public String pluginFor() {
++        return EXT;
++    }
++
++    public DescriptionValues read(File file) {
++        try {
++            StringBuffer buf = new StringBuffer();
++            Metadata metadata = JpegMetadataReader.readMetadata(file);
++
++            //iterate through metadata directories
++            Iterator directories = metadata.getDirectoryIterator();
++            Tag tag;
++            while (directories.hasNext()) {
++                Directory directory = (Directory) directories.next();
++                // iterate through tags and print to System.out  
++                Iterator tags = directory.getTagIterator();
++                while (tags.hasNext()) {
++                    tag = (Tag) tags.next();
++                    if (tag.getTagName().equals(&quot;Make&quot;) ||
++                            tag.getTagName().equals(&quot;Model&quot;) ||
++                            tag.getTagName().equals(&quot;Date/Time&quot;) ||
++                            tag.getTagName().equals(&quot;Exposure Time&quot;) ||
++                            tag.getTagName().equals(&quot;F-Number&quot;) ||
++                            tag.getTagName().equals(&quot;ISO Speed Ratings&quot;) ||
++                            tag.getTagName().equals(&quot;Flash&quot;) ||
++                            tag.getTagName().equals(&quot;Exif Image Width&quot;) ||
++                            tag.getTagName().equals(&quot;Exif Image Height&quot;) ||
++                            tag.getTagName().equals(&quot;Exposure Mode&quot;) ||
++                            tag.getTagName().equals(&quot;White Balance&quot;) ||
++                            tag.getTagName().equals(&quot;Digital Zoom Ratio&quot;) ||
++                            tag.getTagName().equals(&quot;Scene Capture Type&quot;) ||
++                            tag.getTagName().equals(&quot; Exif Version&quot;)) {
++                        
++                        buf.append(tag.toString() + &quot;\n&quot;);
++                    }
++                }
++            }
++
++            Image img = Toolkit.getDefaultToolkit().createImage(file.getAbsolutePath()).
++                    getScaledInstance(100, 75, Image.SCALE_FAST);
++
++            //NOTE: Another ugly hack!
++            ic.setImage(img);
++            bimg.createGraphics().drawImage(img, 0, 0, null);
++
++            bas.reset();
++            ImageIO.write(bimg, &quot;jpeg&quot;, bas);
++            byte[] data = bas.toByteArray();
++            bas.flush();
++            bimg.getGraphics().dispose();
++
++            return new DescriptionValues(buf.toString(), data, null, null, null);
++        } catch (JpegProcessingException ex) {
++            //TODO: logging
++        } catch (IOException ex) {
++            //TODO: logging
++            //Logger.getLogger(JPGPlugin.class.getName()).log(Level.SEVERE, null, ex);
++        }
++        return new DescriptionValues();
++    }
++    /*Make|[Exif] Make - Sony Ericsson
++    T-Name: Model|[Exif] Model - K610i
++    T-Name: X Resolution|[Exif] X Resolution - 72 dots per inch
++    T-Name: Y Resolution|[Exif] Y Resolution - 72 dots per inch
++    T-Name: Resolution Unit|[Exif] Resolution Unit - Inch
++    T-Name: Date/Time|[Exif] Date/Time - 2008:06:06 01:13:50
++    T-Name: Exposure Time|[Exif] Exposure Time - 0.04 sec
++    T-Name: F-Number|[Exif] F-Number - F2,8
++    T-Name: ISO Speed Ratings|[Exif] ISO Speed Ratings - 125
++    T-Name: Exif Version|[Exif] Exif Version - 2.20
++    T-Name: Flash|[Exif] Flash - Flash did not fire, auto
++    T-Name: Exif Image Width|[Exif] Exif Image Width - 1600 pixels
++    T-Name: Exif Image Height|[Exif] Exif Image Height - 1200 pixels
++    T-Name: Exposure Mode|[Exif] Exposure Mode - Auto exposure
++    T-Name: White Balance|[Exif] White Balance - Auto white balance
++    T-Name: Digital Zoom Ratio|[Exif] Digital Zoom Ratio - Digital zoom not used.
++    T-Name: Scene Capture Type|[Exif] Scene Capture Type - Standard
++     */
++}
+
+Modified: trunk/spikes/PluginAPI/src/pluginapi/PluginCache.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/pluginapi/PluginCache.java	2008-06-18 16:19:58 UTC (rev 152)
++++ trunk/spikes/PluginAPI/src/pluginapi/PluginCache.java	2008-06-19 16:21:24 UTC (rev 153)
+@@ -40,11 +40,13 @@
+             Reader r = (Reader) c.newInstance();
+             cache.put(r.pluginFor(), r);*/
+ 
+-            File f = new File(&quot;C:\\Documents and Settings\\Knitter\\Desktop\\PLGIN\\&quot;);
+-            URLClassLoader ucl = new URLClassLoader(new URL[]{f.toURI().toURL()}, ClassLoader.getSystemClassLoader());
+-            String s = &quot;pluginapi.AntMovieCatalogerPlugin&quot;;
+-
+-            Class c = Class.forName(s, true, ucl);
++            //File f = new File(&quot;C:\\Documents and Settings\\Knitter\\Desktop\\PLGIN\\&quot;);
++            //URLClassLoader ucl = new URLClassLoader(new URL[]{f.toURI().toURL()}, ClassLoader.getSystemClassLoader());
++            //String s = &quot;pluginapi.AntMovieCatalogerPlugin&quot;;
++            String s = &quot;pluginapi.JPGPlugin&quot;;
++            
++            //Class c = Class.forName(s, true, ucl);
++            Class c = Class.forName(s);
+             Reader r = (Reader) c.newInstance();
+             cache.put(r.pluginFor(), r);
+ 
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000147.html">[Jfindmyfiles-commits] r152 - in trunk/docs/Documentos Externos: .	images
+</A></li>
+	<LI>Next message: <A HREF="000149.html">[Jfindmyfiles-commits] r154 - in	trunk/project/JFindMyFiles/MetadataExtractor: . build
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#148">[ date ]</a>
+              <a href="thread.html#148">[ thread ]</a>
+              <a href="subject.html#148">[ subject ]</a>
+              <a href="author.html#148">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

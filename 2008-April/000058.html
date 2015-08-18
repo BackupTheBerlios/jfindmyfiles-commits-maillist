@@ -1,0 +1,810 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r63 - in trunk: docs/Iteracao1-CB09	spikes/SPKlerDados/nbproject	spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-April/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r63%20-%20in%20trunk%3A%20docs/Iteracao1-CB09%0A%09spikes/SPKlerDados/nbproject%0A%09spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados&In-Reply-To=%3C200804242222.m3OMMbX1026832%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000057.html">
+   <LINK REL="Next"  HREF="000059.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r63 - in trunk: docs/Iteracao1-CB09	spikes/SPKlerDados/nbproject	spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r63%20-%20in%20trunk%3A%20docs/Iteracao1-CB09%0A%09spikes/SPKlerDados/nbproject%0A%09spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados&In-Reply-To=%3C200804242222.m3OMMbX1026832%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r63 - in trunk: docs/Iteracao1-CB09	spikes/SPKlerDados/nbproject	spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados">knitter at mail.berlios.de
+       </A><BR>
+    <I>Fri Apr 25 00:22:37 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000057.html">[Jfindmyfiles-commits] r62 - in trunk: docs/Iteracao1-CB09	docs/Iteracao2-CB05 docs/Iteracao2-CB05/Casos Uso spikes
+</A></li>
+        <LI>Next message: <A HREF="000059.html">[Jfindmyfiles-commits] r64 -	trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#58">[ date ]</a>
+              <a href="thread.html#58">[ thread ]</a>
+              <a href="subject.html#58">[ subject ]</a>
+              <a href="author.html#58">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-04-25 00:22:30 +0200 (Fri, 25 Apr 2008)
+New Revision: 63
+
+Added:
+   trunk/docs/Iteracao1-CB09/Heap.png
+   trunk/docs/Iteracao1-CB09/Memory Snapshot.nps
+   trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.form
+   trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.java
+Modified:
+   trunk/spikes/SPKlerDados/nbproject/project.properties
+   trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados.java
+Log:
+Adicionado snapshots do profiling feito para testar a performance na leitura de ficheiros.
+Adicionada nova classe com c?\195?\179digo mais limpo em que serve para testar os m?\195?\169todos de leitura de ficheiros.
+
+Added: trunk/docs/Iteracao1-CB09/Heap.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Iteracao1-CB09/Heap.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/docs/Iteracao1-CB09/Memory Snapshot.nps
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Iteracao1-CB09/Memory Snapshot.nps
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/spikes/SPKlerDados/nbproject/project.properties
+===================================================================
+--- trunk/spikes/SPKlerDados/nbproject/project.properties	2008-04-24 17:43:49 UTC (rev 62)
++++ trunk/spikes/SPKlerDados/nbproject/project.properties	2008-04-24 22:22:30 UTC (rev 63)
+@@ -20,12 +20,13 @@
+ excludes=
+ includes=**
+ jar.compress=false
+-javac.classpath=
++javac.classpath=\
++    ${libs.swing-layout.classpath}
+ # Space-separated list of extra javac options
+ javac.compilerargs=
+ javac.deprecation=false
+ javac.source=1.5
+-javac.target=1.5
++javac.target=1.6
+ javac.test.classpath=\
+     ${javac.classpath}:\
+     ${build.classes.dir}:\
+@@ -42,7 +43,10 @@
+ javadoc.use=true
+ javadoc.version=false
+ javadoc.windowtitle=
+-main.class=de.berlios.jfindmyfiles.spklerdados.ListAndChooseRoots
++# Property libs.swing-layout.classpath is set here just to make sharing of project simpler.
++# The library definition has always preference over this property.
++libs.swing-layout.classpath=../../../../../../../../Programas/NetBeans 6.0.1/platform7/modules/ext/swing-layout-1.0.3.jar
++main.class=de.berlios.jfindmyfiles.spklerdados.LerDados2
+ manifest.file=manifest.mf
+ meta.inf.dir=${src.dir}/META-INF
+ platform.active=default_platform
+
+Modified: trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados.java
+===================================================================
+--- trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados.java	2008-04-24 17:43:49 UTC (rev 62)
++++ trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados.java	2008-04-24 22:22:30 UTC (rev 63)
+@@ -37,12 +37,7 @@
+         setLocation((scrSize.width - mySize.width) / 2,
+                 (scrSize.height - mySize.height) / 2);
+     }
+-    
+-    private void test() {
+-        for(java.io.File f : new java.io.File(&quot;&quot;).listFiles())
+-            System.out.println();
+-    }
+-    
++       
+     private long calculateSize(File f) {
+         long s = 0L;
+         if(f.isFile()) {
+@@ -72,7 +67,6 @@
+         aux.append(&quot;Pasta: &quot; + (f.isDirectory() ? &quot;Sim&quot; : &quot;N&#227;o&quot;) + &quot;\n&quot;);
+         String origemDetails = aux.toString();
+         
+-
+         File[] list = f.listFiles();
+         aux = new StringBuffer(list.length * 8);
+         for (File r : list) {
+
+Added: trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.form
+===================================================================
+--- trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.form	2008-04-24 17:43:49 UTC (rev 62)
++++ trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.form	2008-04-24 22:22:30 UTC (rev 63)
+@@ -0,0 +1,231 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
++
++&lt;Form version=&quot;1.3&quot; maxVersion=&quot;1.5&quot; type=&quot;org.netbeans.modules.form.forminfo.JFrameFormInfo&quot;&gt;
++  &lt;Properties&gt;
++    &lt;Property name=&quot;defaultCloseOperation&quot; type=&quot;int&quot; value=&quot;3&quot;/&gt;
++  &lt;/Properties&gt;
++  &lt;SyntheticProperties&gt;
++    &lt;SyntheticProperty name=&quot;formSizePolicy&quot; type=&quot;int&quot; value=&quot;1&quot;/&gt;
++  &lt;/SyntheticProperties&gt;
++  &lt;AuxValues&gt;
++    &lt;AuxValue name=&quot;FormSettings_autoResourcing&quot; type=&quot;java.lang.Integer&quot; value=&quot;0&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_autoSetComponentName&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_generateMnemonicsCode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_i18nAutoMode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_layoutCodeTarget&quot; type=&quot;java.lang.Integer&quot; value=&quot;2&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_listenerGenerationStyle&quot; type=&quot;java.lang.Integer&quot; value=&quot;0&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_variablesLocal&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_variablesModifier&quot; type=&quot;java.lang.Integer&quot; value=&quot;2&quot;/&gt;
++  &lt;/AuxValues&gt;
++
++  &lt;Layout&gt;
++    &lt;DimensionLayout dim=&quot;0&quot;&gt;
++      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++          &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;1&quot;&gt;
++                      &lt;Component id=&quot;jbtnSomething&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;128&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jbnSearch&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jtbDesktop&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jbtnClean&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jbtnClose&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;Component id=&quot;jPanel2&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jPanel1&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;2&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++      &lt;/Group&gt;
++    &lt;/DimensionLayout&gt;
++    &lt;DimensionLayout dim=&quot;1&quot;&gt;
++      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jPanel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jPanel2&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jbtnClose&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jbtnClean&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jtbDesktop&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jbnSearch&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jbtnSomething&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++      &lt;/Group&gt;
++    &lt;/DimensionLayout&gt;
++  &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbnSearch&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Pesquisar&quot;/&gt;
++      &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbnSearchActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnClean&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Limpar&quot;/&gt;
++      &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnCleanActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jtbDesktop&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Home&quot;/&gt;
++      &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jtbDesktopActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
++    &lt;/Component&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++            &lt;TitledBorder/&gt;
++          &lt;/Border&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jLabel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Component id=&quot;jchkListFirst&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jchkSizeOnly&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                      &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Component id=&quot;jtfFolder&quot; pref=&quot;337&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jbtnBrowse&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jLabel1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jbtnBrowse&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jtfFolder&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jchkListFirst&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jchkSizeOnly&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel1&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Pasta:&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JCheckBox&quot; name=&quot;jchkListFirst&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Listar primeiro&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jtfFolder&quot;&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnBrowse&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;...&quot;/&gt;
++          &lt;/Properties&gt;
++          &lt;Events&gt;
++            &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnBrowseActionPerformed&quot;/&gt;
++          &lt;/Events&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JCheckBox&quot; name=&quot;jchkSizeOnly&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;S&amp;#xf3; calcular tamanho&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel2&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++            &lt;TitledBorder title=&quot;Resultados:&quot;/&gt;
++          &lt;/Border&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jScrollPane1&quot; pref=&quot;413&quot; max=&quot;32767&quot; attributes=&quot;2&quot;/&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jScrollPane1&quot; pref=&quot;349&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;1&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Container class=&quot;javax.swing.JScrollPane&quot; name=&quot;jScrollPane1&quot;&gt;
++          &lt;AuxValues&gt;
++            &lt;AuxValue name=&quot;autoScrollPane&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
++          &lt;/AuxValues&gt;
++
++          &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout&quot;/&gt;
++          &lt;SubComponents&gt;
++            &lt;Component class=&quot;javax.swing.JTextArea&quot; name=&quot;jtaresults&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;columns&quot; type=&quot;int&quot; value=&quot;20&quot;/&gt;
++                &lt;Property name=&quot;rows&quot; type=&quot;int&quot; value=&quot;5&quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++          &lt;/SubComponents&gt;
++        &lt;/Container&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnClose&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Fechar&quot;/&gt;
++      &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnCloseActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnSomething&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;!&quot;/&gt;
++      &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnSomethingActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
++    &lt;/Component&gt;
++  &lt;/SubComponents&gt;
++&lt;/Form&gt;
+
+Added: trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.java
+===================================================================
+--- trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.java	2008-04-24 17:43:49 UTC (rev 62)
++++ trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados/LerDados2.java	2008-04-24 22:22:30 UTC (rev 63)
+@@ -0,0 +1,410 @@
++/*
++ * LerDados2.java
++ *
++ * Created on 24 de Abril de 2008, 19:23
++ */
++package de.berlios.jfindmyfiles.spklerdados;
++
++import java.awt.Dimension;
++import java.awt.Toolkit;
++import java.io.File;
++import java.util.Hashtable;
++import java.util.Vector;
++import javax.swing.JFileChooser;
++import javax.swing.UIManager;
++
++/**
++ *
++ * @author  ei10635
++ */
++public class LerDados2 extends javax.swing.JFrame {
++
++    /** Creates new form LerDados2 */
++    public LerDados2() {
++        initComponents();
++        Dimension scrSize = Toolkit.getDefaultToolkit().getScreenSize();
++        Dimension mySize = getSize();
++
++        if (mySize.height &gt; scrSize.height) {
++            mySize.height = scrSize.height;
++        }
++
++        if (mySize.width &gt; scrSize.width) {
++            mySize.width = scrSize.width;
++        }
++
++        setLocation((scrSize.width - mySize.width) / 2,
++                (scrSize.height - mySize.height) / 2);
++    }
++    /**
++    long getSize(File f) {
++    //get the files in the directory
++    File inDir[] = f.litFiles();
++    //if inDir is null then it was a file
++    //so just return it's size
++    if (inDir == null)
++    return f.getSize();
++    //go through each file calling this function to get it's size
++    //if it is a file it will only get as far as the above line and
++    //return it's size. If it is a directory it will run this loop
++    //to get the size of each file in that directory as well.
++    int size = 0;
++    for (int i = inDir.length; i-- &gt; 0; )
++    size += getSize(inDir[i]);
++    return size; 
++    }
++     */
++    private Hashtable&lt;String, File&gt; files;
++
++    private void listAllFilesIntoHash(File f) {
++        if (f.isDirectory()) {
++            File[] some = f.listFiles();
++            for (int i = 0; i &lt; some.length; i++) {
++                listAllFilesIntoHash(some[i]);
++            }
++        }
++        files.put(f.getParent(), f);
++    }
++
++    private long calculateFolderSize(File f) {
++        long s = 0L;
++        if (f.isFile()) {
++            return f.length();
++        } else {
++            for (File f2 : f.listFiles()) {
++                s += calculateFolderSize(f2);
++            }
++        }
++        return s;
++    }
++
++    private long calculateFolderSizeListFirst(File f) {
++        Vector&lt;File&gt; results = new Vector&lt;File&gt;(100);
++        listAllFiles(f, results);
++        long size = 0L;
++        for (File f2 : results) {
++            size += f2.length();
++        }
++        return size;
++    }
++
++    private void listAllFiles(File f, Vector&lt;File&gt; list) {
++        if (f.isFile()) {
++            list.add(f);
++            return;
++        }
++        for (File f2 : f.listFiles()) {
++            listAllFiles(f2, list);
++        }
++    }
++
++    private String findExtension(File f) {
++        int x = -1;
++        String name = f.getName();
++        return ((x = name.lastIndexOf(&quot;.&quot;)) &gt; 0 ? name.substring(x + 1) : &quot;&quot;);
++    }
++
++    private void pesquisar(String origem) {
++        File f = new File(origem);
++        long totalSize = 0L;
++        StringBuffer aux = new StringBuffer(700);
++        String tempo;
++        long tmp6 = 0L, tmp7 = 0L;
++        if (jchkListFirst.isSelected()) {
++            long tmp1 = System.currentTimeMillis();
++            totalSize = calculateFolderSizeListFirst(f);
++            long tmp2 = System.currentTimeMillis();
++            tempo = &quot;Tempo 1: &quot; + tmp1 + &quot;/&quot; + tmp2 + &quot;: &quot; + (tmp2 - tmp1);
++        } else {
++            long tmp1 = System.currentTimeMillis();
++            totalSize = calculateFolderSize(f);
++            long tmp2 = System.currentTimeMillis();
++            tempo = &quot;Tempo 1: &quot; + tmp1 + &quot;/&quot; + tmp2 + &quot;: &quot; + (tmp2 - tmp1);
++        }
++
++
++        aux.append(&quot;Nome: &quot; + f.getName() + &quot;\n&quot;);
++        aux.append(&quot;Caminho: &quot; + f.getPath() + &quot;\n&quot;);
++        aux.append(&quot;Caminho absoluto: &quot; + f.getAbsolutePath() + &quot;\n&quot;);
++        aux.append(&quot;Tamanho: &quot; + totalSize + &quot; bytes\n&quot;);
++        aux.append(&quot;Modificado em: &quot; + f.lastModified() + &quot;\n&quot;);
++        aux.append(&quot;--------------------------\n\n&quot;);
++
++        if (!jchkSizeOnly.isSelected()) {
++            Vector&lt;File&gt; list = new Vector&lt;File&gt;(100);
++
++            tmp6 = System.currentTimeMillis();
++            listAllFiles(f, list);
++            for (File f2 : list) {
++                aux.append(&quot;Nome: &quot; + f2.getName() + &quot;\n&quot;);
++                aux.append(&quot;Caminho: &quot; + f2.getPath() + &quot;\n&quot;);
++                aux.append(&quot;Caminho absoluto: &quot; + f2.getAbsolutePath() + &quot;\n&quot;);
++                if (!f2.isDirectory()) {
++                    aux.append(&quot;Tamanho: &quot; + f2.length() + &quot; bytes\n&quot;);
++                    aux.append(&quot;Extens&#227;o: &quot; + findExtension(f2) + &quot;\n&quot;);
++                }
++                aux.append(&quot;Modificado em: &quot; + f2.lastModified() + &quot;\n&quot;);
++                aux.append(&quot;Oculto: &quot; + (f2.isHidden() ? &quot;Sim&quot; : &quot;N&#227;o&quot;) + &quot;\n&quot;);
++                aux.append(&quot;--------------------------\n\n&quot;);
++            }
++            tmp7 = System.currentTimeMillis();
++        }
++        aux.append(&quot;Tempos:\n&quot;);
++        aux.append(tempo + &quot;\n&quot;);
++        aux.append(&quot;Tempo 2: &quot; + tmp6 + &quot;-&quot; + tmp7 + &quot;: &quot; + (tmp7 - tmp6) + &quot;\n&quot;);
++
++        //Get user info:
++        aux.append(&quot;Java: &quot; + System.getProperty(&quot;java.vendor&quot;) + &quot; &quot; + System.getProperty(&quot;java.vm.name&quot;) + &quot; &quot; + System.getProperty(&quot;java.specification.version&quot;) + &quot;(&quot; + System.getProperty(&quot;java.version&quot;) + &quot; &quot; + System.getProperty(&quot;java.vm.version&quot;) + &quot;)\n&quot;);
++        aux.append(&quot;SO: &quot; + System.getProperty(&quot;os.name&quot;) + &quot; &quot; + System.getProperty(&quot;os.arch&quot;) + &quot; &quot; + System.getProperty(&quot;os.version&quot;) + &quot;\n&quot;);
++        jtaresults.setText(aux.toString());
++
++    }
++
++    /** This method is called from within the constructor to
++     * initialize the form.
++     * WARNING: Do NOT modify this code. The content of this method is
++     * always regenerated by the Form Editor.
++     */
++    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
++    private void initComponents() {
++
++        jbnSearch = new javax.swing.JButton();
++        jbtnClean = new javax.swing.JButton();
++        jtbDesktop = new javax.swing.JButton();
++        jPanel1 = new javax.swing.JPanel();
++        jLabel1 = new javax.swing.JLabel();
++        jchkListFirst = new javax.swing.JCheckBox();
++        jtfFolder = new javax.swing.JTextField();
++        jbtnBrowse = new javax.swing.JButton();
++        jchkSizeOnly = new javax.swing.JCheckBox();
++        jPanel2 = new javax.swing.JPanel();
++        jScrollPane1 = new javax.swing.JScrollPane();
++        jtaresults = new javax.swing.JTextArea();
++        jbtnClose = new javax.swing.JButton();
++        jbtnSomething = new javax.swing.JButton();
++
++        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
++
++        jbnSearch.setText(&quot;Pesquisar&quot;);
++        jbnSearch.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbnSearchActionPerformed(evt);
++            }
++        });
++
++        jbtnClean.setText(&quot;Limpar&quot;);
++        jbtnClean.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbtnCleanActionPerformed(evt);
++            }
++        });
++
++        jtbDesktop.setText(&quot;Home&quot;);
++        jtbDesktop.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jtbDesktopActionPerformed(evt);
++            }
++        });
++
++        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(&quot;&quot;));
++
++        jLabel1.setText(&quot;Pasta:&quot;);
++
++        jchkListFirst.setText(&quot;Listar primeiro&quot;);
++
++        jbtnBrowse.setText(&quot;...&quot;);
++        jbtnBrowse.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbtnBrowseActionPerformed(evt);
++            }
++        });
++
++        jchkSizeOnly.setText(&quot;S&#243; calcular tamanho&quot;);
++
++        org.jdesktop.layout.GroupLayout jPanel1Layout = new org.jdesktop.layout.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
++            .add(jPanel1Layout.createSequentialGroup()
++                .addContainerGap()
++                .add(jLabel1)
++                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
++                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
++                    .add(jPanel1Layout.createSequentialGroup()
++                        .add(jchkListFirst)
++                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
++                        .add(jchkSizeOnly)
++                        .addContainerGap())
++                    .add(org.jdesktop.layout.GroupLayout.TRAILING, jPanel1Layout.createSequentialGroup()
++                        .add(jtfFolder, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
++                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
++                        .add(jbtnBrowse))))
++        );
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
++            .add(jPanel1Layout.createSequentialGroup()
++                .addContainerGap(org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
++                    .add(jLabel1)
++                    .add(jbtnBrowse)
++                    .add(jtfFolder, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE))
++                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
++                .add(jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
++                    .add(jchkListFirst)
++                    .add(jchkSizeOnly)))
++        );
++
++        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(&quot;Resultados:&quot;));
++
++        jtaresults.setColumns(20);
++        jtaresults.setRows(5);
++        jScrollPane1.setViewportView(jtaresults);
++
++        org.jdesktop.layout.GroupLayout jPanel2Layout = new org.jdesktop.layout.GroupLayout(jPanel2);
++        jPanel2.setLayout(jPanel2Layout);
++        jPanel2Layout.setHorizontalGroup(
++            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
++            .add(jPanel2Layout.createSequentialGroup()
++                .addContainerGap()
++                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
++                .addContainerGap())
++        );
++        jPanel2Layout.setVerticalGroup(
++            jPanel2Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
++            .add(jPanel2Layout.createSequentialGroup()
++                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 349, Short.MAX_VALUE)
++                .addContainerGap())
++        );
++
++        jbtnClose.setText(&quot;Fechar&quot;);
++        jbtnClose.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbtnCloseActionPerformed(evt);
++            }
++        });
++
++        jbtnSomething.setText(&quot;!&quot;);
++        jbtnSomething.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbtnSomethingActionPerformed(evt);
++            }
++        });
++
++        org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(getContentPane());
++        getContentPane().setLayout(layout);
++        layout.setHorizontalGroup(
++            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
++            .add(layout.createSequentialGroup()
++                .addContainerGap()
++                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
++                    .add(org.jdesktop.layout.GroupLayout.TRAILING, layout.createSequentialGroup()
++                        .add(jbtnSomething)
++                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED, 128, Short.MAX_VALUE)
++                        .add(jbnSearch)
++                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
++                        .add(jtbDesktop)
++                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
++                        .add(jbtnClean)
++                        .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
++                        .add(jbtnClose))
++                    .add(jPanel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                    .add(jPanel1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++                .addContainerGap())
++        );
++        layout.setVerticalGroup(
++            layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
++            .add(layout.createSequentialGroup()
++                .addContainerGap()
++                .add(jPanel1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
++                .add(jPanel2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
++                .add(layout.createParallelGroup(org.jdesktop.layout.GroupLayout.BASELINE)
++                    .add(jbtnClose)
++                    .add(jbtnClean)
++                    .add(jtbDesktop)
++                    .add(jbnSearch)
++                    .add(jbtnSomething))
++                .addContainerGap())
++        );
++
++        pack();
++    }// &lt;/editor-fold&gt;//GEN-END:initComponents
++    private void jbnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbnSearchActionPerformed
++        if (!jtfFolder.getText().isEmpty()) {
++            pesquisar(jtfFolder.getText());
++        }
++    }//GEN-LAST:event_jbnSearchActionPerformed
++
++    private void jbtnCleanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCleanActionPerformed
++        jtfFolder.setText(&quot;&quot;);
++        jtaresults.setText(&quot;&quot;);
++    }//GEN-LAST:event_jbtnCleanActionPerformed
++
++    private void jtbDesktopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbDesktopActionPerformed
++        jtfFolder.setText(System.getProperty(&quot;user.home&quot;));
++    }//GEN-LAST:event_jtbDesktopActionPerformed
++
++    private void jbtnBrowseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBrowseActionPerformed
++        JFileChooser jfc = new JFileChooser();
++        jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
++        if (jfc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
++            jtfFolder.setText(jfc.getSelectedFile().getAbsolutePath());
++        }
++    }//GEN-LAST:event_jbtnBrowseActionPerformed
++
++    private void jbtnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCloseActionPerformed
++        dispose();
++        System.exit(0);
++    }//GEN-LAST:event_jbtnCloseActionPerformed
++
++    private void jbtnSomethingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSomethingActionPerformed
++        JFileChooser jfc = new JFileChooser();
++        jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
++        if (jfc.showOpenDialog(this) == JFileChooser.APPROVE_OPTION) {
++            listAllFilesIntoHash(jfc.getSelectedFile());
++        }
++        for(File f : files.values()) {
++            System.out.println(f.getAbsolutePath());
++        }
++    }//GEN-LAST:event_jbtnSomethingActionPerformed
++
++    /**
++     * @param args the command line arguments
++     */
++    public static void main(String args[]) {
++        try {
++            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
++        } catch (Exception ex) {
++            try {
++                UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
++            } catch (Exception ex1) {
++            //ignore
++            }
++        }
++
++        java.awt.EventQueue.invokeLater(new Runnable() {
++
++            public void run() {
++                new LerDados2().setVisible(true);
++            }
++            });
++
++    }
++    // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JLabel jLabel1;
++    private javax.swing.JPanel jPanel1;
++    private javax.swing.JPanel jPanel2;
++    private javax.swing.JScrollPane jScrollPane1;
++    private javax.swing.JButton jbnSearch;
++    private javax.swing.JButton jbtnBrowse;
++    private javax.swing.JButton jbtnClean;
++    private javax.swing.JButton jbtnClose;
++    private javax.swing.JButton jbtnSomething;
++    private javax.swing.JCheckBox jchkListFirst;
++    private javax.swing.JCheckBox jchkSizeOnly;
++    private javax.swing.JTextArea jtaresults;
++    private javax.swing.JButton jtbDesktop;
++    private javax.swing.JTextField jtfFolder;
++    // End of variables declaration//GEN-END:variables
++}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000057.html">[Jfindmyfiles-commits] r62 - in trunk: docs/Iteracao1-CB09	docs/Iteracao2-CB05 docs/Iteracao2-CB05/Casos Uso spikes
+</A></li>
+	<LI>Next message: <A HREF="000059.html">[Jfindmyfiles-commits] r64 -	trunk/spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#58">[ date ]</a>
+              <a href="thread.html#58">[ thread ]</a>
+              <a href="subject.html#58">[ subject ]</a>
+              <a href="author.html#58">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

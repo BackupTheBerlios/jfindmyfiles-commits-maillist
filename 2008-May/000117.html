@@ -1,0 +1,2389 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r122 - in trunk: docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/nbproject	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	spikes/ExportWithTemplate/nbproject spikes/PluginAPI/nbproject	spikes/PluginAPI/src/de/berlios/jfindmyfiles	spikes/SimpleExport/nbproject	spikes/SimpleExport/src/de/berlios/jfindmyfiles
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r122%20-%20in%20trunk%3A%20docs/Iteracao2-CB05%0A%09docs/Iteracao2-CB05/Diagrama%20de%20Classes%20project/JFindMyFiles/Catalog%0A%09project/JFindMyFiles/Catalog/nbproject%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09project/JFindMyFiles/JFindMyFilesGui%0A%09project/JFindMyFiles/JFindMyFilesGui/nbproject%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09spikes/ExportWithTemplate/nbproject%20spikes/PluginAPI/nbproject%0A%09spikes/PluginAPI/src/de/berlios/jfindmyfiles%0A%09spikes/SimpleExport/nbproject%0A%09spikes/SimpleExport/src/de/berlios/jfindmyfiles&In-Reply-To=%3C200805282234.m4SMY987032219%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000116.html">
+   <LINK REL="Next"  HREF="000118.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r122 - in trunk: docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/nbproject	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	spikes/ExportWithTemplate/nbproject spikes/PluginAPI/nbproject	spikes/PluginAPI/src/de/berlios/jfindmyfiles	spikes/SimpleExport/nbproject	spikes/SimpleExport/src/de/berlios/jfindmyfiles</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r122%20-%20in%20trunk%3A%20docs/Iteracao2-CB05%0A%09docs/Iteracao2-CB05/Diagrama%20de%20Classes%20project/JFindMyFiles/Catalog%0A%09project/JFindMyFiles/Catalog/nbproject%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09project/JFindMyFiles/JFindMyFilesGui%0A%09project/JFindMyFiles/JFindMyFilesGui/nbproject%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09spikes/ExportWithTemplate/nbproject%20spikes/PluginAPI/nbproject%0A%09spikes/PluginAPI/src/de/berlios/jfindmyfiles%0A%09spikes/SimpleExport/nbproject%0A%09spikes/SimpleExport/src/de/berlios/jfindmyfiles&In-Reply-To=%3C200805282234.m4SMY987032219%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r122 - in trunk: docs/Iteracao2-CB05	docs/Iteracao2-CB05/Diagrama de Classes project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/nbproject	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	spikes/ExportWithTemplate/nbproject spikes/PluginAPI/nbproject	spikes/PluginAPI/src/de/berlios/jfindmyfiles	spikes/SimpleExport/nbproject	spikes/SimpleExport/src/de/berlios/jfindmyfiles">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu May 29 00:34:09 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000116.html">[Jfindmyfiles-commits] r121 - in trunk: docs docs/Iteracao2-CB05 docs/Iteracao3-CB03 docs/Iteracao4-CB04 docs/Iteracao5-CB02 docs/Iteracao6-CB07 project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes spikes spikes/ExportWithTemplate spikes/ExportWithTemplate/nbproject spikes/PluginAPI spikes/PluginAPI/nbproject spikes/PluginAPI/src spikes/PluginAPI/src/de spikes/PluginAPI/src/de/berlios spikes/PluginAPI/src/de/berlios/jfindmyfiles spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities spikes/SimpleExport spikes/SimpleExport/nbproject spikes/SimpleExport/src spikes/SimpleExport/src/de spikes/SimpleExport/src/de/berlios spikes/SimpleExport/src/de/berlios/jfindmyfiles sp! ikes/SimpleExport/src/de/berlios/jfindmyfiles/catalog spikes/SimpleExport/src/de/berlios/jfindmyfiles/catalog/entities
+</A></li>
+        <LI>Next message: <A HREF="000118.html">[Jfindmyfiles-commits] r123 - in trunk/docs: Iteracao5-CB02	Iteracao6-CB07
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#117">[ date ]</a>
+              <a href="thread.html#117">[ thread ]</a>
+              <a href="subject.html#117">[ subject ]</a>
+              <a href="author.html#117">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-29 00:33:46 +0200 (Thu, 29 May 2008)
+New Revision: 122
+
+Added:
+   trunk/project/JFindMyFiles/Catalog/arch.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Controller.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/DescriptionValues.java
+   trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Reader.java
+Removed:
+   trunk/docs/Iteracao2-CB05/Diagrama de Classes/.QueryCache
+Modified:
+   trunk/docs/Iteracao2-CB05/
+   trunk/docs/Iteracao2-CB05/Iteracao 2.txt
+   trunk/project/JFindMyFiles/Catalog/nbproject/project.properties
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/build.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+   trunk/spikes/ExportWithTemplate/nbproject/
+   trunk/spikes/PluginAPI/nbproject/
+   trunk/spikes/SimpleExport/nbproject/
+   trunk/spikes/SimpleExport/src/de/berlios/jfindmyfiles/SimpleExport.java
+Log:
+Modificado modelo de dados para permitir algumas adi?\195?\167?\195?\181es que n?\195?\163o tinham sido implementadas.
+
+Tomado um novo rumo na tentativa de mostrar os n?\195?\179s ao utilizador, neste momento a ideia ser?\195?\161 n?\195?\163o passar pelo objecto CatalogEngine mas sim aceder directamente ?\195?\160 base de dados atrav?\195?\169s da sess?\195?\163o. Este objecto poder?\195?\161 passar a ser mais tarde um controlador de liga?\195?\167?\195?\163o dado que neste momento n?\195?\163o ?\195?\169 mais que isso.
+
+Pequenas altera?\195?\167?\195?\181es em algumas spikes, nada de significativo.
+
+Existe um erro que nos ficheiros de mapeamento introduzido esta tarde. Neste momento as se?\195?\167?\195?\181es que dariam erro est?\195?\163o comentadas.
+
+
+Property changes on: trunk/docs/Iteracao2-CB05
+___________________________________________________________________
+Name: svn:ignore
+   + Thumbs.db
+
+
+Deleted: trunk/docs/Iteracao2-CB05/Diagrama de Classes/.QueryCache
+===================================================================
+--- trunk/docs/Iteracao2-CB05/Diagrama de Classes/.QueryCache	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/docs/Iteracao2-CB05/Diagrama de Classes/.QueryCache	2008-05-28 22:33:46 UTC (rev 122)
+@@ -1,2 +0,0 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;QueryCache defaultUpdater=&quot;org.netbeans.modules.uml.core.typemanagement.PickListManager&quot;&gt;&lt;CachedQueries fileName=&quot;./Diagrama de Classes.etd&quot; crc=&quot;1719536122&quot;&gt;&lt;NodeNames updater=&quot;org.netbeans.modules.uml.core.typemanagement.PickListManager&quot;&gt;&lt;Name nodeType_=&quot;Class&quot; name=&quot;Label&quot; id=&quot;DCE.21C435E2-58FD-2C08-57ED-752AEA37F848&quot; fullName=&quot;Label&quot;/&gt;&lt;Name nodeType_=&quot;Class&quot; name=&quot;FileWrapper&quot; id=&quot;DCE.732EADE8-666B-2194-BD62-707D0FE746A5&quot; fullName=&quot;FileWrapper&quot;/&gt;&lt;Name nodeType_=&quot;Class&quot; name=&quot;DiskGroup&quot; id=&quot;DCE.2A6211B0-FE3F-0126-B952-B7615612CB12&quot; fullName=&quot;DiskGroup&quot;/&gt;&lt;Name nodeType_=&quot;Class&quot; name=&quot;ImageData&quot; id=&quot;DCE.5F7AA292-F194-81C2-4110-10D7DD253C72&quot; fullName=&quot;ImageData&quot;/&gt;&lt;Name nodeType_=&quot;Class&quot; name=&quot;User&quot; id=&quot;DCE.48F3150F-57D8-5A8D-317E-A1B7EE3F618B&quot; fullName=&quot;User&quot;/&gt;&lt;Name nodeType_=&quot;Class&quot; name=&quot;AudioData&quot; id=&quot;DCE.046EB9B2-1ACF-A303-00A0-F32F15BB25B6&quot; fullName=&quot;AudioData&quot;/&gt;&lt;Name nodeType_=&quot;Class&quot; name=&quot;Media&quot; id=&quot;DCE.5F94B700-AFC2-7F7C-1B24-8B223015B7E3&quot; fullName=&quot;Media&quot;/&gt;&lt;Name !
+ nodeType_=&quot;Class&quot; name=&quot;Type&quot; id=&quot;DCE.FE598856-591C-0810-FE7D-D15E0FF66DE5&quot; fullName=&quot;Type&quot;/&gt;&lt;Name nodeType_=&quot;Class&quot; name=&quot;VideoData&quot; id=&quot;DCE.80B6A4DC-A4A6-12D5-774B-6A5D0E178390&quot; fullName=&quot;VideoData&quot;/&gt;&lt;Name nodeType_=&quot;AssociationClass&quot; name=&quot;Loan&quot; id=&quot;DCE.3B62E2A1-F2FD-ED5D-7CC1-81CF43B46A93&quot; fullName=&quot;Loan&quot;/&gt;&lt;Name nodeType_=&quot;Profile&quot; name=&quot;Unnamed&quot; id=&quot;DCE.9F960BBD-DB2E-44F2-AC5F-485BB4E586E3&quot; fullName=&quot;Unnamed&quot;/&gt;&lt;/NodeNames&gt;&lt;/CachedQueries&gt;&lt;/QueryCache&gt;
+\ No newline at end of file
+
+Modified: trunk/docs/Iteracao2-CB05/Iteracao 2.txt
+===================================================================
+--- trunk/docs/Iteracao2-CB05/Iteracao 2.txt	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/docs/Iteracao2-CB05/Iteracao 2.txt	2008-05-28 22:33:46 UTC (rev 122)
+@@ -38,7 +38,7 @@
+ categorias ficando apenas a organiza&#231;&#227;o por etiquetas.
+ 
+ Um disco, elemento que pode ter associado v&#225;rios ficheiros, corresponde a uma 
+-drive ligada ao PC ou a uma localiza&#231;&#227;o na rede e pode conter ficheiros cujas 
++drive ligada ao PC ou numa localiza&#231;&#227;o na rede e pode conter ficheiros cujas 
+ descri&#231;&#245;es ser&#227;o importadas.
+ Os discos podem ser agrupados em grupos de discos. Grupos de discos podem 
+ conter outros grupos de discos.
+
+Added: trunk/project/JFindMyFiles/Catalog/arch.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/arch.xml	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/Catalog/arch.xml	2008-05-28 22:33:46 UTC (rev 122)
+@@ -0,0 +1,1094 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;!-- -*- sgml-indent-step: 1 -*- --&gt;
++&lt;!--
++The contents of this file are subject to the terms of the Common Development
++and Distribution License (the License). You may not use this file except in
++compliance with the License.
++
++You can obtain a copy of the License at <A HREF="http://www.netbeans.org/cddl.html">http://www.netbeans.org/cddl.html</A>
++or <A HREF="http://www.netbeans.org/cddl.txt.">http://www.netbeans.org/cddl.txt.</A>
++
++When distributing Covered Code, include this CDDL Header Notice in each file
++and include the License file at <A HREF="http://www.netbeans.org/cddl.txt.">http://www.netbeans.org/cddl.txt.</A>
++If applicable, add the following below the CDDL Header, with the fields
++enclosed by brackets [] replaced by your own identifying information:
++&quot;Portions Copyrighted [year] [name of copyright owner]&quot;
++
++The Original Software is NetBeans. The Initial Developer of the Original
++Software is Sun Microsystems, Inc. Portions Copyright 1997-2007 Sun
++Microsystems, Inc. All Rights Reserved.
++--&gt;
++&lt;!DOCTYPE api-answers PUBLIC &quot;-//NetBeans//DTD Arch Answers//EN&quot; &quot;<A HREF="http://www.netbeans.org/source/browse/~checkout~/nbbuild/antsrc/org/netbeans/nbbuild/Arch.dtd">http://www.netbeans.org/source/browse/~checkout~/nbbuild/antsrc/org/netbeans/nbbuild/Arch.dtd</A>&quot; [
++  &lt;!ENTITY api-questions SYSTEM &quot;<A HREF="http://www.netbeans.org/source/browse/~checkout~/nbbuild/antsrc/org/netbeans/nbbuild/Arch-api-questions.xml">http://www.netbeans.org/source/browse/~checkout~/nbbuild/antsrc/org/netbeans/nbbuild/Arch-api-questions.xml</A>&quot;&gt;
++]&gt;
++
++&lt;api-answers
++  question-version=&quot;1.29&quot;
++  author=&quot;<A HREF="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">yourname at netbeans.org</A>&quot;
++&gt;
++
++  &amp;api-questions;
++
++
++&lt;!--
++        &lt;question id=&quot;arch-overall&quot; when=&quot;init&quot;&gt;
++            Describe the overall architecture. 
++            &lt;hint&gt;
++            What will be API for 
++            &lt;a href=&quot;<A HREF="http://openide.netbeans.org/tutorial/api-design.html#design.apiandspi">http://openide.netbeans.org/tutorial/api-design.html#design.apiandspi</A>&quot;&gt;
++                clients and what support API&lt;/a&gt;? 
++            What parts will be pluggable?
++            How will plug-ins be registered? Please use &lt;code&gt;&lt;api type=&quot;export&quot;/&gt;&lt;/code&gt;
++            to describe your general APIs and specify their
++            &lt;a href=&quot;<A HREF="http://openide.netbeans.org/tutorial/api-design.html#category-private">http://openide.netbeans.org/tutorial/api-design.html#category-private</A>&quot;&gt;
++            stability categories&lt;/a&gt;.
++            If possible please provide simple diagrams.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;arch-overall&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for arch-overall
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;arch-quality&quot; when=&quot;init&quot;&gt;
++            How will the &lt;a href=&quot;<A HREF="http://www.netbeans.org/community/guidelines/q-evangelism.html">http://www.netbeans.org/community/guidelines/q-evangelism.html</A>&quot;&gt;quality&lt;/a&gt;
++            of your code be tested and 
++            how are future regressions going to be prevented?
++            &lt;hint&gt;
++            What kind of testing do
++            you want to use? How much functionality, in which areas,
++            should be covered by the tests? How you find out that your
++            project was successful?
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;arch-quality&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for arch-quality
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;arch-time&quot; when=&quot;init&quot;&gt;
++            What are the time estimates of the work?
++            &lt;hint&gt;
++            Please express your estimates of how long the design, implementation,
++            stabilization are likely to last. How many people will be needed to
++            implement this and what is the expected milestone by which the work should be 
++            ready?
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;arch-time&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for arch-time
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;arch-usecases&quot; when=&quot;init&quot;&gt;
++            &lt;hint&gt;
++                Content of this answer will be displayed as part of page at
++                <A HREF="http://www.netbeans.org/download/dev/javadoc/usecases.html">http://www.netbeans.org/download/dev/javadoc/usecases.html</A> 
++                You can use tags &lt;usecase name=&quot;name&gt; regular html description &lt;/usecase&gt;
++                and if you want to use an URL you can prefix if with @TOP@ to begin
++                at the root of your javadoc
++            &lt;/hint&gt;
++        
++            Describe the main &lt;a href=&quot;<A HREF="http://openide.netbeans.org/tutorial/api-design.html#usecase">http://openide.netbeans.org/tutorial/api-design.html#usecase</A>&quot;&gt;
++            use cases&lt;/a&gt; of the new API. Who will use it under
++            what circumstances? What kind of code would typically need to be written
++            to use the module?
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;arch-usecases&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for arch-usecases
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;arch-what&quot; when=&quot;init&quot;&gt;
++            What is this project good for?
++            &lt;hint&gt;
++            Please provide here a few lines describing the project, 
++            what problem it should solve, provide links to documentation, 
++            specifications, etc.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;arch-what&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for arch-what
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;arch-where&quot; when=&quot;impl&quot;&gt;
++            Where one can find sources for your module?
++            &lt;hint&gt;
++                Please provide link to the Hg web client at
++                <A HREF="http://hg.netbeans.org/">http://hg.netbeans.org/</A>
++                or just use tag defaultanswer generate='here'
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;arch-where&quot;&gt;
++  &lt;defaultanswer generate='here' /&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;compat-deprecation&quot; when=&quot;init&quot;&gt;
++            How the introduction of your project influences functionality
++            provided by previous version of the product?
++            &lt;hint&gt;
++            If you are planning to deprecate/remove/change any existing APIs,
++            list them here accompanied with the reason explaining why you
++            are doing so.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;compat-deprecation&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for compat-deprecation
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;compat-i18n&quot; when=&quot;impl&quot;&gt;
++            Is your module correctly internationalized?
++            &lt;hint&gt;
++            Correct internationalization means that it obeys instructions 
++            at &lt;a href=&quot;<A HREF="http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/i18n-branding.html">http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/i18n-branding.html</A>&quot;&gt;
++            NetBeans I18N pages&lt;/a&gt;.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;compat-i18n&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for compat-i18n
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;compat-standards&quot; when=&quot;init&quot;&gt;
++            Does the module implement or define any standards? Is the 
++            implementation exact or does it deviate somehow?
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;compat-standards&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for compat-standards
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;compat-version&quot; when=&quot;impl&quot;&gt;
++            Can your module coexist with earlier and future
++            versions of itself? Can you correctly read all old settings? Will future
++            versions be able to read your current settings? Can you read
++            or politely ignore settings stored by a future version?
++            
++            &lt;hint&gt;
++            Very helpful for reading settings is to store version number
++            there, so future versions can decide whether how to read/convert
++            the settings and older versions can ignore the new ones.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;compat-version&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for compat-version
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;dep-jre&quot; when=&quot;final&quot;&gt;
++            Which version of JRE do you need (1.2, 1.3, 1.4, etc.)?
++            &lt;hint&gt;
++            It is expected that if your module runs on 1.x that it will run 
++            on 1.x+1 if no, state that please. Also describe here cases where
++            you run different code on different versions of JRE and why.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;dep-jre&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for dep-jre
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;dep-jrejdk&quot; when=&quot;final&quot;&gt;
++            Do you require the JDK or is the JRE enough?
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;dep-jrejdk&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for dep-jrejdk
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;dep-nb&quot; when=&quot;init&quot;&gt;
++            What other NetBeans projects and modules does this one depend on?
++            &lt;hint&gt;
++            Depending on other NetBeans projects influnces the ability of
++            users of your work to customize their own branded version of
++            NetBeans by enabling and disabling some modules. Too
++            much dependencies restrict this kind of customization. If that
++            is your case, then you may want to split your functionality into
++            pieces of autoload, eager and regular modules which can be
++            enabled independently. Usually the answer to this question
++            is generated from your &lt;code&gt;project.xml&lt;/code&gt; file, but
++            if it is not guessed correctly, you can suppress it by
++            specifying &lt;defaultanswer generate=&quot;none&quot;/&gt; and
++            write here your own. Please describe such projects as imported APIs using
++            the &lt;code&gt;&lt;api name=&quot;identification&quot; type=&quot;import or export&quot; category=&quot;stable&quot; url=&quot;where is the description&quot; /&gt;&lt;/code&gt;.
++            By doing this information gets listed in the summary page of your
++            javadoc.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;dep-nb&quot;&gt;
++  &lt;defaultanswer generate='here' /&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;dep-non-nb&quot; when=&quot;init&quot;&gt;
++            What other projects outside NetBeans does this one depend on?
++            
++            &lt;hint&gt;
++            Depending on 3rd party libraries is always problematic,
++            especially if they are not open source, as that complicates
++            the licensing scheme of NetBeans. Please enumerate your
++            external dependencies here, so it is correctly understood since
++            the begining what are the legal implications of your project.
++            Also please note that
++            some non-NetBeans projects are packaged as NetBeans modules
++            (see &lt;a href=&quot;<A HREF="http://libs.netbeans.org/">http://libs.netbeans.org/</A>&quot;&gt;libraries&lt;/a&gt;) and
++            it is preferred to use this approach when more modules may
++            depend and share such third-party libraries.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;dep-non-nb&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for dep-non-nb
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;dep-platform&quot; when=&quot;init&quot;&gt;
++            On which platforms does your module run? Does it run in the same
++            way on each?
++            &lt;hint&gt;
++            If you plan any dependency on OS or any usage of native code,
++            please describe why you are doing so and describe how you envision
++            to enforce the portability of your code.
++            Please note that there is a support for &lt;a href=&quot;<A HREF="http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/api.html#how-os-specific">http://www.netbeans.org/download/dev/javadoc/org-openide-modules/org/openide/modules/doc-files/api.html#how-os-specific</A>&quot;&gt;OS conditionally
++            enabled modules&lt;/a&gt; which together with autoload/eager modules
++            can allow you to enable to provide the best OS aware support
++            on certain OSes while providing compatibility bridge on the not
++            supported ones.
++            Also please list the supported
++            OSes/HW platforms and mentioned the lovest version of JDK required
++            for your project to run on. Also state whether JRE is enough or
++            you really need JDK.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;dep-platform&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for dep-platform
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;deploy-dependencies&quot; when=&quot;final&quot;&gt;
++            What do other modules need to do to declare a dependency on this one,
++            in addition to or instead of the normal module dependency declaration
++            (e.g. tokens to require)?
++            &lt;hint&gt;
++                Provide a sample of the actual lines you would add to a module manifest
++                to declare a dependency, for example OpenIDE-Module-Requires: some.token.
++                If other modules should not depend on this module, or should just use a
++                simple regular module dependency, you can just answer &quot;nothing&quot;. If you
++                intentionally expose a semistable API to clients using implementation
++                dependencies, you should mention that here (but there is no need to give
++                an example of usage).
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;deploy-dependencies&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for deploy-dependencies
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;deploy-jar&quot; when=&quot;impl&quot;&gt;
++            Do you deploy just module JAR file(s) or other files as well?
++            &lt;hint&gt;
++            Usually a module consist of one JAR file (perhaps with Class-Path
++            extensions) and also a configuration file that enables it. If you
++            have any other files, use
++            &lt;api group=&quot;java.io.File&quot; name=&quot;yourname&quot; type=&quot;export&quot; category=&quot;friend&quot;&gt;...&lt;/api&gt;
++            to define the location, name and stability of your files (of course
++            changing &quot;yourname&quot; and &quot;friend&quot; to suit your needs).
++            
++            If it uses more than one JAR, describe where they are located, how
++            they refer to each other. 
++            If it consist of module JAR(s) and other files, please describe
++            what is their purpose, why other files are necessary. Please 
++            make sure that installation/uninstallation leaves the system 
++            in state as it was before installation.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;deploy-jar&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for deploy-jar
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;deploy-nbm&quot; when=&quot;impl&quot;&gt;
++            Can you deploy an NBM via the Update Center?
++            &lt;hint&gt;
++            If not why?
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;deploy-nbm&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for deploy-nbm
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;deploy-packages&quot; when=&quot;init&quot;&gt;
++            Are packages of your module made inaccessible by not declaring them
++            public?
++            
++            &lt;hint&gt;
++            By default NetBeans build harness treats all packages are private.
++            If you export some of them - either as public or friend packages,
++            you should have a reason. If the reason is described elsewhere
++            in this document, you can ignore this question.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;deploy-packages&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for deploy-packages
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;deploy-shared&quot; when=&quot;final&quot;&gt;
++            Do you need to be installed in the shared location only, or in the user directory only,
++            or can your module be installed anywhere?
++            &lt;hint&gt;
++            Installation location shall not matter, if it does explain why.
++            Consider also whether &lt;code&gt;InstalledFileLocator&lt;/code&gt; can help.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;deploy-shared&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for deploy-shared
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;exec-ant-tasks&quot; when=&quot;impl&quot;&gt;
++            Do you define or register any ant tasks that other can use?
++            
++            &lt;hint&gt;
++            If you provide an ant task that users can use, you need to be very
++            careful about its syntax and behaviour, as it most likely forms an
++	          API for end users and as there is a lot of end users, their reaction
++            when such API gets broken can be pretty strong.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;exec-ant-tasks&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for exec-ant-tasks
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;exec-classloader&quot; when=&quot;impl&quot;&gt;
++            Does your code create its own class loader(s)?
++            &lt;hint&gt;
++            A bit unusual. Please explain why and what for.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;exec-classloader&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for exec-classloader
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;exec-component&quot; when=&quot;impl&quot;&gt;
++            Is execution of your code influenced by any (string) property
++            of any of your components?
++            
++            &lt;hint&gt;
++            Often &lt;code&gt;JComponent.getClientProperty&lt;/code&gt;, &lt;code&gt;Action.getValue&lt;/code&gt;
++            or &lt;code&gt;PropertyDescriptor.getValue&lt;/code&gt;, etc. are used to influence
++            a behavior of some code. This of course forms an interface that should
++            be documented. Also if one depends on some interface that an object
++            implements (&lt;code&gt;component instanceof Runnable&lt;/code&gt;) that forms an
++            API as well.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;exec-component&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for exec-component
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;exec-introspection&quot; when=&quot;impl&quot;&gt;
++            Does your module use any kind of runtime type information (&lt;code&gt;instanceof&lt;/code&gt;,
++            work with &lt;code&gt;java.lang.Class&lt;/code&gt;, etc.)?
++            &lt;hint&gt;
++            Check for cases when you have an object of type A and you also
++            expect it to (possibly) be of type B and do some special action. That
++            should be documented. The same applies on operations in meta-level
++            (Class.isInstance(...), Class.isAssignableFrom(...), etc.).
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;exec-introspection&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for exec-introspection
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;exec-privateaccess&quot; when=&quot;final&quot;&gt;
++            Are you aware of any other parts of the system calling some of 
++            your methods by reflection?
++            &lt;hint&gt;
++            If so, describe the &quot;contract&quot; as an API. Likely private or friend one, but
++            still API and consider rewrite of it.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;exec-privateaccess&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for exec-privateaccess
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;exec-process&quot; when=&quot;impl&quot;&gt;
++            Do you execute an external process from your module? How do you ensure
++            that the result is the same on different platforms? Do you parse output?
++            Do you depend on result code?
++            &lt;hint&gt;
++            If you feed an input, parse the output please declare that as an API.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;exec-process&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for exec-process
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;exec-property&quot; when=&quot;impl&quot;&gt;
++            Is execution of your code influenced by any environment or
++            Java system (&lt;code&gt;System.getProperty&lt;/code&gt;) property?
++            On a similar note, is there something interesting that you
++            pass to &lt;code&gt;java.util.logging.Logger&lt;/code&gt;? Or do you observe
++            what others log?
++            &lt;hint&gt;
++            If there is a property that can change the behavior of your 
++            code, somebody will likely use it. You should describe what it does 
++            and the &lt;a href=&quot;<A HREF="http://openide.netbeans.org/tutorial/api-design.html#life">http://openide.netbeans.org/tutorial/api-design.html#life</A>&quot;&gt;stability category&lt;/a&gt;
++            of this API. You may use
++            &lt;pre&gt;
++                &lt;api type=&quot;export&quot; group=&quot;property&quot; name=&quot;id&quot; category=&quot;private&quot; url=&quot;<A HREF="http://...">http://...</A>&quot;&gt;
++                    description of the property, where it is used, what it influence, etc.
++                &lt;/api&gt;            
++            &lt;/pre&gt;
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;exec-property&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for exec-property
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;exec-reflection&quot; when=&quot;impl&quot;&gt;
++            Does your code use Java Reflection to execute other code?
++            &lt;hint&gt;
++            This usually indicates a missing or insufficient API in the other
++            part of the system. If the other side is not aware of your dependency
++            this contract can be easily broken.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;exec-reflection&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for exec-reflection
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;exec-threading&quot; when=&quot;init&quot;&gt;
++            What threading models, if any, does your module adhere to? How the
++            project behaves with respect to threading?
++            &lt;hint&gt;
++                Is your API threadsafe? Can it be accessed from any threads or
++                just from some dedicated ones? Any special relation to AWT and
++                its Event Dispatch thread? Also
++                if your module calls foreign APIs which have a specific threading model,
++                indicate how you comply with the requirements for multithreaded access
++                (synchronization, mutexes, etc.) applicable to those APIs.
++                If your module defines any APIs, or has complex internal structures
++                that might be used from multiple threads, declare how you protect
++                data against concurrent access, race conditions, deadlocks, etc.,
++                and whether such rules are enforced by runtime warnings, errors, assertions, etc.
++                Examples: a class might be non-thread-safe (like Java Collections); might
++                be fully thread-safe (internal locking); might require access through a mutex
++                (and may or may not automatically acquire that mutex on behalf of a client method);
++                might be able to run only in the event queue; etc.
++                Also describe when any events are fired: synchronously, asynchronously, etc.
++                Ideas: &lt;a href=&quot;<A HREF="http://core.netbeans.org/proposals/threading/index.html#recommendations">http://core.netbeans.org/proposals/threading/index.html#recommendations</A>&quot;&gt;Threading Recommendations&lt;/a&gt; (in progress)
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;exec-threading&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for exec-threading
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;format-clipboard&quot; when=&quot;impl&quot;&gt;
++            Which data flavors (if any) does your code read from or insert to
++            the clipboard (by access to clipboard on means calling methods on &lt;code&gt;java.awt.datatransfer.Transferable&lt;/code&gt;?
++            
++            &lt;hint&gt;
++            Often Node's deal with clipboard by usage of &lt;code&gt;Node.clipboardCopy, Node.clipboardCut and Node.pasteTypes&lt;/code&gt;.
++            Check your code for overriding these methods.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;format-clipboard&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for format-clipboard
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;format-dnd&quot; when=&quot;impl&quot;&gt;
++            Which protocols (if any) does your code understand during Drag &amp; Drop?
++            &lt;hint&gt;
++            Often Node's deal with clipboard by usage of &lt;code&gt;Node.drag, Node.getDropType&lt;/code&gt;. 
++            Check your code for overriding these methods. Btw. if they are not overridden, they
++            by default delegate to &lt;code&gt;Node.clipboardCopy, Node.clipboardCut and Node.pasteTypes&lt;/code&gt;.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;format-dnd&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for format-dnd
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;format-types&quot; when=&quot;impl&quot;&gt;
++            Which protocols and file formats (if any) does your module read or write on disk,
++            or transmit or receive over the network? Do you generate an ant build script?
++            Can it be edited and modified? 
++            
++            &lt;hint&gt;
++            &lt;p&gt;
++            Files can be read and written by other programs, modules and users. If they influence
++            your behaviour, make sure you either document the format or claim that it is a private
++            api (using the &lt;api&gt; tag). 
++            &lt;/p&gt;
++            
++            &lt;p&gt;
++            If you generate an ant build file, this is very likely going to be seen by end users and
++            they will be attempted to edit it. You should be ready for that and provide here a link
++            to documentation that you have for such purposes and also describe how you are going to
++            understand such files during next release, when you (very likely) slightly change the 
++            format.
++            &lt;/p&gt;
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;format-types&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for format-types
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;lookup-lookup&quot; when=&quot;init&quot;&gt;
++            Does your module use &lt;code&gt;org.openide.util.Lookup&lt;/code&gt;
++            or any similar technology to find any components to communicate with? Which ones?
++            
++            &lt;hint&gt;
++            NetBeans is build around a generic registry of services called
++            lookup. It is preferable to use it for registration and discovery
++            if possible. See
++            &lt;a href=&quot;<A HREF="http://www.netbeans.org/download/dev/javadoc/org-openide-util/org/openide/util/lookup/doc-files/index.html">http://www.netbeans.org/download/dev/javadoc/org-openide-util/org/openide/util/lookup/doc-files/index.html</A>&quot;&gt;
++            The Solution to Comunication Between Components
++            &lt;/a&gt;. If you do not plan to use lookup and insist usage
++            of other solution, then please describe why it is not working for
++            you.
++            &lt;br/&gt;
++            When filling the final version of your arch document, please
++            describe the interfaces you are searching for, where 
++            are defined, whether you are searching for just one or more of them,
++            if the order is important, etc. Also classify the stability of such
++            API contract. Use &lt;api group=&amp;lookup&amp; /&gt; tag, so
++            your information gets listed in the summary page of your javadoc.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;lookup-lookup&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for lookup-lookup
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;lookup-register&quot; when=&quot;final&quot;&gt;
++            Do you register anything into lookup for other code to find?
++            &lt;hint&gt;
++            Do you register using layer file or using &lt;code&gt;META-INF/services&lt;/code&gt;?
++            Who is supposed to find your component?
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;lookup-register&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for lookup-register
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;lookup-remove&quot; when=&quot;final&quot;&gt;
++            Do you remove entries of other modules from lookup?
++            &lt;hint&gt;
++            Why? Of course, that is possible, but it can be dangerous. Is the module
++            your are masking resource from aware of what you are doing?
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;lookup-remove&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for lookup-remove
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;perf-exit&quot; when=&quot;final&quot;&gt;
++            Does your module run any code on exit?
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;perf-exit&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for perf-exit
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;perf-huge_dialogs&quot; when=&quot;final&quot;&gt;
++            Does your module contain any dialogs or wizards with a large number of
++            GUI controls such as combo boxes, lists, trees, or text areas?
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;perf-huge_dialogs&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for perf-huge_dialogs
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;perf-limit&quot; when=&quot;init&quot;&gt;
++            Are there any hard-coded or practical limits in the number or size of
++            elements your code can handle?
++            &lt;hint&gt;
++                Most of algorithms have increasing memory and speed complexity
++                with respect to size of data they operate on. What is the critical
++                part of your project that can be seen as a bottleneck with
++                respect to speed or required memory? What are the practical
++                sizes of data you tested your project with? What is your estimate
++                of potential size of data that would cause visible performance
++                problems? Is there some kind of check to detect such situation
++                and prevent &quot;hard&quot; crashes - for example the CloneableEditorSupport
++                checks for size of a file to be opened in editor
++                and if it is larger than 1Mb it shows a dialog giving the
++                user the right to decide - e.g. to cancel or commit suicide.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;perf-limit&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for perf-limit
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;perf-mem&quot; when=&quot;final&quot;&gt;
++            How much memory does your component consume? Estimate
++            with a relation to the number of windows, etc.
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;perf-mem&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for perf-mem
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;perf-menus&quot; when=&quot;final&quot;&gt;
++            Does your module use dynamically updated context menus, or
++            context-sensitive actions with complicated and slow enablement logic?
++            &lt;hint&gt;
++                If you do a lot of tricks when adding actions to regular or context menus, you can significantly
++                slow down display of the menu, even when the user is not using your action. Pay attention to
++                actions you add to the main menu bar, and to context menus of foreign nodes or components. If
++                the action is conditionally enabled, or changes its display dynamically, you need to check the
++                impact on performance. In some cases it may be more appropriate to make a simple action that is
++                always enabled but does more detailed checks in a dialog if it is actually run.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;perf-menus&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for perf-menus
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;perf-progress&quot; when=&quot;final&quot;&gt;
++            Does your module execute any long-running tasks?
++            
++            &lt;hint&gt;Long running tasks should never block 
++            AWT thread as it badly hurts the UI
++            &lt;a href=&quot;<A HREF="http://performance.netbeans.org/responsiveness/issues.html">http://performance.netbeans.org/responsiveness/issues.html</A>&quot;&gt;
++            responsiveness&lt;/a&gt;.
++            Tasks like connecting over
++            network, computing huge amount of data, compilation
++            be done asynchronously (for example
++            using &lt;code&gt;RequestProcessor&lt;/code&gt;), definitively it should 
++            not block AWT thread.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;perf-progress&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for perf-progress
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;perf-scale&quot; when=&quot;init&quot;&gt;
++            Which external criteria influence the performance of your
++            program (size of file in editor, number of files in menu, 
++            in source directory, etc.) and how well your code scales?
++            &lt;hint&gt;
++            Please include some estimates, there are other more detailed 
++            questions to answer in later phases of implementation. 
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;perf-scale&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for perf-scale
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;perf-spi&quot; when=&quot;init&quot;&gt;
++            How the performance of the plugged in code will be enforced?
++            &lt;hint&gt;
++            If you allow foreign code to be plugged into your own module, how
++            do you enforce that it will behave correctly and quickly and will not
++            negatively influence the performance of your own module?
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;perf-spi&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for perf-spi
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;perf-startup&quot; when=&quot;final&quot;&gt;
++            Does your module run any code on startup?
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;perf-startup&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for perf-startup
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;perf-wakeup&quot; when=&quot;final&quot;&gt;
++            Does any piece of your code wake up periodically and do something
++            even when the system is otherwise idle (no user interaction)?
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;perf-wakeup&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for perf-wakeup
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;resources-file&quot; when=&quot;final&quot;&gt;
++            Does your module use &lt;code&gt;java.io.File&lt;/code&gt; directly?
++            
++            &lt;hint&gt;
++            NetBeans provide a logical wrapper over plain files called 
++            &lt;code&gt;org.openide.filesystems.FileObject&lt;/code&gt; that
++            provides uniform access to such resources and is the preferred
++            way that should be used. But of course there can be situations when
++            this is not suitable.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;resources-file&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for resources-file
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;resources-layer&quot; when=&quot;final&quot;&gt;
++            Does your module provide own layer? Does it create any files or
++            folders in it? What it is trying to communicate by that and with which 
++            components?
++            
++            &lt;hint&gt;
++            NetBeans allows automatic and declarative installation of resources 
++            by module layers. Module register files into appropriate places
++            and other components use that information to perform their task
++            (build menu, toolbar, window layout, list of templates, set of
++            options, etc.). 
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;resources-layer&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for resources-layer
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;resources-mask&quot; when=&quot;final&quot;&gt;
++            Does your module mask/hide/override any resources provided by other modules in
++            their layers?
++            
++            &lt;hint&gt;
++            If you mask a file provided by another module, you probably depend
++            on that and do not want the other module to (for example) change
++            the file's name. That module shall thus make that file available as an API
++            of some stability category.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;resources-mask&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for resources-mask
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;resources-preferences&quot; when=&quot;final&quot;&gt;
++            Does your module uses preferences via Preferences API? Does your module use NbPreferences or
++            or regular JDK Preferences ? Does it read, write or both ? 
++            Does it share preferences with other modules ? If so, then why ?
++            &lt;hint&gt;
++                You may use
++                    &lt;api type=&quot;export&quot; group=&quot;preferences&quot;
++                    name=&quot;preference node name&quot; category=&quot;private&quot;&gt;
++                    description of individual keys, where it is used, what it
++                    influences, whether the module reads/write it, etc.
++                    &lt;/api&gt;
++                Due to XML ID restrictions, rather than /org/netbeans/modules/foo give the &quot;name&quot; as org.netbeans.modules.foo.
++                Note that if you use NbPreferences this name will then be the same as the code name base of the module.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;resources-preferences&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for resources-preferences
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;resources-read&quot; when=&quot;final&quot;&gt;
++            Does your module read any resources from layers? For what purpose?
++            
++            &lt;hint&gt;
++            As this is some kind of intermodule dependency, it is a kind of API.
++            Please describe it and classify according to 
++            &lt;a href=&quot;<A HREF="http://openide.netbeans.org/tutorial/api-design.html#categories">http://openide.netbeans.org/tutorial/api-design.html#categories</A>&quot;&gt;
++            common stability categories&lt;/a&gt;.
++            &lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;resources-read&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for resources-read
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;security-grant&quot; when=&quot;final&quot;&gt;
++            Does your code grant additional rights to some other code?
++            &lt;hint&gt;Avoid using a class loader that adds extra
++            permissions to loaded code unless really necessary.
++            Also note that your API implementation
++            can also expose unneeded permissions to enemy code by
++            calling AccessController.doPrivileged().&lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;security-grant&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for security-grant
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++
++
++&lt;!--
++        &lt;question id=&quot;security-policy&quot; when=&quot;final&quot;&gt;
++            Does your functionality require modifications to the standard policy file?
++            &lt;hint&gt;Your code might pass control to third-party code not
++            coming from trusted domains. This could be code downloaded over the
++            network or code coming from libraries that are not bundled
++            with NetBeans. Which permissions need to be granted to which domains?&lt;/hint&gt;
++        &lt;/question&gt;
++--&gt;
++ &lt;answer id=&quot;security-policy&quot;&gt;
++  &lt;p&gt;
++   XXX no answer for security-policy
++  &lt;/p&gt;
++ &lt;/answer&gt;
++
++&lt;/api-answers&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/project.properties	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/project.properties	2008-05-28 22:33:46 UTC (rev 122)
+@@ -2,3 +2,4 @@
+ build.compiler.deprecation=false
+ javac.source=1.5
+ javac.compilerargs=-Xlint -Xlint:-serial
++javadoc.arch=${basedir}/arch.xml
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -36,7 +36,7 @@
+     public static final int MSSQL = 2;
+     public static final int MYSQL = 3;
+     public static final int LOCAL = 4;
+-    private SessionFactory sessionFactory;
++    public SessionFactory sessionFactory;
+     private CatalogProperties properties;
+     private Vector&lt;CatalogEngineListener&gt; listeners;
+ 
+@@ -145,6 +145,7 @@
+         cSession.beginTransaction();
+         properties = (CatalogProperties) cSession.createQuery(&quot;from CatalogProperties&quot;).uniqueResult();
+         cSession.getTransaction().commit();
++        fireCatalogOpened(new CatalogEngineEvent(dbname, null, null, null, null));
+     }
+ 
+     /**
+@@ -355,6 +356,14 @@
+             }
+         }
+     }
++    
++    private void fireCatalogOpened(CatalogEngineEvent evt) {
++        if (listeners != null) {
++            for (CatalogEngineListener l : listeners) {
++                l.catalogOpened(evt);
++            }
++        }
++    }    
+ 
+     /**
+      * In overriding the finalize method we try to garantee that data is 
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml	2008-05-28 22:33:46 UTC (rev 122)
+@@ -31,12 +31,17 @@
+         &lt;property name=&quot;description&quot;/&gt;
+         &lt;property name=&quot;capacity&quot;/&gt;
+         
+-        &lt;set name=&quot;groups&quot; inverse=&quot;true&quot; lazy=&quot;true&quot;&gt;
++        &lt;set name=&quot;groups&quot; inverse=&quot;true&quot; lazy=&quot;true&quot;&gt; &lt;!-- lazy=&quot;true&quot; --&gt;
+             &lt;key column=&quot;PARENT_ID&quot;/&gt;
+             &lt;one-to-many class=&quot;de.berlios.jfindmyfiles.catalog.entities.DiskGroup&quot;/&gt;
+         &lt;/set&gt;
+ 
+         &lt;many-to-one name=&quot;parent&quot; column=&quot;PARENT_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.DiskGroup&quot;/&gt;
+         
++        &lt;!-- &lt;set name=&quot;disks&quot; table=&quot;TBL_MEDIA&quot; inverse=&quot;true&quot; lazy=&quot;false&quot;&gt; --&gt; &lt;!-- lazy=&quot;true&quot; --&gt;
++            &lt;!-- &lt;key column=&quot;DISK_ID&quot;/&gt;
++            &lt;one-to-many  class=&quot;de.berlios.jfindmyfiles.catalog.entities.Media&quot;/&gt;
++        &lt;/set&gt; --&gt;
++        
+     &lt;/class&gt;
+ &lt;/hibernate-mapping&gt;
+\ No newline at end of file
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -19,6 +19,7 @@
+  */
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
++import java.util.LinkedHashSet;
+ import java.util.Set;
+ 
+ /**
+@@ -35,6 +36,7 @@
+     //Attributes from relationships
+     private Set groups;
+     private DiskGroup parent;
++    private Set disks;
+ 
+     public DiskGroup() {
+         //DO NOTHING
+@@ -45,15 +47,41 @@
+         this.description = description;
+         this.capacity = capacity;
+     }
+-    
++
++    public void addGroup(DiskGroup child) {
++        if (groups == null) {
++            groups = new LinkedHashSet();
++        }
++        groups.add(child);
++    }
++
++    public void removeGroup(DiskGroup child) {
++        if (groups != null) {
++            groups.remove(child);
++        }
++    }
++
++    public void addDisk(Media media) {
++        if (disks == null) {
++            disks = new LinkedHashSet();
++        }
++        disks.add(media);
++    }
++
++    public void removeDisk(Media media) {
++        if (disks != null) {
++            disks.add(media);
++        }
++    }
++
+     public void increaseCapacity(long amount) {
+         capacity += amount;
+     }
+-    
++
+     public long getCapacity() {
+         return capacity;
+     }
+-    
++
+     public void setCapacity(long capacity) {
+         this.capacity = capacity;
+     }
+@@ -66,6 +94,14 @@
+         this.description = description;
+     }
+ 
++    private Set getDisks() {
++        return disks;
++    }
++
++    private void setDisks(Set disks) {
++        this.disks = disks;
++    }
++
+     private Set getGroups() {
+         return groups;
+     }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -19,6 +19,7 @@
+  */
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
++import java.util.LinkedHashSet;
+ import java.util.Set;
+ 
+ /**
+@@ -32,15 +33,28 @@
+     private String name;
+     //Attributes from relationships
+     private Set media;
+-    
++
+     public Label() {
+         //DO NOTHING
+     }
+-    
++
+     public Label(String name) {
+         this.name = name;
+     }
+ 
++    public void addMedia(Media media) {
++        if (this.media == null) {
++            this.media = new LinkedHashSet();
++        }
++        this.media.add(media);
++    }
++
++    public void removeMedia(Media media) {
++        if (this.media != null) {
++            this.media.remove(media);
++        }
++    }
++
+     public Long getId() {
+         return id;
+     }
+@@ -76,10 +90,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
+-        if(this == obj) {
++        if (this == obj) {
+             return true;
+         }
+-        
++
+         if (!(obj instanceof Label)) {
+             return false;
+         }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-28 22:33:46 UTC (rev 122)
+@@ -36,11 +36,11 @@
+         &lt;property name=&quot;freeSpace&quot;/&gt;
+         &lt;property name=&quot;location&quot;/&gt;
+         
+-        &lt;set name=&quot;labels&quot; table=&quot;TBL_MEDIA_LABEL&quot;&gt;
++        &lt;set name=&quot;labels&quot; table=&quot;TBL_MEDIA_LABEL&quot; lazy=&quot;false&quot;&gt;
+             &lt;key column=&quot;MEDIA_ID&quot;/&gt;
+             &lt;many-to-many column=&quot;LABEL_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Label&quot;/&gt;
+         &lt;/set&gt;
+-        
++        &lt;!-- &lt;many-to-one name=&quot;group&quot; column=&quot;DISK_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.DiskGroup&quot;/&gt; --&gt;
+         &lt;many-to-one name=&quot;type&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Type&quot; column=&quot;TYPE_ID&quot; not-null=&quot;true&quot;/&gt;
+         
+         &lt;!-- TODO: other properties --&gt;        
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -19,6 +19,7 @@
+  */
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
++import java.util.LinkedHashSet;
+ import java.util.Set;
+ 
+ /**
+@@ -38,6 +39,7 @@
+     //Attributes from relationships
+     private Set files;
+     private Set labels;
++    private DiskGroup group;
+     //Helpers
+     private Type type;
+ 
+@@ -46,28 +48,57 @@
+     }
+ 
+     public Media(String name, long capacity, long lastModified,
+-            String description, long freeSpace, String location, Type type) {
++            String description, long freeSpace, String location,
++            DiskGroup group, Type type) {
++
+         this.name = name;
+         this.capacity = capacity;
+         this.lastModified = lastModified;
+         this.description = description;
+         this.freeSpace = freeSpace;
+         this.location = location;
++        this.group = group;
+         this.type = type;
+     }
+-    
++
++    public void addFile(FileWrapper file) {
++        if (files == null) {
++            files = new LinkedHashSet();
++        }
++        files.add(files);
++    }
++
++    public void removeMedia(FileWrapper file) {
++        if (files != null) {
++            files.remove(file);
++        }
++    }
++
++    public void addLabel(Label label) {
++        if (labels == null) {
++            labels = new LinkedHashSet();
++        }
++        labels.add(label);
++    }
++
++    public void removeMedia(Label label) {
++        if (labels != null) {
++            labels.remove(label);
++        }
++    }
++
+     public void increaseCapacity(long amount) {
+         capacity += amount;
+     }
+-    
++
+     public void increaseFreeSpace(long amount) {
+         freeSpace += amount;
+     }
+-    
++
+     public long getCapacity() {
+         return capacity;
+     }
+-    
++
+     public void setCapacity(long capacity) {
+         this.capacity = capacity;
+     }
+@@ -87,15 +118,23 @@
+     private void setFiles(Set files) {
+         this.files = files;
+     }
+-    
++
+     public long getFreeSpace() {
+         return freeSpace;
+     }
+-    
++
+     public void setFreeSpace(long freeSpace) {
+         this.freeSpace = freeSpace;
+     }
+ 
++    public DiskGroup getGroup() {
++        return group;
++    }
++
++    public void setGroup(DiskGroup group) {
++        this.group = group;
++    }
++
+     public Long getId() {
+         return id;
+     }
+@@ -111,19 +150,19 @@
+     private void setLabels(Set labels) {
+         this.labels = labels;
+     }
+-    
++
+     public long getLastModified() {
+         return lastModified;
+     }
+-    
++
+     public void setLastModified(long lastModified) {
+         this.lastModified = lastModified;
+     }
+-    
++
+     public String getLocation() {
+         return location;
+     }
+-    
++
+     public void setLocation(String location) {
+         this.location = location;
+     }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.hbm.xml	2008-05-28 22:33:46 UTC (rev 122)
+@@ -30,7 +30,7 @@
+         
+         &lt;property name=&quot;name&quot;/&gt;
+         
+-        &lt;set name=&quot;media&quot; table=&quot;TBL_MEDIA&quot;&gt;
++        &lt;set name=&quot;media&quot; table=&quot;TBL_MEDIA&quot; lazy=&quot;false&quot;&gt;
+             &lt;key column=&quot;MEDIA_ID&quot;/&gt;
+             &lt;one-to-many  class=&quot;de.berlios.jfindmyfiles.catalog.entities.Media&quot;/&gt;
+         &lt;/set&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -19,6 +19,7 @@
+  */
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
++import java.util.LinkedHashSet;
+ import java.util.Set;
+ 
+ /**
+@@ -30,15 +31,28 @@
+     private long id;
+     private String name;
+     private Set media;
+-    
++
+     public Type() {
+         //DO NOTHING
+-    }            
+-    
++    }
++
+     public Type(String name) {
+         this.name = name;
+     }
+ 
++    public void addMedia(Media media) {
++        if (this.media == null) {
++            this.media = new LinkedHashSet();
++        }
++        this.media.add(media);
++    }
++
++    public void removeMedia(Media media) {
++        if (this.media != null) {
++            this.media.remove(media);
++        }
++    }
++
+     public long getId() {
+         return id;
+     }
+@@ -85,7 +99,6 @@
+         Type other = (Type) obj;
+         return name.equals(other.name);
+     }
+-    
+     //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+@@ -99,7 +112,7 @@
+         hash = 61 * hash + (this.name != null ? this.name.hashCode() : 0);
+         return hash;
+     }
+-    
++
+     @Override
+     public String toString() {
+         return name;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -19,6 +19,7 @@
+  */
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
++import java.util.LinkedHashSet;
+ import java.util.Set;
+ 
+ /**
+@@ -31,16 +32,29 @@
+     private String firstname;
+     private String surname;
+     private Set loans;
+-    
++
+     public User() {
+         //DO NOTHING
+     }
+-    
++
+     public User(String firstname, String surname) {
+         this.firstname = firstname;
+         this.surname = surname;
+     }
+ 
++    public void addLoan(Loan loan) {
++        if (loans == null) {
++            loans = new LinkedHashSet();
++        }
++        loans.add(loan);
++    }
++
++    public void removeLoan(Loan loan) {
++        if (loans != null) {
++            loans.remove(loan);
++        }
++    }
++
+     public String getFirstname() {
+         return firstname;
+     }
+@@ -110,7 +124,7 @@
+         hash = 11 * hash + (this.surname != null ? this.surname.hashCode() : 0);
+         return hash;
+     }
+-    
++
+     @Override
+     public String toString() {
+         return firstname + &quot; &quot; + surname;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/build.xml	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/build.xml	2008-05-28 22:33:46 UTC (rev 122)
+@@ -1,8 +1,8 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
+-&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
+-&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
+-&lt;project name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
+-    &lt;description&gt;Builds, tests, and runs the project de.berlios.jfindmyfiles.jfindmyfilesgui.&lt;/description&gt;
+-    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
+-&lt;/project&gt;
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project de.berlios.jfindmyfiles.jfindmyfilesgui.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++&lt;/project&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/build-impl.xml	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/build-impl.xml	2008-05-28 22:33:46 UTC (rev 122)
+@@ -1,30 +1,30 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+---&gt;
+-&lt;project name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui-impl&quot; basedir=&quot;..&quot;&gt;
+-    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
+-    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
+-    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
+-    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
+-    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
+-    &lt;macrodef uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; name=&quot;property&quot;&gt;
+-        &lt;attribute name=&quot;name&quot;/&gt;
+-        &lt;attribute name=&quot;value&quot;/&gt;
+-        &lt;sequential&gt;
+-            &lt;property value=&quot;${@{value}}&quot; name=&quot;@{name}&quot;/&gt;
+-        &lt;/sequential&gt;
+-    &lt;/macrodef&gt;
+-    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
+-    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; name=&quot;harness.dir&quot;/&gt;
+-    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; name=&quot;netbeans.dest.dir&quot;/&gt;
+-    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
+-        &lt;condition&gt;
+-            &lt;not&gt;
+-                &lt;available type=&quot;dir&quot; file=&quot;${harness.dir}&quot;/&gt;
+-            &lt;/not&gt;
+-        &lt;/condition&gt;
+-    &lt;/fail&gt;
+-    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
+-&lt;/project&gt;
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui-impl&quot; basedir=&quot;..&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; name=&quot;property&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property value=&quot;${@{value}}&quot; name=&quot;@{name}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; name=&quot;harness.dir&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; name=&quot;netbeans.dest.dir&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available type=&quot;dir&quot; file=&quot;${harness.dir}&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-05-28 22:33:46 UTC (rev 122)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=ae2aef4e
+-build.xml.script.CRC32=6fe2168f
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=ae2aef4e
+-nbproject/build-impl.xml.script.CRC32=fc3c2090
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=d520b34f
++build.xml.script.CRC32=6fe2168f
++build.xml.stylesheet.CRC32=79c3b980
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=d520b34f
++nbproject/build-impl.xml.script.CRC32=fc3c2090
++nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-05-28 22:33:46 UTC (rev 122)
+@@ -1,117 +1,125 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
+-    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
+-    &lt;configuration&gt;
+-        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
+-            &lt;code-name-base&gt;de.berlios.jfindmyfiles.jfindmyfilesgui&lt;/code-name-base&gt;
+-            &lt;suite-component/&gt;
+-            &lt;module-dependencies&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;com.toedter.plaf&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.readingfiles&lt;/code-name-base&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;org.jdesktop.layout&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;release-version&gt;1&lt;/release-version&gt;
+-                        &lt;specification-version&gt;1.4.1&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;org.netbeans.modules.options.api&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;release-version&gt;0-1&lt;/release-version&gt;
+-                        &lt;specification-version&gt;1.5.1&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;org.openide.awt&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;6.11.1.1&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;org.openide.dialogs&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;7.5.1&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;org.openide.explorer&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;6.12.2&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;org.openide.loaders&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;6.9&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;org.openide.modules&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;7.6&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;org.openide.nodes&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;7.3.0.1&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;org.openide.util&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;7.10.1.1&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;org.openide.windows&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;6.18.1&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-            &lt;/module-dependencies&gt;
+-            &lt;public-packages/&gt;
+-        &lt;/data&gt;
+-    &lt;/configuration&gt;
+-&lt;/project&gt;
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
++            &lt;code-name-base&gt;de.berlios.jfindmyfiles.jfindmyfilesgui&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;com.toedter.plaf&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.persistence&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.readingfiles&lt;/code-name-base&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.jdesktop.layout&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;release-version&gt;1&lt;/release-version&gt;
++                        &lt;specification-version&gt;1.4.1&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.netbeans.modules.options.api&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;release-version&gt;0-1&lt;/release-version&gt;
++                        &lt;specification-version&gt;1.5.1&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.awt&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.11.1.1&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.dialogs&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;7.5.1&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.explorer&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.12.2&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.loaders&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.9&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.modules&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;7.6&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.nodes&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;7.3.0.1&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.util&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;7.10.1.1&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.windows&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;6.18.1&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++            &lt;/module-dependencies&gt;
++            &lt;public-packages/&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -173,11 +173,11 @@
+     }
+ 
+     public void catalogCreated(CatalogEngineEvent evt) {
+-        manager.setRootContext(new CatalogNode(evt.getName()));
++        manager.setRootContext(new CatalogNode(evt.getName(), true));//TODO:
+     }
+ 
+     public void catalogOpened(CatalogEngineEvent evt) {
+-        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++        manager.setRootContext(new CatalogNode(evt.getName(), false));//TODO:
+     }
+ 
+     public void diskGroupAdded(CatalogEngineEvent evt) {
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -0,0 +1,56 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
++
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import de.berlios.jfindmyfiles.catalog.entities.Media;
++import java.util.LinkedList;
++import java.util.List;
++import org.hibernate.Session;
++import org.openide.nodes.Children;
++import org.openide.nodes.Node;
++import org.openide.util.Lookup;
++
++/**
++ *
++ * @author Knitter
++ */
++public class CatalogChildren extends Children.Keys {
++
++    private CatalogNode parent;
++    private List items;
++    private CatalogEngine eng;
++
++    public CatalogChildren(CatalogNode parent) {
++        this.parent = parent;
++        items = new LinkedList();
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
++        Session s = eng.sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        items.addAll(s.createQuery(&quot;from DiskGroup&quot;).list());
++        items.addAll(s.createQuery(&quot;from Media&quot;).list());
++        s.getTransaction().commit();
++    }
++
++    @Override
++    protected void addNotify() {
++        List keys = items;
++        setKeys(keys);
++    }
++
++    @Override
++    protected Node[] createNodes(Object key) {
++        if (key instanceof DiskGroup) {
++            DiskGroupNode gn = new DiskGroupNode((DiskGroup) key);
++            return new Node[]{gn};
++        }
++        if (key instanceof Media) {
++            DiskNode in = new DiskNode((Media) key);
++            return new Node[]{in};
++        }
++        return null;
++    }
++}
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -25,6 +25,7 @@
+ import org.openide.nodes.AbstractNode;
+ import org.openide.nodes.ChildFactory;
+ import org.openide.nodes.Children;
++import org.openide.nodes.Node;
+ import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
+ import org.openide.util.actions.SystemAction;
+@@ -35,9 +36,10 @@
+  */
+ public class CatalogNode extends AbstractNode {
+     
+-    public CatalogNode(String name) {              
++    public CatalogNode(String name, boolean created) {              
+         //super(Children.create(new CatalogChildNodesFactory(), true));
+-        super(Children.LEAF);//TODO: populate child nodes
++        //super(Children.LEAF);//TODO: populate child nodes
++        super(created ? Children.LEAF : new CatalogChildren(null));
+         CatalogEngine eng = Lookup.getDefault().lookup(CatalogEngine.class);
+         setName(eng.getProperties().getName());
+     }
+@@ -54,7 +56,6 @@
+     
+     @Override
+     public SystemAction[] getActions(boolean bool) {
+-        return null;
+-    }
+-    
++        return new SystemAction[]{};
++    }   
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -20,6 +20,7 @@
+ 
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
+ 
++import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
+ import java.awt.Image;
+ import org.openide.nodes.AbstractNode;
+ import org.openide.nodes.Children;
+@@ -31,8 +32,9 @@
+  */
+ public class DiskGroupNode extends AbstractNode {
+     
+-    public DiskGroupNode() {
++    public DiskGroupNode(DiskGroup group) {
+         super(Children.LEAF);
++        setName(group.getName());
+     }
+     
+     @Override
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -20,6 +20,7 @@
+ 
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
+ 
++import de.berlios.jfindmyfiles.catalog.entities.Media;
+ import java.awt.Image;
+ import org.openide.nodes.AbstractNode;
+ import org.openide.nodes.Children;
+@@ -31,7 +32,7 @@
+  */
+ public class DiskNode extends AbstractNode {
+     
+-    public DiskNode() {
++    public DiskNode(Media media) {
+         super(Children.LEAF);
+     }
+     
+
+
+Property changes on: trunk/spikes/ExportWithTemplate/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+
+Property changes on: trunk/spikes/PluginAPI/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+Added: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Controller.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Controller.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Controller.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -0,0 +1,16 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles;
++
++/**
++ *
++ * @author ei10635
++ */
++public interface Controller {
++    
++    void sendDescriptionValues(DescriptionValues values);
++
++}
+
+Added: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/DescriptionValues.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/DescriptionValues.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/DescriptionValues.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -0,0 +1,24 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles;
++
++import de.berlios.jfindmyfiles.catalog.entities.AudioData;
++import de.berlios.jfindmyfiles.catalog.entities.ImageData;
++import de.berlios.jfindmyfiles.catalog.entities.VideoData;
++import javax.swing.ImageIcon;
++
++/**
++ *
++ * @author ei10635
++ */
++public interface DescriptionValues {
++    
++    String getTextDescription();
++    ImageIcon getIcon();
++    AudioData getAudioData();
++    VideoData getVideoData();
++    ImageData getThumbnail();
++}
+
+Added: trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Reader.java
+===================================================================
+--- trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Reader.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/spikes/PluginAPI/src/de/berlios/jfindmyfiles/Reader.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -0,0 +1,31 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++
++package de.berlios.jfindmyfiles;
++
++import java.io.File;
++
++public interface Reader {
++    
++    String getName();
++    int getType();
++    void setController(Controller controller);
++    void read(File file);   
++}
+
+
+Property changes on: trunk/spikes/SimpleExport/nbproject
+___________________________________________________________________
+Name: svn:ignore
+   + private
+
+
+Modified: trunk/spikes/SimpleExport/src/de/berlios/jfindmyfiles/SimpleExport.java
+===================================================================
+--- trunk/spikes/SimpleExport/src/de/berlios/jfindmyfiles/SimpleExport.java	2008-05-28 00:56:30 UTC (rev 121)
++++ trunk/spikes/SimpleExport/src/de/berlios/jfindmyfiles/SimpleExport.java	2008-05-28 22:33:46 UTC (rev 122)
+@@ -5,6 +5,11 @@
+ 
+ package de.berlios.jfindmyfiles;
+ 
++import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
++import de.berlios.jfindmyfiles.catalog.entities.Media;
++import java.util.ArrayList;
++
+ /**
+  *
+  * @author Knitter
+@@ -15,6 +20,9 @@
+      * @param args the command line arguments
+      */
+     public static void main(String[] args) {
++        ArrayList&lt;DiskGroup&gt; groups;
++        ArrayList&lt;Media&gt; disks;
++        ArrayList&lt;FileWrapper&gt; files;
+         
+     }
+ 
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000116.html">[Jfindmyfiles-commits] r121 - in trunk: docs docs/Iteracao2-CB05 docs/Iteracao3-CB03 docs/Iteracao4-CB04 docs/Iteracao5-CB02 docs/Iteracao6-CB07 project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes spikes spikes/ExportWithTemplate spikes/ExportWithTemplate/nbproject spikes/PluginAPI spikes/PluginAPI/nbproject spikes/PluginAPI/src spikes/PluginAPI/src/de spikes/PluginAPI/src/de/berlios spikes/PluginAPI/src/de/berlios/jfindmyfiles spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog spikes/PluginAPI/src/de/berlios/jfindmyfiles/catalog/entities spikes/SimpleExport spikes/SimpleExport/nbproject spikes/SimpleExport/src spikes/SimpleExport/src/de spikes/SimpleExport/src/de/berlios spikes/SimpleExport/src/de/berlios/jfindmyfiles sp! ikes/SimpleExport/src/de/berlios/jfindmyfiles/catalog spikes/SimpleExport/src/de/berlios/jfindmyfiles/catalog/entities
+</A></li>
+	<LI>Next message: <A HREF="000118.html">[Jfindmyfiles-commits] r123 - in trunk/docs: Iteracao5-CB02	Iteracao6-CB07
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#117">[ date ]</a>
+              <a href="thread.html#117">[ thread ]</a>
+              <a href="subject.html#117">[ subject ]</a>
+              <a href="author.html#117">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

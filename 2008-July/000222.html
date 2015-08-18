@@ -1,0 +1,1435 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r227 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/nbproject	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	nbproject org-netbeans-swing-outline/nbproject tableview/nbproject
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r227%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09JFindMyFilesGui/nbproject%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09nbproject%20org-netbeans-swing-outline/nbproject%20tableview/nbproject&In-Reply-To=%3C200807181557.m6IFvjvs030107%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000221.html">
+   <LINK REL="Next"  HREF="000223.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r227 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/nbproject	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	nbproject org-netbeans-swing-outline/nbproject tableview/nbproject</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r227%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09JFindMyFilesGui/nbproject%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09nbproject%20org-netbeans-swing-outline/nbproject%20tableview/nbproject&In-Reply-To=%3C200807181557.m6IFvjvs030107%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r227 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/nbproject	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	nbproject org-netbeans-swing-outline/nbproject tableview/nbproject">knitter at mail.berlios.de
+       </A><BR>
+    <I>Fri Jul 18 17:57:45 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000221.html">[Jfindmyfiles-commits] r226 - trunk/docs
+</A></li>
+        <LI>Next message: <A HREF="000223.html">[Jfindmyfiles-commits] r228 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#222">[ date ]</a>
+              <a href="thread.html#222">[ thread ]</a>
+              <a href="subject.html#222">[ subject ]</a>
+              <a href="author.html#222">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-07-18 17:57:29 +0200 (Fri, 18 Jul 2008)
+New Revision: 227
+
+Added:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CompositeFile.java
+Removed:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingAction.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponentSettings.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponentWstcref.xml
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/CompositeFile.java
+   trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/suite.properties
+   trunk/project/JFindMyFiles/tableview/nbproject/suite.properties
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearchDuplicates.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchChildren.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchParentNode.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+   trunk/project/JFindMyFiles/nbproject/project.properties
+   trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/project.xml
+   trunk/project/JFindMyFiles/tableview/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/tableview/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/tableview/nbproject/project.xml
+Log:
+Corrigido erro de adi?\195?\167?\195?\163o de novos discos. Activada a funcionalidade de acesso a discos duplicados.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -20,8 +20,10 @@
+ package de.berlios.jfindmyfiles.catalog;
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.*;
++import java.util.ArrayList;
+ import java.util.Date;
+ import java.util.List;
++import java.util.Stack;
+ import java.util.Vector;
+ import java.util.concurrent.CopyOnWriteArrayList;
+ import java.util.logging.Level;
+@@ -29,6 +31,8 @@
+ import org.hibernate.Session;
+ import org.hibernate.SessionFactory;
+ import org.hibernate.cfg.Configuration;
++import org.hibernate.criterion.MatchMode;
++import org.hibernate.criterion.Restrictions;
+ 
+ public class CatalogEngine {
+ 
+@@ -263,7 +267,7 @@
+         cSession.getTransaction().commit();
+         return rs;
+     }
+-    
++
+     public List getDisks() {
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+@@ -274,48 +278,48 @@
+ 
+     //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+     public void addListener(CatalogEngineListener l) {
+-            if (listeners == null) {
+-                listeners = new CopyOnWriteArrayList&lt;CatalogEngineListener&gt;();
+-            }
+-            listeners.add(l);
++        if (listeners == null) {
++            listeners = new CopyOnWriteArrayList&lt;CatalogEngineListener&gt;();
++        }
++        listeners.add(l);
+     }
+ 
+     public void removeListener(CatalogEngineListener l) {
+-            if (listeners != null) {
+-                listeners.remove(l);
+-            }
++        if (listeners != null) {
++            listeners.remove(l);
++        }
+     }
+ 
+     private void fireCatalogCreated(CatalogEngineEvent evt) {
+-            if (listeners != null) {
+-                for (CatalogEngineListener l : listeners) {
+-                    l.catalogCreated(evt);
+-                }
++        if (listeners != null) {
++            for (CatalogEngineListener l : listeners) {
++                l.catalogCreated(evt);
+             }
++        }
+     }
+ 
+     private void fireCatalogOpened(CatalogEngineEvent evt) {
+-            if (listeners != null) {
+-                for (CatalogEngineListener l : listeners) {
+-                    l.catalogOpened(evt);
+-                }
++        if (listeners != null) {
++            for (CatalogEngineListener l : listeners) {
++                l.catalogOpened(evt);
+             }
++        }
+     }
+ 
+     private void fireCatalogClosed(CatalogEngineEvent evt) {
+-            if (listeners != null) {
+-                for (CatalogEngineListener l : listeners) {
+-                    l.catalogClosed(evt);
+-                }
++        if (listeners != null) {
++            for (CatalogEngineListener l : listeners) {
++                l.catalogClosed(evt);
+             }
++        }
+     }
+ 
+     private void fireDiskGroupAdded(CatalogEngineEvent evt) {
+-            if (listeners != null) {
+-                for (CatalogEngineListener l : listeners) {
+-                    l.diskGroupAdded(evt);
+-                }
++        if (listeners != null) {
++            for (CatalogEngineListener l : listeners) {
++                l.diskGroupAdded(evt);
+             }
++        }
+     }
+ 
+     /**
+@@ -328,4 +332,35 @@
+             sessionFactory.close();
+         }
+     }
++
++    //TESTING:
++    public void addNewDisk(Media disk, List&lt;FileWrapper&gt; files) {
++        Session s = sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        s.save(disk);
++        for (FileWrapper f : files) {
++            s.save(f);
++        }
++        s.getTransaction().commit();
++    }
++    //TESTING:
++    public List&lt;FileWrapper&gt; searchDuplicates(String hash) {
++        Session s = sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        List rs = null;//TODO:s.createCriteria(FileWrapper.class).add(Restrictions.like(&quot;sha1&quot;, hash, MatchMode.EXACT)).list();
++        s.getTransaction().commit();
++        return rs;
++    }
++    
++    public List&lt;FileWrapper&gt; findDuplicates() {
++        List&lt;FileWrapper&gt; result = new ArrayList&lt;FileWrapper&gt;();
++        Session s = sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        result.addAll(s.createQuery(&quot;select f from FileWrapper f where sha1 in &quot; +
++                &quot;(select f2.sha1 from FileWrapper f2 group by f2.sha1 having &quot; +
++                &quot;( count(f2.sha1) &gt; 1 AND f2.sha1 &lt;&gt; '' AND f2.sha1 is not null))&quot;).list());      
++        s.getTransaction().commit();
++        
++        return result;
++    }
+ }
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CompositeFile.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CompositeFile.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CompositeFile.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -0,0 +1,35 @@
++/**
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.catalog;
++
++import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
++import java.io.File;
++
++public class CompositeFile {
++    
++    public final File file;
++    public final FileWrapper parent;
++    
++    public CompositeFile(File file, FileWrapper parent) {
++        this.file = file;
++        this.parent = parent;                
++    }
++
++}
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-07-18 15:57:29 UTC (rev 227)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=cf74214f
++build.xml.data.CRC32=b9c32b14
+ build.xml.script.CRC32=6fe2168f
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=cf74214f
++nbproject/build-impl.xml.data.CRC32=b9c32b14
+ nbproject/build-impl.xml.script.CRC32=fc3c2090
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-07-18 15:57:29 UTC (rev 227)
+@@ -73,7 +73,7 @@
+                         &lt;specification-version&gt;1.5.1&lt;/specification-version&gt;
+                     &lt;/run-dependency&gt;
+                 &lt;/dependency&gt;
+-                &lt;dependency&gt;
++                &lt;!-- &lt;dependency&gt;
+                     &lt;code-name-base&gt;org.netbeans.modules.tableview&lt;/code-name-base&gt;
+                     &lt;build-prerequisite/&gt;
+                     &lt;compile-dependency/&gt;
+@@ -81,7 +81,7 @@
+                         &lt;release-version&gt;1&lt;/release-version&gt;
+                         &lt;specification-version&gt;0.3&lt;/specification-version&gt;
+                     &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
++                &lt;/dependency&gt; --&gt;
+                 &lt;dependency&gt;
+                     &lt;code-name-base&gt;org.openide.awt&lt;/code-name-base&gt;
+                     &lt;build-prerequisite/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsAction.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -26,6 +26,5 @@
+         TopComponent win = DuplicateResultsTopComponent.findInstance();
+         win.open();
+         win.requestActive();
+-        ((DuplicateResultsTopComponent)win).startSearching();
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsTopComponent.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DuplicateResultsTopComponent.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -4,6 +4,7 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.SearchParentNode;
+ import java.awt.BorderLayout;
+ import java.io.Serializable;
+@@ -12,6 +13,7 @@
+ import org.openide.explorer.ExplorerManager;
+ import org.openide.explorer.ExplorerUtils;
+ import org.openide.explorer.view.BeanTreeView;
++import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
+ import org.openide.windows.TopComponent;
+ import org.openide.windows.WindowManager;
+@@ -19,7 +21,7 @@
+ /**
+  * Top component which displays something.
+  */
+-public final class DuplicateResultsTopComponent extends TopComponent {
++public final class DuplicateResultsTopComponent extends TopComponent implements ExplorerManager.Provider {
+ 
+     private final ExplorerManager manager = new ExplorerManager();
+     private final BeanTreeView view = new BeanTreeView();
+@@ -125,13 +127,4 @@
+     public ExplorerManager getExplorerManager() {
+         return manager;
+     }
+-
+-    public void startSearching() {
+-        //TODO: searchig for duplicates
+-        /*CatalogEngine eng = Lookup.getDefault().lookup(CatalogEngine.class);
+-        Session s = eng.sessionFactory.getCurrentSession();
+-        s.beginTransaction();
+-        s.createCriteria(FileWrapper.class).add(Restrictions.like(&quot;sha1&quot;, hash, MatchMode.EXACT)).list();
+-        s.getTransaction().commit();*/
+-    }
+ }
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingAction.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingAction.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingAction.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -1,33 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui;
+-
+-import java.awt.event.ActionEvent;
+-import javax.swing.AbstractAction;
+-import javax.swing.ImageIcon;
+-import org.openide.util.NbBundle;
+-import org.openide.util.Utilities;
+-import org.openide.windows.TopComponent;
+-
+-/**
+- * Action which shows WindowTesting component.
+- */
+-public class WindowTestingAction extends AbstractAction {
+-
+-    public WindowTestingAction() {
+-        super(NbBundle.getMessage(WindowTestingAction.class, &quot;CTL_WindowTestingAction&quot;));
+-//        putValue(SMALL_ICON, new ImageIcon(Utilities.loadImage(WindowTestingTopComponent.ICON_PATH, true)));
+-    }
+-
+-    public void actionPerformed(ActionEvent evt) {
+-        TopComponent win = WindowTestingTopComponent.findInstance();
+-        win.open();
+-        win.requestActive();
+-    }
+-    
+-    public boolean isEnabled() {
+-        return false;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form	2008-07-18 15:57:29 UTC (rev 227)
+@@ -1,40 +0,0 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+-
+-&lt;Form version=&quot;1.5&quot; maxVersion=&quot;1.6&quot; type=&quot;org.netbeans.modules.form.forminfo.JPanelFormInfo&quot;&gt;
+-  &lt;AuxValues&gt;
+-    &lt;AuxValue name=&quot;FormSettings_autoResourcing&quot; type=&quot;java.lang.Integer&quot; value=&quot;1&quot;/&gt;
+-    &lt;AuxValue name=&quot;FormSettings_autoSetComponentName&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+-    &lt;AuxValue name=&quot;FormSettings_generateMnemonicsCode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
+-    &lt;AuxValue name=&quot;FormSettings_i18nAutoMode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
+-    &lt;AuxValue name=&quot;FormSettings_layoutCodeTarget&quot; type=&quot;java.lang.Integer&quot; value=&quot;1&quot;/&gt;
+-    &lt;AuxValue name=&quot;FormSettings_listenerGenerationStyle&quot; type=&quot;java.lang.Integer&quot; value=&quot;0&quot;/&gt;
+-    &lt;AuxValue name=&quot;FormSettings_variablesLocal&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+-    &lt;AuxValue name=&quot;FormSettings_variablesModifier&quot; type=&quot;java.lang.Integer&quot; value=&quot;2&quot;/&gt;
+-    &lt;AuxValue name=&quot;designerSize&quot; type=&quot;java.awt.Dimension&quot; value=&quot;-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,44,0,0,1,-112&quot;/&gt;
+-  &lt;/AuxValues&gt;
+-
+-  &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.DesignBorderLayout&quot;/&gt;
+-  &lt;SubComponents&gt;
+-    &lt;Container class=&quot;javax.swing.JScrollPane&quot; name=&quot;jScrollPane1&quot;&gt;
+-      &lt;AuxValues&gt;
+-        &lt;AuxValue name=&quot;autoScrollPane&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
+-      &lt;/AuxValues&gt;
+-      &lt;Constraints&gt;
+-        &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.DesignBorderLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription&quot;&gt;
+-          &lt;BorderConstraints direction=&quot;South&quot;/&gt;
+-        &lt;/Constraint&gt;
+-      &lt;/Constraints&gt;
+-
+-      &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout&quot;/&gt;
+-      &lt;SubComponents&gt;
+-        &lt;Component class=&quot;javax.swing.JTable&quot; name=&quot;jTable1&quot;&gt;
+-          &lt;Properties&gt;
+-            &lt;Property name=&quot;model&quot; type=&quot;javax.swing.table.TableModel&quot; editor=&quot;org.netbeans.modules.form.RADConnectionPropertyEditor&quot;&gt;
+-              &lt;Connection code=&quot;ntModel&quot; type=&quot;code&quot;/&gt;
+-            &lt;/Property&gt;
+-          &lt;/Properties&gt;
+-        &lt;/Component&gt;
+-      &lt;/SubComponents&gt;
+-    &lt;/Container&gt;
+-  &lt;/SubComponents&gt;
+-&lt;/Form&gt;
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -1,260 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui;
+-
+-import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+-import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
+-import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
+-import de.berlios.jfindmyfiles.catalog.entities.Media;
+-import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.CatalogNode;
+-import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.DiskGroupNode;
+-import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.DiskNode;
+-import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.FileWrapperNode;
+-import java.awt.BorderLayout;
+-import java.awt.Color;
+-import java.awt.Component;
+-import java.io.Serializable;
+-import java.lang.reflect.InvocationTargetException;
+-import java.util.Collection;
+-import java.util.List;
+-import java.util.logging.Logger;
+-import javax.swing.JLabel;
+-import javax.swing.JTable;
+-import javax.swing.event.TableModelEvent;
+-import javax.swing.event.TableModelListener;
+-import javax.swing.table.AbstractTableModel;
+-import javax.swing.table.TableCellRenderer;
+-import org.hibernate.Session;
+-import org.netbeans.api.tableview.TableView;
+-import org.openide.explorer.ExplorerManager;
+-import org.openide.explorer.propertysheet.PropertyPanel;
+-import org.openide.explorer.propertysheet.PropertySheet;
+-import org.openide.explorer.view.NodeTableModel;
+-import org.openide.nodes.Node;
+-import org.openide.nodes.Node.Property;
+-import org.openide.util.Lookup;
+-import org.openide.util.LookupEvent;
+-import org.openide.util.LookupListener;
+-import org.openide.util.NbBundle;
+-import org.openide.util.Utilities;
+-import org.openide.windows.TopComponent;
+-import org.openide.windows.WindowManager;
+-//import org.openide.util.Utilities;
+-/**
+- * Top component which displays something.
+- */
+-final class WindowTestingTopComponent extends TopComponent implements ExplorerManager.Provider, LookupListener {
+-
+-    private NodeTableModel ntModel;
+-    private static WindowTestingTopComponent instance;
+-    private static final String PREFERRED_ID = &quot;WindowTestingTopComponent&quot;;
+-    private org.netbeans.api.tableview.NodeTableModel ntm2;
+-    private ExplorerManager man;
+-    
+-    private WindowTestingTopComponent() {
+-        ntModel = new NodeTableModel();
+-        ntModel.addTableModelListener(new TableModelListener() {
+-
+-            public void tableChanged(TableModelEvent e) {
+-                System.err.println(&quot;VALUE CLASS: &quot; + ntModel.getColumnClass(e.getColumn()));
+-            }
+-        });
+-
+-
+-        Lookup.Result r = Utilities.actionsGlobalContext().lookup(new Lookup.Template&lt;Media&gt;(Media.class));
+-        r.addLookupListener(this);
+-        initComponents();
+-        ntm2 = new org.netbeans.api.tableview.NodeTableModel();
+-        ntm2.addTableModelListener(new TableModelListener() {
+-
+-            public void tableChanged(TableModelEvent e) {
+-                System.err.println(&quot;VALUE CLASS: &quot; + ntModel.getColumnClass(e.getColumn()));
+-            }
+-        });
+-        
+-        TableView tf = new TableView(ntm2);
+-        add(tf, BorderLayout.NORTH);
+-        smallInit();
+-        setName(NbBundle.getMessage(WindowTestingTopComponent.class, &quot;CTL_WindowTestingTopComponent&quot;));
+-        setToolTipText(NbBundle.getMessage(WindowTestingTopComponent.class, &quot;HINT_WindowTestingTopComponent&quot;));
+-    //
+-    //WORK DAMN YOU!!!!!!!!!!!!!!!!!!!
+-    //jTable1.setDefaultRenderer(Node.Property.class, new AnotherPropertyCellRenderer());
+-//        setIcon(Utilities.loadImage(ICON_PATH, true));
+-    }
+-
+-    /** This method is called from within the constructor to
+-     * initialize the form.
+-     * WARNING: Do NOT modify this code. The content of this method is
+-     * always regenerated by the Form Editor.
+-     */
+-    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+-    private void initComponents() {
+-
+-        jScrollPane1 = new javax.swing.JScrollPane();
+-        jTable1 = new javax.swing.JTable();
+-
+-        setLayout(new java.awt.BorderLayout());
+-
+-        jTable1.setModel(ntModel);
+-        jScrollPane1.setViewportView(jTable1);
+-
+-        add(jScrollPane1, java.awt.BorderLayout.SOUTH);
+-    }// &lt;/editor-fold&gt;//GEN-END:initComponents
+-    // Variables declaration - do not modify//GEN-BEGIN:variables
+-    private javax.swing.JScrollPane jScrollPane1;
+-    private javax.swing.JTable jTable1;
+-    // End of variables declaration//GEN-END:variables
+-    /**
+-     * Gets default instance. Do not use directly: reserved for *.settings files only,
+-     * i.e. deserialization routines; otherwise you could get a non-deserialized instance.
+-     * To obtain the singleton instance, use {@link findInstance}.
+-     */
+-    public static synchronized WindowTestingTopComponent getDefault() {
+-        if (instance == null) {
+-            instance = new WindowTestingTopComponent();
+-        }
+-        return instance;
+-    }
+-
+-    /**
+-     * Obtain the WindowTestingTopComponent instance. Never call {@link #getDefault} directly!
+-     */
+-    public static synchronized WindowTestingTopComponent findInstance() {
+-        TopComponent win = WindowManager.getDefault().findTopComponent(PREFERRED_ID);
+-        if (win == null) {
+-            Logger.getLogger(WindowTestingTopComponent.class.getName()).warning(
+-                    &quot;Cannot find &quot; + PREFERRED_ID + &quot; component. It will not be located properly in the window system.&quot;);
+-            return getDefault();
+-        }
+-        if (win instanceof WindowTestingTopComponent) {
+-            return (WindowTestingTopComponent) win;
+-        }
+-        Logger.getLogger(WindowTestingTopComponent.class.getName()).warning(
+-                &quot;There seem to be multiple components with the '&quot; + PREFERRED_ID +
+-                &quot;' ID. That is a potential source of errors and unexpected behavior.&quot;);
+-        return getDefault();
+-    }
+-
+-    @Override
+-    public int getPersistenceType() {
+-        return TopComponent.PERSISTENCE_ALWAYS;
+-    }
+-
+-    @Override
+-    public void componentOpened() {
+-        Lookup.Result r = Utilities.actionsGlobalContext().lookup(new Lookup.Template&lt;Media&gt;(Media.class));
+-        r.addLookupListener(this);
+-    }
+-
+-    @Override
+-    public void componentClosed() {
+-        // TODO add custom code on component closing
+-    }
+-
+-    /** replaces this in object stream */
+-    @Override
+-    public Object writeReplace() {
+-        return new ResolvableHelper();
+-    }
+-
+-    @Override
+-    protected String preferredID() {
+-        return PREFERRED_ID;
+-    }
+-
+-    final static class ResolvableHelper implements Serializable {
+-
+-        private static final long serialVersionUID = 1L;
+-
+-        public Object readResolve() {
+-            return WindowTestingTopComponent.getDefault();
+-        }
+-    }
+-
+-    public void resultChanged(LookupEvent arg0) {
+-        TopComponent.Registry registry = TopComponent.getRegistry();
+-        Node[] act = registry.getActivatedNodes();
+-        //Node[] act = registry.getCurrentNodes();
+-        ntModel.setNodes(act);
+-        //ntModel.fireTableStructureChanged();
+-        //ps.setNodes(act);
+-        //ntm2.setNodes(act);
+-        for (Node n : act) {
+-            System.out.println(n);
+-        }
+-    }
+-    PropertySheet ps = new PropertySheet();
+-
+-    private void smallInit() {
+-        /*add(ps, BorderLayout.NORTH);
+-        /*jTable1.setModel(new AbstractTableModel() {
+-        
+-        public int getRowCount() {
+-        return 5;
+-        }
+-        
+-        public int getColumnCount() {
+-        return 10;
+-        }
+-        
+-        public Object getValueAt(int rowIndex, int columnIndex) {
+-        return &quot;value&quot;;
+-        }
+-        });*/
+-        /*jTable1.setDefaultRenderer(Node.Property.class, new AnotherPropertyCellRenderer());
+-        jTable1.setModel(ntModel);*/
+-    }
+-
+-    class AnotherPropertyCellRenderer extends JLabel implements TableCellRenderer {
+-
+-        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+-            setText(&quot;example&quot;);
+-            setBackground(Color.GREEN);
+-            return this;
+-        }
+-    }
+-
+-    class PropertyCellRenderer implements TableCellRenderer {
+-
+-        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+-            try {
+-                PropertyPanel panel = new PropertyPanel((Property) value);
+-                panel.setPreferences(PropertyPanel.PREF_TABLEUI);
+-                System.err.println(&quot;VALUE FROM PROPERTY: &quot; + ((Property) value).getValue());
+-                return panel;
+-            } catch (IllegalAccessException ex) {
+-                System.err.println(&quot;EXCEPTION&quot;);
+-                return null;
+-            } catch (InvocationTargetException ex) {
+-                System.err.println(&quot;EXCEPTION&quot;);
+-                return null;
+-            }
+-        }
+-    }
+-
+-    class MyPropertyCellRenderer extends JLabel implements TableCellRenderer {
+-
+-        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+-            try {
+-                Property p = (Property) value;
+-                setText((String) p.getValue());
+-                return this;
+-            } catch (IllegalAccessException ex) {
+-                return null;
+-            } catch (InvocationTargetException ex) {
+-                return null;
+-            }
+-        }
+-    }
+-
+-    public ExplorerManager getExplorerManager() {
+-        if(man == null) {
+-            NavigationTreeTopComponent c = NavigationTreeTopComponent.findInstance();
+-            man = c.getExplorerManager();
+-        }
+-        return man;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponentSettings.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponentSettings.xml	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponentSettings.xml	2008-07-18 15:57:29 UTC (rev 227)
+@@ -1,12 +0,0 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!--
+-To change this template, choose Tools | Templates
+-and open the template in the editor.
+---&gt;
+-&lt;!DOCTYPE settings PUBLIC &quot;-//NetBeans//DTD Session settings 1.0//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">http://www.netbeans.org/dtds/sessionsettings-1_0.dtd</A>&quot;&gt;
+-&lt;settings version=&quot;1.0&quot;&gt;
+-    &lt;module name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui&quot; spec=&quot;1.0&quot;/&gt;
+-    &lt;instanceof class=&quot;org.openide.windows.TopComponent&quot;/&gt;
+-    &lt;instanceof class=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui.WindowTestingTopComponent&quot;/&gt;
+-    &lt;instance class=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui.WindowTestingTopComponent&quot; method=&quot;getDefault&quot;/&gt;
+-&lt;/settings&gt;
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponentWstcref.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponentWstcref.xml	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponentWstcref.xml	2008-07-18 15:57:29 UTC (rev 227)
+@@ -1,11 +0,0 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!--
+-To change this template, choose Tools | Templates
+-and open the template in the editor.
+---&gt;
+-&lt;!DOCTYPE tc-ref PUBLIC &quot;-//NetBeans//DTD Top Component in Mode Properties 2.0//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/tc-ref2_0.dtd">http://www.netbeans.org/dtds/tc-ref2_0.dtd</A>&quot;&gt;
+-&lt;tc-ref version=&quot;2.0&quot; &gt;
+-    &lt;module name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui&quot; spec=&quot;1.0&quot;/&gt;
+-    &lt;tc-id id=&quot;WindowTestingTopComponent&quot;/&gt;
+-    &lt;state opened=&quot;false&quot;/&gt;
+-&lt;/tc-ref&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearchDuplicates.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearchDuplicates.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcSearchDuplicates.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -25,7 +25,6 @@
+         TopComponent win = DuplicateResultsTopComponent.findInstance();
+         win.open();
+         win.requestActive();
+-        ((DuplicateResultsTopComponent) win).startSearching();
+     }
+ 
+     public String getName() {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.form	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.form	2008-07-18 15:57:29 UTC (rev 227)
+@@ -24,11 +24,9 @@
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Component id=&quot;jpbReadingProgress&quot; pref=&quot;445&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Component id=&quot;jbtnCancel&quot; min=&quot;-2&quot; pref=&quot;20&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jPanel1&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+@@ -36,50 +34,84 @@
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jbtnCancel&quot; alignment=&quot;0&quot; min=&quot;-2&quot; pref=&quot;19&quot; max=&quot;-2&quot; attributes=&quot;1&quot;/&gt;
+-                  &lt;Component id=&quot;jpbReadingProgress&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;1&quot;/&gt;
+-              &lt;/Group&gt;
+-              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jPanel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
+   &lt;SubComponents&gt;
+-    &lt;Component class=&quot;javax.swing.JProgressBar&quot; name=&quot;jpbReadingProgress&quot;&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel1&quot;&gt;
+       &lt;Properties&gt;
+-        &lt;Property name=&quot;indeterminate&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
+-        &lt;Property name=&quot;string&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ActiveScanningDlg.jpbReadingProgress.string&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.EtchedBorderInfo&quot;&gt;
++            &lt;EtchetBorder/&gt;
++          &lt;/Border&gt;
+         &lt;/Property&gt;
+-        &lt;Property name=&quot;stringPainted&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
+       &lt;/Properties&gt;
+-    &lt;/Component&gt;
+-    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnCancel&quot;&gt;
+-      &lt;Properties&gt;
+-        &lt;Property name=&quot;icon&quot; type=&quot;javax.swing.Icon&quot; editor=&quot;org.netbeans.modules.form.editors2.IconEditor&quot;&gt;
+-          &lt;Image iconType=&quot;3&quot; name=&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/general/button-stop.png&quot;/&gt;
+-        &lt;/Property&gt;
+-        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ActiveScanningDlg.jbtnCancel.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+-        &lt;/Property&gt;
+-        &lt;Property name=&quot;focusPainted&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
+-        &lt;Property name=&quot;margin&quot; type=&quot;java.awt.Insets&quot; editor=&quot;org.netbeans.beaninfo.editors.InsetsEditor&quot;&gt;
+-          &lt;Insets value=&quot;[0, 0, 0, 0]&quot;/&gt;
+-        &lt;/Property&gt;
+-        &lt;Property name=&quot;maximumSize&quot; type=&quot;java.awt.Dimension&quot; editor=&quot;org.netbeans.beaninfo.editors.DimensionEditor&quot;&gt;
+-          &lt;Dimension value=&quot;[20, 19]&quot;/&gt;
+-        &lt;/Property&gt;
+-        &lt;Property name=&quot;minimumSize&quot; type=&quot;java.awt.Dimension&quot; editor=&quot;org.netbeans.beaninfo.editors.DimensionEditor&quot;&gt;
+-          &lt;Dimension value=&quot;[20, 19]&quot;/&gt;
+-        &lt;/Property&gt;
+-        &lt;Property name=&quot;preferredSize&quot; type=&quot;java.awt.Dimension&quot; editor=&quot;org.netbeans.beaninfo.editors.DimensionEditor&quot;&gt;
+-          &lt;Dimension value=&quot;[20, 19]&quot;/&gt;
+-        &lt;/Property&gt;
+-      &lt;/Properties&gt;
+-      &lt;Events&gt;
+-        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnCancelActionPerformed&quot;/&gt;
+-      &lt;/Events&gt;
+-    &lt;/Component&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jpbReadingProgress&quot; pref=&quot;441&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jbtnCancel&quot; min=&quot;-2&quot; pref=&quot;20&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jpbReadingProgress&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;1&quot;/&gt;
++                      &lt;Component id=&quot;jbtnCancel&quot; alignment=&quot;0&quot; min=&quot;-2&quot; pref=&quot;19&quot; max=&quot;-2&quot; attributes=&quot;1&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JProgressBar&quot; name=&quot;jpbReadingProgress&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;indeterminate&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
++            &lt;Property name=&quot;string&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ActiveScanningDlg.jpbReadingProgress.string&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;stringPainted&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnCancel&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;icon&quot; type=&quot;javax.swing.Icon&quot; editor=&quot;org.netbeans.modules.form.editors2.IconEditor&quot;&gt;
++              &lt;Image iconType=&quot;3&quot; name=&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/general/button-stop.png&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ActiveScanningDlg.jbtnCancel.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;focusPainted&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++            &lt;Property name=&quot;margin&quot; type=&quot;java.awt.Insets&quot; editor=&quot;org.netbeans.beaninfo.editors.InsetsEditor&quot;&gt;
++              &lt;Insets value=&quot;[0, 0, 0, 0]&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;maximumSize&quot; type=&quot;java.awt.Dimension&quot; editor=&quot;org.netbeans.beaninfo.editors.DimensionEditor&quot;&gt;
++              &lt;Dimension value=&quot;[20, 19]&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;minimumSize&quot; type=&quot;java.awt.Dimension&quot; editor=&quot;org.netbeans.beaninfo.editors.DimensionEditor&quot;&gt;
++              &lt;Dimension value=&quot;[20, 19]&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;preferredSize&quot; type=&quot;java.awt.Dimension&quot; editor=&quot;org.netbeans.beaninfo.editors.DimensionEditor&quot;&gt;
++              &lt;Dimension value=&quot;[20, 19]&quot;/&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++          &lt;Events&gt;
++            &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnCancelActionPerformed&quot;/&gt;
++          &lt;/Events&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
+   &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ActiveScanningDlg.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -65,6 +65,7 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jPanel1 = new javax.swing.JPanel();
+         jpbReadingProgress = new javax.swing.JProgressBar();
+         jbtnCancel = new javax.swing.JButton();
+ 
+@@ -72,6 +73,8 @@
+         setResizable(false);
+         setUndecorated(true);
+ 
++        jPanel1.setBorder(javax.swing.BorderFactory.createEtchedBorder());
++
+         jpbReadingProgress.setIndeterminate(true);
+         jpbReadingProgress.setString(org.openide.util.NbBundle.getMessage(ActiveScanningDlg.class, &quot;ActiveScanningDlg.jpbReadingProgress.string&quot;)); // NOI18N
+         jpbReadingProgress.setStringPainted(true);
+@@ -89,25 +92,42 @@
+             }
+         });
+ 
++        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
++                .addContainerGap()
++                .addComponent(jpbReadingProgress, javax.swing.GroupLayout.DEFAULT_SIZE, 441, Short.MAX_VALUE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jbtnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addContainerGap())
++        );
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jpbReadingProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                    .addComponent(jbtnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++        );
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(layout.createSequentialGroup()
+                 .addContainerGap()
+-                .addComponent(jpbReadingProgress, javax.swing.GroupLayout.DEFAULT_SIZE, 445, Short.MAX_VALUE)
+-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addComponent(jbtnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                 .addContainerGap())
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(layout.createSequentialGroup()
+                 .addContainerGap()
+-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-                    .addComponent(jbtnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
+-                    .addComponent(jpbReadingProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+-                .addContainerGap())
++                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+         );
+ 
+         pack();
+@@ -118,6 +138,7 @@
+     r.abort();
+ }//GEN-LAST:event_jbtnCancelActionPerformed
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JPanel jPanel1;
+     private javax.swing.JButton jbtnCancel;
+     private javax.swing.JProgressBar jpbReadingProgress;
+     // End of variables declaration//GEN-END:variables
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -88,7 +88,7 @@
+ 
+     private void startUp() throws IOException {
+         String base = System.getProperty(&quot;user.home&quot;) + File.separator +
+-                &quot;jfmf&quot; + File.separator + &quot;templates&quot;;
++                &quot;.jfmfuserfiles&quot; + File.separator + &quot;Templates&quot;;
+         System.out.println(&quot;Trying: &quot; + base);
+         File folder = new File(base);
+         File[] list;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-07-18 15:57:29 UTC (rev 227)
+@@ -58,7 +58,6 @@
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-SearchWindowAction.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-SingleViewAction.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-StatisticsAction.instance&quot;/&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-WindowTestingAction.instance&quot;/&gt;
+         &lt;/folder&gt;
+         &lt;/folder&gt;
+     &lt;folder name=&quot;Menu&quot;&gt;
+@@ -222,9 +221,6 @@
+             &lt;file name=&quot;StatisticsAction.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-StatisticsAction.instance&quot;/&gt;
+             &lt;/file&gt;
+-            &lt;file name=&quot;WindowTestingAction.shadow&quot;&gt;
+-                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-WindowTestingAction.instance&quot;/&gt;
+-            &lt;/file&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-separatorAfter.instance&quot;&gt;
+                 &lt;attr name=&quot;instanceClass&quot; stringvalue=&quot;javax.swing.JSeparator&quot;/&gt;
+             &lt;/file&gt;
+@@ -324,8 +320,7 @@
+             &lt;file name=&quot;SearchWindowTopComponent.settings&quot; url=&quot;SearchWindowTopComponentSettings.xml&quot;/&gt;
+             &lt;file name=&quot;SingleViewTopComponent.settings&quot; url=&quot;SingleViewTopComponentSettings.xml&quot;/&gt;
+             &lt;file name=&quot;StatisticsTopComponent.settings&quot; url=&quot;StatisticsTopComponentSettings.xml&quot;/&gt;
+-            &lt;file name=&quot;WindowTestingTopComponent.settings&quot; url=&quot;WindowTestingTopComponentSettings.xml&quot;/&gt;
+-        &lt;/folder&gt;
++            &lt;/folder&gt;
+         &lt;folder name=&quot;Modes&quot;&gt;
+             &lt;folder name=&quot;editor&quot;&gt;
+                 &lt;file name=&quot;DetailsViewTopComponent.wstcref&quot; url=&quot;DetailsViewTopComponentWstcref.xml&quot;/&gt;
+@@ -334,8 +329,7 @@
+                 &lt;file name=&quot;SearchWindowTopComponent.wstcref&quot; url=&quot;SearchWindowTopComponentWstcref.xml&quot;/&gt;
+                 &lt;file name=&quot;SingleViewTopComponent.wstcref&quot; url=&quot;SingleViewTopComponentWstcref.xml&quot;/&gt;
+                 &lt;file name=&quot;StatisticsTopComponent.wstcref&quot; url=&quot;StatisticsTopComponentWstcref.xml&quot;/&gt;
+-                &lt;file name=&quot;WindowTestingTopComponent.wstcref&quot; url=&quot;WindowTestingTopComponentWstcref.xml&quot;/&gt;
+-            &lt;/folder&gt;
++                &lt;/folder&gt;
+             &lt;folder name=&quot;leftSlidingSide&quot;&gt;
+                 &lt;file name=&quot;NavigationTreeTopComponent.wstcref&quot; url=&quot;NavigationTreeTopComponentWstcref.xml&quot;/&gt;
+             &lt;/folder&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchChildren.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchChildren.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchChildren.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -6,10 +6,7 @@
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
+-import java.util.ArrayList;
+-import java.util.LinkedList;
+ import java.util.List;
+-import org.hibernate.Session;
+ import org.openide.nodes.Children;
+ import org.openide.nodes.Node;
+ import org.openide.util.Lookup;
+@@ -20,33 +17,29 @@
+  */
+ public class SearchChildren extends Children.Keys {
+ 
+-    private SearchParentNode parent;
+-    private CatalogEngine eng;
+     private List items;
+ 
+     @SuppressWarnings(&quot;unchecked&quot;)
+-    public SearchChildren(SearchParentNode parent) {
+-        eng = Lookup.getDefault().lookup(CatalogEngine.class);
+-        items = new LinkedList();
+-        this.parent = parent;
+-        Session s = eng.sessionFactory.getCurrentSession();
+-        s.beginTransaction();
+-        items.addAll(s.createQuery(&quot;select f from FileWrapper f where sha1 in &quot; +
+-                &quot;(select f2.sha1 from FileWrapper f2 group by f2.sha1 having &quot; +
+-                &quot;( count(f2.sha1) &gt; 1 AND f2.sha1 &lt;&gt; '' AND f2.sha1 is not null))&quot;).list());
+-        //items = s.createSQLQuery(&quot;SELECT * FROM tbl_file WHERE sha1 in(SELECT e.sha1 FROM tbl_file e GROUP BY e.sha1 HAVING ( COUNT(e.sha1) &gt; 1 AND e.sha1 &lt;&gt; '' AND e.sha1 is not null))&quot;).list();
+-        s.getTransaction().commit();
++    public SearchChildren() {
++        CatalogEngine eng = Lookup.getDefault().lookup(CatalogEngine.class);
++        items = eng.findDuplicates();
+     }
+ 
+     @Override
+     @SuppressWarnings(&quot;unchecked&quot;)
+     protected void addNotify() {
+-        List keys = items;
+-        setKeys(keys);
++        setKeys(items);
+     }
+ 
+     @Override
+     protected Node[] createNodes(Object key) {
+         return new Node[]{new SearchResultNode((FileWrapper) key)};
+     }
++
++    public int getItemCount() {
++        if (items != null) {
++            return items.size();
++        }
++        return 0;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchParentNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchParentNode.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/SearchParentNode.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -6,7 +6,6 @@
+ 
+ import java.awt.Image;
+ import org.openide.nodes.AbstractNode;
+-import org.openide.nodes.Children;
+ import org.openide.util.Utilities;
+ import org.openide.util.actions.SystemAction;
+ 
+@@ -15,14 +14,18 @@
+  * @author Knitter
+  */
+ public class SearchParentNode extends AbstractNode {
+-
+-    //private SystemAction[] sysact;
+     
++    private SearchChildren ch;
++    
+     public SearchParentNode() {
+-        super(Children.LEAF);
+-        //super(new SearchChildren(null));TODO: squash the damn bug
+-        setName(&quot;Duplicates Found&quot;);//TODO: i18n
++        this(new SearchChildren());
+     }
++    
++    private SearchParentNode(SearchChildren ch) {
++       super(ch);
++       this.ch = ch;
++       setName(&quot;Duplicates Found: &quot; + ch.getItemCount());//TODO: i18n
++    }
+ 
+     @Override
+     public Image getIcon(int type) {
+
+Deleted: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/CompositeFile.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/CompositeFile.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/CompositeFile.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -1,35 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.readingfiles;
+-
+-import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
+-import java.io.File;
+-
+-public class CompositeFile {
+-    
+-    public final File file;
+-    public final FileWrapper parent;
+-    
+-    public CompositeFile(File file, FileWrapper parent) {
+-        this.file = file;
+-        this.parent = parent;                
+-    }
+-
+-}
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-07-18 15:57:29 UTC (rev 227)
+@@ -20,6 +20,7 @@
+ package de.berlios.jfindmyfiles.readingfiles;
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.CompositeFile;
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
+ import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
+@@ -30,7 +31,6 @@
+ import java.util.ArrayList;
+ import java.util.Stack;
+ import java.util.Vector;
+-import org.hibernate.Session;
+ import org.openide.util.Lookup;
+ 
+ public class MediaReader {
+@@ -49,21 +49,20 @@
+ 
+             public void run() {
+                 fireReadingStarted(new ReadingEvent(me, &quot;&quot;, null));
+-                Session s = Lookup.getDefault().lookup(CatalogEngine.class).sessionFactory.getCurrentSession();
++                CatalogEngine eng = Lookup.getDefault().lookup(CatalogEngine.class);
+                 PluginCache cache = Lookup.getDefault().lookup(PluginCache.class);
+-                s.beginTransaction();
+                 Stack&lt;CompositeFile&gt; directories = new Stack&lt;CompositeFile&gt;();
+                 File current, listing[];
+                 CompositeFile cf;
+                 long childSize = 0L, totalSize = 0L;
+                 FileWrapper fw, temp;
++                ArrayList&lt;FileWrapper&gt; files = new ArrayList&lt;FileWrapper&gt;();
+                 int z;
+                 String tExt;
+                 Reader reader;
+                 Media container = new Media();
+                 container.setName(mediaName);
+                 container.setType(ReadingUtils.findFileType(file.getAbsolutePath()));
+-                s.save(container);
+ 
+                 if ((listing = file.listFiles()) != null) {
+                     for (z = listing.length; z-- &gt; 0;) {
+@@ -80,7 +79,7 @@
+                                     (sha ? ReadingUtils.calculateSHA1HashString(listing[z]) : &quot;&quot;),
+                                     (tExt = ReadingUtils.findExtension(listing[z].getName())), //TODO: same for other attributes
+                                     (reader = cache.readerFor(tExt)) != null ? reader.read(listing[z]).getDescription() : &quot;&quot;);
+-                            s.save(temp);
++                            files.add(temp);
+                             container.addFile(temp);
+                         }
+                     }
+@@ -94,7 +93,7 @@
+                             current.getAbsolutePath(), 0, current.isFile(),
+                             current.isHidden(), current.lastModified(),
+                             container, cf.parent, &quot;&quot;, &quot;&quot;, &quot;&quot;);//NOTE: should we hash a directory?
+-                    s.save(fw);
++                    files.add(fw);
+                     if ((listing = current.listFiles()) != null) {
+                         for (z = listing.length; z-- &gt; 0;) {
+                             if (listing[z].isDirectory()) {
+@@ -110,7 +109,7 @@
+                                         (sha ? ReadingUtils.calculateSHA1HashString(listing[z]) : &quot;&quot;),
+                                         (tExt = ReadingUtils.findExtension(listing[z].getName())), //TODO: same for other attributes
+                                         (reader = cache.readerFor(tExt)) != null ? reader.read(listing[z]).getDescription() : &quot;&quot;);
+-                                s.save(temp);
++                                files.add(temp);
+                                 fw.addChild(temp);
+                             }
+                         }
+@@ -119,12 +118,11 @@
+                     totalSize += childSize;
+                 }
+                 //TODO: capacity and other properties
+-                if (abort) {
+-                    s.getTransaction().rollback();
+-                } else {
+-                    s.getTransaction().commit();
++                if (!abort) {
++                    eng.addNewDisk(container, files);
+                     fireReadingStopped(new ReadingEvent(me, &quot;&quot;, container));
+                 }
++                files.clear();
+             }
+         }).start();
+     }
+@@ -169,7 +167,7 @@
+     private void fireReadingFile(ReadingEvent evt) {
+         Vector&lt;ReadingListener&gt; copy = new Vector&lt;ReadingListener&gt;(listeners.size());
+         copy.addAll(listeners);
+-        
++
+         for (ReadingListener l : copy) {
+             l.readingFile(evt);
+         }
+@@ -178,7 +176,7 @@
+     private void fireReadingAborted(ReadingEvent evt) {
+         Vector&lt;ReadingListener&gt; copy = new Vector&lt;ReadingListener&gt;(listeners.size());
+         copy.addAll(listeners);
+-        
++
+         for (ReadingListener l : copy) {
+             l.readingAborted(evt);
+         }
+
+Modified: trunk/project/JFindMyFiles/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/project.properties	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/nbproject/project.properties	2008-07-18 15:57:29 UTC (rev 227)
+@@ -13,8 +13,6 @@
+     ${project.de.berlios.jfindmyfiles.importengine}:\
+     ${project.jonelo.jacksum}:\
+     ${project.com.drew.lang}:\
+-    ${project.org.netbeans.swing.etable}:\
+-    ${project.org.netbeans.modules.tableview}:\
+     ${project.de.berlios.jfindmyfiles.jdbcdrivers}
+ project.com.drew.lang=MetadataExtractor
+ project.com.toedter.plaf=JCalendar
+@@ -27,5 +25,3 @@
+ project.de.berlios.jfindmyfiles.persistence=Persistence
+ project.de.berlios.jfindmyfiles.readingfiles=ReadingFiles
+ project.jonelo.jacksum=JaCKSum
+-project.org.netbeans.modules.tableview=tableview
+-project.org.netbeans.swing.etable=org-netbeans-swing-outline
+
+Modified: trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/build-impl.xml	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/build-impl.xml	2008-07-18 15:57:29 UTC (rev 227)
+@@ -4,11 +4,8 @@
+ ***         EDIT ../build.xml INSTEAD         ***
+ --&gt;
+ &lt;project name=&quot;org.netbeans.swing.etable-impl&quot; basedir=&quot;..&quot;&gt;
+-    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
+-    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
+-    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
+-    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
+-    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/platform.properties&quot;/&gt;
+     &lt;macrodef uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; name=&quot;property&quot;&gt;
+         &lt;attribute name=&quot;name&quot;/&gt;
+         &lt;attribute name=&quot;value&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/genfiles.properties	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/genfiles.properties	2008-07-18 15:57:29 UTC (rev 227)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=7e04d8ea
++build.xml.data.CRC32=6ec0ea01
+ build.xml.script.CRC32=c7e7cfe4
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=7e04d8ea
+-nbproject/build-impl.xml.script.CRC32=44951d3d
++nbproject/build-impl.xml.data.CRC32=6ec0ea01
++nbproject/build-impl.xml.script.CRC32=7ab8bed7
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/project.xml	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/project.xml	2008-07-18 15:57:29 UTC (rev 227)
+@@ -4,7 +4,7 @@
+     &lt;configuration&gt;
+         &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
+             &lt;code-name-base&gt;org.netbeans.swing.etable&lt;/code-name-base&gt;
+-            &lt;suite-component/&gt;
++            &lt;standalone/&gt;
+             &lt;module-dependencies/&gt;
+             &lt;public-packages&gt;
+                 &lt;package&gt;org.netbeans.swing.etable&lt;/package&gt;
+
+Deleted: trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/suite.properties
+===================================================================
+--- trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/suite.properties	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/org-netbeans-swing-outline/nbproject/suite.properties	2008-07-18 15:57:29 UTC (rev 227)
+@@ -1 +0,0 @@
+-suite.dir=${basedir}/..
+
+Modified: trunk/project/JFindMyFiles/tableview/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/tableview/nbproject/build-impl.xml	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/tableview/nbproject/build-impl.xml	2008-07-18 15:57:29 UTC (rev 227)
+@@ -4,11 +4,8 @@
+ ***         EDIT ../build.xml INSTEAD         ***
+ --&gt;
+ &lt;project name=&quot;org.netbeans.modules.tableview-impl&quot; basedir=&quot;..&quot;&gt;
+-    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
+-    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
+-    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
+-    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
+-    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/platform.properties&quot;/&gt;
+     &lt;macrodef uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; name=&quot;property&quot;&gt;
+         &lt;attribute name=&quot;name&quot;/&gt;
+         &lt;attribute name=&quot;value&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/tableview/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/tableview/nbproject/genfiles.properties	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/tableview/nbproject/genfiles.properties	2008-07-18 15:57:29 UTC (rev 227)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=c39d8c26
++build.xml.data.CRC32=be85609b
+ build.xml.script.CRC32=c8f313fe
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=c39d8c26
+-nbproject/build-impl.xml.script.CRC32=b9cfbea7
++nbproject/build-impl.xml.data.CRC32=be85609b
++nbproject/build-impl.xml.script.CRC32=4c5387d4
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/tableview/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/tableview/nbproject/project.xml	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/tableview/nbproject/project.xml	2008-07-18 15:57:29 UTC (rev 227)
+@@ -4,7 +4,7 @@
+     &lt;configuration&gt;
+         &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
+             &lt;code-name-base&gt;org.netbeans.modules.tableview&lt;/code-name-base&gt;
+-            &lt;suite-component/&gt;
++            &lt;standalone/&gt;
+             &lt;module-dependencies&gt;
+                 &lt;dependency&gt;
+                     &lt;code-name-base&gt;org.openide.actions&lt;/code-name-base&gt;
+
+Deleted: trunk/project/JFindMyFiles/tableview/nbproject/suite.properties
+===================================================================
+--- trunk/project/JFindMyFiles/tableview/nbproject/suite.properties	2008-07-18 15:00:36 UTC (rev 226)
++++ trunk/project/JFindMyFiles/tableview/nbproject/suite.properties	2008-07-18 15:57:29 UTC (rev 227)
+@@ -1 +0,0 @@
+-suite.dir=${basedir}/..
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000221.html">[Jfindmyfiles-commits] r226 - trunk/docs
+</A></li>
+	<LI>Next message: <A HREF="000223.html">[Jfindmyfiles-commits] r228 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#222">[ date ]</a>
+              <a href="thread.html#222">[ thread ]</a>
+              <a href="subject.html#222">[ subject ]</a>
+              <a href="author.html#222">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

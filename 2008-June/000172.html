@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r177 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. nodes
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r177%20-%20in%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%3A%0A%09.%20nodes&In-Reply-To=%3C200806302006.m5UK6WSm011767%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000171.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r177 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. nodes</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r177%20-%20in%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%3A%0A%09.%20nodes&In-Reply-To=%3C200806302006.m5UK6WSm011767%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r177 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. nodes">knitter at mail.berlios.de
+       </A><BR>
+    <I>Mon Jun 30 22:06:32 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000171.html">[Jfindmyfiles-commits] r176 - trunk/docs/Documentos Externos
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#172">[ date ]</a>
+              <a href="thread.html#172">[ thread ]</a>
+              <a href="subject.html#172">[ subject ]</a>
+              <a href="author.html#172">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-30 22:06:25 +0200 (Mon, 30 Jun 2008)
+New Revision: 177
+
+Modified:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+Log:
+Mais uma tentativa de implementar a vista de ficheiros.
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java	2008-06-30 16:29:05 UTC (rev 176)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java	2008-06-30 20:06:25 UTC (rev 177)
+@@ -5,10 +5,19 @@
+ package de.berlios.jfindmyfiles.jfindmyfilesgui;
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
++import java.awt.Component;
+ import java.io.Serializable;
++import java.lang.reflect.InvocationTargetException;
+ import java.util.logging.Logger;
++import javax.swing.JLabel;
++import javax.swing.JTable;
++import javax.swing.event.TableModelEvent;
++import javax.swing.event.TableModelListener;
++import javax.swing.table.TableCellRenderer;
++import org.openide.explorer.propertysheet.PropertyPanel;
+ import org.openide.explorer.view.NodeTableModel;
+ import org.openide.nodes.Node;
++import org.openide.nodes.Node.Property;
+ import org.openide.util.Lookup;
+ import org.openide.util.LookupEvent;
+ import org.openide.util.LookupListener;
+@@ -28,11 +37,19 @@
+ 
+     private WindowTestingTopComponent() {
+         ntModel = new NodeTableModel();
++        ntModel.addTableModelListener(new TableModelListener() {
++
++            public void tableChanged(TableModelEvent e) {
++                System.err.println(&quot;TABLE CHANGED: &quot; + e.getType());
++                System.err.println(&quot;VALUE CLASS: &quot; + ntModel.getColumnClass(e.getColumn()));
++            }
++        });
+         Lookup.Result r = Utilities.actionsGlobalContext().lookup(new Lookup.Template(Media.class));
+         r.addLookupListener(this);
+         initComponents();
+         setName(NbBundle.getMessage(WindowTestingTopComponent.class, &quot;CTL_WindowTestingTopComponent&quot;));
+         setToolTipText(NbBundle.getMessage(WindowTestingTopComponent.class, &quot;HINT_WindowTestingTopComponent&quot;));
++        jTable1.setDefaultRenderer(Property.class, new PropertyCellRenderer());
+ //        setIcon(Utilities.loadImage(ICON_PATH, true));
+     }
+ 
+@@ -136,8 +153,42 @@
+         TopComponent.Registry registry = TopComponent.getRegistry();
+         Node[] act = registry.getActivatedNodes();
+         ntModel.setNodes(act);
+-        for(Node n : act) {
++        for (Node n : act) {
+             System.out.println(n);
+         }
+     }
++
++    class PropertyCellRenderer implements TableCellRenderer {
++
++        public Component getTableCellRendererComponent(JTable table,
++                Object value, boolean isSelected, boolean hasFocus, int row, int column) {
++            try {
++                PropertyPanel panel = new PropertyPanel((Property) value);
++                panel.setPreferences(PropertyPanel.PREF_TABLEUI);
++                System.err.println(&quot;VALUE FROM PROPERTY: &quot; + ((Property) value).getValue());
++                return panel;
++            } catch (IllegalAccessException ex) {
++                System.err.println(&quot;EXCEPTION&quot;);
++                return null;
++            } catch (InvocationTargetException ex) {
++                System.err.println(&quot;EXCEPTION&quot;);
++                return null;
++            }
++        }
++    }
++    
++    class MyPropertyCellRenderer extends JLabel implements TableCellRenderer {
++
++        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
++            try {
++                Property p = (Property) value;
++                setText((String) p.getValue());
++                return this;
++            } catch (IllegalAccessException ex) {
++                return null;
++            } catch (InvocationTargetException ex) {
++                return null;
++            }
++        }        
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-06-30 16:29:05 UTC (rev 176)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-06-30 20:06:25 UTC (rev 177)
+@@ -53,6 +53,7 @@
+         try {
+             
+             Sheet.Set sSet = Sheet.createPropertiesSet();
++            //Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
+             Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
+             //DiskNameProperty p = new DiskNameProperty(media.getName(), &quot;&quot;, media.getName());
+             sSet.put(p);
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000171.html">[Jfindmyfiles-commits] r176 - trunk/docs/Documentos Externos
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#172">[ date ]</a>
+              <a href="thread.html#172">[ thread ]</a>
+              <a href="subject.html#172">[ subject ]</a>
+              <a href="author.html#172">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

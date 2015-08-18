@@ -1,0 +1,1010 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r172 - in trunk/project/JFindMyFiles:	Catalog Catalog/nbproject	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/nbproject	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r172%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog%20Catalog/nbproject%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09JFindMyFilesGui/nbproject%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes&In-Reply-To=%3C200806251720.m5PHKUAJ029205%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000166.html">
+   <LINK REL="Next"  HREF="000168.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r172 - in trunk/project/JFindMyFiles:	Catalog Catalog/nbproject	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/nbproject	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r172%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog%20Catalog/nbproject%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09JFindMyFilesGui/nbproject%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes&In-Reply-To=%3C200806251720.m5PHKUAJ029205%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r172 - in trunk/project/JFindMyFiles:	Catalog Catalog/nbproject	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/nbproject	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes">knitter at mail.berlios.de
+       </A><BR>
+    <I>Wed Jun 25 19:20:30 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000166.html">[Jfindmyfiles-commits] r171 - in trunk/docs: . Iteracao1-CB09
+</A></li>
+        <LI>Next message: <A HREF="000168.html">[Jfindmyfiles-commits] r173 - in trunk: docs/Iteracao6-CB07	docs/Iteracao7-CB06	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/MetadataExtractor	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#167">[ date ]</a>
+              <a href="thread.html#167">[ thread ]</a>
+              <a href="subject.html#167">[ subject ]</a>
+              <a href="author.html#167">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-25 19:20:14 +0200 (Wed, 25 Jun 2008)
+New Revision: 172
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/build.xml
+   trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/Catalog/nbproject/project.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogConstants.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+Log:
+Altera?\195?\167?\195?\181es ao sistema de visualiza?\195?\167?\195?\163o de dados.
+
+Modified: trunk/project/JFindMyFiles/Catalog/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/build.xml	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/Catalog/build.xml	2008-06-25 17:20:14 UTC (rev 172)
+@@ -1,8 +1,8 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
+-&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
+-&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
+-&lt;project name=&quot;de.berlios.jfindmyfiles.catalog&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
+-    &lt;description&gt;Builds, tests, and runs the project de.berlios.jfindmyfiles.catalog.&lt;/description&gt;
+-    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
+-&lt;/project&gt;
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.catalog&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project de.berlios.jfindmyfiles.catalog.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++&lt;/project&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml	2008-06-25 17:20:14 UTC (rev 172)
+@@ -1,30 +1,30 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+---&gt;
+-&lt;project name=&quot;de.berlios.jfindmyfiles.catalog-impl&quot; basedir=&quot;..&quot;&gt;
+-    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
+-    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
+-    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
+-    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
+-    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
+-    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
+-        &lt;attribute name=&quot;name&quot;/&gt;
+-        &lt;attribute name=&quot;value&quot;/&gt;
+-        &lt;sequential&gt;
+-            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
+-        &lt;/sequential&gt;
+-    &lt;/macrodef&gt;
+-    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
+-    &lt;nbmproject2:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
+-    &lt;nbmproject2:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
+-    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
+-        &lt;condition&gt;
+-            &lt;not&gt;
+-                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
+-            &lt;/not&gt;
+-        &lt;/condition&gt;
+-    &lt;/fail&gt;
+-    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
+-&lt;/project&gt;
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.catalog-impl&quot; basedir=&quot;..&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; name=&quot;property&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property value=&quot;${@{value}}&quot; name=&quot;@{name}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; name=&quot;harness.dir&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; name=&quot;netbeans.dest.dir&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available type=&quot;dir&quot; file=&quot;${harness.dir}&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties	2008-06-25 17:20:14 UTC (rev 172)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=4bf6d054
+-build.xml.script.CRC32=986962b5
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=4bf6d054
+-nbproject/build-impl.xml.script.CRC32=ff140e4d
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=e83eaa83
++build.xml.script.CRC32=986962b5
++build.xml.stylesheet.CRC32=79c3b980
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=e83eaa83
++nbproject/build-impl.xml.script.CRC32=5ab6bd33
++nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/Catalog/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/project.xml	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/project.xml	2008-06-25 17:20:14 UTC (rev 172)
+@@ -1,24 +1,32 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
+-    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
+-    &lt;configuration&gt;
+-        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
+-            &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
+-            &lt;suite-component/&gt;
+-            &lt;module-dependencies&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.persistence&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-            &lt;/module-dependencies&gt;
+-            &lt;public-packages&gt;
+-                &lt;package&gt;de.berlios.jfindmyfiles.catalog&lt;/package&gt;
+-                &lt;package&gt;de.berlios.jfindmyfiles.catalog.entities&lt;/package&gt;
+-            &lt;/public-packages&gt;
+-        &lt;/data&gt;
+-    &lt;/configuration&gt;
+-&lt;/project&gt;
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
++            &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.persistence&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.openide.util&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;7.12.0.1&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++            &lt;/module-dependencies&gt;
++            &lt;public-packages&gt;
++                &lt;package&gt;de.berlios.jfindmyfiles.catalog&lt;/package&gt;
++                &lt;package&gt;de.berlios.jfindmyfiles.catalog.entities&lt;/package&gt;
++            &lt;/public-packages&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties	2008-06-25 17:20:14 UTC (rev 172)
+@@ -18,3 +18,9 @@
+  # &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  ##
+ OpenIDE-Module-Name=Catalog
++HDD=HDD
++FLOPPY=FLOPPY
++CDROM=CD-ROM
++DVDROM=DVD-ROM
++FOLDER=FOLDER
++UNKNOWN_TYPE=Unknown
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogConstants.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogConstants.java	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogConstants.java	2008-06-25 17:20:14 UTC (rev 172)
+@@ -4,11 +4,13 @@
+  */
+ package de.berlios.jfindmyfiles.catalog;
+ 
++import org.openide.util.NbBundle;
++
+ /**
+  *
+  * @author Knitter
+  */
+-public interface CatalogConstants {
++public abstract class CatalogConstants {
+ 
+     public static final int HDD = 0;
+     public static final int FLOPPY = 1;
+@@ -21,4 +23,21 @@
+     public static final int MSSQL = 2;
+     public static final int MYSQL = 3;
+     public static final int LOCAL = 4;
+-}
++
++    public static String getTypeName(int type) {
++        switch (type) {
++            case CatalogConstants.HDD:
++                return NbBundle.getMessage(CatalogConstants.class, &quot;HDD&quot;);
++            case CatalogConstants.FLOPPY:
++                return NbBundle.getMessage(CatalogConstants.class, &quot;FLOPPY&quot;);
++            case CatalogConstants.CDROM:
++                return NbBundle.getMessage(CatalogConstants.class, &quot;CDROM&quot;);
++            case CatalogConstants.DVDROM:
++                return NbBundle.getMessage(CatalogConstants.class, &quot;DVDROM&quot;);
++            case CatalogConstants.FOLDER:
++                return NbBundle.getMessage(CatalogConstants.class, &quot;FOLDER&quot;);
++            default:
++                return NbBundle.getMessage(CatalogConstants.class, &quot;UNKNOWN_TYPE&quot;);
++        }
++    }
++}
+\ No newline at end of file
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-25 17:20:14 UTC (rev 172)
+@@ -266,6 +266,7 @@
+         return rs;
+     }
+ 
++    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+     public void addListener(CatalogEngineListener l) {
+         if (listeners == null) {
+             listeners = new Vector&lt;CatalogEngineListener&gt;();
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-06-25 17:20:14 UTC (rev 172)
+@@ -19,7 +19,9 @@
+  */
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
++import java.util.ArrayList;
+ import java.util.LinkedHashSet;
++import java.util.List;
+ import java.util.Set;
+ 
+ /**
+@@ -89,9 +91,7 @@
+         if (children == null) {
+             children = new LinkedHashSet();
+         }
+-
+         children.add(child);
+-
+     }
+ 
+     /**
+@@ -104,6 +104,14 @@
+         }
+     }
+ 
++    public List&lt;FileWrapper&gt; getChildrenList() {
++        ArrayList&lt;FileWrapper&gt; temp = new ArrayList&lt;FileWrapper&gt;(children.size());
++        for (Object o : children) {
++            temp.add((FileWrapper) o);
++        }
++        return temp;
++    }
++
+     public String getAbsolutePath() {
+         return absolutePath;
+     }
+@@ -151,11 +159,11 @@
+     public void setExtension(String extension) {
+         this.extension = extension;
+     }
+-    
++
+     public String getSha1() {
+         return sha1;
+     }
+-    
++
+     public void setSha1(String sha1) {
+         this.sha1 = sha1;
+     }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-06-25 17:20:14 UTC (rev 172)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=db3d6c4c
++build.xml.data.CRC32=83a598ae
+ build.xml.script.CRC32=6fe2168f
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=db3d6c4c
++nbproject/build-impl.xml.data.CRC32=83a598ae
+ nbproject/build-impl.xml.script.CRC32=fc3c2090
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/project.xml	2008-06-25 17:20:14 UTC (rev 172)
+@@ -56,6 +56,15 @@
+                     &lt;/run-dependency&gt;
+                 &lt;/dependency&gt;
+                 &lt;dependency&gt;
++                    &lt;code-name-base&gt;org.netbeans.api.progress&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;release-version&gt;1&lt;/release-version&gt;
++                        &lt;specification-version&gt;1.11.0.1&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
+                     &lt;code-name-base&gt;org.netbeans.modules.options.api&lt;/code-name-base&gt;
+                     &lt;build-prerequisite/&gt;
+                     &lt;compile-dependency/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form	2008-06-25 17:20:14 UTC (rev 172)
+@@ -35,7 +35,7 @@
+         &lt;Component class=&quot;javax.swing.JTable&quot; name=&quot;jtDetailsTable&quot;&gt;
+           &lt;Properties&gt;
+             &lt;Property name=&quot;model&quot; type=&quot;javax.swing.table.TableModel&quot; editor=&quot;org.netbeans.modules.form.RADConnectionPropertyEditor&quot;&gt;
+-              &lt;Connection code=&quot;ntModel&quot; type=&quot;code&quot;/&gt;
++              &lt;Connection code=&quot;nModel&quot; type=&quot;code&quot;/&gt;
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
+         &lt;/Component&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java	2008-06-25 17:20:14 UTC (rev 172)
+@@ -19,14 +19,17 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogConstants;
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
+ import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
+ import java.io.Serializable;
+ import java.util.Collection;
++import java.util.List;
+ import java.util.logging.Logger;
+ import javax.swing.table.AbstractTableModel;
++import org.hibernate.Session;
+ import org.openide.explorer.view.NodeTableModel;
+ import org.openide.util.Lookup;
+ import org.openide.util.LookupEvent;
+@@ -40,28 +43,23 @@
+ /**
+  * Top component which displays something.
+  */
+-final class DetailsViewTopComponent extends TopComponent implements LookupListener {
++final class DetailsViewTopComponent extends TopComponent {
+ 
+     private static DetailsViewTopComponent instance;
+-    /** path to the icon used by the component and its open action */
+-//    static final String ICON_PATH = &quot;SET/PATH/TO/ICON/HERE&quot;;
+     private static final String PREFERRED_ID = &quot;DetailsViewTopComponent&quot;;
+-    private NodeTableModel ntModel;
++    private NodeModel nModel;
++    private CatalogEngine eng;
+     private Lookup.Result catalogResult = null;
+     private Lookup.Result diskResult = null;
+     private Lookup.Result groupResult = null;
+     private Lookup.Result fileResult = null;
+-    //
+-    private Object[] sItem = new Object[4];
+-    private int sItemIndex;
+ 
+     private DetailsViewTopComponent() {
+-        ntModel = new NodeTableModel();
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
++        nModel = new NodeModel();
+         initComponents();
+         setName(NbBundle.getMessage(DetailsViewTopComponent.class, &quot;CTL_DetailsViewTopComponent&quot;));
+         setToolTipText(NbBundle.getMessage(DetailsViewTopComponent.class, &quot;HINT_DetailsViewTopComponent&quot;));
+-//        setIcon(Utilities.loadImage(ICON_PATH, true));
+-        sItem[0] = Lookup.getDefault().lookup(CatalogEngine.class);
+     }
+ 
+     /** This method is called from within the constructor to
+@@ -75,7 +73,7 @@
+         jscpDetailsScroll = new javax.swing.JScrollPane();
+         jtDetailsTable = new javax.swing.JTable();
+ 
+-        jtDetailsTable.setModel(ntModel);
++        jtDetailsTable.setModel(nModel);
+         jscpDetailsScroll.setViewportView(jtDetailsTable);
+ 
+         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(this);
+@@ -132,27 +130,27 @@
+     @Override
+     public void componentOpened() {
+         diskResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(Media.class));
+-        diskResult.addLookupListener(this);
++        diskResult.addLookupListener(nModel);
+ 
+         catalogResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(CatalogEngine.class));
+-        catalogResult.addLookupListener(this);
++        catalogResult.addLookupListener(nModel);
+ 
+         fileResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(FileWrapper.class));
+-        fileResult.addLookupListener(this);
++        fileResult.addLookupListener(nModel);
+ 
+         groupResult = Utilities.actionsGlobalContext().lookup(new Lookup.Template(DiskGroup.class));
+-        groupResult.addLookupListener(this);
++        groupResult.addLookupListener(nModel);
+     }
+ 
+     @Override
+     public void componentClosed() {
+-        diskResult.removeLookupListener(this);
++        diskResult.removeLookupListener(nModel);
+         diskResult = null;
+-        catalogResult.removeLookupListener(this);
++        catalogResult.removeLookupListener(nModel);
+         catalogResult = null;
+-        fileResult.removeLookupListener(this);
++        fileResult.removeLookupListener(nModel);
+         fileResult = null;
+-        groupResult.removeLookupListener(this);
++        groupResult.removeLookupListener(nModel);
+         groupResult = null;
+     }
+ 
+@@ -176,48 +174,244 @@
+         }
+     }
+ 
+-    public void resultChanged(LookupEvent evt) {
+-        Collection c = ((Lookup.Result) evt.getSource()).allInstances();
+-        Object o;
+-        if (!c.isEmpty()) {
+-            o = c.iterator().next();
+-            if (o instanceof CatalogEngine) {
+-                sItemIndex = 0;
+-            } else if (o instanceof DiskGroup) {
+-                sItem[1] = o;
+-                sItemIndex = 1;
+-            } else if (o instanceof Media) {
+-                sItem[2] = o;
+-                sItemIndex = 2;
+-            } else if (o instanceof FileWrapper) {
+-                sItem[3] = o;
+-                sItemIndex = 3;
+-            }
++    private class NodeModel extends AbstractTableModel implements LookupListener {
++
++        private List catalogChildren;
++        private Object[] sItem = new Object[4];
++        private int sItemIndex;
++
++        public NodeModel() {
++            super();
++            loadCatalogChildren();
++            sItem[0] = eng;
+         }
+-    }
+ 
+-    private class NodeModel extends AbstractTableModel {
++        private void loadCatalogChildren() {
++            Session s = eng.sessionFactory.getCurrentSession();
++            s.beginTransaction();
++            catalogChildren.addAll(s.createQuery(&quot;from DiskGroup where parent.id is null&quot;).list());
++            catalogChildren.addAll(s.createQuery(&quot;from Media where group.id is null&quot;).list());
++            s.getTransaction().commit();
++        }
+ 
+         public int getRowCount() {
+-           return 10;
++            switch (sItemIndex) {
++                case 0://Catalog
++                    return catalogChildren.size();
++                case 1://Group
++                    return ((DiskGroup) sItem[1]).getGroupList().size() + ((DiskGroup) sItem[1]).getDiskList().size();
++                case 2://Media
++                    ((Media) sItem[2]).getFileList().size();
++                    return 0;
++                case 3://File
++                    ((FileWrapper) sItem[3]).getChildrenList().size();
++                default:
++                    return 0;
++            }
+         }
+ 
+         public int getColumnCount() {
+-/*            switch(sItemIndex) {
++            switch (sItemIndex) {
+                 case 0://CatalogEngine
+-                    return;
++                    return 7;
+                 case 1://Group
+-                    return;
++                    return 7;
+                 case 2://Media
+-                    return;
+                 case 3://File
+-                    return;
+-            }*/
+-            return 0;
++                    return 6;
++                default:
++                    return 0;
++            }
+         }
+ 
+         public Object getValueAt(int rowIndex, int columnIndex) {
+-            throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++            Object o = null;
++            switch (sItemIndex) {
++                case 0://CatalogEngine
++                    o = catalogChildren.get(rowIndex);
++                    if (o instanceof DiskGroup) {
++                        switch (columnIndex) {
++                            case 0: //name;
++                                return ((DiskGroup) o).getName();
++                            case 1: //capacity;
++                                return ((DiskGroup) o).getCapacity();
++                            case 2: //freeSpace;
++                            case 3: //lastModified;
++                                return 0;
++                            case 6: //type;
++                                return &quot;Disk Group&quot;;//TODO: i18n
++                            case 4: //description;
++                                return ((DiskGroup) o).getDescription();
++                            case 5: //location;
++                                return &quot;&quot;;
++                        }
++                    } else {
++                        switch (columnIndex) {
++                            case 0: //name;
++                                return ((Media) o).getName();
++                            case 1: //capacity;
++                                return ((Media) o).getCapacity();
++                            case 2: //freeSpace;
++                                return ((Media) o).getFreeSpace();
++                            case 3: //lastModified;
++                                return ((Media) o).getLastModified();
++                            case 4: //type;
++                                return CatalogConstants.getTypeName(((Media) o).getType());
++                            case 5: //location;
++                                return ((Media) o).getLocation();
++                            case 6: //description;
++                                return ((Media) o).getDescription();
++                        }
++                    }
++                    return new Object();
++                case 1://Group
++                    if (rowIndex &lt; ((DiskGroup) sItem[1]).getGroupList().size()) {
++                        o = ((DiskGroup) sItem[1]).getGroupList().get(rowIndex);
++                    } else {
++                        o = ((DiskGroup) sItem[1]).getDiskList().get(rowIndex - ((DiskGroup) sItem[1]).getGroupList().size());
++                    }
++                    if (o instanceof DiskGroup) {
++                        switch (columnIndex) {
++                            case 0: //name;
++                                return ((DiskGroup) o).getName();
++                            case 1: //description;
++                                return ((DiskGroup) o).getDescription();
++                            case 2: //capacity;
++                                return ((DiskGroup) o).getCapacity();
++                            case 3: //lastModified;
++                            case 4: //freeSpace;
++                                return 0;
++                            case 5: //location;
++                                return &quot;&quot;;
++                            case 6: //type;
++                                return &quot;Disk Group&quot;;//TODO: i18n
++                        }
++                    } else {
++                        switch (columnIndex) {
++                            case 0: //name;
++                                return ((Media) o).getName();
++                            case 1: //description;
++                                return ((Media) o).getDescription();
++                            case 2: //capacity;
++                                return ((Media) o).getCapacity();
++                            case 3: //lastModified;
++                                return ((Media) o).getLastModified();
++                            case 4: //freeSpace;
++                                return ((Media) o).getFreeSpace();
++                            case 5: //location;
++                                return ((Media) o).getLocation();
++                            case 6: //type;
++                                return CatalogConstants.getTypeName(((Media) o).getType());
++                        }
++                    }
++                    return new Object();
++                case 2://Media
++                case 3://File
++                    if (o instanceof Media) {
++                        switch (columnIndex) {
++                            case 0://name
++                                return ((Media) o).getName();
++                            case 1://extension;
++                                return &quot;&quot;;
++                            case 2://size;
++                                return ((Media) o).getCapacity() - ((Media) o).getFreeSpace();
++                            case 3://lastModified;
++                                return ((Media) o).getLastModified();
++                            case 4://sha1;
++                                return &quot;&quot;;
++                            case 5://description;
++                                return ((Media) o).getDescription();
++                        }
++                    } else {
++                        switch (columnIndex) {
++                            case 0://name
++                                return ((FileWrapper) o).getName();
++                            case 1://extension;
++                                return ((FileWrapper) o).getExtension();
++                            case 2://size;
++                                return ((FileWrapper) o).getSize();
++                            case 3://lastModified;
++                                return ((FileWrapper) o).getLastModified();
++                            case 4://sha1;
++                                return ((FileWrapper) o).getSha1();
++                            case 5://description;
++                                return ((FileWrapper) o).getDescription();
++                        }
++                    }
++                    return new Object();
++                default:
++                    return new Object();
++            }
+         }
++
++        @Override
++        public Class getColumnClass(int columnIndex) {
++            Object o = null;
++            switch (sItemIndex) {
++                case 0://CatalogEngine
++                    switch (columnIndex) {
++                        case 1: //capacity;
++                        case 2: //freeSpace;
++                        case 3: //lastModified;
++                            return long.class;
++                        case 0: //name;
++                        case 6: //type;
++                        case 4: //description;
++                        case 5: //location;
++                            return String.class;
++                        default:
++                            return Object.class;
++                    }
++                case 1://Group
++                    switch (columnIndex) {
++                        case 0: //name;
++                        case 1: //description;
++                        case 5: //location;
++                        case 6: //type;
++                            return String.class;
++                        case 2: //capacity;
++                        case 3: //lastModified;
++                        case 4: //freeSpace;
++                            return long.class;
++                        default:
++                            return Object.class;
++                    }
++                case 2://Media
++                case 3://File
++                    switch (columnIndex) {
++                        case 0://name
++                        case 1://extension;
++                        case 4://sha1;
++                        case 5://description;
++                            return String.class;
++                        case 2://size;
++                        case 3://lastModified;
++                            return long.class;
++                    }
++                default:
++                    return Object.class;
++            }
++        }
++
++        public void resultChanged(LookupEvent evt) {
++            Collection c = ((Lookup.Result) evt.getSource()).allInstances();
++            Object o;
++            if (!c.isEmpty()) {
++                o = c.iterator().next();
++                if (o instanceof CatalogEngine) {
++                    sItemIndex = 0;
++                } else if (o instanceof DiskGroup) {
++                    sItem[1] = o;
++                    sItemIndex = 1;
++                } else if (o instanceof Media) {
++                    sItem[2] = o;
++                    sItemIndex = 2;
++                } else if (o instanceof FileWrapper) {
++                    sItem[3] = o;
++                    sItemIndex = 3;
++                }
++                fireTableDataChanged();
++            }
++        }
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SearchWindowTopComponent.java	2008-06-25 17:20:14 UTC (rev 172)
+@@ -16,6 +16,8 @@
+ import org.hibernate.Session;
+ import org.hibernate.criterion.MatchMode;
+ import org.hibernate.criterion.Restrictions;
++import org.netbeans.api.progress.ProgressHandle;
++import org.netbeans.api.progress.ProgressHandleFactory;
+ import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
+ import org.openide.windows.TopComponent;
+@@ -31,8 +33,6 @@
+     private DefaultListModel listModel;
+     private boolean searching;
+     private static SearchWindowTopComponent instance;
+-    /** path to the icon used by the component and its open action */
+-//    static final String ICON_PATH = &quot;SET/PATH/TO/ICON/HERE&quot;;
+     private static final String PREFERRED_ID = &quot;SearchWindowTopComponent&quot;;
+ 
+     private SearchWindowTopComponent() {
+@@ -55,45 +55,41 @@
+ 
+     @SuppressWarnings(&quot;unchecked&quot;)
+     private void search() {
+-        if (!searching) {
+-            searching = true;
+-            listModel.clear();
++        listModel.clear();
++        boolean inDescription = jchkSearchInDesc.isSelected();
++        boolean casein = jchkCaseSensitive.isSelected();
++        String sText = jtfSearchText.getText().trim();
++        Session s = eng.sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        Criteria crit = s.createCriteria(FileWrapper.class);
+ 
+-            boolean inDescription = jchkSearchInDesc.isSelected();
+-            boolean casein = jchkCaseSensitive.isSelected();
+-            String sText = jtfSearchText.getText().trim();
+-            Session s = eng.sessionFactory.getCurrentSession();
+-            s.beginTransaction();
+-            Criteria crit = s.createCriteria(FileWrapper.class);
++        if (casein &amp;&amp; inDescription) {//case sensitive and in description
++            crit.add(Restrictions.or(Restrictions.ilike(&quot;name&quot;, sText, MatchMode.ANYWHERE),
++                    Restrictions.ilike(&quot;description&quot;, sText, MatchMode.ANYWHERE)));
++        } else if (casein) { //only case sensitive not in descriptions
++            crit.add(Restrictions.ilike(&quot;name&quot;, sText, MatchMode.ANYWHERE));
++        } else if (inDescription) { //in description but not case sensitive
++            crit.add(Restrictions.or(Restrictions.like(&quot;name&quot;, sText, MatchMode.ANYWHERE),
++                    Restrictions.like(&quot;description&quot;, sText, MatchMode.ANYWHERE)));
++        } else { //only in name not in descriptions and not case sensitive
++            crit.add(Restrictions.like(&quot;name&quot;, sText, MatchMode.ANYWHERE));
++        }
+ 
+-            if (casein &amp;&amp; inDescription) {//case sensitive and in description
+-                crit.add(Restrictions.or(Restrictions.ilike(&quot;name&quot;, sText, MatchMode.ANYWHERE),
+-                        Restrictions.ilike(&quot;description&quot;, sText, MatchMode.ANYWHERE)));
+-            } else if (casein) { //only case sensitive not in descriptions
+-                crit.add(Restrictions.ilike(&quot;name&quot;, sText, MatchMode.ANYWHERE));
+-            } else if (inDescription) { //in description but not case sensitive
+-                crit.add(Restrictions.or(Restrictions.like(&quot;name&quot;, sText, MatchMode.ANYWHERE),
+-                        Restrictions.like(&quot;description&quot;, sText, MatchMode.ANYWHERE)));
+-            } else { //only in name not in descriptions and not case sensitive
+-                crit.add(Restrictions.like(&quot;name&quot;, sText, MatchMode.ANYWHERE));
+-            }
++        /*if (jchkUseReGex.isSelected()) {//NOTE: don't really know if this is necessary.
++        sText = sText.replaceAll(&quot;*&quot;, &quot;%&quot;);
++        }*/
+ 
+-            /*if (jchkUseReGex.isSelected()) {//NOTE: don't really know if this is necessary.
+-            sText = sText.replaceAll(&quot;*&quot;, &quot;%&quot;);
+-            }*/
++        if (jrdbDiskGroupOnly.isSelected()) {
++            DiskGroup dg = (DiskGroup) jcbxDiskGroups.getSelectedItem();
++            crit.add(Restrictions.eq(&quot;disk.group.id&quot;, dg.getId()));
++        }
+ 
+-            if (jrdbDiskGroupOnly.isSelected()) {
+-                DiskGroup dg = (DiskGroup) jcbxDiskGroups.getSelectedItem();
+-                crit.add(Restrictions.eq(&quot;disk.group.id&quot;, dg.getId()));
+-            }
+-
+-            for (Object o : crit.list()) {
+-                o.equals(null);
+-                listModel.addElement(o);
+-            }
+-            s.getTransaction().commit();
+-            searching = false;
++        for (Object o : crit.list()) {
++            o.equals(null);
++            listModel.addElement(o);
+         }
++        s.getTransaction().commit();
++
+     }
+ 
+     /** This method is called from within the constructor to
+@@ -292,7 +288,10 @@
+             public void run() {
+                 //NOTE: race condition!
+                 searching = true;
++                ProgressHandle p = ProgressHandleFactory.createHandle(&quot;searching...&quot;);//TODO: i18n
++                p.start();
+                 search();
++                p.finish();
+                 searching = false;
+             }
+         }).start();
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java	2008-06-25 17:20:14 UTC (rev 172)
+@@ -64,7 +64,8 @@
+         return false;
+     }
+ 
+-    public boolean isActive() {
++    @Override
++    public boolean isEnabled() {
+         return eng.isOpened();
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-06-25 17:20:14 UTC (rev 172)
+@@ -64,12 +64,6 @@
+     &lt;folder name=&quot;Menu&quot;&gt;
+         &lt;folder name=&quot;Actions&quot;&gt;
+             &lt;attr name=&quot;position&quot; intvalue=&quot;700&quot;/&gt;
+-            &lt;folder name=&quot;File Management&quot;&gt;
+-                &lt;attr name=&quot;position&quot; intvalue=&quot;600&quot;/&gt;
+-                &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDelete.shadow&quot;&gt;
+-                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDelete.instance&quot;/&gt;
+-                &lt;/file&gt;
+-            &lt;/folder&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionEditDescription.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionEditDescription.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;300&quot;/&gt;
+@@ -78,10 +72,6 @@
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionLaunchFile.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;200&quot;/&gt;
+             &lt;/file&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionProperties.shadow&quot;&gt;
+-                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionProperties.instance&quot;/&gt;
+-                &lt;attr name=&quot;position&quot; intvalue=&quot;800&quot;/&gt;
+-            &lt;/file&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRemoveFromCatalog.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRemoveFromCatalog.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;700&quot;/&gt;
+@@ -94,11 +84,7 @@
+                 &lt;attr name=&quot;instanceClass&quot; stringvalue=&quot;javax.swing.JSeparator&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;500&quot;/&gt;
+             &lt;/file&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-separatorBefore.instance&quot;&gt;
+-                &lt;attr name=&quot;instanceClass&quot; stringvalue=&quot;javax.swing.JSeparator&quot;/&gt;
+-                &lt;attr name=&quot;position&quot; intvalue=&quot;750&quot;/&gt;
+-            &lt;/file&gt;
+-        &lt;/folder&gt;
++            &lt;/folder&gt;
+         &lt;folder name=&quot;Edit&quot;&gt;
+             &lt;file name=&quot;Separator2.instance_hidden&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDisk.shadow&quot;&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-06-25 11:45:53 UTC (rev 171)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-06-25 17:20:14 UTC (rev 172)
+@@ -20,11 +20,9 @@
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
+-import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionRemoveFromCatalog;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.utils.GuiUtils;
+ import java.awt.Image;
+ import org.openide.nodes.AbstractNode;
+-import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
+ import org.openide.util.actions.SystemAction;
+ import org.openide.util.lookup.Lookups;
+@@ -35,16 +33,12 @@
+  */
+ public class DiskNode extends AbstractNode {
+ 
+-    private SystemAction[] sysact;
+     private Media media;
+ 
+     public DiskNode(Media media) {
+         super(new DiskChildren(media.getId(), true), Lookups.singleton(media));
+         this.media = media;
+         setName(media.getName());
+-
+-        Lookup lo = Lookups.forPath(&quot;/Actions&quot;);//TODO: sort actions correctly and add separators
+-        sysact = new SystemAction[]{lo.lookup(ActionRemoveFromCatalog.class)};
+     }
+ 
+     @Override
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000166.html">[Jfindmyfiles-commits] r171 - in trunk/docs: . Iteracao1-CB09
+</A></li>
+	<LI>Next message: <A HREF="000168.html">[Jfindmyfiles-commits] r173 - in trunk: docs/Iteracao6-CB07	docs/Iteracao7-CB06	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/MetadataExtractor	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#167">[ date ]</a>
+              <a href="thread.html#167">[ thread ]</a>
+              <a href="subject.html#167">[ subject ]</a>
+              <a href="author.html#167">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,661 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r259 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r259%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes&In-Reply-To=%3C200807271901.m6RJ1G7t030110%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000253.html">
+   <LINK REL="Next"  HREF="000255.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r259 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r259%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes&In-Reply-To=%3C200807271901.m6RJ1G7t030110%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r259 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes">knitter at mail.berlios.de
+       </A><BR>
+    <I>Sun Jul 27 21:01:16 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000253.html">[Jfindmyfiles-commits] r258 - in trunk: . docs
+</A></li>
+        <LI>Next message: <A HREF="000255.html">[Jfindmyfiles-commits] r260 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#254">[ date ]</a>
+              <a href="thread.html#254">[ thread ]</a>
+              <a href="subject.html#254">[ subject ]</a>
+              <a href="author.html#254">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-07-27 21:01:06 +0200 (Sun, 27 Jul 2008)
+New Revision: 259
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineEvent.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcCatalogProperties.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcClose.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+Log:
+Actualiza?\195?\167?\195?\163o para activar op?\195?\167?\195?\181es de em n?\195?\179s que estavam inactivas. Compreende os menus de contexto e todas as op?\195?\167?\195?\181es associadas.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-07-27 19:01:06 UTC (rev 259)
+@@ -113,6 +113,9 @@
+ 
+                     //Try to shutdown the database as soon as there all connections are gone
+                     //hConfig.setProperty(&quot;hibernate.connection.shutdown&quot;, &quot;true&quot;);
++                    
++                    //NOTE:TODO: remove this line, only for debugging what seems to be HSQLDB related bug.
++                    hConfig.setProperty(&quot;hibernate.jdbc.batch_size&quot;, &quot;0&quot;);
+ 
+                     hConfig.setProperty(&quot;hibernate.connection.password&quot;, &quot;&quot;);//HSQLDB has a user with no password
+ 
+@@ -147,7 +150,7 @@
+         cSession.beginTransaction();
+         properties = (CatalogProperties) cSession.createQuery(&quot;from CatalogProperties&quot;).uniqueResult();
+         cSession.getTransaction().commit();
+-        fireCatalogOpened(new CatalogEngineEvent(this, dbname, null, null, null, null));
++        fireCatalogOpened(new CatalogEngineEvent(this, dbname, null, null, null, null, -1));
+     }
+ 
+     /**
+@@ -172,22 +175,9 @@
+         properties.setCreationDate(new Date());
+         cSession.save(properties);
+         cSession.getTransaction().commit();
+-        fireCatalogCreated(new CatalogEngineEvent(this, dbname, null, null, null, null));
++        fireCatalogCreated(new CatalogEngineEvent(this, dbname, null, null, null, null, -1));
+     }
+ 
+-    /**
+-     * 
+-     */
+-    public void closeCatalog() {
+-        if (sessionFactory != null) {
+-            sessionFactory.close();
+-            sessionFactory = null;
+-            opened = false;
+-            fireCatalogClosed(new CatalogEngineEvent(this, properties.getName(), null, null, null, null));
+-            listeners.clear();
+-        }
+-    }
+-
+     public CatalogProperties getProperties() {
+         return properties;
+     }
+@@ -196,7 +186,27 @@
+         return opened;
+     }
+ 
+-    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
++    public void addNewDisk(Media disk, List&lt;FileWrapper&gt; files) {
++        Session s = sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        s.save(disk);
++        for (FileWrapper f : files) {
++            s.save(f);
++        }
++        s.getTransaction().commit();
++        fireDiskAdded(new CatalogEngineEvent(this, &quot;&quot;, null, null, null, disk, -1));
++    }
++    
++    public void removeDisk(Media disk) {
++        int groupId = (int)(disk.getGroup() != null ? disk.getGroup().getId() : -1);
++        Session s = sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        s.delete(disk);
++        s.getTransaction().commit();
++        fireDiskRemoved(new CatalogEngineEvent(this, &quot;&quot;, null, null, disk, null, groupId));
++    }
++    
++
+     public void addDiskGroup(String name, String description, DiskGroup parent) {
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+@@ -206,9 +216,36 @@
+         dg.setParent(parent);
+         cSession.save(dg);
+         cSession.getTransaction().commit();
+-        fireDiskGroupAdded(new CatalogEngineEvent(this, &quot;&quot;, null, dg, null, null));
++        fireDiskGroupAdded(new CatalogEngineEvent(this, &quot;&quot;, null, dg, null, null, -1));
+     }
++    
++    public void removeDiskGroup(DiskGroup group) {
++        Session s = sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        /*List&lt;Media&gt; disks = group.getDiskList();
++        for(Media m : disks) {
++            m.setGroup(null);
++        }
++        List&lt;DiskGroup&gt; groups = group.getGroupList();
++        for(DiskGroup g : groups) {
++            g.setParent(null);
++        }*/
++        s.delete(group);
++        s.getTransaction().commit();
++        fireDiskGroupRemoved(new CatalogEngineEvent(this, &quot;&quot;, group, null, null, null, -1));        
++    }
+ 
++    /*XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX*/
++    public void closeCatalog() {
++        if (sessionFactory != null) {
++            sessionFactory.close();
++            sessionFactory = null;
++            opened = false;
++            fireCatalogClosed(new CatalogEngineEvent(this, properties.getName(), null, null, null, null, -1));
++            listeners.clear();
++        }
++    }
++
+     public void addLabel(String name) {
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+@@ -289,7 +326,7 @@
+             listeners.remove(l);
+         }
+     }
+-    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
++
+     private void fireCatalogCreated(CatalogEngineEvent evt) {
+         if (listeners != null) {
+             for (CatalogEngineListener l : listeners) {
+@@ -321,6 +358,14 @@
+             }
+         }
+     }
++    
++    private void fireDiskGroupRemoved(CatalogEngineEvent evt) {
++        if (listeners != null) {
++            for (CatalogEngineListener l : listeners) {
++                l.diskGroupRemoved(evt);
++            }
++        }
++    }    
+ 
+     private void fireDiskAdded(CatalogEngineEvent evt) {
+         if (listeners != null) {
+@@ -329,14 +374,14 @@
+             }
+         }
+     }
+-    
++
+     private void fireDiskRemoved(CatalogEngineEvent evt) {
+         if (listeners != null) {
+             for (CatalogEngineListener l : listeners) {
+                 l.diskRemoved(evt);
+             }
+         }
+-    }    
++    }
+ 
+     /**
+      * In overriding the finalize method we try to garantee that data is 
+@@ -350,17 +395,6 @@
+     }
+ 
+     //TESTING:
+-    public void addNewDisk(Media disk, List&lt;FileWrapper&gt; files) {
+-        Session s = sessionFactory.getCurrentSession();
+-        s.beginTransaction();
+-        s.save(disk);
+-        for (FileWrapper f : files) {
+-            s.save(f);
+-        }
+-        s.getTransaction().commit();
+-        fireDiskAdded(new CatalogEngineEvent(this, &quot;&quot;, null, null, null, disk));
+-    }
+-
+     public List&lt;FileWrapper&gt; findDuplicates() {
+         List&lt;FileWrapper&gt; result = new ArrayList&lt;FileWrapper&gt;();
+         Session s = sessionFactory.getCurrentSession();
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineEvent.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineEvent.java	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineEvent.java	2008-07-27 19:01:06 UTC (rev 259)
+@@ -34,9 +34,10 @@
+     private DiskGroup newDiskGroup;
+     private Media oldDisk;
+     private Media newDisk;
++    private int groupId;
+ 
+     public CatalogEngineEvent(CatalogEngine source, String name, DiskGroup oldDiskGroup,
+-            DiskGroup newDiskGroup, Media oldDisk, Media newDisk) {
++            DiskGroup newDiskGroup, Media oldDisk, Media newDisk, int groupId) {
+         
+         super(source);
+         this.name = name;
+@@ -44,7 +45,12 @@
+         this.newDiskGroup = newDiskGroup;
+         this.oldDisk = oldDisk;
+         this.newDisk = newDisk;
++        this.groupId = groupId;               
+     }
++    
++    public int getGroupId() {
++        return groupId;
++    }
+ 
+     public String getName() {
+         return name;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-07-27 19:01:06 UTC (rev 259)
+@@ -42,7 +42,7 @@
+             &lt;key column=&quot;MEDIA_ID&quot;/&gt;
+             &lt;many-to-many column=&quot;LABEL_ID&quot; class=&quot;de.berlios.jfindmyfiles.catalog.entities.Label&quot;/&gt;
+         &lt;/set&gt;
+-        &lt;set name=&quot;files&quot; inverse=&quot;true&quot;&gt;
++        &lt;set name=&quot;files&quot; inverse=&quot;true&quot; cascade=&quot;delete&quot;&gt;
+             &lt;key column=&quot;MEDIA_ID&quot;/&gt;
+             &lt;one-to-many class=&quot;de.berlios.jfindmyfiles.catalog.entities.FileWrapper&quot;/&gt;
+         &lt;/set&gt; 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcCatalogProperties.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcCatalogProperties.java	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcCatalogProperties.java	2008-07-27 19:01:06 UTC (rev 259)
+@@ -52,7 +52,6 @@
+     @Override
+     protected void initialize() {
+         super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+         putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+     }
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcClose.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcClose.java	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcClose.java	2008-07-27 19:01:06 UTC (rev 259)
+@@ -38,7 +38,6 @@
+     @Override
+     protected void initialize() {
+         super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+         putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+     }
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java	2008-07-27 19:01:06 UTC (rev 259)
+@@ -20,10 +20,18 @@
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
++import de.berlios.jfindmyfiles.catalog.entities.Media;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.DiskGroupNode;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.DiskNode;
++import org.openide.nodes.Node;
+ import org.openide.util.HelpCtx;
+ import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
++import org.openide.util.Utilities;
+ import org.openide.util.actions.CallableSystemAction;
++import org.openide.windows.TopComponent;
+ 
+ public final class AcRemove extends CallableSystemAction {
+ 
+@@ -36,7 +44,24 @@
+ 
+     public void performAction() {
+         if (eng.isOpened()) {
++            DiskGroup g;
++            Media m;
++            if ((g = Utilities.actionsGlobalContext().lookup(DiskGroup.class)) != null) {
++                eng.removeDiskGroup(g);
++            } else if ((m = Utilities.actionsGlobalContext().lookup(Media.class)) != null) {
++                eng.removeDisk(m);
++            }
+         }
++
++        /*TopComponent.Registry registry = TopComponent.getRegistry();
++        Node[] act = registry.getActivatedNodes();
++        if (act.length &gt; 0) {
++            if (act[0] instanceof DiskGroupNode) {
++                System.err.println(&quot;group node selected&quot;);
++            } else if (act[0] instanceof DiskNode) {
++                System.err.println(&quot;media node selected&quot;);
++            }
++        }*/
+     }
+ 
+     public String getName() {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-07-27 19:01:06 UTC (rev 259)
+@@ -558,6 +558,7 @@
+             CSV cvs = new CSV(selectedFile);
+             cvs.addListener(this);
+             cvs.export();
++            dispose();
+             break;
+         case 1://HTML
+             HTML html = new HTML(selectedFile,
+@@ -565,26 +566,31 @@
+                     (Template) jcbxSelectTemplate.getSelectedItem());
+             html.addListener(this);
+             html.export();
++            dispose();
+             break;
+         case 2://SQL
+             SQL sql = new SQL(selectedFile);
+             sql.addListener(this);
+             sql.export();
++            dispose();
+             break;
+         case 3://ODS
+             ODS ods = new ODS(selectedFile);
+             ods.addListener(this);
+             ods.export();
++            dispose();
+             break;
+         case 4://XLS
+             XLS xls = new XLS(selectedFile);
+             xls.addListener(this);
+             xls.export();
++            dispose();
+             break;
+         case 5://XML
+             XML xml = new XML(selectedFile);
+             xml.addListener(this);
+             xml.export();
++            dispose();
+     }
+ }//GEN-LAST:event_jbtnExportActionPerformed
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java	2008-07-27 19:01:06 UTC (rev 259)
+@@ -113,8 +113,9 @@
+ 
+     @SuppressWarnings(&quot;unchecked&quot;)
+     public void diskRemoved(CatalogEngineEvent evt) {
+-        if (evt.getNewDisk().getGroup() == null) {
+-            items.remove(evt.getNewDisk());
++        //if (evt.getGroupId() &lt; 0) {
++        if(evt.getOldDisk().getGroup() == null) {
++            items.remove(evt.getOldDisk());
+             addNotify();
+         }
+     }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-07-27 19:01:06 UTC (rev 259)
+@@ -55,30 +55,29 @@
+         setName(eng.getProperties().getName());
+ 
+         Lookup lo = Lookups.forPath(&quot;/Actions&quot;);//TODO: sort actions correctly and add separators
+-        sysact = new SystemAction[]{lo.lookup(AcCatalogProperties.class),
+-                    lo.lookup(AcRenumberDisks.class), lo.lookup(AcSearchDuplicates.class),
+-                    lo.lookup(AcNewDisk.class), lo.lookup(AcNewGroup.class), lo.lookup(AcClose.class),
+-                    lo.lookup(AcExport.class), lo.lookup(AcImport.class)
++        sysact = new SystemAction[]{lo.lookup(AcNewDisk.class), lo.lookup(AcNewGroup.class),
++                    lo.lookup(AcCatalogProperties.class), lo.lookup(AcSearchDuplicates.class),
++                    lo.lookup(AcRenumberDisks.class), lo.lookup(AcImport.class),
++                    lo.lookup(AcExport.class), lo.lookup(AcClose.class)
+                 };
+     }
+ 
+-    @Override
++    /*@Override
+     protected Sheet createSheet() {
+-        Sheet s = Sheet.createDefault();
+-        /*try {
+-        
+-        Sheet.Set sSet = Sheet.createPropertiesSet();
+-        //Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
+-        Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
+-        //DiskNameProperty p = new DiskNameProperty(media.getName(), &quot;&quot;, media.getName());
+-        sSet.put(p);
+-        s.put(sSet);
+-        } catch (NoSuchMethodException ex) {
+-        Exceptions.printStackTrace(ex);
+-        }*/
+-        return s;
++    Sheet s = Sheet.createDefault();
++    try {
++    
++    Sheet.Set sSet = Sheet.createPropertiesSet();
++    //Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
++    Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
++    //DiskNameProperty p = new DiskNameProperty(media.getName(), &quot;&quot;, media.getName());
++    sSet.put(p);
++    s.put(sSet);
++    } catch (NoSuchMethodException ex) {
++    Exceptions.printStackTrace(ex);
+     }
+-
++    return s;
++    }*/
+     @Override
+     public Image getIcon(int type) {
+         return Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/nodes/catalog.png&quot;);
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java	2008-07-27 19:01:06 UTC (rev 259)
+@@ -84,8 +84,6 @@
+             items.add(evt.getNewDiskGroup());
+             addNotify();
+         }
+-        System.err.println(&quot;ADICIONADO GRUPO COM NOME:&quot; + evt.getNewDiskGroup());
+-        System.err.println(&quot;PERTENCE? &quot; + parentId + &quot;/&quot; + evt.getNewDiskGroup().getParent() == null ? null : evt.getNewDiskGroup().getParent().getId());
+     }
+ 
+     @SuppressWarnings(&quot;unchecked&quot;)
+@@ -106,8 +104,6 @@
+             items.add(evt.getNewDisk());
+             addNotify();
+         }
+-        System.err.println(&quot;ADICIONADO DISCO COM NOME:&quot; + evt.getNewDisk());
+-        System.err.println(&quot;PERTENCE? &quot; + parentId + &quot;/&quot; + evt.getNewDisk().getGroup() == null ? null : evt.getNewDisk().getGroup().getId());
+     }
+ 
+     @SuppressWarnings(&quot;unchecked&quot;)
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-07-27 19:01:06 UTC (rev 259)
+@@ -46,29 +46,35 @@
+     private DiskGroup group;
+ 
+     public DiskGroupNode(DiskGroup group, boolean leaf) {
+-        super((leaf ? Children.LEAF : new DiskGroupChildren(group.getId())), Lookups.singleton(group));
++        //super((leaf ? Children.LEAF : new DiskGroupChildren(group.getId())), Lookups.singleton(group));
++        super(new DiskGroupChildren(group.getId()), Lookups.singleton(group));
+         setName(group.getName());
++        Lookup.getDefault().lookup(CatalogEngine.class).addListener(this);
+         this.group = group;
+         Lookup.getDefault().lookup(CatalogEngine.class).addListener(this);
+         Lookup lo = Lookups.forPath(&quot;/Actions&quot;);//TODO: sort actions correctly and add separators
+-        sysact = new SystemAction[]{lo.lookup(AcRemove.class), lo.lookup(AcItemProperties.class),
+-                    lo.lookup(AcRenumberDisks.class), lo.lookup(AcNewDisk.class), lo.lookup(AcNewGroup.class)
++        sysact = new SystemAction[]{lo.lookup(AcNewDisk.class), lo.lookup(AcNewGroup.class),
++                    lo.lookup(AcRemove.class), lo.lookup(AcRenumberDisks.class),
++                    lo.lookup(AcItemProperties.class)
+                 };
+     }
+ 
+     @Override
+-    public Image getIcon(int type) {
++    public Image getIcon(
++            int type) {
+         return Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/nodes/disk-group.png&quot;);
+     }
+ 
+     @Override
+-    public Image getOpenedIcon(int type) {
++    public Image getOpenedIcon(
++            int type) {
+         return getIcon(type);
+     }
+ 
+     @Override
+     public SystemAction[] getActions(boolean bool) {
+-        return new SystemAction[]{};
++        //return new SystemAction[]{};
++        return sysact;
+     }
+ 
+     public void catalogCreated(CatalogEngineEvent evt) {
+@@ -93,10 +99,11 @@
+ 
+     @SuppressWarnings(&quot;unchecked&quot;)
+     public void diskGroupRenamed(CatalogEngineEvent evt) {
+-        if(evt.getNewDiskGroup().getId().equals(group.getId())) {
++        if (evt.getNewDiskGroup().getId().equals(group.getId())) {
+             group = evt.getNewDiskGroup();
+             setName(group.getName());
+         }
++
+     }
+ 
+     public void diskAdded(CatalogEngineEvent evt) {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-07-26 19:02:06 UTC (rev 258)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-07-27 19:01:06 UTC (rev 259)
+@@ -20,6 +20,8 @@
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.AcItemProperties;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.AcRemove;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.utils.GuiUtils;
+ import java.awt.Image;
+ import java.lang.reflect.InvocationTargetException;
+@@ -29,6 +31,7 @@
+ import org.openide.nodes.PropertySupport;
+ import org.openide.nodes.Sheet;
+ import org.openide.util.Exceptions;
++import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
+ import org.openide.util.actions.SystemAction;
+ import org.openide.util.lookup.Lookups;
+@@ -40,30 +43,38 @@
+ public class DiskNode extends AbstractNode {
+ 
+     private Media media;
++    private SystemAction[] sysact;
+ 
+     public DiskNode(Media media) {
+         super(new DiskChildren(media.getId(), true), Lookups.singleton(media));
+         this.media = media;
+         setName(media.getName());
++        Lookup lo = Lookups.forPath(&quot;/Actions&quot;);//TODO: sort actions correctly and add separators
++        sysact = new SystemAction[]{lo.lookup(AcRemove.class), lo.lookup(AcItemProperties.class)};
+     }
++
++    /*@Override
++    protected Sheet createSheet() {
++    Sheet s = Sheet.createDefault();
++    //try {
+     
++    Sheet.Set sSet = Sheet.createPropertiesSet();
++    //Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
++    //Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
++    DiskNameProperty p = new DiskNameProperty(media.getName(), &quot;&quot;, media.getName());
++    sSet.put(p);
++    s.put(sSet);
++    //} catch (NoSuchMethodException ex) {
++    //  Exceptions.printStackTrace(ex);
++    //}
++    return s;
++    }*/
+     @Override
+-    protected Sheet createSheet() {
+-        Sheet s = Sheet.createDefault();
+-        //try {
+-            
+-            Sheet.Set sSet = Sheet.createPropertiesSet();
+-            //Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
+-            //Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
+-            DiskNameProperty p = new DiskNameProperty(media.getName(), &quot;&quot;, media.getName());
+-            sSet.put(p);
+-            s.put(sSet);
+-        //} catch (NoSuchMethodException ex) {
+-          //  Exceptions.printStackTrace(ex);
+-        //}
+-        return s;
++    public SystemAction[] getActions(boolean bool) {
++        //return new SystemAction[]{};
++        return sysact;
+     }
+-     
++
+     @Override
+     public Image getIcon(int type) {
+         return Utilities.loadImage(GuiUtils.findIconForType(media.getType()));
+@@ -74,11 +85,6 @@
+         return getIcon(type);
+     }
+ 
+-    @Override
+-    public SystemAction[] getActions(boolean bool) {
+-        return new SystemAction[]{};
+-    }
+-    
+     public Object getValue() {
+         return null;
+     }
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000253.html">[Jfindmyfiles-commits] r258 - in trunk: . docs
+</A></li>
+	<LI>Next message: <A HREF="000255.html">[Jfindmyfiles-commits] r260 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#254">[ date ]</a>
+              <a href="thread.html#254">[ thread ]</a>
+              <a href="subject.html#254">[ subject ]</a>
+              <a href="author.html#254">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

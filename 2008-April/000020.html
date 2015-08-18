@@ -1,0 +1,392 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r24 -	trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-April/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r24%20-%0A%09trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos&In-Reply-To=%3C200804081355.m38DtMDT009539%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000019.html">
+   <LINK REL="Next"  HREF="000021.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r24 -	trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos</H1>
+    <B>tica at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r24%20-%0A%09trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos&In-Reply-To=%3C200804081355.m38DtMDT009539%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r24 -	trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos">tica at mail.berlios.de
+       </A><BR>
+    <I>Tue Apr  8 15:55:22 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000019.html">[Jfindmyfiles-commits] r23 - trunk/docs/15x5
+</A></li>
+        <LI>Next message: <A HREF="000021.html">[Jfindmyfiles-commits] r25 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#20">[ date ]</a>
+              <a href="thread.html#20">[ thread ]</a>
+              <a href="subject.html#20">[ subject ]</a>
+              <a href="author.html#20">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: tica
+Date: 2008-04-08 15:55:10 +0200 (Tue, 08 Apr 2008)
+New Revision: 24
+
+Modified:
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.form
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.java
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.form
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.java
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.form
+   trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.java
+Log:
+
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.form
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.form	2008-04-04 11:48:16 UTC (rev 23)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.form	2008-04-08 13:55:10 UTC (rev 24)
+@@ -9,6 +9,7 @@
+   &lt;/SyntheticProperties&gt;
+   &lt;AuxValues&gt;
+     &lt;AuxValue name=&quot;FormSettings_autoResourcing&quot; type=&quot;java.lang.Integer&quot; value=&quot;0&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_autoSetComponentName&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_generateMnemonicsCode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_i18nAutoMode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_layoutCodeTarget&quot; type=&quot;java.lang.Integer&quot; value=&quot;1&quot;/&gt;
+@@ -21,12 +22,41 @@
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+           &lt;EmptySpace min=&quot;0&quot; pref=&quot;385&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;EmptySpace min=&quot;0&quot; pref=&quot;385&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace pref=&quot;223&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; pref=&quot;62&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace min=&quot;-2&quot; pref=&quot;19&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+           &lt;EmptySpace min=&quot;0&quot; pref=&quot;346&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;EmptySpace min=&quot;0&quot; pref=&quot;346&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace pref=&quot;312&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jButton2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;OK&quot;/&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton2&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Cancelar&quot;/&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++  &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.java
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.java	2008-04-04 11:48:16 UTC (rev 23)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoExportacao.java	2008-04-08 13:55:10 UTC (rev 24)
+@@ -26,17 +26,38 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jButton1 = new javax.swing.JButton();
++        jButton2 = new javax.swing.JButton();
++
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
++        jButton1.setText(&quot;OK&quot;);
++
++        jButton2.setText(&quot;Cancelar&quot;);
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGap(0, 385, Short.MAX_VALUE)
++            .addGap(0, 385, Short.MAX_VALUE)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap(223, Short.MAX_VALUE)
++                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jButton2)
++                .addGap(19, 19, 19))
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGap(0, 346, Short.MAX_VALUE)
++            .addGap(0, 346, Short.MAX_VALUE)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap(312, Short.MAX_VALUE)
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jButton2)
++                    .addComponent(jButton1))
++                .addContainerGap())
+         );
+ 
+         pack();
+@@ -60,6 +81,8 @@
+     }
+     
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JButton jButton2;
+     // End of variables declaration//GEN-END:variables
+     
+ }
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.form
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.form	2008-04-04 11:48:16 UTC (rev 23)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.form	2008-04-08 13:55:10 UTC (rev 24)
+@@ -9,6 +9,7 @@
+   &lt;/SyntheticProperties&gt;
+   &lt;AuxValues&gt;
+     &lt;AuxValue name=&quot;FormSettings_autoResourcing&quot; type=&quot;java.lang.Integer&quot; value=&quot;0&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_autoSetComponentName&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_generateMnemonicsCode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_i18nAutoMode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_layoutCodeTarget&quot; type=&quot;java.lang.Integer&quot; value=&quot;1&quot;/&gt;
+@@ -21,12 +22,39 @@
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+           &lt;EmptySpace min=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace pref=&quot;238&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; pref=&quot;62&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace min=&quot;-2&quot; pref=&quot;19&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+           &lt;EmptySpace min=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace pref=&quot;266&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jButton2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;OK&quot;/&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton2&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Cancelar&quot;/&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++  &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.java
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.java	2008-04-04 11:48:16 UTC (rev 23)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoImportacao.java	2008-04-08 13:55:10 UTC (rev 24)
+@@ -26,17 +26,36 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jButton1 = new javax.swing.JButton();
++        jButton2 = new javax.swing.JButton();
++
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
++        jButton1.setText(&quot;OK&quot;);
++
++        jButton2.setText(&quot;Cancelar&quot;);
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGap(0, 400, Short.MAX_VALUE)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap(238, Short.MAX_VALUE)
++                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jButton2)
++                .addGap(19, 19, 19))
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGap(0, 300, Short.MAX_VALUE)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap(266, Short.MAX_VALUE)
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jButton2)
++                    .addComponent(jButton1))
++                .addContainerGap())
+         );
+ 
+         pack();
+@@ -60,6 +79,8 @@
+     }
+     
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JButton jButton2;
+     // End of variables declaration//GEN-END:variables
+     
+ }
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.form
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.form	2008-04-04 11:48:16 UTC (rev 23)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.form	2008-04-08 13:55:10 UTC (rev 24)
+@@ -9,6 +9,7 @@
+   &lt;/SyntheticProperties&gt;
+   &lt;AuxValues&gt;
+     &lt;AuxValue name=&quot;FormSettings_autoResourcing&quot; type=&quot;java.lang.Integer&quot; value=&quot;0&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_autoSetComponentName&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_generateMnemonicsCode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_i18nAutoMode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_layoutCodeTarget&quot; type=&quot;java.lang.Integer&quot; value=&quot;1&quot;/&gt;
+@@ -20,13 +21,38 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace pref=&quot;238&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; pref=&quot;62&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace min=&quot;-2&quot; pref=&quot;19&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace pref=&quot;266&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jButton2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton2&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;Cancelar&quot;/&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; value=&quot;OK&quot;/&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++  &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.java
+===================================================================
+--- trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.java	2008-04-04 11:48:16 UTC (rev 23)
++++ trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos/DialogoOpcoes.java	2008-04-08 13:55:10 UTC (rev 24)
+@@ -26,17 +26,34 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jButton2 = new javax.swing.JButton();
++        jButton1 = new javax.swing.JButton();
++
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
++        jButton2.setText(&quot;Cancelar&quot;);
++
++        jButton1.setText(&quot;OK&quot;);
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 400, Short.MAX_VALUE)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap(238, Short.MAX_VALUE)
++                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jButton2)
++                .addGap(19, 19, 19))
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 300, Short.MAX_VALUE)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap(266, Short.MAX_VALUE)
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jButton2)
++                    .addComponent(jButton1))
++                .addContainerGap())
+         );
+ 
+         pack();
+@@ -60,6 +77,8 @@
+     }
+     
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JButton jButton2;
+     // End of variables declaration//GEN-END:variables
+     
+ }
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000019.html">[Jfindmyfiles-commits] r23 - trunk/docs/15x5
+</A></li>
+	<LI>Next message: <A HREF="000021.html">[Jfindmyfiles-commits] r25 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#20">[ date ]</a>
+              <a href="thread.html#20">[ thread ]</a>
+              <a href="subject.html#20">[ subject ]</a>
+              <a href="author.html#20">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

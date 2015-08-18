@@ -1,0 +1,937 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r141 - in trunk: docs	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r141%20-%20in%20trunk%3A%20docs%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils&In-Reply-To=%3C200806102331.m5ANVjUX006437%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000135.html">
+   <LINK REL="Next"  HREF="000137.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r141 - in trunk: docs	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r141%20-%20in%20trunk%3A%20docs%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils&In-Reply-To=%3C200806102331.m5ANVjUX006437%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r141 - in trunk: docs	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils">knitter at mail.berlios.de
+       </A><BR>
+    <I>Wed Jun 11 01:31:45 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000135.html">[Jfindmyfiles-commits] r140 - in trunk: docs	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entitymanagers	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/ReadingFiles/src/META-INF/services	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils
+</A></li>
+        <LI>Next message: <A HREF="000137.html">[Jfindmyfiles-commits] r142 - in trunk: docs/Documentos Externos	docs/Documentos Externos/images project/JFindMyFiles/HSQLDB	spikes/Prototipos/src/de/berlios/kcookb/imagens
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136">[ date ]</a>
+              <a href="thread.html#136">[ thread ]</a>
+              <a href="subject.html#136">[ subject ]</a>
+              <a href="author.html#136">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-11 01:31:06 +0200 (Wed, 11 Jun 2008)
+New Revision: 141
+
+Added:
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEvent.java
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportEvent.java
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportListener.java
+Removed:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entitymanagers/
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/
+Modified:
+   trunk/docs/TODO
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineEvent.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/hibernate.general.cfg.xml
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportListener.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/CompositeFile.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/FileUtils.java
+Log:
+Commit de rotina, removidos alguns packages, adicionadas classes em falta e retirados alguns TODO.
+
+Modified: trunk/docs/TODO
+===================================================================
+--- trunk/docs/TODO	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/docs/TODO	2008-06-10 23:31:06 UTC (rev 141)
+@@ -13,7 +13,6 @@
+ <A HREF="http://www.hibernate.org/hib_docs/v3/reference/en/html/tutorial.html">http://www.hibernate.org/hib_docs/v3/reference/en/html/tutorial.html</A>
+ 
+ Itera&#231;&#227;o 2:
+-	- ligar c&#243;digo de leitura para permitir ler os dados dos discos, implica uma base de API
+ 	- Fazer DER e modelo de dominio com base no esquema usado para o mapeamento
+ 	- Abrir cat&#225;logo
+ 	- Fechar cat&#225;logo
+@@ -42,7 +41,6 @@
+ 	- importar dados de outras aplica&#231;&#245;es
+ 
+ TODOS:
+-	Todos os eventos t&#234;m de extender de EventObject e todas as interfaces de listeners de EventListener
+ 	Proper logging
+ NOTAS:
+ 	Aten&#231;&#227;o ao nome dos paineis e componentes na internacionaliza&#231;&#227;o
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -148,7 +148,7 @@
+         cSession.beginTransaction();
+         properties = (CatalogProperties) cSession.createQuery(&quot;from CatalogProperties&quot;).uniqueResult();
+         cSession.getTransaction().commit();
+-        fireCatalogOpened(new CatalogEngineEvent(dbname, null, null, null, null));
++        fireCatalogOpened(new CatalogEngineEvent(this, dbname, null, null, null, null));
+     }
+ 
+     /**
+@@ -173,7 +173,7 @@
+         properties.setCreationDate(new Date());
+         cSession.save(properties);        
+         cSession.getTransaction().commit();
+-        fireCatalogCreated(new CatalogEngineEvent(dbname, null, null, null, null));
++        fireCatalogCreated(new CatalogEngineEvent(this, dbname, null, null, null, null));
+     }
+ 
+     /**
+@@ -183,7 +183,7 @@
+         if (sessionFactory != null) {
+             sessionFactory.close();
+             sessionFactory = null;
+-            fireCatalogClosed(new CatalogEngineEvent(properties.getName(), null, null, null, null));
++            fireCatalogClosed(new CatalogEngineEvent(this, properties.getName(), null, null, null, null));
+         }
+     }
+ 
+@@ -261,23 +261,18 @@
+         return rs;
+     }
+ 
+-    public void readDisk(File file, DiskGroup group, boolean isMedia) {
+-        //TODO: remove this method
+-    }
+-
+-    public void exportCatalog() {
+-    }
+-
+-    public void importCatalog() {
+-    }
+-
+-    //NOTE: TEMP CODE!
+     public void addListener(CatalogEngineListener l) {
+         if (listeners == null) {
+             listeners = new Vector&lt;CatalogEngineListener&gt;();
+         }
+         listeners.add(l);
+     }
++    
++    public void removeListener(CatalogEngineListener l) {
++        if(listeners != null) {
++            listeners.remove(l);
++        }
++    }
+ 
+     private void fireCatalogCreated(CatalogEngineEvent evt) {
+         if (listeners != null) {
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineEvent.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineEvent.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineEvent.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -1,17 +1,33 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+ package de.berlios.jfindmyfiles.catalog;
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
++import java.util.EventObject;
+ 
+ /**
+  *
+  * @author Knitter
+  */
+-public class CatalogEngineEvent {
++public class CatalogEngineEvent extends EventObject {
+ 
+     private String name;
+     private DiskGroup oldDiskGroup;
+@@ -19,9 +35,10 @@
+     private Media oldDisk;
+     private Media newDisk;
+ 
+-    public CatalogEngineEvent(String name, DiskGroup oldDiskGroup,
++    public CatalogEngineEvent(CatalogEngine source, String name, DiskGroup oldDiskGroup,
+             DiskGroup newDiskGroup, Media oldDisk, Media newDisk) {
+         
++        super(source);
+         this.name = name;
+         this.oldDiskGroup = oldDiskGroup;
+         this.newDiskGroup = newDiskGroup;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -1,15 +1,27 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.catalog;
+ 
+-/**
+- *
+- * @author knitter
+- */
+-public interface CatalogEngineListener {
++import java.util.EventListener;
++
++public interface CatalogEngineListener extends EventListener {
+     
+     void catalogCreated(CatalogEngineEvent evt);
+     void catalogOpened(CatalogEngineEvent evt);
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -89,7 +89,6 @@
+         return owner.equals(other.owner) &amp;&amp; data.length == other.data.length &amp;&amp; data == other.data;
+     }
+ 
+-    //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+      * @return integer representing the hashcode
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -144,7 +144,6 @@
+         return this.name.equals(other.name);
+     }
+ 
+-    //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+      * @return integer representing the hashcode
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -164,7 +164,6 @@
+         return name.equals(other.name) &amp;&amp; description.equals(other.description);
+     }
+ 
+-    //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+      * @return integer representing the hashcode
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -266,7 +266,6 @@
+         return size == other.size &amp;&amp; name.equals(other.name) &amp;&amp; absolutePath.equals(other.absolutePath);
+     }
+ 
+-    //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+      * @return integer representing the hashcode
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -89,7 +89,6 @@
+         return owner.equals(other.owner) &amp;&amp; data.length == other.data.length &amp;&amp; data == data;
+     }
+ 
+-    //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+      * @return integer representing the hashcode
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -80,7 +80,6 @@
+         return name.equals(other.name);
+     }
+ 
+-    //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+      * @return integer representing the hashcode
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -111,7 +111,6 @@
+                 : (other.returned != null ? false : true));
+     }
+     
+-    //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+      * @return integer representing the hashcode
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -236,7 +236,6 @@
+         return name.equals(other.name) &amp;&amp; description.equals(other.description) &amp;&amp; type.equals(other.type);
+     }
+ 
+-    //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+      * @return integer representing the hashcode
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -81,7 +81,7 @@
+         Type other = (Type) obj;
+         return name.equals(other.name);
+     }
+-    //TODO: link for the equals method
++
+     /**
+      * HashCode for this object, excluding the id field.
+      * @return integer representing the hashcode
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -115,7 +115,6 @@
+         return firstname.equals(other.firstname) &amp;&amp; surname.equals(other.surname);
+     }
+ 
+-    //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+      * @return integer representing the hashcode
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -89,7 +89,6 @@
+ 
+     }
+ 
+-    //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+      * @return integer representing the hashcode
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/hibernate.general.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/hibernate.general.cfg.xml	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/hibernate.general.cfg.xml	2008-06-10 23:31:06 UTC (rev 141)
+@@ -42,10 +42,7 @@
+ 
+         &lt;!-- Setting autocommit to false --&gt;
+         &lt;property name=&quot;connection.autocommit&quot;&gt;false&lt;/property&gt;
+-        
+-        &lt;!-- //TODO: remove this line and replace with proper one --&gt;
+-        &lt;!-- &lt;property name=&quot;hbm2ddl.auto&quot;&gt;create&lt;/property&gt; --&gt;
+-        
++              
+         &lt;property name=&quot;connection.shutdown&quot;&gt;true&lt;/property&gt;
+ 
+         &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml&quot;/&gt;
+
+Added: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEvent.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEvent.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEvent.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -0,0 +1,24 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.exportengine;
++
++public class ExportEvent {
++
++}
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportListener.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportListener.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportListener.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -1,15 +1,31 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.exportengine;
+ 
++import java.util.EventListener;
++
+ /**
+  *
+  * @author Knitter
+  */
+-public interface ExportListener {
++public interface ExportListener extends EventListener {
+     
+     void exportStarted();
+     void exportFinished();
+
+Added: trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportEvent.java
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportEvent.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportEvent.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -0,0 +1,20 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.importengine;
++
++import java.util.EventObject;
++
++/**
++ *
++ * @author Knitter
++ */
++public class ImportEvent extends EventObject {
++    
++    public ImportEvent(ImportEngine source) {
++        super(source);
++    }
++
++}
+
+Added: trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportListener.java
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportListener.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportListener.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -0,0 +1,16 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.importengine;
++
++import java.util.EventListener;
++
++/**
++ *
++ * @author Knitter
++ */
++public interface ImportListener extends EventListener {
++
++}
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -21,35 +21,20 @@
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import javax.swing.JOptionPane;
+-import org.openide.DialogDisplayer;
+-import org.openide.NotifyDescriptor;
+ import org.openide.util.HelpCtx;
+ import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
+ import org.openide.util.actions.CallableSystemAction;
+-import org.openide.util.lookup.Lookups;
+ import org.openide.windows.WindowManager;
+ 
+ public final class ActionAddNewDiskGroup extends CallableSystemAction {
+ 
+     public void performAction() {
+-        //TODO: get input dialog again!
+-        NotifyDescriptor.InputLine nd = new NotifyDescriptor.InputLine(&quot;Disk Group Name:&quot;, &quot;New Disk Group&quot;, NotifyDescriptor.OK_CANCEL_OPTION, NotifyDescriptor.PLAIN_MESSAGE);//TODO: i18n
++        String name = JOptionPane.showInputDialog(WindowManager.getDefault().getMainWindow(), NbBundle.getMessage(ActionAddNewDiskGroup.class, &quot;AddNewDiskGroupInputMessage&quot;));
+ 
+-        Object result = DialogDisplayer.getDefault().notify(nd);
+-
+-        if (result.equals(NotifyDescriptor.OK_OPTION)) {
+-            String name = nd.getInputText();
+-
+-
+-
+-            if (name != null &amp;&amp; !name.isEmpty()) {
+-                Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;);
+-                CatalogEngine eng = lu.lookup(CatalogEngine.class);
+-                if (eng != null) {
+-                    eng.addDiskGroup(name, &quot;&quot;, null);//TODO: get selected node
+-                }
+-            }
++        if (name != null &amp;&amp; !name.isEmpty()) {
++            CatalogEngine eng = Lookup.getDefault().lookup(CatalogEngine.class);
++            eng.addDiskGroup(name, &quot;&quot;, null);//TODO: get the correct group
+         }
+     }
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties	2008-06-10 23:31:06 UTC (rev 141)
+@@ -39,4 +39,5 @@
+ CTL_ActionRenameDisk=Rename Disk
+ CTL_ActionRenumberDisks=Renumber Disks
+ CTL_ActionScanForDuplicates=Scan For Duplicates
+-CTL_ActionSearchForItems=Search For Items
+\ No newline at end of file
++CTL_ActionSearchForItems=Search For Items
++AddNewDiskGroupInputMessage=Disk Group name:
+\ No newline at end of file
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -435,13 +435,12 @@
+             Session s = eng.sessionFactory.getCurrentSession();
+             s.beginTransaction();
+             evt.getMedia().setDescription(&quot;&quot;);
+-            s.getTransaction().commit();*/
+-        /*}
+-        if(!showAgain) {
+-            dispose();
++            s.getTransaction().commit();
+         }*/
+         Lookup.getDefault().lookup(MediaReader.class).removeListener(this);
+-        dispose();
++        if(!showAgain) {
++            dispose();
++        }
+     }
+ 
+     public void readingAborted(ReadingEvent evt) {
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/CompositeFile.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/CompositeFile.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/CompositeFile.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -1,17 +1,27 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.readingfiles;
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
+ import java.io.File;
+ 
+-/**
+- *
+- * @author Knitter
+- */
+ public class CompositeFile {
+     
+     public final File file;
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -1,14 +1,24 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.readingfiles;
+ 
+-/**
+- *
+- * @author ei10635
+- */
+ public interface Controller {
+     
+     void sendDescriptionValues(DescriptionValues values);
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -1,8 +1,22 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.readingfiles;
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.AudioData;
+@@ -10,10 +24,6 @@
+ import de.berlios.jfindmyfiles.catalog.entities.VideoData;
+ import javax.swing.ImageIcon;
+ 
+-/**
+- *
+- * @author ei10635
+- */
+ public interface DescriptionValues {
+     
+     String getTextDescription();
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -1,6 +1,21 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+ package de.berlios.jfindmyfiles.readingfiles;
+ 
+@@ -11,19 +26,11 @@
+ import de.berlios.jfindmyfiles.catalog.entities.Type;
+ import de.berlios.jfindmyfiles.readingfiles.utils.FileUtils;
+ import java.io.File;
+-import java.io.IOException;
+-import java.security.NoSuchAlgorithmException;
+ import java.util.Stack;
+ import java.util.Vector;
+-import jonelo.jacksum.JacksumAPI;
+-import jonelo.jacksum.algorithm.AbstractChecksum;
+ import org.hibernate.Session;
+ import org.openide.util.Lookup;
+ 
+-/**
+- *
+- * @author Knitter
+- */
+ public class MediaReader {
+ 
+     private Vector&lt;ReadingListener&gt; listeners;
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -17,7 +17,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.readingfiles;
+ 
+ import java.io.File;
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingEvent.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -1,8 +1,22 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.readingfiles;
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/ReadingListener.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -1,15 +1,31 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.readingfiles;
+ 
++import java.util.EventListener;
++
+ /**
+  *
+  * @author Knitter
+  */
+-public interface ReadingListener {
++public interface ReadingListener extends EventListener {
+     
+     void readingStarted(ReadingEvent evt);
+     void readingFile(ReadingEvent evt);
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/FileUtils.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/FileUtils.java	2008-06-10 22:46:26 UTC (rev 140)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/FileUtils.java	2008-06-10 23:31:06 UTC (rev 141)
+@@ -1,6 +1,21 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+ package de.berlios.jfindmyfiles.readingfiles.utils;
+ 
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000135.html">[Jfindmyfiles-commits] r140 - in trunk: docs	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entitymanagers	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/ReadingFiles/src/META-INF/services	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils
+</A></li>
+	<LI>Next message: <A HREF="000137.html">[Jfindmyfiles-commits] r142 - in trunk: docs/Documentos Externos	docs/Documentos Externos/images project/JFindMyFiles/HSQLDB	spikes/Prototipos/src/de/berlios/kcookb/imagens
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#136">[ date ]</a>
+              <a href="thread.html#136">[ thread ]</a>
+              <a href="subject.html#136">[ subject ]</a>
+              <a href="author.html#136">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

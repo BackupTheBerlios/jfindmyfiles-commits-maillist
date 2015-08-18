@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r14 - trunk/docs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-March/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r14%20-%20trunk/docs&In-Reply-To=%3C200803182004.m2IK4KEB022511%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000009.html">
+   <LINK REL="Next"  HREF="000011.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r14 - trunk/docs</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r14%20-%20trunk/docs&In-Reply-To=%3C200803182004.m2IK4KEB022511%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r14 - trunk/docs">knitter at mail.berlios.de
+       </A><BR>
+    <I>Tue Mar 18 21:04:20 CET 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000009.html">[Jfindmyfiles-commits] r13 - trunk/docs
+</A></li>
+        <LI>Next message: <A HREF="000011.html">[Jfindmyfiles-commits] r15 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-03-18 21:04:18 +0100 (Tue, 18 Mar 2008)
+New Revision: 14
+
+Modified:
+   trunk/docs/Ferramentas Usadas e Informacao Geral.txt
+   trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt
+Log:
+Justifica?\195?\167?\195?\163o da escolha de plataformas quase completa.
+Adicionados links em falta ?\195?\160 lista de ferramentas usadas.
+
+Modified: trunk/docs/Ferramentas Usadas e Informacao Geral.txt
+===================================================================
+--- trunk/docs/Ferramentas Usadas e Informacao Geral.txt	2008-03-18 19:21:25 UTC (rev 13)
++++ trunk/docs/Ferramentas Usadas e Informacao Geral.txt	2008-03-18 20:04:18 UTC (rev 14)
+@@ -2,7 +2,6 @@
+ P&#225;gina do projecto no sistema berlios: <A HREF="http://developer.berlios.de/projects/jfindmyfiles/">http://developer.berlios.de/projects/jfindmyfiles/</A>
+ URL do reposit&#243;rio SVN: <A HREF="http://svn.berlios.de/svnroot/repos/jfindmyfiles/trunk/">http://svn.berlios.de/svnroot/repos/jfindmyfiles/trunk/</A>
+ 
+-
+ No desenvolvimento do projecto foram usadas as seguintes ferramentas:
+ 
+ Netbeans IDE - IDE de desenvolvimento para, entre outras, a linguagem JAVA
+@@ -15,10 +14,10 @@
+ URL: <A HREF="http://www.projectpier.org">http://www.projectpier.org</A>
+ 
+ TortoiseSVN - Cliente gr&#225;fico, para windows, do sistema de vers&#245;es Subversion.
+-URL:
++URL: <A HREF="http://tortoisesvn.tigris.org">http://tortoisesvn.tigris.org</A>
+ 
+ Subversion, edi&#231;&#227;o Linux - Cliente linha de comandos do sistema de vers&#245;es Subversion.
+-URL:
++URL: <A HREF="http://subversion.tigris.org">http://subversion.tigris.org</A>
+ 
+ OpenOffice - Pacote de produtivide.
+-URL:
++URL: <A HREF="http://www.openoffice.org">http://www.openoffice.org</A>
+
+Modified: trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt
+===================================================================
+--- trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt	2008-03-18 19:21:25 UTC (rev 13)
++++ trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt	2008-03-18 20:04:18 UTC (rev 14)
+@@ -15,7 +15,22 @@
+ Sendo assim, e tendo em conta os requisitos da aplica&#231;&#227;o efectuou-se a seguinte 
+ compara&#231;&#227;o:
+ [TABELA DE COMPARA&#199;&#195;O]
++Eclipse RCP	Netbeans Platform
++Documenta&#231;&#227;o oficial	Bastante extensa e completa	Bastante extensa e completa
++Exemplos	In&#250;meros exemplos existentes, tanto na documenta&#231;&#227;o oficial como em documenta&#231;&#227;o fornecida pela comunidade	In&#250;meros exemplos existentes, tanto na documenta&#231;&#227;o oficial como em documenta&#231;&#227;o fornecida pela comunidade
++Comunidade(Listas de discuss&#227;o, f&#243;runs, blogs, etc.)	Comunidade numerosa com bastantes recursos	Comunidade numerosa com bastantes recursos
++IDEs poss&#237;veis	Eclipse IDE	Netbeans IDE
++Toolkit gr&#225;fico	SWT	Swing
++Portabilidade	Limitada devido ao toolkit gr&#225;fico usado.	Swing faz parte de todas as distribui&#231;&#245;es Java, &#233; standard na plataforma
++Facilidade de integra&#231;&#227;o de componentes Swing	Limitada devido a bugs existentes no SWT	Extremamente f&#225;cil, comunica&#231;&#227;o entre dois elementos Swing
++Conhecimento da API	Nenhum	Limitado
++Conhecimento do Toolkit gr&#225;fico	Nenhum	Usado nas diversas cadeiras do curso onde a linguagem &#233; Java
++---------------
+ 
++
++
++
++
+ A escolha recaiu sobre a plataforma Netbeans.
+ 
+ [REFER&#202;NCIA]
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000009.html">[Jfindmyfiles-commits] r13 - trunk/docs
+</A></li>
+	<LI>Next message: <A HREF="000011.html">[Jfindmyfiles-commits] r15 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#10">[ date ]</a>
+              <a href="thread.html#10">[ thread ]</a>
+              <a href="subject.html#10">[ subject ]</a>
+              <a href="author.html#10">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

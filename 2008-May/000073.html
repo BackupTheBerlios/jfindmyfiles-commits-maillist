@@ -1,0 +1,1031 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r78 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	. model model/dal
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r78%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%3A%0A%09.%20model%20model/dal&In-Reply-To=%3C200805051548.m45Fma21030999%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000072.html">
+   <LINK REL="Next"  HREF="000074.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r78 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	. model model/dal</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r78%20-%20in%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%3A%0A%09.%20model%20model/dal&In-Reply-To=%3C200805051548.m45Fma21030999%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r78 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	. model model/dal">knitter at mail.berlios.de
+       </A><BR>
+    <I>Mon May  5 17:48:36 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000072.html">[Jfindmyfiles-commits] r77 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/model	Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+        <LI>Next message: <A HREF="000074.html">[Jfindmyfiles-commits] r79 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. actions dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#73">[ date ]</a>
+              <a href="thread.html#73">[ thread ]</a>
+              <a href="subject.html#73">[ subject ]</a>
+              <a href="author.html#73">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-05 17:48:23 +0200 (Mon, 05 May 2008)
+New Revision: 78
+
+Added:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/AudioData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/DiskGroup.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/FileWrapper.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/ImageData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Label.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Loan.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Medium.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Type.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/User.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/VideoData.java
+Removed:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/CatalogInfo.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Emprestar.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Etiqueta.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Ficheiro.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/GrupoDiscos.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Imagem.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Pessoa.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Som.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Suporte.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Tipo.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Video.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/CatalogInfoDAL.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/EmprestarDAL.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/EtiquetaDAL.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/FicheiroDAL.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/GrupoDiscosDAL.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/ImagemDAL.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/PessoaDAL.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/SomDAL.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/SuporteDAL.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/TipoDAL.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/VideoDAL.java
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+Log:
+Mudados nomes das classes do modelo para ingl?\195?\170s e alterado o modelo para melhor representar os dados.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -6,21 +6,10 @@
+ package de.berlios.jfindmyfiles.catalog;
+ 
+ import de.berlios.jfindmyfiles.catalog.model.*;
+-import java.util.List;
+ 
+ /**
+  *
+  * @author ei10635
+  */
+ public class CatalogEngine {
+-    
+-    private CatalogInfo info;    
+-    
+-    public void addNewDisk(Suporte disk) {
+-        
+-    }
+-    
+-    public List&lt;String&gt; openedCatalogs() {
+-        return null;
+-    }
+ }
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/AudioData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/AudioData.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/AudioData.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -0,0 +1,16 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog.model;
++
++/**
++ *
++ * @author ei10635
++ */
++public class AudioData {
++    
++    private FileWrapper owner;
++
++}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/CatalogInfo.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/CatalogInfo.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/CatalogInfo.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class CatalogInfo {
+-
+-}
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/DiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/DiskGroup.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/DiskGroup.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -0,0 +1,19 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.catalog.model;
++
++import java.util.List;
++
++/**
++ *
++ * @author ei10635
++ */
++public class DiskGroup {
++
++    private String name;
++    private String description;
++    private List&lt;DiskGroup&gt; groups;
++    private List&lt;FileWrapper&gt; files;
++}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Emprestar.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Emprestar.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Emprestar.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,51 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model;
+-
+-import java.util.Date;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Emprestar {
+-    
+-    private Long id;
+-    private Date loanDate;
+-    private Date returnDate;
+-    
+-    public Emprestar() {
+-    }
+-    
+-    public Emprestar(Date loanDate, Date returnDate) {
+-        this.loanDate = loanDate;
+-        this.returnDate = returnDate;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-    
+-    public void setId(Long id) {
+-        this.id = id;
+-    }
+-    
+-    public Date getLoanDate() {
+-        return loanDate;
+-    }
+-
+-    public void setLoanDate(Date loanDate) {
+-        this.loanDate = loanDate;
+-    }
+-
+-    public Date getReturnDate() {
+-        return returnDate;
+-    }
+-
+-    public void setReturnDate(Date returnDate) {
+-        this.returnDate = returnDate;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Etiqueta.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Etiqueta.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Etiqueta.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,17 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Etiqueta {
+-    
+-    private Long id;
+-    private String nome;
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Ficheiro.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Ficheiro.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Ficheiro.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,151 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-package de.berlios.jfindmyfiles.catalog.model;
+-
+-import java.util.List;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Ficheiro {
+-
+-    private Long id;
+-    private Suporte disk;
+-    private long size;
+-    private boolean file;
+-    private boolean folder;
+-    private String name;
+-    private String absolutePath;
+-    private boolean hidden;
+-    private long lastModified;
+-    private List&lt;Etiqueta&gt; label;
+-    private List&lt;Imagem&gt; thumb;
+-    private List&lt;Som&gt; audioClip;
+-    private List&lt;Video&gt; videoClip;
+-    
+-    private List&lt;Ficheiro&gt; children;
+-
+-    public Ficheiro() {
+-    }
+-
+-    public Ficheiro(Suporte disk, long size, boolean file, boolean folder,
+-            String name, String absolutePath, boolean hidden, long lastModified) {
+-
+-        this.disk = disk;
+-        this.size = size;
+-        this.file = file;
+-        this.folder = folder;
+-        this.name = name;
+-        this.absolutePath = absolutePath;
+-        this.hidden = hidden;
+-        this.lastModified = lastModified;
+-    }
+-
+-    public String getAbsolutePath() {
+-        return absolutePath;
+-    }
+-
+-    public void setAbsolutePath(String absolutePath) {
+-        this.absolutePath = absolutePath;
+-    }
+-
+-    public List&lt;Som&gt; getAudioClip() {
+-        return audioClip;
+-    }
+-
+-    public void setAudioClip(List&lt;Som&gt; audioClip) {
+-        this.audioClip = audioClip;
+-    }
+-
+-    public Suporte getDisk() {
+-        return disk;
+-    }
+-
+-    public void setDisk(Suporte disk) {
+-        this.disk = disk;
+-    }
+-
+-    public boolean isFile() {
+-        return file;
+-    }
+-
+-    public void setFile(boolean file) {
+-        this.file = file;
+-    }
+-
+-    public boolean isFolder() {
+-        return folder;
+-    }
+-
+-    public void setFolder(boolean folder) {
+-        this.folder = folder;
+-    }
+-
+-    public boolean isHidden() {
+-        return hidden;
+-    }
+-
+-    public void setHidden(boolean hidden) {
+-        this.hidden = hidden;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    public void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    public List&lt;Etiqueta&gt; getLabel() {
+-        return label;
+-    }
+-
+-    public void setLabel(List&lt;Etiqueta&gt; label) {
+-        this.label = label;
+-    }
+-
+-    public long getLastModified() {
+-        return lastModified;
+-    }
+-
+-    public void setLastModified(long lastModified) {
+-        this.lastModified = lastModified;
+-    }
+-
+-    public String getName() {
+-        return name;
+-    }
+-
+-    public void setName(String name) {
+-        this.name = name;
+-    }
+-
+-    public long getSize() {
+-        return size;
+-    }
+-
+-    public void setSize(long size) {
+-        this.size = size;
+-    }
+-
+-    public List&lt;Imagem&gt; getThumb() {
+-        return thumb;
+-    }
+-
+-    public void setThumb(List&lt;Imagem&gt; thumb) {
+-        this.thumb = thumb;
+-    }
+-
+-    public List&lt;Video&gt; getVideoClip() {
+-        return videoClip;
+-    }
+-
+-    public void setVideoClip(List&lt;Video&gt; videoClip) {
+-        this.videoClip = videoClip;
+-    }
+-    
+-}
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/FileWrapper.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/FileWrapper.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/FileWrapper.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -0,0 +1,28 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog.model;
++
++import java.util.List;
++
++/**
++ *
++ * @author ei10635
++ */
++public class FileWrapper {
++    
++    private Medium disk;
++    private long size;
++    private boolean file;
++    private boolean folder;
++    private String name;
++    private String absolutePath;
++    private boolean hidden;
++    private long lastModified;
++    private List&lt;Label&gt; label;
++    private List&lt;FileWrapper&gt; children;
++    private FileWrapper parent;
++    private String description;    
++}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/GrupoDiscos.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/GrupoDiscos.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/GrupoDiscos.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,16 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class GrupoDiscos {
+-    
+-    
+-
+-}
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/ImageData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/ImageData.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/ImageData.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -0,0 +1,16 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog.model;
++
++/**
++ *
++ * @author ei10635
++ */
++public class ImageData {
++    
++    private FileWrapper owner;
++
++}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Imagem.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Imagem.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Imagem.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,19 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model;
+-
+-import java.awt.Image;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Imagem {
+-    
+-    private Long id;
+-    private Image img;
+-
+-}
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Label.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Label.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Label.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -0,0 +1,16 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog.model;
++
++/**
++ *
++ * @author ei10635
++ */
++public class Label {
++    
++    private String name;
++
++}
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Loan.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Loan.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Loan.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -0,0 +1,21 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog.model;
++
++import java.util.Date;
++
++/**
++ *
++ * @author ei10635
++ */
++public class Loan {
++    
++    private Date loaned;
++    private Date returned;
++    private User loanee;
++    private Medium medium;
++
++}
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Medium.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Medium.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Medium.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -0,0 +1,17 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog.model;
++
++/**
++ *
++ * @author ei10635
++ */
++public class Medium {
++    
++    private FileWrapper file;
++    private String description;
++
++}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Pessoa.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Pessoa.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Pessoa.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Pessoa {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Som.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Som.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Som.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,17 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Som {
+-    
+-    private Long id;
+-    private byte[] sound;
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Suporte.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Suporte.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Suporte.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Suporte {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Tipo.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Tipo.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Tipo.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,39 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Tipo {
+-    
+-    private Long id;
+-    private String type;
+-    
+-    public Tipo() {
+-    }
+-    
+-    public Tipo(String type) {
+-        this.type = type;
+-    }
+-
+-    public Long getId() {
+-        return id;
+-    }
+-
+-    public void setId(Long id) {
+-        this.id = id;
+-    }
+-
+-    public String getType() {
+-        return type;
+-    }
+-
+-    public void setType(String type) {
+-        this.type = type;
+-    }
+-}
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Type.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Type.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Type.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -0,0 +1,16 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog.model;
++
++/**
++ *
++ * @author ei10635
++ */
++public class Type {
++    
++    private String name;
++
++}
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/User.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/User.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/User.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -0,0 +1,20 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog.model;
++
++import java.util.List;
++
++/**
++ *
++ * @author ei10635
++ */
++public class User {
++    
++    private String firstname;
++    private String surname;
++    private List&lt;Loan&gt; loans;
++
++}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Video.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Video.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Video.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,17 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class Video {
+-    
+-    private Long id;
+-    private byte[] video;
+-
+-}
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/VideoData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/VideoData.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/VideoData.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -0,0 +1,16 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog.model;
++
++/**
++ *
++ * @author ei10635
++ */
++public class VideoData {
++    
++    private FileWrapper owner;
++
++}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/CatalogInfoDAL.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/CatalogInfoDAL.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/CatalogInfoDAL.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model.dal;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class CatalogInfoDAL {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/EmprestarDAL.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/EmprestarDAL.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/EmprestarDAL.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model.dal;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class EmprestarDAL {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/EtiquetaDAL.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/EtiquetaDAL.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/EtiquetaDAL.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model.dal;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class EtiquetaDAL {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/FicheiroDAL.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/FicheiroDAL.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/FicheiroDAL.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model.dal;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class FicheiroDAL {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/GrupoDiscosDAL.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/GrupoDiscosDAL.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/GrupoDiscosDAL.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model.dal;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class GrupoDiscosDAL {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/ImagemDAL.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/ImagemDAL.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/ImagemDAL.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model.dal;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class ImagemDAL {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/PessoaDAL.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/PessoaDAL.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/PessoaDAL.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model.dal;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class PessoaDAL {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/SomDAL.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/SomDAL.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/SomDAL.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model.dal;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class SomDAL {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/SuporteDAL.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/SuporteDAL.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/SuporteDAL.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model.dal;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class SuporteDAL {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/TipoDAL.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/TipoDAL.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/TipoDAL.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model.dal;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class TipoDAL {
+-
+-}
+
+Deleted: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/VideoDAL.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/VideoDAL.java	2008-05-05 15:04:46 UTC (rev 77)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal/VideoDAL.java	2008-05-05 15:48:23 UTC (rev 78)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.catalog.model.dal;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-public class VideoDAL {
+-
+-}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000072.html">[Jfindmyfiles-commits] r77 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/model	Catalog/src/de/berlios/jfindmyfiles/catalog/model/dal	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+	<LI>Next message: <A HREF="000074.html">[Jfindmyfiles-commits] r79 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. actions dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#73">[ date ]</a>
+              <a href="thread.html#73">[ thread ]</a>
+              <a href="subject.html#73">[ subject ]</a>
+              <a href="author.html#73">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

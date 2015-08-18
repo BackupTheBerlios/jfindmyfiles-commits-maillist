@@ -1,0 +1,2306 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r131 - in trunk: docs	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r131%20-%20in%20trunk%3A%20docs%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes&In-Reply-To=%3C200806051635.m55GZeV2018081%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000125.html">
+   <LINK REL="Next"  HREF="000127.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r131 - in trunk: docs	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r131%20-%20in%20trunk%3A%20docs%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes&In-Reply-To=%3C200806051635.m55GZeV2018081%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r131 - in trunk: docs	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu Jun  5 18:35:40 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000125.html">[Jfindmyfiles-commits] r130 - trunk/docs/Iteracao2-CB05/TestingDB
+</A></li>
+        <LI>Next message: <A HREF="000127.html">[Jfindmyfiles-commits] r132 - in trunk: docs docs/Iteracao4-CB04 docs/Iteracao6-CB07 media project/JFindMyFiles project/JFindMyFiles/ExportEngine/nbproject project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine project/JFindMyFiles/ImportEngine project/JFindMyFiles/ImportEngine/nbproject project/JFindMyFiles/ImportEngine/src project/JFindMyFiles/ImportEngine/src/de project/JFindMyFiles/ImportEngine/src/de/berlios project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine project/JFindMyFiles/ImportEngine/test project/JFindMyFiles/ImportEngine/test/unit project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup project/JFindMyFiles/nbproject spikes spikes/CRC spikes/CRC/fastmd5 spikes/CRC/fastmd5/com spikes/CRC/fastmd5/com/twmacinta spikes/CRC/fastmd5/com/twmacinta/io spikes/CRC/fastmd5/com/twma! cinta/util spikes/CRC/fastmd5/com/twmacinta/util/test spikes/CRC/fastmd5/lib spikes/CRC/fastmd5/lib/arch spikes/CRC/fastmd5/lib/arch/darwin_ppc spikes/CRC/fastmd5/lib/arch/linux_x86 spikes/CRC/fastmd5/lib/arch/win32_x86 spikes/CRC/nbproject spikes/CRC/src spikes/CRC/src/crc
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-05 18:35:06 +0200 (Thu, 05 Jun 2008)
+New Revision: 131
+
+Removed:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCloseAll.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCopyTo.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExtractTo.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectFiles.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectedFiles.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionMoveTo.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionNextWindow.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRename.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateAllDisks.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateThisFolder.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionViewFile.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java
+Modified:
+   trunk/docs/TODO
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Installer.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/MiscUserPanel.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/MiscUserPanel.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionClose.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java
+Log:
+Remo?\195?\167?\195?\163o de ficheiros desnecess?\195?\161rios.
+Altera?\195?\167?\195?\163o do m?\195?\169todo equals em todos os ficheiros.
+
+Adi?\195?\167?\195?\163o dos pontos pendendes ao ficheiro TODO
+
+Tentativa de corrigir um problema no acesso aos dados atrav?\195?\169s de hibernate
+
+Altera?\195?\167?\195?\163o ?\195?\160 forma como as janelas acedem aos dados da base de dados.
+
+Modified: trunk/docs/TODO
+===================================================================
+--- trunk/docs/TODO	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/docs/TODO	2008-06-05 16:35:06 UTC (rev 131)
+@@ -6,9 +6,56 @@
+ - Verificar o texto de avalia&#231;&#227;o de sistemas existentes.
+ - Verificar suporte para UNC, Uniform Naming Convention 
+ -&gt; <A HREF="http://en.wikipedia.org/wiki/Path_%28computing%29#Uniform_Naming_Convention">http://en.wikipedia.org/wiki/Path_%28computing%29#Uniform_Naming_Convention</A>
+-- Criar c&#243;digo para CRC
+ - Configurar logger
+ 
+ <A HREF="http://www.xylax.net/hibernate/onetomany.html">http://www.xylax.net/hibernate/onetomany.html</A>
+ <A HREF="http://www.hibernate.org/hib_docs/v3/reference/en/html_single/#mapping">http://www.hibernate.org/hib_docs/v3/reference/en/html_single/#mapping</A>
+ <A HREF="http://www.hibernate.org/hib_docs/v3/reference/en/html/tutorial.html">http://www.hibernate.org/hib_docs/v3/reference/en/html/tutorial.html</A>
++
++Itera&#231;&#227;o 2:
++	- ligar c&#243;digo de leitura para permitir ler os dados dos discos, implica uma base de API
++	- Fazer DER e modelo de dominio com base no esquema usado para o mapeamento
++	- Criar cat&#225;logo
++	- Abrir cat&#225;logo
++	- Fechar cat&#225;logo
++	- Guardar cat&#225;logo
++	- Manter registo de cat&#225;logos recentes
++	- NewDiskDlg - Janela de di&#225;logo que permite ler novos suportes.
++	- NewCatalogDlg - Janela de di&#225;logo que permite criar novos cat&#225;logos
++	- OpenCatalogDlg - Janela de di&#225;logo que permite abrir cat&#225;logos existentes.
++- Menus:
++	- ?
++- Paineis a integrar no sistema de janelas da plataforma:
++	- CatalogOptionsPanel - Painel com as ap&#231;&#245;es a usar na cria&#231;&#227;o de novos cat&#225;logos e abertura de cat&#225;logos existentes.
++	
++Itera&#231;&#227;o 3:
++	- desenhar API
++
++Itera&#231;&#227;o 4:
++	- sistema de pesquisa que incorpore as op&#231;&#245;es de:
++		- pesquisa por case insensitive
++		- defini&#231;&#227;o de scope de pesquisa
++		- pesquisar nas descri&#231;&#245;es
++		- usar express&#245;es regulares
++	- op&#231;&#245;es para definir o tipo de base de dados atrav&#233;s de um painel de op&#231;&#245;es
++	- op&#231;&#245;es para definir o tipo de base de dados na altura da cria&#231;&#227;o
++	- op&#231;&#245;es para definir o tipo de base de dados na altura da abertura
++	- pesquisa de ficheiros duplicados em todo o cat&#225;logo
++	
++Itera&#231;&#227;o 5:
++	- menus de contexto sens&#237;veis
++	- remodela&#231;&#227;o da interface
++
++Itera&#231;&#227;o 6:
++	- exportar dados para XML
++	- exportar dados para CSV
++	- importar dados de XML
++	- importar dados de outra base de dados
++	- importar dados de CSV
++	- exportar para XLS
++	- exportar para ODS
++	- importar dados de outras aplica&#231;&#245;es
++
++NOTAS:
++	Aten&#231;&#227;o ao nome dos paineis e componentes na internacionaliza&#231;&#227;o
++	Criar painel para escolher a l&#237;ngua?
+\ No newline at end of file
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -45,13 +45,13 @@
+      * by the netbeans platform.
+      */
+     public CatalogEngine() {
++        //DO NOTHING
+     }
+ 
+-    //TODO: error management
+     private void recreateConnection(String dbname, String dburl, String port,
+             String username, String password, int dbType, boolean open) {
+ 
+-        //TODO: closeCatalog();
++        closeCatalog();
+ 
+         String strategy = &quot;create&quot;;
+         try {
+@@ -115,7 +115,7 @@
+ 
+                     //Try to shutdown the database as soon as there all connections are gone
+                     //hConfig.setProperty(&quot;hibernate.connection.shutdown&quot;, &quot;true&quot;);
+-                    
++
+                     hConfig.setProperty(&quot;hibernate.connection.password&quot;, &quot;&quot;);//HSQLDB has a user with no password
+ 
+             }
+@@ -173,7 +173,6 @@
+         properties.setCreationDate(new Date());
+         cSession.save(properties);
+         cSession.getTransaction().commit();
+-        //TODO: notify listeners
+         fireCatalogCreated(new CatalogEngineEvent(dbname, null, null, null, null));
+     }
+ 
+@@ -184,6 +183,7 @@
+         if (sessionFactory != null) {
+             sessionFactory.close();
+             sessionFactory = null;
++            fireCatalogClosed(new CatalogEngineEvent(properties.getName(), null, null, null, null));
+         }
+     }
+ 
+@@ -191,23 +191,6 @@
+         return properties;
+     }
+ 
+-    public void updateProperties(String description, Date creationDate) {
+-        Session cSession = sessionFactory.getCurrentSession();
+-        cSession.beginTransaction();
+-        properties = (CatalogProperties) cSession.createQuery(&quot;from CatalogProperties&quot;).uniqueResult();
+-        properties.setCreationDate(creationDate);
+-        properties.setDescription(description);
+-        cSession.merge(properties);
+-        cSession.getTransaction().commit();
+-    }
+-
+-    public void updateProperties() {
+-        Session cSession = sessionFactory.getCurrentSession();
+-        cSession.beginTransaction();
+-        cSession.update(properties);
+-        cSession.getTransaction().commit();
+-    }
+-
+     public void addDiskGroup(String name, String description, DiskGroup parent) {
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+@@ -359,15 +342,23 @@
+             }
+         }
+     }
+-    
++
+     private void fireCatalogOpened(CatalogEngineEvent evt) {
+         if (listeners != null) {
+             for (CatalogEngineListener l : listeners) {
+                 l.catalogOpened(evt);
+             }
+         }
+-    }    
++    }
+ 
++    private void fireCatalogClosed(CatalogEngineEvent evt) {
++        if (listeners != null) {
++            for (CatalogEngineListener l : listeners) {
++                l.catalogClosed(evt);
++            }
++        }
++    }
++
+     /**
+      * In overriding the finalize method we try to garantee that data is 
+      * flushed and all resources are released.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -13,6 +13,7 @@
+     
+     void catalogCreated(CatalogEngineEvent evt);
+     void catalogOpened(CatalogEngineEvent evt);
++    void catalogClosed(CatalogEngineEvent evt);
+     void diskGroupAdded(CatalogEngineEvent evt);
+     void diskGroupRemoved(CatalogEngineEvent evt);
+     void diskGroupRenamed(CatalogEngineEvent evt);
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -73,6 +73,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
++        if(obj == null) {
++            return false;
++        }
++
+         if(this == obj) {
+             return true;
+         }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -131,6 +131,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
++        if(obj == null) {
++            return false;
++        }
++
+         if (!(obj instanceof CatalogProperties)) {
+             return false;
+         }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -47,7 +47,8 @@
+         this.description = description;
+         this.capacity = capacity;
+     }
+-
++    
++    @SuppressWarnings(&quot;unchecked&quot;)
+     public void addGroup(DiskGroup child) {
+         if (groups == null) {
+             groups = new LinkedHashSet();
+@@ -61,6 +62,7 @@
+         }
+     }
+ 
++    @SuppressWarnings(&quot;unchecked&quot;)
+     public void addDisk(Media media) {
+         if (disks == null) {
+             disks = new LinkedHashSet();
+@@ -68,6 +70,7 @@
+         disks.add(media);
+     }
+ 
++    @SuppressWarnings(&quot;unchecked&quot;)
+     public void removeDisk(Media media) {
+         if (disks != null) {
+             disks.add(media);
+@@ -145,6 +148,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
++        if(obj == null) {
++            return false;
++        }
++
+         if (this == obj) {
+             return true;
+         }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -80,6 +80,7 @@
+      * 
+      * @param child
+      */
++    @SuppressWarnings(&quot;unchecked&quot;)
+     public void addChild(FileWrapper child) {
+         if (children == null) {
+             children = new LinkedHashSet();
+@@ -238,6 +239,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
++        if(obj == null) {
++            return false;
++        }
++        
+         if (this == obj) {
+             return true;
+         }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -73,6 +73,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
++        if(obj == null) {
++            return false;
++        }
++        
+         if(this == obj) {
+             return true;
+         }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -64,6 +64,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
++        if(obj == null) {
++            return false;
++        }
++
+         if (this == obj) {
+             return true;
+         }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -92,6 +92,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
++        if(obj == null) {
++            return false;
++        }
++
+         if (this == obj) {
+             return true;
+         }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -61,6 +61,7 @@
+         this.type = type;
+     }
+ 
++    @SuppressWarnings(&quot;unchecked&quot;)
+     public void addFile(FileWrapper file) {
+         if (files == null) {
+             files = new LinkedHashSet();
+@@ -74,6 +75,7 @@
+         }
+     }
+ 
++    @SuppressWarnings(&quot;unchecked&quot;)
+     public void addLabel(Label label) {
+         if (labels == null) {
+             labels = new LinkedHashSet();
+@@ -87,6 +89,7 @@
+         }
+     }
+     
++    @SuppressWarnings(&quot;unchecked&quot;)
+     public void addLoan(Loan loan) {
+         if (loans == null) {
+             loans = new LinkedHashSet();
+@@ -215,6 +218,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
++        if(obj == null) {
++            return false;
++        }
++
+         if (this == obj) {
+             return true;
+         }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -66,6 +66,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
++        if (obj == null) {
++            return false;
++        }
++        
+         if (this == obj) {
+             return true;
+         }
+@@ -77,7 +81,6 @@
+         Type other = (Type) obj;
+         return name.equals(other.name);
+     }
+-    
+     //TODO: link for the equals method
+     /**
+      * HashCode for this object, excluding the id field.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -42,6 +42,7 @@
+         this.surname = surname;
+     }
+ 
++    @SuppressWarnings(&quot;unchecked&quot;)
+     public void addLoan(Loan loan) {
+         if (loans == null) {
+             loans = new LinkedHashSet();
+@@ -98,6 +99,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
++        if(obj == null) {
++            return false;
++        }
++        
+         if (this == obj) {
+             return true;
+         }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -73,6 +73,10 @@
+      */
+     @Override
+     public boolean equals(Object obj) {
++        if(obj == null) {
++            return false;
++        }
++        
+         if (this == obj) {
+             return true;
+         }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,5 +1,3 @@
+-AdvancedOption_DisplayName_MiscUser=User
+-AdvancedOption_Tooltip_MiscUser=User information
+ ###
+  #  Copyright (C) 2008  Patr\u00EDcia Monteiro e S\u00E9rgio Lopes
+  #
+@@ -19,12 +17,14 @@
+  #  along with JFindMyFiles.  If not, see 
+  # &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  ##
+-CTL_ActionUpdateAllDisks=UpdateAllDisks
++Installer.ClosingMessage=Exit JFindMyFiles?\n\nYou can change this behavior in the options panel.
++Installer.ClosingTitle=Confirm Exit
++AdvancedOption_DisplayName_MiscUser=User
++AdvancedOption_Tooltip_MiscUser=User information
+ CTL_DetailsViewAction=DetailsView
+ CTL_DetailsViewTopComponent=DetailsView Window
+ CTL_NavigationTreeAction=NavigationTree
+ CTL_NavigationTreeTopComponent=NavigationTree Window
+-CTL_SomeAction=Teste
+ HINT_DetailsViewTopComponent=This is a DetailsView window
+ HINT_NavigationTreeTopComponent=This is a NavigationTree window
+ OpenIDE-Module-Name=JFindMyFilesGui
+@@ -32,7 +32,6 @@
+ CatalogOptionsCategory_Title=Cat\u00E1logo
+ PluginsOptionsCategory_Name=Plugins
+ PluginsOptionsCategory_Title=Plugins
+-MiscUserPanel.border.title=Personal Data
+ MiscUserPanel.jLabel1.text=Name:
+ MiscUserPanel.jTextField1.text=
+ MiscUserPanel.jTextField2.text=
+@@ -48,3 +47,6 @@
+ CatalogOptionsPanel.jlblDefaultLocation.text=Default Location:
+ CatalogOptionsPanel.jtfDefaultLocation.text=
+ CatalogOptionsPanel.jbtnBrowse.text=...
++MiscUserPanel.jPanel1.border.title=Personal Data
++MiscUserPanel.jPanel2.border.title=Exit Behavior
++MiscUserPanel.jCheckBox1.text=Show confirmation dialog
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Installer.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Installer.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Installer.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -21,6 +21,7 @@
+ 
+ import javax.swing.JOptionPane;
+ import org.openide.modules.ModuleInstall;
++import org.openide.util.NbBundle;
+ import org.openide.windows.WindowManager;
+ 
+ /**
+@@ -29,20 +30,12 @@
+  */
+ public class Installer extends ModuleInstall {
+ 
+-    /*@Override
+-    public void restored() {
+-    // By default, do nothing.
+-    // Put your startup code here.
+-    }*/
+     @Override
+     public boolean closing() {
+-        /*//TODO: add resource bundle call and show text. Maybe ask the user to 
+-         * disable this option
+         return JOptionPane.OK_OPTION ==
+-                JOptionPane.showConfirmDialog(
+-                WindowManager.getDefault().getMainWindow(), &quot;&quot;, &quot;&quot;,
++                JOptionPane.showConfirmDialog(WindowManager.getDefault().getMainWindow(), 
++                NbBundle.getMessage(CatalogOptionsCategory.class, &quot;Installer.ClosingMessage&quot;), 
++                NbBundle.getMessage(CatalogOptionsCategory.class, &quot;Installer.ClosingTitle&quot;),
+                 JOptionPane.YES_NO_CANCEL_OPTION);
+-         */
+-        return super.closing();
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/MiscUserPanel.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/MiscUserPanel.form	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/MiscUserPanel.form	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,15 +1,6 @@
+ &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+ 
+ &lt;Form version=&quot;1.5&quot; maxVersion=&quot;1.6&quot; type=&quot;org.netbeans.modules.form.forminfo.JPanelFormInfo&quot;&gt;
+-  &lt;Properties&gt;
+-    &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
+-      &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
+-        &lt;TitledBorder title=&quot;Personal Data&quot;&gt;
+-          &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+-        &lt;/TitledBorder&gt;
+-      &lt;/Border&gt;
+-    &lt;/Property&gt;
+-  &lt;/Properties&gt;
+   &lt;AuxValues&gt;
+     &lt;AuxValue name=&quot;FormSettings_autoResourcing&quot; type=&quot;java.lang.Integer&quot; value=&quot;1&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_autoSetComponentName&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+@@ -24,87 +15,166 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jLabel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jLabel2&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jLabel3&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jPanel2&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jPanel1&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jTextField2&quot; pref=&quot;248&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jTextField1&quot; alignment=&quot;0&quot; pref=&quot;248&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jTextField3&quot; alignment=&quot;0&quot; pref=&quot;248&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;/Group&gt;
+-              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
+-              &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jLabel1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jTextField1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;/Group&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jLabel2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jTextField2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;/Group&gt;
++              &lt;Component id=&quot;jPanel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jLabel3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jTextField3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;/Group&gt;
+-              &lt;EmptySpace pref=&quot;14&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jPanel2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
+   &lt;SubComponents&gt;
+-    &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel1&quot;&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel1&quot;&gt;
+       &lt;Properties&gt;
+-        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jLabel1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++            &lt;TitledBorder title=&quot;Personal Data&quot;&gt;
++              &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jPanel1.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/TitledBorder&gt;
++          &lt;/Border&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
+-    &lt;/Component&gt;
+-    &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jTextField1&quot;&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jLabel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jLabel2&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jLabel3&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jTextField2&quot; pref=&quot;228&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jTextField1&quot; alignment=&quot;0&quot; pref=&quot;228&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jTextField3&quot; alignment=&quot;0&quot; pref=&quot;228&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jLabel1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jTextField1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jLabel2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jTextField2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jLabel3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jTextField3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel1&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jLabel1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jTextField1&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jTextField1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jTextField2&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jTextField2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jTextField3&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jTextField3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel3&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jLabel3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel2&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jLabel2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel2&quot;&gt;
+       &lt;Properties&gt;
+-        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jTextField1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++            &lt;TitledBorder title=&quot;Exit Behavior&quot;&gt;
++              &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jPanel2.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/TitledBorder&gt;
++          &lt;/Border&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
+-    &lt;/Component&gt;
+-    &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jTextField2&quot;&gt;
+-      &lt;Properties&gt;
+-        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jTextField2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+-        &lt;/Property&gt;
+-      &lt;/Properties&gt;
+-    &lt;/Component&gt;
+-    &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel2&quot;&gt;
+-      &lt;Properties&gt;
+-        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jLabel2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+-        &lt;/Property&gt;
+-      &lt;/Properties&gt;
+-    &lt;/Component&gt;
+-    &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jTextField3&quot;&gt;
+-      &lt;Properties&gt;
+-        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jTextField3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+-        &lt;/Property&gt;
+-      &lt;/Properties&gt;
+-    &lt;/Component&gt;
+-    &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel3&quot;&gt;
+-      &lt;Properties&gt;
+-        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jLabel3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+-        &lt;/Property&gt;
+-      &lt;/Properties&gt;
+-    &lt;/Component&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jCheckBox1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace pref=&quot;169&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jCheckBox1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JCheckBox&quot; name=&quot;jCheckBox1&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;MiscUserPanel.jCheckBox1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
+   &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/MiscUserPanel.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/MiscUserPanel.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/MiscUserPanel.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -23,14 +23,17 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jPanel1 = new javax.swing.JPanel();
+         jLabel1 = new javax.swing.JLabel();
+         jTextField1 = new javax.swing.JTextField();
+         jTextField2 = new javax.swing.JTextField();
+-        jLabel2 = new javax.swing.JLabel();
+         jTextField3 = new javax.swing.JTextField();
+         jLabel3 = new javax.swing.JLabel();
++        jLabel2 = new javax.swing.JLabel();
++        jPanel2 = new javax.swing.JPanel();
++        jCheckBox1 = new javax.swing.JCheckBox();
+ 
+-        setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(MiscUserPanel.class, &quot;MiscUserPanel.border.title&quot;))); // NOI18N
++        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(MiscUserPanel.class, &quot;MiscUserPanel.jPanel1.border.title&quot;))); // NOI18N
+ 
+         org.openide.awt.Mnemonics.setLocalizedText(jLabel1, org.openide.util.NbBundle.getMessage(MiscUserPanel.class, &quot;MiscUserPanel.jLabel1.text&quot;)); // NOI18N
+ 
+@@ -38,45 +41,86 @@
+ 
+         jTextField2.setText(org.openide.util.NbBundle.getMessage(MiscUserPanel.class, &quot;MiscUserPanel.jTextField2.text&quot;)); // NOI18N
+ 
+-        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(MiscUserPanel.class, &quot;MiscUserPanel.jLabel2.text&quot;)); // NOI18N
+-
+         jTextField3.setText(org.openide.util.NbBundle.getMessage(MiscUserPanel.class, &quot;MiscUserPanel.jTextField3.text&quot;)); // NOI18N
+ 
+         org.openide.awt.Mnemonics.setLocalizedText(jLabel3, org.openide.util.NbBundle.getMessage(MiscUserPanel.class, &quot;MiscUserPanel.jLabel3.text&quot;)); // NOI18N
+ 
+-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+-        this.setLayout(layout);
+-        layout.setHorizontalGroup(
+-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(layout.createSequentialGroup()
++        org.openide.awt.Mnemonics.setLocalizedText(jLabel2, org.openide.util.NbBundle.getMessage(MiscUserPanel.class, &quot;MiscUserPanel.jLabel2.text&quot;)); // NOI18N
++
++        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                 .addContainerGap()
+-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(jLabel1)
+                     .addComponent(jLabel2)
+                     .addComponent(jLabel3))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
+-                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE)
+-                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE))
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jTextField2, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
++                    .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
++                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE))
+                 .addContainerGap())
+         );
+-        layout.setVerticalGroup(
+-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(layout.createSequentialGroup()
+-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                     .addComponent(jLabel1)
+                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                     .addComponent(jLabel2)
+                     .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                     .addComponent(jLabel3)
+                     .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+-                .addContainerGap(14, Short.MAX_VALUE))
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+         );
++
++        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(MiscUserPanel.class, &quot;MiscUserPanel.jPanel2.border.title&quot;))); // NOI18N
++
++        org.openide.awt.Mnemonics.setLocalizedText(jCheckBox1, org.openide.util.NbBundle.getMessage(MiscUserPanel.class, &quot;MiscUserPanel.jCheckBox1.text&quot;)); // NOI18N
++
++        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
++        jPanel2.setLayout(jPanel2Layout);
++        jPanel2Layout.setHorizontalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel2Layout.createSequentialGroup()
++                .addContainerGap()
++                .addComponent(jCheckBox1)
++                .addContainerGap(169, Short.MAX_VALUE))
++        );
++        jPanel2Layout.setVerticalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel2Layout.createSequentialGroup()
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                .addComponent(jCheckBox1))
++        );
++
++        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
++        this.setLayout(layout);
++        layout.setHorizontalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
++                    .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++                .addContainerGap())
++        );
++        layout.setVerticalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++        );
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+ 
+     void load() {
+@@ -105,9 +149,12 @@
+     }
+ 
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JCheckBox jCheckBox1;
+     private javax.swing.JLabel jLabel1;
+     private javax.swing.JLabel jLabel2;
+     private javax.swing.JLabel jLabel3;
++    private javax.swing.JPanel jPanel1;
++    private javax.swing.JPanel jPanel2;
+     private javax.swing.JTextField jTextField1;
+     private javax.swing.JTextField jTextField2;
+     private javax.swing.JTextField jTextField3;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -183,7 +183,11 @@
+     public void catalogOpened(CatalogEngineEvent evt) {
+         manager.setRootContext(new CatalogNode(evt.getName(), false));//TODO:
+     }
+-
++    
++    public void catalogClosed(CatalogEngineEvent evt) {
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++    
+     public void diskGroupAdded(CatalogEngineEvent evt) {
+         throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
+     }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionClose.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionClose.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionClose.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -19,14 +19,16 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import org.openide.util.HelpCtx;
++import org.openide.util.Lookup;
+ import org.openide.util.NbBundle;
+ import org.openide.util.actions.CallableSystemAction;
+ 
+ public final class ActionClose extends CallableSystemAction {
+ 
+     public void performAction() {
+-    // TODO implement action body
++        Lookup.getDefault().lookup(CatalogEngine.class).closeCatalog();
+     }
+ 
+     public String getName() {
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCloseAll.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCloseAll.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCloseAll.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,51 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+-
+-import org.openide.util.HelpCtx;
+-import org.openide.util.NbBundle;
+-import org.openide.util.actions.CallableSystemAction;
+-
+-public final class ActionCloseAll extends CallableSystemAction {
+-
+-    public void performAction() {
+-    // TODO implement action body
+-    }
+-
+-    public String getName() {
+-        return NbBundle.getMessage(ActionCloseAll.class, &quot;CTL_ActionCloseAll&quot;);
+-    }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
+-
+-    public HelpCtx getHelpCtx() {
+-        return HelpCtx.DEFAULT_HELP;
+-    }
+-
+-    @Override
+-    protected boolean asynchronous() {
+-        return false;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCopyTo.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCopyTo.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCopyTo.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,51 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+-
+-import org.openide.util.HelpCtx;
+-import org.openide.util.NbBundle;
+-import org.openide.util.actions.CallableSystemAction;
+-
+-public final class ActionCopyTo extends CallableSystemAction {
+-
+-    public void performAction() {
+-    // TODO implement action body
+-    }
+-
+-    public String getName() {
+-        return NbBundle.getMessage(ActionCopyTo.class, &quot;CTL_ActionCopyTo&quot;);
+-    }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
+-
+-    public HelpCtx getHelpCtx() {
+-        return HelpCtx.DEFAULT_HELP;
+-    }
+-
+-    @Override
+-    protected boolean asynchronous() {
+-        return false;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExtractTo.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExtractTo.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExtractTo.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,51 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+-
+-import org.openide.util.HelpCtx;
+-import org.openide.util.NbBundle;
+-import org.openide.util.actions.CallableSystemAction;
+-
+-public final class ActionExtractTo extends CallableSystemAction {
+-
+-    public void performAction() {
+-    // TODO implement action body
+-    }
+-
+-    public String getName() {
+-        return NbBundle.getMessage(ActionExtractTo.class, &quot;CTL_ActionExtractTo&quot;);
+-    }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
+-
+-    public HelpCtx getHelpCtx() {
+-        return HelpCtx.DEFAULT_HELP;
+-    }
+-
+-    @Override
+-    protected boolean asynchronous() {
+-        return false;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectFiles.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectFiles.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectFiles.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,51 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+-
+-import org.openide.util.HelpCtx;
+-import org.openide.util.NbBundle;
+-import org.openide.util.actions.CallableSystemAction;
+-
+-public final class ActionFindSelectFiles extends CallableSystemAction {
+-
+-    public void performAction() {
+-    // TODO implement action body
+-    }
+-
+-    public String getName() {
+-        return NbBundle.getMessage(ActionFindSelectFiles.class, &quot;CTL_ActionFindSelectFiles&quot;);
+-    }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
+-
+-    public HelpCtx getHelpCtx() {
+-        return HelpCtx.DEFAULT_HELP;
+-    }
+-
+-    @Override
+-    protected boolean asynchronous() {
+-        return false;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectedFiles.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectedFiles.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectedFiles.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,51 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+-
+-import org.openide.util.HelpCtx;
+-import org.openide.util.NbBundle;
+-import org.openide.util.actions.CallableSystemAction;
+-
+-public final class ActionFindSelectedFiles extends CallableSystemAction {
+-
+-    public void performAction() {
+-    // TODO implement action body
+-    }
+-
+-    public String getName() {
+-        return NbBundle.getMessage(ActionFindSelectedFiles.class, &quot;CTL_ActionFindSelectedFiles&quot;);
+-    }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
+-
+-    public HelpCtx getHelpCtx() {
+-        return HelpCtx.DEFAULT_HELP;
+-    }
+-
+-    @Override
+-    protected boolean asynchronous() {
+-        return false;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionMoveTo.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionMoveTo.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionMoveTo.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,51 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+-
+-import org.openide.util.HelpCtx;
+-import org.openide.util.NbBundle;
+-import org.openide.util.actions.CallableSystemAction;
+-
+-public final class ActionMoveTo extends CallableSystemAction {
+-
+-    public void performAction() {
+-    // TODO implement action body
+-    }
+-
+-    public String getName() {
+-        return NbBundle.getMessage(ActionMoveTo.class, &quot;CTL_ActionMoveTo&quot;);
+-    }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
+-
+-    public HelpCtx getHelpCtx() {
+-        return HelpCtx.DEFAULT_HELP;
+-    }
+-
+-    @Override
+-    protected boolean asynchronous() {
+-        return false;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionNextWindow.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionNextWindow.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionNextWindow.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,51 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+-
+-import org.openide.util.HelpCtx;
+-import org.openide.util.NbBundle;
+-import org.openide.util.actions.CallableSystemAction;
+-
+-public final class ActionNextWindow extends CallableSystemAction {
+-
+-    public void performAction() {
+-    // TODO implement action body
+-    }
+-
+-    public String getName() {
+-        return NbBundle.getMessage(ActionNextWindow.class, &quot;CTL_ActionNextWindow&quot;);
+-    }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
+-
+-    public HelpCtx getHelpCtx() {
+-        return HelpCtx.DEFAULT_HELP;
+-    }
+-
+-    @Override
+-    protected boolean asynchronous() {
+-        return false;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRename.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRename.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRename.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,51 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+-
+-import org.openide.util.HelpCtx;
+-import org.openide.util.NbBundle;
+-import org.openide.util.actions.CallableSystemAction;
+-
+-public final class ActionRename extends CallableSystemAction {
+-
+-    public void performAction() {
+-    // TODO implement action body
+-    }
+-
+-    public String getName() {
+-        return NbBundle.getMessage(ActionRename.class, &quot;CTL_ActionRename&quot;);
+-    }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
+-
+-    public HelpCtx getHelpCtx() {
+-        return HelpCtx.DEFAULT_HELP;
+-    }
+-
+-    @Override
+-    protected boolean asynchronous() {
+-        return false;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateAllDisks.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateAllDisks.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateAllDisks.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,51 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+-
+-import org.openide.util.HelpCtx;
+-import org.openide.util.NbBundle;
+-import org.openide.util.actions.CallableSystemAction;
+-
+-public final class ActionUpdateAllDisks extends CallableSystemAction {
+-
+-    public void performAction() {
+-    // TODO implement action body
+-    }
+-
+-    public String getName() {
+-        return NbBundle.getMessage(ActionUpdateAllDisks.class, &quot;CTL_ActionUpdateAllDisks&quot;);
+-    }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
+-
+-    public HelpCtx getHelpCtx() {
+-        return HelpCtx.DEFAULT_HELP;
+-    }
+-
+-    @Override
+-    protected boolean asynchronous() {
+-        return false;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateThisFolder.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateThisFolder.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateThisFolder.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,51 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+-
+-import org.openide.util.HelpCtx;
+-import org.openide.util.NbBundle;
+-import org.openide.util.actions.CallableSystemAction;
+-
+-public final class ActionUpdateThisFolder extends CallableSystemAction {
+-
+-    public void performAction() {
+-    // TODO implement action body
+-    }
+-
+-    public String getName() {
+-        return NbBundle.getMessage(ActionUpdateThisFolder.class, &quot;CTL_ActionUpdateThisFolder&quot;);
+-    }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
+-
+-    public HelpCtx getHelpCtx() {
+-        return HelpCtx.DEFAULT_HELP;
+-    }
+-
+-    @Override
+-    protected boolean asynchronous() {
+-        return false;
+-    }
+-}
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionViewFile.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionViewFile.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionViewFile.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,51 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
+-
+-import org.openide.util.HelpCtx;
+-import org.openide.util.NbBundle;
+-import org.openide.util.actions.CallableSystemAction;
+-
+-public final class ActionViewFile extends CallableSystemAction {
+-
+-    public void performAction() {
+-    // TODO implement action body
+-    }
+-
+-    public String getName() {
+-        return NbBundle.getMessage(ActionViewFile.class, &quot;CTL_ActionViewFile&quot;);
+-    }
+-
+-    @Override
+-    protected void initialize() {
+-        super.initialize();
+-        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
+-        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
+-    }
+-
+-    public HelpCtx getHelpCtx() {
+-        return HelpCtx.DEFAULT_HELP;
+-    }
+-
+-    @Override
+-    protected boolean asynchronous() {
+-        return false;
+-    }
+-}
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties	2008-06-05 16:35:06 UTC (rev 131)
+@@ -19,36 +19,24 @@
+  ##
+ CTL_ActionAddNewDisk=Add New Disk
+ CTL_ActionAddNewDiskGroup=Add New Disk Group
+-CTL_ActionAssignDisckPicture=AssignDisckPicture
+ CTL_ActionAssignDiskPicture=Assign Disk Picture
+ CTL_ActionCatalogProperties=Catalog Properties
+ CTL_ActionClose=Close
+-CTL_ActionCloseAll=Close All
+-CTL_ActionCopyTo=Copy To
+ CTL_ActionDelete=Delete
+ CTL_ActionDescriptionWindow=Description Window
+-CTL_ActionEditDescription=EditDescription
++CTL_ActionEditDescription=Edit Description
+ CTL_ActionExport=Export
+-CTL_ActionExtractTo=Extract To
+-CTL_ActionFileManagement=FileManagement
++CTL_ActionFileManagement=File Management
+ CTL_ActionFindInThisDiskGroup=Find In This Disk Group
+-CTL_ActionFindSelectedFiles=FindSelectedFiles
+-CTL_ActionFindSelectFiles=Find Select Files
+ CTL_ActionHelpIndex=Help Index
+ CTL_ActionImport=Import
+ CTL_ActionLaunchFile=Launch File
+ CTL_ActionLendingDisks=Lending Disks
+-CTL_ActionMoveTo=Move To
+ CTL_ActionNewCatalog=New Catalog
+-CTL_ActionNextWindow=NextWindow
+ CTL_ActionOpen=Open
+ CTL_ActionProperties=Properties
+ CTL_ActionRemoveFromCatalog=Remove From Catalog
+-CTL_ActionRename=Rename
+-CTL_ActionRenameDisk=RenameDisk
++CTL_ActionRenameDisk=Rename Disk
+ CTL_ActionRenumberDisks=Renumber Disks
+ CTL_ActionScanForDuplicates=Scan For Duplicates
+-CTL_ActionSearchForItems=Search For Items
+-CTL_ActionUpdateAllDisks=Update All Disks
+-CTL_ActionUpdateThisFolder=Update This Folder
+-CTL_ActionViewFile=View File
++CTL_ActionSearchForItems=Search For Items
+\ No newline at end of file
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-05 16:35:06 UTC (rev 131)
+@@ -29,8 +29,6 @@
+ NewCatalogDlg.jbtnHelp.text=Help
+ NewCatalogDlg.jbtnCancel.text=Cancel
+ NewCatalogDlg.jbtnCreate.text=Create
+-# To change this template, choose Tools | Templates
+-# and open the template in the editor.
+ NewCatalogDlg.jlblName.text=Name:
+ NewCatalogDlg.jlblDestination.text=Location:
+ NewCatalogDlg.jbtnBrowse.text=...
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -25,6 +25,7 @@
+ import javax.swing.ImageIcon;
+ import javax.swing.event.DocumentEvent;
+ import javax.swing.event.DocumentListener;
++import org.hibernate.Session;
+ import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
+ 
+@@ -35,6 +36,7 @@
+ public class CatalogPropertiesDlg extends javax.swing.JDialog {
+ 
+     private CatalogEngine eng;
++    private Session s;
+     private CatalogProperties props;
+     private boolean changed = false;
+ 
+@@ -42,7 +44,7 @@
+     public CatalogPropertiesDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+         initComponents();
+-        
++
+         jtaDescription.getDocument().addDocumentListener(new DocumentListener() {
+ 
+             public void insertUpdate(DocumentEvent e) {
+@@ -69,21 +71,20 @@
+     }
+ 
+     private void fillIn() {
+-        if (eng != null) {
+-            Date temp;
+-            props = eng.getProperties();
+-            if (props != null) {
+-                jlblCatalogName.setText(props.getName());
+-                if ((temp = props.getCreationDate()) != null) {
+-                    jdcCreatedOn.setDate(temp);
+-                }
+-                jtaDescription.setText(props.getDescription());
+-                jlblNrDisksValue.setText(String.valueOf(props.getDiskNumber()));
+-                jlblNrFilesValue.setText(String.valueOf(props.getTotalFiles()));
+-                jlblNrFoldersValue.setText(String.valueOf(props.getTotalFolders()));
+-                jlblTotalSizeValue.setText(String.valueOf(props.getTotalSize()));
+-            }
++        Date temp;
++        s = eng.sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        props = (CatalogProperties) s.createQuery(&quot;from CatalogProperties&quot;).uniqueResult();
++        jlblCatalogName.setText(props.getName());
++        if ((temp = props.getCreationDate()) != null) {
++            jdcCreatedOn.setDate(temp);
+         }
++        jtaDescription.setText(props.getDescription());
++        jlblNrDisksValue.setText(String.valueOf(props.getDiskNumber()));
++        jlblNrFilesValue.setText(String.valueOf(props.getTotalFiles()));
++        jlblNrFoldersValue.setText(String.valueOf(props.getTotalFolders()));
++        jlblTotalSizeValue.setText(String.valueOf(props.getTotalSize()));
++
+     }
+ 
+     /** This method is called from within the constructor to
+@@ -279,17 +280,18 @@
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+ 
+ private void jbtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCancelActionPerformed
++    s.getTransaction().commit();
+     dispose();
+ }//GEN-LAST:event_jbtnCancelActionPerformed
+ 
+ private void jbtnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnOKActionPerformed
+     //TODO: better control over detached object
+-    if (changed &amp;&amp; eng != null &amp;&amp; props != null) {
++    if (changed) {
+         changed = false;
+         props.setCreationDate(jdcCreatedOn.getDate());
+         props.setDescription(jtaDescription.getText().trim());
+-        eng.updateProperties();
+     }
++    s.getTransaction().commit();
+     dispose();
+ }//GEN-LAST:event_jbtnOKActionPerformed
+ 
+@@ -300,7 +302,6 @@
+         changed = true;
+     }
+ }//GEN-LAST:event_jdcCreatedOnPropertyChange
+-
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JSeparator jSeparator1;
+     private javax.swing.JSeparator jSeparator2;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -112,6 +112,7 @@
+         jpButtons.validate();
+     }
+ 
++    @SuppressWarnings(&quot;unchecked&quot;)
+     private Object[] listDiskGroups() {
+         if (eng != null) {
+             List g = eng.getDiskGroups();
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form	2008-06-05 16:35:06 UTC (rev 131)
+@@ -327,6 +327,9 @@
+                   &lt;Connection code=&quot;listModel = new DefaultListModel()&quot; type=&quot;code&quot;/&gt;
+                 &lt;/Property&gt;
+               &lt;/Properties&gt;
++              &lt;Events&gt;
++                &lt;EventHandler event=&quot;propertyChange&quot; listener=&quot;java.beans.PropertyChangeListener&quot; parameters=&quot;java.beans.PropertyChangeEvent&quot; handler=&quot;jlstResultsPropertyChange&quot;/&gt;
++              &lt;/Events&gt;
+             &lt;/Component&gt;
+           &lt;/SubComponents&gt;
+         &lt;/Container&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -17,7 +17,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs;
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+@@ -44,8 +43,7 @@
+     private CatalogEngine eng;
+     private Vector&lt;DiskGroup&gt; groups;
+     private DefaultListModel listModel;
+-    
+-    
++
+     /** Creates new form SearchDlg */
+     public SearchDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+@@ -54,7 +52,7 @@
+         initComponents();
+         jpbProgress.setVisible(false);
+     }
+-    
++
+     /** Creates a new form SeachDlg and changes the selected item in the 
+      * combobox that list disk groups to match the given group.
+      *
+@@ -67,13 +65,13 @@
+         jrdbDiskGroupOnly.setSelected(true);
+         jcbxDiskGroups.setSelectedItem(group);
+     }
+-    
++
+     public void showCentered() {
+         setLocation(getParent().getX() + (getParent().getWidth() / 2) - (getWidth() / 2),
+                 getParent().getY() + (getParent().getHeight() / 2) - (getHeight() / 2));
+         setVisible(true);
+     }
+-    
++
+     @SuppressWarnings(&quot;unchecked&quot;)
+     private void obtainDiskGroupNames() {
+         groups = new Vector&lt;DiskGroup&gt;();
+@@ -82,7 +80,7 @@
+         groups.addAll(s.createQuery(&quot;from DiskGroup group order by group.name&quot;).list());
+         s.getTransaction().commit();
+     }
+-    
++
+     @SuppressWarnings(&quot;unchecked&quot;)
+     private void search() {
+         listModel.clear();
+@@ -90,29 +88,18 @@
+         boolean caseSensitive = jchkCaseSensitive.isSelected();
+         boolean useRegular = jchkUseReGex.isSelected();
+         boolean scopeAll = jrdbEntireCatalog.isSelected();
+-        List l = new LinkedList();
++
++        //TODO: add other properties
+         Session s = eng.sessionFactory.getCurrentSession();
+         s.beginTransaction();
+         Criteria c = s.createCriteria(FileWrapper.class).add(Restrictions.ilike(&quot;name&quot;, jtfSearchText.getText().trim(), MatchMode.ANYWHERE));
+-        //l.addAll(c.list());*/
+-        /*l.addAll(s.createQuery(&quot;from FileWrapper file where file.name like '%:name%'&quot;).setString(&quot;name&quot;, jtfSearchText.getText().trim()).list());*/
+-        
+-        /*for(Object o : l) {
+-            //System.err.println(&quot;FOUND: &quot; + o);
++        for (Object o : c.list()) {
+             listModel.addElement(o);
+-        }*/
+-       for(Object o : c.list()) {
+-            //System.err.println(&quot;FOUND: &quot; + o);
+-            listModel.addElement(o);
+         }
+-        /*Iterator it = s.createQuery(&quot;from FileWrapper file where file.name like ?&quot;).setString(0, &quot;%&quot;
+-                + jtfSearchText.getText().trim()+&quot;%&quot;).iterate();
+-        while(it.hasNext()) {
+-            listModel.addElement(it.next());
+-        }*/
+         s.getTransaction().commit();
+         jpbProgress.setVisible(false);
+     }
++
+     /** This method is called from within the constructor to
+      * initialize the form.
+      * WARNING: Do NOT modify this code. The content of this method is
+@@ -269,6 +256,11 @@
+         jpResults.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(SearchDlg.class, &quot;SearchDlg.jpResults.border.title&quot;))); // NOI18N
+ 
+         jlstResults.setModel(listModel = new DefaultListModel());
++        jlstResults.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
++            public void propertyChange(java.beans.PropertyChangeEvent evt) {
++                jlstResultsPropertyChange(evt);
++            }
++        });
+         jscrResults.setViewportView(jlstResults);
+ 
+         javax.swing.GroupLayout jpResultsLayout = new javax.swing.GroupLayout(jpResults);
+@@ -336,9 +328,14 @@
+ 
+ private void jbtnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSearchActionPerformed
+     jpbProgress.setVisible(true);
+-    new Thread(new Runnable() {
++    new Thread(new  
+ 
+-            public void run() {
++          Runnable() {
++
++            
++        
++    
++public void run() {
+                 search();
+             }
+         }).start();
+@@ -348,6 +345,9 @@
+     dispose();
+ }//GEN-LAST:event_jbtnCloseActionPerformed
+ 
++private void jlstResultsPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jlstResultsPropertyChange
++    System.err.println(&quot;SOME PROPERTY CHANGED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&quot; + evt.getPropertyName());
++}//GEN-LAST:event_jlstResultsPropertyChange
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.ButtonGroup btngrpScope;
+     private javax.swing.JButton jbtnClose;
+@@ -368,5 +368,4 @@
+     private javax.swing.JScrollPane jscrResults;
+     private javax.swing.JTextField jtfSearchText;
+     // End of variables declaration//GEN-END:variables
+-
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-06-05 16:35:06 UTC (rev 131)
+@@ -28,23 +28,19 @@
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAssignDiskPicture.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionLendingDisks.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenumberDisks.instance&quot;/&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateAllDisks.instance&quot;/&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateThisFolder.instance&quot;/&gt;
+         &lt;/folder&gt;
+         &lt;folder name=&quot;File&quot;&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionClose.instance&quot;/&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCloseAll.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionExport.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionImport.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionNewCatalog.instance&quot;/&gt;
+-                &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionOpen.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionOpen.instance&quot;/&gt;
+         &lt;/folder&gt;
+         &lt;folder name=&quot;Help&quot;&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionHelpIndex.instance&quot;/&gt;
+         &lt;/folder&gt;
+         &lt;folder name=&quot;Search&quot;&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindInThisDiskGroup.instance&quot;/&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindSelectedFiles.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionScanForDuplicates.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionSearchForItems.instance&quot;/&gt;
+         &lt;/folder&gt;
+@@ -54,45 +50,23 @@
+         &lt;folder name=&quot;Window&quot;&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-DetailsViewAction.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-NavigationTreeAction.instance&quot;/&gt;
+-                &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDescriptionWindow.instance&quot;/&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionNextWindow.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDescriptionWindow.instance&quot;/&gt;
+         &lt;/folder&gt;
+-        &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCopyTo.instance&quot;/&gt;
+         &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDelete.instance&quot;/&gt;
+         &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionEditDescription.instance&quot;/&gt;
+-        &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionExtractTo.instance&quot;/&gt;
+         &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionLaunchFile.instance&quot;/&gt;
+-        &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionMoveTo.instance&quot;/&gt;
+         &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionProperties.instance&quot;/&gt;
+         &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRemoveFromCatalog.instance&quot;/&gt;
+-        &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRename.instance&quot;/&gt;
+         &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenameDisk.instance&quot;/&gt;
+-        &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionViewFile.instance&quot;/&gt;
+-    &lt;/folder&gt;
++      &lt;/folder&gt;
+     &lt;folder name=&quot;Menu&quot;&gt;
+         &lt;folder name=&quot;Actions&quot;&gt;
+             &lt;attr name=&quot;position&quot; intvalue=&quot;700&quot;/&gt;
+             &lt;folder name=&quot;File Management&quot;&gt;
+-                &lt;attr name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCopyTo.shadow/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionMoveTo.shadow&quot; boolvalue=&quot;true&quot;/&gt;
+-                &lt;attr name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionExtractTo.shadow/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCopyTo.shadow&quot; boolvalue=&quot;true&quot;/&gt;
+-                &lt;attr name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionMoveTo.shadow/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRename.shadow&quot; boolvalue=&quot;true&quot;/&gt;
+-                &lt;attr name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRename.shadow/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDelete.shadow&quot; boolvalue=&quot;true&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;600&quot;/&gt;
+-                &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCopyTo.shadow&quot;&gt;
+-                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCopyTo.instance&quot;/&gt;
+-                &lt;/file&gt;
+                 &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDelete.shadow&quot;&gt;
+                     &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDelete.instance&quot;/&gt;
+                 &lt;/file&gt;
+-                &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionExtractTo.shadow&quot;&gt;
+-                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionExtractTo.instance&quot;/&gt;
+-                &lt;/file&gt;
+-                &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionMoveTo.shadow&quot;&gt;
+-                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionMoveTo.instance&quot;/&gt;
+-                &lt;/file&gt;
+-                &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRename.shadow&quot;&gt;
+-                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRename.instance&quot;/&gt;
+-                &lt;/file&gt;
+             &lt;/folder&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionEditDescription.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionEditDescription.instance&quot;/&gt;
+@@ -114,10 +88,6 @@
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenameDisk.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;400&quot;/&gt;
+             &lt;/file&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionViewFile.shadow&quot;&gt;
+-                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionViewFile.instance&quot;/&gt;
+-                &lt;attr name=&quot;position&quot; intvalue=&quot;100&quot;/&gt;
+-            &lt;/file&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-separatorAfter.instance&quot;&gt;
+                 &lt;attr name=&quot;instanceClass&quot; stringvalue=&quot;javax.swing.JSeparator&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;500&quot;/&gt;
+@@ -148,14 +118,6 @@
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenumberDisks.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;1350&quot;/&gt;
+             &lt;/file&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateAllDisks.shadow&quot;&gt;
+-                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateAllDisks.instance&quot;/&gt;
+-                &lt;attr name=&quot;position&quot; intvalue=&quot;875&quot;/&gt;
+-            &lt;/file&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateThisFolder.shadow&quot;&gt;
+-                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateThisFolder.instance&quot;/&gt;
+-                &lt;attr name=&quot;position&quot; intvalue=&quot;887&quot;/&gt;
+-            &lt;/file&gt;
+             &lt;file name=&quot;org-netbeans-core-actions-JumpNextAction.shadow_hidden&quot;/&gt;
+             &lt;file name=&quot;org-netbeans-core-actions-JumpPrevAction.shadow_hidden&quot;/&gt;
+             &lt;file name=&quot;org-openide-actions-CopyAction.instance_hidden&quot;/&gt;
+@@ -172,10 +134,6 @@
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionClose.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;1850&quot;/&gt;
+             &lt;/file&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCloseAll.shadow&quot;&gt;
+-                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCloseAll.instance&quot;/&gt;
+-                &lt;attr name=&quot;position&quot; intvalue=&quot;1875&quot;/&gt;
+-            &lt;/file&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionExport.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionExport.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;2375&quot;/&gt;
+@@ -196,7 +154,7 @@
+                 &lt;attr name=&quot;instanceClass&quot; stringvalue=&quot;javax.swing.JSeparator&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;2125&quot;/&gt;
+             &lt;/file&gt;
+-                &lt;/folder&gt;
++        &lt;/folder&gt;
+         &lt;file name=&quot;GoTo_hidden&quot;/&gt;
+         &lt;folder name=&quot;Help&quot;&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionHelpIndex.shadow&quot;&gt;
+@@ -216,10 +174,6 @@
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Search/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindInThisDiskGroup.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;650&quot;/&gt;
+             &lt;/file&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindSelectedFiles.shadow&quot;&gt;
+-                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Search/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindSelectedFiles.instance&quot;/&gt;
+-                &lt;attr name=&quot;position&quot; intvalue=&quot;675&quot;/&gt;
+-            &lt;/file&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionScanForDuplicates.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Search/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionScanForDuplicates.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;1750&quot;/&gt;
+@@ -233,7 +187,7 @@
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/SelectDocumentNode/org-netbeans-modules-favorites-Select.instance&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;2800&quot;/&gt;
+             &lt;/file&gt;
+-                &lt;file name=&quot;org-openide-actions-GotoAction.shadow_hidden&quot;/&gt;
++            &lt;file name=&quot;org-openide-actions-GotoAction.shadow_hidden&quot;/&gt;
+         &lt;/folder&gt;
+         &lt;folder name=&quot;View&quot;&gt;
+             &lt;file name=&quot;Separator1.instance_hidden&quot;/&gt;
+@@ -266,9 +220,6 @@
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDescriptionWindow.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDescriptionWindow.instance&quot;/&gt;
+             &lt;/file&gt;
+-            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionNextWindow.shadow&quot;&gt;
+-                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionNextWindow.instance&quot;/&gt;
+-            &lt;/file&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-separatorAfter.instance&quot;&gt;
+                 &lt;attr name=&quot;instanceClass&quot; stringvalue=&quot;javax.swing.JSeparator&quot;/&gt;
+             &lt;/file&gt;
+@@ -285,16 +236,13 @@
+         &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-PluginsOptionsCategory.instance&quot;/&gt;
+     &lt;/folder&gt;
+     &lt;folder name=&quot;Shortcuts&quot;&gt;
+-        &lt;file name=&quot;D-I.shadow&quot;&gt;
+-            &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionViewFile.instance&quot;/&gt;
+-        &lt;/file&gt;
+         &lt;file name=&quot;S-F.shadow&quot;&gt;
+             &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Search/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionSearchForItems.instance&quot;/&gt;
+         &lt;/file&gt;
+         &lt;file name=&quot;S-N.shadow&quot;&gt;
+             &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionNewCatalog.instance&quot;/&gt;
+         &lt;/file&gt;
+-            &lt;file name=&quot;S-O.shadow&quot;&gt;
++        &lt;file name=&quot;S-O.shadow&quot;&gt;
+             &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionOpen.instance&quot;/&gt;
+         &lt;/file&gt;
+     &lt;/folder&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogChildren.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -24,6 +24,7 @@
+     private List items;
+     private CatalogEngine eng;
+ 
++    @SuppressWarnings(&quot;unchecked&quot;)
+     public CatalogChildren(CatalogNode parent) {
+         this.parent = parent;
+         items = new LinkedList();
+@@ -36,12 +37,14 @@
+     }  
+ 
+     @Override
++    @SuppressWarnings(&quot;unchecked&quot;)
+     protected void addNotify() {
+         List keys = items;
+         setKeys(keys);
+     }
+ 
+     @Override
++    @SuppressWarnings(&quot;unchecked&quot;)
+     protected Node[] createNodes(Object key) {
+         if (key instanceof DiskGroup) {
+             Session s = eng.sessionFactory.getCurrentSession();
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -29,7 +29,6 @@
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionRenumberDisks;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionScanForDuplicates;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionSearchForItems;
+-import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionUpdateAllDisks;
+ import java.awt.Image;
+ import java.awt.event.ActionEvent;
+ import java.util.List;
+@@ -62,9 +61,9 @@
+         Lookup lo = Lookups.forPath(&quot;/Actions&quot;);//TODO: sort actions correctly and add separators
+         sysact = new SystemAction[]{lo.lookup(ActionProperties.class),
+                     lo.lookup(ActionRenumberDisks.class), lo.lookup(ActionScanForDuplicates.class),
+-                    lo.lookup(ActionSearchForItems.class), lo.lookup(ActionUpdateAllDisks.class),
+-                    lo.lookup(ActionAddNewDisk.class), lo.lookup(ActionAddNewDiskGroup.class),
+-                    lo.lookup(ActionClose.class), lo.lookup(ActionExport.class), lo.lookup(ActionImport.class)
++                    lo.lookup(ActionSearchForItems.class), lo.lookup(ActionAddNewDisk.class), 
++                    lo.lookup(ActionAddNewDiskGroup.class), lo.lookup(ActionClose.class), 
++                    lo.lookup(ActionExport.class), lo.lookup(ActionImport.class)
+                 };
+     }
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -25,6 +25,7 @@
+     private List items;
+     private CatalogEngine eng;
+ 
++    @SuppressWarnings(&quot;unchecked&quot;)
+     public DiskGroupChildren(Long parentId) {
+         this.parentId = parentId;
+         items = new LinkedList();
+@@ -37,12 +38,14 @@
+     }
+ 
+     @Override
++    @SuppressWarnings(&quot;unchecked&quot;)
+     protected void addNotify() {
+         List keys = items;
+         setKeys(keys);
+     }
+ 
+     @Override
++    @SuppressWarnings(&quot;unchecked&quot;)
+     protected Node[] createNodes(Object key) {
+         if (key instanceof DiskGroup) {
+             Session s = eng.sessionFactory.getCurrentSession();
+
+Deleted: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java	2008-06-03 17:43:02 UTC (rev 130)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java	2008-06-05 16:35:06 UTC (rev 131)
+@@ -1,44 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
+-
+-import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+-import java.awt.Image;
+-import org.openide.nodes.AbstractNode;
+-import org.openide.nodes.Children;
+-import org.openide.util.Lookup;
+-import org.openide.util.Utilities;
+-import org.openide.util.actions.SystemAction;
+-
+-/**
+- *
+- * @author Knitter
+- */
+-public class FileWrapperNode extends AbstractNode {
+-    
+-    public FileWrapperNode() {
+-       super(Children.LEAF);
+-
+-        CatalogEngine eng = Lookup.getDefault().lookup(CatalogEngine.class);
+-        setName(eng.getProperties().getName());
+-    }
+-
+-    @Override
+-    public Image getIcon(int type) {//TODO: remove icon and replace with correct one
+-        return Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-audio.png&quot;); // NOI18N
+-    }
+-
+-    @Override
+-    public Image getOpenedIcon(int type) {
+-        return getIcon(type);
+-    }
+-
+-    @Override
+-    public SystemAction[] getActions(boolean bool) {
+-        return new SystemAction[]{};
+-    }
+-
+-}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000125.html">[Jfindmyfiles-commits] r130 - trunk/docs/Iteracao2-CB05/TestingDB
+</A></li>
+	<LI>Next message: <A HREF="000127.html">[Jfindmyfiles-commits] r132 - in trunk: docs docs/Iteracao4-CB04 docs/Iteracao6-CB07 media project/JFindMyFiles project/JFindMyFiles/ExportEngine/nbproject project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine project/JFindMyFiles/ImportEngine project/JFindMyFiles/ImportEngine/nbproject project/JFindMyFiles/ImportEngine/src project/JFindMyFiles/ImportEngine/src/de project/JFindMyFiles/ImportEngine/src/de/berlios project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine project/JFindMyFiles/ImportEngine/test project/JFindMyFiles/ImportEngine/test/unit project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup project/JFindMyFiles/nbproject spikes spikes/CRC spikes/CRC/fastmd5 spikes/CRC/fastmd5/com spikes/CRC/fastmd5/com/twmacinta spikes/CRC/fastmd5/com/twmacinta/io spikes/CRC/fastmd5/com/twma! cinta/util spikes/CRC/fastmd5/com/twmacinta/util/test spikes/CRC/fastmd5/lib spikes/CRC/fastmd5/lib/arch spikes/CRC/fastmd5/lib/arch/darwin_ppc spikes/CRC/fastmd5/lib/arch/linux_x86 spikes/CRC/fastmd5/lib/arch/win32_x86 spikes/CRC/nbproject spikes/CRC/src spikes/CRC/src/crc
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#126">[ date ]</a>
+              <a href="thread.html#126">[ thread ]</a>
+              <a href="subject.html#126">[ subject ]</a>
+              <a href="author.html#126">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

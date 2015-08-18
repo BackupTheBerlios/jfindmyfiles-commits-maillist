@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r27 - in trunk: . docs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-April/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r27%20-%20in%20trunk%3A%20.%20docs&In-Reply-To=%3C200804101346.m3ADkoEg030751%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000022.html">
+   <LINK REL="Next"  HREF="000024.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r27 - in trunk: . docs</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r27%20-%20in%20trunk%3A%20.%20docs&In-Reply-To=%3C200804101346.m3ADkoEg030751%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r27 - in trunk: . docs">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu Apr 10 15:46:50 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000022.html">[Jfindmyfiles-commits] r26 -	trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos
+</A></li>
+        <LI>Next message: <A HREF="000024.html">[Jfindmyfiles-commits] r28 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23">[ date ]</a>
+              <a href="thread.html#23">[ thread ]</a>
+              <a href="subject.html#23">[ subject ]</a>
+              <a href="author.html#23">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-04-10 15:46:45 +0200 (Thu, 10 Apr 2008)
+New Revision: 27
+
+Added:
+   trunk/docs/TODO
+Removed:
+   trunk/docs/[Justificacao] Linguagem Escolhida.txt
+Modified:
+   trunk/README
+   trunk/docs/[Justificacao] Metodologia usada.txt
+   trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt
+   trunk/docs/[Justificacao] Uso de plataforma RCP.txt
+Log:
+Arrumadas as justifica?\195?\167?\195?\181es, faltam apenas alguns pormenores pontuais a incluir quando os textos forem inclu?\195?\173dos no ficheiro de relat?\195?\179rio final.
+
+Removido ficheiro com justifica?\195?\167?\195?\163o desencess?\195?\161ria.
+
+Acrescentado algum texto ao ficheiro README que identifica o projecto.
+
+Acrescentado ficheiro TODO com notas sobre o que est?\195?\161 pendente, os pontos a considerar nas pr?\195?\179ximas ac?\195?\167?\195?\181es e algumas d?\195?\186vidas que surjam.
+
+Modified: trunk/README
+===================================================================
+--- trunk/README	2008-04-09 22:09:42 UTC (rev 26)
++++ trunk/README	2008-04-10 13:46:45 UTC (rev 27)
+@@ -0,0 +1,4 @@
++Software de gest&#227;o de ficheiros, aplica&#231;&#227;o DAM, desenvolvida no &#226;mbito da 
++unidade curricular Projecto Inform&#225;tico, do curso de Eng&#186; Inform&#225;tica da
++Escola Superior de Tecnologia e Gest&#227;o de Leiria, parte do Instituto Polit&#233;cnico 
++de Leiria.
+\ No newline at end of file
+
+Added: trunk/docs/TODO
+===================================================================
+--- trunk/docs/TODO	2008-04-09 22:09:42 UTC (rev 26)
++++ trunk/docs/TODO	2008-04-10 13:46:45 UTC (rev 27)
+@@ -0,0 +1,6 @@
++- Contextualizar as refer&#234;nicas existentes.
++- Descrever as ferramentas e os motivos que levaram &#224; sua escolha, texto simples.
++Indicar na sec&#231;&#227;o de controlo de vers&#245;es que a metodologia usada anda de m&#227;os 
++dadas com um sistema de controlo de vers&#245;es.
++- Falar sobre a calendariza&#231;&#227;o que muda frequentemente.
++- Na justifica&#231;&#227;o da plataforma NB VS Eclipse RCP falta indicar o nome da revista.
+\ No newline at end of file
+
+Deleted: trunk/docs/[Justificacao] Linguagem Escolhida.txt
+===================================================================
+
+Modified: trunk/docs/[Justificacao] Metodologia usada.txt
+===================================================================
+--- trunk/docs/[Justificacao] Metodologia usada.txt	2008-04-09 22:09:42 UTC (rev 26)
++++ trunk/docs/[Justificacao] Metodologia usada.txt	2008-04-10 13:46:45 UTC (rev 27)
+@@ -0,0 +1,28 @@
++Uma avalia&#231;&#227;o das metodologias existentes, objectiva e consciente dos requisitos 
++e caracteristicas do projecto e da equipa de desenvolvimento, especialmente o 
++tempo dispon&#237;vel para o desenvolvimento e o tamanho da equipa, leva a que a 
++escolha recaia sobre a aplica&#231;&#227;o do modelo ICONIX de forma &#225;gil ou a metodologias &#225;geis.
++
++[FALAR DE PROCESSOS &#193;GEIS?, PELO MENOS DA SUA FILOSOFIA.]
++
++Tipicamente, a metodologia XP, &#233; recomendada no caso de projectos cujos requisitos 
++est&#227;o em constante mudan&#231;a. No nosso projecto e dado que representamos o papel de 
++programadores e de clientes, n&#227;o se espera que os requisitos sofram altera&#231;&#245;es 
++significativas nem que sejam alterados de forma continua. Mesmo assim 
++a metodologia apresenta outros pontos a favor ao ser aplicada a uma equipa de dois 
++programadores libertando-nos da formalidade extrema de outras metodologias que 
++apenas sobrecarregaria a equipa de desenvolvimento.
++
++A aplica&#231;&#227;o da metodologia ICONIX ao desenvolvimento &#225;gil seria uma solu&#231;&#227;o para 
++se tirar partido das vantagens associasdas a processos &#225;geis e ao mesmo tempo o 
++rigor e seguran&#231;a no desenvolvimento de software que uma metodologia como a ICONIX 
++oferece. Mesmo assim, a aplica&#231;&#227;o da metodologia ICONIX &#225;gil n&#227;o responde ao 
++requisito temporal imposto.
++
++A op&#231;&#227;o da metodologia XP parece ser a que mais se adequa aos requisitos do 
++projecto e caracteristicas da equipa de desenvolvimento pelo que foi essa a 
++seguida durante o processo de desenvolvimento e de gest&#227;o do projecto.
++
++<A HREF="http://www.extremeprogramming.org">http://www.extremeprogramming.org</A>
++Agile Development with ICONIX Process, Doug Rosenberg, Matt Stephens, 
++Mark Collins-Cope, Apress
+\ No newline at end of file
+
+Modified: trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt
+===================================================================
+--- trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt	2008-04-09 22:09:42 UTC (rev 26)
++++ trunk/docs/[Justificacao] Netbeans platform VS Eclipse RCP.txt	2008-04-10 13:46:45 UTC (rev 27)
+@@ -1,11 +1,11 @@
+ A correcta avalia&#231;&#227;o das duas plataformas deveria ser feita recorrendo &#224; 
+-implementa&#231;&#227;o de um mesmo sistema de forma a ser poss&#237;vel comparar o impacto 
+-que as diferentes arquitecturas, funcionalidades e caracter&#237;sticas t&#234;m no 
+-desenvolvimento, no entanto, o curto tempo dispon&#237;vel para desenvolver todo o 
+-sistema, invalida essa metodologia de avali&#231;&#227;o por parte da equipa de 
++implementa&#231;&#227;o de um mesmo sistema nas duas alternativas concorrentes de forma a 
++ser poss&#237;vel comparar o impacto que as diferentes arquitecturas, funcionalidades 
++e caracter&#237;sticas t&#234;m no desenvolvimento, no entanto, o curto tempo dispon&#237;vel 
++para desenvolver todo o sistema invalida esse estudo por parte da equipa de 
+ desenvolvimento. Assim recorreu-se ao estudo feito por outro profissional 
+-da &#225;rea, que desenvolveu uma mesma aplica&#231;&#227;o nas duas plataformas e publicou o 
+-seu estudo. [TEXTO INCORRECTO, REESCREVER!]
++da &#225;rea, que desenvolveu uma aplica&#231;&#227;o nas duas plataformas e publicou o seu 
++estudo na revista [FALTA NOME DA REVISTA].
+ 
+ Na conclus&#227;o da an&#225;lise determina-se que ambas as plataformas possuem 
+ caracteristicas similares, sendo os pormenores de implementa&#231;&#227;o e arquitectura 
+@@ -95,8 +95,8 @@
+ Ir&#225; ser necess&#225;ria a integra&#231;&#227;o de bibliotecas que foram desenvolvidas usando 
+ Swing. No caso da escolha da plataforma Eclipse RCP essa integra&#231;&#227;o ficar&#225; limitada 
+ a sistema Linux e Windows devido a alguns bugs existentes no sistema SWT que 
+-impendem essa integra&#231;&#227;o de funcionar correctamente no sistemas operativos 
+-Mac OS X.
++impendem a correcta integra&#231;&#227;o entre componentes SWT e componentes Swing em 
++sistemas operativos Mac OS X.
+ 
+ - Conclus&#227;o
+ Tendo em conta os pontos acima indicados decidu-se a escolha da plataforma 
+@@ -113,7 +113,7 @@
+ 
+ 
+ [REFER&#202;NCIA]
+-Java Rich Client Platforms:Eclipse RCP compared withNetBeans Platform, Kai T&#246;dter - Siemens AGCT
++Java Rich Client Platforms: Eclipse RCP compared withNetBeans Platform, Kai T&#246;dter - Siemens AGCT
+ <A HREF="https://bugs.eclipse.org/bugs/show_bug.cgi?id=221483">https://bugs.eclipse.org/bugs/show_bug.cgi?id=221483</A>
+ <A HREF="https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384">https://bugs.eclipse.org/bugs/show_bug.cgi?id=67384</A>
+ <A HREF="https://bugs.eclipse.org/bugs/show_bug.cgi?id=145890">https://bugs.eclipse.org/bugs/show_bug.cgi?id=145890</A>
+
+Modified: trunk/docs/[Justificacao] Uso de plataforma RCP.txt
+===================================================================
+--- trunk/docs/[Justificacao] Uso de plataforma RCP.txt	2008-04-09 22:09:42 UTC (rev 26)
++++ trunk/docs/[Justificacao] Uso de plataforma RCP.txt	2008-04-10 13:46:45 UTC (rev 27)
+@@ -31,13 +31,13 @@
+ A documenta&#231;&#227;o &#233; escassa e baseada numa abordagem &quot;document-as-needed&quot;, em que 
+ a documenta&#231;&#227;o ser&#225; criada conforme a necessidade dos programadores que usem a 
+ plataforma. Esta abordagem, embora compreens&#237;vel, imp&#245;e algumas restri&#231;&#245;es no 
+-acesso a documenta&#231;&#227;o relevante em tempo &#250;til.
++acesso a informa&#231;&#227;o relevante em tempo &#250;til.
+ 
+ Das quatro plataformas iniciais sobram assim para an&#225;lise a Eclipse RCP e a 
+ Netbeans platform.
+ 
+ [REFER&#202;NCIAS]
+-<A HREF="http://msdn2.microsoft.com/en-us/visualc/aa442855.aspx">http://msdn2.microsoft.com/en-us/visualc/aa442855.aspx</A>
+-<A HREF="http://msdn2.microsoft.com/en-us/library/dd5497wx(VS.80">http://msdn2.microsoft.com/en-us/library/dd5497wx(VS.80</A>).aspx
+-<A HREF="http://msdn2.microsoft.com/en-us/library/188ht7d8(VS.80">http://msdn2.microsoft.com/en-us/library/188ht7d8(VS.80</A>).aspx
+-<A HREF="http://www.netbeans.org/features/platform/index.html">http://www.netbeans.org/features/platform/index.html</A>
+\ No newline at end of file
++[1]<A HREF="http://msdn2.microsoft.com/en-us/visualc/aa442855.aspx">http://msdn2.microsoft.com/en-us/visualc/aa442855.aspx</A>
++[2]<A HREF="http://msdn2.microsoft.com/en-us/library/dd5497wx(VS.80">http://msdn2.microsoft.com/en-us/library/dd5497wx(VS.80</A>).aspx
++[3]<A HREF="http://msdn2.microsoft.com/en-us/library/188ht7d8(VS.80">http://msdn2.microsoft.com/en-us/library/188ht7d8(VS.80</A>).aspx
++[4]<A HREF="http://www.netbeans.org/features/platform/index.html">http://www.netbeans.org/features/platform/index.html</A>
+\ No newline at end of file
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000022.html">[Jfindmyfiles-commits] r26 -	trunk/spikes/Prototipos/src/de/berlios/kcookb/prototipos
+</A></li>
+	<LI>Next message: <A HREF="000024.html">[Jfindmyfiles-commits] r28 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#23">[ date ]</a>
+              <a href="thread.html#23">[ thread ]</a>
+              <a href="subject.html#23">[ subject ]</a>
+              <a href="author.html#23">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

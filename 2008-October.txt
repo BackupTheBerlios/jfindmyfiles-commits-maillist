@@ -1,0 +1,48 @@
+From knitter at mail.berlios.de  Sat Oct 25 15:15:29 2008
+From: knitter at mail.berlios.de (knitter at mail.berlios.de)
+Date: Sat, 25 Oct 2008 15:15:29 +0200
+Subject: [Jfindmyfiles-commits] r272 -
+	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog
+Message-ID: <200810251315.m9PDFTUV019136@sheep.berlios.de>
+
+Author: knitter
+Date: 2008-10-25 15:15:26 +0200 (Sat, 25 Oct 2008)
+New Revision: 272
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+Log:
+Updated catalog engine, minor change.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-09-17 23:19:06 UTC (rev 271)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-10-25 13:15:26 UTC (rev 272)
+@@ -49,7 +49,6 @@
+      * by the netbeans platform.
+      */
+     public CatalogEngine() {
+-        //DO NOTHING
+         listeners = new CopyOnWriteArrayList<CatalogEngineListener>();
+     }
+ 
+@@ -314,14 +313,14 @@
+     }
+ 
+     //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+-    public void addListener(CatalogEngineListener l) {
++    public synchronized void addListener(CatalogEngineListener l) {
+         if (listeners == null) {
+             listeners = new CopyOnWriteArrayList<CatalogEngineListener>();
+         }
+         listeners.add(l);
+     }
+ 
+-    public void removeListener(CatalogEngineListener l) {
++    public synchronized void removeListener(CatalogEngineListener l) {
+         if (listeners != null) {
+             listeners.remove(l);
+         }
+
+
+

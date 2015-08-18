@@ -1,0 +1,1456 @@
+From knitter at mail.berlios.de  Sat Jan 23 19:56:44 2010
+From: knitter at mail.berlios.de (knitter at mail.berlios.de)
+Date: Sat, 23 Jan 2010 19:56:44 +0100
+Subject: [Jfindmyfiles-commits] r274 - in trunk/project/JFindMyFiles:
+	Catalog Catalog/nbproject ExportEngine ExportEngine/nbproject
+	HSQLDB/nbproject ImportEngine ImportEngine/nbproject
+	JCalendar/nbproject JDBCDrivers JDBCDrivers/nbproject
+	JFindMyFilesGui JFindMyFilesGui/nbproject JaCKSum
+	JaCKSum/nbproject MetadataExtractor
+	MetadataExtractor/nbproject Persistence Persistence/nbproject
+	ReadingFiles ReadingFiles/nbproject nbproject
+Message-ID: <201001231856.o0NIui6n007189@sheep.berlios.de>
+
+Author: knitter
+Date: 2010-01-23 19:55:19 +0100 (Sat, 23 Jan 2010)
+New Revision: 274
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/build.xml
+   trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ExportEngine/build.xml
+   trunk/project/JFindMyFiles/ExportEngine/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/HSQLDB/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/HSQLDB/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ImportEngine/build.xml
+   trunk/project/JFindMyFiles/ImportEngine/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/ImportEngine/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/JCalendar/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/JCalendar/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/JDBCDrivers/build.xml
+   trunk/project/JFindMyFiles/JDBCDrivers/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/JDBCDrivers/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/build.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/JaCKSum/build.xml
+   trunk/project/JFindMyFiles/JaCKSum/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/JaCKSum/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/MetadataExtractor/build.xml
+   trunk/project/JFindMyFiles/MetadataExtractor/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/MetadataExtractor/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/Persistence/build.xml
+   trunk/project/JFindMyFiles/Persistence/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/Persistence/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ReadingFiles/build.xml
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/nbproject/platform.properties
+Log:
+Backup commit, possibly code breaking.
+
+Modified: trunk/project/JFindMyFiles/Catalog/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/build.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/Catalog/build.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
+-<!-- for some information on what you could do (e.g. targets to override). -->
+-<!-- If you delete this file and reopen the project it will be recreated. -->
+-<project name="de.berlios.jfindmyfiles.catalog" default="netbeans" basedir=".">
+-    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.catalog.</description>
+-    <import file="nbproject/build-impl.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
++<!-- for some information on what you could do (e.g. targets to override). -->
++<!-- If you delete this file and reopen the project it will be recreated. -->
++<project name="de.berlios.jfindmyfiles.catalog" default="netbeans" basedir=".">
++    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.catalog.</description>
++    <import file="nbproject/build-impl.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,30 +1,45 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+--->
+-<project name="de.berlios.jfindmyfiles.catalog-impl" basedir="..">
+-    <property file="nbproject/private/suite-private.properties"/>
+-    <property file="nbproject/suite.properties"/>
+-    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
+-    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
+-    <property file="${suite.dir}/nbproject/platform.properties"/>
+-    <macrodef uri="http://www.netbeans.org/ns/nb-module-project/2" name="property">
+-        <attribute name="name"/>
+-        <attribute name="value"/>
+-        <sequential>
+-            <property value="${@{value}}" name="@{name}"/>
+-        </sequential>
+-    </macrodef>
+-    <property file="${user.properties.file}"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.harness.dir" name="harness.dir"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" name="netbeans.dest.dir"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
+-        <condition>
+-            <not>
+-                <available type="dir" file="${harness.dir}"/>
+-            </not>
+-        </condition>
+-    </fail>
+-    <import file="${harness.dir}/build.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="de.berlios.jfindmyfiles.catalog-impl" basedir="..">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
++    <property file="nbproject/private/suite-private.properties"/>
++    <property file="nbproject/suite.properties"/>
++    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
++    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
++    <property file="${suite.dir}/nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <nbmproject2:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:evalprops property="cluster.path.evaluated" value="${cluster.path}" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
++        <condition>
++            <not>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/build.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=e83eaa83
+-build.xml.script.CRC32=986962b5
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=e83eaa83
+-nbproject/build-impl.xml.script.CRC32=5ab6bd33
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=e83eaa83
++build.xml.script.CRC32=986962b5
++build.xml.stylesheet.CRC32=79c3b980 at 1.28.1.7
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=e83eaa83
++nbproject/build-impl.xml.script.CRC32=9fa8b119
++nbproject/build-impl.xml.stylesheet.CRC32=261c4bef at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/build.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/ExportEngine/build.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
+-<!-- for some information on what you could do (e.g. targets to override). -->
+-<!-- If you delete this file and reopen the project it will be recreated. -->
+-<project name="de.berlios.jfindmyfiles.exportengine" default="netbeans" basedir=".">
+-    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.exportengine.</description>
+-    <import file="nbproject/build-impl.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
++<!-- for some information on what you could do (e.g. targets to override). -->
++<!-- If you delete this file and reopen the project it will be recreated. -->
++<project name="de.berlios.jfindmyfiles.exportengine" default="netbeans" basedir=".">
++    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.exportengine.</description>
++    <import file="nbproject/build-impl.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/ExportEngine/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,30 +1,45 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+--->
+-<project name="de.berlios.jfindmyfiles.exportengine-impl" basedir="..">
+-    <property file="nbproject/private/suite-private.properties"/>
+-    <property file="nbproject/suite.properties"/>
+-    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
+-    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
+-    <property file="${suite.dir}/nbproject/platform.properties"/>
+-    <macrodef uri="http://www.netbeans.org/ns/nb-module-project/2" name="property">
+-        <attribute name="name"/>
+-        <attribute name="value"/>
+-        <sequential>
+-            <property value="${@{value}}" name="@{name}"/>
+-        </sequential>
+-    </macrodef>
+-    <property file="${user.properties.file}"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.harness.dir" name="harness.dir"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" name="netbeans.dest.dir"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
+-        <condition>
+-            <not>
+-                <available type="dir" file="${harness.dir}"/>
+-            </not>
+-        </condition>
+-    </fail>
+-    <import file="${harness.dir}/build.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="de.berlios.jfindmyfiles.exportengine-impl" basedir="..">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
++    <property file="nbproject/private/suite-private.properties"/>
++    <property file="nbproject/suite.properties"/>
++    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
++    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
++    <property file="${suite.dir}/nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <nbmproject2:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:evalprops property="cluster.path.evaluated" value="${cluster.path}" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
++        <condition>
++            <not>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/build.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=b7a125d6
+-build.xml.script.CRC32=10cb03f3
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=b7a125d6
+-nbproject/build-impl.xml.script.CRC32=336d2087
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=b7a125d6
++build.xml.script.CRC32=10cb03f3
++build.xml.stylesheet.CRC32=79c3b980 at 1.28.1.7
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=b7a125d6
++nbproject/build-impl.xml.script.CRC32=7c88f6c9
++nbproject/build-impl.xml.stylesheet.CRC32=261c4bef at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/HSQLDB/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/HSQLDB/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/HSQLDB/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -4,6 +4,13 @@
+ ***         EDIT ../build.xml INSTEAD         ***
+ -->
+ <project name="de.berlios.jfindmyfiles.hsqldb-impl" basedir="..">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
+     <property file="nbproject/private/suite-private.properties"/>
+     <property file="nbproject/suite.properties"/>
+     <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
+@@ -16,13 +23,21 @@
+             <property name="@{name}" value="${@{value}}"/>
+         </sequential>
+     </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
+     <property file="${user.properties.file}"/>
+     <nbmproject2:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
+-    <nbmproject2:property name="netbeans.dest.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
++    <nbmproject2:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:evalprops property="cluster.path.evaluated" value="${cluster.path}" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
+         <condition>
+             <not>
+-                <available file="${harness.dir}" type="dir"/>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
+             </not>
+         </condition>
+     </fail>
+
+Modified: trunk/project/JFindMyFiles/HSQLDB/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/HSQLDB/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/HSQLDB/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+ build.xml.data.CRC32=47a92399
+ build.xml.script.CRC32=222a7daa
+-build.xml.stylesheet.CRC32=79c3b980
++build.xml.stylesheet.CRC32=79c3b980 at 1.28.1.7
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+ nbproject/build-impl.xml.data.CRC32=47a92399
+-nbproject/build-impl.xml.script.CRC32=48fbd900
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++nbproject/build-impl.xml.script.CRC32=8a13ecaf
++nbproject/build-impl.xml.stylesheet.CRC32=261c4bef at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/ImportEngine/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/build.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/ImportEngine/build.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
+-<!-- for some information on what you could do (e.g. targets to override). -->
+-<!-- If you delete this file and reopen the project it will be recreated. -->
+-<project name="de.berlios.jfindmyfiles.importengine" default="netbeans" basedir=".">
+-    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.importengine.</description>
+-    <import file="nbproject/build-impl.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
++<!-- for some information on what you could do (e.g. targets to override). -->
++<!-- If you delete this file and reopen the project it will be recreated. -->
++<project name="de.berlios.jfindmyfiles.importengine" default="netbeans" basedir=".">
++    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.importengine.</description>
++    <import file="nbproject/build-impl.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/ImportEngine/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/ImportEngine/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,30 +1,45 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+--->
+-<project name="de.berlios.jfindmyfiles.importengine-impl" basedir="..">
+-    <property file="nbproject/private/suite-private.properties"/>
+-    <property file="nbproject/suite.properties"/>
+-    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
+-    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
+-    <property file="${suite.dir}/nbproject/platform.properties"/>
+-    <macrodef uri="http://www.netbeans.org/ns/nb-module-project/2" name="property">
+-        <attribute name="name"/>
+-        <attribute name="value"/>
+-        <sequential>
+-            <property value="${@{value}}" name="@{name}"/>
+-        </sequential>
+-    </macrodef>
+-    <property file="${user.properties.file}"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.harness.dir" name="harness.dir"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" name="netbeans.dest.dir"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
+-        <condition>
+-            <not>
+-                <available type="dir" file="${harness.dir}"/>
+-            </not>
+-        </condition>
+-    </fail>
+-    <import file="${harness.dir}/build.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="de.berlios.jfindmyfiles.importengine-impl" basedir="..">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
++    <property file="nbproject/private/suite-private.properties"/>
++    <property file="nbproject/suite.properties"/>
++    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
++    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
++    <property file="${suite.dir}/nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <nbmproject2:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:evalprops property="cluster.path.evaluated" value="${cluster.path}" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
++        <condition>
++            <not>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/build.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/ImportEngine/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/ImportEngine/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=db5aac89
+-build.xml.script.CRC32=5895178c
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=db5aac89
+-nbproject/build-impl.xml.script.CRC32=514e1139
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=db5aac89
++build.xml.script.CRC32=5895178c
++build.xml.stylesheet.CRC32=79c3b980 at 1.28.1.7
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=db5aac89
++nbproject/build-impl.xml.script.CRC32=e05cfe45
++nbproject/build-impl.xml.stylesheet.CRC32=261c4bef at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/JCalendar/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JCalendar/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/JCalendar/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -4,25 +4,40 @@
+ ***         EDIT ../build.xml INSTEAD         ***
+ -->
+ <project name="com.toedter.plaf-impl" basedir="..">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
+     <property file="nbproject/private/suite-private.properties"/>
+     <property file="nbproject/suite.properties"/>
+     <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
+     <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
+     <property file="${suite.dir}/nbproject/platform.properties"/>
+-    <macrodef uri="http://www.netbeans.org/ns/nb-module-project/2" name="property">
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
+         <attribute name="name"/>
+         <attribute name="value"/>
+         <sequential>
+-            <property value="${@{value}}" name="@{name}"/>
++            <property name="@{name}" value="${@{value}}"/>
+         </sequential>
+     </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
+     <property file="${user.properties.file}"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.harness.dir" name="harness.dir"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" name="netbeans.dest.dir"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
++    <nbmproject2:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:evalprops property="cluster.path.evaluated" value="${cluster.path}" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
+         <condition>
+             <not>
+-                <available type="dir" file="${harness.dir}"/>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
+             </not>
+         </condition>
+     </fail>
+
+Modified: trunk/project/JFindMyFiles/JCalendar/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JCalendar/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/JCalendar/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+ build.xml.data.CRC32=cc3516cf
+ build.xml.script.CRC32=daee02f9
+-build.xml.stylesheet.CRC32=79c3b980
++build.xml.stylesheet.CRC32=79c3b980 at 1.28.1.7
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+ nbproject/build-impl.xml.data.CRC32=cc3516cf
+-nbproject/build-impl.xml.script.CRC32=8bfacd01
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++nbproject/build-impl.xml.script.CRC32=cff486e2
++nbproject/build-impl.xml.stylesheet.CRC32=261c4bef at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/JDBCDrivers/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JDBCDrivers/build.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/JDBCDrivers/build.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
+-<!-- for some information on what you could do (e.g. targets to override). -->
+-<!-- If you delete this file and reopen the project it will be recreated. -->
+-<project name="de.berlios.jfindmyfiles.jdbcdrivers" default="netbeans" basedir=".">
+-    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.jdbcdrivers.</description>
+-    <import file="nbproject/build-impl.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
++<!-- for some information on what you could do (e.g. targets to override). -->
++<!-- If you delete this file and reopen the project it will be recreated. -->
++<project name="de.berlios.jfindmyfiles.jdbcdrivers" default="netbeans" basedir=".">
++    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.jdbcdrivers.</description>
++    <import file="nbproject/build-impl.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/JDBCDrivers/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JDBCDrivers/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/JDBCDrivers/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,30 +1,45 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+--->
+-<project name="de.berlios.jfindmyfiles.jdbcdrivers-impl" basedir="..">
+-    <property file="nbproject/private/suite-private.properties"/>
+-    <property file="nbproject/suite.properties"/>
+-    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
+-    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
+-    <property file="${suite.dir}/nbproject/platform.properties"/>
+-    <macrodef uri="http://www.netbeans.org/ns/nb-module-project/2" name="property">
+-        <attribute name="name"/>
+-        <attribute name="value"/>
+-        <sequential>
+-            <property value="${@{value}}" name="@{name}"/>
+-        </sequential>
+-    </macrodef>
+-    <property file="${user.properties.file}"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.harness.dir" name="harness.dir"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" name="netbeans.dest.dir"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
+-        <condition>
+-            <not>
+-                <available type="dir" file="${harness.dir}"/>
+-            </not>
+-        </condition>
+-    </fail>
+-    <import file="${harness.dir}/build.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="de.berlios.jfindmyfiles.jdbcdrivers-impl" basedir="..">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
++    <property file="nbproject/private/suite-private.properties"/>
++    <property file="nbproject/suite.properties"/>
++    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
++    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
++    <property file="${suite.dir}/nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <nbmproject2:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:evalprops property="cluster.path.evaluated" value="${cluster.path}" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
++        <condition>
++            <not>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/build.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/JDBCDrivers/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JDBCDrivers/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/JDBCDrivers/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=27ad62dc
+-build.xml.script.CRC32=c8f63677
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=27ad62dc
+-nbproject/build-impl.xml.script.CRC32=70261511
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=27ad62dc
++build.xml.script.CRC32=c8f63677
++build.xml.stylesheet.CRC32=79c3b980 at 1.28.1.7
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=27ad62dc
++nbproject/build-impl.xml.script.CRC32=3c917e80
++nbproject/build-impl.xml.stylesheet.CRC32=261c4bef at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/build.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/build.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
+-<!-- for some information on what you could do (e.g. targets to override). -->
+-<!-- If you delete this file and reopen the project it will be recreated. -->
+-<project name="de.berlios.jfindmyfiles.jfindmyfilesgui" default="netbeans" basedir=".">
+-    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.jfindmyfilesgui.</description>
+-    <import file="nbproject/build-impl.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
++<!-- for some information on what you could do (e.g. targets to override). -->
++<!-- If you delete this file and reopen the project it will be recreated. -->
++<project name="de.berlios.jfindmyfiles.jfindmyfilesgui" default="netbeans" basedir=".">
++    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.jfindmyfilesgui.</description>
++    <import file="nbproject/build-impl.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,30 +1,45 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+--->
+-<project name="de.berlios.jfindmyfiles.jfindmyfilesgui-impl" basedir="..">
+-    <property file="nbproject/private/suite-private.properties"/>
+-    <property file="nbproject/suite.properties"/>
+-    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
+-    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
+-    <property file="${suite.dir}/nbproject/platform.properties"/>
+-    <macrodef uri="http://www.netbeans.org/ns/nb-module-project/2" name="property">
+-        <attribute name="name"/>
+-        <attribute name="value"/>
+-        <sequential>
+-            <property value="${@{value}}" name="@{name}"/>
+-        </sequential>
+-    </macrodef>
+-    <property file="${user.properties.file}"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.harness.dir" name="harness.dir"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" name="netbeans.dest.dir"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
+-        <condition>
+-            <not>
+-                <available type="dir" file="${harness.dir}"/>
+-            </not>
+-        </condition>
+-    </fail>
+-    <import file="${harness.dir}/build.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="de.berlios.jfindmyfiles.jfindmyfilesgui-impl" basedir="..">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
++    <property file="nbproject/private/suite-private.properties"/>
++    <property file="nbproject/suite.properties"/>
++    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
++    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
++    <property file="${suite.dir}/nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <nbmproject2:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:evalprops property="cluster.path.evaluated" value="${cluster.path}" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
++        <condition>
++            <not>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/build.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=b9c32b14
+-build.xml.script.CRC32=6fe2168f
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=b9c32b14
+-nbproject/build-impl.xml.script.CRC32=fc3c2090
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=b9c32b14
++build.xml.script.CRC32=6fe2168f
++build.xml.stylesheet.CRC32=79c3b980 at 1.28.1.7
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=b9c32b14
++nbproject/build-impl.xml.script.CRC32=17875470
++nbproject/build-impl.xml.stylesheet.CRC32=261c4bef at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/JaCKSum/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JaCKSum/build.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/JaCKSum/build.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
+-<!-- for some information on what you could do (e.g. targets to override). -->
+-<!-- If you delete this file and reopen the project it will be recreated. -->
+-<project name="jonelo.jacksum" default="netbeans" basedir=".">
+-    <description>Builds, tests, and runs the project jonelo.jacksum.</description>
+-    <import file="nbproject/build-impl.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
++<!-- for some information on what you could do (e.g. targets to override). -->
++<!-- If you delete this file and reopen the project it will be recreated. -->
++<project name="jonelo.jacksum" default="netbeans" basedir=".">
++    <description>Builds, tests, and runs the project jonelo.jacksum.</description>
++    <import file="nbproject/build-impl.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/JaCKSum/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JaCKSum/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/JaCKSum/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,30 +1,45 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+--->
+-<project name="jonelo.jacksum-impl" basedir="..">
+-    <property file="nbproject/private/suite-private.properties"/>
+-    <property file="nbproject/suite.properties"/>
+-    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
+-    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
+-    <property file="${suite.dir}/nbproject/platform.properties"/>
+-    <macrodef uri="http://www.netbeans.org/ns/nb-module-project/2" name="property">
+-        <attribute name="name"/>
+-        <attribute name="value"/>
+-        <sequential>
+-            <property value="${@{value}}" name="@{name}"/>
+-        </sequential>
+-    </macrodef>
+-    <property file="${user.properties.file}"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.harness.dir" name="harness.dir"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" name="netbeans.dest.dir"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
+-        <condition>
+-            <not>
+-                <available type="dir" file="${harness.dir}"/>
+-            </not>
+-        </condition>
+-    </fail>
+-    <import file="${harness.dir}/build.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="jonelo.jacksum-impl" basedir="..">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
++    <property file="nbproject/private/suite-private.properties"/>
++    <property file="nbproject/suite.properties"/>
++    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
++    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
++    <property file="${suite.dir}/nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <nbmproject2:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:evalprops property="cluster.path.evaluated" value="${cluster.path}" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
++        <condition>
++            <not>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/build.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/JaCKSum/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JaCKSum/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/JaCKSum/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=c7f2a9f7
+-build.xml.script.CRC32=04adcf2a
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=c7f2a9f7
+-nbproject/build-impl.xml.script.CRC32=8ed09acb
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=c7f2a9f7
++build.xml.script.CRC32=04adcf2a
++build.xml.stylesheet.CRC32=79c3b980 at 1.28.1.7
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=c7f2a9f7
++nbproject/build-impl.xml.script.CRC32=0ba7247b
++nbproject/build-impl.xml.stylesheet.CRC32=261c4bef at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/MetadataExtractor/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/MetadataExtractor/build.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/MetadataExtractor/build.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
+-<!-- for some information on what you could do (e.g. targets to override). -->
+-<!-- If you delete this file and reopen the project it will be recreated. -->
+-<project name="com.drew.lang" default="netbeans" basedir=".">
+-    <description>Builds, tests, and runs the project com.drew.lang.</description>
+-    <import file="nbproject/build-impl.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
++<!-- for some information on what you could do (e.g. targets to override). -->
++<!-- If you delete this file and reopen the project it will be recreated. -->
++<project name="com.drew.lang" default="netbeans" basedir=".">
++    <description>Builds, tests, and runs the project com.drew.lang.</description>
++    <import file="nbproject/build-impl.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/MetadataExtractor/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/MetadataExtractor/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/MetadataExtractor/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,30 +1,45 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+--->
+-<project name="com.drew.lang-impl" basedir="..">
+-    <property file="nbproject/private/suite-private.properties"/>
+-    <property file="nbproject/suite.properties"/>
+-    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
+-    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
+-    <property file="${suite.dir}/nbproject/platform.properties"/>
+-    <macrodef uri="http://www.netbeans.org/ns/nb-module-project/2" name="property">
+-        <attribute name="name"/>
+-        <attribute name="value"/>
+-        <sequential>
+-            <property value="${@{value}}" name="@{name}"/>
+-        </sequential>
+-    </macrodef>
+-    <property file="${user.properties.file}"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.harness.dir" name="harness.dir"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" name="netbeans.dest.dir"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
+-        <condition>
+-            <not>
+-                <available type="dir" file="${harness.dir}"/>
+-            </not>
+-        </condition>
+-    </fail>
+-    <import file="${harness.dir}/build.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="com.drew.lang-impl" basedir="..">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
++    <property file="nbproject/private/suite-private.properties"/>
++    <property file="nbproject/suite.properties"/>
++    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
++    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
++    <property file="${suite.dir}/nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <nbmproject2:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:evalprops property="cluster.path.evaluated" value="${cluster.path}" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
++        <condition>
++            <not>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/build.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/MetadataExtractor/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/MetadataExtractor/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/MetadataExtractor/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=c62b5b00
+-build.xml.script.CRC32=27bcb6c6
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=c62b5b00
+-nbproject/build-impl.xml.script.CRC32=8a47ae3c
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=c62b5b00
++build.xml.script.CRC32=27bcb6c6
++build.xml.stylesheet.CRC32=79c3b980 at 1.28.1.7
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=c62b5b00
++nbproject/build-impl.xml.script.CRC32=8a4d1329
++nbproject/build-impl.xml.stylesheet.CRC32=261c4bef at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/Persistence/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Persistence/build.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/Persistence/build.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
+-<!-- for some information on what you could do (e.g. targets to override). -->
+-<!-- If you delete this file and reopen the project it will be recreated. -->
+-<project name="de.berlios.jfindmyfiles.persistence" default="netbeans" basedir=".">
+-    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.persistence.</description>
+-    <import file="nbproject/build-impl.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
++<!-- for some information on what you could do (e.g. targets to override). -->
++<!-- If you delete this file and reopen the project it will be recreated. -->
++<project name="de.berlios.jfindmyfiles.persistence" default="netbeans" basedir=".">
++    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.persistence.</description>
++    <import file="nbproject/build-impl.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/Persistence/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Persistence/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/Persistence/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,30 +1,45 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+--->
+-<project name="de.berlios.jfindmyfiles.persistence-impl" basedir="..">
+-    <property file="nbproject/private/suite-private.properties"/>
+-    <property file="nbproject/suite.properties"/>
+-    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
+-    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
+-    <property file="${suite.dir}/nbproject/platform.properties"/>
+-    <macrodef uri="http://www.netbeans.org/ns/nb-module-project/2" name="property">
+-        <attribute name="name"/>
+-        <attribute name="value"/>
+-        <sequential>
+-            <property value="${@{value}}" name="@{name}"/>
+-        </sequential>
+-    </macrodef>
+-    <property file="${user.properties.file}"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.harness.dir" name="harness.dir"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" name="netbeans.dest.dir"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
+-        <condition>
+-            <not>
+-                <available type="dir" file="${harness.dir}"/>
+-            </not>
+-        </condition>
+-    </fail>
+-    <import file="${harness.dir}/build.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="de.berlios.jfindmyfiles.persistence-impl" basedir="..">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
++    <property file="nbproject/private/suite-private.properties"/>
++    <property file="nbproject/suite.properties"/>
++    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
++    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
++    <property file="${suite.dir}/nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <nbmproject2:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:evalprops property="cluster.path.evaluated" value="${cluster.path}" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
++        <condition>
++            <not>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/build.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/Persistence/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Persistence/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/Persistence/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=82e958e4
+-build.xml.script.CRC32=8589fdcc
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=82e958e4
+-nbproject/build-impl.xml.script.CRC32=b428f5a4
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=82e958e4
++build.xml.script.CRC32=8589fdcc
++build.xml.stylesheet.CRC32=79c3b980 at 1.28.1.7
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=82e958e4
++nbproject/build-impl.xml.script.CRC32=a047801b
++nbproject/build-impl.xml.stylesheet.CRC32=261c4bef at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/build.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/ReadingFiles/build.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
+-<!-- for some information on what you could do (e.g. targets to override). -->
+-<!-- If you delete this file and reopen the project it will be recreated. -->
+-<project name="de.berlios.jfindmyfiles.readingfiles" default="netbeans" basedir=".">
+-    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.readingfiles.</description>
+-    <import file="nbproject/build-impl.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!-- You may freely edit this file. See harness/README in the NetBeans platform -->
++<!-- for some information on what you could do (e.g. targets to override). -->
++<!-- If you delete this file and reopen the project it will be recreated. -->
++<project name="de.berlios.jfindmyfiles.readingfiles" default="netbeans" basedir=".">
++    <description>Builds, tests, and runs the project de.berlios.jfindmyfiles.readingfiles.</description>
++    <import file="nbproject/build-impl.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,30 +1,45 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+--->
+-<project name="de.berlios.jfindmyfiles.readingfiles-impl" basedir="..">
+-    <property file="nbproject/private/suite-private.properties"/>
+-    <property file="nbproject/suite.properties"/>
+-    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
+-    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
+-    <property file="${suite.dir}/nbproject/platform.properties"/>
+-    <macrodef uri="http://www.netbeans.org/ns/nb-module-project/2" name="property">
+-        <attribute name="name"/>
+-        <attribute name="value"/>
+-        <sequential>
+-            <property value="${@{value}}" name="@{name}"/>
+-        </sequential>
+-    </macrodef>
+-    <property file="${user.properties.file}"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.harness.dir" name="harness.dir"/>
+-    <nbmproject2:property xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" name="netbeans.dest.dir"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
+-        <condition>
+-            <not>
+-                <available type="dir" file="${harness.dir}"/>
+-            </not>
+-        </condition>
+-    </fail>
+-    <import file="${harness.dir}/build.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="de.berlios.jfindmyfiles.readingfiles-impl" basedir="..">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
++    <property file="nbproject/private/suite-private.properties"/>
++    <property file="nbproject/suite.properties"/>
++    <fail unless="suite.dir">You must set 'suite.dir' to point to your containing module suite</fail>
++    <property file="${suite.dir}/nbproject/private/platform-private.properties"/>
++    <property file="${suite.dir}/nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-project/2">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <nbmproject2:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <nbmproject2:evalprops property="cluster.path.evaluated" value="${cluster.path}" xmlns:nbmproject2="http://www.netbeans.org/ns/nb-module-project/2"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
++        <condition>
++            <not>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/build.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=f3029aa1
+-build.xml.script.CRC32=78d85b23
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=f3029aa1
+-nbproject/build-impl.xml.script.CRC32=a04a2658
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=f3029aa1
++build.xml.script.CRC32=78d85b23
++build.xml.stylesheet.CRC32=79c3b980 at 1.28.1.7
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=f3029aa1
++nbproject/build-impl.xml.script.CRC32=1c79e34a
++nbproject/build-impl.xml.stylesheet.CRC32=261c4bef at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/build-impl.xml	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/nbproject/build-impl.xml	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,27 +1,42 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+--->
+-<project name="JFindMyFiles-impl" basedir=".." xmlns:sproject="http://www.netbeans.org/ns/nb-module-suite-project/1">
+-    <property file="nbproject/private/platform-private.properties"/>
+-    <property file="nbproject/platform.properties"/>
+-    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-suite-project/1">
+-        <attribute name="name"/>
+-        <attribute name="value"/>
+-        <sequential>
+-            <property name="@{name}" value="${@{value}}"/>
+-        </sequential>
+-    </macrodef>
+-    <property file="${user.properties.file}"/>
+-    <sproject:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir"/>
+-    <sproject:property name="netbeans.dest.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir"/>
+-    <fail message="You must define 'nbplatform.${nbplatform.active}.harness.dir'">
+-        <condition>
+-            <not>
+-                <available file="${harness.dir}" type="dir"/>
+-            </not>
+-        </condition>
+-    </fail>
+-    <import file="${harness.dir}/suite.xml"/>
+-</project>
++<?xml version="1.0" encoding="UTF-8"?>
++<!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++-->
++<project name="JFindMyFiles-impl" basedir=".." xmlns:sproject="http://www.netbeans.org/ns/nb-module-suite-project/1">
++    <fail message="Please build using Ant 1.7.1 or higher.">
++        <condition>
++            <not>
++                <antversion atleast="1.7.1"/>
++            </not>
++        </condition>
++    </fail>
++    <property file="nbproject/private/platform-private.properties"/>
++    <property file="nbproject/platform.properties"/>
++    <macrodef name="property" uri="http://www.netbeans.org/ns/nb-module-suite-project/1">
++        <attribute name="name"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{name}" value="${@{value}}"/>
++        </sequential>
++    </macrodef>
++    <macrodef name="evalprops" uri="http://www.netbeans.org/ns/nb-module-suite-project/1">
++        <attribute name="property"/>
++        <attribute name="value"/>
++        <sequential>
++            <property name="@{property}" value="@{value}"/>
++        </sequential>
++    </macrodef>
++    <property file="${user.properties.file}"/>
++    <sproject:property name="harness.dir" value="nbplatform.${nbplatform.active}.harness.dir"/>
++    <sproject:property name="nbplatform.active.dir" value="nbplatform.${nbplatform.active}.netbeans.dest.dir"/>
++    <sproject:evalprops property="cluster.path.evaluated" value="${cluster.path}"/>
++    <fail message="Path to 'platform' cluster missing in $${cluster.path} property or using corrupt Netbeans Platform (missing harness).">
++        <condition>
++            <not>
++                <contains string="${cluster.path.evaluated}" substring="platform"/>
++            </not>
++        </condition>
++    </fail>
++    <import file="${harness.dir}/suite.xml"/>
++</project>
+
+Modified: trunk/project/JFindMyFiles/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/genfiles.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/nbproject/genfiles.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=7d9bb5e2
+-build.xml.script.CRC32=f2b647fd
+-build.xml.stylesheet.CRC32=531c622b
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=7d9bb5e2
+-nbproject/build-impl.xml.script.CRC32=a959a992
+-nbproject/build-impl.xml.stylesheet.CRC32=196c7090
++build.xml.data.CRC32=7d9bb5e2
++build.xml.script.CRC32=f2b647fd
++build.xml.stylesheet.CRC32=531c622b
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=7d9bb5e2
++nbproject/build-impl.xml.script.CRC32=df9fdb32
++nbproject/build-impl.xml.stylesheet.CRC32=2f5f2db8 at 1.28.1.7
+
+Modified: trunk/project/JFindMyFiles/nbproject/platform.properties
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/platform.properties	2008-11-08 19:23:35 UTC (rev 273)
++++ trunk/project/JFindMyFiles/nbproject/platform.properties	2010-01-23 18:55:19 UTC (rev 274)
+@@ -1,21 +1,20 @@
+-# Deprecated since 5.0u1; for compatibility with 5.0:
+-disabled.clusters=\
+-    apisupport1,\
+-    cnd2,\
+-    enterprise5,\
+-    gsf1,\
+-    ide9,\
+-    identity2,\
+-    java2,\
+-    nb6.1,\
+-    profiler3,\
+-    uml5,\
+-    visualweb2,\
+-    xml2
+-disabled.modules=\
+-    org.netbeans.api.visual,\
+-    org.netbeans.modules.apisupport.harness
+-enabled.clusters=\
+-    harness,\
+-    platform8
+-nbplatform.active=default
++cluster.path=\
++    ${nbplatform.active.dir}/harness:\
++    ${nbplatform.active.dir}/platform
++# Deprecated since 5.0u1; for compatibility with 5.0:
++#disabled.clusters=\
++#    apisupport1,\
++#    cnd2,\
++#    enterprise5,\
++#    gsf1,\
++#    ide9,\
++#    identity2,\
++#    java2,\
++#    nb6.1,\
++#    profiler3,\
++#    uml5,\
++#    visualweb2,\
++#    xml2
++disabled.modules=\
++    org.netbeans.modules.apisupport.harness
++nbplatform.active=default
+
+
+

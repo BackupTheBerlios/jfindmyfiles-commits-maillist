@@ -1,0 +1,614 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r112 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r112%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs&In-Reply-To=%3C200805181924.m4IJOrQx029975%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000106.html">
+   <LINK REL="Next"  HREF="000108.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r112 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r112%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs&In-Reply-To=%3C200805181924.m4IJOrQx029975%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r112 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs">knitter at mail.berlios.de
+       </A><BR>
+    <I>Sun May 18 21:24:53 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000106.html">[Jfindmyfiles-commits] r111 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	entities utils
+</A></li>
+        <LI>Next message: <A HREF="000108.html">[Jfindmyfiles-commits] r113 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107">[ date ]</a>
+              <a href="thread.html#107">[ thread ]</a>
+              <a href="subject.html#107">[ subject ]</a>
+              <a href="author.html#107">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-18 21:24:13 +0200 (Sun, 18 May 2008)
+New Revision: 112
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+Log:
+Tentativa de corrigir os problemas existentes no acesso ao motor da aplica?\195?\167?\195?\163o.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-17 17:41:26 UTC (rev 111)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-18 19:24:13 UTC (rev 112)
+@@ -37,8 +37,8 @@
+     public static final int MYSQL = 3;
+     public static final int LOCAL = 4;
+     private SessionFactory sessionFactory;
+-    
+-    private CatalogProperties properties = new CatalogProperties(&quot;teste&quot;, &quot;&lt;sem desc&gt;&quot;, 50, 25, 500, 30, new Date()); //TODO: remove
++    private CatalogProperties properties;// = new CatalogProperties(&quot;teste&quot;, &quot;&lt;sem desc&gt;&quot;, 50, 25, 500, 30, new Date()); //TODO: remove
++    private Configuration hConfig;
+ 
+     /**
+      * Empty construtor so that this class can be instanciated using reflection 
+@@ -52,12 +52,12 @@
+     private void recreateConnection(String dbname, String dburl, String port,
+             String username, String password, int dbType) {
+ 
+-        closeCatalog();
++        //closeCatalog();
+         try {
+             /*Configuration cfg = new Configuration().configure(&quot;de/berlios&quot; +
+             &quot;/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml&quot;);*/
+ 
+-            Configuration cfg = new Configuration()//Configuration object
++            hConfig = new Configuration()//Configuration object
+                     .addClass(de.berlios.jfindmyfiles.catalog.entities.AudioData.class)//Add AudioData class
+                     .addClass(de.berlios.jfindmyfiles.catalog.entities.DiskGroup.class)//Add DiskGroup class
+                     .addClass(de.berlios.jfindmyfiles.catalog.entities.FileWrapper.class)//Add FileWrapper class
+@@ -71,28 +71,30 @@
+                     .addClass(de.berlios.jfindmyfiles.catalog.entities.CatalogProperties.class)//Add CatalogProperties class
+                     .setProperty(&quot;hibernate.connection.pool_size&quot;, &quot;1&quot;)//JDBC connection pool (use the built-in)
+                     .setProperty(&quot;hibernate.current_session_context_class&quot;, &quot;thread&quot;)//Enable Hibernate's automatic session context management
++                    .setProperty(&quot;hibernate.transaction.factory_class&quot;, &quot;org.hibernate.transaction.JDBCTransactionFactory&quot;)//Who manages the transaction
+                     .setProperty(&quot;hibernate.cache.provider_class&quot;, &quot;org.hibernate.cache.NoCacheProvider&quot;)//Disable the second-level cache
+                     .setProperty(&quot;hibernate.show_sql&quot;, &quot;true&quot;)//Echo all executed SQL to stdout
+-                    .setProperty(&quot;hibernate.hbm2ddl.auto&quot;, &quot;create-drop&quot;);//TODO: remove this line and replace with proper one
++                    .setProperty(&quot;hibernate.hbm2ddl.auto&quot;, &quot;create&quot;)//TODO: remove this line and replace with proper one
++                    .setProperty(&quot;hibernate.connection.autocommit&quot;, &quot;false&quot;);//Setting autocommit to false
+ 
+             switch (dbType) {
+                 case <A HREF="FIREBIRD://TODO:">FIREBIRD://TODO:</A> change for FIREBIRD database engine
+ 
+-                    cfg.setProperty(&quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.HSQLDialect&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;org.hsqldb.jdbcDriver&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.url&quot;, &quot;jdbc:hsqldb:file:&quot; + dburl + &quot;/&quot; + dbname);
+-                    cfg.setProperty(&quot;hibernate.connection.username&quot;, &quot;sa&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.password&quot;, password);
+-                    cfg.setProperty(&quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.HSQLDialect&quot;);
++                    hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.HSQLDialect&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;org.hsqldb.jdbcDriver&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.url&quot;, &quot;jdbc:hsqldb:file:&quot; + dburl + &quot;/&quot; + dbname);
++                    hConfig.setProperty(&quot;hibernate.connection.username&quot;, &quot;sa&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.password&quot;, password);
++                    hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.HSQLDialect&quot;);
+ 
+                     break;
+                 case <A HREF="POSTGRESQL://TODO:">POSTGRESQL://TODO:</A> change for POSTGRESQL database engine
+ 
+-                    cfg.setProperty(&quot;hibernate.dialect&quot;, &quot;o&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.url&quot;, &quot;&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.username&quot;, &quot;&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.password&quot;, password);
++                    hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;o&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.url&quot;, &quot;&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.username&quot;, &quot;&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.password&quot;, password);
+ 
+                     break;
+                 case MYSQL:
+@@ -103,86 +105,119 @@
+                     dburl = &quot;67.207.139.234&quot;;
+                     port = &quot;3306&quot;;
+ 
+-                    cfg.setProperty(&quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.MySQLDialect&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;com.mysql.jdbc.Driver&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.url&quot;, &quot;jdbc:<A HREF="mysql://">mysql://</A>&quot; + dburl + &quot;:&quot; + port + &quot;/&quot; + dbname);
+-                    cfg.setProperty(&quot;hibernate.connection.username&quot;, username);
+-                    cfg.setProperty(&quot;hibernate.connection.password&quot;, password);
++                    hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.MySQLDialect&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;com.mysql.jdbc.Driver&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.url&quot;, &quot;jdbc:<A HREF="mysql://">mysql://</A>&quot; + dburl + &quot;:&quot; + port + &quot;/&quot; + dbname);
++                    hConfig.setProperty(&quot;hibernate.connection.username&quot;, username);
++                    hConfig.setProperty(&quot;hibernate.connection.password&quot;, password);
+                     break;
+                 case <A HREF="MSSQL://TODO:">MSSQL://TODO:</A> change for MSSQL database engine
+ 
+-                    cfg.setProperty(&quot;hibernate.dialect&quot;, &quot;&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.url&quot;, &quot;&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.username&quot;, &quot;&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.password&quot;, password);
++                    hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.url&quot;, &quot;&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.username&quot;, &quot;&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.password&quot;, password);
+                     break;
+                 <A HREF="default://If">default://If</A> it's not a network database we can only use HSQLDB engine
+ 
+-                    cfg.setProperty(&quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.HSQLDialect&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;org.hsqldb.jdbcDriver&quot;);
+-                    cfg.setProperty(&quot;hibernate.connection.url&quot;, &quot;jdbc:hsqldb:file:&quot; + dburl + &quot;/&quot; + dbname);
+-                    cfg.setProperty(&quot;hibernate.connection.username&quot;, &quot;sa&quot;);//Default user for every HSQLDB database
+-                    cfg.setProperty(&quot;hibernate.connection.password&quot;, &quot;&quot;);//HSQLDB has a user with no password
++                    hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.HSQLDialect&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;org.hsqldb.jdbcDriver&quot;);
++                    hConfig.setProperty(&quot;hibernate.connection.url&quot;, &quot;jdbc:hsqldb:file:&quot; + dburl + &quot;/&quot; + dbname);
++                    hConfig.setProperty(&quot;hibernate.connection.username&quot;, &quot;sa&quot;);//Default user for every HSQLDB database
++
++                    hConfig.setProperty(&quot;hibernate.connection.password&quot;, &quot;&quot;);//HSQLDB has a user with no password
++
+             }
+-            
+-            sessionFactory = cfg.buildSessionFactory();
+-            
++
++            sessionFactory = hConfig.buildSessionFactory();
++
+         } catch (Throwable ex) {//TODO: proper logging
+             // Make sure you log the exception, as it might be swallowed
++
+             System.err.println(&quot;HIBERNATE: Initial SessionFactory creation failed.&quot; + ex);
+             throw new ExceptionInInitializerError(ex);
+         }
+ 
+     }
++    
++    private void restoreSessionFactory() {
++        sessionFactory = hConfig.buildSessionFactory();
++    }
+ 
++    /**
++     * 
++     * @param dbname
++     * @param dburl
++     * @param port
++     * @param dbType
++     * @param username
++     * @param password
++     */
+     public void openCatalog(String dbname, String dburl, String port, int dbType,
+             String username, String password) {
+ 
+         recreateConnection(dbname, dburl, port, username, password, dbType);
+-        
++
+         //Reading catalog properties
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+         List result = cSession.createQuery(&quot;from CatalogProperties&quot;).list();
+         cSession.getTransaction().commit();
+-        properties = (CatalogProperties)result.get(0);
++        properties = (CatalogProperties) result.get(0);
+     }
+ 
++    /**
++     * 
++     * @param dbname
++     * @param dburl
++     * @param port
++     * @param dbType
++     * @param username
++     * @param password
++     */
+     public void createCatalog(String dbname, String dburl, String port, int dbType,
+             String username, String password) {
+ 
+         recreateConnection(dbname, dburl, port, username, password, dbType);
+ 
++        //Create and save catalog properties
+         Session cSession = sessionFactory.getCurrentSession();
+-        cSession.beginTransaction();//TODO: find correct settings to store
++        cSession.beginTransaction();
+         properties = new CatalogProperties();
+         properties.setName(dbname);
++        properties.setCreationDate(new Date());
+         cSession.save(properties);
+         cSession.getTransaction().commit();
+-        cSession.close();
+-
+     //TODO: notify listeners
+     }
+ 
++    /**
++     * 
++     */
+     public void closeCatalog() {
+         if (sessionFactory != null) {
+             sessionFactory.close();
+             sessionFactory = null;
+         }
+     }
+-    
++
+     public CatalogProperties getProperties() {
+         return properties;
+     }
+-    
++
+     public void setProperties(CatalogProperties props) {
+-        //TODO: persist the object
+-        this.properties = props;
++        /*this.properties = props;
++
++        Session cSession = sessionFactory.openSession();//getCurrentSession();
++        cSession.beginTransaction();
++        cSession.save(properties);
++        cSession.getTransaction().commit();
++        cSession.close();*/
+     }
+ 
+     public void addDiskGroup(String name, String description, DiskGroup parent) {
+-      /*  Session hSession = ConnectionManager.getSessionFactory().getCurrentSession();
++        /*  Session hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+         hSession.beginTransaction();
+         DiskGroup dg = new DiskGroup();
+         dg.setName(name);
+@@ -202,15 +237,15 @@
+     }
+ 
+     public void removeLabel(Label label) {
+-       /*Session  hSession = ConnectionManager.getSessionFactory().getCurrentSession();
++        /*Session  hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+         hSession.beginTransaction();
+         List result = hSession.createQuery(&quot;from Label where id=&quot; + label.getId()).list();
+         if (result.size() != 1) {
+-            ;//TODO: show error, invalid state
+-
++        ;//TODO: show error, invalid state
++        
+         }
+         Label rem = (Label) result.get(0);//TODO: verify this
+-
++        
+         hSession.delete(rem);
+         hSession.getTransaction().commit();*/
+     }
+@@ -230,43 +265,45 @@
+         hSession.beginTransaction();
+         List result = hSession.createQuery(&quot;from Label where id=&quot; + user.getId()).list();
+         if (result.size() != 1) {
+-            ;//TODO: show error, invalid state
+-
++        ;//TODO: show error, invalid state
++        
+         }
+         User rem = (User) result.get(0);//TODO: verify this
+-
++        
+         hSession.delete(rem);
+         hSession.getTransaction().commit();*/
+     }
+ 
+     public List getLabels() {//TODO: validate session states
+ /*
+-Session         hSession = ConnectionManager.getSessionFactory().getCurrentSession();
++        Session         hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+         hSession.beginTransaction();
+         List rs = hSession.createQuery(&quot;from User&quot;).list();
+         hSession.getTransaction().commit();
+         return rs;
+-        */
+-                return null;
++         */
++        return null;
+     }
+ 
+     public List getUsers() {//TODO: validate session states
+ /*
+-     Session    hSession = ConnectionManager.getSessionFactory().getCurrentSession();
++        Session    hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+         hSession.beginTransaction();
+         List rs = hSession.createQuery(&quot;from User&quot;).list();
+         hSession.getTransaction().commit();
+         return rs;*/
+-                return null;
++        return null;
+     }
+ 
+     public List getDiskGroups() {//TODO: validate session states
+-       /* hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+-        hSession.beginTransaction();
+-        List rs = hSession.createQuery(&quot;from DiskGRoup&quot;).list();
+-        hSession.getTransaction().commit();
+-        return rs;*/
+-        return new LinkedList();
++        if(sessionFactory == null) {
++            restoreSessionFactory();
++        }
++        Session cSession = sessionFactory.getCurrentSession();
++        cSession.beginTransaction();
++        List rs = cSession.createQuery(&quot;from DiskGroup&quot;).list();
++        cSession.getTransaction().commit();
++        return rs;
+     }
+ 
+     public void readDisk(File file, DiskGroup group, boolean isMedia) {
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java	2008-05-17 17:41:26 UTC (rev 111)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/CatalogProperties.java	2008-05-18 19:24:13 UTC (rev 112)
+@@ -136,13 +136,8 @@
+         }
+ 
+         CatalogProperties other = (CatalogProperties) obj;
+-        return this.name.equals(other.name) &amp;&amp;
+-                this.description.equals(other.description) &amp;&amp;
+-                this.totalSize == other.totalSize &amp;&amp;
+-                this.diskNumber == other.diskNumber &amp;&amp;
+-                this.totalFiles == other.totalFiles &amp;&amp;
+-                this.totalFolders == other.totalFolders;
+-    //NOTE: ignoring creation date
++        //All attributes are ignored, except for the name
++        return this.name.equals(other.name);
+     }
+ 
+     //TODO: link for the equals method
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form	2008-05-17 17:41:26 UTC (rev 111)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form	2008-05-18 19:24:13 UTC (rev 112)
+@@ -150,7 +150,7 @@
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Component id=&quot;jlblDescription&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jscrDescription&quot; pref=&quot;140&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jscrDescription&quot; pref=&quot;138&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-05-17 17:41:26 UTC (rev 111)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-05-18 19:24:13 UTC (rev 112)
+@@ -58,15 +58,17 @@
+         if (eng != null) {
+             Date temp;
+             props = eng.getProperties();
+-            jlblCatalogName.setText(props.getName());
+-            if ((temp = props.getCreationDate()) != null) {
+-                jdcCreatedOn.setDate(temp);
++            if (props != null) {
++                jlblCatalogName.setText(props.getName());
++                if ((temp = props.getCreationDate()) != null) {
++                    jdcCreatedOn.setDate(temp);
++                }
++                jtaDescription.setText(props.getDescription());
++                jlblNrDisksValue.setText(String.valueOf(props.getDiskNumber()));
++                jlblNrFilesValue.setText(String.valueOf(props.getTotalFiles()));
++                jlblNrFoldersValue.setText(String.valueOf(props.getTotalFolders()));
++                jlblTotalSizeValue.setText(String.valueOf(props.getTotalSize()));
+             }
+-            jtaDescription.setText(props.getDescription());
+-            jlblNrDisksValue.setText(String.valueOf(props.getDiskNumber()));
+-            jlblNrFilesValue.setText(String.valueOf(props.getTotalFiles()));
+-            jlblNrFoldersValue.setText(String.valueOf(props.getTotalFolders()));
+-            jlblTotalSizeValue.setText(String.valueOf(props.getTotalSize()));
+         }
+     }
+ 
+@@ -290,7 +292,7 @@
+ private void jdcCreatedOnPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jdcCreatedOnPropertyChange
+     //NOTE: jcalenar component does no provide events for listning to date 
+     // changes.    
+-    if(evt.getPropertyName().equals(&quot;date&quot;)) {
++    if (evt.getPropertyName().equals(&quot;date&quot;)) {
+         alterado = true;
+     }
+ }//GEN-LAST:event_jdcCreatedOnPropertyChange
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-05-17 17:41:26 UTC (rev 111)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-05-18 19:24:13 UTC (rev 112)
+@@ -17,7 +17,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs;
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+@@ -38,31 +37,33 @@
+ import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
+ import org.openide.util.lookup.Lookups;
++
+ /**
+  *
+  * @author  ei10635
+  */
+ public class NewDiskDlg extends javax.swing.JDialog {
+-    
++
+     private String currentSelectedPath;
+     private NewDiskDlg me = this;
+     private CatalogEngine eng;
+-    
++
+     /** Creates new form NewDiskDlg */
+     public NewDiskDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+         Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;); // NOI18N
++
+         eng = lu.lookup(CatalogEngine.class);
+         initComponents();
+-         //TODO: get the available plugins and create the popup menu
++    //TODO: get the available plugins and create the popup menu
+     }
+-    
++
+     public void showCentered() {
+         setLocation(getParent().getX() + (getParent().getWidth() / 2) - (getWidth() / 2),
+                 getParent().getY() + (getParent().getHeight() / 2) - (getHeight() / 2));
+         setVisible(true);
+-    }      
+-    
++    }
++
+     /** Creates toggle buttons and adds them to the top panel. The buttons will 
+      * have the icon given to the drive by the OS and the name provided by the 
+      * absolute path.
+@@ -82,14 +83,16 @@
+             toggle.addActionListener(new ActionListener() {
+ 
+                 public void actionPerformed(ActionEvent e) {
+-                    currentSelectedPath = ((JToggleButton)e.getSource()).getText();
++                    currentSelectedPath = ((JToggleButton) e.getSource()).getText();
+                 }
+             });
+             jbtngrpDrives.add(toggle);
+             jpButtons.add(toggle);
+         }
+         toggle = new JToggleButton(&quot;...&quot;); // NOI18N
+-        toggle.setIcon(new ImageIcon(Utilities.loadImage(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x22/button-folder.png&quot;))); // NOI18N
++
++        toggle.setIcon(new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x22/button-folder.png&quot;))); // NOI18N
++
+         toggle.setHorizontalTextPosition(SwingConstants.CENTER);
+         toggle.setVerticalTextPosition(SwingConstants.BOTTOM);
+         toggle.addActionListener(new ActionListener() {
+@@ -97,34 +100,36 @@
+             public void actionPerformed(ActionEvent e) {
+                 JFileChooser jfc = new JFileChooser(new File(System.getProperty(&quot;user.home&quot;)));
+                 jfc.setDialogTitle(&quot;Select a folder to scan&quot;);//TODO: i18n
++
+                 jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                 jfc.setMultiSelectionEnabled(false);
+-                if(jfc.showOpenDialog(me) == JFileChooser.APPROVE_OPTION) {
++                if (jfc.showOpenDialog(me) == JFileChooser.APPROVE_OPTION) {
+                     File f = jfc.getSelectedFile();
+                     currentSelectedPath = f.getAbsolutePath();
+-                    ((JToggleButton)e.getSource()).setText(f.getName());
++                    ((JToggleButton) e.getSource()).setText(f.getName());
+                 }
+             }
+-        });        
++        });
+         jpButtons.add(toggle);
+-        
++
+         jpButtons.validate();
+     }
+ 
+     private Object[] listDiskGroups() {
+-        if(eng != null) {
++        if (eng != null) {
+             List g = eng.getDiskGroups();
+-            ArrayList ar = new ArrayList(g.size());
+-            for(Object obj : g) {
+-                ar.add(obj);
++            if (g != null) {
++                ArrayList ar = new ArrayList(g.size());
++                for (Object obj : g) {
++                    ar.add(obj);
++                }
++
++                return ar.toArray();
+             }
+-            
+-            return ar.toArray();
+         }
+         return new Object[]{};
+-    }    
+-    
+-    
++    }
++
+     /** This method is called from within the constructor to
+      * initialize the form.
+      * WARNING: Do NOT modify this code. The content of this method is
+@@ -321,20 +326,18 @@
+ 
+ private void jtbSelectedPluginsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbSelectedPluginsActionPerformed
+     //TODO:
+-    if(jtbSelectedPlugins.isSelected()) {
+-    jpopPlugins.setLocation(getParent().getX() + this.getX() 
+-            + jtbSelectedPlugins.getX() + jtbSelectedPlugins.getWidth(), 
+-            getParent().getY() + this.getY()  + jtbSelectedPlugins.getY() 
+-            + jtbSelectedPlugins.getHeight() + 48);
+-    jpopPlugins.setVisible(true);
++    if (jtbSelectedPlugins.isSelected()) {
++        jpopPlugins.setLocation(getParent().getX() + this.getX() + jtbSelectedPlugins.getX() + jtbSelectedPlugins.getWidth(),
++                getParent().getY() + this.getY() + jtbSelectedPlugins.getY() + jtbSelectedPlugins.getHeight() + 48);
++        jpopPlugins.setVisible(true);
+     } else {
+         jpopPlugins.setVisible(false);
+     }
+-    
++
+ }//GEN-LAST:event_jtbSelectedPluginsActionPerformed
+ 
+ private void jbtnScanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnScanActionPerformed
+-    if(eng != null) {
++    if (eng != null) {
+         //TODO: eng.readDisk(new File(currentSelectedPath), (DiskGroup)jcbxCatalog.getSelectedItem());
+         eng.readDisk(new File(currentSelectedPath), null, false);
+     }
+@@ -348,7 +351,6 @@
+ private void jbtnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnHelpActionPerformed
+ // TODO: help code
+ }//GEN-LAST:event_jbtnHelpActionPerformed
+-    
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
+@@ -372,5 +374,4 @@
+     private javax.swing.JToggleButton jtbSelectedPlugins;
+     private javax.swing.JTextField jtfDiskName;
+     // End of variables declaration//GEN-END:variables
+-    
+ }
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000106.html">[Jfindmyfiles-commits] r111 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	entities utils
+</A></li>
+	<LI>Next message: <A HREF="000108.html">[Jfindmyfiles-commits] r113 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#107">[ date ]</a>
+              <a href="thread.html#107">[ thread ]</a>
+              <a href="subject.html#107">[ subject ]</a>
+              <a href="author.html#107">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

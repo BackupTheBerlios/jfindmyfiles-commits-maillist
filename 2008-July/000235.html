@@ -1,0 +1,405 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r240 - in trunk/project/JFindMyFiles:	JFindMyFilesGui/test/unit/src JFindMyFilesGui/test/unit/src/de	JFindMyFilesGui/test/unit/src/de/berlios	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	ReadingFiles/test/unit/src ReadingFiles/test/unit/src/de	ReadingFiles/test/unit/src/de/berlios	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r240%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09JFindMyFilesGui/test/unit/src%20JFindMyFilesGui/test/unit/src/de%0A%09JFindMyFilesGui/test/unit/src/de/berlios%0A%09JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles%0A%09JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils%0A%09ReadingFiles/test/unit/src%20ReadingFiles/test/unit/src/de%0A%09ReadingFiles/test/unit/src/de/berlios%0A%09ReadingFiles/test/unit/src/de/berlios/jfindmyfiles%0A%09ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles%0A%09ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils&In-Reply-To=%3C200807211734.m6LHYGcJ003386%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000234.html">
+   <LINK REL="Next"  HREF="000236.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r240 - in trunk/project/JFindMyFiles:	JFindMyFilesGui/test/unit/src JFindMyFilesGui/test/unit/src/de	JFindMyFilesGui/test/unit/src/de/berlios	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	ReadingFiles/test/unit/src ReadingFiles/test/unit/src/de	ReadingFiles/test/unit/src/de/berlios	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils</H1>
+    <B>tica at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r240%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09JFindMyFilesGui/test/unit/src%20JFindMyFilesGui/test/unit/src/de%0A%09JFindMyFilesGui/test/unit/src/de/berlios%0A%09JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles%0A%09JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils%0A%09ReadingFiles/test/unit/src%20ReadingFiles/test/unit/src/de%0A%09ReadingFiles/test/unit/src/de/berlios%0A%09ReadingFiles/test/unit/src/de/berlios/jfindmyfiles%0A%09ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles%0A%09ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils&In-Reply-To=%3C200807211734.m6LHYGcJ003386%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r240 - in trunk/project/JFindMyFiles:	JFindMyFilesGui/test/unit/src JFindMyFilesGui/test/unit/src/de	JFindMyFilesGui/test/unit/src/de/berlios	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	ReadingFiles/test/unit/src ReadingFiles/test/unit/src/de	ReadingFiles/test/unit/src/de/berlios	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils">tica at mail.berlios.de
+       </A><BR>
+    <I>Mon Jul 21 19:34:16 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000234.html">[Jfindmyfiles-commits] r239 - in trunk: docs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes
+</A></li>
+        <LI>Next message: <A HREF="000236.html">[Jfindmyfiles-commits] r241 -	trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#235">[ date ]</a>
+              <a href="thread.html#235">[ thread ]</a>
+              <a href="subject.html#235">[ subject ]</a>
+              <a href="author.html#235">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: tica
+Date: 2008-07-21 19:34:09 +0200 (Mon, 21 Jul 2008)
+New Revision: 240
+
+Added:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/
+   trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/
+   trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/
+   trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/
+   trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/
+   trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogFilterTest.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogViewTest.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtilsTest.java
+   trunk/project/JFindMyFiles/ReadingFiles/test/unit/src/de/
+   trunk/project/JFindMyFiles/ReadingFiles/test/unit/src/de/berlios/
+   trunk/project/JFindMyFiles/ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/
+   trunk/project/JFindMyFiles/ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/
+   trunk/project/JFindMyFiles/ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils/
+   trunk/project/JFindMyFiles/ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtilsTest.java
+Log:
+Teste feito a readingfiles.
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogFilterTest.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogFilterTest.java	2008-07-21 16:47:11 UTC (rev 239)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogFilterTest.java	2008-07-21 17:34:09 UTC (rev 240)
+@@ -0,0 +1,70 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.jfindmyfilesgui.utils;
++
++import java.io.File;
++import org.junit.After;
++import org.junit.AfterClass;
++import org.junit.Before;
++import org.junit.BeforeClass;
++import org.junit.Test;
++import static org.junit.Assert.*;
++
++/**
++ *
++ * @author Administrador
++ */
++public class CatalogFilterTest {
++
++    public CatalogFilterTest() {
++    }
++
++    @BeforeClass
++    public static void setUpClass() throws Exception {
++    }
++
++    @AfterClass
++    public static void tearDownClass() throws Exception {
++    }
++
++    @Before
++    public void setUp() {
++    }
++
++    @After
++    public void tearDown() {
++    }
++
++    /**
++     * Test of accept method, of class CatalogFilter.
++     */
++    @Test
++    public void testAccept() {
++        System.out.println(&quot;accept&quot;);
++        File f = null;
++        CatalogFilter instance = new CatalogFilter();
++        boolean expResult = false;
++        boolean result = instance.accept(f);
++        assertEquals(expResult, result);
++        // TODO review the generated test code and remove the default call to fail.
++        fail(&quot;The test case is a prototype.&quot;);
++    }
++
++    /**
++     * Test of getDescription method, of class CatalogFilter.
++     */
++    @Test
++    public void testGetDescription() {
++        System.out.println(&quot;getDescription&quot;);
++        CatalogFilter instance = new CatalogFilter();
++        String expResult = &quot;&quot;;
++        String result = instance.getDescription();
++        assertEquals(expResult, result);
++        // TODO review the generated test code and remove the default call to fail.
++        fail(&quot;The test case is a prototype.&quot;);
++    }
++
++}
+\ No newline at end of file
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogViewTest.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogViewTest.java	2008-07-21 16:47:11 UTC (rev 239)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/CatalogViewTest.java	2008-07-21 17:34:09 UTC (rev 240)
+@@ -0,0 +1,72 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.jfindmyfilesgui.utils;
++
++import java.io.File;
++import javax.swing.Icon;
++import org.junit.After;
++import org.junit.AfterClass;
++import org.junit.Before;
++import org.junit.BeforeClass;
++import org.junit.Test;
++import static org.junit.Assert.*;
++
++/**
++ *
++ * @author Administrador
++ */
++public class CatalogViewTest {
++
++    public CatalogViewTest() {
++    }
++
++    @BeforeClass
++    public static void setUpClass() throws Exception {
++    }
++
++    @AfterClass
++    public static void tearDownClass() throws Exception {
++    }
++
++    @Before
++    public void setUp() {
++    }
++
++    @After
++    public void tearDown() {
++    }
++
++    /**
++     * Test of getTypeDescription method, of class CatalogView.
++     */
++    @Test
++    public void testGetTypeDescription() {
++        System.out.println(&quot;getTypeDescription&quot;);
++        File f = null;
++        CatalogView instance = new CatalogView();
++        String expResult = &quot;&quot;;
++        String result = instance.getTypeDescription(f);
++        assertEquals(expResult, result);
++        // TODO review the generated test code and remove the default call to fail.
++        fail(&quot;The test case is a prototype.&quot;);
++    }
++
++    /**
++     * Test of getIcon method, of class CatalogView.
++     */
++    @Test
++    public void testGetIcon() {
++        System.out.println(&quot;getIcon&quot;);
++        File f = null;
++        CatalogView instance = new CatalogView();
++        Icon expResult = null;
++        Icon result = instance.getIcon(f);
++        assertEquals(expResult, result);
++        // TODO review the generated test code and remove the default call to fail.
++        fail(&quot;The test case is a prototype.&quot;);
++    }
++
++}
+\ No newline at end of file
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtilsTest.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtilsTest.java	2008-07-21 16:47:11 UTC (rev 239)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtilsTest.java	2008-07-21 17:34:09 UTC (rev 240)
+@@ -0,0 +1,54 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.jfindmyfilesgui.utils;
++
++import org.junit.After;
++import org.junit.AfterClass;
++import org.junit.Before;
++import org.junit.BeforeClass;
++import org.junit.Test;
++import static org.junit.Assert.*;
++
++/**
++ *
++ * @author Administrador
++ */
++public class GuiUtilsTest {
++
++    public GuiUtilsTest() {
++    }
++
++    @BeforeClass
++    public static void setUpClass() throws Exception {
++    }
++
++    @AfterClass
++    public static void tearDownClass() throws Exception {
++    }
++
++    @Before
++    public void setUp() {
++    }
++
++    @After
++    public void tearDown() {
++    }
++
++    /**
++     * Test of findIconForType method, of class GuiUtils.
++     */
++    @Test
++    public void testFindIconForType() {
++        System.out.println(&quot;findIconForType&quot;);
++        int type = 0;
++        String expResult = &quot;&quot;;
++        String result = GuiUtils.findIconForType(type);
++        assertEquals(expResult, result);
++        // TODO review the generated test code and remove the default call to fail.
++        fail(&quot;The test case is a prototype.&quot;);
++    }
++
++}
+\ No newline at end of file
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtilsTest.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtilsTest.java	2008-07-21 16:47:11 UTC (rev 239)
++++ trunk/project/JFindMyFiles/ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtilsTest.java	2008-07-21 17:34:09 UTC (rev 240)
+@@ -0,0 +1,98 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.readingfiles.utils;
++
++import de.berlios.jfindmyfiles.catalog.CatalogConstants;
++import java.io.File;
++import org.junit.After;
++import org.junit.AfterClass;
++import org.junit.Before;
++import org.junit.BeforeClass;
++import org.junit.Test;
++import static org.junit.Assert.*;
++
++/**
++ *
++ * @author Administrador
++ */
++public class ReadingUtilsTest {
++
++    public ReadingUtilsTest() {
++    }
++
++    @BeforeClass
++    public static void setUpClass() throws Exception {
++    }
++
++    @AfterClass
++    public static void tearDownClass() throws Exception {
++    }
++
++    @Before
++    public void setUp() {
++    }
++
++    @After
++    public void tearDown() {
++    }
++
++    /**
++     * Test of findExtension method, of class ReadingUtils.
++     */
++    @Test
++    public void testFindExtension() {
++        System.out.println(&quot;findExtension&quot;);
++        String filename = &quot;dados.txt&quot;;
++        String expResult = &quot;txt&quot;;
++        String result = ReadingUtils.findExtension(filename);
++        assertEquals(expResult, result);
++        // TODO review the generated test code and remove the default call to fail.
++        //fail(&quot;The test case is a prototype.&quot;);
++    }
++
++    /**
++     * Test of calculateSHA1HashString method, of class ReadingUtils.
++     */
++    @Test
++    public void testCalculateSHA1HashString() {
++        System.out.println(&quot;calculateSHA1HashString&quot;);
++        File file = new File(&quot;&quot;);
++        String expResult = &quot;dasda&quot;;
++        String result = ReadingUtils.calculateSHA1HashString(file);
++        assertEquals(expResult, result);
++        // TODO review the generated test code and remove the default call to fail.
++        //fail(&quot;The test case is a prototype.&quot;);
++    }
++
++    /**
++     * Test of findFileType method, of class ReadingUtils.
++     */
++    @Test
++    public void testFindFileType() {
++        System.out.println(&quot;findFileType&quot;);
++        String absolutepath = &quot;d:\\&quot;;
++        int expResult = CatalogConstants.DVDROM;
++        int result = ReadingUtils.findFileType(absolutepath);
++        assertEquals(expResult, result);
++        // TODO review the generated test code and remove the default call to fail.
++        //fail(&quot;The test case is a prototype.&quot;);
++    }
++
++    /**
++     * Test of stripFileExtension method, of class ReadingUtils.
++     */
++    @Test
++    public void testStripFileExtension() {
++        System.out.println(&quot;stripFileExtension&quot;);
++        String filename = &quot;teste.txt&quot;;
++        String expResult = &quot;teste&quot;;
++        String result = ReadingUtils.stripFileExtension(filename);
++        assertEquals(expResult, result);
++        // TODO review the generated test code and remove the default call to fail.
++        //fail(&quot;The test case is a prototype.&quot;);
++    }
++
++}
+\ No newline at end of file
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000234.html">[Jfindmyfiles-commits] r239 - in trunk: docs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes
+</A></li>
+	<LI>Next message: <A HREF="000236.html">[Jfindmyfiles-commits] r241 -	trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#235">[ date ]</a>
+              <a href="thread.html#235">[ thread ]</a>
+              <a href="subject.html#235">[ subject ]</a>
+              <a href="author.html#235">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

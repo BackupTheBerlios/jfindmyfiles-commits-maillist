@@ -1,0 +1,869 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r237 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r237%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils&In-Reply-To=%3C200807211424.m6LEOdmc020420%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000231.html">
+   <LINK REL="Next"  HREF="000233.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r237 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r237%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils&In-Reply-To=%3C200807211424.m6LEOdmc020420%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r237 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils">knitter at mail.berlios.de
+       </A><BR>
+    <I>Mon Jul 21 16:24:39 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000231.html">[Jfindmyfiles-commits] r236 - trunk/docs
+</A></li>
+        <LI>Next message: <A HREF="000233.html">[Jfindmyfiles-commits] r238 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#232">[ date ]</a>
+              <a href="thread.html#232">[ thread ]</a>
+              <a href="subject.html#232">[ subject ]</a>
+              <a href="author.html#232">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-07-21 16:24:15 +0200 (Mon, 21 Jul 2008)
+New Revision: 237
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java
+Log:
+Corrigidos bugs no sistema de leitura de ficheiros, referentes ?\195?\160s apresenta?\195?\167?\195?\163o dos dados.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-07-21 14:24:15 UTC (rev 237)
+@@ -289,7 +289,7 @@
+             listeners.remove(l);
+         }
+     }
+-
++    //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+     private void fireCatalogCreated(CatalogEngineEvent evt) {
+         if (listeners != null) {
+             for (CatalogEngineListener l : listeners) {
+@@ -322,6 +322,22 @@
+         }
+     }
+ 
++    private void fireDiskAdded(CatalogEngineEvent evt) {
++        if (listeners != null) {
++            for (CatalogEngineListener l : listeners) {
++                l.diskAdded(evt);
++            }
++        }
++    }
++    
++    private void fireDiskRemoved(CatalogEngineEvent evt) {
++        if (listeners != null) {
++            for (CatalogEngineListener l : listeners) {
++                l.diskRemoved(evt);
++            }
++        }
++    }    
++
+     /**
+      * In overriding the finalize method we try to garantee that data is 
+      * flushed and all resources are released.
+@@ -342,25 +358,18 @@
+             s.save(f);
+         }
+         s.getTransaction().commit();
++        fireDiskAdded(new CatalogEngineEvent(this, &quot;&quot;, null, null, null, disk));
+     }
+-    //TESTING:
+-    public List&lt;FileWrapper&gt; searchDuplicates(String hash) {
+-        Session s = sessionFactory.getCurrentSession();
+-        s.beginTransaction();
+-        List rs = null;//TODO:s.createCriteria(FileWrapper.class).add(Restrictions.like(&quot;sha1&quot;, hash, MatchMode.EXACT)).list();
+-        s.getTransaction().commit();
+-        return rs;
+-    }
+-    
++
+     public List&lt;FileWrapper&gt; findDuplicates() {
+         List&lt;FileWrapper&gt; result = new ArrayList&lt;FileWrapper&gt;();
+         Session s = sessionFactory.getCurrentSession();
+         s.beginTransaction();
+         result.addAll(s.createQuery(&quot;select f from FileWrapper f where sha1 in &quot; +
+                 &quot;(select f2.sha1 from FileWrapper f2 group by f2.sha1 having &quot; +
+-                &quot;( count(f2.sha1) &gt; 1 AND f2.sha1 &lt;&gt; '' AND f2.sha1 is not null))&quot;).list());      
++                &quot;( count(f2.sha1) &gt; 1 AND f2.sha1 &lt;&gt; '' AND f2.sha1 is not null))&quot;).list());
+         s.getTransaction().commit();
+-        
++
+         return result;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java	2008-07-21 14:24:15 UTC (rev 237)
+@@ -68,7 +68,7 @@
+             CatalogProperties props = eng.getProperties();
+ 
+             //name,creation-date,description,total-size,disk-number,total-folders
+-            pw = new PrintWriter(new FileWriter(file));
++            pw = new PrintWriter(new FileWriter(base + &quot;.csv&quot;));
+             pw.print(&quot;name,creation-date,description,total-size,disk-number,total-folders,total-files\r\n&quot;);
+ 
+             aux = props.getName() + &quot;,&quot; + props.getCreationDate() + &quot;,&quot; + props.getDescription() +
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/AcRemove.java	2008-07-21 14:24:15 UTC (rev 237)
+@@ -28,14 +28,15 @@
+ public final class AcRemove extends CallableSystemAction {
+ 
+     private CatalogEngine eng;
+-    
++
+     public AcRemove() {
+         super();
+         eng = Lookup.getDefault().lookup(CatalogEngine.class);
+     }
+ 
+     public void performAction() {
+-        // TODO implement action body
++        if (eng.isOpened()) {
++        }
+     }
+ 
+     public String getName() {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-07-21 14:24:15 UTC (rev 237)
+@@ -125,7 +125,7 @@
+ AskDescriptionDlg.jbtnCancel.text=Cancel
+ AskDescriptionDlg.jbtnOK.text=OK
+ ExportDlg.jpbExportProgress.string=exporting...
+-ActiveScanningDlg.jpbReadingProgress.string=
++ActiveScanningDlg.jpbReadingProgress.string=scanning ...
+ ExportDlg.jpPreview.border.title=Preview
+ ExportDlg.jlblPreview.text=
+ ExportDlg.jlblTemplateDestination.text=Destination:
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form	2008-07-21 14:24:15 UTC (rev 237)
+@@ -25,16 +25,16 @@
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+           &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jpCatalogData&quot; alignment=&quot;1&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                  &lt;Component id=&quot;jpCatalogData&quot; alignment=&quot;1&quot; max=&quot;32767&quot; attributes=&quot;2&quot;/&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jbtnOK&quot; linkSize=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jbtnCancel&quot; linkSize=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+               &lt;/Group&gt;
+-              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+@@ -69,7 +69,7 @@
+         &lt;DimensionLayout dim=&quot;0&quot;&gt;
+           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+               &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jscrDescription&quot; alignment=&quot;0&quot; pref=&quot;330&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+@@ -78,10 +78,11 @@
+                           &lt;Component id=&quot;jlblCatalogName&quot; pref=&quot;292&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;/Group&gt;
+                       &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                          &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Component id=&quot;jlblCreatedOn&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                          &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                          &lt;Component id=&quot;jdcCreatedOn&quot; min=&quot;-2&quot; pref=&quot;187&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jdcCreatedOn&quot; pref=&quot;187&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;EmptySpace min=&quot;56&quot; pref=&quot;56&quot; max=&quot;56&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;/Group&gt;
+                       &lt;Component id=&quot;jSeparator2&quot; alignment=&quot;0&quot; pref=&quot;330&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+@@ -105,7 +106,7 @@
+                           &lt;/Group&gt;
+                       &lt;/Group&gt;
+                   &lt;/Group&gt;
+-                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+         &lt;/DimensionLayout&gt;
+@@ -153,7 +154,7 @@
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Component id=&quot;jlblDescription&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jscrDescription&quot; pref=&quot;128&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jscrDescription&quot; pref=&quot;124&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-07-21 14:24:15 UTC (rev 237)
+@@ -22,12 +22,10 @@
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.catalog.entities.CatalogProperties;
+ import java.util.Date;
+-import javax.swing.ImageIcon;
+ import javax.swing.event.DocumentEvent;
+ import javax.swing.event.DocumentListener;
+ import org.hibernate.Session;
+ import org.openide.util.Lookup;
+-import org.openide.util.Utilities;
+ 
+ /**
+  *
+@@ -71,20 +69,21 @@
+     }
+ 
+     private void fillIn() {
+-        Date temp;
+-        s = eng.sessionFactory.getCurrentSession();
+-        s.beginTransaction();
+-        props = (CatalogProperties) s.createQuery(&quot;from CatalogProperties&quot;).uniqueResult();
+-        jlblCatalogName.setText(props.getName());
+-        if ((temp = props.getCreationDate()) != null) {
+-            jdcCreatedOn.setDate(temp);
++        if (eng.isOpened()) {
++            Date temp;
++            s = eng.sessionFactory.getCurrentSession();
++            s.beginTransaction();
++            props = (CatalogProperties) s.createQuery(&quot;from CatalogProperties&quot;).uniqueResult();
++            jlblCatalogName.setText(props.getName());
++            if ((temp = props.getCreationDate()) != null) {
++                jdcCreatedOn.setDate(temp);
++            }
++            jtaDescription.setText(props.getDescription());
++            jlblNrDisksValue.setText(String.valueOf(props.getDiskNumber()));
++            jlblNrFilesValue.setText(String.valueOf(props.getTotalFiles()));
++            jlblNrFoldersValue.setText(String.valueOf(props.getTotalFolders()));
++            jlblTotalSizeValue.setText(String.valueOf(props.getTotalSize()));
+         }
+-        jtaDescription.setText(props.getDescription());
+-        jlblNrDisksValue.setText(String.valueOf(props.getDiskNumber()));
+-        jlblNrFilesValue.setText(String.valueOf(props.getTotalFiles()));
+-        jlblNrFoldersValue.setText(String.valueOf(props.getTotalFolders()));
+-        jlblTotalSizeValue.setText(String.valueOf(props.getTotalSize()));
+-
+     }
+ 
+     /** This method is called from within the constructor to
+@@ -175,7 +174,8 @@
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                         .addComponent(jlblCreatedOn)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jdcCreatedOn, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
++                        .addComponent(jdcCreatedOn, javax.swing.GroupLayout.DEFAULT_SIZE, 187, Short.MAX_VALUE)
++                        .addGap(56, 56, 56))
+                     .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpCatalogDataLayout.createSequentialGroup()
+                         .addComponent(jlblNrDisks)
+@@ -231,7 +231,7 @@
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addComponent(jlblDescription)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addComponent(jscrDescription, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
++                .addComponent(jscrDescription, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
+                 .addContainerGap())
+         );
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-07-21 14:24:15 UTC (rev 237)
+@@ -156,7 +156,7 @@
+                           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jlblInclude&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jSeparator2&quot; pref=&quot;345&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jSeparator2&quot; pref=&quot;327&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+                           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;EmptySpace min=&quot;10&quot; pref=&quot;10&quot; max=&quot;10&quot; attributes=&quot;0&quot;/&gt;
+@@ -171,7 +171,7 @@
+                           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jlblDestination&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jtfDestination&quot; pref=&quot;253&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jtfDestination&quot; pref=&quot;235&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Component id=&quot;jbtnBrowse&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+@@ -206,7 +206,7 @@
+                       &lt;Component id=&quot;jSeparator1&quot; min=&quot;-2&quot; pref=&quot;10&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jchkOpenAfter&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;EmptySpace pref=&quot;115&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;86&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+@@ -320,7 +320,7 @@
+                               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                                   &lt;Component id=&quot;jchkTemplateOpenAfter&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                                      &lt;Component id=&quot;jtfTemplateDestination&quot; pref=&quot;275&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                                      &lt;Component id=&quot;jtfTemplateDestination&quot; pref=&quot;269&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                                       &lt;Component id=&quot;jbtnTemplateBrowse&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                                   &lt;/Group&gt;
+@@ -351,7 +351,7 @@
+                       &lt;/Group&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jchkTemplateOpenAfter&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;EmptySpace pref=&quot;91&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;75&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+@@ -427,12 +427,12 @@
+                               &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                                   &lt;Component id=&quot;jlblSelectTemplate&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                                  &lt;Component id=&quot;jcbxSelectTemplate&quot; pref=&quot;136&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                                  &lt;Component id=&quot;jcbxSelectTemplate&quot; pref=&quot;112&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;/Group&gt;
+                               &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                                   &lt;Component id=&quot;jlblTemplateAuthor&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                                  &lt;Component id=&quot;jlblTemplateAuthorValue&quot; pref=&quot;145&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                                  &lt;Component id=&quot;jlblTemplateAuthorValue&quot; pref=&quot;135&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;/Group&gt;
+                               &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                                   &lt;Component id=&quot;jlblVersion&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -580,7 +580,7 @@
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;EmptySpace min=&quot;-2&quot; pref=&quot;153&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jpbExportProgress&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;EmptySpace pref=&quot;158&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;152&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-07-21 14:24:15 UTC (rev 237)
+@@ -89,7 +89,6 @@
+     private void startUp() throws IOException {
+         String base = System.getProperty(&quot;user.home&quot;) + File.separator +
+                 &quot;.jfmfuserfiles&quot; + File.separator + &quot;Templates&quot;;
+-        System.out.println(&quot;Trying: &quot; + base);
+         File folder = new File(base);
+         File[] list;
+         int y;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form	2008-07-21 14:24:15 UTC (rev 237)
+@@ -30,18 +30,18 @@
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jlblName&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jtfName&quot; pref=&quot;442&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jtfName&quot; pref=&quot;465&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jchkUserinternalDB&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jSeparator1&quot; pref=&quot;344&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jSeparator1&quot; pref=&quot;350&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;EmptySpace min=&quot;12&quot; pref=&quot;12&quot; max=&quot;12&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                           &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                              &lt;Component id=&quot;jlbError&quot; pref=&quot;254&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jlbError&quot; pref=&quot;319&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Component id=&quot;jbtnCreate&quot; linkSize=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -53,7 +53,7 @@
+                           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jlblDestination&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jtfDestination&quot; pref=&quot;344&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jtfDestination&quot; pref=&quot;374&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Component id=&quot;jbtnBrowse&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+@@ -107,7 +107,6 @@
+             &lt;/TitledBorder&gt;
+           &lt;/Border&gt;
+         &lt;/Property&gt;
+-        &lt;Property name=&quot;enabled&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
+       &lt;/Properties&gt;
+ 
+       &lt;Layout&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-07-21 14:24:15 UTC (rev 237)
+@@ -99,7 +99,7 @@
+      * @param state true/false for activating and deactivating the components.
+      */
+     private void serverOptionsStateChanged(boolean state) {
+-        jpDatabaseSettings.setEnabled(state);
++        //jpDatabaseSettings.setEnabled(state);
+         //Labels
+         jlblDatabase.setEnabled(state);
+         jlblHostname.setEnabled(state);
+@@ -151,7 +151,6 @@
+         setTitle(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.title&quot;)); // NOI18N
+ 
+         jpDatabaseSettings.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jpDatabaseSettings.border.title&quot;))); // NOI18N
+-        jpDatabaseSettings.setEnabled(false);
+ 
+         jlblHostname.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jlblHostname.text&quot;)); // NOI18N
+         jlblHostname.setEnabled(false);
+@@ -291,16 +290,16 @@
+                     .addGroup(layout.createSequentialGroup()
+                         .addComponent(jlblName)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jtfName, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE))
++                        .addComponent(jtfName, javax.swing.GroupLayout.DEFAULT_SIZE, 465, Short.MAX_VALUE))
+                     .addGroup(layout.createSequentialGroup()
+                         .addComponent(jchkUserinternalDB)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
++                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 350, Short.MAX_VALUE))
+                     .addGroup(layout.createSequentialGroup()
+                         .addGap(12, 12, 12)
+                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                                .addComponent(jlbError, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
++                                .addComponent(jlbError, javax.swing.GroupLayout.DEFAULT_SIZE, 319, Short.MAX_VALUE)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                 .addComponent(jbtnCreate)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+@@ -311,7 +310,7 @@
+                             .addGroup(layout.createSequentialGroup()
+                                 .addComponent(jlblDestination)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                                .addComponent(jtfDestination, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
++                                .addComponent(jtfDestination, javax.swing.GroupLayout.DEFAULT_SIZE, 374, Short.MAX_VALUE)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                 .addComponent(jbtnBrowse)))))
+                 .addContainerGap())
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-07-21 14:24:15 UTC (rev 237)
+@@ -34,6 +34,7 @@
+     &lt;Property name=&quot;title&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+       &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewDiskDlg.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+     &lt;/Property&gt;
++    &lt;Property name=&quot;resizable&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
+   &lt;/Properties&gt;
+   &lt;SyntheticProperties&gt;
+     &lt;SyntheticProperty name=&quot;formSizePolicy&quot; type=&quot;int&quot; value=&quot;1&quot;/&gt;
+@@ -91,50 +92,50 @@
+         &lt;DimensionLayout dim=&quot;0&quot;&gt;
+           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+               &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jpScanningOptions&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jpButtons&quot; alignment=&quot;0&quot; pref=&quot;479&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jpButtons&quot; alignment=&quot;0&quot; pref=&quot;491&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+                           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jffDiskNumber&quot; alignment=&quot;0&quot; min=&quot;-2&quot; pref=&quot;42&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Component id=&quot;jlblDiskNumber&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+-                          &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jlblDiskName&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jtfDiskName&quot; alignment=&quot;0&quot; min=&quot;-2&quot; pref=&quot;282&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jtfDiskName&quot; alignment=&quot;0&quot; pref=&quot;282&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+-                          &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jlblCatalog&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Component id=&quot;jcbxCatalog&quot; alignment=&quot;0&quot; pref=&quot;143&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+                       &lt;/Group&gt;
+                   &lt;/Group&gt;
+-                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+         &lt;/DimensionLayout&gt;
+         &lt;DimensionLayout dim=&quot;1&quot;&gt;
+           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+               &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Component id=&quot;jpButtons&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jlblDiskName&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jlblDiskNumber&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jlblCatalog&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+-                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jffDiskNumber&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jtfDiskName&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jcbxCatalog&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+-                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jpScanningOptions&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jpScanningOptions&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+         &lt;/DimensionLayout&gt;
+@@ -205,7 +206,7 @@
+                           &lt;Component id=&quot;jchkCalculateHash&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Component id=&quot;jchkAskDescription&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Component id=&quot;jchkShowAgain&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                          &lt;Component id=&quot;jSeparator1&quot; alignment=&quot;0&quot; pref=&quot;443&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jSeparator1&quot; alignment=&quot;0&quot; pref=&quot;455&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Component id=&quot;jtbSelectedPlugins&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;/Group&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-07-21 14:24:15 UTC (rev 237)
+@@ -129,13 +129,16 @@
+ 
+     @SuppressWarnings(&quot;unchecked&quot;)
+     private Object[] listDiskGroups() {
+-        List l = eng.getDiskGroups();
+-        if (l != null) {
+-            ArrayList ar = new ArrayList(l.size());
+-            for (Object obj : l) {
+-                ar.add(obj);
++        if (eng.isOpened()) {
++            List l = eng.getDiskGroups();
++            if (l != null) {
++                ArrayList ar = new ArrayList(l.size() + 1);
++                ar.add(&quot;---&quot;);
++                for (Object obj : l) {
++                    ar.add(obj);
++                }
++                return ar.toArray();
+             }
+-            return ar.toArray();
+         }
+         return new Object[]{};
+     }
+@@ -181,6 +184,7 @@
+ 
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+         setTitle(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.title&quot;)); // NOI18N
++        setResizable(false);
+ 
+         jpButtons.setPreferredSize(new java.awt.Dimension(10, 50));
+         jpButtons.setLayout(new javax.swing.BoxLayout(jpButtons, javax.swing.BoxLayout.LINE_AXIS));
+@@ -234,7 +238,7 @@
+                     .addComponent(jchkCalculateHash)
+                     .addComponent(jchkAskDescription)
+                     .addComponent(jchkShowAgain)
+-                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 443, Short.MAX_VALUE)
++                    .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 455, Short.MAX_VALUE)
+                     .addComponent(jtbSelectedPlugins))
+                 .addContainerGap())
+         );
+@@ -262,7 +266,7 @@
+                 .addContainerGap()
+                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                     .addComponent(jpScanningOptions, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+-                    .addComponent(jpButtons, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 479, Short.MAX_VALUE)
++                    .addComponent(jpButtons, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE)
+                     .addGroup(jPanel1Layout.createSequentialGroup()
+                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                             .addComponent(jffDiskNumber, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+@@ -270,7 +274,7 @@
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                             .addComponent(jlblDiskName)
+-                            .addComponent(jtfDiskName, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE))
++                            .addComponent(jtfDiskName, javax.swing.GroupLayout.DEFAULT_SIZE, 282, Short.MAX_VALUE))
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                             .addComponent(jlblCatalog)
+@@ -280,7 +284,7 @@
+         jPanel1Layout.setVerticalGroup(
+             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(jPanel1Layout.createSequentialGroup()
+-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                .addContainerGap()
+                 .addComponent(jpButtons, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+@@ -293,7 +297,7 @@
+                     .addComponent(jtfDiskName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(jcbxCatalog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addComponent(jpScanningOptions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addComponent(jpScanningOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE))
+         );
+ 
+         jbtnHelp.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jbtnHelp.text&quot;)); // NOI18N
+@@ -376,7 +380,8 @@
+                 scanningDlg.showCentered(ask4Description, showAgain);
+             }
+         });
+-        r.read(new File(currentSelectedPath), calculateHash, isMedia, jtfDiskName.getText().trim(), (DiskGroup) jcbxCatalog.getSelectedItem());
++        DiskGroup g = !jcbxCatalog.getSelectedItem().toString().equalsIgnoreCase(&quot;---&quot;) ? (DiskGroup)jcbxCatalog.getSelectedItem() : null;
++        r.read(new File(currentSelectedPath), calculateHash, isMedia, jtfDiskName.getText().trim(), g);
+     }
+ }//GEN-LAST:event_jbtnScanActionPerformed
+ 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form	2008-07-21 14:24:15 UTC (rev 237)
+@@ -33,12 +33,12 @@
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jlblName&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jtfName&quot; pref=&quot;439&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jtfName&quot; pref=&quot;462&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jchkUserinternalDB&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jSeparator1&quot; pref=&quot;341&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jSeparator1&quot; pref=&quot;347&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;EmptySpace min=&quot;12&quot; pref=&quot;12&quot; max=&quot;12&quot; attributes=&quot;0&quot;/&gt;
+@@ -47,14 +47,14 @@
+                           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jlblDestination&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jtfDestination&quot; pref=&quot;341&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jtfDestination&quot; pref=&quot;371&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Component id=&quot;jbtnBrowse&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+                       &lt;/Group&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;Component id=&quot;jlbError&quot; pref=&quot;263&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jlbError&quot; pref=&quot;328&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jbtnOpen&quot; linkSize=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -110,7 +110,6 @@
+             &lt;/TitledBorder&gt;
+           &lt;/Border&gt;
+         &lt;/Property&gt;
+-        &lt;Property name=&quot;enabled&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
+       &lt;/Properties&gt;
+ 
+       &lt;Layout&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-07-21 14:24:15 UTC (rev 237)
+@@ -109,7 +109,7 @@
+      * @param state true/false for activating and deactivating the components.
+      */
+     private void serverOptionsStateChanged(boolean state) {
+-        jpDatabaseSettings.setEnabled(state);
++        //jpDatabaseSettings.setEnabled(state);
+         //Labels
+         jlblDatabase.setEnabled(state);
+         jlblHostname.setEnabled(state);
+@@ -162,7 +162,6 @@
+         setIconImage(null);
+ 
+         jpDatabaseSettings.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.jpDatabaseSettings.border.title&quot;))); // NOI18N
+-        jpDatabaseSettings.setEnabled(false);
+ 
+         jlblHostname.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.jlblHostname.text&quot;)); // NOI18N
+         jlblHostname.setEnabled(false);
+@@ -302,11 +301,11 @@
+                     .addGroup(layout.createSequentialGroup()
+                         .addComponent(jlblName)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jtfName, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE))
++                        .addComponent(jtfName, javax.swing.GroupLayout.DEFAULT_SIZE, 462, Short.MAX_VALUE))
+                     .addGroup(layout.createSequentialGroup()
+                         .addComponent(jchkUserinternalDB)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE))
++                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE))
+                     .addGroup(layout.createSequentialGroup()
+                         .addGap(12, 12, 12)
+                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+@@ -314,11 +313,11 @@
+                             .addGroup(layout.createSequentialGroup()
+                                 .addComponent(jlblDestination)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                                .addComponent(jtfDestination, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
++                                .addComponent(jtfDestination, javax.swing.GroupLayout.DEFAULT_SIZE, 371, Short.MAX_VALUE)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                 .addComponent(jbtnBrowse))))
+                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                        .addComponent(jlbError, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
++                        .addComponent(jlbError, javax.swing.GroupLayout.DEFAULT_SIZE, 328, Short.MAX_VALUE)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                         .addComponent(jbtnOpen)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupChildren.java	2008-07-21 14:24:15 UTC (rev 237)
+@@ -88,8 +88,8 @@
+ 
+     @SuppressWarnings(&quot;unchecked&quot;)
+     public void diskGroupRemoved(CatalogEngineEvent evt) {
+-        if (evt.getNewDiskGroup().getId().equals(parentId)) {
+-            items.remove(evt.getNewDiskGroup());
++        if (evt.getOldDiskGroup().getId().equals(parentId)) {
++            items.remove(evt.getOldDiskGroup());
+             addNotify();
+         }
+     }
+@@ -100,7 +100,7 @@
+ 
+     @SuppressWarnings(&quot;unchecked&quot;)
+     public void diskAdded(CatalogEngineEvent evt) {
+-        if (evt.getNewDisk().getGroup().getId().equals(parentId)) {
++        if (evt.getNewDisk().getGroup() != null &amp;&amp; evt.getNewDisk().getGroup().getId().equals(parentId)) {
+             items.add(evt.getNewDisk());
+             addNotify();
+         }
+@@ -108,8 +108,8 @@
+ 
+     @SuppressWarnings(&quot;unchecked&quot;)
+     public void diskRemoved(CatalogEngineEvent evt) {
+-        if (evt.getNewDisk().getGroup().getId().equals(parentId)) {
+-            items.remove(evt.getNewDisk());
++        if (evt.getOldDisk().getGroup() != null &amp;&amp; evt.getOldDisk().getGroup().getId().equals(parentId)) {
++            items.remove(evt.getOldDisk());
+             addNotify();
+         }
+     }
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-07-21 14:24:15 UTC (rev 237)
+@@ -61,6 +61,7 @@
+                 String tExt;
+                 Reader reader;
+                 Media container = new Media();
++                container.setGroup(group);
+                 container.setName(mediaName);
+                 container.setType(ReadingUtils.findFileType(file.getAbsolutePath()));
+ 
+@@ -108,7 +109,7 @@
+                                         listing[z].lastModified(), container, fw,
+                                         (sha ? ReadingUtils.calculateSHA1HashString(listing[z]) : &quot;&quot;),
+                                         (tExt = ReadingUtils.findExtension(listing[z].getName())), //TODO: same for other attributes
+-                                        (reader = cache.readerFor(tExt)) != null ? reader.read(listing[z]).getDescription() : &quot;&quot;);
++                                        (reader = cache.readerFor(tExt)) != null ? (reader.isActive() ? reader.read(listing[z]).getDescription() : &quot;&quot;) : &quot;&quot;);
+                                 files.add(temp);
+                                 fw.addChild(temp);
+                             }
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java	2008-07-20 01:39:42 UTC (rev 236)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java	2008-07-21 14:24:15 UTC (rev 237)
+@@ -57,7 +57,9 @@
+         AbstractChecksum checksum = null;
+         try {
+             checksum = JacksumAPI.getChecksumInstance(&quot;sha-1&quot;);
+-            return &quot;&quot; + checksum.readFile(file.getAbsolutePath());
++            checksum.reset();
++            checksum.readFile(file.getAbsolutePath());
++            return &quot;&quot; + checksum;
+         } catch (IOException ex) {
+             return &quot;&quot;;
+         } catch (NoSuchAlgorithmException ex) {
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000231.html">[Jfindmyfiles-commits] r236 - trunk/docs
+</A></li>
+	<LI>Next message: <A HREF="000233.html">[Jfindmyfiles-commits] r238 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#232">[ date ]</a>
+              <a href="thread.html#232">[ thread ]</a>
+              <a href="subject.html#232">[ subject ]</a>
+              <a href="author.html#232">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

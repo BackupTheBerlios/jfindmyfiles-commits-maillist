@@ -1,0 +1,900 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r135 - in trunk: libs project/JFindMyFiles	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JaCKSum project/JFindMyFiles/JaCKSum/nbproject	project/JFindMyFiles/JaCKSum/src	project/JFindMyFiles/JaCKSum/src/jonelo	project/JFindMyFiles/JaCKSum/src/jonelo/jacksum	project/JFindMyFiles/ReadingFiles	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src	project/JFindMyFiles/ReadingFiles/src/META-INF	project/JFindMyFiles/ReadingFiles/src/META-INF/services	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/nbproject
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r135%20-%20in%20trunk%3A%20libs%20project/JFindMyFiles%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09project/JFindMyFiles/JaCKSum%20project/JFindMyFiles/JaCKSum/nbproject%0A%09project/JFindMyFiles/JaCKSum/src%0A%09project/JFindMyFiles/JaCKSum/src/jonelo%0A%09project/JFindMyFiles/JaCKSum/src/jonelo/jacksum%0A%09project/JFindMyFiles/ReadingFiles%0A%09project/JFindMyFiles/ReadingFiles/nbproject%0A%09project/JFindMyFiles/ReadingFiles/src%0A%09project/JFindMyFiles/ReadingFiles/src/META-INF%0A%09project/JFindMyFiles/ReadingFiles/src/META-INF/services%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09project/JFindMyFiles/nbproject&In-Reply-To=%3C200806071937.m57JbOw4016319%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000129.html">
+   <LINK REL="Next"  HREF="000131.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r135 - in trunk: libs project/JFindMyFiles	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JaCKSum project/JFindMyFiles/JaCKSum/nbproject	project/JFindMyFiles/JaCKSum/src	project/JFindMyFiles/JaCKSum/src/jonelo	project/JFindMyFiles/JaCKSum/src/jonelo/jacksum	project/JFindMyFiles/ReadingFiles	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src	project/JFindMyFiles/ReadingFiles/src/META-INF	project/JFindMyFiles/ReadingFiles/src/META-INF/services	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/nbproject</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r135%20-%20in%20trunk%3A%20libs%20project/JFindMyFiles%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09project/JFindMyFiles/JaCKSum%20project/JFindMyFiles/JaCKSum/nbproject%0A%09project/JFindMyFiles/JaCKSum/src%0A%09project/JFindMyFiles/JaCKSum/src/jonelo%0A%09project/JFindMyFiles/JaCKSum/src/jonelo/jacksum%0A%09project/JFindMyFiles/ReadingFiles%0A%09project/JFindMyFiles/ReadingFiles/nbproject%0A%09project/JFindMyFiles/ReadingFiles/src%0A%09project/JFindMyFiles/ReadingFiles/src/META-INF%0A%09project/JFindMyFiles/ReadingFiles/src/META-INF/services%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09project/JFindMyFiles/nbproject&In-Reply-To=%3C200806071937.m57JbOw4016319%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r135 - in trunk: libs project/JFindMyFiles	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JaCKSum project/JFindMyFiles/JaCKSum/nbproject	project/JFindMyFiles/JaCKSum/src	project/JFindMyFiles/JaCKSum/src/jonelo	project/JFindMyFiles/JaCKSum/src/jonelo/jacksum	project/JFindMyFiles/ReadingFiles	project/JFindMyFiles/ReadingFiles/nbproject	project/JFindMyFiles/ReadingFiles/src	project/JFindMyFiles/ReadingFiles/src/META-INF	project/JFindMyFiles/ReadingFiles/src/META-INF/services	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	project/JFindMyFiles/nbproject">knitter at mail.berlios.de
+       </A><BR>
+    <I>Sat Jun  7 21:37:24 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000129.html">[Jfindmyfiles-commits] r134 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. dialogs nodes
+</A></li>
+        <LI>Next message: <A HREF="000131.html">[Jfindmyfiles-commits] r136 - in	trunk/project/JFindMyFiles/JaCKSum: . nbproject release	release/modules release/modules/ext
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#130">[ date ]</a>
+              <a href="thread.html#130">[ thread ]</a>
+              <a href="subject.html#130">[ subject ]</a>
+              <a href="author.html#130">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-07 21:37:03 +0200 (Sat, 07 Jun 2008)
+New Revision: 135
+
+Added:
+   trunk/libs/jacksum.jar
+   trunk/project/JFindMyFiles/JaCKSum/
+   trunk/project/JFindMyFiles/JaCKSum/build.xml
+   trunk/project/JFindMyFiles/JaCKSum/manifest.mf
+   trunk/project/JFindMyFiles/JaCKSum/nbproject/
+   trunk/project/JFindMyFiles/JaCKSum/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/JaCKSum/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/JaCKSum/nbproject/project.properties
+   trunk/project/JFindMyFiles/JaCKSum/nbproject/project.xml
+   trunk/project/JFindMyFiles/JaCKSum/nbproject/suite.properties
+   trunk/project/JFindMyFiles/JaCKSum/src/
+   trunk/project/JFindMyFiles/JaCKSum/src/jonelo/
+   trunk/project/JFindMyFiles/JaCKSum/src/jonelo/jacksum/
+   trunk/project/JFindMyFiles/JaCKSum/src/jonelo/jacksum/Bundle.properties
+   trunk/project/JFindMyFiles/ReadingFiles/src/META-INF/
+   trunk/project/JFindMyFiles/ReadingFiles/src/META-INF/services/
+   trunk/project/JFindMyFiles/ReadingFiles/src/META-INF/services/de.berlios.jfindmyfiles.readingfiles.MediaReader
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+   trunk/project/JFindMyFiles/ReadingFiles/build.xml
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+   trunk/project/JFindMyFiles/nbproject/project.properties
+Log:
+Adicionados novo projecto para permitir separar a API de leitura de ficheiros.
+
+Added: trunk/libs/jacksum.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/libs/jacksum.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-07 19:37:03 UTC (rev 135)
+@@ -77,7 +77,7 @@
+                     break;
+                 case <A HREF="POSTGRESQL://TODO:">POSTGRESQL://TODO:</A> change for POSTGRESQL database engine
+ 
+-                    hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;o&quot;);
++                    hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;&quot;);
+                     hConfig.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;&quot;);
+                     hConfig.setProperty(&quot;hibernate.connection.url&quot;, &quot;&quot;);
+                     hConfig.setProperty(&quot;hibernate.connection.username&quot;, &quot;&quot;);
+@@ -262,63 +262,7 @@
+     }
+ 
+     public void readDisk(File file, DiskGroup group, boolean isMedia) {
+-        /*Stack&lt;File&gt; directories = new Stack&lt;File&gt;();
+-        File current, listing[];
+-        long totalSize = 0L, childSize = 0L;
+-        FileWrapper fw, child;
+-        int z;
+-        /*Media container = null;
+-        
+-        if(isMedia) {
+-        container = new Media();            
+-        }*/
+-
+-        /*if (file.isDirectory()) {//NOTE: this protections may be dropped
+-        fw = new FileWrapper(file.getName(),
+-        file.getAbsolutePath(), 0, file.isFile(), file.isHidden(),
+-        file.lastModified(), container, null);
+-        
+-        if ((listing = file.listFiles()) != null) {
+-        for (z = listing.length; z-- &gt; 0;) {
+-        if (listing[z].isDirectory()) {
+-        directories.push(listing[z]);
+-        } else {
+-        totalSize += listing[z].length();
+-        fw.addChild(new FileWrapper(listing[z].getName(),
+-        listing[z].getAbsolutePath(),
+-        listing[z].length(), listing[z].isFile(),
+-        listing[z].isHidden(),
+-        listing[z].lastModified(), container, fw));
+-        }
+-        }
+-        }
+-        
+-        while (!directories.empty()) {
+-        current = directories.pop();
+-        childSize = 0;
+-        child = new FileWrapper(current.getName(),
+-        current.getAbsolutePath(), 0, current.isFile(),
+-        current.isHidden(), current.lastModified(),
+-        container, null);
+-        
+-        if ((listing = current.listFiles()) != null) {
+-        for (z = listing.length; z-- &gt; 0;) {
+-        if (listing[z].isDirectory()) {
+-        directories.push(listing[z]);
+-        } else {
+-        childSize += listing[z].length();
+-        child.addChild(new FileWrapper(listing[z].getName(),
+-        listing[z].getAbsolutePath(),
+-        listing[z].length(), listing[z].isFile(),
+-        listing[z].isHidden(),
+-        listing[z].lastModified(), container, fw));
+-        }
+-        }
+-        }
+-        child.setSize(childSize);
+-        }
+-        fw.setSize(totalSize);
+-        }*/
++        //TODO: remove this method
+     }
+ 
+     public void exportCatalog() {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-07 19:37:03 UTC (rev 135)
+@@ -17,6 +17,7 @@
+  #  along with JFindMyFiles.  If not, see 
+  # &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  ##
++NewDiskDlg.toogle.text=Select a folder to scan
+ NewDiskDlg.jchkShowAgain.text=Show this dialog again
+ NewDiskDlg.jchkAskDescription.text=Ask for disk description in the end
+ NewDiskDlg.jchkCalculateCRC.text=Calculate SHA-1 for files
+@@ -26,6 +27,16 @@
+ NewDiskDlg.jbtnHelp.text=Help
+ NewDiskDlg.jbtnCancel.text=Cancel
+ NewDiskDlg.jbtnScan.text=Scan
++NewCatalogDlg.invalidport=* - Porto inv\u00E1lido
++NewCatalogDlg.invalidusername=* - Username inv\u00E1lido
++NewCatalogDlg.invalidurl=* - URL inv\u00E1lido
++NewCatalogDlg.invaliddestination=* - Destino n\u00E3o pode ser vazio
++NewCatalogDlg.empyname=* - Nome n\u00E3o pode ser vazio
++OpenCatalogDlg.invalidport=* - Porto inv\u00E1lido
++OpenCatalogDlg.invalidusername=* - Username inv\u00E1lido
++OpenCatalogDlg.invalidurl=* - URL inv\u00E1lido
++OpenCatalogDlg.invaliddestination=* - Destino n\u00E3o pode ser vazio
++OpenCatalogDlg.empyname=* - Nome n\u00E3o pode ser vazio
+ NewCatalogDlg.jbtnHelp.text=Help
+ NewCatalogDlg.jbtnCancel.text=Cancel
+ NewCatalogDlg.jbtnCreate.text=Create
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-06-07 19:37:03 UTC (rev 135)
+@@ -48,7 +48,7 @@
+ 
+     private boolean validateWihtMessages() {
+         if (jtfName.getText().isEmpty()) {
+-            jlbError.setText(&quot;* - Nome n&#227;o pode ser vazio&quot;); //TODO: i18n
++            jlbError.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.empyname&quot;)); //TODO: i18n
+ 
+             jlbError.setVisible(true);
+             this.validate();
+@@ -56,7 +56,7 @@
+         }
+         if (jchkUserinternalDB.isSelected()) {
+             if (jtfDestination.getText().isEmpty()) {
+-                jlbError.setText(&quot;* - Destino n&#227;o pode ser vazio&quot;); //TODO: i18n
++                jlbError.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invaliddestination&quot;)); //TODO: i18n
+ 
+                 jlbError.setVisible(true);
+                 this.validate();
+@@ -64,19 +64,19 @@
+             }
+         } else {
+             if (jtfHostname.getText().isEmpty()) {
+-                jlbError.setText(&quot;* - URL inv&#225;lido&quot;); //TODO: i18n
++                jlbError.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invalidurl&quot;)); //TODO: i18n
+ 
+                 jlbError.setVisible(true);
+                 this.validate();
+                 return false;
+             } else if (jtfUsername.getText().isEmpty()) {
+-                jlbError.setText(&quot;* - Username inv&#225;lido&quot;); //TODO: i18n
++                jlbError.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invalidusername&quot;)); //TODO: i18n
+ 
+                 jlbError.setVisible(true);
+                 this.validate();
+                 return false;
+             } else if (jffPort.getText().isEmpty()) {
+-                jlbError.setText(&quot;* - Porto inv&#225;lido&quot;); //TODO: i18n
++                jlbError.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invalidport&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+                 this.validate();
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-07 19:37:03 UTC (rev 135)
+@@ -96,7 +96,7 @@
+ 
+             public void actionPerformed(ActionEvent e) {
+                 JFileChooser jfc = new JFileChooser(new File(System.getProperty(&quot;user.home&quot;)));
+-                jfc.setDialogTitle(&quot;Select a folder to scan&quot;);//TODO: i18n
++                jfc.setDialogTitle(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.toogle.text&quot;)); // NOI18N
+ 
+                 jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                 jfc.setMultiSelectionEnabled(false);
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-06-07 19:37:03 UTC (rev 135)
+@@ -46,8 +46,8 @@
+     private String findCatalogName(File folder) {
+         File[] list = folder.listFiles();
+         for (File f : list) {
+-            if (f.getName().contains(&quot;.properties&quot;)) {
+-                return f.getName().substring(0, f.getName().lastIndexOf(&quot;.&quot;));
++            if (f.getName().contains(&quot;.properties&quot;)) {// NOI18N
++                return f.getName().substring(0, f.getName().lastIndexOf(&quot;.&quot;));// NOI18N
+             }
+         }
+         return &quot;&quot;;
+@@ -55,7 +55,7 @@
+ 
+     private boolean validateWihtMessages() {
+         if (!jchkUserinternalDB.isSelected() &amp;&amp; jtfName.getText().isEmpty()) {
+-            jlbError.setText(&quot;* - Nome n&#227;o pode ser vazio&quot;); //TODO: i18n
++            jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.empyname&quot;)); // NOI18N
+ 
+             jlbError.setVisible(true);
+             this.validate();
+@@ -64,7 +64,7 @@
+ 
+         if (jchkUserinternalDB.isSelected()) {
+             if (jtfDestination.getText().isEmpty()) {
+-                jlbError.setText(&quot;* - Destino n&#227;o pode ser vazio&quot;); //TODO: i18n
++                jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invaliddestination&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+                 this.validate();
+@@ -72,19 +72,19 @@
+             }
+         } else {
+             if (jtfHostname.getText().isEmpty()) {
+-                jlbError.setText(&quot;* - URL inv&#225;lido&quot;); //TODO: i18n
++                jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invalidurl&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+                 this.validate();
+                 return false;
+             } else if (jtfUsername.getText().isEmpty()) {
+-                jlbError.setText(&quot;* - Username inv&#225;lido&quot;); //TODO: i18n
++                jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invalidusername&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+                 this.validate();
+                 return false;
+             } else if (jffPort.getText().isEmpty()) {
+-                jlbError.setText(&quot;* - Porto inv&#225;lido&quot;); //TODO: i18n
++                jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invalidport&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+                 this.validate();
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-06-07 19:37:03 UTC (rev 135)
+@@ -22,23 +22,16 @@
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionAddNewDisk;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionAddNewDiskGroup;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionCatalogProperties;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionClose;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionExport;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionImport;
+-import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionProperties;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionRenumberDisks;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionScanForDuplicates;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionSearchForItems;
+ import java.awt.Image;
+-import java.awt.event.ActionEvent;
+-import java.util.Arrays;
+-import java.util.Collections;
+-import java.util.List;
+ import org.openide.nodes.AbstractNode;
+-import org.openide.nodes.ChildFactory;
+ import org.openide.nodes.Children;
+-import org.openide.nodes.Node;
+-import org.openide.util.HelpCtx;
+ import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
+ import org.openide.util.actions.SystemAction;
+@@ -61,7 +54,7 @@
+         setName(eng.getProperties().getName());
+         
+         Lookup lo = Lookups.forPath(&quot;/Actions&quot;);//TODO: sort actions correctly and add separators
+-        sysact = new SystemAction[]{lo.lookup(ActionProperties.class),
++        sysact = new SystemAction[]{lo.lookup(ActionCatalogProperties.class),
+                     lo.lookup(ActionRenumberDisks.class), lo.lookup(ActionScanForDuplicates.class),
+                     lo.lookup(ActionSearchForItems.class), lo.lookup(ActionAddNewDisk.class), 
+                     lo.lookup(ActionAddNewDiskGroup.class), lo.lookup(ActionClose.class), 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-06-07 19:37:03 UTC (rev 135)
+@@ -17,10 +17,15 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionAddNewDisk;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionAddNewDiskGroup;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionProperties;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionRenumberDisks;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionScanForDuplicates;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionSearchForItems;
+ import java.awt.Image;
+ import org.openide.nodes.AbstractNode;
+ import org.openide.nodes.Children;
+@@ -34,24 +39,32 @@
+  * @author knitter
+  */
+ public class DiskGroupNode extends AbstractNode {
+-    
++
++    private SystemAction[] sysact;
++
+     public DiskGroupNode(DiskGroup group, boolean leaf) {
+         super((leaf ? Children.LEAF : new DiskGroupChildren(group.getId())));
+         setName(group.getName());
++
++        Lookup lo = Lookups.forPath(&quot;/Actions&quot;);//TODO: sort actions correctly and add separators
++        sysact = new SystemAction[]{lo.lookup(ActionProperties.class), lo.lookup(ActionRenumberDisks.class),
++                    lo.lookup(ActionScanForDuplicates.class), lo.lookup(ActionSearchForItems.class), 
++                    lo.lookup(ActionAddNewDisk.class), lo.lookup(ActionAddNewDiskGroup.class)
++                };
+     }
+-    
++
+     @Override
+     public Image getIcon(int type) {
+         return Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-disk-group.png&quot;); // NOI18N
+     }
+-    
++
+     @Override
+     public Image getOpenedIcon(int type) {
+         return getIcon(type);
+     }
+-    
++
+     @Override
+     public SystemAction[] getActions(boolean bool) {
+         return new SystemAction[]{};
+-    }    
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-06-07 19:37:03 UTC (rev 135)
+@@ -17,41 +17,47 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.actions.ActionSearchForItems;
+ import java.awt.Image;
+ import org.openide.nodes.AbstractNode;
+ import org.openide.nodes.Children;
++import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
+ import org.openide.util.actions.SystemAction;
++import org.openide.util.lookup.Lookups;
+ 
+ /**
+  *
+  * @author knitter
+  */
+ public class DiskNode extends AbstractNode {
+-    
++
++    private SystemAction[] sysact;
++
+     public DiskNode(Media media) {
+         super(Children.LEAF);
+         setName(media.getName());
++
++        Lookup lo = Lookups.forPath(&quot;/Actions&quot;);//TODO: sort actions correctly and add separators
++        sysact = new SystemAction[]{lo.lookup(ActionSearchForItems.class)};
+     }
+-    
++
+     @Override
+     public Image getIcon(int type) {
+         //TODO: depending on the  type of media give the right icon
+         return Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-media-drive-optical.png&quot;); // NOI18N
+     }
+-    
++
+     @Override
+     public Image getOpenedIcon(int type) {
+         return getIcon(type);
+     }
+-    
++
+     @Override
+     public SystemAction[] getActions(boolean bool) {
+         return new SystemAction[]{};
+-    }    
+-
++    }
+ }
+
+Added: trunk/project/JFindMyFiles/JaCKSum/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JaCKSum/build.xml	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JaCKSum/build.xml	2008-06-07 19:37:03 UTC (rev 135)
+@@ -0,0 +1,8 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;jonelo.jacksum&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project jonelo.jacksum.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/JaCKSum/manifest.mf
+===================================================================
+--- trunk/project/JFindMyFiles/JaCKSum/manifest.mf	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JaCKSum/manifest.mf	2008-06-07 19:37:03 UTC (rev 135)
+@@ -0,0 +1,5 @@
++Manifest-Version: 1.0
++OpenIDE-Module: jonelo.jacksum
++OpenIDE-Module-Localizing-Bundle: jonelo/jacksum/Bundle.properties
++OpenIDE-Module-Specification-Version: 1.0
++
+
+Added: trunk/project/JFindMyFiles/JaCKSum/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JaCKSum/nbproject/build-impl.xml	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JaCKSum/nbproject/build-impl.xml	2008-06-07 19:37:03 UTC (rev 135)
+@@ -0,0 +1,30 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;jonelo.jacksum-impl&quot; basedir=&quot;..&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; name=&quot;property&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property value=&quot;${@{value}}&quot; name=&quot;@{name}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; name=&quot;harness.dir&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; name=&quot;netbeans.dest.dir&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available type=&quot;dir&quot; file=&quot;${harness.dir}&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/JaCKSum/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JaCKSum/nbproject/genfiles.properties	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JaCKSum/nbproject/genfiles.properties	2008-06-07 19:37:03 UTC (rev 135)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=c7f2a9f7
++build.xml.script.CRC32=04adcf2a
++build.xml.stylesheet.CRC32=79c3b980
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=c7f2a9f7
++nbproject/build-impl.xml.script.CRC32=8ed09acb
++nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Added: trunk/project/JFindMyFiles/JaCKSum/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JaCKSum/nbproject/project.properties	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JaCKSum/nbproject/project.properties	2008-06-07 19:37:03 UTC (rev 135)
+@@ -0,0 +1 @@
++is.autoload=true
+
+Added: trunk/project/JFindMyFiles/JaCKSum/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JaCKSum/nbproject/project.xml	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JaCKSum/nbproject/project.xml	2008-06-07 19:37:03 UTC (rev 135)
+@@ -0,0 +1,32 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
++            &lt;code-name-base&gt;jonelo.jacksum&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies/&gt;
++            &lt;public-packages&gt;
++                &lt;package&gt;jonelo.jacksum&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.adapt.com.bitzi.util&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.adapt.gnu.crypto&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.adapt.gnu.crypto.hash&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.adapt.gnu.crypto.util&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.adapt.org.bouncycastle.crypto&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.adapt.org.bouncycastle.crypto.digests&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.adapt.org.bouncycastle.crypto.engines&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.adapt.org.bouncycastle.crypto.params&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.adapt.org.bouncycastle.util&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.algorithm&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.cli&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.ui&lt;/package&gt;
++                &lt;package&gt;jonelo.jacksum.util&lt;/package&gt;
++                &lt;package&gt;jonelo.sugar.util&lt;/package&gt;
++            &lt;/public-packages&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/jacksum.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/jacksum.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/JaCKSum/nbproject/suite.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JaCKSum/nbproject/suite.properties	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JaCKSum/nbproject/suite.properties	2008-06-07 19:37:03 UTC (rev 135)
+@@ -0,0 +1 @@
++suite.dir=${basedir}/..
+
+Added: trunk/project/JFindMyFiles/JaCKSum/src/jonelo/jacksum/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JaCKSum/src/jonelo/jacksum/Bundle.properties	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/JaCKSum/src/jonelo/jacksum/Bundle.properties	2008-06-07 19:37:03 UTC (rev 135)
+@@ -0,0 +1 @@
++OpenIDE-Module-Name=JaCKSum
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/build.xml	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/ReadingFiles/build.xml	2008-06-07 19:37:03 UTC (rev 135)
+@@ -1,8 +1,8 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
+-&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
+-&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
+-&lt;project name=&quot;de.berlios.jfindmyfiles.readingfiles&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
+-    &lt;description&gt;Builds, tests, and runs the project de.berlios.jfindmyfiles.readingfiles.&lt;/description&gt;
+-    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
+-&lt;/project&gt;
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.readingfiles&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project de.berlios.jfindmyfiles.readingfiles.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++&lt;/project&gt;
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml	2008-06-07 19:37:03 UTC (rev 135)
+@@ -1,30 +1,30 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;!--
+-*** GENERATED FROM project.xml - DO NOT EDIT  ***
+-***         EDIT ../build.xml INSTEAD         ***
+---&gt;
+-&lt;project name=&quot;de.berlios.jfindmyfiles.readingfiles-impl&quot; basedir=&quot;..&quot;&gt;
+-    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
+-    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
+-    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
+-    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
+-    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
+-    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
+-        &lt;attribute name=&quot;name&quot;/&gt;
+-        &lt;attribute name=&quot;value&quot;/&gt;
+-        &lt;sequential&gt;
+-            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
+-        &lt;/sequential&gt;
+-    &lt;/macrodef&gt;
+-    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
+-    &lt;nbmproject2:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
+-    &lt;nbmproject2:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
+-    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
+-        &lt;condition&gt;
+-            &lt;not&gt;
+-                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
+-            &lt;/not&gt;
+-        &lt;/condition&gt;
+-    &lt;/fail&gt;
+-    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
+-&lt;/project&gt;
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.readingfiles-impl&quot; basedir=&quot;..&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; name=&quot;property&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property value=&quot;${@{value}}&quot; name=&quot;@{name}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; name=&quot;harness.dir&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; name=&quot;netbeans.dest.dir&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available type=&quot;dir&quot; file=&quot;${harness.dir}&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-06-07 19:37:03 UTC (rev 135)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=9b67a3e5
+-build.xml.script.CRC32=78d85b23
+-build.xml.stylesheet.CRC32=79c3b980
+-# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+-# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=9b67a3e5
+-nbproject/build-impl.xml.script.CRC32=05e89526
+-nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
++build.xml.data.CRC32=e6ceb647
++build.xml.script.CRC32=78d85b23
++build.xml.stylesheet.CRC32=79c3b980
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=e6ceb647
++nbproject/build-impl.xml.script.CRC32=a04a2658
++nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-06-07 19:37:03 UTC (rev 135)
+@@ -1,21 +1,29 @@
+-&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+-&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
+-    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
+-    &lt;configuration&gt;
+-        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
+-            &lt;code-name-base&gt;de.berlios.jfindmyfiles.readingfiles&lt;/code-name-base&gt;
+-            &lt;suite-component/&gt;
+-            &lt;module-dependencies&gt;
+-                &lt;dependency&gt;
+-                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
+-                    &lt;build-prerequisite/&gt;
+-                    &lt;compile-dependency/&gt;
+-                    &lt;run-dependency&gt;
+-                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
+-                    &lt;/run-dependency&gt;
+-                &lt;/dependency&gt;
+-            &lt;/module-dependencies&gt;
+-            &lt;public-packages/&gt;
+-        &lt;/data&gt;
+-    &lt;/configuration&gt;
+-&lt;/project&gt;
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
++            &lt;code-name-base&gt;de.berlios.jfindmyfiles.readingfiles&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;jonelo.jacksum&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++            &lt;/module-dependencies&gt;
++            &lt;public-packages/&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/META-INF/services/de.berlios.jfindmyfiles.readingfiles.MediaReader
+===================================================================
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-06-07 19:37:03 UTC (rev 135)
+@@ -0,0 +1,75 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.readingfiles;
++
++import java.io.File;
++
++/**
++ *
++ * @author Knitter
++ */
++public class MediaReader {
++    
++    public void read(File source, boolean sha) {
++        
++    }
++    /*Stack&lt;File&gt; directories = new Stack&lt;File&gt;();
++    File current, listing[];
++    long totalSize = 0L, childSize = 0L;
++    FileWrapper fw, child;
++    int z;
++    /*Media container = null;
++    
++    if(isMedia) {
++    container = new Media();            
++    }*/
++
++    /*if (file.isDirectory()) {//NOTE: this protections may be dropped
++    fw = new FileWrapper(file.getName(),
++    file.getAbsolutePath(), 0, file.isFile(), file.isHidden(),
++    file.lastModified(), container, null);
++    
++    if ((listing = file.listFiles()) != null) {
++    for (z = listing.length; z-- &gt; 0;) {
++    if (listing[z].isDirectory()) {
++    directories.push(listing[z]);
++    } else {
++    totalSize += listing[z].length();
++    fw.addChild(new FileWrapper(listing[z].getName(),
++    listing[z].getAbsolutePath(),
++    listing[z].length(), listing[z].isFile(),
++    listing[z].isHidden(),
++    listing[z].lastModified(), container, fw));
++    }
++    }
++    }
++    
++    while (!directories.empty()) {
++    current = directories.pop();
++    childSize = 0;
++    child = new FileWrapper(current.getName(),
++    current.getAbsolutePath(), 0, current.isFile(),
++    current.isHidden(), current.lastModified(),
++    container, null);
++    
++    if ((listing = current.listFiles()) != null) {
++    for (z = listing.length; z-- &gt; 0;) {
++    if (listing[z].isDirectory()) {
++    directories.push(listing[z]);
++    } else {
++    childSize += listing[z].length();
++    child.addChild(new FileWrapper(listing[z].getName(),
++    listing[z].getAbsolutePath(),
++    listing[z].length(), listing[z].isFile(),
++    listing[z].isHidden(),
++    listing[z].lastModified(), container, fw));
++    }
++    }
++    }
++    child.setSize(childSize);
++    }
++    fw.setSize(totalSize);
++    }*/
++}
+
+Modified: trunk/project/JFindMyFiles/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/project.properties	2008-06-06 17:32:15 UTC (rev 134)
++++ trunk/project/JFindMyFiles/nbproject/project.properties	2008-06-07 19:37:03 UTC (rev 135)
+@@ -11,7 +11,8 @@
+     ${project.de.berlios.jfindmyfiles.jdbcdrivers}:\
+     ${project.de.berlios.jfindmyfiles.hsqldb}:\
+     ${project.com.toedter.plaf}:\
+-    ${project.de.berlios.jfindmyfiles.importengine}
++    ${project.de.berlios.jfindmyfiles.importengine}:\
++    ${project.jonelo.jacksum}
+ project.com.toedter.plaf=JCalendar
+ project.de.berlios.jfindmyfiles.catalog=Catalog
+ project.de.berlios.jfindmyfiles.exportengine=ExportEngine
+@@ -21,3 +22,4 @@
+ project.de.berlios.jfindmyfiles.jfindmyfilesgui=JFindMyFilesGui
+ project.de.berlios.jfindmyfiles.persistence=Persistence
+ project.de.berlios.jfindmyfiles.readingfiles=ReadingFiles
++project.jonelo.jacksum=JaCKSum
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000129.html">[Jfindmyfiles-commits] r134 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. dialogs nodes
+</A></li>
+	<LI>Next message: <A HREF="000131.html">[Jfindmyfiles-commits] r136 - in	trunk/project/JFindMyFiles/JaCKSum: . nbproject release	release/modules release/modules/ext
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#130">[ date ]</a>
+              <a href="thread.html#130">[ thread ]</a>
+              <a href="subject.html#130">[ subject ]</a>
+              <a href="author.html#130">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r272 -	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-October/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r272%20-%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog&In-Reply-To=%3C200810251315.m9PDFTUV019136%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r272 -	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r272%20-%0A%09trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog&In-Reply-To=%3C200810251315.m9PDFTUV019136%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r272 -	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog">knitter at mail.berlios.de
+       </A><BR>
+    <I>Sat Oct 25 15:15:29 CEST 2008</I>
+    <P><UL>
+        
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#265">[ date ]</a>
+              <a href="thread.html#265">[ thread ]</a>
+              <a href="subject.html#265">[ subject ]</a>
+              <a href="author.html#265">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-10-25 15:15:26 +0200 (Sat, 25 Oct 2008)
+New Revision: 272
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+Log:
+Updated catalog engine, minor change.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-09-17 23:19:06 UTC (rev 271)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-10-25 13:15:26 UTC (rev 272)
+@@ -49,7 +49,6 @@
+      * by the netbeans platform.
+      */
+     public CatalogEngine() {
+-        //DO NOTHING
+         listeners = new CopyOnWriteArrayList&lt;CatalogEngineListener&gt;();
+     }
+ 
+@@ -314,14 +313,14 @@
+     }
+ 
+     //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+-    public void addListener(CatalogEngineListener l) {
++    public synchronized void addListener(CatalogEngineListener l) {
+         if (listeners == null) {
+             listeners = new CopyOnWriteArrayList&lt;CatalogEngineListener&gt;();
+         }
+         listeners.add(l);
+     }
+ 
+-    public void removeListener(CatalogEngineListener l) {
++    public synchronized void removeListener(CatalogEngineListener l) {
+         if (listeners != null) {
+             listeners.remove(l);
+         }
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#265">[ date ]</a>
+              <a href="thread.html#265">[ thread ]</a>
+              <a href="subject.html#265">[ subject ]</a>
+              <a href="author.html#265">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

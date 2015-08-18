@@ -1,0 +1,1118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r143 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r143%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils&In-Reply-To=%3C200806111646.m5BGkVV2019652%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000137.html">
+   <LINK REL="Next"  HREF="000139.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r143 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r143%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils&In-Reply-To=%3C200806111646.m5BGkVV2019652%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r143 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	ExportEngine/src/de/berlios/jfindmyfiles/exportengine	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils">knitter at mail.berlios.de
+       </A><BR>
+    <I>Wed Jun 11 18:46:31 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000137.html">[Jfindmyfiles-commits] r142 - in trunk: docs/Documentos Externos	docs/Documentos Externos/images project/JFindMyFiles/HSQLDB	spikes/Prototipos/src/de/berlios/kcookb/imagens
+</A></li>
+        <LI>Next message: <A HREF="000139.html">[Jfindmyfiles-commits] r144 - in trunk: docs docs/Iteracao4-CB04	docs/Iteracao6-CB07 docs/Iteracao7-CB06 docs/Iteracao8-CB08	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	spikes/Prototipos/src/de/berlios/kcookb/imagens
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#138">[ date ]</a>
+              <a href="thread.html#138">[ thread ]</a>
+              <a href="subject.html#138">[ subject ]</a>
+              <a href="author.html#138">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-11 18:46:15 +0200 (Wed, 11 Jun 2008)
+New Revision: 143
+
+Added:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogConstants.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtils.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java
+Removed:
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/FileUtils.java
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+Log:
+Adicionadas novas classes com utilidades.
+Desenvolvido c?\195?\179digo no sentido de eliminar alguns atrasos nas itera?\195?\167?\195?\181es: Janelas de di?\195?\161logos com as protec?\195?\167?\195?\181es correctas, acesso aos m?\195?\169todos existentes e provenientes das spikes.
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogConstants.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogConstants.java	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogConstants.java	2008-06-11 16:46:15 UTC (rev 143)
+@@ -0,0 +1,24 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.catalog;
++
++/**
++ *
++ * @author Knitter
++ */
++public interface CatalogConstants {
++
++    public static final int HDD = 0;
++    public static final int FLOPPY = 1;
++    public static final int CDROM = 2;
++    public static final int DVDROM = 3;
++    public static final int FOLDER = 4;
++    //
++    public static final int FIREBIRD = 0;
++    public static final int POSTGRESQL = 1;
++    public static final int MSSQL = 2;
++    public static final int MYSQL = 3;
++    public static final int LOCAL = 4;
++}
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-06-11 16:46:15 UTC (rev 143)
+@@ -20,7 +20,6 @@
+ package de.berlios.jfindmyfiles.catalog;
+ 
+ import de.berlios.jfindmyfiles.catalog.entities.*;
+-import java.io.File;
+ import java.util.Date;
+ import java.util.List;
+ import java.util.Vector;
+@@ -31,11 +30,6 @@
+ public class CatalogEngine {
+ 
+     /* Constants for the available dabatabase engines*/
+-    public static final int FIREBIRD = 0;
+-    public static final int POSTGRESQL = 1;
+-    public static final int MSSQL = 2;
+-    public static final int MYSQL = 3;
+-    public static final int LOCAL = 4;
+     public SessionFactory sessionFactory;
+     private CatalogProperties properties;
+     private Vector&lt;CatalogEngineListener&gt; listeners;
+@@ -65,7 +59,7 @@
+             hConfig.setProperty(&quot;hibernate.hbm2ddl.auto&quot;, strategy);
+ 
+             switch (dbType) {
+-                case <A HREF="FIREBIRD://TODO:">FIREBIRD://TODO:</A> change for FIREBIRD database engine
++                case CatalogConstants.<A HREF="FIREBIRD://TODO:">FIREBIRD://TODO:</A> change for FIREBIRD database engine
+ 
+                     hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.HSQLDialect&quot;);
+                     hConfig.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;org.hsqldb.jdbcDriver&quot;);
+@@ -75,7 +69,7 @@
+                     hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;org.hibernate.dialect.HSQLDialect&quot;);
+ 
+                     break;
+-                case <A HREF="POSTGRESQL://TODO:">POSTGRESQL://TODO:</A> change for POSTGRESQL database engine
++                case CatalogConstants.<A HREF="POSTGRESQL://TODO:">POSTGRESQL://TODO:</A> change for POSTGRESQL database engine
+ 
+                     hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;&quot;);
+                     hConfig.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;&quot;);
+@@ -84,7 +78,7 @@
+                     hConfig.setProperty(&quot;hibernate.connection.password&quot;, password);
+ 
+                     break;
+-                case MYSQL:
++                case CatalogConstants.MYSQL:
+                     //TODO: remove this!
+                     username = &quot;jfindmyfilesuser&quot;;
+                     password = &quot;Jf1ndmYf1l3z!&quot;;
+@@ -98,7 +92,7 @@
+                     hConfig.setProperty(&quot;hibernate.connection.username&quot;, username);
+                     hConfig.setProperty(&quot;hibernate.connection.password&quot;, password);
+                     break;
+-                case <A HREF="MSSQL://TODO:">MSSQL://TODO:</A> change for MSSQL database engine
++                case CatalogConstants.<A HREF="MSSQL://TODO:">MSSQL://TODO:</A> change for MSSQL database engine
+ 
+                     hConfig.setProperty(&quot;hibernate.dialect&quot;, &quot;&quot;);
+                     hConfig.setProperty(&quot;hibernate.connection.driver_class&quot;, &quot;&quot;);
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java	2008-06-11 16:46:15 UTC (rev 143)
+@@ -19,8 +19,15 @@
+  */
+ package de.berlios.jfindmyfiles.exportengine;
+ 
++import java.io.File;
++
+ public class XLS extends ExportEngine {
+-
++    
++    private File file;
++    
++    public XLS(File file) {
++        this.file = file;
++    }
+     public void export() {
+         start();
+     }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-11 16:46:15 UTC (rev 143)
+@@ -26,16 +26,18 @@
+ NewDiskDlg.jbtnHelp.text=Help
+ NewDiskDlg.jbtnCancel.text=Cancel
+ NewDiskDlg.jbtnScan.text=Scan
+-NewCatalogDlg.invalidport=* - Porto inv\u00E1lido
+-NewCatalogDlg.invalidusername=* - Username inv\u00E1lido
+-NewCatalogDlg.invalidurl=* - URL inv\u00E1lido
+-NewCatalogDlg.invaliddestination=* - Destino n\u00E3o pode ser vazio
+-NewCatalogDlg.empyname=* - Nome n\u00E3o pode ser vazio
+-OpenCatalogDlg.invalidport=* - Porto inv\u00E1lido
+-OpenCatalogDlg.invalidusername=* - Username inv\u00E1lido
+-OpenCatalogDlg.invalidurl=* - URL inv\u00E1lido
+-OpenCatalogDlg.invaliddestination=* - Destino n\u00E3o pode ser vazio
+-OpenCatalogDlg.empyname=* - Nome n\u00E3o pode ser vazio
++NewCatalogDlg.invalidport=* - Invalid Port
++NewCatalogDlg.invalidusername=* - Invalid Username
++NewCatalogDlg.invalidurl=* - Invalid URL
++NewCatalogDlg.invaliddestination=* - Destination cannot be empty
++NewCatalogDlg.empyname=* - Name  cannot be empty
++NewCatalogDlg.choosedirectory=Choose a directory
++OpenCatalogDlg.invalidport=* - Invalid Port
++OpenCatalogDlg.invalidusername=* - Invalid Username
++OpenCatalogDlg.invalidurl=* - Invalid URL
++OpenCatalogDlg.invaliddestination=* - Destinatio cannot be empty
++OpenCatalogDlg.empyname=* - Nanem cannot be empty
++OpenCatalogDlg.choosedirectory=Choose a directory
+ NewCatalogDlg.jbtnHelp.text=Help
+ NewCatalogDlg.jbtnCancel.text=Cancel
+ NewCatalogDlg.jbtnCreate.text=Create
+@@ -97,8 +99,6 @@
+ CatalogPropertiesDlg.jlblNrFilesValue.text=&lt;insert&gt;
+ CatalogPropertiesDlg.jlblTotalSizeValue.text=&lt;insert&gt;
+ CatalogPropertiesDlg.jlblNrDisksValue.text=&lt;insert&gt;
+-ExportDlg.jLabel1.text=jLabel1
+-ExportDlg.jLabel2.text=jLabel2
+ StatisticsDlg.jButton1.text=Close
+ ImportDlg.jButton1.text=Help
+ ImportDlg.jButton2.text=Cancel
+@@ -128,3 +128,4 @@
+ AskDescriptionDlg.jbtnCancel.text=Cancel
+ AskDescriptionDlg.jbtnOK.text=OK
+ ActiveScanningDlg.jbtnCancel.text=
++ExportDlg.jpbExportProgress.string=exporting...
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-06-11 16:46:15 UTC (rev 143)
+@@ -1,72 +1,6 @@
+ &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+ 
+ &lt;Form version=&quot;1.5&quot; maxVersion=&quot;1.6&quot; type=&quot;org.netbeans.modules.form.forminfo.JDialogFormInfo&quot;&gt;
+-  &lt;NonVisualComponents&gt;
+-    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel2&quot;&gt;
+-
+-      &lt;Layout&gt;
+-        &lt;DimensionLayout dim=&quot;0&quot;&gt;
+-          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;EmptySpace min=&quot;-2&quot; pref=&quot;187&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jLabel2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;EmptySpace pref=&quot;213&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;/Group&gt;
+-          &lt;/Group&gt;
+-        &lt;/DimensionLayout&gt;
+-        &lt;DimensionLayout dim=&quot;1&quot;&gt;
+-          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;EmptySpace min=&quot;-2&quot; pref=&quot;142&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jLabel2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;EmptySpace pref=&quot;280&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;/Group&gt;
+-          &lt;/Group&gt;
+-        &lt;/DimensionLayout&gt;
+-      &lt;/Layout&gt;
+-      &lt;SubComponents&gt;
+-        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel2&quot;&gt;
+-          &lt;Properties&gt;
+-            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jLabel2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+-            &lt;/Property&gt;
+-          &lt;/Properties&gt;
+-        &lt;/Component&gt;
+-      &lt;/SubComponents&gt;
+-    &lt;/Container&gt;
+-    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel1&quot;&gt;
+-
+-      &lt;Layout&gt;
+-        &lt;DimensionLayout dim=&quot;0&quot;&gt;
+-          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;EmptySpace min=&quot;-2&quot; pref=&quot;146&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jLabel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;EmptySpace pref=&quot;254&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;/Group&gt;
+-          &lt;/Group&gt;
+-        &lt;/DimensionLayout&gt;
+-        &lt;DimensionLayout dim=&quot;1&quot;&gt;
+-          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;EmptySpace min=&quot;-2&quot; pref=&quot;170&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jLabel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;EmptySpace pref=&quot;252&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;/Group&gt;
+-          &lt;/Group&gt;
+-        &lt;/DimensionLayout&gt;
+-      &lt;/Layout&gt;
+-      &lt;SubComponents&gt;
+-        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel1&quot;&gt;
+-          &lt;Properties&gt;
+-            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jLabel1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+-            &lt;/Property&gt;
+-          &lt;/Properties&gt;
+-        &lt;/Component&gt;
+-      &lt;/SubComponents&gt;
+-    &lt;/Container&gt;
+-  &lt;/NonVisualComponents&gt;
+   &lt;Properties&gt;
+     &lt;Property name=&quot;defaultCloseOperation&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
+   &lt;/Properties&gt;
+@@ -121,7 +55,7 @@
+                   &lt;Component id=&quot;jbtnCancel&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Component id=&quot;jbtnExport&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+-              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+@@ -211,7 +145,7 @@
+           &lt;Layout&gt;
+             &lt;DimensionLayout dim=&quot;0&quot;&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jlblDestination&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -292,6 +226,45 @@
+             &lt;/DimensionLayout&gt;
+           &lt;/Layout&gt;
+         &lt;/Container&gt;
++        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jpProgressBar&quot;&gt;
++          &lt;Constraints&gt;
++            &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription&quot;&gt;
++              &lt;CardConstraints cardName=&quot;card4&quot;/&gt;
++            &lt;/Constraint&gt;
++          &lt;/Constraints&gt;
++
++          &lt;Layout&gt;
++            &lt;DimensionLayout dim=&quot;0&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;46&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jpbExportProgress&quot; min=&quot;-2&quot; pref=&quot;282&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;49&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++            &lt;DimensionLayout dim=&quot;1&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;153&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jpbExportProgress&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;158&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++          &lt;/Layout&gt;
++          &lt;SubComponents&gt;
++            &lt;Component class=&quot;javax.swing.JProgressBar&quot; name=&quot;jpbExportProgress&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;indeterminate&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
++                &lt;Property name=&quot;string&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++                  &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jpbExportProgress.string&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++                &lt;/Property&gt;
++                &lt;Property name=&quot;stringPainted&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++          &lt;/SubComponents&gt;
++        &lt;/Container&gt;
+       &lt;/SubComponents&gt;
+     &lt;/Container&gt;
+     &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnCancel&quot;&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-06-11 16:46:15 UTC (rev 143)
+@@ -21,13 +21,15 @@
+ 
+ import de.berlios.jfindmyfiles.exportengine.CSV;
+ import de.berlios.jfindmyfiles.exportengine.ExportListener;
++import de.berlios.jfindmyfiles.exportengine.HTML;
++import de.berlios.jfindmyfiles.exportengine.ODS;
+ import de.berlios.jfindmyfiles.exportengine.SQL;
++import de.berlios.jfindmyfiles.exportengine.XLS;
+ import de.berlios.jfindmyfiles.exportengine.XML;
+ import java.awt.BorderLayout;
+ import java.awt.CardLayout;
+ import java.awt.Component;
+ import java.io.File;
+-import java.io.IOException;
+ import javax.swing.ImageIcon;
+ import javax.swing.JFileChooser;
+ import javax.swing.JLabel;
+@@ -50,17 +52,12 @@
+     private static final int EXPORT_SQL = 5;*/
+     private Integer[] values = new Integer[]{0, 1, 2, 3, 4, 5};
+     private File selectedFile;
++    private int visiblePanel = 0,  previousPanel = 0;
+ 
+     /** Creates new form ExportDlg */
+     public ExportDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+         initComponents();
+-
+-        //TODO:
+-        jPanel1.setVisible(true);
+-        jPanel2.setVisible(false);
+-        this.add(jPanel2, BorderLayout.CENTER);
+-        this.add(jPanel1, BorderLayout.CENTER);
+     }
+ 
+     public void showCentered() {
+@@ -78,10 +75,6 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
+-        jPanel2 = new javax.swing.JPanel();
+-        jLabel2 = new javax.swing.JLabel();
+-        jPanel1 = new javax.swing.JPanel();
+-        jLabel1 = new javax.swing.JLabel();
+         jpExportType = new javax.swing.JPanel();
+         jScrollPane1 = new javax.swing.JScrollPane();
+         jlstExportTypes = new JList(values);
+@@ -91,48 +84,12 @@
+         jtfDestination = new javax.swing.JTextField();
+         jbtnBrowse = new javax.swing.JButton();
+         jpTemplateExport = new javax.swing.JPanel();
++        jpProgressBar = new javax.swing.JPanel();
++        jpbExportProgress = new javax.swing.JProgressBar();
+         jbtnCancel = new javax.swing.JButton();
+         jbtnExport = new javax.swing.JButton();
+         jbtnHelp = new javax.swing.JButton();
+ 
+-        jLabel2.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jLabel2.text&quot;)); // NOI18N
+-
+-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+-        jPanel2.setLayout(jPanel2Layout);
+-        jPanel2Layout.setHorizontalGroup(
+-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel2Layout.createSequentialGroup()
+-                .addGap(187, 187, 187)
+-                .addComponent(jLabel2)
+-                .addContainerGap(213, Short.MAX_VALUE))
+-        );
+-        jPanel2Layout.setVerticalGroup(
+-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel2Layout.createSequentialGroup()
+-                .addGap(142, 142, 142)
+-                .addComponent(jLabel2)
+-                .addContainerGap(280, Short.MAX_VALUE))
+-        );
+-
+-        jLabel1.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jLabel1.text&quot;)); // NOI18N
+-
+-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+-        jPanel1.setLayout(jPanel1Layout);
+-        jPanel1Layout.setHorizontalGroup(
+-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel1Layout.createSequentialGroup()
+-                .addGap(146, 146, 146)
+-                .addComponent(jLabel1)
+-                .addContainerGap(254, Short.MAX_VALUE))
+-        );
+-        jPanel1Layout.setVerticalGroup(
+-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel1Layout.createSequentialGroup()
+-                .addGap(170, 170, 170)
+-                .addComponent(jLabel1)
+-                .addContainerGap(252, Short.MAX_VALUE))
+-        );
+-
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
+         jpExportType.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jpExportType.border.title&quot;))); // NOI18N
+@@ -220,6 +177,29 @@
+ 
+         jpExportOptions.add(jpTemplateExport, &quot;card3&quot;);
+ 
++        jpbExportProgress.setIndeterminate(true);
++        jpbExportProgress.setString(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jpbExportProgress.string&quot;)); // NOI18N
++        jpbExportProgress.setStringPainted(true);
++
++        javax.swing.GroupLayout jpProgressBarLayout = new javax.swing.GroupLayout(jpProgressBar);
++        jpProgressBar.setLayout(jpProgressBarLayout);
++        jpProgressBarLayout.setHorizontalGroup(
++            jpProgressBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jpProgressBarLayout.createSequentialGroup()
++                .addGap(46, 46, 46)
++                .addComponent(jpbExportProgress, javax.swing.GroupLayout.PREFERRED_SIZE, 282, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addContainerGap(49, Short.MAX_VALUE))
++        );
++        jpProgressBarLayout.setVerticalGroup(
++            jpProgressBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jpProgressBarLayout.createSequentialGroup()
++                .addGap(153, 153, 153)
++                .addComponent(jpbExportProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addContainerGap(158, Short.MAX_VALUE))
++        );
++
++        jpExportOptions.add(jpProgressBar, &quot;card4&quot;);
++
+         jbtnCancel.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jbtnCancel.text&quot;)); // NOI18N
+         jbtnCancel.addActionListener(new java.awt.event.ActionListener() {
+             public void actionPerformed(java.awt.event.ActionEvent evt) {
+@@ -284,10 +264,16 @@
+ private void jlstExportTypesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jlstExportTypesValueChanged
+     if (jlstExportTypes.getSelectedIndex() == 1) {
+         CardLayout lay = (CardLayout) jpExportOptions.getLayout();
+-        lay.last(jpExportOptions);
++        if (visiblePanel == 0) {
++            lay.next(jpExportOptions);
++        } else if (visiblePanel == 2) {
++            lay.previous(jpExportOptions);
++        }
++        visiblePanel = previousPanel = 1;
+     } else {
+         CardLayout lay = (CardLayout) jpExportOptions.getLayout();
+         lay.first(jpExportOptions);
++        visiblePanel = previousPanel = 0;
+     }
+ }//GEN-LAST:event_jlstExportTypesValueChanged
+ 
+@@ -302,13 +288,16 @@
+             new CSV(selectedFile).export();
+             break;
+         case 1://HTML
++            new HTML(selectedFile, &quot;&quot;, &quot;&quot;);//TODO: get the proper values for HTML export
+             break;
+         case 2://SQL
+             new SQL(selectedFile).export();
+             break;
+         case 3://ODS
++            new ODS(selectedFile);
+             break;
+         case 4://XLS
++            new XLS(selectedFile);
+             break;
+         case 5://XML
+             new XML(selectedFile).export();
+@@ -317,21 +306,17 @@
+ }//GEN-LAST:event_jbtnExportActionPerformed
+ 
+ private void jbtnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnHelpActionPerformed
+-// TODO add your handling code here:
++// TODO: help actions
+ }//GEN-LAST:event_jbtnHelpActionPerformed
+ 
+ private void jbtnBrowseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnBrowseActionPerformed
+     JFileChooser jfc = new JFileChooser();
+     if (jfc.showSaveDialog(this) == JFileChooser.APPROVE_OPTION) {
+         selectedFile = jfc.getSelectedFile();
+-        jtfDestination.setText(selectedFile.getAbsolutePath());
++        jtfDestination.setText(selectedFile.getAbsolutePath().trim());
+     }
+ }//GEN-LAST:event_jbtnBrowseActionPerformed
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+-    private javax.swing.JLabel jLabel1;
+-    private javax.swing.JLabel jLabel2;
+-    private javax.swing.JPanel jPanel1;
+-    private javax.swing.JPanel jPanel2;
+     private javax.swing.JScrollPane jScrollPane1;
+     private javax.swing.JButton jbtnBrowse;
+     private javax.swing.JButton jbtnCancel;
+@@ -342,7 +327,9 @@
+     private javax.swing.JPanel jpExportOptions;
+     private javax.swing.JPanel jpExportType;
+     private javax.swing.JPanel jpFileExport;
++    private javax.swing.JPanel jpProgressBar;
+     private javax.swing.JPanel jpTemplateExport;
++    private javax.swing.JProgressBar jpbExportProgress;
+     private javax.swing.JTextField jtfDestination;
+     // End of variables declaration//GEN-END:variables
+     /**
+@@ -387,17 +374,24 @@
+     }
+ 
+     public void exportStarted() {
+-        //TODO:
+-        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++        visiblePanel = 2;
++        CardLayout lay = (CardLayout) jpExportOptions.getLayout();
++        lay.last(jpExportOptions);
+     }
+ 
+     public void exportFinished() {
+-        //TODO:
+-        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++        if (previousPanel == 0) {
++            CardLayout lay = (CardLayout) jpExportOptions.getLayout();
++            lay.first(jpExportOptions);
++        } else {
++            CardLayout lay = (CardLayout) jpExportOptions.getLayout();
++            lay.previous(jpExportOptions);
++        }
++        visiblePanel = previousPanel;
+     }
+ 
+     public void exportError() {
+-        //TODO:
++        //TODO: show error message
+         throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-06-11 16:46:15 UTC (rev 143)
+@@ -19,10 +19,12 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogConstants;
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import java.io.File;
+ import javax.swing.JFileChooser;
+ import org.openide.util.Lookup;
++import org.openide.util.NbBundle;
+ 
+ public class NewCatalogDlg extends javax.swing.JDialog {
+ 
+@@ -46,7 +48,7 @@
+ 
+     private boolean validateWihtMessages() {
+         if (jtfName.getText().trim().isEmpty()) {
+-            jlbError.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.empyname&quot;)); // NOI18N
++            jlbError.setText(NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.empyname&quot;)); // NOI18N
+ 
+             jlbError.setVisible(true);
+             validate();
+@@ -54,7 +56,7 @@
+         }
+         if (jchkUserinternalDB.isSelected()) {
+             if (jtfDestination.getText().trim().isEmpty()) {
+-                jlbError.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invaliddestination&quot;)); // NOI18N
++                jlbError.setText(NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invaliddestination&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+                 validate();
+@@ -62,19 +64,19 @@
+             }
+         } else {
+             if (jtfHostname.getText().trim().isEmpty()) {
+-                jlbError.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invalidurl&quot;)); // NOI18N
++                jlbError.setText(NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invalidurl&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+                 validate();
+                 return false;
+             } else if (jtfUsername.getText().trim().isEmpty()) {
+-                jlbError.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invalidusername&quot;)); // NOI18N
++                jlbError.setText(NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invalidusername&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+                 validate();
+                 return false;
+             } else if (jffPort.getText().trim().isEmpty()) {
+-                jlbError.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invalidport&quot;)); // NOI18N
++                jlbError.setText(NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.invalidport&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+                 validate();
+@@ -356,7 +358,7 @@
+         // if dbtype is selected to local return the CatalogEngine.LOCAL, if not 
+         // check to see what the selected value of the combobox is and return 
+         // the corresponding value.
+-        final int dbtype = (jchkUserinternalDB.isSelected() ? CatalogEngine.LOCAL : (selectedname.equals(&quot;Firebird&quot;) ? CatalogEngine.FIREBIRD : (selectedname.equals(&quot;PostgreSQL&quot;) ? CatalogEngine.POSTGRESQL : (selectedname.equals(&quot;MsSQL&quot;) ? CatalogEngine.MSSQL : CatalogEngine.MYSQL)))); // NOI18N
++        final int dbtype = (jchkUserinternalDB.isSelected() ? CatalogConstants.LOCAL : (selectedname.equals(&quot;Firebird&quot;) ? CatalogConstants.FIREBIRD : (selectedname.equals(&quot;PostgreSQL&quot;) ? CatalogConstants.POSTGRESQL : (selectedname.equals(&quot;MsSQL&quot;) ? CatalogConstants.MSSQL : CatalogConstants.MYSQL)))); // NOI18N
+ 
+         new Thread(new Runnable() {
+ 
+@@ -386,7 +388,7 @@
+     JFileChooser jfc = new JFileChooser();
+     jfc.setCurrentDirectory(new File(System.getProperty(&quot;user.dir&quot;))); // NOI18N
+ 
+-    jfc.setDialogTitle(&quot;Choose a directory&quot;);//TODO: i18n
++    jfc.setDialogTitle(NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.choosedirectory&quot;)); // NOI18N
+ 
+     jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+     jfc.setMultiSelectionEnabled(false);
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-11 16:46:15 UTC (rev 143)
+@@ -57,7 +57,7 @@
+     private boolean showAgain = false;
+     private boolean calculateHash = false;
+     private boolean isMedia = true;
+-    
++
+     /** Creates new form NewDiskDlg */
+     public NewDiskDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+@@ -100,8 +100,7 @@
+             jbtngrpDrives.add(toggle);
+             jpButtons.add(toggle);
+         }
+-        toggle = new JToggleButton(&quot;...&quot;); // NOI18N
+-
++        toggle = new JToggleButton();
+         toggle.setIcon(new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x22/button-folder.png&quot;))); // NOI18N
+ 
+         toggle.setHorizontalTextPosition(SwingConstants.CENTER);
+@@ -364,8 +363,8 @@
+     MediaReader r = Lookup.getDefault().lookup(MediaReader.class);
+     r.addListener(scanningDlg);
+     r.addListener(this);
+-    r.read(new File(currentSelectedPath), calculateHash, isMedia, jtfDiskName.getText().trim(), (DiskGroup)jcbxCatalog.getSelectedItem(), null);
+-    
++    r.read(new File(currentSelectedPath), calculateHash, isMedia, jtfDiskName.getText().trim(), (DiskGroup) jcbxCatalog.getSelectedItem(), null);
++
+ }//GEN-LAST:event_jbtnScanActionPerformed
+ 
+ private void jbtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCancelActionPerformed
+@@ -388,7 +387,6 @@
+ private void jchkShowAgainStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jchkShowAgainStateChanged
+     showAgain = jchkShowAgain.isSelected();
+ }//GEN-LAST:event_jchkShowAgainStateChanged
+-
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+     private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
+@@ -412,16 +410,15 @@
+     private javax.swing.JToggleButton jtbSelectedPlugins;
+     private javax.swing.JTextField jtfDiskName;
+     // End of variables declaration//GEN-END:variables
+-
+-
+     public void readingStarted(ReadingEvent evt) {
+-       SwingUtilities.invokeLater(new Runnable() {
++        SwingUtilities.invokeLater(new Runnable() {
++
+             public void run() {
+-               scanningDlg.showCentered();
++                scanningDlg.showCentered();
+             }
+         });
+     }
+-    
++
+     public void readingFile(ReadingEvent evt) {
+         //DO NOTHING
+     }
+@@ -429,16 +426,16 @@
+     public void readingStopped(ReadingEvent evt) {
+         //TODO: ask for description
+         /*if(ask4Description) {
+-            AskDescriptionDlg dlg = new AskDescriptionDlg(WindowManager.getDefault().getMainWindow(), true);
+-            dlg.showCentered();
+-            /*
+-            Session s = eng.sessionFactory.getCurrentSession();
+-            s.beginTransaction();
+-            evt.getMedia().setDescription(&quot;&quot;);
+-            s.getTransaction().commit();
++        AskDescriptionDlg dlg = new AskDescriptionDlg(WindowManager.getDefault().getMainWindow(), true);
++        dlg.showCentered();
++        /*
++        Session s = eng.sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        evt.getMedia().setDescription(&quot;&quot;);
++        s.getTransaction().commit();
+         }*/
+         Lookup.getDefault().lookup(MediaReader.class).removeListener(this);
+-        if(!showAgain) {
++        if (!showAgain) {
+             dispose();
+         }
+     }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-06-11 16:46:15 UTC (rev 143)
+@@ -19,10 +19,12 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogConstants;
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import java.io.File;
+ import javax.swing.JFileChooser;
+ import org.openide.util.Lookup;
++import org.openide.util.NbBundle;
+ 
+ public class OpenCatalogDlg extends javax.swing.JDialog {
+ 
+@@ -58,42 +60,42 @@
+             jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.empyname&quot;)); // NOI18N
+ 
+             jlbError.setVisible(true);
+-            this.validate();
++            validate();
+             return false;
+         }
+ 
+         if (jchkUserinternalDB.isSelected()) {
+             if (jtfDestination.getText().isEmpty()) {
+-                jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invaliddestination&quot;)); // NOI18N
++                jlbError.setText(NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invaliddestination&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+-                this.validate();
++                validate();
+                 return false;
+             }
+         } else {
+             if (jtfHostname.getText().isEmpty()) {
+-                jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invalidurl&quot;)); // NOI18N
++                jlbError.setText(NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invalidurl&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+-                this.validate();
++                validate();
+                 return false;
+             } else if (jtfUsername.getText().isEmpty()) {
+-                jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invalidusername&quot;)); // NOI18N
++                jlbError.setText(NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invalidusername&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+-                this.validate();
++                validate();
+                 return false;
+             } else if (jffPort.getText().isEmpty()) {
+-                jlbError.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invalidport&quot;)); // NOI18N
++                jlbError.setText(NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.invalidport&quot;)); // NOI18N
+ 
+                 jlbError.setVisible(true);
+-                this.validate();
++                validate();
+                 return false;
+             }
+         }
+         if (jlbError.isVisible()) {
+             jlbError.setVisible(false);
+-            this.validate();
++            validate();
+         }
+         return true;
+     }
+@@ -365,10 +367,8 @@
+         // if dbtype is selected to local return the CatalogEngine.LOCAL, if not 
+         // check to see what the selected value of the combobox is and return 
+         // the corresponding value.
+-        final int dbtype = (jchkUserinternalDB.isSelected() ? CatalogEngine.LOCAL : (selectedname.equals(&quot;Firebird&quot;) ? CatalogEngine.FIREBIRD : (selectedname.equals(&quot;PostgreSQL&quot;) ? CatalogEngine.POSTGRESQL : (selectedname.equals(&quot;MsSQL&quot;) ? CatalogEngine.MSSQL : CatalogEngine.MYSQL))));
++        final int dbtype = (jchkUserinternalDB.isSelected() ? CatalogConstants.LOCAL : (selectedname.equals(&quot;Firebird&quot;) ? CatalogConstants.FIREBIRD : (selectedname.equals(&quot;PostgreSQL&quot;) ? CatalogConstants.POSTGRESQL : (selectedname.equals(&quot;MsSQL&quot;) ? CatalogConstants.MSSQL : CatalogConstants.MYSQL))));
+ 
+-
+-        //TODO: event notification
+         new Thread(new Runnable() {
+ 
+             public void run() {
+@@ -384,7 +384,7 @@
+ }//GEN-LAST:event_jbtnOpenActionPerformed
+ 
+ private void jbtnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnHelpActionPerformed
+-    //TODO:
++    //TODO: help action
+ }//GEN-LAST:event_jbtnHelpActionPerformed
+ 
+ private void jchkUserinternalDBStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jchkUserinternalDBStateChanged
+@@ -397,7 +397,7 @@
+     JFileChooser jfc = new JFileChooser();
+     jfc.setCurrentDirectory(new File(System.getProperty(&quot;user.dir&quot;))); // NOI18N
+ 
+-    jfc.setDialogTitle(&quot;Choose a directory&quot;);//TODO: i18n
++    jfc.setDialogTitle(NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.choosedirectory&quot;)); // NOI18N
+ 
+     jfc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+     jfc.setMultiSelectionEnabled(false);
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtils.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtils.java	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtils.java	2008-06-11 16:46:15 UTC (rev 143)
+@@ -0,0 +1,29 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.utils;
++
++import de.berlios.jfindmyfiles.catalog.CatalogConstants;
++
++public abstract class GuiUtils {
++    
++    public static String findIconForType(int type) {
++        switch(type) {
++            case CatalogConstants.CDROM:
++                return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-media-drive-optical.png&quot;;
++            case CatalogConstants.DVDROM:
++                return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-media-drive-optical.png&quot;;
++            case CatalogConstants.FLOPPY:
++                return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-media-floppy.png&quot;;
++            case CatalogConstants.FOLDER:
++                return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-media-floppy.png&quot;;//TODO: get proper icon
++            case CatalogConstants.HDD:
++                return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-harddisk.png&quot;;
++            default:
++                return &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-media-floppy.png&quot;;//TODO: get proper icon
++                
++        }
++    }
++
++}
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/MediaReader.java	2008-06-11 16:46:15 UTC (rev 143)
+@@ -24,7 +24,7 @@
+ import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
+ import de.berlios.jfindmyfiles.catalog.entities.Type;
+-import de.berlios.jfindmyfiles.readingfiles.utils.FileUtils;
++import de.berlios.jfindmyfiles.readingfiles.utils.ReadingUtils;
+ import java.io.File;
+ import java.util.Stack;
+ import java.util.Vector;
+@@ -74,8 +74,8 @@
+                                     listing[z].length(), listing[z].isFile(),
+                                     listing[z].isHidden(),
+                                     listing[z].lastModified(), container, null,
+-                                    (sha ? FileUtils.calculateSHA1HashString(listing[z]) : &quot;&quot;), 
+-                                    FileUtils.findExtension(listing[z].getName()));
++                                    (sha ? ReadingUtils.calculateSHA1HashString(listing[z]) : &quot;&quot;), 
++                                    ReadingUtils.findExtension(listing[z].getName()));
+                             s.save(temp);
+                             container.addFile(temp);
+                         }
+@@ -103,8 +103,8 @@
+                                         listing[z].length(), listing[z].isFile(),
+                                         listing[z].isHidden(),
+                                         listing[z].lastModified(), container, fw,
+-                                        (sha ? FileUtils.calculateSHA1HashString(listing[z]) : &quot;&quot;), 
+-                                        FileUtils.findExtension(listing[z].getName()));
++                                        (sha ? ReadingUtils.calculateSHA1HashString(listing[z]) : &quot;&quot;), 
++                                        ReadingUtils.findExtension(listing[z].getName()));
+                                 s.save(temp);
+                                 fw.addChild(temp);
+                             }
+
+Deleted: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/FileUtils.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/FileUtils.java	2008-06-11 15:15:59 UTC (rev 142)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/FileUtils.java	2008-06-11 16:46:15 UTC (rev 143)
+@@ -1,67 +0,0 @@
+-/**
+- *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
+- *
+- *  This file is part of JFindMyFiles.
+- *
+- *  JFindMyFiles is free software: you can redistribute it and/or modify
+- *  it under the terms of the GNU General Public License as published by
+- *  the Free Software Foundation, either version 2 of the License, or
+- *  (at your option) any later version.
+- *
+- *  JFindMyFiles is distributed in the hope that it will be useful,
+- *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+- *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+- *  GNU General Public License for more details.
+- *
+- *  You should have received a copy of the GNU General Public License
+- *  along with JFindMyFiles.  If not, see 
+- * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+- */
+-package de.berlios.jfindmyfiles.readingfiles.utils;
+-
+-import java.io.File;
+-import java.io.IOException;
+-import java.security.NoSuchAlgorithmException;
+-import jonelo.jacksum.JacksumAPI;
+-import jonelo.jacksum.algorithm.AbstractChecksum;
+-
+-/**
+- *
+- * @author Knitter
+- */
+-public class FileUtils {
+-
+-    /**
+-     * Method that, given a file name, will return it's extension.
+-     * A file extension has little meaning for some operating systems, being 
+-     * relevant only on Windows OS. Nevertheless it is necessary to determine 
+-     * the extension of a given file to use on the Description API.
+-     * 
+-     * @param filename the name of the file
+-     * @return the extension or an empty string if this name has no extension
+-     */
+-    public static String findExtension(String filename) {
+-        int x = -1;
+-        return ((x = filename.lastIndexOf(&quot;.&quot;)) &gt; 0 ? filename.substring(x + 1) : &quot;&quot;);
+-    }
+-
+-    /**
+-     * Calculates a file's hashing code using the SHA-1 algorithm.
+-     * It uses the Jacksum library to compute the hash code.
+-     * 
+-     * @param file File to calculate the hash for.
+-     * @return A String with the calculated hash code or an empty string if an 
+-     * error occorred.
+-     */
+-    public static String calculateSHA1HashString(File file) {
+-        AbstractChecksum checksum = null;
+-        try {
+-            checksum = JacksumAPI.getChecksumInstance(&quot;sha-1&quot;);
+-            return &quot;&quot; + checksum.readFile(file.getAbsolutePath());
+-        } catch (IOException ex) {
+-            return &quot;&quot;;
+-        } catch (NoSuchAlgorithmException ex) {
+-            return &quot;&quot;;
+-        }
+-    }
+-}
+
+Copied: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java (from rev 141, trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/FileUtils.java)
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/FileUtils.java	2008-06-10 23:31:06 UTC (rev 141)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/utils/ReadingUtils.java	2008-06-11 16:46:15 UTC (rev 143)
+@@ -0,0 +1,81 @@
++/**
++ *  Copyright (C) 2008  Patr&#237;cia Monteiro e S&#233;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.readingfiles.utils;
++
++import de.berlios.jfindmyfiles.catalog.CatalogConstants;
++import java.io.File;
++import java.io.IOException;
++import java.security.NoSuchAlgorithmException;
++import jonelo.jacksum.JacksumAPI;
++import jonelo.jacksum.algorithm.AbstractChecksum;
++
++/**
++ *
++ * @author Knitter
++ */
++public class ReadingUtils {
++
++    /**
++     * Method that, given a file name, will return it's extension.
++     * A file extension has little meaning for some operating systems, being 
++     * relevant only on Windows OS. Nevertheless it is necessary to determine 
++     * the extension of a given file to use on the Description API.
++     * 
++     * @param filename the name of the file
++     * @return the extension or an empty string if this name has no extension
++     */
++    public static String findExtension(String filename) {
++        int x = -1;
++        return ((x = filename.lastIndexOf(&quot;.&quot;)) &gt; 0 ? filename.substring(x + 1) : &quot;&quot;);
++    }
++
++    /**
++     * Calculates a file's hashing code using the SHA-1 algorithm.
++     * It uses the Jacksum library to compute the hash code.
++     * 
++     * @param file File to calculate the hash for.
++     * @return A String with the calculated hash code or an empty string if an 
++     * error occorred.
++     */
++    public static String calculateSHA1HashString(File file) {
++        AbstractChecksum checksum = null;
++        try {
++            checksum = JacksumAPI.getChecksumInstance(&quot;sha-1&quot;);
++            return &quot;&quot; + checksum.readFile(file.getAbsolutePath());
++        } catch (IOException ex) {
++            return &quot;&quot;;
++        } catch (NoSuchAlgorithmException ex) {
++            return &quot;&quot;;
++        }
++    }
++
++    public static int findFileType(String absolutepath) {
++        if (absolutepath.length() == 3 &amp;&amp; absolutepath.matches(&quot;&quot;)) {
++            if (absolutepath.compareToIgnoreCase(&quot;a:\\&quot;) == 0 || absolutepath.compareToIgnoreCase(&quot;b:\\&quot;) == 0) {
++                return CatalogConstants.FLOPPY;
++            }
++            if (absolutepath.compareToIgnoreCase(&quot;c:\\&quot;) == 0) {
++                return CatalogConstants.HDD;
++            }
++            return CatalogConstants.CDROM;
++        }
++        return CatalogConstants.FOLDER;
++    }
++}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000137.html">[Jfindmyfiles-commits] r142 - in trunk: docs/Documentos Externos	docs/Documentos Externos/images project/JFindMyFiles/HSQLDB	spikes/Prototipos/src/de/berlios/kcookb/imagens
+</A></li>
+	<LI>Next message: <A HREF="000139.html">[Jfindmyfiles-commits] r144 - in trunk: docs docs/Iteracao4-CB04	docs/Iteracao6-CB07 docs/Iteracao7-CB06 docs/Iteracao8-CB08	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	spikes/Prototipos/src/de/berlios/kcookb/imagens
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#138">[ date ]</a>
+              <a href="thread.html#138">[ thread ]</a>
+              <a href="subject.html#138">[ subject ]</a>
+              <a href="author.html#138">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

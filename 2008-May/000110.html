@@ -1,0 +1,464 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r115 - in trunk: docs docs/Iteracao5-CB02	project/JFindMyFiles/Catalog/src	project/JFindMyFiles/Catalog/src/META-INF	project/JFindMyFiles/Catalog/src/META-INF/services	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r115%20-%20in%20trunk%3A%20docs%20docs/Iteracao5-CB02%0A%09project/JFindMyFiles/Catalog/src%0A%09project/JFindMyFiles/Catalog/src/META-INF%0A%09project/JFindMyFiles/Catalog/src/META-INF/services%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs&In-Reply-To=%3C200805192355.m4JNtfNk010361%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000109.html">
+   <LINK REL="Next"  HREF="000111.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r115 - in trunk: docs docs/Iteracao5-CB02	project/JFindMyFiles/Catalog/src	project/JFindMyFiles/Catalog/src/META-INF	project/JFindMyFiles/Catalog/src/META-INF/services	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r115%20-%20in%20trunk%3A%20docs%20docs/Iteracao5-CB02%0A%09project/JFindMyFiles/Catalog/src%0A%09project/JFindMyFiles/Catalog/src/META-INF%0A%09project/JFindMyFiles/Catalog/src/META-INF/services%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs&In-Reply-To=%3C200805192355.m4JNtfNk010361%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r115 - in trunk: docs docs/Iteracao5-CB02	project/JFindMyFiles/Catalog/src	project/JFindMyFiles/Catalog/src/META-INF	project/JFindMyFiles/Catalog/src/META-INF/services	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs">knitter at mail.berlios.de
+       </A><BR>
+    <I>Tue May 20 01:55:41 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000109.html">[Jfindmyfiles-commits] r114 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+        <LI>Next message: <A HREF="000111.html">[Jfindmyfiles-commits] r116 - in trunk: docs docs/Iteracao2-CB05	docs/Iteracao3-CB03 docs/Iteracao5-CB02 media	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images	project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110">[ date ]</a>
+              <a href="thread.html#110">[ thread ]</a>
+              <a href="subject.html#110">[ subject ]</a>
+              <a href="author.html#110">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-20 01:55:16 +0200 (Tue, 20 May 2008)
+New Revision: 115
+
+Added:
+   trunk/docs/Iteracao5-CB02/
+   trunk/docs/Iteracao5-CB02/Iteracao5.txt
+   trunk/project/JFindMyFiles/Catalog/src/META-INF/
+   trunk/project/JFindMyFiles/Catalog/src/META-INF/services/
+   trunk/project/JFindMyFiles/Catalog/src/META-INF/services/de.berlios.jfindmyfiles.catalog.CatalogEngine
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+Log:
+Adicionados ficheiros em falta.
+Criado c?\195?\179digo para listagem de dados na base de dados.
+
+Adicionada pasta para quinta itera?\195?\167?\195?\163o.
+
+Added: trunk/docs/Iteracao5-CB02/Iteracao5.txt
+===================================================================
+--- trunk/docs/Iteracao5-CB02/Iteracao5.txt	2008-05-19 16:29:31 UTC (rev 114)
++++ trunk/docs/Iteracao5-CB02/Iteracao5.txt	2008-05-19 23:55:16 UTC (rev 115)
+@@ -0,0 +1,13 @@
++&lt;==== Objectivos ==============================================================&gt;
++CB02: ST14, ST15
++- Quero que as op&#231;&#245;es mais comuns apare&#231;am numa barra acima da lista de ficheiros.
++- Deve existir um menu na &#225;rvore com a lista de categorias/grupo de discos/etiquetas 
++com op&#231;&#245;es de pesquisa, introdu&#231;&#227;o de descri&#231;&#245;es, altera&#231;&#227;o do nome, 
++exporta&#231;&#227;o e importa&#231;&#227;o.
++&lt;==== Documentos produzidos ===================================================&gt;
++
++Spikes:
++Outros documentos:
++
++&lt;==== 
++&lt;==== Avalia&#231;&#227;o ===============================================================&gt;
+
+Added: trunk/project/JFindMyFiles/Catalog/src/META-INF/services/de.berlios.jfindmyfiles.catalog.CatalogEngine
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/META-INF/services/de.berlios.jfindmyfiles.catalog.CatalogEngine	2008-05-19 16:29:31 UTC (rev 114)
++++ trunk/project/JFindMyFiles/Catalog/src/META-INF/services/de.berlios.jfindmyfiles.catalog.CatalogEngine	2008-05-19 23:55:16 UTC (rev 115)
+@@ -0,0 +1 @@
++de.berlios.jfindmyfiles.catalog.CatalogEngine
+\ No newline at end of file
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/src/META-INF/services/de.berlios.jfindmyfiles.catalog.CatalogEngine
+___________________________________________________________________
+Name: svn:eol-style
+   + native
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-19 16:29:31 UTC (rev 114)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-19 23:55:16 UTC (rev 115)
+@@ -22,7 +22,6 @@
+ import de.berlios.jfindmyfiles.catalog.entities.*;
+ import java.io.File;
+ import java.util.Date;
+-import java.util.LinkedList;
+ import java.util.List;
+ import org.hibernate.Session;
+ import org.hibernate.SessionFactory;
+@@ -37,17 +36,13 @@
+     public static final int MYSQL = 3;
+     public static final int LOCAL = 4;
+     private SessionFactory sessionFactory;
+-    private CatalogProperties properties;// = new CatalogProperties(&quot;teste&quot;, &quot;&lt;sem desc&gt;&quot;, 50, 25, 500, 30, new Date()); //TODO: remove
+-    private Configuration hConfig;
+-    public static int counting = 0;
++    private CatalogProperties properties;
+ 
+     /**
+      * Empty construtor so that this class can be instanciated using reflection 
+      * by the netbeans platform.
+      */
+     public CatalogEngine() {
+-        //do nothing
+-        counting++;
+     }
+ 
+     //TODO: error management
+@@ -59,7 +54,7 @@
+             /*Configuration cfg = new Configuration().configure(&quot;de/berlios&quot; +
+             &quot;/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml&quot;);*/
+ 
+-            hConfig = new Configuration()//Configuration object
++            Configuration hConfig = new Configuration()//Configuration object
+                     .addClass(de.berlios.jfindmyfiles.catalog.entities.AudioData.class)//Add AudioData class
+                     .addClass(de.berlios.jfindmyfiles.catalog.entities.DiskGroup.class)//Add DiskGroup class
+                     .addClass(de.berlios.jfindmyfiles.catalog.entities.FileWrapper.class)//Add FileWrapper class
+@@ -161,6 +156,7 @@
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+         properties = (CatalogProperties) cSession.createQuery(&quot;from CatalogProperties&quot;).uniqueResult();
++        cSession.getTransaction().commit();
+     }
+ 
+     /**
+@@ -201,93 +197,79 @@
+     public CatalogProperties getProperties() {
+         return properties;
+     }
+-
+-    public void updateProperties() {
++    
++    public void updateProperties(String description, Date creationDate) {
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+-        cSession.update(properties);
++        properties = (CatalogProperties) cSession.createQuery(&quot;from CatalogProperties&quot;).uniqueResult();
++        properties.setCreationDate(creationDate);
++        properties.setDescription(description);
++        cSession.merge(properties);
+         cSession.getTransaction().commit();
+     }
+ 
+-/*    public void updateProperties(CatalogProperties props) {
+-        properties = props;
++    public void updateProperties() {
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+-        cSession.merge(properties);
++        cSession.update(properties);
+         cSession.getTransaction().commit();
+-    }*/
++    }
+ 
+     public void addDiskGroup(String name, String description, DiskGroup parent) {
+-        /*  Session hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+-        hSession.beginTransaction();
++        Session cSession = sessionFactory.getCurrentSession();
++        cSession.beginTransaction();
+         DiskGroup dg = new DiskGroup();
+         dg.setName(name);
+         dg.setDescription(description);
+         dg.setParent(parent);
+-        hSession.save(dg);
+-        hSession.getTransaction().commit();*/
++        cSession.save(dg);
++        cSession.getTransaction().commit();
+     }
+ 
+     public void addLabel(String name) {
+-        /*Session hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+-        hSession.beginTransaction();
++        Session cSession = sessionFactory.getCurrentSession();
++        cSession.beginTransaction();
+         Label l = new Label();
+         l.setName(name);
+-        hSession.save(l);
+-        hSession.getTransaction().commit();*/
++        cSession.save(l);
++        cSession.getTransaction().commit();
+     }
+ 
+     public void removeLabel(Label label) {
+-        /*Session  hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+-        hSession.beginTransaction();
+-        List result = hSession.createQuery(&quot;from Label where id=&quot; + label.getId()).list();
+-        if (result.size() != 1) {
+-        ;//TODO: show error, invalid state
+-        
+-        }
+-        Label rem = (Label) result.get(0);//TODO: verify this
+-        
+-        hSession.delete(rem);
+-        hSession.getTransaction().commit();*/
++        Session  cSession = sessionFactory.getCurrentSession();
++        cSession.beginTransaction();
++        Label l = (Label)cSession.createQuery(&quot;from Label where id=&quot; + label.getId()).uniqueResult();
++        cSession.delete(l);
++        cSession.getTransaction().commit();
+     }
+ 
+     public void addUser(String firstname, String surname) {
+-        /*Session hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+-        hSession.beginTransaction();
++        Session  cSession = sessionFactory.getCurrentSession();
++        cSession.beginTransaction();
+         User u = new User();
+         u.setFirstname(firstname);
+         u.setSurname(surname);
+-        hSession.save(u);
+-        hSession.getTransaction().commit();*/
++        cSession.save(u);
++        cSession.getTransaction().commit();
+     }
+ 
+     public void removeUser(User user) {
+-        /*Session hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+-        hSession.beginTransaction();
+-        List result = hSession.createQuery(&quot;from Label where id=&quot; + user.getId()).list();
+-        if (result.size() != 1) {
+-        ;//TODO: show error, invalid state
+-        
+-        }
+-        User rem = (User) result.get(0);//TODO: verify this
+-        
+-        hSession.delete(rem);
+-        hSession.getTransaction().commit();*/
++        Session  cSession = sessionFactory.getCurrentSession();
++        cSession.beginTransaction();
++        User u = (User) cSession.createQuery(&quot;from Label where id=&quot; + user.getId()).uniqueResult();     
++        cSession.delete(u);
++        cSession.getTransaction().commit();
+     }
+ 
+-    public List getLabels() {//TODO: validate session states
+-/*
+-        Session         hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+-        hSession.beginTransaction();
+-        List rs = hSession.createQuery(&quot;from User&quot;).list();
+-        hSession.getTransaction().commit();
++    public List getLabels() {
++        Session  cSession = sessionFactory.getCurrentSession();
++        cSession.beginTransaction();
++        List rs = cSession.createQuery(&quot;from User&quot;).list();
++        cSession.getTransaction().commit();
+         return rs;
+-         */
+-        return null;
+     }
+ 
+-    public List getUsers() {//TODO: validate session states
+-
++    public List getUsers() {
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+         List rs = cSession.createQuery(&quot;from User&quot;).list();
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-05-19 16:29:31 UTC (rev 114)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-05-19 23:55:16 UTC (rev 115)
+@@ -63,7 +63,7 @@
+         add(view, BorderLayout.CENTER);
+         view.setRootVisible(true);
+ 
+-        manager.setRootContext(new CatalogNode());
++        //manager.setRootContext(new CatalogNode());
+     //Code from the feed reader example, needs to be rewritten
+         /*try {
+     //manager.setRootContext(new RssNode.RootRssNode());
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form	2008-05-19 16:29:31 UTC (rev 114)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form	2008-05-19 23:55:16 UTC (rev 115)
+@@ -296,6 +296,9 @@
+       &lt;/Events&gt;
+     &lt;/Component&gt;
+     &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jtfName&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;enabled&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++      &lt;/Properties&gt;
+     &lt;/Component&gt;
+     &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jlblName&quot;&gt;
+       &lt;Properties&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-05-19 16:29:31 UTC (rev 114)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-05-19 23:55:16 UTC (rev 115)
+@@ -17,7 +17,6 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs;
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+@@ -27,21 +26,21 @@
+ import org.openide.util.lookup.Lookups;
+ 
+ public class OpenCatalogDlg extends javax.swing.JDialog {
+-    
++
+     private CatalogEngine eng;
+     private OpenCatalogDlg me = this;
+-    
++
+     /** Creates new form NewCatalogDlg */
+     public OpenCatalogDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+         initComponents();
+         /*Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;); // NOI18N
+-
++        
+         eng = lu.lookup(CatalogEngine.class);*/
+         initComponents();
+-        jlbError.setVisible(false);        
++        jlbError.setVisible(false);
+     }
+-    
++
+     public void showCentered() {
+         setLocation(getParent().getX() + (getParent().getWidth() / 2) - (getWidth() / 2),
+                 getParent().getY() + (getParent().getHeight() / 2) - (getHeight() / 2));
+@@ -49,13 +48,14 @@
+     }
+ 
+     private boolean validateWihtMessages() {
+-        if (jtfName.getText().isEmpty()) {
++        if (!jchkUserinternalDB.isSelected() &amp;&amp; jtfName.getText().isEmpty()) {
+             jlbError.setText(&quot;* - Nome n&#227;o pode ser vazio&quot;); //TODO: i18n
+ 
+             jlbError.setVisible(true);
+             this.validate();
+             return false;
+         }
++
+         if (jchkUserinternalDB.isSelected()) {
+             if (jtfDestination.getText().isEmpty()) {
+                 jlbError.setText(&quot;* - Destino n&#227;o pode ser vazio&quot;); //TODO: i18n
+@@ -90,8 +90,8 @@
+             this.validate();
+         }
+         return true;
+-    }    
+-    
++    }
++
+     /**
+      * Enables or disables the various components that refer to the remote 
+      * database's settings.
+@@ -107,7 +107,7 @@
+         jlblPassword.setEnabled(state);
+         jlblPort.setEnabled(state);
+         jlblUsername.setEnabled(state);
+-        
++
+         //Inputs
+         jtfHostname.setEnabled(state);
+         jtfName.setEnabled(state);
+@@ -115,7 +115,7 @@
+         jpfPassword.setEnabled(state);
+         jffPort.setEnabled(state);
+     }
+-    
++
+     /** This method is called from within the constructor to
+      * initialize the form.
+      * WARNING: Do NOT modify this code. The content of this method is
+@@ -265,6 +265,8 @@
+             }
+         });
+ 
++        jtfName.setEnabled(false);
++
+         jlblName.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.jlblName.text&quot;)); // NOI18N
+ 
+         jlblDestination.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.jlblDestination.text&quot;)); // NOI18N
+@@ -360,19 +362,13 @@
+         // if dbtype is selected to local return the CatalogEngine.LOCAL, if not 
+         // check to see what the selected value of the combobox is and return 
+         // the corresponding value.
+-        final int dbtype = (jchkUserinternalDB.isSelected() ? CatalogEngine.LOCAL : (selectedname.equals(&quot;Firebird&quot;) ? CatalogEngine.FIREBIRD : (selectedname.equals(&quot;PostgreSQL&quot;) ? CatalogEngine.POSTGRESQL : (selectedname.equals(&quot;MsSQL&quot;) ? CatalogEngine.MSSQL : CatalogEngine.MYSQL))));
++        int dbtype = (jchkUserinternalDB.isSelected() ? CatalogEngine.LOCAL : (selectedname.equals(&quot;Firebird&quot;) ? CatalogEngine.FIREBIRD : (selectedname.equals(&quot;PostgreSQL&quot;) ? CatalogEngine.POSTGRESQL : (selectedname.equals(&quot;MsSQL&quot;) ? CatalogEngine.MSSQL : CatalogEngine.MYSQL))));
+ 
+-        //TODO: could a thread be used? If not, the final from above must be removed.
+-        //new Thread(new Runnable() {
+-
+-        // public void run() {
+         eng.openCatalog(jtfName.getText().trim(),
+                 (jchkUserinternalDB.isSelected() ? jtfDestination.getText().trim() : jtfHostname.getText().trim()),
+                 jffPort.getText().trim(), dbtype,
+                 jtfUsername.getText().trim(),
+                 jpfPassword.getPassword().toString());
+-        //}
+-        // }).start();
+         dispose();
+     }
+ }//GEN-LAST:event_jbtnOpenActionPerformed
+@@ -383,7 +379,7 @@
+ 
+ private void jchkUserinternalDBStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_jchkUserinternalDBStateChanged
+     serverOptionsStateChanged(!jchkUserinternalDB.isSelected());
+-        jbtnBrowse.setEnabled(jchkUserinternalDB.isSelected());
++    jbtnBrowse.setEnabled(jchkUserinternalDB.isSelected());
+     jtfDestination.setEnabled(jchkUserinternalDB.isSelected());
+ }//GEN-LAST:event_jchkUserinternalDBStateChanged
+ 
+@@ -398,8 +394,8 @@
+     if (jfc.showOpenDialog(me) == JFileChooser.APPROVE_OPTION) {
+         jtfDestination.setText(jfc.getSelectedFile().getAbsolutePath());
+     }
++    //TODO: open file based on containnig folder
+ }//GEN-LAST:event_jbtnBrowseActionPerformed
+-        
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JSeparator jSeparator1;
+     private javax.swing.JButton jbtnBrowse;
+@@ -424,5 +420,4 @@
+     private javax.swing.JTextField jtfName;
+     private javax.swing.JTextField jtfUsername;
+     // End of variables declaration//GEN-END:variables
+-    
+ }
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000109.html">[Jfindmyfiles-commits] r114 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+	<LI>Next message: <A HREF="000111.html">[Jfindmyfiles-commits] r116 - in trunk: docs docs/Iteracao2-CB05	docs/Iteracao3-CB03 docs/Iteracao5-CB02 media	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images	project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#110">[ date ]</a>
+              <a href="thread.html#110">[ thread ]</a>
+              <a href="subject.html#110">[ subject ]</a>
+              <a href="author.html#110">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

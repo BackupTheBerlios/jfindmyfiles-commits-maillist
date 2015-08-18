@@ -1,0 +1,1133 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r71 - in trunk: docs/15x5	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	spikes/SPKlerDados
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-April/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r71%20-%20in%20trunk%3A%20docs/15x5%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09spikes/SPKlerDados&In-Reply-To=%3C200804291453.m3TEr3pE005101%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000065.html">
+   <LINK REL="Next"  HREF="000067.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r71 - in trunk: docs/15x5	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	spikes/SPKlerDados</H1>
+    <B>tica at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r71%20-%20in%20trunk%3A%20docs/15x5%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%09spikes/SPKlerDados&In-Reply-To=%3C200804291453.m3TEr3pE005101%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r71 - in trunk: docs/15x5	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles	spikes/SPKlerDados">tica at mail.berlios.de
+       </A><BR>
+    <I>Tue Apr 29 16:53:03 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000065.html">[Jfindmyfiles-commits] r70 - in trunk: docs docs/Iteracao2-CB05	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui
+</A></li>
+        <LI>Next message: <A HREF="000067.html">[Jfindmyfiles-commits] r72 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. actions
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#66">[ date ]</a>
+              <a href="thread.html#66">[ thread ]</a>
+              <a href="subject.html#66">[ subject ]</a>
+              <a href="author.html#66">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: tica
+Date: 2008-04-29 16:52:48 +0200 (Tue, 29 Apr 2008)
+New Revision: 71
+
+Added:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAssignDiskPicture.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCatalogsInfo.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionClose.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCloseAll.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExport.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindInThisDiskGroup.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectFiles.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionImport.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionLendingDisks.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionNewCatalog.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionOpen.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenumberDisks.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionSearchForItems.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateAllDisks.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateThisFolder.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/core-windows-SeparatorAfterRecentList.instance
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/org-netbeans-modules-favorites-SelectInFavorites.shadow
+   trunk/spikes/SPKlerDados/build-before-profiler.xml
+Modified:
+   trunk/docs/15x5/
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml
+   trunk/spikes/SPKlerDados/build.xml
+Log:
+Elaborados menus
+
+
+Property changes on: trunk/docs/15x5
+___________________________________________________________________
+Name: svn:ignore
+   + Thumbs.db
+
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-04-29 14:52:48 UTC (rev 71)
+@@ -1,3 +1,4 @@
++CTL_ActionUpdateAllDisks=UpdateAllDisks
+ CTL_DetailsViewAction=DetailsView
+ CTL_DetailsViewTopComponent=DetailsView Window
+ CTL_NavigationTreeAction=NavigationTree
+@@ -2,2 +3,3 @@
+ CTL_NavigationTreeTopComponent=NavigationTree Window
++CTL_SomeAction=Teste
+ HINT_DetailsViewTopComponent=This is a DetailsView window
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDisk.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionAddNewDisk extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionAddNewDisk.class, &quot;CTL_ActionAddNewDisk&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionAddNewDiskGroup extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionAddNewDiskGroup.class, &quot;CTL_ActionAddNewDiskGroup&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAssignDiskPicture.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAssignDiskPicture.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAssignDiskPicture.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionAssignDiskPicture extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionAssignDiskPicture.class, &quot;CTL_ActionAssignDiskPicture&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCatalogsInfo.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCatalogsInfo.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCatalogsInfo.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionCatalogsInfo extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionCatalogsInfo.class, &quot;CTL_ActionCatalogsInfo&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionClose.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionClose.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionClose.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionClose extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionClose.class, &quot;CTL_ActionClose&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCloseAll.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCloseAll.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionCloseAll.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionCloseAll extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionCloseAll.class, &quot;CTL_ActionCloseAll&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExport.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExport.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionExport.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionExport extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionExport.class, &quot;CTL_ActionExport&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindInThisDiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindInThisDiskGroup.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindInThisDiskGroup.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionFindInThisDiskGroup extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionFindInThisDiskGroup.class, &quot;CTL_ActionFindInThisDiskGroup&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectFiles.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectFiles.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionFindSelectFiles.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionFindSelectFiles extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionFindSelectFiles.class, &quot;CTL_ActionFindSelectFiles&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionImport.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionImport.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionImport.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionImport extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionImport.class, &quot;CTL_ActionImport&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionLendingDisks.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionLendingDisks.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionLendingDisks.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionLendingDisks extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionLendingDisks.class, &quot;CTL_ActionLendingDisks&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionNewCatalog.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionNewCatalog.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionNewCatalog.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionNewCatalog extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionNewCatalog.class, &quot;CTL_ActionNewCatalog&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionOpen.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionOpen.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionOpen.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionOpen extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionOpen.class, &quot;CTL_ActionOpen&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenumberDisks.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenumberDisks.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionRenumberDisks.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionRenumberDisks extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionRenumberDisks.class, &quot;CTL_ActionRenumberDisks&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionSearchForItems.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionSearchForItems.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionSearchForItems.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionSearchForItems extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionSearchForItems.class, &quot;CTL_ActionSearchForItems&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateAllDisks.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateAllDisks.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateAllDisks.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionUpdateAllDisks extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionUpdateAllDisks.class, &quot;CTL_ActionUpdateAllDisks&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateThisFolder.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateThisFolder.java	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionUpdateThisFolder.java	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,36 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.actions;
++
++import org.openide.util.HelpCtx;
++import org.openide.util.NbBundle;
++import org.openide.util.actions.CallableSystemAction;
++
++public final class ActionUpdateThisFolder extends CallableSystemAction {
++
++    public void performAction() {
++    // TODO implement action body
++    }
++
++    public String getName() {
++        return NbBundle.getMessage(ActionUpdateThisFolder.class, &quot;CTL_ActionUpdateThisFolder&quot;);
++    }
++
++    @Override
++    protected void initialize() {
++        super.initialize();
++        // see org.openide.util.actions.SystemAction.iconResource() Javadoc for more details
++        putValue(&quot;noIconInMenu&quot;, Boolean.TRUE);
++    }
++
++    public HelpCtx getHelpCtx() {
++        return HelpCtx.DEFAULT_HELP;
++    }
++
++    @Override
++    protected boolean asynchronous() {
++        return false;
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/Bundle.properties	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,18 @@
++CTL_ActionAddNewDisk=Add New Disk
++CTL_ActionAddNewDiskGroup=Add New Disk Group
++CTL_ActionAssignDisckPicture=AssignDisckPicture
++CTL_ActionAssignDiskPicture=Assign Disk Picture
++CTL_ActionCatalogsInfo=Catalogs Info
++CTL_ActionClose=Close
++CTL_ActionCloseAll=Close All
++CTL_ActionExport=Export
++CTL_ActionFindInThisDiskGroup=Find In This Disk Group
++CTL_ActionFindSelectFiles=Find Select Files
++CTL_ActionImport=Import
++CTL_ActionLendingDisks=Lending Disks
++CTL_ActionNewCatalog=New Catalog
++CTL_ActionOpen=Open
++CTL_ActionRenumberDisks=Renumber Disks
++CTL_ActionSearchForItems=Search For Items
++CTL_ActionUpdateAllDisks=Update All Disks
++CTL_ActionUpdateThisFolder=Update This Folder
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/core-windows-SeparatorAfterRecentList.instance
+===================================================================
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-04-29 14:52:48 UTC (rev 71)
+@@ -2,12 +2,144 @@
+ &lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
+ &lt;filesystem&gt;
+     &lt;folder name=&quot;Actions&quot;&gt;
++        &lt;folder name=&quot;Edit&quot;&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDisk.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDiskGroup.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAssignDiskPicture.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionLendingDisks.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenumberDisks.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateAllDisks.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateThisFolder.instance&quot;/&gt;
++        &lt;/folder&gt;
++        &lt;folder name=&quot;File&quot;&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionClose.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCloseAll.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionExport.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionImport.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionNewCatalog.instance&quot;/&gt;
++                &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionOpen.instance&quot;/&gt;
++        &lt;/folder&gt;
++        &lt;folder name=&quot;Search&quot;&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindInThisDiskGroup.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindSelectFiles.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionSearchForItems.instance&quot;/&gt;
++        &lt;/folder&gt;
++        &lt;folder name=&quot;View&quot;&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCatalogsInfo.instance&quot;/&gt;
++        &lt;/folder&gt;
+         &lt;folder name=&quot;Window&quot;&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-DetailsViewAction.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-NavigationTreeAction.instance&quot;/&gt;
+         &lt;/folder&gt;
+     &lt;/folder&gt;
+     &lt;folder name=&quot;Menu&quot;&gt;
++        &lt;folder name=&quot;Edit&quot;&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDisk.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDisk.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;800&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDiskGroup.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDiskGroup.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;850&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAssignDiskPicture.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAssignDiskPicture.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;1200&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionLendingDisks.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionLendingDisks.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;1425&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenumberDisks.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenumberDisks.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;1350&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateAllDisks.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateAllDisks.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;875&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateThisFolder.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionUpdateThisFolder.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;887&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;org-netbeans-core-actions-JumpNextAction.shadow_hidden&quot;/&gt;
++            &lt;file name=&quot;org-netbeans-core-actions-JumpPrevAction.shadow_hidden&quot;/&gt;
++            &lt;file name=&quot;org-openide-actions-CopyAction.instance_hidden&quot;/&gt;
++            &lt;file name=&quot;org-openide-actions-CutAction.instance_hidden&quot;/&gt;
++            &lt;file name=&quot;org-openide-actions-DeleteAction.instance_hidden&quot;/&gt;
++            &lt;file name=&quot;org-openide-actions-FindAction.instance_hidden&quot;/&gt;
++            &lt;file name=&quot;org-openide-actions-PasteAction.instance_hidden&quot;/&gt;
++            &lt;file name=&quot;org-openide-actions-RedoAction.instance_hidden&quot;/&gt;
++            &lt;file name=&quot;org-openide-actions-ReplaceAction.instance_hidden&quot;/&gt;
++            &lt;file name=&quot;org-openide-actions-UndoAction.instance_hidden&quot;/&gt;
++        &lt;/folder&gt;
++        &lt;folder name=&quot;File&quot;&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionClose.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionClose.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;1850&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCloseAll.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCloseAll.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;1875&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionExport.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionExport.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;2375&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionImport.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionImport.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;2250&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionNewCatalog.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionNewCatalog.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;1300&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionOpen.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionOpen.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;1325&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-separatorAfter.instance&quot;&gt;
++                &lt;attr name=&quot;instanceClass&quot; stringvalue=&quot;javax.swing.JSeparator&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;1350&quot;/&gt;
++            &lt;/file&gt;
++        &lt;/folder&gt;
++        &lt;file name=&quot;GoTo_hidden&quot;/&gt;
++        &lt;folder name=&quot;Search&quot;&gt;
++            &lt;attr name=&quot;SystemFileSystem.localizingBundle&quot; stringvalue=&quot;org.netbeans.core.Bundle&quot;/&gt;
++            &lt;attr name=&quot;position&quot; intvalue=&quot;400&quot;/&gt;
++            &lt;file name=&quot;SeparatorBeforeGoToLine.instance_hidden&quot;/&gt;
++            &lt;file name=&quot;core-windows-SeparatorAfterRecentList.instance&quot; url=&quot;core-windows-SeparatorAfterRecentList.instance&quot;&gt;
++                &lt;attr name=&quot;instanceClass&quot; stringvalue=&quot;javax.swing.JSeparator&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;700&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindInThisDiskGroup.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Search/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindInThisDiskGroup.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;650&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindSelectFiles.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Search/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindSelectFiles.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;675&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionSearchForItems.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Search/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionSearchForItems.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;600&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;org-netbeans-core-windows-actions-RecentViewListAction.shadow_hidden&quot;/&gt;
++            &lt;file name=&quot;org-netbeans-modules-favorites-SelectInFavorites.shadow&quot; url=&quot;org-netbeans-modules-favorites-SelectInFavorites.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/SelectDocumentNode/org-netbeans-modules-favorites-Select.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;2800&quot;/&gt;
++            &lt;/file&gt;
++                &lt;file name=&quot;org-openide-actions-GotoAction.shadow_hidden&quot;/&gt;
++        &lt;/folder&gt;
++        &lt;folder name=&quot;View&quot;&gt;
++            &lt;file name=&quot;Separator1.instance_hidden&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCatalogsInfo.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/View/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCatalogsInfo.instance&quot;/&gt;
++                &lt;attr name=&quot;position&quot; intvalue=&quot;0&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;org-netbeans-core-actions-HTMLViewAction.instance_hidden&quot;/&gt;
++            &lt;file name=&quot;org-netbeans-core-actions-LogAction.instance_hidden&quot;/&gt;
++        &lt;/folder&gt;
+         &lt;folder name=&quot;Window&quot;&gt;
+             &lt;file name=&quot;DetailsViewAction.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-DetailsViewAction.instance&quot;/&gt;
+@@ -20,6 +152,17 @@
+     &lt;folder name=&quot;OptionsDialog&quot;&gt;
+         &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-JfindmyfilesguiOptionsCategory.instance&quot;/&gt;
+     &lt;/folder&gt;
++    &lt;folder name=&quot;Shortcuts&quot;&gt;
++        &lt;file name=&quot;S-F.shadow&quot;&gt;
++            &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Search/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionSearchForItems.instance&quot;/&gt;
++        &lt;/file&gt;
++        &lt;file name=&quot;S-N.shadow&quot;&gt;
++            &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionNewCatalog.instance&quot;/&gt;
++        &lt;/file&gt;
++            &lt;file name=&quot;S-O.shadow&quot;&gt;
++            &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionOpen.instance&quot;/&gt;
++        &lt;/file&gt;
++    &lt;/folder&gt;
+     &lt;folder name=&quot;Windows2&quot;&gt;
+         &lt;folder name=&quot;Components&quot;&gt;
+             &lt;file name=&quot;DetailsViewTopComponent.settings&quot; url=&quot;DetailsViewTopComponentSettings.xml&quot;/&gt;
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/org-netbeans-modules-favorites-SelectInFavorites.shadow
+===================================================================
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml	2008-04-29 14:52:48 UTC (rev 71)
+@@ -1,4 +1,7 @@
+ &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+ &lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
+ &lt;filesystem&gt;
++    &lt;folder name=&quot;Menu&quot;&gt;
++        &lt;folder name=&quot;File&quot;/&gt;
++    &lt;/folder&gt;
+ &lt;/filesystem&gt;
+
+Added: trunk/spikes/SPKlerDados/build-before-profiler.xml
+===================================================================
+--- trunk/spikes/SPKlerDados/build-before-profiler.xml	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/spikes/SPKlerDados/build-before-profiler.xml	2008-04-29 14:52:48 UTC (rev 71)
+@@ -0,0 +1,71 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See commented blocks below for --&gt;
++&lt;!-- some examples of how to customize the build. --&gt;
++&lt;!-- (If you delete it and reopen the project it will be recreated.) --&gt;
++&lt;project name=&quot;SPKlerDados&quot; default=&quot;default&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project SPKlerDados.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++    &lt;import file=&quot;nbproject/profiler-build-impl.xml&quot;/&gt;
++    &lt;import file=&quot;nbproject/profiler-build-impl.xml&quot;/&gt;
++    &lt;!--
++
++    There exist several targets which are by default empty and which can be 
++    used for execution of your tasks. These targets are usually executed 
++    before and after some main targets. They are: 
++
++      -pre-init:                 called before initialization of project properties
++      -post-init:                called after initialization of project properties
++      -pre-compile:              called before javac compilation
++      -post-compile:             called after javac compilation
++      -pre-compile-single:       called before javac compilation of single file
++      -post-compile-single:      called after javac compilation of single file
++      -pre-compile-test:         called before javac compilation of JUnit tests
++      -post-compile-test:        called after javac compilation of JUnit tests
++      -pre-compile-test-single:  called before javac compilation of single JUnit test
++      -post-compile-test-single: called after javac compilation of single JUunit test
++      -pre-jar:                  called before JAR building
++      -post-jar:                 called after JAR building
++      -post-clean:               called after cleaning build products
++
++    (Targets beginning with '-' are not intended to be called on their own.)
++
++    Example of inserting an obfuscator after compilation could look like this:
++
++        &lt;target name=&quot;-post-compile&quot;&gt;
++            &lt;obfuscate&gt;
++                &lt;fileset dir=&quot;${build.classes.dir}&quot;/&gt;
++            &lt;/obfuscate&gt;
++        &lt;/target&gt;
++
++    For list of available properties check the imported 
++    nbproject/build-impl.xml file. 
++
++
++    Another way to customize the build is by overriding existing main targets.
++    The targets of interest are: 
++
++      -init-macrodef-javac:     defines macro for javac compilation
++      -init-macrodef-junit:     defines macro for junit execution
++      -init-macrodef-debug:     defines macro for class debugging
++      -init-macrodef-java:      defines macro for class execution
++      -do-jar-with-manifest:    JAR building (if you are using a manifest)
++      -do-jar-without-manifest: JAR building (if you are not using a manifest)
++      run:                      execution of project 
++      -javadoc-build:           Javadoc generation
++      test-report:              JUnit report generation
++
++    An example of overriding the target for project execution could look like this:
++
++        &lt;target name=&quot;run&quot; depends=&quot;SPKlerDados-impl.jar&quot;&gt;
++            &lt;exec dir=&quot;bin&quot; executable=&quot;launcher.exe&quot;&gt;
++                &lt;arg file=&quot;${dist.jar}&quot;/&gt;
++            &lt;/exec&gt;
++        &lt;/target&gt;
++
++    Notice that the overridden target depends on the jar target and not only on 
++    the compile target as the regular run target does. Again, for a list of available 
++    properties which you can use, check the target you are overriding in the
++    nbproject/build-impl.xml file. 
++
++    --&gt;
++&lt;/project&gt;
+
+Modified: trunk/spikes/SPKlerDados/build.xml
+===================================================================
+--- trunk/spikes/SPKlerDados/build.xml	2008-04-29 14:50:30 UTC (rev 70)
++++ trunk/spikes/SPKlerDados/build.xml	2008-04-29 14:52:48 UTC (rev 71)
+@@ -7,6 +7,7 @@
+     &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
+     &lt;import file=&quot;nbproject/profiler-build-impl.xml&quot;/&gt;
+     &lt;import file=&quot;nbproject/profiler-build-impl.xml&quot;/&gt;
++    &lt;import file=&quot;nbproject/profiler-build-impl.xml&quot;/&gt;
+     &lt;!--
+ 
+     There exist several targets which are by default empty and which can be 
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000065.html">[Jfindmyfiles-commits] r70 - in trunk: docs docs/Iteracao2-CB05	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui
+</A></li>
+	<LI>Next message: <A HREF="000067.html">[Jfindmyfiles-commits] r72 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. actions
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#66">[ date ]</a>
+              <a href="thread.html#66">[ thread ]</a>
+              <a href="subject.html#66">[ subject ]</a>
+              <a href="author.html#66">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

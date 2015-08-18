@@ -1,0 +1,1165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r80 - in trunk/project/JFindMyFiles: .	Catalog Catalog/lib Catalog/nbproject	Catalog/src/de/berlios/jfindmyfiles/catalog/model	HibernateLibs HibernateLibs/nbproject HibernateLibs/release	HibernateLibs/release/modules	HibernateLibs/release/modules/ext HibernateLibs/src	HibernateLibs/src/hibernate nbproject
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r80%20-%20in%20trunk/project/JFindMyFiles%3A%20.%0A%09Catalog%20Catalog/lib%20Catalog/nbproject%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/model%0A%09HibernateLibs%20HibernateLibs/nbproject%20HibernateLibs/release%0A%09HibernateLibs/release/modules%0A%09HibernateLibs/release/modules/ext%20HibernateLibs/src%0A%09HibernateLibs/src/hibernate%20nbproject&In-Reply-To=%3C200805061422.m46EMmU0002825%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000074.html">
+   <LINK REL="Next"  HREF="000076.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r80 - in trunk/project/JFindMyFiles: .	Catalog Catalog/lib Catalog/nbproject	Catalog/src/de/berlios/jfindmyfiles/catalog/model	HibernateLibs HibernateLibs/nbproject HibernateLibs/release	HibernateLibs/release/modules	HibernateLibs/release/modules/ext HibernateLibs/src	HibernateLibs/src/hibernate nbproject</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r80%20-%20in%20trunk/project/JFindMyFiles%3A%20.%0A%09Catalog%20Catalog/lib%20Catalog/nbproject%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/model%0A%09HibernateLibs%20HibernateLibs/nbproject%20HibernateLibs/release%0A%09HibernateLibs/release/modules%0A%09HibernateLibs/release/modules/ext%20HibernateLibs/src%0A%09HibernateLibs/src/hibernate%20nbproject&In-Reply-To=%3C200805061422.m46EMmU0002825%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r80 - in trunk/project/JFindMyFiles: .	Catalog Catalog/lib Catalog/nbproject	Catalog/src/de/berlios/jfindmyfiles/catalog/model	HibernateLibs HibernateLibs/nbproject HibernateLibs/release	HibernateLibs/release/modules	HibernateLibs/release/modules/ext HibernateLibs/src	HibernateLibs/src/hibernate nbproject">knitter at mail.berlios.de
+       </A><BR>
+    <I>Tue May  6 16:22:48 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000074.html">[Jfindmyfiles-commits] r79 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. actions dialogs
+</A></li>
+        <LI>Next message: <A HREF="000076.html">[Jfindmyfiles-commits] r81 - in trunk: . libs project/JFindMyFiles project/JFindMyFiles/Catalog project/JFindMyFiles/Catalog/nbproject project/JFindMyFiles/Catalog/src project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils project/JFindMyFiles/HibernateLibs project/JFindMyFiles/JDBCDrivers project/JFindMyFiles/JDBCDrivers/nbproject project/JFindMyFiles/JDBCDrivers/release project/JFindMyFiles/JDBCDrivers/release/modules project/JFindMyFiles/JDBCDrivers/release/modules/ext project/JFindMyFiles/JDBCDrivers/src project/JFindMyFiles/JDBCDrivers/src/de project/JFindMyFiles/JDBCDrivers/src/de/berlios project/JFindMyFiles/JDBCDrivers/src/de/berlios/jfindmyfiles project/JFindMyFiles/JDBCDrivers/src/de/berlios/jfindmyfiles/jdbcdrivers project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions project/JFindMyFiles/Persi! stence project/JFindMyFiles/Persistence/nbproject project/JFindMyFiles/Persistence/release project/JFindMyFiles/Persistence/release/modules project/JFindMyFiles/Persistence/release/modules/ext project/JFindMyFiles/Persistence/src project/JFindMyFiles/Persistence/src/de project/JFindMyFiles/Persistence/src/de/berlios project/JFindMyFiles/Persistence/src/de/berlios/jfindmyfiles project/JFindMyFiles/Persistence/src/de/berlios/jfindmyfiles/persistence project/JFindMyFiles/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#75">[ date ]</a>
+              <a href="thread.html#75">[ thread ]</a>
+              <a href="subject.html#75">[ subject ]</a>
+              <a href="author.html#75">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-06 16:21:49 +0200 (Tue, 06 May 2008)
+New Revision: 80
+
+Added:
+   trunk/project/JFindMyFiles/Catalog/lib/
+   trunk/project/JFindMyFiles/Catalog/lib/antlr-2.7.6.jar
+   trunk/project/JFindMyFiles/Catalog/lib/asm-attrs.jar
+   trunk/project/JFindMyFiles/Catalog/lib/asm.jar
+   trunk/project/JFindMyFiles/Catalog/lib/cglib-2.1.3.jar
+   trunk/project/JFindMyFiles/Catalog/lib/commons-collections-2.1.1.jar
+   trunk/project/JFindMyFiles/Catalog/lib/commons-logging-1.0.4.jar
+   trunk/project/JFindMyFiles/Catalog/lib/dom4j-1.6.1.jar
+   trunk/project/JFindMyFiles/Catalog/lib/hibernate3.jar
+   trunk/project/JFindMyFiles/Catalog/lib/jta.jar
+   trunk/project/JFindMyFiles/Catalog/lib/log4j-1.2.11.jar
+   trunk/project/JFindMyFiles/HibernateLibs/
+   trunk/project/JFindMyFiles/HibernateLibs/build.xml
+   trunk/project/JFindMyFiles/HibernateLibs/manifest.mf
+   trunk/project/JFindMyFiles/HibernateLibs/nbproject/
+   trunk/project/JFindMyFiles/HibernateLibs/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/HibernateLibs/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/HibernateLibs/nbproject/project.properties
+   trunk/project/JFindMyFiles/HibernateLibs/nbproject/project.xml
+   trunk/project/JFindMyFiles/HibernateLibs/nbproject/suite.properties
+   trunk/project/JFindMyFiles/HibernateLibs/release/
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/antlr-2.7.6.jar
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/asm-attrs.jar
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/asm.jar
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/cglib-2.1.3.jar
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/commons-collections-2.1.1.jar
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/commons-logging-1.0.4.jar
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/dom4j-1.6.1.jar
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/hibernate3.jar
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/jta.jar
+   trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/log4j-1.2.11.jar
+   trunk/project/JFindMyFiles/HibernateLibs/src/
+   trunk/project/JFindMyFiles/HibernateLibs/src/hibernate/
+   trunk/project/JFindMyFiles/HibernateLibs/src/hibernate/Bundle.properties
+Modified:
+   trunk/project/JFindMyFiles/
+   trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/Catalog/nbproject/project.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/AudioData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/DiskGroup.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/FileWrapper.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/ImageData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Label.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Loan.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Medium.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Type.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/User.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/VideoData.java
+   trunk/project/JFindMyFiles/nbproject/project.properties
+Log:
+Adicionadas bibliotecas para uso de sistema de persist?\195?\170ncia Hibernate e in?\195?\173cio do c?\195?\179digo para persist?\195?\170ncia.
+
+
+Property changes on: trunk/project/JFindMyFiles
+___________________________________________________________________
+Name: svn:ignore
+   - build
+
+   + build
+dist
+
+
+Added: trunk/project/JFindMyFiles/Catalog/lib/antlr-2.7.6.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/lib/antlr-2.7.6.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/Catalog/lib/asm-attrs.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/lib/asm-attrs.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/Catalog/lib/asm.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/lib/asm.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/Catalog/lib/cglib-2.1.3.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/lib/cglib-2.1.3.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/Catalog/lib/commons-collections-2.1.1.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/lib/commons-collections-2.1.1.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/Catalog/lib/commons-logging-1.0.4.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/lib/commons-logging-1.0.4.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/Catalog/lib/dom4j-1.6.1.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/lib/dom4j-1.6.1.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/Catalog/lib/hibernate3.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/lib/hibernate3.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/Catalog/lib/jta.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/lib/jta.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/Catalog/lib/log4j-1.2.11.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/lib/log4j-1.2.11.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties	2008-05-06 14:21:49 UTC (rev 80)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=ba51afc3
++build.xml.data.CRC32=b390b4de
+ build.xml.script.CRC32=986962b5
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=ba51afc3
++nbproject/build-impl.xml.data.CRC32=b390b4de
+ nbproject/build-impl.xml.script.CRC32=ff140e4d
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/Catalog/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/project.xml	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/project.xml	2008-05-06 14:21:49 UTC (rev 80)
+@@ -5,7 +5,16 @@
+         &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
+             &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
+             &lt;suite-component/&gt;
+-            &lt;module-dependencies/&gt;
++            &lt;module-dependencies&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;hibernate&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++            &lt;/module-dependencies&gt;
+             &lt;public-packages&gt;
+                 &lt;package&gt;de.berlios.jfindmyfiles.catalog.model&lt;/package&gt;
+             &lt;/public-packages&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/AudioData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/AudioData.java	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/AudioData.java	2008-05-06 14:21:49 UTC (rev 80)
+@@ -11,6 +11,23 @@
+  */
+ public class AudioData {
+     
++    private Long id;
+     private FileWrapper owner;
++    
++    public Long getId() {
++        return id;
++    }
+ 
++    private void setId(Long id) {
++        this.id = id;
++    }
++
++    public FileWrapper getOwner() {
++        return owner;
++    }
++
++    public void setOwner(FileWrapper owner) {
++        this.owner = owner;
++    }
++
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/DiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/DiskGroup.java	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/DiskGroup.java	2008-05-06 14:21:49 UTC (rev 80)
+@@ -12,8 +12,49 @@
+  */
+ public class DiskGroup {
+ 
++    private Long id;
+     private String name;
+     private String description;
+     private List&lt;DiskGroup&gt; groups;
+     private List&lt;FileWrapper&gt; files;
++    
++    public String getDescription() {
++        return description;
++    }
++
++    public void setDescription(String description) {
++        this.description = description;
++    }
++
++    private List&lt;FileWrapper&gt; getFiles() {
++        return files;
++    }
++
++    private void setFiles(List&lt;FileWrapper&gt; files) {
++        this.files = files;
++    }
++
++    private List&lt;DiskGroup&gt; getGroups() {
++        return groups;
++    }
++
++    private void setGroups(List&lt;DiskGroup&gt; groups) {
++        this.groups = groups;
++    }
++
++    public Long getId() {
++        return id;
++    }
++
++    private void setId(Long id) {
++        this.id = id;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/FileWrapper.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/FileWrapper.java	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/FileWrapper.java	2008-05-06 14:21:49 UTC (rev 80)
+@@ -13,6 +13,7 @@
+  */
+ public class FileWrapper {
+     
++    private Long id;
+     private Medium disk;
+     private long size;
+     private boolean file;
+@@ -24,5 +25,109 @@
+     private List&lt;Label&gt; label;
+     private List&lt;FileWrapper&gt; children;
+     private FileWrapper parent;
+-    private String description;    
++    private String description;     
++
++    public String getAbsolutePath() {
++        return absolutePath;
++    }
++
++    public void setAbsolutePath(String absolutePath) {
++        this.absolutePath = absolutePath;
++    }
++
++    private List&lt;FileWrapper&gt; getChildren() {
++        return children;
++    }
++
++    private void setChildren(List&lt;FileWrapper&gt; children) {
++        this.children = children;
++    }
++
++    public String getDescription() {
++        return description;
++    }
++
++    public void setDescription(String description) {
++        this.description = description;
++    }
++
++    public Medium getDisk() {
++        return disk;
++    }
++
++    public void setDisk(Medium disk) {
++        this.disk = disk;
++    }
++
++    public boolean isFile() {
++        return file;
++    }
++
++    public void setFile(boolean file) {
++        this.file = file;
++    }
++
++    public boolean isFolder() {
++        return folder;
++    }
++
++    public void setFolder(boolean folder) {
++        this.folder = folder;
++    }
++
++    public boolean isHidden() {
++        return hidden;
++    }
++
++    public void setHidden(boolean hidden) {
++        this.hidden = hidden;
++    }
++
++    public Long getId() {
++        return id;
++    }
++
++    private void setId(Long id) {
++        this.id = id;
++    }
++
++    private List&lt;Label&gt; getLabel() {
++        return label;
++    }
++
++    private void setLabel(List&lt;Label&gt; label) {
++        this.label = label;
++    }
++
++    public long getLastModified() {
++        return lastModified;
++    }
++
++    public void setLastModified(long lastModified) {
++        this.lastModified = lastModified;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
++    public FileWrapper getParent() {
++        return parent;
++    }
++
++    public void setParent(FileWrapper parent) {
++        this.parent = parent;
++    }
++
++    public long getSize() {
++        return size;
++    }
++
++    public void setSize(long size) {
++        this.size = size;
++    }   
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/ImageData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/ImageData.java	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/ImageData.java	2008-05-06 14:21:49 UTC (rev 80)
+@@ -11,6 +11,22 @@
+  */
+ public class ImageData {
+     
++    private Long id;
+     private FileWrapper owner;
++    
++    public Long getId() {
++        return id;
++    }
+ 
++    private void setId(Long id) {
++        this.id = id;
++    }
++
++    public FileWrapper getOwner() {
++        return owner;
++    }
++
++    public void setOwner(FileWrapper owner) {
++        this.owner = owner;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Label.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Label.java	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Label.java	2008-05-06 14:21:49 UTC (rev 80)
+@@ -2,7 +2,6 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.catalog.model;
+ 
+ /**
+@@ -10,7 +9,23 @@
+  * @author ei10635
+  */
+ public class Label {
+-    
++
++    private Long id;
+     private String name;
+ 
++    public Long getId() {
++        return id;
++    }
++
++    private void setId(Long id) {
++        this.id = id;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Loan.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Loan.java	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Loan.java	2008-05-06 14:21:49 UTC (rev 80)
+@@ -13,9 +13,50 @@
+  */
+ public class Loan {
+     
++    private Long id;
+     private Date loaned;
+     private Date returned;
+     private User loanee;
+     private Medium medium;
++    
++    public Long getId() {
++        return id;
++    }
+ 
++    private void setId(Long id) {
++        this.id = id;
++    }
++
++    public Date getLoaned() {
++        return loaned;
++    }
++
++    public void setLoaned(Date loaned) {
++        this.loaned = loaned;
++    }
++
++    public User getLoanee() {
++        return loanee;
++    }
++
++    public void setLoanee(User loanee) {
++        this.loanee = loanee;
++    }
++
++    public Medium getMedium() {
++        return medium;
++    }
++
++    public void setMedium(Medium medium) {
++        this.medium = medium;
++    }
++
++    public Date getReturned() {
++        return returned;
++    }
++
++    public void setReturned(Date returned) {
++        this.returned = returned;
++    }
++
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Medium.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Medium.java	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Medium.java	2008-05-06 14:21:49 UTC (rev 80)
+@@ -11,7 +11,32 @@
+  */
+ public class Medium {
+     
++    private Long id;
+     private FileWrapper file;
+     private String description;
++    
++    public String getDescription() {
++        return description;
++    }
+ 
++    public void setDescription(String description) {
++        this.description = description;
++    }
++
++    public FileWrapper getFile() {
++        return file;
++    }
++
++    public void setFile(FileWrapper file) {
++        this.file = file;
++    }
++
++    public Long getId() {
++        return id;
++    }
++
++    private void setId(Long id) {
++        this.id = id;
++    }
++
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Type.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Type.java	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/Type.java	2008-05-06 14:21:49 UTC (rev 80)
+@@ -10,7 +10,24 @@
+  * @author ei10635
+  */
+ public class Type {
+-    
++
++    private long id;
+     private String name;
+ 
++    public long getId() {
++        return id;
++    }
++
++    private void setId(long id) {
++        this.id = id;
++    }
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/User.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/User.java	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/User.java	2008-05-06 14:21:49 UTC (rev 80)
+@@ -13,8 +13,41 @@
+  */
+ public class User {
+     
++    private Long id;
+     private String firstname;
+     private String surname;
+     private List&lt;Loan&gt; loans;
+ 
++    public String getFirstname() {
++        return firstname;
++    }
++
++    public void setFirstname(String firstname) {
++        this.firstname = firstname;
++    }
++
++    public Long getId() {
++        return id;
++    }
++
++    private void setId(Long id) {
++        this.id = id;
++    }
++
++    private List&lt;Loan&gt; getLoans() {
++        return loans;
++    }
++
++    private void setLoans(List&lt;Loan&gt; loans) {
++        this.loans = loans;
++    }
++
++    public String getSurname() {
++        return surname;
++    }
++
++    public void setSurname(String surname) {
++        this.surname = surname;
++    }
++
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/VideoData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/VideoData.java	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model/VideoData.java	2008-05-06 14:21:49 UTC (rev 80)
+@@ -2,7 +2,6 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.catalog.model;
+ 
+ /**
+@@ -10,7 +9,23 @@
+  * @author ei10635
+  */
+ public class VideoData {
+-    
++
++    private Long id;
+     private FileWrapper owner;
+ 
++    public Long getId() {
++        return id;
++    }
++
++    private void setId(Long id) {
++        this.id = id;
++    }
++
++    public FileWrapper getOwner() {
++        return owner;
++    }
++
++    public void setOwner(FileWrapper owner) {
++        this.owner = owner;
++    }
+ }
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/HibernateLibs/build.xml	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/HibernateLibs/build.xml	2008-05-06 14:21:49 UTC (rev 80)
+@@ -0,0 +1,8 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;hibernate&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project hibernate.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/manifest.mf
+===================================================================
+--- trunk/project/JFindMyFiles/HibernateLibs/manifest.mf	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/HibernateLibs/manifest.mf	2008-05-06 14:21:49 UTC (rev 80)
+@@ -0,0 +1,5 @@
++Manifest-Version: 1.0
++OpenIDE-Module: hibernate
++OpenIDE-Module-Localizing-Bundle: hibernate/Bundle.properties
++OpenIDE-Module-Specification-Version: 1.0
++
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/HibernateLibs/nbproject/build-impl.xml	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/HibernateLibs/nbproject/build-impl.xml	2008-05-06 14:21:49 UTC (rev 80)
+@@ -0,0 +1,30 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;hibernate-impl&quot; basedir=&quot;..&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject2:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
++    &lt;nbmproject2:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/HibernateLibs/nbproject/genfiles.properties	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/HibernateLibs/nbproject/genfiles.properties	2008-05-06 14:21:49 UTC (rev 80)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=d0cad4de
++build.xml.script.CRC32=2f6b0985
++build.xml.stylesheet.CRC32=79c3b980
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=d0cad4de
++nbproject/build-impl.xml.script.CRC32=3c9b4f62
++nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/HibernateLibs/nbproject/project.properties	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/HibernateLibs/nbproject/project.properties	2008-05-06 14:21:49 UTC (rev 80)
+@@ -0,0 +1 @@
++is.autoload=true
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/HibernateLibs/nbproject/project.xml	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/HibernateLibs/nbproject/project.xml	2008-05-06 14:21:49 UTC (rev 80)
+@@ -0,0 +1,193 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
++            &lt;code-name-base&gt;hibernate&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies/&gt;
++            &lt;public-packages&gt;
++                &lt;package&gt;antlr&lt;/package&gt;
++                &lt;package&gt;antlr.ASdebug&lt;/package&gt;
++                &lt;package&gt;antlr.actions.cpp&lt;/package&gt;
++                &lt;package&gt;antlr.actions.csharp&lt;/package&gt;
++                &lt;package&gt;antlr.actions.java&lt;/package&gt;
++                &lt;package&gt;antlr.actions.python&lt;/package&gt;
++                &lt;package&gt;antlr.build&lt;/package&gt;
++                &lt;package&gt;antlr.collections&lt;/package&gt;
++                &lt;package&gt;antlr.collections.impl&lt;/package&gt;
++                &lt;package&gt;antlr.debug&lt;/package&gt;
++                &lt;package&gt;antlr.debug.misc&lt;/package&gt;
++                &lt;package&gt;antlr.preprocessor&lt;/package&gt;
++                &lt;package&gt;javax.transaction&lt;/package&gt;
++                &lt;package&gt;javax.transaction.xa&lt;/package&gt;
++                &lt;package&gt;net.sf.cglib.beans&lt;/package&gt;
++                &lt;package&gt;net.sf.cglib.core&lt;/package&gt;
++                &lt;package&gt;net.sf.cglib.proxy&lt;/package&gt;
++                &lt;package&gt;net.sf.cglib.reflect&lt;/package&gt;
++                &lt;package&gt;net.sf.cglib.transform&lt;/package&gt;
++                &lt;package&gt;net.sf.cglib.transform.hook&lt;/package&gt;
++                &lt;package&gt;net.sf.cglib.transform.impl&lt;/package&gt;
++                &lt;package&gt;net.sf.cglib.util&lt;/package&gt;
++                &lt;package&gt;org.apache.commons.collections&lt;/package&gt;
++                &lt;package&gt;org.apache.commons.collections.comparators&lt;/package&gt;
++                &lt;package&gt;org.apache.commons.collections.iterators&lt;/package&gt;
++                &lt;package&gt;org.apache.commons.logging&lt;/package&gt;
++                &lt;package&gt;org.apache.commons.logging.impl&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.chainsaw&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.config&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.helpers&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.jdbc&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.jmx&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.lf5&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.lf5.util&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.lf5.viewer&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.lf5.viewer.categoryexplorer&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.lf5.viewer.configure&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.net&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.nt&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.or&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.or.jms&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.or.sax&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.spi&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.varia&lt;/package&gt;
++                &lt;package&gt;org.apache.log4j.xml&lt;/package&gt;
++                &lt;package&gt;org.dom4j&lt;/package&gt;
++                &lt;package&gt;org.dom4j.bean&lt;/package&gt;
++                &lt;package&gt;org.dom4j.datatype&lt;/package&gt;
++                &lt;package&gt;org.dom4j.dom&lt;/package&gt;
++                &lt;package&gt;org.dom4j.dtd&lt;/package&gt;
++                &lt;package&gt;org.dom4j.io&lt;/package&gt;
++                &lt;package&gt;org.dom4j.jaxb&lt;/package&gt;
++                &lt;package&gt;org.dom4j.rule&lt;/package&gt;
++                &lt;package&gt;org.dom4j.rule.pattern&lt;/package&gt;
++                &lt;package&gt;org.dom4j.swing&lt;/package&gt;
++                &lt;package&gt;org.dom4j.tree&lt;/package&gt;
++                &lt;package&gt;org.dom4j.util&lt;/package&gt;
++                &lt;package&gt;org.dom4j.xpath&lt;/package&gt;
++                &lt;package&gt;org.dom4j.xpp&lt;/package&gt;
++                &lt;package&gt;org.hibernate&lt;/package&gt;
++                &lt;package&gt;org.hibernate.action&lt;/package&gt;
++                &lt;package&gt;org.hibernate.bytecode&lt;/package&gt;
++                &lt;package&gt;org.hibernate.bytecode.cglib&lt;/package&gt;
++                &lt;package&gt;org.hibernate.bytecode.javassist&lt;/package&gt;
++                &lt;package&gt;org.hibernate.bytecode.util&lt;/package&gt;
++                &lt;package&gt;org.hibernate.cache&lt;/package&gt;
++                &lt;package&gt;org.hibernate.cache.entry&lt;/package&gt;
++                &lt;package&gt;org.hibernate.cfg&lt;/package&gt;
++                &lt;package&gt;org.hibernate.classic&lt;/package&gt;
++                &lt;package&gt;org.hibernate.collection&lt;/package&gt;
++                &lt;package&gt;org.hibernate.connection&lt;/package&gt;
++                &lt;package&gt;org.hibernate.context&lt;/package&gt;
++                &lt;package&gt;org.hibernate.criterion&lt;/package&gt;
++                &lt;package&gt;org.hibernate.dialect&lt;/package&gt;
++                &lt;package&gt;org.hibernate.dialect.function&lt;/package&gt;
++                &lt;package&gt;org.hibernate.dialect.lock&lt;/package&gt;
++                &lt;package&gt;org.hibernate.engine&lt;/package&gt;
++                &lt;package&gt;org.hibernate.engine.loading&lt;/package&gt;
++                &lt;package&gt;org.hibernate.engine.query&lt;/package&gt;
++                &lt;package&gt;org.hibernate.engine.query.sql&lt;/package&gt;
++                &lt;package&gt;org.hibernate.engine.transaction&lt;/package&gt;
++                &lt;package&gt;org.hibernate.event&lt;/package&gt;
++                &lt;package&gt;org.hibernate.event.def&lt;/package&gt;
++                &lt;package&gt;org.hibernate.exception&lt;/package&gt;
++                &lt;package&gt;org.hibernate.hql&lt;/package&gt;
++                &lt;package&gt;org.hibernate.hql.antlr&lt;/package&gt;
++                &lt;package&gt;org.hibernate.hql.ast&lt;/package&gt;
++                &lt;package&gt;org.hibernate.hql.ast.exec&lt;/package&gt;
++                &lt;package&gt;org.hibernate.hql.ast.tree&lt;/package&gt;
++                &lt;package&gt;org.hibernate.hql.ast.util&lt;/package&gt;
++                &lt;package&gt;org.hibernate.hql.classic&lt;/package&gt;
++                &lt;package&gt;org.hibernate.id&lt;/package&gt;
++                &lt;package&gt;org.hibernate.id.enhanced&lt;/package&gt;
++                &lt;package&gt;org.hibernate.id.insert&lt;/package&gt;
++                &lt;package&gt;org.hibernate.impl&lt;/package&gt;
++                &lt;package&gt;org.hibernate.intercept&lt;/package&gt;
++                &lt;package&gt;org.hibernate.intercept.cglib&lt;/package&gt;
++                &lt;package&gt;org.hibernate.intercept.javassist&lt;/package&gt;
++                &lt;package&gt;org.hibernate.jdbc&lt;/package&gt;
++                &lt;package&gt;org.hibernate.jmx&lt;/package&gt;
++                &lt;package&gt;org.hibernate.loader&lt;/package&gt;
++                &lt;package&gt;org.hibernate.loader.collection&lt;/package&gt;
++                &lt;package&gt;org.hibernate.loader.criteria&lt;/package&gt;
++                &lt;package&gt;org.hibernate.loader.custom&lt;/package&gt;
++                &lt;package&gt;org.hibernate.loader.custom.sql&lt;/package&gt;
++                &lt;package&gt;org.hibernate.loader.entity&lt;/package&gt;
++                &lt;package&gt;org.hibernate.loader.hql&lt;/package&gt;
++                &lt;package&gt;org.hibernate.lob&lt;/package&gt;
++                &lt;package&gt;org.hibernate.mapping&lt;/package&gt;
++                &lt;package&gt;org.hibernate.metadata&lt;/package&gt;
++                &lt;package&gt;org.hibernate.param&lt;/package&gt;
++                &lt;package&gt;org.hibernate.persister&lt;/package&gt;
++                &lt;package&gt;org.hibernate.persister.collection&lt;/package&gt;
++                &lt;package&gt;org.hibernate.persister.entity&lt;/package&gt;
++                &lt;package&gt;org.hibernate.pretty&lt;/package&gt;
++                &lt;package&gt;org.hibernate.property&lt;/package&gt;
++                &lt;package&gt;org.hibernate.proxy&lt;/package&gt;
++                &lt;package&gt;org.hibernate.proxy.dom4j&lt;/package&gt;
++                &lt;package&gt;org.hibernate.proxy.map&lt;/package&gt;
++                &lt;package&gt;org.hibernate.proxy.pojo&lt;/package&gt;
++                &lt;package&gt;org.hibernate.proxy.pojo.cglib&lt;/package&gt;
++                &lt;package&gt;org.hibernate.proxy.pojo.javassist&lt;/package&gt;
++                &lt;package&gt;org.hibernate.secure&lt;/package&gt;
++                &lt;package&gt;org.hibernate.sql&lt;/package&gt;
++                &lt;package&gt;org.hibernate.stat&lt;/package&gt;
++                &lt;package&gt;org.hibernate.tool.hbm2ddl&lt;/package&gt;
++                &lt;package&gt;org.hibernate.tool.instrument&lt;/package&gt;
++                &lt;package&gt;org.hibernate.tool.instrument.cglib&lt;/package&gt;
++                &lt;package&gt;org.hibernate.tool.instrument.javassist&lt;/package&gt;
++                &lt;package&gt;org.hibernate.transaction&lt;/package&gt;
++                &lt;package&gt;org.hibernate.transform&lt;/package&gt;
++                &lt;package&gt;org.hibernate.tuple&lt;/package&gt;
++                &lt;package&gt;org.hibernate.tuple.component&lt;/package&gt;
++                &lt;package&gt;org.hibernate.tuple.entity&lt;/package&gt;
++                &lt;package&gt;org.hibernate.type&lt;/package&gt;
++                &lt;package&gt;org.hibernate.usertype&lt;/package&gt;
++                &lt;package&gt;org.hibernate.util&lt;/package&gt;
++                &lt;package&gt;org.objectweb.asm&lt;/package&gt;
++                &lt;package&gt;org.objectweb.asm.attrs&lt;/package&gt;
++            &lt;/public-packages&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/asm-attrs.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/asm-attrs.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/dom4j-1.6.1.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/dom4j-1.6.1.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/commons-collections-2.1.1.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/commons-collections-2.1.1.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/commons-logging-1.0.4.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/commons-logging-1.0.4.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/asm.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/asm.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/jta.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/jta.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/log4j-1.2.11.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/log4j-1.2.11.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/cglib-2.1.3.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/cglib-2.1.3.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/hibernate3.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/hibernate3.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/antlr-2.7.6.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/antlr-2.7.6.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/nbproject/suite.properties
+===================================================================
+--- trunk/project/JFindMyFiles/HibernateLibs/nbproject/suite.properties	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/HibernateLibs/nbproject/suite.properties	2008-05-06 14:21:49 UTC (rev 80)
+@@ -0,0 +1 @@
++suite.dir=${basedir}/..
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/antlr-2.7.6.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/antlr-2.7.6.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/asm-attrs.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/asm-attrs.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/asm.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/asm.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/cglib-2.1.3.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/cglib-2.1.3.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/commons-collections-2.1.1.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/commons-collections-2.1.1.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/commons-logging-1.0.4.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/commons-logging-1.0.4.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/dom4j-1.6.1.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/dom4j-1.6.1.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/hibernate3.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/hibernate3.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/jta.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/jta.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/log4j-1.2.11.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/HibernateLibs/release/modules/ext/log4j-1.2.11.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/HibernateLibs/src/hibernate/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/HibernateLibs/src/hibernate/Bundle.properties	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/HibernateLibs/src/hibernate/Bundle.properties	2008-05-06 14:21:49 UTC (rev 80)
+@@ -0,0 +1 @@
++OpenIDE-Module-Name=HibernateLibs
+
+Modified: trunk/project/JFindMyFiles/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/project.properties	2008-05-06 00:47:08 UTC (rev 79)
++++ trunk/project/JFindMyFiles/nbproject/project.properties	2008-05-06 14:21:49 UTC (rev 80)
+@@ -6,8 +6,10 @@
+     ${project.de.berlios.jfindmyfiles.readingfiles}:\
+     ${project.de.berlios.jfindmyfiles.catalog}:\
+     ${project.de.berlios.jfindmyfiles.jfindmyfilesgui}:\
+-    ${project.de.berlios.jfindmyfiles.exportengine}
++    ${project.de.berlios.jfindmyfiles.exportengine}:\
++    ${project.hibernate}
+ project.de.berlios.jfindmyfiles.catalog=Catalog
+ project.de.berlios.jfindmyfiles.exportengine=ExportEngine
+ project.de.berlios.jfindmyfiles.jfindmyfilesgui=JFindMyFilesGui
+ project.de.berlios.jfindmyfiles.readingfiles=ReadingFiles
++project.hibernate=HibernateLibs
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000074.html">[Jfindmyfiles-commits] r79 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. actions dialogs
+</A></li>
+	<LI>Next message: <A HREF="000076.html">[Jfindmyfiles-commits] r81 - in trunk: . libs project/JFindMyFiles project/JFindMyFiles/Catalog project/JFindMyFiles/Catalog/nbproject project/JFindMyFiles/Catalog/src project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/model project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils project/JFindMyFiles/HibernateLibs project/JFindMyFiles/JDBCDrivers project/JFindMyFiles/JDBCDrivers/nbproject project/JFindMyFiles/JDBCDrivers/release project/JFindMyFiles/JDBCDrivers/release/modules project/JFindMyFiles/JDBCDrivers/release/modules/ext project/JFindMyFiles/JDBCDrivers/src project/JFindMyFiles/JDBCDrivers/src/de project/JFindMyFiles/JDBCDrivers/src/de/berlios project/JFindMyFiles/JDBCDrivers/src/de/berlios/jfindmyfiles project/JFindMyFiles/JDBCDrivers/src/de/berlios/jfindmyfiles/jdbcdrivers project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions project/JFindMyFiles/Persi! stence project/JFindMyFiles/Persistence/nbproject project/JFindMyFiles/Persistence/release project/JFindMyFiles/Persistence/release/modules project/JFindMyFiles/Persistence/release/modules/ext project/JFindMyFiles/Persistence/src project/JFindMyFiles/Persistence/src/de project/JFindMyFiles/Persistence/src/de/berlios project/JFindMyFiles/Persistence/src/de/berlios/jfindmyfiles project/JFindMyFiles/Persistence/src/de/berlios/jfindmyfiles/persistence project/JFindMyFiles/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#75">[ date ]</a>
+              <a href="thread.html#75">[ thread ]</a>
+              <a href="subject.html#75">[ subject ]</a>
+              <a href="author.html#75">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

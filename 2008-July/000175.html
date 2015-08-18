@@ -1,0 +1,1112 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r180 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. nodes utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r180%20-%20in%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%3A%0A%09.%20nodes%20utils&In-Reply-To=%3C200807011906.m61J63pD012101%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000174.html">
+   <LINK REL="Next"  HREF="000176.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r180 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. nodes utils</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r180%20-%20in%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%3A%0A%09.%20nodes%20utils&In-Reply-To=%3C200807011906.m61J63pD012101%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r180 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. nodes utils">knitter at mail.berlios.de
+       </A><BR>
+    <I>Tue Jul  1 21:06:03 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000174.html">[Jfindmyfiles-commits] r179 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui
+</A></li>
+        <LI>Next message: <A HREF="000176.html">[Jfindmyfiles-commits] r181 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#175">[ date ]</a>
+              <a href="thread.html#175">[ thread ]</a>
+              <a href="subject.html#175">[ subject ]</a>
+              <a href="author.html#175">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-07-01 21:05:48 +0200 (Tue, 01 Jul 2008)
+New Revision: 180
+
+Added:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/TableView.java
+Modified:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java
+Log:
+Mais c?\195?\179digo implementado na tentativa de criar a interface necess?\195?\161ria para visualizar os ficheiros existentes na base de dados.
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-07-01 14:47:37 UTC (rev 179)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-07-01 19:05:48 UTC (rev 180)
+@@ -97,4 +97,3 @@
+ LinuxPanel.jbtnRemove.text=Remove
+ LinuxPanel.jtbnBrowse.text=...
+ LinuxPanel.jchkScanMedia.text=Scan /media to find CD-ROM, DVD-ROM and FLASH disks?
+-WindowTestingTopComponent.jpTableView.border.title=TableView
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form	2008-07-01 14:47:37 UTC (rev 179)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form	2008-07-01 19:05:48 UTC (rev 180)
+@@ -10,38 +10,20 @@
+     &lt;AuxValue name=&quot;FormSettings_listenerGenerationStyle&quot; type=&quot;java.lang.Integer&quot; value=&quot;0&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_variablesLocal&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
+     &lt;AuxValue name=&quot;FormSettings_variablesModifier&quot; type=&quot;java.lang.Integer&quot; value=&quot;2&quot;/&gt;
++    &lt;AuxValue name=&quot;designerSize&quot; type=&quot;java.awt.Dimension&quot; value=&quot;-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,44,0,0,1,-112&quot;/&gt;
+   &lt;/AuxValues&gt;
+ 
+-  &lt;Layout&gt;
+-    &lt;DimensionLayout dim=&quot;0&quot;&gt;
+-      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jpTableView&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jScrollPane1&quot; alignment=&quot;0&quot; pref=&quot;376&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;/Group&gt;
+-              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-          &lt;/Group&gt;
+-      &lt;/Group&gt;
+-    &lt;/DimensionLayout&gt;
+-    &lt;DimensionLayout dim=&quot;1&quot;&gt;
+-      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Component id=&quot;jScrollPane1&quot; min=&quot;-2&quot; pref=&quot;93&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Component id=&quot;jpTableView&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-          &lt;/Group&gt;
+-      &lt;/Group&gt;
+-    &lt;/DimensionLayout&gt;
+-  &lt;/Layout&gt;
++  &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.DesignBorderLayout&quot;/&gt;
+   &lt;SubComponents&gt;
+     &lt;Container class=&quot;javax.swing.JScrollPane&quot; name=&quot;jScrollPane1&quot;&gt;
+       &lt;AuxValues&gt;
+         &lt;AuxValue name=&quot;autoScrollPane&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
+       &lt;/AuxValues&gt;
++      &lt;Constraints&gt;
++        &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.DesignBorderLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription&quot;&gt;
++          &lt;BorderConstraints direction=&quot;South&quot;/&gt;
++        &lt;/Constraint&gt;
++      &lt;/Constraints&gt;
+ 
+       &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout&quot;/&gt;
+       &lt;SubComponents&gt;
+@@ -54,29 +36,5 @@
+         &lt;/Component&gt;
+       &lt;/SubComponents&gt;
+     &lt;/Container&gt;
+-    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jpTableView&quot;&gt;
+-      &lt;Properties&gt;
+-        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
+-          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
+-            &lt;TitledBorder title=&quot;TableView&quot;&gt;
+-              &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties&quot; key=&quot;WindowTestingTopComponent.jpTableView.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+-            &lt;/TitledBorder&gt;
+-          &lt;/Border&gt;
+-        &lt;/Property&gt;
+-      &lt;/Properties&gt;
+-
+-      &lt;Layout&gt;
+-        &lt;DimensionLayout dim=&quot;0&quot;&gt;
+-          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace min=&quot;0&quot; pref=&quot;364&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-          &lt;/Group&gt;
+-        &lt;/DimensionLayout&gt;
+-        &lt;DimensionLayout dim=&quot;1&quot;&gt;
+-          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace min=&quot;0&quot; pref=&quot;150&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-          &lt;/Group&gt;
+-        &lt;/DimensionLayout&gt;
+-      &lt;/Layout&gt;
+-    &lt;/Container&gt;
+   &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java	2008-07-01 14:47:37 UTC (rev 179)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java	2008-07-01 19:05:48 UTC (rev 180)
+@@ -4,17 +4,31 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.CatalogNode;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.DiskGroupNode;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.DiskNode;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.FileWrapperNode;
++import java.awt.BorderLayout;
++import java.awt.Color;
+ import java.awt.Component;
+ import java.io.Serializable;
+ import java.lang.reflect.InvocationTargetException;
++import java.util.Collection;
++import java.util.List;
+ import java.util.logging.Logger;
+ import javax.swing.JLabel;
+ import javax.swing.JTable;
+ import javax.swing.event.TableModelEvent;
+ import javax.swing.event.TableModelListener;
++import javax.swing.table.AbstractTableModel;
+ import javax.swing.table.TableCellRenderer;
++import org.hibernate.Session;
+ import org.openide.explorer.propertysheet.PropertyPanel;
++import org.openide.explorer.propertysheet.PropertySheet;
+ import org.openide.explorer.view.NodeTableModel;
+ import org.openide.nodes.Node;
+ import org.openide.nodes.Node.Property;
+@@ -29,7 +43,7 @@
+ /**
+  * Top component which displays something.
+  */
+-final class WindowTestingTopComponent extends TopComponent implements LookupListener {
++final class WindowTestingTopComponent extends TopComponent implements /*ExplorerManager.Provider,*/ LookupListener {
+ 
+     private NodeTableModel ntModel;
+     private static WindowTestingTopComponent instance;
+@@ -46,11 +60,12 @@
+         Lookup.Result r = Utilities.actionsGlobalContext().lookup(new Lookup.Template&lt;Media&gt;(Media.class));
+         r.addLookupListener(this);
+         initComponents();
++        smallInit();
+         setName(NbBundle.getMessage(WindowTestingTopComponent.class, &quot;CTL_WindowTestingTopComponent&quot;));
+         setToolTipText(NbBundle.getMessage(WindowTestingTopComponent.class, &quot;HINT_WindowTestingTopComponent&quot;));
+         //
+         //WORK DAMN YOU!!!!!!!!!!!!!!!!!!!
+-        jTable1.setDefaultRenderer(Node.Property.class, new MyPropertyCellRenderer());
++        //jTable1.setDefaultRenderer(Node.Property.class, new AnotherPropertyCellRenderer());
+ //        setIcon(Utilities.loadImage(ICON_PATH, true));
+     }
+ 
+@@ -64,49 +79,17 @@
+ 
+         jScrollPane1 = new javax.swing.JScrollPane();
+         jTable1 = new javax.swing.JTable();
+-        jpTableView = new javax.swing.JPanel();
+ 
++        setLayout(new java.awt.BorderLayout());
++
+         jTable1.setModel(ntModel);
+         jScrollPane1.setViewportView(jTable1);
+ 
+-        jpTableView.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(WindowTestingTopComponent.class, &quot;WindowTestingTopComponent.jpTableView.border.title&quot;))); // NOI18N
+-
+-        javax.swing.GroupLayout jpTableViewLayout = new javax.swing.GroupLayout(jpTableView);
+-        jpTableView.setLayout(jpTableViewLayout);
+-        jpTableViewLayout.setHorizontalGroup(
+-            jpTableViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 364, Short.MAX_VALUE)
+-        );
+-        jpTableViewLayout.setVerticalGroup(
+-            jpTableViewLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 150, Short.MAX_VALUE)
+-        );
+-
+-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+-        this.setLayout(layout);
+-        layout.setHorizontalGroup(
+-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                .addContainerGap()
+-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+-                    .addComponent(jpTableView, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 376, Short.MAX_VALUE))
+-                .addContainerGap())
+-        );
+-        layout.setVerticalGroup(
+-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(layout.createSequentialGroup()
+-                .addContainerGap()
+-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addComponent(jpTableView, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+-                .addContainerGap())
+-        );
++        add(jScrollPane1, java.awt.BorderLayout.SOUTH);
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JScrollPane jScrollPane1;
+     private javax.swing.JTable jTable1;
+-    private javax.swing.JPanel jpTableView;
+     // End of variables declaration//GEN-END:variables
+     /**
+      * Gets default instance. Do not use directly: reserved for *.settings files only,
+@@ -178,13 +161,46 @@
+     public void resultChanged(LookupEvent arg0) {
+         TopComponent.Registry registry = TopComponent.getRegistry();
+         Node[] act = registry.getActivatedNodes();
++        //Node[] act = registry.getCurrentNodes();
+         ntModel.setNodes(act);
+-        ntModel.fireTableStructureChanged();
++        //ntModel.fireTableStructureChanged();
++        ps.setNodes(act);
+         for (Node n : act) {
+             System.out.println(n);
+         }
+     }
++    
++    PropertySheet ps = new PropertySheet();
++    
++    private void smallInit() {
++        add(ps, BorderLayout.NORTH);
++        /*jTable1.setModel(new AbstractTableModel() {
+ 
++            public int getRowCount() {
++                return 5;
++            }
++
++            public int getColumnCount() {
++                return 10;
++            }
++
++            public Object getValueAt(int rowIndex, int columnIndex) {
++                return &quot;value&quot;;
++            }
++        });*/
++        jTable1.setDefaultRenderer(Node.Property.class, new AnotherPropertyCellRenderer());
++        jTable1.setModel(ntModel);
++    }
++
++    class AnotherPropertyCellRenderer extends JLabel implements TableCellRenderer {
++
++        public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
++            setText(&quot;example&quot;);
++            setBackground(Color.GREEN);
++            return this;
++        }
++    }    
++    
+     class PropertyCellRenderer implements TableCellRenderer {
+ 
+         public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-07-01 14:47:37 UTC (rev 179)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-07-01 19:05:48 UTC (rev 180)
+@@ -31,6 +31,8 @@
+ import java.awt.Image;
+ import org.openide.nodes.AbstractNode;
+ import org.openide.nodes.Children;
++import org.openide.nodes.Sheet;
++import org.openide.util.Exceptions;
+ import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
+ import org.openide.util.actions.SystemAction;
+@@ -59,6 +61,23 @@
+     }
+ 
+     @Override
++    protected Sheet createSheet() {
++        Sheet s = Sheet.createDefault();
++        /*try {
++
++            Sheet.Set sSet = Sheet.createPropertiesSet();
++            //Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
++            Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
++            //DiskNameProperty p = new DiskNameProperty(media.getName(), &quot;&quot;, media.getName());
++            sSet.put(p);
++            s.put(sSet);
++        } catch (NoSuchMethodException ex) {
++            Exceptions.printStackTrace(ex);
++        }*/
++        return s;
++    }
++
++    @Override
+     public Image getIcon(int type) {
+         return Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-catalog.png&quot;); // NOI18N
+     }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-07-01 14:47:37 UTC (rev 179)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-07-01 19:05:48 UTC (rev 180)
+@@ -50,17 +50,17 @@
+     @Override
+     protected Sheet createSheet() {
+         Sheet s = Sheet.createDefault();
+-        try {
++        //try {
+             
+             Sheet.Set sSet = Sheet.createPropertiesSet();
+             //Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
+-            Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
+-            //DiskNameProperty p = new DiskNameProperty(media.getName(), &quot;&quot;, media.getName());
++            //Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
++            DiskNameProperty p = new DiskNameProperty(media.getName(), &quot;&quot;, media.getName());
+             sSet.put(p);
+             s.put(sSet);
+-        } catch (NoSuchMethodException ex) {
+-            Exceptions.printStackTrace(ex);
+-        }
++        //} catch (NoSuchMethodException ex) {
++          //  Exceptions.printStackTrace(ex);
++        //}
+         return s;
+     }
+      
+@@ -78,4 +78,8 @@
+     public SystemAction[] getActions(boolean bool) {
+         return new SystemAction[]{};
+     }
++    
++    public Object getValue() {
++        return null;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java	2008-07-01 14:47:37 UTC (rev 179)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java	2008-07-01 19:05:48 UTC (rev 180)
+@@ -10,6 +10,9 @@
+ import java.awt.Image;
+ import org.openide.nodes.AbstractNode;
+ import org.openide.nodes.Children;
++import org.openide.nodes.PropertySupport;
++import org.openide.nodes.Sheet;
++import org.openide.util.Exceptions;
+ import org.openide.util.Utilities;
+ import org.openide.util.lookup.Lookups;
+ 
+@@ -26,6 +29,23 @@
+         this.folder = folder;
+         setName(folder.getName());
+     }
++    
++    @Override
++    protected Sheet createSheet() {
++        Sheet s = Sheet.createDefault();
++        try {
++            
++            Sheet.Set sSet = Sheet.createPropertiesSet();
++            //Property p = new PropertySupport.Reflection(media, String.class, &quot;name&quot;);
++            Property p = new PropertySupport.Reflection(folder, String.class, &quot;name&quot;);
++            //DiskNameProperty p = new DiskNameProperty(media.getName(), &quot;&quot;, media.getName());
++            sSet.put(p);
++            s.put(sSet);
++        } catch (NoSuchMethodException ex) {
++            Exceptions.printStackTrace(ex);
++        }
++        return s;
++    }    
+ 
+     @Override
+     public Image getIcon(int type) {
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/TableView.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/TableView.java	2008-07-01 14:47:37 UTC (rev 179)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/TableView.java	2008-07-01 19:05:48 UTC (rev 180)
+@@ -0,0 +1,656 @@
++//package de.berlios.jfindmyfiles.jfindmyfilesgui.utils;
++//
++//import java.awt.Point;
++//import java.awt.Rectangle;
++//import java.awt.event.ActionEvent;
++//import java.awt.event.MouseEvent;
++//import java.awt.dnd.DnDConstants;
++//import java.beans.PropertyChangeListener;
++//import java.beans.PropertyVetoException;
++//import java.beans.VetoableChangeListener;
++//import java.util.Arrays;
++//import java.util.EventObject;
++//import java.util.Properties;
++//import javax.swing.JPopupMenu;
++//import javax.swing.JScrollPane;
++//import javax.swing.ListSelectionModel;
++//import javax.swing.SwingUtilities;
++//import javax.swing.event.ListSelectionListener;
++//import javax.swing.event.PopupMenuEvent;
++//import javax.swing.event.PopupMenuListener;
++//import javax.swing.table.TableColumn;
++//import javax.swing.table.TableModel;
++//import org.netbeans.swing.etable.ETable;
++//import org.netbeans.swing.etable.ETableColumn;
++//import org.netbeans.swing.etable.TableColumnSelector;
++//import org.openide.awt.MouseUtils;
++//import org.openide.explorer.ExplorerManager;
++//import org.openide.nodes.Node;
++//import org.openide.util.Lookup;
++//import org.openide.util.WeakListeners;
++//
++////import org.openide.explorer.view.
++//
++//public class TableView extends JScrollPane {
++//
++//    /** The table */
++//    private ETable table;
++//    /** Explorer manager, valid when this view is showing */
++//    private ExplorerManager manager;
++//    /** not null if popup menu enabled */
++//    transient PopupAdapter popupListener;
++//    /** the most important listener (on four types of events */
++//    transient TableSelectionListener managerListener = null;
++//    /** weak variation of the listener for property change on the explorer manager */
++//    transient PropertyChangeListener wlpc;
++//    /** weak variation of the listener for vetoable change on the explorer manager */
++//    transient VetoableChangeListener wlvc;
++//    /** */
++//    private NodePopupFactory popupFactory;
++//    /** true if drag support is active */
++//    private transient boolean dragActive = true;
++//    /** true if drop support is active */
++//    private transient boolean dropActive = true;
++//    /** Drag support */
++//    transient TableViewDragSupport dragSupport;
++//    /** Drop support */
++//    transient TableViewDropSupport dropSupport;
++//    transient boolean dropTargetPopupAllowed = true;
++//    //    transient private List storeSelectedPaths;
++//    // default DnD actions
++//    transient private int allowedDragActions = DnDConstants.ACTION_COPY_OR_MOVE | DnDConstants.ACTION_REFERENCE;
++//    transient private int allowedDropActions = DnDConstants.ACTION_COPY_OR_MOVE | DnDConstants.ACTION_REFERENCE;
++//
++//    /** Creates a new instance of TableView */
++//    public TableView() {
++//
++//        this(new NodeTableModel());
++//
++//    }
++//
++//    /** Creates a new instance of TableView */
++//    public TableView(NodeTableModel ntm) {
++//
++//        table = new TableViewETable();
++//        table.setModel(ntm);
++//        SheetCell tableCell = new SheetCell.TableSheetCell(ntm, table);
++//        table.setDefaultRenderer(Node.Property.class, tableCell);
++//        table.setDefaultEditor(Node.Property.class, tableCell);
++//        setViewportView(table);
++//        setPopupAllowed(true);
++//        // do not care about focus
++//        setRequestFocusEnabled(false);
++//        table.setRequestFocusEnabled(true);
++//        getActionMap().put(&quot;org.openide.actions.PopupAction&quot;, new PopupAction());
++//        popupFactory = new NodePopupFactory();
++//        java.awt.Color c = javax.swing.UIManager.getColor(&quot;Table.background1&quot;);
++//
++//        if (c == null) {
++//            c = javax.swing.UIManager.getColor(&quot;Table.background&quot;);
++//        }
++//
++//        if (c != null) {
++//
++//            getViewport().setBackground(c);
++//        }
++//        setDragSource(true);
++//        setDropTarget(true);
++//        TableColumnSelector tcs = (TableColumnSelector) Lookup.getDefault().lookup(TableColumnSelector.class);
++//        if (tcs != null) {
++//            table.setColumnSelector(tcs);
++//        }
++//    }
++//
++//    /** Requests focus for the tree component. Overrides superclass method. */
++//    public void requestFocus() {
++//        table.requestFocus();
++//    }
++//
++//    /** Requests focus for the tree component. Overrides superclass method. */
++//    public boolean requestFocusInWindow() {
++//        return table.requestFocusInWindow();
++//    }
++//
++//    /**
++//    
++//     * Getter for the embeded table component.
++//    
++//     */
++//    public ETable getTable() {
++//
++//        return table;
++//
++//    }
++//
++//    /** Is it permitted to display a popup menu?
++//    
++//     * @return &lt;code&gt;true&lt;/code&gt; if so
++//    
++//     */
++//    public boolean isPopupAllowed() {
++//
++//        return popupListener != null;
++//
++//    }
++//
++//    /** Enable/disable displaying popup menus on tree view items.
++//    
++//     * Default is enabled.
++//    
++//     * @param value &lt;code&gt;true&lt;/code&gt; to enable
++//    
++//     */
++//    public void setPopupAllowed(boolean value) {
++//
++//        if (popupListener == null &amp;&amp; value) {
++//            // on
++//            popupListener = new PopupAdapter();
++//            table.addMouseListener(popupListener);
++//            addMouseListener(popupListener);
++//            return;
++//        }
++//
++//        if (popupListener != null &amp;&amp; !value) {
++//            // off
++//            table.removeMouseListener(popupListener);
++//            removeMouseListener(popupListener);
++//            popupListener = null;
++//            return;
++//        }
++//    }
++//
++//    /** Initializes the component and lookup explorer manager. 
++//     */
++//    public void addNotify() {
++//        super.addNotify();
++//        lookupExplorerManager();
++//    }
++//
++//    /**
++//     * Method allowing to read stored values.
++//     * The stored values should be only those that the user has customized,
++//     * it does not make sense to store the values that were set using 
++//     * the initialization code because the initialization code can be run
++//     * in the same way after restart.
++//     */
++//    public void readSettings(Properties p, String propertyPrefix) {
++//        table.readSettings(p, propertyPrefix);
++//    }
++//
++//    /**
++//     * Method allowing to store customization values.
++//     * The stored values should be only those that the user has customized,
++//     * it does not make sense to store the values that were set using 
++//     * the initialization code because the initialization code can be run
++//     * in the same way after restart.
++//    
++//     */
++//    public void writeSettings(Properties p, String propertyPrefix) {
++//        table.writeSettings(p, propertyPrefix);
++//    }
++//
++//    /**
++//     * Allows customization of the popup menus.
++//     */
++//    public void setNodePopupFactory(NodePopupFactory newFactory) {
++//        popupFactory = newFactory;
++//    }
++//
++//    /**
++//     * Getter for the current popup customizer factory.
++//     */
++//    public NodePopupFactory getNodePopupFactory() {
++//        return popupFactory;
++//    }
++//
++//    /** Registers in the tree of components.
++//     */
++//    private void lookupExplorerManager() {
++//
++//        // Enter key in the tree
++//        if (managerListener == null) {
++//            managerListener = new TableSelectionListener();
++//        }
++//
++//        ExplorerManager newManager = ExplorerManager.find(this);
++//        if (newManager != manager) {
++//            if (manager != null) {
++//                manager.removeVetoableChangeListener(wlvc);
++//                manager.removePropertyChangeListener(wlpc);
++//            }
++//
++//            manager = newManager;
++//            manager.addVetoableChangeListener(wlvc = WeakListeners.vetoableChange(managerListener, manager));
++//            manager.addPropertyChangeListener(wlpc = WeakListeners.propertyChange(managerListener, manager));
++//            synchronizeRootContext();
++//            synchronizeSelectedNodes();
++//        }
++//
++//        // Sometimes the listener is registered twice and we get the 
++//        // selection events twice. Removing the listener before adding it
++//        // should be a safe fix.
++//        table.getSelectionModel().removeListSelectionListener(managerListener);
++//        table.getSelectionModel().addListSelectionListener(managerListener);
++//    }
++//
++//    /** Synchronize the root context from the manager of this Explorer.    
++//     */
++//    final void synchronizeRootContext() {
++//        NodeTableModel ntm = (NodeTableModel) table.getModel();
++//        ntm.setNodes(manager.getRootContext().getChildren().getNodes());
++//    }
++//
++//    /** Synchronize the selected nodes from the manager of this Explorer.
++//     */
++//    final void synchronizeSelectedNodes() {
++//        Node[] arr = manager.getSelectedNodes();
++//        table.getSelectionModel().clearSelection();
++//        NodeTableModel ntm = (NodeTableModel) table.getModel();
++//        int size = ntm.getRowCount();
++//        int firstSelection = -1;
++//        for (int i = 0; i &lt; size; i++) {
++//            Node n = getNodeFromRow(i);
++//            for (int j = 0; j &lt; arr.length; j++) {
++//                if (n.equals(arr[j])) {
++//                    table.getSelectionModel().addSelectionInterval(i, i);
++//                    if (firstSelection == -1) {
++//                        firstSelection = i;
++//                    }
++//                }
++//            }
++//        }
++//
++//        if (firstSelection &gt;= 0) {
++//            Rectangle rect = table.getCellRect(firstSelection, 0, true);
++//            java.awt.Insets ins = getInsets();
++//            rect.height = getHeight() - 30;
++//            table.scrollRectToVisible(rect);
++//        }
++//    }
++//
++//    /**
++//     * Deinitializes listeners.  
++//     */
++//    public void removeNotify() {
++//        super.removeNotify();
++//        table.getSelectionModel().removeListSelectionListener(managerListener);
++//    }
++//
++//    /**
++//     * Shows popup menu invoked on the table.
++//     */
++//    private void showPopup(int xpos, int ypos, final JPopupMenu popup) {
++//
++//        if ((popup != null) &amp;&amp; (popup.getSubElements().length &gt; 0)) {
++//
++//            final PopupMenuListener p = new PopupMenuListener() {
++//
++//                public void popupMenuWillBecomeVisible(PopupMenuEvent e) {
++//                }
++//
++//                public void popupMenuWillBecomeInvisible(PopupMenuEvent e) {
++//                    popup.removePopupMenuListener(this);
++//                    table.requestFocus();
++//                }
++//
++//                public void popupMenuCanceled(PopupMenuEvent e) {
++//                }
++//            };
++//            popup.addPopupMenuListener(p);
++//            popup.show(this, xpos, ypos);
++//        }
++//    }
++//
++//    /**  
++//     * Find relevant actions and call the factory to create a popup.
++//    
++//     */
++//    private JPopupMenu createPopup(Point p) {
++//        int[] selRows = table.getSelectedRows();
++//        Node[] arr = new Node[selRows.length];
++//        for (int i = 0; i &lt; selRows.length; i++) {
++//            arr[i] = getNodeFromRow(selRows[i]);
++//        }
++//
++//        if (arr.length == 0) {
++//            // hack to show something even when no rows are selected
++//            arr = new Node[]{manager.getRootContext()};
++//        }
++//
++//        p = SwingUtilities.convertPoint(this, p, table);
++//        int column = table.columnAtPoint(p);
++//        int row = table.rowAtPoint(p);
++//        return popupFactory.createPopupMenu(row, column, arr, table);
++//    }
++//
++//    /**
++//     * 
++//     */
++//    Node getNodeFromRow(int rowIndex) {
++//        int row = table.convertRowIndexToModel(rowIndex);
++//        TableModel tm = table.getModel();
++//        if (tm instanceof NodeTableModel) {
++//            NodeTableModel ntm = (NodeTableModel) tm;
++//            return ntm.nodeForRow(row);
++//        }
++//        return null;
++//    }
++//
++//    /** Returns the point at which the popup menu is to be shown. May return null.
++//     * @return the point or null
++//     */
++//    private Point getPositionForPopup() {
++//
++//        int i = table.getSelectionModel().getLeadSelectionIndex();
++//
++//        if (i &lt; 0) {
++//            return null;
++//        }
++//        int j = table.getColumnModel().getSelectionModel().getLeadSelectionIndex();
++//
++//        if (j &lt; 0) {
++//
++//            j = 0;
++//
++//        }
++//
++//        Rectangle rect = table.getCellRect(i, j, true);
++//
++//        if (rect == null) {
++//            return null;
++//        }
++//
++//        Point p = new Point(rect.x + rect.width / 3,
++//                rect.y + rect.height / 2);
++//
++//        // bugfix #36984, convert point by TableView.this
++//        p = SwingUtilities.convertPoint(table, p, TableView.this);
++//        return p;
++//
++//    }
++//
++//    /**
++//     * Action registered in the component's action map.
++//     */
++//    private class PopupAction extends javax.swing.AbstractAction implements Runnable {
++//
++//        public void actionPerformed(ActionEvent evt) {
++//
++//            SwingUtilities.invokeLater(this);
++//
++//        }
++//
++//        public void run() {
++//
++//            Point p = getPositionForPopup();
++//            if (p == null) {
++//                return;
++//            }
++//
++//            if (isPopupAllowed()) {
++//                JPopupMenu pop = createPopup(p);
++//                showPopup(p.x, p.y, pop);
++//            }
++//        }
++//    }
++//
++//    /**
++//     * Mouse listener that invokes popup.
++//     */
++//    private class PopupAdapter extends MouseUtils.PopupMouseAdapter {
++//
++//        PopupAdapter() {
++//        }
++//
++//        protected void showPopup(MouseEvent e) {
++//            int selRow = table.rowAtPoint(e.getPoint());
++//            if (selRow != -1) {
++//                if (!table.getSelectionModel().isSelectedIndex(selRow)) {
++//                    table.getSelectionModel().clearSelection();
++//                    table.getSelectionModel().setSelectionInterval(selRow, selRow);
++//                }
++//            } else {
++//                table.getSelectionModel().clearSelection();
++//            }
++//            Point p = SwingUtilities.convertPoint(e.getComponent(), e.getPoint(), TableView.this);
++//            if (isPopupAllowed()) {
++//                JPopupMenu pop = createPopup(p);
++//                TableView.this.showPopup(p.x, p.y, pop);
++//                e.consume();
++//            }
++//        }
++//    }
++//
++//    /**
++//     * Called when selection in tree is changed.
++//     */
++//    final void callSelectionChanged(Node[] nodes) {
++//        manager.removePropertyChangeListener(wlpc);
++//        manager.removeVetoableChangeListener(wlvc);
++//
++//        try {
++//            manager.setSelectedNodes(nodes);
++//        } catch (PropertyVetoException e) {
++//            synchronizeSelectedNodes();
++//        } finally {
++//            manager.addPropertyChangeListener(wlpc);
++//            manager.addVetoableChangeListener(wlvc);
++//        }
++//    }
++//
++//    /** 
++//     * Check if selection of the nodes could break
++//     * the selection mode set in the ListSelectionModel.
++//     * @param nodes the nodes for selection
++//     * @return true if the selection mode is broken
++//     */
++//    private boolean isSelectionModeBroken(Node[] nodes) {
++//
++//
++//
++//        // if nodes are empty or single then everthing is ok
++//
++//        // or if discontiguous selection then everthing ok
++//
++//        if (nodes.length &lt;= 1 || table.getSelectionModel().getSelectionMode() ==
++//                ListSelectionModel.MULTIPLE_INTERVAL_SELECTION) {
++//            return false;
++//        }
++//
++//        // if many nodes
++//        // breaks single selection mode
++//        if (table.getSelectionModel().getSelectionMode() ==
++//                ListSelectionModel.SINGLE_SELECTION) {
++//            return true;
++//        }
++//
++//        // check the contiguous selection mode
++//        // check selection's rows
++//        // all is ok
++//        return false;
++//    }
++//
++//    /********** Support for the Drag &amp; Drop operations *********/
++//    /** Drag support is enabled by default.
++//     * @return true if dragging from the view is enabled, false
++//     * otherwise.
++//     */
++//    public boolean isDragSource() {
++//        return dragActive;
++//    }
++//
++//    /** Enables/disables dragging support.
++//     * @param state true enables dragging support, false disables it.
++//     */
++//    public void setDragSource(boolean state) {
++//        // create drag support if needed
++//        if (state &amp;&amp; (dragSupport == null)) {
++//            dragSupport = new TableViewDragSupport(this, table);
++//        }
++//
++//        // activate / deactivate support according to the state
++//        dragActive = state;
++//        if (dragSupport != null) {
++//            dragSupport.activate(dragActive);
++//        }
++//    }
++//
++//    /** Drop support is enabled by default.
++//     * @return true if dropping to the view is enabled, false
++//     * otherwise&lt;br&gt;   
++//     */
++//    public boolean isDropTarget() {
++//        return dropActive;
++//    }
++//
++//    /** Enables/disables dropping support.
++//     * @param state true means drops into view are allowed,
++//     * false forbids any drops into this view.   
++//     */
++//    public void setDropTarget(boolean state) {
++//        // create drop support if needed
++//        if (dropActive &amp;&amp; (dropSupport == null)) {
++//            dropSupport = new TableViewDropSupport(this, table, dropTargetPopupAllowed);
++//        }
++//
++//        // activate / deactivate support according to the state
++//        dropActive = state;
++//        if (dropSupport != null) {
++//            dropSupport.activate(dropActive);
++//        }
++//    }
++//
++//    /** Actions constants comes from {@link java.awt.dnd.DnDConstants}.
++//     * All actions (copy, move, link) are allowed by default.
++//     * @return int representing set of actions which are allowed when dragging from
++//     * asociated component.    
++//     */
++//    public int getAllowedDragActions() {
++//        return allowedDragActions;
++//    }
++//
++//    /** Sets allowed actions for dragging
++//     * @param actions new drag actions, using {@link java.awt.dnd.DnDConstants}   
++//     */
++//    public void setAllowedDragActions(int actions) {
++//        // PENDING: check parameters
++//        allowedDragActions = actions;
++//    }
++//
++//    /** Actions constants comes from {@link java.awt.dnd.DnDConstants}.
++//     * All actions are allowed by default.
++//     * @return int representing set of actions which are allowed when dropping  
++//     * into the asociated component.
++//     */
++//    public int getAllowedDropActions() {
++//        return allowedDropActions;
++//    }
++//
++//    /** Sets allowed actions for dropping.  
++//     * @param actions new allowed drop actions, using {@link java.awt.dnd.DnDConstants}
++//     */
++//    public void setAllowedDropActions(int actions) {
++//        // PENDING: check parameters
++//        allowedDropActions = actions;
++//    }
++//
++//    /**
++//     * Listener attached to the explorer manager and also to the
++//     * changes in the table selection.
++//     */
++//    private class TableSelectionListener implements VetoableChangeListener, ListSelectionListener, PropertyChangeListener {
++//
++//        public void propertyChange(java.beans.PropertyChangeEvent evt) {
++//
++//            if (manager == null) {
++//                return; // the tree view has been removed before the event got delivered
++//            }
++//
++//            if (evt.getPropertyName().equals(ExplorerManager.PROP_ROOT_CONTEXT)) {
++//                synchronizeRootContext();
++//            }
++//
++//            if (evt.getPropertyName().equals(ExplorerManager.PROP_SELECTED_NODES)) {
++//                synchronizeSelectedNodes();
++//            }
++//        }
++//
++//        public void valueChanged(javax.swing.event.ListSelectionEvent listSelectionEvent) {
++//
++//            int selectedRows[] = table.getSelectedRows();
++//            Node[] selectedNodes = new Node[selectedRows.length];
++//            for (int i = 0; i &lt; selectedNodes.length; i++) {
++//                selectedNodes[i] = getNodeFromRow(selectedRows[i]);
++//            }
++//            callSelectionChanged(selectedNodes);
++//        }
++//
++//        public void vetoableChange(java.beans.PropertyChangeEvent evt) throws java.beans.PropertyVetoException {
++//
++//            if (evt.getPropertyName().equals(ExplorerManager.PROP_SELECTED_NODES)) {
++//                // issue 11928 check if selecetion mode will be broken
++//                Node[] nodes = (Node[]) evt.getNewValue();
++//                if (isSelectionModeBroken(nodes)) {
++//                    throw new PropertyVetoException(&quot;selection mode &quot; + &quot; broken by &quot; + Arrays.asList(nodes), evt); // NOI18N
++//                }
++//            }
++//        }
++//    }
++//
++//    /**
++//     * Extension of the ETable that allows adding a special comparator
++//     * for sorting the rows.
++//     */
++//    private static class TableViewETable extends ETable {
++//
++//        public TableViewETable() {
++//            super();
++//        }
++//
++//        protected TableColumn createColumn(int modelIndex) {
++//            return new TableViewETableColumn(modelIndex);
++//        }
++//
++//        public Object transformValue(Object value) {
++//            return PropertiesRowModel.getValueFromProperty(value);
++//        }
++//
++//        public boolean editCellAt(int row, int column, EventObject e) {
++//
++//            Object o = getValueAt(row, column);
++//
++//            if (o instanceof Node.Property) { // &amp;&amp; (e == null || e instanceof KeyEvent)) {
++//                //Toggle booleans without instantiating an editor
++//                Node.Property p = (Node.Property) o;
++//                if (p.getValueType() == Boolean.class || p.getValueType() == Boolean.TYPE) {
++//                    PropertiesRowModel.toggleBooleanProperty(p);
++//                    Rectangle r = getCellRect(row, column, true);
++//                    repaint(r.x, r.y, r.width, r.height);
++//                    return false;
++//                }
++//            }
++//            return super.editCellAt(row, column, e);
++//        }
++//
++//        /**       
++//         */
++//        private class TableViewETableColumn extends ETableColumn {
++//
++//            public TableViewETableColumn(int index) {
++//                super(index, TableViewETable.this);
++//            }
++//
++//            public boolean isSortingAllowed() {
++//                TableModel model = getModel();
++//                if (model instanceof NodeTableModel) {
++//                    NodeTableModel ntm = (NodeTableModel) model;
++//                    return ntm.isComparableColumn(getModelIndex());
++//                }
++//
++//                return true;
++//            }
++//        }
++//    }
++//}
++//
++//
+
+
+Property changes on: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/TableView.java
+___________________________________________________________________
+Name: svn:eol-style
+   + native
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000174.html">[Jfindmyfiles-commits] r179 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui
+</A></li>
+	<LI>Next message: <A HREF="000176.html">[Jfindmyfiles-commits] r181 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#175">[ date ]</a>
+              <a href="thread.html#175">[ thread ]</a>
+              <a href="subject.html#175">[ subject ]</a>
+              <a href="author.html#175">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

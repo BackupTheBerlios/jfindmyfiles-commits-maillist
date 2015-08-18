@@ -1,0 +1,441 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r128 - in trunk:	docs/Iteracao2-CB05/TestingDB project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r128%20-%20in%20trunk%3A%0A%09docs/Iteracao2-CB05/TestingDB%20project/JFindMyFiles/Catalog%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs&In-Reply-To=%3C200806031122.m53BM4nM023989%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000122.html">
+   <LINK REL="Next"  HREF="000124.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r128 - in trunk:	docs/Iteracao2-CB05/TestingDB project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r128%20-%20in%20trunk%3A%0A%09docs/Iteracao2-CB05/TestingDB%20project/JFindMyFiles/Catalog%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs&In-Reply-To=%3C200806031122.m53BM4nM023989%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r128 - in trunk:	docs/Iteracao2-CB05/TestingDB project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs">knitter at mail.berlios.de
+       </A><BR>
+    <I>Tue Jun  3 13:22:04 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000122.html">[Jfindmyfiles-commits] r127 - in trunk/docs/Iteracao2-CB05: .	TestingDB
+</A></li>
+        <LI>Next message: <A HREF="000124.html">[Jfindmyfiles-commits] r129 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/utils	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#123">[ date ]</a>
+              <a href="thread.html#123">[ thread ]</a>
+              <a href="subject.html#123">[ subject ]</a>
+              <a href="author.html#123">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-03 13:21:50 +0200 (Tue, 03 Jun 2008)
+New Revision: 128
+
+Added:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties
+Modified:
+   trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.script
+   trunk/project/JFindMyFiles/Catalog/manifest.mf
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java
+Log:
+Adicionados mais dados ?\195?\160 base de dados.
+
+Criado c?\195?\179digo para pesquisas, o c?\195?\179digo possui um erro na linha de pesquisa que n?\195?\163o permite efectuar correctamente a pesquisa.
+
+Recuperado ficherio Bundle.properties que tinha sido removido por engano.
+
+Modified: trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.script
+===================================================================
+--- trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.script	2008-06-02 23:32:39 UTC (rev 127)
++++ trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.script	2008-06-03 11:21:50 UTC (rev 128)
+@@ -21,7 +21,7 @@
+ ALTER TABLE TBL_MEDIA ADD CONSTRAINT FKC9556FE3FF7AB9F7 FOREIGN KEY(TYPE_ID) REFERENCES TBL_TYPE(TYPE_ID)
+ ALTER TABLE TBL_AUDIO ALTER COLUMN AUDIO_ID RESTART WITH 1
+ ALTER TABLE TBL_DISK_GROUP ALTER COLUMN GROUP_ID RESTART WITH 6
+-ALTER TABLE TBL_FILE ALTER COLUMN FILE_ID RESTART WITH 1
++ALTER TABLE TBL_FILE ALTER COLUMN FILE_ID RESTART WITH 9
+ ALTER TABLE TBL_IMAGE ALTER COLUMN IMAGE_ID RESTART WITH 1
+ ALTER TABLE TBL_LABEL ALTER COLUMN LABEL_ID RESTART WITH 1
+ ALTER TABLE TBL_LOAN ALTER COLUMN LOAN_ID RESTART WITH 1
+@@ -39,6 +39,14 @@
+ INSERT INTO TBL_DISK_GROUP VALUES(3,'Grupo 3','Descricao do grupo 3',5500,NULL)
+ INSERT INTO TBL_DISK_GROUP VALUES(4,'Grupo 4','Descricao do grupo 2',5500,NULL)
+ INSERT INTO TBL_DISK_GROUP VALUES(5,'Grupo 5','Descricao do grupo 3',5500,NULL)
++INSERT INTO TBL_FILE VALUES(1,'file 1','absolutepath',1212416344515,'desc 1',FALSE,0,'txt',TRUE,FALSE,1,NULL)
++INSERT INTO TBL_FILE VALUES(2,'file 2','/',1212416344515,'desc 2',FALSE,0,'pdf',TRUE,FALSE,1,NULL)
++INSERT INTO TBL_FILE VALUES(3,'file 3','/',1212416344515,'desc 3',FALSE,0,'jpg',TRUE,FALSE,1,NULL)
++INSERT INTO TBL_FILE VALUES(4,'file 4','/',1212416344515,'desc 4',FALSE,0,'doc',TRUE,FALSE,2,NULL)
++INSERT INTO TBL_FILE VALUES(5,'file 5','/',1212416344515,'desc 5',FALSE,0,'tgz',TRUE,FALSE,2,NULL)
++INSERT INTO TBL_FILE VALUES(6,'file 6','/',1212416344515,'desc 6',FALSE,0,'zip',TRUE,FALSE,3,NULL)
++INSERT INTO TBL_FILE VALUES(7,'file 7','/',1212416344515,'desc 7',FALSE,0,'jpg',TRUE,FALSE,4,NULL)
++INSERT INTO TBL_FILE VALUES(8,'file 8','/',1212416344515,'desc 8',FALSE,0,'pdf',TRUE,FALSE,4,NULL)
+ INSERT INTO TBL_GROUP_MEDIA VALUES(1,1)
+ INSERT INTO TBL_GROUP_MEDIA VALUES(2,1)
+ INSERT INTO TBL_GROUP_MEDIA VALUES(3,4)
+
+Modified: trunk/project/JFindMyFiles/Catalog/manifest.mf
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/manifest.mf	2008-06-02 23:32:39 UTC (rev 127)
++++ trunk/project/JFindMyFiles/Catalog/manifest.mf	2008-06-03 11:21:50 UTC (rev 128)
+@@ -1,4 +1,4 @@
+-Manifest-Version: 1.0
+-OpenIDE-Module: de.berlios.jfindmyfiles.catalog
+-OpenIDE-Module-Specification-Version: 1.0
+-
++Manifest-Version: 1.0
++OpenIDE-Module: de.berlios.jfindmyfiles.catalog
++OpenIDE-Module-Specification-Version: 1.0
++OpenIDE-Module-Localizing-Bundle: de/berlios/jfindmyfiles/catalog/Bundle.properties
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties	2008-06-02 23:32:39 UTC (rev 127)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties	2008-06-03 11:21:50 UTC (rev 128)
+@@ -0,0 +1,20 @@
++###
++ #  Copyright (C) 2008  Patr\u00EDcia Monteiro e S\u00E9rgio Lopes
++ #
++ #  This file is part of JFindMyFiles.
++ #
++ #  JFindMyFiles is free software: you can redistribute it and/or modify
++ #  it under the terms of the GNU General Public License as published by
++ #  the Free Software Foundation, either version 2 of the License, or
++ #  (at your option) any later version.
++ #
++ #  JFindMyFiles is distributed in the hope that it will be useful,
++ #  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ #  GNU General Public License for more details.
++ #
++ #  You should have received a copy of the GNU General Public License
++ #  along with JFindMyFiles.  If not, see 
++ # &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ ##
++OpenIDE-Module-Name=Catalog
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form	2008-06-02 23:32:39 UTC (rev 127)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form	2008-06-03 11:21:50 UTC (rev 128)
+@@ -26,13 +26,17 @@
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+           &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
+-              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                   &lt;Component id=&quot;jpTopPanel&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;2&quot;/&gt;
+                   &lt;Component id=&quot;jpResults&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;2&quot;/&gt;
+-                  &lt;Component id=&quot;jbtnClose&quot; alignment=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jpbProgress&quot; pref=&quot;275&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;203&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jbtnClose&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
+               &lt;/Group&gt;
+-              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+@@ -44,7 +48,10 @@
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Component id=&quot;jpResults&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Component id=&quot;jbtnClose&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jbtnClose&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jpbProgress&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+       &lt;/Group&gt;
+@@ -149,7 +156,7 @@
+                           &lt;Component id=&quot;jchkCaseSensitive&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Component id=&quot;jchkUseReGex&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;/Group&gt;
+-                      &lt;EmptySpace pref=&quot;41&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;62&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+@@ -208,7 +215,7 @@
+                       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;EmptySpace min=&quot;-2&quot; pref=&quot;24&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jcbxDiskGroups&quot; pref=&quot;198&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jcbxDiskGroups&quot; pref=&quot;218&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+                           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -231,7 +238,7 @@
+                       &lt;Component id=&quot;jrdbDiskGroupOnly&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace min=&quot;-2&quot; pref=&quot;6&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jcbxDiskGroups&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;14&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+@@ -240,15 +247,13 @@
+             &lt;Component class=&quot;javax.swing.JComboBox&quot; name=&quot;jcbxDiskGroups&quot;&gt;
+               &lt;Properties&gt;
+                 &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ComboBoxModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ComboBoxModelEditor&quot;&gt;
+-                  &lt;StringArray count=&quot;4&quot;&gt;
+-                    &lt;StringItem index=&quot;0&quot; value=&quot;Item 1&quot;/&gt;
+-                    &lt;StringItem index=&quot;1&quot; value=&quot;Item 2&quot;/&gt;
+-                    &lt;StringItem index=&quot;2&quot; value=&quot;Item 3&quot;/&gt;
+-                    &lt;StringItem index=&quot;3&quot; value=&quot;Item 4&quot;/&gt;
+-                  &lt;/StringArray&gt;
++                  &lt;StringArray count=&quot;0&quot;/&gt;
+                 &lt;/Property&gt;
+                 &lt;Property name=&quot;enabled&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
+               &lt;/Properties&gt;
++              &lt;AuxValues&gt;
++                &lt;AuxValue name=&quot;JavaCodeGenerator_CreateCodeCustom&quot; type=&quot;java.lang.String&quot; value=&quot;new JComboBox(groups);&quot;/&gt;
++              &lt;/AuxValues&gt;
+             &lt;/Component&gt;
+             &lt;Component class=&quot;javax.swing.JRadioButton&quot; name=&quot;jrdbEntireCatalog&quot;&gt;
+               &lt;Properties&gt;
+@@ -294,7 +299,7 @@
+           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+               &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jscrResults&quot; pref=&quot;498&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jscrResults&quot; pref=&quot;501&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+@@ -337,5 +342,10 @@
+         &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnCloseActionPerformed&quot;/&gt;
+       &lt;/Events&gt;
+     &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JProgressBar&quot; name=&quot;jpbProgress&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;value&quot; type=&quot;int&quot; value=&quot;50&quot;/&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
+   &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java	2008-06-02 23:32:39 UTC (rev 127)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java	2008-06-03 11:21:50 UTC (rev 128)
+@@ -20,7 +20,15 @@
+ 
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import java.util.LinkedList;
++import java.util.List;
++import java.util.Vector;
++import javax.swing.DefaultListModel;
++import javax.swing.JComboBox;
++import org.hibernate.Session;
++import org.openide.util.Lookup;
+ 
+ /**
+  *
+@@ -28,10 +36,16 @@
+  */
+ public class SearchDlg extends javax.swing.JDialog {
+ 
++    private CatalogEngine eng;
++    private Vector&lt;DiskGroup&gt; groups;
++    
+     /** Creates new form SearchDlg */
+     public SearchDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
++        populateDiskGroupBox();
+         initComponents();
++        jpbProgress.setVisible(false);
+     }
+     
+     /** Creates a new form SeachDlg and changes the selected item in the 
+@@ -51,7 +65,33 @@
+         setLocation(getParent().getX() + (getParent().getWidth() / 2) - (getWidth() / 2),
+                 getParent().getY() + (getParent().getHeight() / 2) - (getHeight() / 2));
+         setVisible(true);
+-    }  
++    }
++    
++    @SuppressWarnings(&quot;unchecked&quot;)
++    private void populateDiskGroupBox() {
++        groups = new Vector&lt;DiskGroup&gt;();
++        Session s = eng.sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        groups.addAll(s.createQuery(&quot;from DiskGroup group order by group.name&quot;).list());
++        s.getTransaction().commit();
++    }
++    
++    @SuppressWarnings(&quot;unchecked&quot;)
++    private void search() {
++        boolean inDescriptions = jchkSearchInDesc.isSelected();
++        boolean caseSensitive = jchkCaseSensitive.isSelected();
++        boolean useRegular = jchkUseReGex.isSelected();
++        boolean scopeAll = jrdbEntireCatalog.isSelected();
++        List l = new LinkedList();
++        Session s = eng.sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        l.addAll(s.createQuery(&quot;from FileWrapper file where file.name like %?%&quot;).list());
++        s.getTransaction().commit();
++        for(Object o : l) {
++            ((DefaultListModel)jlstResults.getModel()).addElement(o);
++        }
++        jpbProgress.setVisible(false);
++    }
+     /** This method is called from within the constructor to
+      * initialize the form.
+      * WARNING: Do NOT modify this code. The content of this method is
+@@ -71,13 +111,14 @@
+         jchkCaseSensitive = new javax.swing.JCheckBox();
+         jchkUseReGex = new javax.swing.JCheckBox();
+         jpScopePanel = new javax.swing.JPanel();
+-        jcbxDiskGroups = new javax.swing.JComboBox();
++        jcbxDiskGroups = new JComboBox(groups);
+         jrdbEntireCatalog = new javax.swing.JRadioButton();
+         jrdbDiskGroupOnly = new javax.swing.JRadioButton();
+         jpResults = new javax.swing.JPanel();
+         jscrResults = new javax.swing.JScrollPane();
+         jlstResults = new javax.swing.JList();
+         jbtnClose = new javax.swing.JButton();
++        jpbProgress = new javax.swing.JProgressBar();
+ 
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
+@@ -112,7 +153,7 @@
+                     .addComponent(jchkSearchInDesc)
+                     .addComponent(jchkCaseSensitive)
+                     .addComponent(jchkUseReGex))
+-                .addContainerGap(41, Short.MAX_VALUE))
++                .addContainerGap(62, Short.MAX_VALUE))
+         );
+         jpOptionsPanelLayout.setVerticalGroup(
+             jpOptionsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+@@ -127,7 +168,6 @@
+ 
+         jpScopePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(SearchDlg.class, &quot;SearchDlg.jpScopePanel.border.title&quot;))); // NOI18N
+ 
+-        jcbxDiskGroups.setModel(new javax.swing.DefaultComboBoxModel(new String[] { &quot;Item 1&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;, &quot;Item 4&quot; }));
+         jcbxDiskGroups.setEnabled(false);
+ 
+         btngrpScope.add(jrdbEntireCatalog);
+@@ -150,7 +190,7 @@
+                 .addGroup(jpScopePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addGroup(jpScopePanelLayout.createSequentialGroup()
+                         .addGap(24, 24, 24)
+-                        .addComponent(jcbxDiskGroups, 0, 198, Short.MAX_VALUE))
++                        .addComponent(jcbxDiskGroups, 0, 218, Short.MAX_VALUE))
+                     .addGroup(jpScopePanelLayout.createSequentialGroup()
+                         .addContainerGap()
+                         .addComponent(jrdbEntireCatalog))
+@@ -167,7 +207,7 @@
+                 .addComponent(jrdbDiskGroupOnly)
+                 .addGap(6, 6, 6)
+                 .addComponent(jcbxDiskGroups, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++                .addContainerGap(14, Short.MAX_VALUE))
+         );
+ 
+         javax.swing.GroupLayout jpTopPanelLayout = new javax.swing.GroupLayout(jpTopPanel);
+@@ -215,7 +255,7 @@
+             jpResultsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(jpResultsLayout.createSequentialGroup()
+                 .addContainerGap()
+-                .addComponent(jscrResults, javax.swing.GroupLayout.DEFAULT_SIZE, 498, Short.MAX_VALUE)
++                .addComponent(jscrResults, javax.swing.GroupLayout.DEFAULT_SIZE, 501, Short.MAX_VALUE)
+                 .addContainerGap())
+         );
+         jpResultsLayout.setVerticalGroup(
+@@ -232,6 +272,8 @@
+             }
+         });
+ 
++        jpbProgress.setValue(50);
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+@@ -241,7 +283,10 @@
+                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addComponent(jpTopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                     .addComponent(jpResults, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+-                    .addComponent(jbtnClose, javax.swing.GroupLayout.Alignment.TRAILING))
++                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                        .addComponent(jpbProgress, javax.swing.GroupLayout.DEFAULT_SIZE, 275, Short.MAX_VALUE)
++                        .addGap(203, 203, 203)
++                        .addComponent(jbtnClose)))
+                 .addContainerGap())
+         );
+         layout.setVerticalGroup(
+@@ -252,7 +297,9 @@
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addComponent(jpResults, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addComponent(jbtnClose)
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jbtnClose)
++                    .addComponent(jpbProgress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                 .addContainerGap())
+         );
+ 
+@@ -264,7 +311,13 @@
+ }//GEN-LAST:event_jrdbDiskGroupOnlyStateChanged
+ 
+ private void jbtnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSearchActionPerformed
+-//TODO:
++    jpbProgress.setVisible(true);
++    new Thread(new Runnable() {
++
++            public void run() {
++                search();
++            }
++        }).start();
+ }//GEN-LAST:event_jbtnSearchActionPerformed
+ 
+ private void jbtnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCloseActionPerformed
+@@ -285,6 +338,7 @@
+     private javax.swing.JPanel jpResults;
+     private javax.swing.JPanel jpScopePanel;
+     private javax.swing.JPanel jpTopPanel;
++    private javax.swing.JProgressBar jpbProgress;
+     private javax.swing.JRadioButton jrdbDiskGroupOnly;
+     private javax.swing.JRadioButton jrdbEntireCatalog;
+     private javax.swing.JScrollPane jscrResults;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000122.html">[Jfindmyfiles-commits] r127 - in trunk/docs/Iteracao2-CB05: .	TestingDB
+</A></li>
+	<LI>Next message: <A HREF="000124.html">[Jfindmyfiles-commits] r129 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/utils	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#123">[ date ]</a>
+              <a href="thread.html#123">[ thread ]</a>
+              <a href="subject.html#123">[ subject ]</a>
+              <a href="author.html#123">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

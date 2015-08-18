@@ -1,0 +1,168 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r127 - in trunk/docs/Iteracao2-CB05: .	TestingDB
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r127%20-%20in%20trunk/docs/Iteracao2-CB05%3A%20.%0A%09TestingDB&In-Reply-To=%3C200806022332.m52NWfbt022253%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000121.html">
+   <LINK REL="Next"  HREF="000123.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r127 - in trunk/docs/Iteracao2-CB05: .	TestingDB</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r127%20-%20in%20trunk/docs/Iteracao2-CB05%3A%20.%0A%09TestingDB&In-Reply-To=%3C200806022332.m52NWfbt022253%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r127 - in trunk/docs/Iteracao2-CB05: .	TestingDB">knitter at mail.berlios.de
+       </A><BR>
+    <I>Tue Jun  3 01:32:41 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000121.html">[Jfindmyfiles-commits] r126 - in trunk: media/icons media/icons/x48	project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x48
+</A></li>
+        <LI>Next message: <A HREF="000123.html">[Jfindmyfiles-commits] r128 - in trunk:	docs/Iteracao2-CB05/TestingDB project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#122">[ date ]</a>
+              <a href="thread.html#122">[ thread ]</a>
+              <a href="subject.html#122">[ subject ]</a>
+              <a href="author.html#122">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-03 01:32:39 +0200 (Tue, 03 Jun 2008)
+New Revision: 127
+
+Added:
+   trunk/docs/Iteracao2-CB05/TestingDB/
+   trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.properties
+   trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.script
+Modified:
+   trunk/docs/Iteracao2-CB05/Iteracao 2.txt
+Log:
+Adicionada base de dados usada em testes locais e actualizado o documento sobre a segunda itera?\195?\167?\195?\163o em conformidade.
+
+Modified: trunk/docs/Iteracao2-CB05/Iteracao 2.txt
+===================================================================
+--- trunk/docs/Iteracao2-CB05/Iteracao 2.txt	2008-06-02 23:30:26 UTC (rev 126)
++++ trunk/docs/Iteracao2-CB05/Iteracao 2.txt	2008-06-02 23:32:39 UTC (rev 127)
+@@ -30,6 +30,7 @@
+ Outros documentos:
+ 	i18n.txt - Identifica&#231;&#227;o do sistema usado para a internacionaliza&#231;&#227;o e das 
+ 		regras a seguir.
++	TestingDB - Pasta com uma base de dados usada nos testes.
+ 
+ &lt;==== 
+ Etiquetas e categorias n&#227;o possuem diferen&#231;as pr&#225;ticas, catalogar por categorias 
+
+Added: trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.properties
+===================================================================
+--- trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.properties	2008-06-02 23:30:26 UTC (rev 126)
++++ trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.properties	2008-06-02 23:32:39 UTC (rev 127)
+@@ -0,0 +1,17 @@
++#HSQL Database Engine 1.8.0.7
++#Tue Jun 03 00:31:22 BST 2008
++hsqldb.script_format=0
++runtime.gc_interval=0
++sql.enforce_strict_size=false
++hsqldb.cache_size_scale=8
++readonly=false
++hsqldb.nio_data_file=true
++hsqldb.cache_scale=14
++version=1.8.0
++hsqldb.default_table_type=memory
++hsqldb.cache_file_scale=1
++hsqldb.log_size=200
++modified=no
++hsqldb.cache_version=1.7.0
++hsqldb.original_version=1.8.0
++hsqldb.compatible_version=1.8.0
+
+Added: trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.script
+===================================================================
+--- trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.script	2008-06-02 23:30:26 UTC (rev 126)
++++ trunk/docs/Iteracao2-CB05/TestingDB/TestingDB.script	2008-06-02 23:32:39 UTC (rev 127)
+@@ -0,0 +1,52 @@
++CREATE SCHEMA PUBLIC AUTHORIZATION DBA
++CREATE MEMORY TABLE TBL_AUDIO(AUDIO_ID BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1) NOT NULL PRIMARY KEY,DATA VARBINARY(255),FILE_ID BIGINT NOT NULL,CONSTRAINT SYS_CT_46 UNIQUE(FILE_ID))
++CREATE MEMORY TABLE TBL_DISK_GROUP(GROUP_ID BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1) NOT NULL PRIMARY KEY,NAME VARCHAR(255),DESCRIPTION VARCHAR(255),CAPACITY BIGINT,PARENT_ID BIGINT,CONSTRAINT FK22CF407E338D5F55 FOREIGN KEY(PARENT_ID) REFERENCES TBL_DISK_GROUP(GROUP_ID))
++CREATE MEMORY TABLE TBL_FILE(FILE_ID BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1) NOT NULL PRIMARY KEY,NAME VARCHAR(255),ABSOLUTEPATH VARCHAR(255),LASTMODIFIED BIGINT,DESCRIPTION VARCHAR(255),HIDDEN BOOLEAN,SIZE BIGINT,EXTENSION VARCHAR(255),FILE BOOLEAN,FOLDER BOOLEAN,MEDIA_ID BIGINT NOT NULL,PARENT_ID BIGINT,CONSTRAINT FK4049F57DBEDB532A FOREIGN KEY(PARENT_ID) REFERENCES TBL_FILE(FILE_ID))
++CREATE MEMORY TABLE TBL_GROUP_MEDIA(MEDIA_ID BIGINT NOT NULL,GROUP_ID BIGINT NOT NULL,PRIMARY KEY(GROUP_ID,MEDIA_ID),CONSTRAINT FK59417AC3D6552560 FOREIGN KEY(GROUP_ID) REFERENCES TBL_DISK_GROUP(GROUP_ID))
++CREATE MEMORY TABLE TBL_IMAGE(IMAGE_ID BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1) NOT NULL PRIMARY KEY,DATA VARBINARY(255),FILE_ID BIGINT NOT NULL,CONSTRAINT SYS_CT_56 UNIQUE(FILE_ID),CONSTRAINT FKC920A95A107E5D18 FOREIGN KEY(FILE_ID) REFERENCES TBL_FILE(FILE_ID))
++CREATE MEMORY TABLE TBL_LABEL(LABEL_ID BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1) NOT NULL PRIMARY KEY,NAME VARCHAR(255))
++CREATE MEMORY TABLE TBL_LOAN(LOAN_ID BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1) NOT NULL PRIMARY KEY,LOANED DATE,RETURNED DATE,MEDIA_ID BIGINT NOT NULL,USER_ID BIGINT NOT NULL)
++CREATE MEMORY TABLE TBL_MEDIA(MEDIA_ID BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1) NOT NULL PRIMARY KEY,NAME VARCHAR(255),CAPACITY BIGINT,LASTMODIFIED BIGINT,DESCRIPTION VARCHAR(255),FREESPACE BIGINT,LOCATION VARCHAR(255),TYPE_ID BIGINT NOT NULL)
++CREATE MEMORY TABLE TBL_MEDIA_LABEL(MEDIA_ID BIGINT NOT NULL,LABEL_ID BIGINT NOT NULL,PRIMARY KEY(MEDIA_ID,LABEL_ID),CONSTRAINT FK17D6A378E20ABC5D FOREIGN KEY(MEDIA_ID) REFERENCES TBL_MEDIA(MEDIA_ID),CONSTRAINT FK17D6A378A2E3A25D FOREIGN KEY(LABEL_ID) REFERENCES TBL_LABEL(LABEL_ID))
++CREATE MEMORY TABLE TBL_PROPERTIES(PROPERTIES_ID BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1) NOT NULL PRIMARY KEY,NAME VARCHAR(255),DESCRIPTION VARCHAR(255),TOTALSIZE BIGINT,DISKNUMBER INTEGER,TOTALFILES BIGINT,TOTALFOLDERS BIGINT,CREATIONDATE DATE)
++CREATE MEMORY TABLE TBL_TYPE(TYPE_ID BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1) NOT NULL PRIMARY KEY,NAME VARCHAR(255))
++CREATE MEMORY TABLE TBL_USER(USER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1) NOT NULL PRIMARY KEY,FIRSTNAME VARCHAR(255),SURNAME VARCHAR(255))
++CREATE MEMORY TABLE TBL_VIDEO(VIDEO_ID BIGINT GENERATED BY DEFAULT AS IDENTITY(START WITH 1) NOT NULL PRIMARY KEY,DATA VARBINARY(255),FILE_ID BIGINT NOT NULL,CONSTRAINT SYS_CT_74 UNIQUE(FILE_ID),CONSTRAINT FKC9D6147A107E5D18 FOREIGN KEY(FILE_ID) REFERENCES TBL_FILE(FILE_ID))
++ALTER TABLE TBL_AUDIO ADD CONSTRAINT FKC8B39BD5107E5D18 FOREIGN KEY(FILE_ID) REFERENCES TBL_FILE(FILE_ID)
++ALTER TABLE TBL_FILE ADD CONSTRAINT FK4049F57DE20ABC5D FOREIGN KEY(MEDIA_ID) REFERENCES TBL_MEDIA(MEDIA_ID)
++ALTER TABLE TBL_GROUP_MEDIA ADD CONSTRAINT FK59417AC3E20ABC5D FOREIGN KEY(MEDIA_ID) REFERENCES TBL_MEDIA(MEDIA_ID)
++ALTER TABLE TBL_LOAN ADD CONSTRAINT FK404CC4F1298F2457 FOREIGN KEY(USER_ID) REFERENCES TBL_USER(USER_ID)
++ALTER TABLE TBL_LOAN ADD CONSTRAINT FK404CC4F1E20ABC5D FOREIGN KEY(MEDIA_ID) REFERENCES TBL_MEDIA(MEDIA_ID)
++ALTER TABLE TBL_LOAN ADD CONSTRAINT FK404CC4F146697D12 FOREIGN KEY(LOAN_ID) REFERENCES TBL_USER(USER_ID)
++ALTER TABLE TBL_MEDIA ADD CONSTRAINT FKC9556FE3FF7AB9F7 FOREIGN KEY(TYPE_ID) REFERENCES TBL_TYPE(TYPE_ID)
++ALTER TABLE TBL_AUDIO ALTER COLUMN AUDIO_ID RESTART WITH 1
++ALTER TABLE TBL_DISK_GROUP ALTER COLUMN GROUP_ID RESTART WITH 6
++ALTER TABLE TBL_FILE ALTER COLUMN FILE_ID RESTART WITH 1
++ALTER TABLE TBL_IMAGE ALTER COLUMN IMAGE_ID RESTART WITH 1
++ALTER TABLE TBL_LABEL ALTER COLUMN LABEL_ID RESTART WITH 1
++ALTER TABLE TBL_LOAN ALTER COLUMN LOAN_ID RESTART WITH 1
++ALTER TABLE TBL_MEDIA ALTER COLUMN MEDIA_ID RESTART WITH 5
++ALTER TABLE TBL_PROPERTIES ALTER COLUMN PROPERTIES_ID RESTART WITH 2
++ALTER TABLE TBL_TYPE ALTER COLUMN TYPE_ID RESTART WITH 4
++ALTER TABLE TBL_USER ALTER COLUMN USER_ID RESTART WITH 1
++ALTER TABLE TBL_VIDEO ALTER COLUMN VIDEO_ID RESTART WITH 1
++CREATE USER SA PASSWORD &quot;&quot;
++GRANT DBA TO SA
++SET WRITE_DELAY 10
++SET SCHEMA PUBLIC
++INSERT INTO TBL_DISK_GROUP VALUES(1,'Grupo 1','Descricao do grupo 1',5500,NULL)
++INSERT INTO TBL_DISK_GROUP VALUES(2,'Grupo 2','Descricao do grupo 2',5500,NULL)
++INSERT INTO TBL_DISK_GROUP VALUES(3,'Grupo 3','Descricao do grupo 3',5500,NULL)
++INSERT INTO TBL_DISK_GROUP VALUES(4,'Grupo 4','Descricao do grupo 2',5500,NULL)
++INSERT INTO TBL_DISK_GROUP VALUES(5,'Grupo 5','Descricao do grupo 3',5500,NULL)
++INSERT INTO TBL_GROUP_MEDIA VALUES(1,1)
++INSERT INTO TBL_GROUP_MEDIA VALUES(2,1)
++INSERT INTO TBL_GROUP_MEDIA VALUES(3,4)
++INSERT INTO TBL_MEDIA VALUES(1,'DVD 1',5000,1212416344515,'no descrp',0,'somewhere',1)
++INSERT INTO TBL_MEDIA VALUES(2,'DVD 2',5000,1212416344515,'no descrp',0,'somewhere',1)
++INSERT INTO TBL_MEDIA VALUES(3,'CD 1',5000,1212416344515,'no descrp',0,'somewhere',2)
++INSERT INTO TBL_MEDIA VALUES(4,'Concept',5000,1212416344515,'no descrp',0,'somewhere',3)
++INSERT INTO TBL_PROPERTIES VALUES(1,'TestingDB',NULL,0,0,0,0,'2008-05-30')
++INSERT INTO TBL_TYPE VALUES(1,'DVD')
++INSERT INTO TBL_TYPE VALUES(2,'CDROM')
++INSERT INTO TBL_TYPE VALUES(3,'HDD')
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000121.html">[Jfindmyfiles-commits] r126 - in trunk: media/icons media/icons/x48	project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x48
+</A></li>
+	<LI>Next message: <A HREF="000123.html">[Jfindmyfiles-commits] r128 - in trunk:	docs/Iteracao2-CB05/TestingDB project/JFindMyFiles/Catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#122">[ date ]</a>
+              <a href="thread.html#122">[ thread ]</a>
+              <a href="subject.html#122">[ subject ]</a>
+              <a href="author.html#122">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

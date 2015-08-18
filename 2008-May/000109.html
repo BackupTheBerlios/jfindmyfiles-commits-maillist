@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r114 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r114%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs&In-Reply-To=%3C200805191629.m4JGTe1C016775%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000108.html">
+   <LINK REL="Next"  HREF="000110.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r114 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r114%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs&In-Reply-To=%3C200805191629.m4JGTe1C016775%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r114 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs">knitter at mail.berlios.de
+       </A><BR>
+    <I>Mon May 19 18:29:40 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000108.html">[Jfindmyfiles-commits] r113 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+        <LI>Next message: <A HREF="000110.html">[Jfindmyfiles-commits] r115 - in trunk: docs docs/Iteracao5-CB02	project/JFindMyFiles/Catalog/src	project/JFindMyFiles/Catalog/src/META-INF	project/JFindMyFiles/Catalog/src/META-INF/services	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#109">[ date ]</a>
+              <a href="thread.html#109">[ thread ]</a>
+              <a href="subject.html#109">[ subject ]</a>
+              <a href="author.html#109">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-19 18:29:31 +0200 (Mon, 19 May 2008)
+New Revision: 114
+
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+Log:
+Corrigido erro de c?\195?\179digo que criava inst?\195?\162ncias diferentes cada vez que se usava o sistema de lookup e que estava a impedir o avan?\195?\167o do desenvolvimento.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-19 14:40:05 UTC (rev 113)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-19 16:29:31 UTC (rev 114)
+@@ -39,8 +39,8 @@
+     private SessionFactory sessionFactory;
+     private CatalogProperties properties;// = new CatalogProperties(&quot;teste&quot;, &quot;&lt;sem desc&gt;&quot;, 50, 25, 500, 30, new Date()); //TODO: remove
+     private Configuration hConfig;
+-
+     public static int counting = 0;
++
+     /**
+      * Empty construtor so that this class can be instanciated using reflection 
+      * by the netbeans platform.
+@@ -142,10 +142,6 @@
+         }
+ 
+     }
+-    
+-    private void restoreSessionFactory() {
+-        sessionFactory = hConfig.buildSessionFactory();
+-    }
+ 
+     /**
+      * 
+@@ -164,9 +160,7 @@
+         //Reading catalog properties
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+-        List result = cSession.createQuery(&quot;from CatalogProperties&quot;).list();
+-        cSession.getTransaction().commit();
+-        properties = (CatalogProperties) result.get(0);
++        properties = (CatalogProperties) cSession.createQuery(&quot;from CatalogProperties&quot;).uniqueResult();
+     }
+ 
+     /**
+@@ -208,16 +202,21 @@
+         return properties;
+     }
+ 
+-    public void setProperties(CatalogProperties props) {
+-        /*this.properties = props;
+-
+-        Session cSession = sessionFactory.openSession();//getCurrentSession();
++    public void updateProperties() {
++        Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+-        cSession.save(properties);
++        cSession.update(properties);
+         cSession.getTransaction().commit();
+-        cSession.close();*/
+     }
+ 
++/*    public void updateProperties(CatalogProperties props) {
++        properties = props;
++        Session cSession = sessionFactory.getCurrentSession();
++        cSession.beginTransaction();
++        cSession.merge(properties);
++        cSession.getTransaction().commit();
++    }*/
++
+     public void addDiskGroup(String name, String description, DiskGroup parent) {
+         /*  Session hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+         hSession.beginTransaction();
+@@ -288,19 +287,15 @@
+     }
+ 
+     public List getUsers() {//TODO: validate session states
+-/*
+-        Session    hSession = ConnectionManager.getSessionFactory().getCurrentSession();
+-        hSession.beginTransaction();
+-        List rs = hSession.createQuery(&quot;from User&quot;).list();
+-        hSession.getTransaction().commit();
+-        return rs;*/
+-        return null;
++
++        Session cSession = sessionFactory.getCurrentSession();
++        cSession.beginTransaction();
++        List rs = cSession.createQuery(&quot;from User&quot;).list();
++        cSession.getTransaction().commit();
++        return rs;
+     }
+ 
+-    public List getDiskGroups() {//TODO: validate session states
+-        if(sessionFactory == null) {
+-            restoreSessionFactory();
+-        }
++    public List getDiskGroups() {
+         Session cSession = sessionFactory.getCurrentSession();
+         cSession.beginTransaction();
+         List rs = cSession.createQuery(&quot;from DiskGroup&quot;).list();
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml	2008-05-19 14:40:05 UTC (rev 113)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml	2008-05-19 16:29:31 UTC (rev 114)
+@@ -20,9 +20,9 @@
+  --&gt;
+ &lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
+ &lt;filesystem&gt;
+-    &lt;folder name=&quot;CatalogEngine&quot;&gt;
++&lt;!--    &lt;folder name=&quot;CatalogEngine&quot;&gt;
+         &lt;file name=&quot;de-berlios-jfindmyfiles-catalog-CatalogEngine.instance&quot;&gt;
+             &lt;attr name=&quot;instanceClass&quot; stringvalue=&quot;de.berlios.jfindmyfiles.catalog.CatalogEngine&quot;/&gt;
+         &lt;/file&gt;
+-    &lt;/folder&gt;
++    &lt;/folder&gt; --&gt;
+ &lt;/filesystem&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-05-19 14:40:05 UTC (rev 113)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-05-19 16:29:31 UTC (rev 114)
+@@ -54,8 +54,8 @@
+         setName(NbBundle.getMessage(NavigationTreeTopComponent.class, &quot;CTL_NavigationTreeTopComponent&quot;));
+         setToolTipText(NbBundle.getMessage(NavigationTreeTopComponent.class, &quot;HINT_NavigationTreeTopComponent&quot;));
+ //        setIcon(Utilities.loadImage(ICON_PATH, true));
+-        Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;);
+-        CatalogEngine en = lu.lookup(CatalogEngine.class);
++        //Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;);
++        //CatalogEngine en = lu.lookup(CatalogEngine.class);
+     }
+ 
+     private void myInitComponents() {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form	2008-05-19 14:40:05 UTC (rev 113)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form	2008-05-19 16:29:31 UTC (rev 114)
+@@ -150,7 +150,7 @@
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Component id=&quot;jlblDescription&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jscrDescription&quot; pref=&quot;136&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jscrDescription&quot; pref=&quot;132&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-05-19 14:40:05 UTC (rev 113)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-05-19 16:29:31 UTC (rev 114)
+@@ -25,7 +25,6 @@
+ import javax.swing.ImageIcon;
+ import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
+-import org.openide.util.lookup.Lookups;
+ 
+ /**
+  *
+@@ -42,11 +41,7 @@
+         super(parent, modal);
+         initComponents();
+ 
+-        Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;);
+-        eng = (CatalogEngine) lu.lookup(CatalogEngine.class);
+-        System.err.println(&quot;####################################################&quot; + eng.counting);
+-        System.err.println(&quot;####################################################&quot; + eng);
+-
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
+         fillIn();
+     }
+ 
+@@ -276,12 +271,12 @@
+ }//GEN-LAST:event_jbtnCancelActionPerformed
+ 
+ private void jbtnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnOKActionPerformed
+-    //TODO: is not setting the values
++    //TODO: better control over detached object
+     if (alterado &amp;&amp; eng != null &amp;&amp; props != null) {
+         alterado = false;
+         props.setCreationDate(jdcCreatedOn.getDate());
+         props.setDescription(jtaDescription.getText().trim());
+-        eng.setProperties(props);
++        eng.updateProperties();
+     }
+     dispose();
+ }//GEN-LAST:event_jbtnOKActionPerformed
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-05-19 14:40:05 UTC (rev 113)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-05-19 16:29:31 UTC (rev 114)
+@@ -34,11 +34,8 @@
+     /** Creates new form NewCatalogDlg */
+     public NewCatalogDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+-        Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;); // NOI18N
+ 
+-        eng = lu.lookup(CatalogEngine.class);
+-        System.err.println(&quot;####################################################&quot; + eng.counting);
+-        System.err.println(&quot;####################################################&quot; + eng);
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
+         initComponents();
+         jlbError.setVisible(false);
+     }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-05-19 14:40:05 UTC (rev 113)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-05-19 16:29:31 UTC (rev 114)
+@@ -36,7 +36,6 @@
+ import javax.swing.filechooser.FileSystemView;
+ import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
+-import org.openide.util.lookup.Lookups;
+ 
+ /**
+  *
+@@ -51,11 +50,7 @@
+     /** Creates new form NewDiskDlg */
+     public NewDiskDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+-        Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;); // NOI18N
+-
+-        eng = lu.lookup(CatalogEngine.class);
+-        System.err.println(&quot;####################################################&quot; + eng.counting);
+-        System.err.println(&quot;####################################################&quot; + eng);
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
+         initComponents();
+     //TODO: get the available plugins and create the popup menu
+     }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-05-19 14:40:05 UTC (rev 113)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-05-19 16:29:31 UTC (rev 114)
+@@ -35,9 +35,9 @@
+     public OpenCatalogDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+         initComponents();
+-        Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;); // NOI18N
++        /*Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;); // NOI18N
+ 
+-        eng = lu.lookup(CatalogEngine.class);
++        eng = lu.lookup(CatalogEngine.class);*/
+         initComponents();
+         jlbError.setVisible(false);        
+     }
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000108.html">[Jfindmyfiles-commits] r113 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+	<LI>Next message: <A HREF="000110.html">[Jfindmyfiles-commits] r115 - in trunk: docs docs/Iteracao5-CB02	project/JFindMyFiles/Catalog/src	project/JFindMyFiles/Catalog/src/META-INF	project/JFindMyFiles/Catalog/src/META-INF/services	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#109">[ date ]</a>
+              <a href="thread.html#109">[ thread ]</a>
+              <a href="subject.html#109">[ subject ]</a>
+              <a href="author.html#109">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,568 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r55 - in trunk: docs docs/Iteracao1-CB09 docs/Iteracao2-CB05 project project/JFindMyFiles project/JFindMyFiles/Catalog project/JFindMyFiles/Catalog/nbproject project/JFindMyFiles/Catalog/src project/JFindMyFiles/Catalog/src/de project/JFindMyFiles/Catalog/src/de/berlios project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog project/JFindMyFiles/Catalog/test project/JFindMyFiles/Catalog/test/unit project/JFindMyFiles/ReadingFiles project/JFindMyFiles/ReadingFiles/nbproject project/JFindMyFiles/ReadingFiles/src project/JFindMyFiles/ReadingFiles/src/de project/JFindMyFiles/ReadingFiles/src/de/berlios project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles project/JFindMyFiles/ReadingFiles/test project/JFindMyFiles/ReadingFiles/test/unit project/JFindMyFiles/branding project/JFindMyFiles/branding/core project/JFindMyFiles/br! anding/core/core.jar project/JFindMyFiles/branding/core/core.jar/org project/JFindMyFiles/branding/core/core.jar/org/netbeans project/JFindMyFiles/branding/core/core.jar/org/netbeans/core project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup project/JFindMyFiles/branding/modules project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui project/JFindMyFiles/nbproject
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-April/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r55%20-%20in%20trunk%3A%20docs%20docs/Iteracao1-CB09%0A%20docs/Iteracao2-CB05%20project%20project/JFindMyFiles%0A%20project/JFindMyFiles/Catalog%20project/JFindMyFiles/Catalog/nbproject%0A%20project/JFindMyFiles/Catalog/src%20project/JFindMyFiles/Catalog/src/de%0A%20project/JFindMyFiles/Catalog/src/de/berlios%0A%20project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles%0A%20project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%20project/JFindMyFiles/Catalog/test%20project/JFindMyFiles/Catalog/test/unit%0A%20project/JFindMyFiles/ReadingFiles%0A%20project/JFindMyFiles/ReadingFiles/nbproject%0A%20project/JFindMyFiles/ReadingFiles/src%0A%20project/JFindMyFiles/ReadingFiles/src/de%0A%20project/JFindMyFiles/ReadingFiles/src/de/berlios%0A%20project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles%0A%20project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%20project/JFindMyFiles/ReadingFiles/test%0A%20project/JFindMyFiles/ReadingFiles/test/unit%20project/JFindMyFiles/branding%0A%20project/JFindMyFiles/branding/core%20project/JFindMyFiles/br%21%0A%20anding/core/core.jar%20project/JFindMyFiles/branding/core/core.jar/org%0A%20project/JFindMyFiles/branding/core/core.jar/org/netbeans%0A%20project/JFindMyFiles/branding/core/core.jar/org/netbeans/core%0A%20project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup%0A%20project/JFindMyFiles/branding/modules%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui%0A%20project/JFindMyFiles/nbproject&In-Reply-To=%3C200804211452.m3LEqFBo018743%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000049.html">
+   <LINK REL="Next"  HREF="000051.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r55 - in trunk: docs docs/Iteracao1-CB09 docs/Iteracao2-CB05 project project/JFindMyFiles project/JFindMyFiles/Catalog project/JFindMyFiles/Catalog/nbproject project/JFindMyFiles/Catalog/src project/JFindMyFiles/Catalog/src/de project/JFindMyFiles/Catalog/src/de/berlios project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog project/JFindMyFiles/Catalog/test project/JFindMyFiles/Catalog/test/unit project/JFindMyFiles/ReadingFiles project/JFindMyFiles/ReadingFiles/nbproject project/JFindMyFiles/ReadingFiles/src project/JFindMyFiles/ReadingFiles/src/de project/JFindMyFiles/ReadingFiles/src/de/berlios project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles project/JFindMyFiles/ReadingFiles/test project/JFindMyFiles/ReadingFiles/test/unit project/JFindMyFiles/branding project/JFindMyFiles/branding/core project/JFindMyFiles/br! anding/core/core.jar project/JFindMyFiles/branding/core/core.jar/org project/JFindMyFiles/branding/core/core.jar/org/netbeans project/JFindMyFiles/branding/core/core.jar/org/netbeans/core project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup project/JFindMyFiles/branding/modules project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui project/JFindMyFiles/nbproject</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r55%20-%20in%20trunk%3A%20docs%20docs/Iteracao1-CB09%0A%20docs/Iteracao2-CB05%20project%20project/JFindMyFiles%0A%20project/JFindMyFiles/Catalog%20project/JFindMyFiles/Catalog/nbproject%0A%20project/JFindMyFiles/Catalog/src%20project/JFindMyFiles/Catalog/src/de%0A%20project/JFindMyFiles/Catalog/src/de/berlios%0A%20project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles%0A%20project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%20project/JFindMyFiles/Catalog/test%20project/JFindMyFiles/Catalog/test/unit%0A%20project/JFindMyFiles/ReadingFiles%0A%20project/JFindMyFiles/ReadingFiles/nbproject%0A%20project/JFindMyFiles/ReadingFiles/src%0A%20project/JFindMyFiles/ReadingFiles/src/de%0A%20project/JFindMyFiles/ReadingFiles/src/de/berlios%0A%20project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles%0A%20project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles%0A%20project/JFindMyFiles/ReadingFiles/test%0A%20project/JFindMyFiles/ReadingFiles/test/unit%20project/JFindMyFiles/branding%0A%20project/JFindMyFiles/branding/core%20project/JFindMyFiles/br%21%0A%20anding/core/core.jar%20project/JFindMyFiles/branding/core/core.jar/org%0A%20project/JFindMyFiles/branding/core/core.jar/org/netbeans%0A%20project/JFindMyFiles/branding/core/core.jar/org/netbeans/core%0A%20project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup%0A%20project/JFindMyFiles/branding/modules%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view%0A%20project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui%0A%20project/JFindMyFiles/nbproject&In-Reply-To=%3C200804211452.m3LEqFBo018743%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r55 - in trunk: docs docs/Iteracao1-CB09 docs/Iteracao2-CB05 project project/JFindMyFiles project/JFindMyFiles/Catalog project/JFindMyFiles/Catalog/nbproject project/JFindMyFiles/Catalog/src project/JFindMyFiles/Catalog/src/de project/JFindMyFiles/Catalog/src/de/berlios project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog project/JFindMyFiles/Catalog/test project/JFindMyFiles/Catalog/test/unit project/JFindMyFiles/ReadingFiles project/JFindMyFiles/ReadingFiles/nbproject project/JFindMyFiles/ReadingFiles/src project/JFindMyFiles/ReadingFiles/src/de project/JFindMyFiles/ReadingFiles/src/de/berlios project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles project/JFindMyFiles/ReadingFiles/test project/JFindMyFiles/ReadingFiles/test/unit project/JFindMyFiles/branding project/JFindMyFiles/branding/core project/JFindMyFiles/br! anding/core/core.jar project/JFindMyFiles/branding/core/core.jar/org project/JFindMyFiles/branding/core/core.jar/org/netbeans project/JFindMyFiles/branding/core/core.jar/org/netbeans/core project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup project/JFindMyFiles/branding/modules project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui project/JFindMyFiles/nbproject">knitter at mail.berlios.de
+       </A><BR>
+    <I>Mon Apr 21 16:52:15 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000049.html">[Jfindmyfiles-commits] r54 - in trunk: docs docs/Documentos	Externos docs/Iteracao1-CB09 spikes/SPKlerDados	spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados
+</A></li>
+        <LI>Next message: <A HREF="000051.html">[Jfindmyfiles-commits] r56 - in trunk/project/JFindMyFiles: .	Catalog ReadingFiles nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#50">[ date ]</a>
+              <a href="thread.html#50">[ thread ]</a>
+              <a href="subject.html#50">[ subject ]</a>
+              <a href="author.html#50">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-04-21 16:51:52 +0200 (Mon, 21 Apr 2008)
+New Revision: 55
+
+Added:
+   trunk/docs/Iteracao2-CB05/
+   trunk/docs/Iteracao2-CB05/DER.dia
+   trunk/docs/Iteracao2-CB05/DER.wmf
+   trunk/docs/Iteracao2-CB05/Objectivos da Iteracao.txt
+   trunk/project/JFindMyFiles/
+   trunk/project/JFindMyFiles/Catalog/
+   trunk/project/JFindMyFiles/Catalog/build.xml
+   trunk/project/JFindMyFiles/Catalog/manifest.mf
+   trunk/project/JFindMyFiles/Catalog/nbproject/
+   trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/Catalog/nbproject/project.properties
+   trunk/project/JFindMyFiles/Catalog/nbproject/project.xml
+   trunk/project/JFindMyFiles/Catalog/nbproject/suite.properties
+   trunk/project/JFindMyFiles/Catalog/src/
+   trunk/project/JFindMyFiles/Catalog/src/de/
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml
+   trunk/project/JFindMyFiles/Catalog/test/
+   trunk/project/JFindMyFiles/Catalog/test/unit/
+   trunk/project/JFindMyFiles/Catalog/test/unit/src/
+   trunk/project/JFindMyFiles/ReadingFiles/
+   trunk/project/JFindMyFiles/ReadingFiles/build.xml
+   trunk/project/JFindMyFiles/ReadingFiles/manifest.mf
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.properties
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+   trunk/project/JFindMyFiles/ReadingFiles/nbproject/suite.properties
+   trunk/project/JFindMyFiles/ReadingFiles/src/
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Bundle.properties
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml
+   trunk/project/JFindMyFiles/ReadingFiles/test/
+   trunk/project/JFindMyFiles/ReadingFiles/test/unit/
+   trunk/project/JFindMyFiles/ReadingFiles/test/unit/src/
+   trunk/project/JFindMyFiles/branding/
+   trunk/project/JFindMyFiles/branding/core/
+   trunk/project/JFindMyFiles/branding/core/core.jar/
+   trunk/project/JFindMyFiles/branding/core/core.jar/org/
+   trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/
+   trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/
+   trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/
+   trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties
+   trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/frame.gif
+   trunk/project/JFindMyFiles/branding/modules/
+   trunk/project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/
+   trunk/project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/
+   trunk/project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/
+   trunk/project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/
+   trunk/project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/
+   trunk/project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/
+   trunk/project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui/
+   trunk/project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui/Bundle.properties
+   trunk/project/JFindMyFiles/nbproject/
+   trunk/project/JFindMyFiles/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/nbproject/platform.properties
+   trunk/project/JFindMyFiles/nbproject/project.properties
+   trunk/project/JFindMyFiles/nbproject/project.xml
+Removed:
+   trunk/docs/Iteracao1-CB09/DER.dia
+   trunk/docs/Iteracao1-CB09/DER.wmf
+Log:
+Foi criado o projecto Netbeans do sistema e inclu?\195?\173dos os m?\195?\179dulos referentes ?\195?\160s duas primeiras itera?\195?\167?\195?\181es.
+
+Deleted: trunk/docs/Iteracao1-CB09/DER.dia
+===================================================================
+(Binary files differ)
+
+Deleted: trunk/docs/Iteracao1-CB09/DER.wmf
+===================================================================
+(Binary files differ)
+
+Added: trunk/docs/Iteracao2-CB05/DER.dia
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Iteracao2-CB05/DER.dia
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/docs/Iteracao2-CB05/DER.wmf
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/docs/Iteracao2-CB05/DER.wmf
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/docs/Iteracao2-CB05/Objectivos da Iteracao.txt
+===================================================================
+--- trunk/docs/Iteracao2-CB05/Objectivos da Iteracao.txt	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/docs/Iteracao2-CB05/Objectivos da Iteracao.txt	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,10 @@
++CB05: ST5, ST6, ST8
++- O programa tem de permitir criar cat&#225;logos, abrir cat&#225;logos, manter um registo 
++de cat&#225;logos recentes, fechar e guardar cat&#225;logos.
++- Os discos e pastas podem ser catalogados usando etiquetas, o sistema deve ser 
++independente das categorias e grupos de discos e permitir que o mesmo disco 
++tenha mais que uma categoria.
++- A aplica&#231;&#227;o deve permitir ser distribuida em mais que uma l&#237;ngua, deve ser 
++internacionaliz&#225;vel.
++&lt;==============================================================================&gt;
++ - Desenvolver o DER da aplica&#231;&#227;o
+\ No newline at end of file
+
+Added: trunk/project/JFindMyFiles/Catalog/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/build.xml	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/Catalog/build.xml	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,8 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.catalog&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project de.berlios.jfindmyfiles.catalog.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/Catalog/manifest.mf
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/manifest.mf	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/Catalog/manifest.mf	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,6 @@
++Manifest-Version: 1.0
++OpenIDE-Module: de.berlios.jfindmyfiles.catalog
++OpenIDE-Module-Layer: de/berlios/jfindmyfiles/catalog/layer.xml
++OpenIDE-Module-Localizing-Bundle: de/berlios/jfindmyfiles/catalog/Bundle.properties
++OpenIDE-Module-Specification-Version: 1.0
++
+
+Added: trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/build-impl.xml	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,30 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.catalog-impl&quot; basedir=&quot;..&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject2:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
++    &lt;nbmproject2:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/genfiles.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=69bb58de
++build.xml.script.CRC32=986962b5
++build.xml.stylesheet.CRC32=79c3b980
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=69bb58de
++nbproject/build-impl.xml.script.CRC32=ff140e4d
++nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Added: trunk/project/JFindMyFiles/Catalog/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/project.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/project.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,2 @@
++javac.source=1.5
++javac.compilerargs=-Xlint -Xlint:-serial
+
+Added: trunk/project/JFindMyFiles/Catalog/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/project.xml	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/project.xml	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,12 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
++            &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies/&gt;
++            &lt;public-packages/&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/Catalog/nbproject/suite.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/nbproject/suite.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/Catalog/nbproject/suite.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1 @@
++suite.dir=${basedir}/..
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/Bundle.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1 @@
++OpenIDE-Module-Name=Catalog
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/layer.xml	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
++&lt;filesystem&gt;
++&lt;/filesystem&gt;
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/build.xml	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/ReadingFiles/build.xml	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,8 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.readingfiles&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project de.berlios.jfindmyfiles.readingfiles.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/manifest.mf
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/manifest.mf	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/ReadingFiles/manifest.mf	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,6 @@
++Manifest-Version: 1.0
++OpenIDE-Module: de.berlios.jfindmyfiles.readingfiles
++OpenIDE-Module-Layer: de/berlios/jfindmyfiles/readingfiles/layer.xml
++OpenIDE-Module-Localizing-Bundle: de/berlios/jfindmyfiles/readingfiles/Bundle.properties
++OpenIDE-Module-Specification-Version: 1.0
++
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/build-impl.xml	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,30 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.readingfiles-impl&quot; basedir=&quot;..&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject2:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
++    &lt;nbmproject2:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/genfiles.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=562df296
++build.xml.script.CRC32=78d85b23
++build.xml.stylesheet.CRC32=79c3b980
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=562df296
++nbproject/build-impl.xml.script.CRC32=05e89526
++nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,2 @@
++javac.source=1.5
++javac.compilerargs=-Xlint -Xlint:-serial
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/project.xml	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,12 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
++            &lt;code-name-base&gt;de.berlios.jfindmyfiles.readingfiles&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies/&gt;
++            &lt;public-packages/&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/nbproject/suite.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/nbproject/suite.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/ReadingFiles/nbproject/suite.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1 @@
++suite.dir=${basedir}/..
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Bundle.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Bundle.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1 @@
++OpenIDE-Module-Name=ReadingFiles
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/layer.xml	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,4 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!DOCTYPE filesystem PUBLIC &quot;-//NetBeans//DTD Filesystem 1.1//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/filesystem-1_1.dtd">http://www.netbeans.org/dtds/filesystem-1_1.dtd</A>&quot;&gt;
++&lt;filesystem&gt;
++&lt;/filesystem&gt;
+
+Added: trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,4 @@
++currentVersion=JFindMyFiles {0}
++LBL_splash_window_title=Starting JFindMyFiles
++SplashProgressBarBounds=0,249,473,3
++SplashRunningTextBounds=23,260,160,12
+
+Added: trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/frame.gif
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/frame.gif
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui/Bundle.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/branding/modules/org-netbeans-core-windows.jar/org/netbeans/core/windows/view/ui/Bundle.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,2 @@
++CTL_MainWindow_Title=JFindMyFiles {0}
++CTL_MainWindow_Title_No_Project=JFindMyFiles {0}
+
+Added: trunk/project/JFindMyFiles/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/build-impl.xml	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/nbproject/build-impl.xml	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,27 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;JFindMyFiles-impl&quot; basedir=&quot;..&quot; xmlns:sproject=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-suite-project/1">http://www.netbeans.org/ns/nb-module-suite-project/1</A>&quot;&gt;
++    &lt;property file=&quot;nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-suite-project/1">http://www.netbeans.org/ns/nb-module-suite-project/1</A>&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;sproject:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot;/&gt;
++    &lt;sproject:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/suite.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/genfiles.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/nbproject/genfiles.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=7d9bb5e2
++build.xml.script.CRC32=f2b647fd
++build.xml.stylesheet.CRC32=531c622b
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=7d9bb5e2
++nbproject/build-impl.xml.script.CRC32=a959a992
++nbproject/build-impl.xml.stylesheet.CRC32=196c7090
+
+Added: trunk/project/JFindMyFiles/nbproject/platform.properties
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/platform.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/nbproject/platform.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,21 @@
++# Deprecated since 5.0u1; for compatibility with 5.0:
++disabled.clusters=\
++    apisupport1,\
++    cnd1,\
++    enterprise4,\
++    ide8,\
++    identity1,\
++    java1,\
++    nb6.0,\
++    profiler2,\
++    ruby1,\
++    testtools,\
++    uml4,\
++    visualweb1,\
++    xml1
++disabled.modules=\
++    org.netbeans.modules.apisupport.harness
++enabled.clusters=\
++    harness,\
++    platform7
++nbplatform.active=default
+
+Added: trunk/project/JFindMyFiles/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/project.properties	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/nbproject/project.properties	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,9 @@
++app.icon=branding/core/core.jar/org/netbeans/core/startup/frame48.gif
++app.name=jfindmyfiles
++app.title=JFindMyFiles
++branding.token=${app.name}
++modules=\
++    ${project.de.berlios.jfindmyfiles.readingfiles}:\
++    ${project.de.berlios.jfindmyfiles.catalog}
++project.de.berlios.jfindmyfiles.catalog=Catalog
++project.de.berlios.jfindmyfiles.readingfiles=ReadingFiles
+
+Added: trunk/project/JFindMyFiles/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/project.xml	2008-04-21 13:50:29 UTC (rev 54)
++++ trunk/project/JFindMyFiles/nbproject/project.xml	2008-04-21 14:51:52 UTC (rev 55)
+@@ -0,0 +1,9 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project.suite&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-suite-project/1">http://www.netbeans.org/ns/nb-module-suite-project/1</A>&quot;&gt;
++            &lt;name&gt;JFindMyFiles&lt;/name&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000049.html">[Jfindmyfiles-commits] r54 - in trunk: docs docs/Documentos	Externos docs/Iteracao1-CB09 spikes/SPKlerDados	spikes/SPKlerDados/src/de/berlios/jfindmyfiles/spklerdados
+</A></li>
+	<LI>Next message: <A HREF="000051.html">[Jfindmyfiles-commits] r56 - in trunk/project/JFindMyFiles: .	Catalog ReadingFiles nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#50">[ date ]</a>
+              <a href="thread.html#50">[ thread ]</a>
+              <a href="subject.html#50">[ subject ]</a>
+              <a href="author.html#50">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

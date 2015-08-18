@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r178 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r178%20-%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui&In-Reply-To=%3C200807010207.m6127Kh4003746%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   
+   <LINK REL="Next"  HREF="000174.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r178 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r178%20-%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui&In-Reply-To=%3C200807010207.m6127Kh4003746%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r178 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui">knitter at mail.berlios.de
+       </A><BR>
+    <I>Tue Jul  1 04:07:20 CEST 2008</I>
+    <P><UL>
+        
+        <LI>Next message: <A HREF="000174.html">[Jfindmyfiles-commits] r179 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#173">[ date ]</a>
+              <a href="thread.html#173">[ thread ]</a>
+              <a href="subject.html#173">[ subject ]</a>
+              <a href="author.html#173">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-07-01 04:07:16 +0200 (Tue, 01 Jul 2008)
+New Revision: 178
+
+Modified:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java
+Log:
+Commit depois da resolu?\195?\167?\195?\163o de conflitos.
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form	2008-06-30 20:06:25 UTC (rev 177)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.form	2008-07-01 02:07:16 UTC (rev 178)
+@@ -38,6 +38,9 @@
+               &lt;Connection code=&quot;ntModel&quot; type=&quot;code&quot;/&gt;
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
++          &lt;AuxValues&gt;
++            &lt;AuxValue name=&quot;JavaCodeGenerator_CreateCodePost&quot; type=&quot;java.lang.String&quot; value=&quot;jTable1.setDefaultRenderer(Node.Property.class, new PropertyCellRenderer());&amp;#xd;&amp;#xa;jTable1.setDefaultRenderer(Media.class, new MediaCellRenderer());&quot;/&gt;
++          &lt;/AuxValues&gt;
+         &lt;/Component&gt;
+       &lt;/SubComponents&gt;
+     &lt;/Container&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java	2008-06-30 20:06:25 UTC (rev 177)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/WindowTestingTopComponent.java	2008-07-01 02:07:16 UTC (rev 178)
+@@ -11,8 +11,9 @@
+ import java.util.logging.Logger;
+ import javax.swing.JLabel;
+ import javax.swing.JTable;
++import javax.swing.table.TableCellRenderer;
+ import javax.swing.event.TableModelEvent;
+-import javax.swing.event.TableModelListener;
++import org.openide.explorer.propertysheet.PropertyPanel;
+ import javax.swing.table.TableCellRenderer;
+ import org.openide.explorer.propertysheet.PropertyPanel;
+ import org.openide.explorer.view.NodeTableModel;
+@@ -63,6 +64,8 @@
+ 
+         jScrollPane1 = new javax.swing.JScrollPane();
+         jTable1 = new javax.swing.JTable();
++        jTable1.setDefaultRenderer(Node.Property.class, new PropertyCellRenderer());
++        jTable1.setDefaultRenderer(Media.class, new MediaCellRenderer());
+ 
+         jTable1.setModel(ntModel);
+         jScrollPane1.setViewportView(jTable1);
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	
+	<LI>Next message: <A HREF="000174.html">[Jfindmyfiles-commits] r179 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#173">[ date ]</a>
+              <a href="thread.html#173">[ thread ]</a>
+              <a href="subject.html#173">[ subject ]</a>
+              <a href="author.html#173">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

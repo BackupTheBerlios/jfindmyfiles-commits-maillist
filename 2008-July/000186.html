@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r191 - in trunk: docs docs/Iteracao3-CB03	project/JFindMyFiles/MetadataExtractor/nbproject
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r191%20-%20in%20trunk%3A%20docs%20docs/Iteracao3-CB03%0A%09project/JFindMyFiles/MetadataExtractor/nbproject&In-Reply-To=%3C200807091325.m69DPuMC021493%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000185.html">
+   <LINK REL="Next"  HREF="000187.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r191 - in trunk: docs docs/Iteracao3-CB03	project/JFindMyFiles/MetadataExtractor/nbproject</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r191%20-%20in%20trunk%3A%20docs%20docs/Iteracao3-CB03%0A%09project/JFindMyFiles/MetadataExtractor/nbproject&In-Reply-To=%3C200807091325.m69DPuMC021493%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r191 - in trunk: docs docs/Iteracao3-CB03	project/JFindMyFiles/MetadataExtractor/nbproject">knitter at mail.berlios.de
+       </A><BR>
+    <I>Wed Jul  9 15:25:56 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000185.html">[Jfindmyfiles-commits] r190 - in trunk/docs: . Documentos	Externos/images
+</A></li>
+        <LI>Next message: <A HREF="000187.html">[Jfindmyfiles-commits] r192 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#186">[ date ]</a>
+              <a href="thread.html#186">[ thread ]</a>
+              <a href="subject.html#186">[ subject ]</a>
+              <a href="author.html#186">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-07-09 15:25:51 +0200 (Wed, 09 Jul 2008)
+New Revision: 191
+
+Modified:
+   trunk/docs/Iteracao3-CB03/Manual do Programador.txt
+   trunk/docs/jFindMyFiles - Relatorio com estrutura Alternativa - Office 2007.doc
+   trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.properties
+Log:
+Actualiza?\195?\167?\195?\163o da documenta?\195?\167?\195?\163o.
+
+Modified: trunk/docs/Iteracao3-CB03/Manual do Programador.txt
+===================================================================
+--- trunk/docs/Iteracao3-CB03/Manual do Programador.txt	2008-07-08 18:37:38 UTC (rev 190)
++++ trunk/docs/Iteracao3-CB03/Manual do Programador.txt	2008-07-09 13:25:51 UTC (rev 191)
+@@ -1,5 +1,56 @@
+ Manual de Programador para o Sistema de Extens&#245;es
+ 
+-Para ser poss&#237;vel criar uma extens&#227;o ao sistema de leitura de ficheiros, o 
+-programador ter&#225; criar uma classe Java que cumpra o contracto definido pela 
+-interface Reader no package de.berlio.jfindmyfiles.......
+\ No newline at end of file
++Cria&#231;&#227;o de Extens&#245;es
++O software permite a cria&#231;&#227;o de extens&#245;es, que ser&#227;o usados durante a leitura 
++de ficheiros, para a obten&#231;&#227;o de informa&#231;&#245;es mais espec&#237;ficas sobre um 
++determinado ficheiro. A cria&#231;&#227;o de uma extens&#227;o passa pela sua programa&#231;&#227;o, 
++usando a linguagem Java.
++
++A classe a ser usada como ponto de entrada dever&#225; implementar a interface 
++de.berlios.jfindmyfiles.readingfiles.pluginapi.Reader, definida na biblioteca 
++de-berlios-jfindmyfiles-readingfiles.jar, contida na pasta de instala&#231;&#227;o da 
++aplica&#231;&#227;o.
++
++A interface define os seguintes m&#233;todos:
++	- getName &#150; M&#233;todo que devolve um valor do tipo String que representa o 
++	nome da extens&#227;o. O nome de uma extens&#227;o n&#227;o necessita ser &#250;nico, uma vez 
++	que &#233; usado apenas na apresenta&#231;&#227;o ao utilizador, mas deve manter-se c
++	onstante durante todas as execu&#231;&#245;es da aplica&#231;&#227;o. Sugere-se a utiliza&#231;&#227;o de 
++	um atributo de classe, constante, para a defini&#231;&#227;o do nome.
++	- getAuthor &#150; M&#233;todo que permite obter o nome do autor da extens&#227;o. Tal com 
++	o m&#233;todo anterior, o valor devolvido &#233; do tipo String e, do mesmo modo se 
++	recomenda o uso de atributos de classe constantes.
++	- pluginFor &#150; M&#233;todo que permite determinar a extens&#227;o do ficheiro sobre o 
++	qual esta extens&#227;o ir&#225; actuar. Deve ser notado, no entanto, que a extens&#227;o 
++	de um ficheiro n&#227;o ter&#225; significado em todos os sistemas operativos, mas 
++	esta &#233; a forma de identificar uma extens&#227;o da aplica&#231;&#227;o inequivocamente. 
++	Este m&#233;todo dever&#225; devolver um valor do tipo String que contenha a extens&#227;o 
++	comummente usada nos ficheiros que se pretendem ler, caso duas extens&#245;es da 
++	aplica&#231;&#227;o se registem para o mesmo tipo de ficheiro, apenas a &#250;ltima a ser 
++	registada prevalece, sendo que a ordem pela qual as extens&#245;es da aplica&#231;&#227;o 
++	s&#227;o registadas, n&#227;o pode ser garantida. Cabe ao utilizador, e n&#227;o ao 
++	programador da extens&#227;o de aplica&#231;&#227;o, acautelar qualquer situa&#231;&#227;o de 
++	conflito.
++	- read &#150; Este &#233; o m&#233;todo que efectua a leitura das informa&#231;&#245;es de 
++	ficheiros. &#201;-lhe passado um par&#226;metro, do tipo File, que representa o 
++	ficheiro a ler. A leitura de informa&#231;&#227;o &#233; s&#237;ncrona, pelo que se espera que 
++	este m&#233;todo termine o mais rapidamente poss&#237;vel, n&#227;o efectuando nada mais 
++	al&#233;m do estritamente necess&#225;rio para a obten&#231;&#227;o e devolu&#231;&#227;o da informa&#231;&#227;o. 
++	Toda a informa&#231;&#227;o &#233; encapsulada num objecto do tipo DescriptionValues, que 
++	&#233; devolvido por este m&#233;todo no fim da sua execu&#231;&#227;o. O objecto n&#227;o dever&#225; 
++	ser null, pelo que, caso seja, dever&#225; ser devolvido um objecto criado com o 
++	construtor sem argumentos da classe DescriptionValues.
++	- isActive &#150; Forma de determinar se uma extens&#227;o se encontra activo ou n&#227;o. 
++	Este m&#233;todo deve ser implementado para reflectir o estado da extens&#227;o e n&#227;o 
++	deve devolver sempre um valor predefinido. Ao implementar uma extens&#227;o, o 
++	programador n&#227;o se deve preocupar com quem ir&#225; alterar o valor mas sim 
++	garantir que &#233; poss&#237;vel alterar o estado da extens&#227;o, uma implementa&#231;&#227;o 
++	t&#237;pica ser&#225;:
++		private boolean active;
++	
++		public boolean isActive() {
++			return active;
++		}
++	- setActive &#150; Permite definir o estado de uma extens&#227;o. Este m&#233;todo dever&#225; 
++	ser implementado de forma a que o m&#233;todo anterior, isActive, reflicta 
++	correctamente o estado da extens&#227;o.
+
+Modified: trunk/docs/jFindMyFiles - Relatorio com estrutura Alternativa - Office 2007.doc
+===================================================================
+(Binary files differ)
+
+Modified: trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.properties	2008-07-08 18:37:38 UTC (rev 190)
++++ trunk/project/JFindMyFiles/MetadataExtractor/nbproject/project.properties	2008-07-09 13:25:51 UTC (rev 191)
+@@ -1 +1,2 @@
+ is.autoload=true
++javadoc.arch=${basedir}/arch.xml
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000185.html">[Jfindmyfiles-commits] r190 - in trunk/docs: . Documentos	Externos/images
+</A></li>
+	<LI>Next message: <A HREF="000187.html">[Jfindmyfiles-commits] r192 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#186">[ date ]</a>
+              <a href="thread.html#186">[ thread ]</a>
+              <a href="subject.html#186">[ subject ]</a>
+              <a href="author.html#186">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

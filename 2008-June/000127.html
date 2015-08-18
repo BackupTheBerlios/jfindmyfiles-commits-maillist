@@ -1,0 +1,2851 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r132 - in trunk: docs docs/Iteracao4-CB04 docs/Iteracao6-CB07 media project/JFindMyFiles project/JFindMyFiles/ExportEngine/nbproject project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine project/JFindMyFiles/ImportEngine project/JFindMyFiles/ImportEngine/nbproject project/JFindMyFiles/ImportEngine/src project/JFindMyFiles/ImportEngine/src/de project/JFindMyFiles/ImportEngine/src/de/berlios project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine project/JFindMyFiles/ImportEngine/test project/JFindMyFiles/ImportEngine/test/unit project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup project/JFindMyFiles/nbproject spikes spikes/CRC spikes/CRC/fastmd5 spikes/CRC/fastmd5/com spikes/CRC/fastmd5/com/twmacinta spikes/CRC/fastmd5/com/twmacinta/io spikes/CRC/fastmd5/com/twma! cinta/util spikes/CRC/fastmd5/com/twmacinta/util/test spikes/CRC/fastmd5/lib spikes/CRC/fastmd5/lib/arch spikes/CRC/fastmd5/lib/arch/darwin_ppc spikes/CRC/fastmd5/lib/arch/linux_x86 spikes/CRC/fastmd5/lib/arch/win32_x86 spikes/CRC/nbproject spikes/CRC/src spikes/CRC/src/crc
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r132%20-%20in%20trunk%3A%20docs%20docs/Iteracao4-CB04%0A%20docs/Iteracao6-CB07%20media%20project/JFindMyFiles%0A%20project/JFindMyFiles/ExportEngine/nbproject%0A%20project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%20project/JFindMyFiles/ImportEngine%0A%20project/JFindMyFiles/ImportEngine/nbproject%0A%20project/JFindMyFiles/ImportEngine/src%0A%20project/JFindMyFiles/ImportEngine/src/de%0A%20project/JFindMyFiles/ImportEngine/src/de/berlios%0A%20project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles%0A%20project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine%0A%20project/JFindMyFiles/ImportEngine/test%0A%20project/JFindMyFiles/ImportEngine/test/unit%0A%20project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%20project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup%0A%20project/JFindMyFiles/nbproject%20spikes%20spikes/CRC%20spikes/CRC/fastmd5%0A%20spikes/CRC/fastmd5/com%20spikes/CRC/fastmd5/com/twmacinta%0A%20spikes/CRC/fastmd5/com/twmacinta/io%20spikes/CRC/fastmd5/com/twma%21%20cinta/util%0A%20spikes/CRC/fastmd5/com/twmacinta/util/test%20spikes/CRC/fastmd5/lib%0A%20spikes/CRC/fastmd5/lib/arch%20spikes/CRC/fastmd5/lib/arch/darwin_ppc%0A%20spikes/CRC/fastmd5/lib/arch/linux_x86%20spikes/CRC/fastmd5/lib/arch/win32_x86%0A%20spikes/CRC/nbproject%20spikes/CRC/src%20spikes/CRC/src/crc&In-Reply-To=%3C200806060133.m561XRxk010867%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000126.html">
+   <LINK REL="Next"  HREF="000128.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r132 - in trunk: docs docs/Iteracao4-CB04 docs/Iteracao6-CB07 media project/JFindMyFiles project/JFindMyFiles/ExportEngine/nbproject project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine project/JFindMyFiles/ImportEngine project/JFindMyFiles/ImportEngine/nbproject project/JFindMyFiles/ImportEngine/src project/JFindMyFiles/ImportEngine/src/de project/JFindMyFiles/ImportEngine/src/de/berlios project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine project/JFindMyFiles/ImportEngine/test project/JFindMyFiles/ImportEngine/test/unit project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup project/JFindMyFiles/nbproject spikes spikes/CRC spikes/CRC/fastmd5 spikes/CRC/fastmd5/com spikes/CRC/fastmd5/com/twmacinta spikes/CRC/fastmd5/com/twmacinta/io spikes/CRC/fastmd5/com/twma! cinta/util spikes/CRC/fastmd5/com/twmacinta/util/test spikes/CRC/fastmd5/lib spikes/CRC/fastmd5/lib/arch spikes/CRC/fastmd5/lib/arch/darwin_ppc spikes/CRC/fastmd5/lib/arch/linux_x86 spikes/CRC/fastmd5/lib/arch/win32_x86 spikes/CRC/nbproject spikes/CRC/src spikes/CRC/src/crc</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r132%20-%20in%20trunk%3A%20docs%20docs/Iteracao4-CB04%0A%20docs/Iteracao6-CB07%20media%20project/JFindMyFiles%0A%20project/JFindMyFiles/ExportEngine/nbproject%0A%20project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine%0A%20project/JFindMyFiles/ImportEngine%0A%20project/JFindMyFiles/ImportEngine/nbproject%0A%20project/JFindMyFiles/ImportEngine/src%0A%20project/JFindMyFiles/ImportEngine/src/de%0A%20project/JFindMyFiles/ImportEngine/src/de/berlios%0A%20project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles%0A%20project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine%0A%20project/JFindMyFiles/ImportEngine/test%0A%20project/JFindMyFiles/ImportEngine/test/unit%0A%20project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%20project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup%0A%20project/JFindMyFiles/nbproject%20spikes%20spikes/CRC%20spikes/CRC/fastmd5%0A%20spikes/CRC/fastmd5/com%20spikes/CRC/fastmd5/com/twmacinta%0A%20spikes/CRC/fastmd5/com/twmacinta/io%20spikes/CRC/fastmd5/com/twma%21%20cinta/util%0A%20spikes/CRC/fastmd5/com/twmacinta/util/test%20spikes/CRC/fastmd5/lib%0A%20spikes/CRC/fastmd5/lib/arch%20spikes/CRC/fastmd5/lib/arch/darwin_ppc%0A%20spikes/CRC/fastmd5/lib/arch/linux_x86%20spikes/CRC/fastmd5/lib/arch/win32_x86%0A%20spikes/CRC/nbproject%20spikes/CRC/src%20spikes/CRC/src/crc&In-Reply-To=%3C200806060133.m561XRxk010867%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r132 - in trunk: docs docs/Iteracao4-CB04 docs/Iteracao6-CB07 media project/JFindMyFiles project/JFindMyFiles/ExportEngine/nbproject project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine project/JFindMyFiles/ImportEngine project/JFindMyFiles/ImportEngine/nbproject project/JFindMyFiles/ImportEngine/src project/JFindMyFiles/ImportEngine/src/de project/JFindMyFiles/ImportEngine/src/de/berlios project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine project/JFindMyFiles/ImportEngine/test project/JFindMyFiles/ImportEngine/test/unit project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup project/JFindMyFiles/nbproject spikes spikes/CRC spikes/CRC/fastmd5 spikes/CRC/fastmd5/com spikes/CRC/fastmd5/com/twmacinta spikes/CRC/fastmd5/com/twmacinta/io spikes/CRC/fastmd5/com/twma! cinta/util spikes/CRC/fastmd5/com/twmacinta/util/test spikes/CRC/fastmd5/lib spikes/CRC/fastmd5/lib/arch spikes/CRC/fastmd5/lib/arch/darwin_ppc spikes/CRC/fastmd5/lib/arch/linux_x86 spikes/CRC/fastmd5/lib/arch/win32_x86 spikes/CRC/nbproject spikes/CRC/src spikes/CRC/src/crc">knitter at mail.berlios.de
+       </A><BR>
+    <I>Fri Jun  6 03:33:27 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000126.html">[Jfindmyfiles-commits] r131 - in trunk: docs	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes
+</A></li>
+        <LI>Next message: <A HREF="000128.html">[Jfindmyfiles-commits] r133 - in trunk: media	project/JFindMyFiles/ImportEngine	project/JFindMyFiles/ImportEngine/nbproject	project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup	spikes/CRC spikes/CRC/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127">[ date ]</a>
+              <a href="thread.html#127">[ thread ]</a>
+              <a href="subject.html#127">[ subject ]</a>
+              <a href="author.html#127">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-06 03:32:53 +0200 (Fri, 06 Jun 2008)
+New Revision: 132
+
+Added:
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportContract.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEngine.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ODS.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/SQL.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java
+   trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XML.java
+   trunk/project/JFindMyFiles/ImportEngine/
+   trunk/project/JFindMyFiles/ImportEngine/manifest.mf
+   trunk/project/JFindMyFiles/ImportEngine/nbproject/
+   trunk/project/JFindMyFiles/ImportEngine/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/ImportEngine/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ImportEngine/nbproject/project.properties
+   trunk/project/JFindMyFiles/ImportEngine/nbproject/project.xml
+   trunk/project/JFindMyFiles/ImportEngine/nbproject/suite.properties
+   trunk/project/JFindMyFiles/ImportEngine/src/
+   trunk/project/JFindMyFiles/ImportEngine/src/de/
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/Bundle.properties
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/CSV.java
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportContract.java
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportEngine.java
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/JFindMyFilesDB.java
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/SQL.java
+   trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/XML.java
+   trunk/project/JFindMyFiles/ImportEngine/test/
+   trunk/project/JFindMyFiles/ImportEngine/test/unit/
+   trunk/project/JFindMyFiles/ImportEngine/test/unit/src/
+   trunk/spikes/CRC/
+   trunk/spikes/CRC/fastmd5/
+   trunk/spikes/CRC/fastmd5/com/
+   trunk/spikes/CRC/fastmd5/com/twmacinta/
+   trunk/spikes/CRC/fastmd5/com/twmacinta/io/
+   trunk/spikes/CRC/fastmd5/com/twmacinta/io/NullOutputStream.class
+   trunk/spikes/CRC/fastmd5/com/twmacinta/util/
+   trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5.class
+   trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5InputStream.class
+   trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5OutputStream.class
+   trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5State.class
+   trunk/spikes/CRC/fastmd5/com/twmacinta/util/test/
+   trunk/spikes/CRC/fastmd5/com/twmacinta/util/test/MD5OutputStreamTest.class
+   trunk/spikes/CRC/fastmd5/lib/
+   trunk/spikes/CRC/fastmd5/lib/arch/
+   trunk/spikes/CRC/fastmd5/lib/arch/darwin_ppc/
+   trunk/spikes/CRC/fastmd5/lib/arch/darwin_ppc/MD5.jnilib
+   trunk/spikes/CRC/fastmd5/lib/arch/linux_x86/
+   trunk/spikes/CRC/fastmd5/lib/arch/linux_x86/MD5.so
+   trunk/spikes/CRC/fastmd5/lib/arch/win32_x86/
+   trunk/spikes/CRC/fastmd5/lib/arch/win32_x86/MD5.dll
+   trunk/spikes/CRC/jacksum.jar
+   trunk/spikes/CRC/manifest.mf
+   trunk/spikes/CRC/nbproject/
+   trunk/spikes/CRC/nbproject/build-impl.xml
+   trunk/spikes/CRC/nbproject/genfiles.properties
+   trunk/spikes/CRC/nbproject/project.properties
+   trunk/spikes/CRC/nbproject/project.xml
+   trunk/spikes/CRC/src/
+   trunk/spikes/CRC/src/crc/
+   trunk/spikes/CRC/src/crc/JackSumHashing.java
+   trunk/spikes/CRC/src/crc/MD5Hashing.java
+   trunk/spikes/CRC/test/
+Removed:
+   trunk/media/splash.png
+Modified:
+   trunk/docs/Iteracao4-CB04/Iteracao 4.txt
+   trunk/docs/Iteracao6-CB07/exemplo.xml
+   trunk/docs/TODO
+   trunk/project/JFindMyFiles/ExportEngine/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/ExportEngine/nbproject/project.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java
+   trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties
+   trunk/project/JFindMyFiles/nbproject/project.properties
+Log:
+Adicionado nova spike e novo m?\195?\179dulo para importar dados.
+Efectuado trabalho no m?\195?\179dulo de exporta?\195?\167?\195?\163o de dados.
+
+Limpeza de alguns erros de c?\195?\179digo existentes pela janela de di?\195?\161logo de pesquisa.
+
+Testes na implementa?\195?\167?\195?\163o de algoritmos de hash.
+
+Modified: trunk/docs/Iteracao4-CB04/Iteracao 4.txt
+===================================================================
+--- trunk/docs/Iteracao4-CB04/Iteracao 4.txt	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/docs/Iteracao4-CB04/Iteracao 4.txt	2008-06-06 01:32:53 UTC (rev 132)
+@@ -2,8 +2,9 @@
+ Acrescentar ao modelo de dados a informa&#231;&#227;o necess&#225;ria para permitir guardar a 
+ localiza&#231;&#227;o f&#237;sica de um disco, quando se trate de um suporte amov&#237;vel.
+ Implementar mecanismos de pesquisa que permitam encontrar os dados pretendidos, 
+-usando express&#245;es regulares na pesquisa e permitindo definir o &#226;mbito da 
+-pesquisa.
++usando express&#245;es regulares na pesquisa, permitindo definir o &#226;mbito e se a 
++pesquisa &#233; efectuada tamb&#233;m nas descri&#231;&#245;es e definir se se pretendem pesquisas 
++insens&#237;veis a ma&#237;usculas ou min&#250;sculas.
+ Implementar suporte para abrir os ficheiros e/ou a localiza&#231;&#227;o de um ficheiro 
+ cujo suporte esteja dispon&#237;vel.
+ Implementar elementos de interface gr&#225;fica e m&#243;dulos que permitam escolher o 
+@@ -18,4 +19,10 @@
+ Dado que a mesma tecnologia permite o uso de SQL nas pesquisas, a versatilidade 
+ da linguagem de pesquisa estrutura ser&#225; uma mais valia caso se pretenda um 
+ melhor controlo sobre o acesso aos dados.
++No entanto, o requisito de pesquisas com suporte para express&#245;es regulares, &#233; 
++limitado pela falta de suporte a esse tipo de pesquisas, tanto na linguagem SQL 
++como no sistema Hibernate. Assim considera-se o uso de apenas dois caracteres 
++como pertencentes a express&#231;&#245;es regulares, o asterisco, *, e o ponto de 
++interroga&#231;&#227;o, ?.
++NOTA:::::: O sistema hibernate faz o mesmo que estes caracteres atrav&#233;s do padar&#227;o de matching!!!!
+ &lt;==== Avalia&#231;&#227;o ===============================================================&gt;
+
+Modified: trunk/docs/Iteracao6-CB07/exemplo.xml
+===================================================================
+--- trunk/docs/Iteracao6-CB07/exemplo.xml	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/docs/Iteracao6-CB07/exemplo.xml	2008-06-06 01:32:53 UTC (rev 132)
+@@ -1,5 +1,5 @@
+ 
+-&lt;catalog id=&quot;&quot;&gt;
++&lt;catalog&gt;
+     &lt;name&gt;&lt;/name&gt;
+     &lt;creation-date&gt;&lt;/creation-date&gt;
+     &lt;description&gt;&lt;/description&gt;
+
+Modified: trunk/docs/TODO
+===================================================================
+--- trunk/docs/TODO	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/docs/TODO	2008-06-06 01:32:53 UTC (rev 132)
+@@ -23,28 +23,17 @@
+ 	- NewDiskDlg - Janela de di&#225;logo que permite ler novos suportes.
+ 	- NewCatalogDlg - Janela de di&#225;logo que permite criar novos cat&#225;logos
+ 	- OpenCatalogDlg - Janela de di&#225;logo que permite abrir cat&#225;logos existentes.
+-- Menus:
+-	- ?
+-- Paineis a integrar no sistema de janelas da plataforma:
+-	- CatalogOptionsPanel - Painel com as ap&#231;&#245;es a usar na cria&#231;&#227;o de novos cat&#225;logos e abertura de cat&#225;logos existentes.
++- Menus:?
+ 	
+ Itera&#231;&#227;o 3:
+ 	- desenhar API
+ 
+ Itera&#231;&#227;o 4:
+-	- sistema de pesquisa que incorpore as op&#231;&#245;es de:
+-		- pesquisa por case insensitive
+-		- defini&#231;&#227;o de scope de pesquisa
+-		- pesquisar nas descri&#231;&#245;es
+-		- usar express&#245;es regulares
+-	- op&#231;&#245;es para definir o tipo de base de dados atrav&#233;s de um painel de op&#231;&#245;es
+-	- op&#231;&#245;es para definir o tipo de base de dados na altura da cria&#231;&#227;o
+-	- op&#231;&#245;es para definir o tipo de base de dados na altura da abertura
+-	- pesquisa de ficheiros duplicados em todo o cat&#225;logo
++	- pesquisa de ficheiros duplicados em todo o cat&#225;logo - usar SHA-1 para verificar ficheiros
++	- falta ver o sql para pesquisa dentro de grupo
+ 	
+ Itera&#231;&#227;o 5:
+ 	- menus de contexto sens&#237;veis
+-	- remodela&#231;&#227;o da interface
+ 
+ Itera&#231;&#227;o 6:
+ 	- exportar dados para XML
+
+Deleted: trunk/media/splash.png
+===================================================================
+(Binary files differ)
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/nbproject/build-impl.xml	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ExportEngine/nbproject/build-impl.xml	2008-06-06 01:32:53 UTC (rev 132)
+@@ -9,20 +9,20 @@
+     &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
+     &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
+     &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
+-    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++    &lt;macrodef uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; name=&quot;property&quot;&gt;
+         &lt;attribute name=&quot;name&quot;/&gt;
+         &lt;attribute name=&quot;value&quot;/&gt;
+         &lt;sequential&gt;
+-            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
++            &lt;property value=&quot;${@{value}}&quot; name=&quot;@{name}&quot;/&gt;
+         &lt;/sequential&gt;
+     &lt;/macrodef&gt;
+     &lt;property file=&quot;${user.properties.file}&quot;/&gt;
+-    &lt;nbmproject2:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
+-    &lt;nbmproject2:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; name=&quot;harness.dir&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; name=&quot;netbeans.dest.dir&quot;/&gt;
+     &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
+         &lt;condition&gt;
+             &lt;not&gt;
+-                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
++                &lt;available type=&quot;dir&quot; file=&quot;${harness.dir}&quot;/&gt;
+             &lt;/not&gt;
+         &lt;/condition&gt;
+     &lt;/fail&gt;
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ExportEngine/nbproject/genfiles.properties	2008-06-06 01:32:53 UTC (rev 132)
+@@ -1,8 +1,8 @@
+-build.xml.data.CRC32=d6ea2ed5
++build.xml.data.CRC32=7c8d24ad
+ build.xml.script.CRC32=10cb03f3
+ build.xml.stylesheet.CRC32=79c3b980
+ # This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
+ # Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
+-nbproject/build-impl.xml.data.CRC32=d6ea2ed5
+-nbproject/build-impl.xml.script.CRC32=96cf93f9
++nbproject/build-impl.xml.data.CRC32=7c8d24ad
++nbproject/build-impl.xml.script.CRC32=336d2087
+ nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Modified: trunk/project/JFindMyFiles/ExportEngine/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/nbproject/project.xml	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ExportEngine/nbproject/project.xml	2008-06-06 01:32:53 UTC (rev 132)
+@@ -5,7 +5,24 @@
+         &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
+             &lt;code-name-base&gt;de.berlios.jfindmyfiles.exportengine&lt;/code-name-base&gt;
+             &lt;suite-component/&gt;
+-            &lt;module-dependencies/&gt;
++            &lt;module-dependencies&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.persistence&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++            &lt;/module-dependencies&gt;
+             &lt;public-packages/&gt;
+         &lt;/data&gt;
+     &lt;/configuration&gt;
+
+Added: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/CSV.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,63 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.exportengine;
++
++import java.io.BufferedWriter;
++import java.io.File;
++import java.io.FileWriter;
++import java.io.IOException;
++import java.io.OutputStream;
++import java.io.OutputStreamWriter;
++import java.util.logging.Level;
++import java.util.logging.Logger;
++
++/**
++ *
++ * @author Knitter
++ */
++public class CSV extends Thread implements ExportContract {
++
++    private File file;
++    
++    public CSV(File file) {
++        this.file = file;
++    }
++    
++    public void export() {
++        start();
++    }
++    
++    @Override
++    public void run() {
++        BufferedWriter bw = null;
++        try {
++            bw = new BufferedWriter(new FileWriter(file));
++        } catch (IOException ex) {
++            Logger.getLogger(CSV.class.getName()).log(Level.SEVERE, null, ex);
++        } finally {
++            try {
++                bw.close();
++            } catch (IOException ex) {
++                Logger.getLogger(CSV.class.getName()).log(Level.SEVERE, null, ex);
++            }
++        }
++    }
++
++}
+
+Added: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportContract.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportContract.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportContract.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,26 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.exportengine;
++
++public interface ExportContract {
++    
++    void export();
++
++}
+
+Added: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEngine.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ExportEngine.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,57 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.exportengine;
++
++import java.io.File;
++import java.util.List;
++
++public abstract class ExportEngine {
++
++    protected List groups;
++    protected List types;
++    protected List labels;
++    
++    private ExportEngine() {
++    }
++    
++    public final void queryData() {
++        //
++    }
++
++    public static void exportToXML(File file) {
++        new XML(file).start();//.export()
++    }
++
++    public static void exportToCSV(File file) {
++        new CSV(file).start();//.export()
++    }
++
++    public static void exportToODS(File file) {
++        new ODS(file).start();//.export()
++    }
++
++    public static void exportToSQL(File file) {
++        new SQL(file).start();//.export()
++    }
++
++    public static void exportToHTML(File destination, String name, String template) {
++        new HTML(destination, name, template).start();//.export()
++    }
++}
+
+Added: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/HTML.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,49 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.exportengine;
++
++import java.io.File;
++
++/**
++ *
++ * @author Knitter
++ */
++public class HTML extends Thread implements ExportContract {
++    
++    File destination;
++    String name;
++    String template;
++    
++    public HTML(File destination, String name, String template) {
++        this.destination = destination;
++        this.name = name;
++        this.template = template;
++    }
++
++    public void export() {
++        start();
++    }
++    
++    @Override
++    public void run() {
++        
++    }
++
++}
+
+Added: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ODS.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ODS.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/ODS.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,45 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.exportengine;
++
++import java.io.File;
++
++/**
++ *
++ * @author Knitter
++ */
++public class ODS extends Thread implements ExportContract {
++
++    private File file;
++    
++    public ODS(File file) {
++        this.file = file;
++    }
++    
++    public void export() {
++        start();
++    }
++    
++    @Override
++    public void run() {
++        
++    }
++
++}
+
+Added: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/SQL.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/SQL.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/SQL.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,41 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.exportengine;
++
++import java.io.File;
++
++public class SQL extends Thread implements ExportContract {
++
++    File file;
++    
++    public SQL(File file) {
++        this.file = file;
++    }
++    
++    public void export() {
++        start();
++    }
++    
++    @Override
++    public void run() {
++        
++    }
++
++}
+
+Added: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XLS.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,28 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.exportengine;
++
++public class XLS extends Thread implements ExportContract {
++
++    public void export() {
++        start();
++    }
++
++}
+
+Added: trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XML.java
+===================================================================
+--- trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XML.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ExportEngine/src/de/berlios/jfindmyfiles/exportengine/XML.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,174 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.exportengine;
++
++import java.io.File;
++import java.io.FileNotFoundException;
++import java.io.PrintWriter;
++import javax.xml.transform.OutputKeys;
++import javax.xml.transform.Transformer;
++import javax.xml.transform.TransformerConfigurationException;
++import javax.xml.transform.sax.SAXTransformerFactory;
++import javax.xml.transform.sax.TransformerHandler;
++import javax.xml.transform.stream.StreamResult;
++import org.xml.sax.SAXException;
++import org.xml.sax.helpers.AttributesImpl;
++
++/**
++ *
++ * @author Knitter
++ */
++public class XML extends Thread implements ExportContract {
++
++    private File file;
++
++    public XML(File file) {
++        this.file = file;
++    }
++
++    public void export() {
++        start();
++    }
++
++    @Override
++    public void run() {
++
++        try {
++            PrintWriter out = new PrintWriter(file);
++
++            StreamResult sr = new StreamResult(out);
++
++            SAXTransformerFactory tf = (SAXTransformerFactory) SAXTransformerFactory.newInstance();
++
++            // SAX2.0 ContentHandler.
++            TransformerHandler hd = tf.newTransformerHandler();
++            Transformer serializer = hd.getTransformer();
++
++            serializer.setOutputProperty(OutputKeys.ENCODING, &quot;UTF-8&quot;);
++            //serializer.setOutputProperty(OutputKeys.DOCTYPE_SYSTEM, &quot;users.dtd&quot;);
++            serializer.setOutputProperty(OutputKeys.INDENT, &quot;yes&quot;);
++            hd.setResult(sr);
++            hd.startDocument();
++            AttributesImpl atts = new AttributesImpl();
++
++           /* // USERS tag.
++            hd.startElement(&quot;&quot;, &quot;&quot;, &quot;USERS&quot;, atts);
++
++            // USER tags.
++            String[] id = {&quot;PWD122&quot;, &quot;MX787&quot;, &quot;A4Q45&quot;};
++            String[] type = {&quot;customer&quot;, &quot;manager&quot;, &quot;employee&quot;};
++            String[] desc = {&quot;<A HREF="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">Tim at Home</A>&quot;, &quot;Jack&amp;Moud&quot;, &quot;John D'o&#195;&#169;&quot;};
++
++            for (int i = 0; i &lt; id.length; i++) {
++                atts.clear();
++                atts.addAttribute(&quot;&quot;, &quot;&quot;, &quot;ID&quot;, &quot;CDATA&quot;, id[i]);
++                atts.addAttribute(&quot;&quot;, &quot;&quot;, &quot;TYPE&quot;, &quot;CDATA&quot;, type[i]);
++                hd.startElement(&quot;&quot;, &quot;&quot;, &quot;USER&quot;, atts);
++                hd.characters(desc[i].toCharArray(), 0, desc[i].length());
++                hd.endElement(&quot;&quot;, &quot;&quot;, &quot;USER&quot;);
++            }
++            hd.endElement(&quot;&quot;, &quot;&quot;, &quot;USERS&quot;);
++            hd.endDocument();*/
++        } catch (FileNotFoundException ex) {
++        } catch (TransformerConfigurationException ex) {
++        } catch (SAXException ex) {
++        }
++    }
++    /*
++    &lt;catalog&gt;
++    &lt;name&gt;&lt;/name&gt;
++    &lt;creation-date&gt;&lt;/creation-date&gt;
++    &lt;description&gt;&lt;/description&gt;
++    &lt;total-size&gt;&lt;/total-size&gt;
++    &lt;disk-number&gt;&lt;/disk-number&gt;
++    &lt;total-folders&gt;&lt;/total-folders&gt;
++    &lt;file-list&gt;
++    &lt;file id=&quot;&quot;&gt;
++    &lt;name&gt;&lt;/name&gt;
++    &lt;absolute-path&gt;&lt;/absolute-path&gt;
++    &lt;last-modified&gt;&lt;/last-modified&gt;
++    &lt;description&gt;&lt;/description&gt;
++    &lt;hidden&gt;&lt;!-- true/false --&gt;
++    &lt;/hidden&gt;
++    &lt;size&gt;&lt;/size&gt;
++    &lt;extension&gt;&lt;/extension&gt;
++    &lt;image-thumb&gt;&lt;/image-thumb&gt;
++    &lt;video-preview&gt;&lt;/video-preview&gt;
++    &lt;audio-clip&gt;&lt;/audio-clip&gt;
++    &lt;is-file&gt;&lt;/is-file&gt;
++    &lt;children&gt;&lt;!-- file items --&gt;
++    &lt;/children&gt;
++    &lt;parent-id&gt;&lt;/parent-id&gt;
++    &lt;media-id&gt;&lt;/media-id&gt;
++    &lt;/file&gt;
++    &lt;/file-list&gt;
++    &lt;label-list&gt;
++    &lt;label id=&quot;&quot;&gt;
++    &lt;name&gt;&lt;/name&gt;
++    &lt;/label&gt;
++    &lt;/label-list&gt;
++    &lt;group-list&gt;
++    &lt;group id=&quot;&quot;&gt;
++    &lt;name&gt;&lt;/name&gt;
++    &lt;description&gt;&lt;/description&gt;
++    &lt;capacity&gt;&lt;/capacity&gt;
++    &lt;groups&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
++    &lt;/groups&gt;
++    &lt;parent-id&gt;&lt;/parent-id&gt;
++    &lt;/group&gt;
++    &lt;/group-list&gt;
++    &lt;loan-list&gt;
++    &lt;loan id=&quot;&quot;&gt;
++    &lt;date-loaned&gt;&lt;/date-loaned&gt;
++    &lt;date-returned&gt;&lt;/date-returned&gt;
++    &lt;user-id&gt;&lt;/user-id&gt;
++    &lt;media-id&gt;&lt;/media-id&gt;
++    &lt;/loan&gt;
++    &lt;/loan-list&gt;
++    &lt;media-list&gt;
++    &lt;media id=&quot;&quot;&gt;
++    &lt;name&gt;&lt;/name&gt;
++    &lt;capacity&gt;&lt;/capacity&gt;
++    &lt;last-modified&gt;&lt;/last-modified&gt;
++    &lt;description&gt;&lt;/description&gt;
++    &lt;free-space&gt;&lt;/free-space&gt;
++    &lt;location&gt;&lt;/location&gt;
++    &lt;files&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
++    &lt;/files&gt;
++    &lt;labels&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
++    &lt;/labels&gt;
++    &lt;type-id&gt;&lt;/type-id&gt;
++    &lt;/media&gt;
++    &lt;/media-list&gt;
++    &lt;type-list&gt;
++    &lt;type id=&quot;&quot;&gt;
++    &lt;name&gt;&lt;/name&gt;
++    &lt;/type&gt;
++    &lt;/type-list&gt;
++    &lt;user-list&gt;
++    &lt;user id=&quot;&quot;&gt;
++    &lt;first-name&gt;&lt;/first-name&gt;
++    &lt;loans&gt;&lt;!-- ids separdos por ponto e virgula --&gt;
++    &lt;/loans&gt;
++    &lt;surname&gt;&lt;/surname&gt;
++    &lt;/user&gt;
++    &lt;/user-list&gt;
++    &lt;/catalog&gt;*/
++}
+
+Added: trunk/project/JFindMyFiles/ImportEngine/manifest.mf
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/manifest.mf	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/manifest.mf	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,5 @@
++Manifest-Version: 1.0
++OpenIDE-Module: de.berlios.jfindmyfiles.importengine
++OpenIDE-Module-Localizing-Bundle: de/berlios/jfindmyfiles/importengine/Bundle.properties
++OpenIDE-Module-Specification-Version: 1.0
++
+
+Added: trunk/project/JFindMyFiles/ImportEngine/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/nbproject/build-impl.xml	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/nbproject/build-impl.xml	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,30 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.importengine-impl&quot; basedir=&quot;..&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; name=&quot;property&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property value=&quot;${@{value}}&quot; name=&quot;@{name}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; name=&quot;harness.dir&quot;/&gt;
++    &lt;nbmproject2:property xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; name=&quot;netbeans.dest.dir&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available type=&quot;dir&quot; file=&quot;${harness.dir}&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/ImportEngine/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/nbproject/genfiles.properties	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/nbproject/genfiles.properties	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=db5aac89
++build.xml.script.CRC32=5895178c
++build.xml.stylesheet.CRC32=79c3b980
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=db5aac89
++nbproject/build-impl.xml.script.CRC32=514e1139
++nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Added: trunk/project/JFindMyFiles/ImportEngine/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/nbproject/project.properties	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/nbproject/project.properties	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,2 @@
++javac.source=1.5
++javac.compilerargs=-Xlint -Xlint:-serial
+
+Added: trunk/project/JFindMyFiles/ImportEngine/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/nbproject/project.xml	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/nbproject/project.xml	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,29 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
++            &lt;code-name-base&gt;de.berlios.jfindmyfiles.importengine&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.catalog&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++                &lt;dependency&gt;
++                    &lt;code-name-base&gt;de.berlios.jfindmyfiles.persistence&lt;/code-name-base&gt;
++                    &lt;build-prerequisite/&gt;
++                    &lt;compile-dependency/&gt;
++                    &lt;run-dependency&gt;
++                        &lt;specification-version&gt;1.0&lt;/specification-version&gt;
++                    &lt;/run-dependency&gt;
++                &lt;/dependency&gt;
++            &lt;/module-dependencies&gt;
++            &lt;public-packages/&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/ImportEngine/nbproject/suite.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/nbproject/suite.properties	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/nbproject/suite.properties	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1 @@
++suite.dir=${basedir}/..
+
+Added: trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/Bundle.properties	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/Bundle.properties	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,20 @@
++###
++ #  Copyright (C) 2008  Patr\u00EDcia Monteiro e S\u00E9rgio Lopes
++ #
++ #  This file is part of JFindMyFiles.
++ #
++ #  JFindMyFiles is free software: you can redistribute it and/or modify
++ #  it under the terms of the GNU General Public License as published by
++ #  the Free Software Foundation, either version 2 of the License, or
++ #  (at your option) any later version.
++ #
++ #  JFindMyFiles is distributed in the hope that it will be useful,
++ #  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ #  GNU General Public License for more details.
++ #
++ #  You should have received a copy of the GNU General Public License
++ #  along with JFindMyFiles.  If not, see 
++ # &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ ##
++OpenIDE-Module-Name=ImportEngine
+
+Added: trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/CSV.java
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/CSV.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/CSV.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,32 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.importengine;
++
++/**
++ *
++ * @author Knitter
++ */
++public class CSV extends Thread implements ImportContract {
++
++    public void doImport() {
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++}
+
+Added: trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportContract.java
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportContract.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportContract.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,26 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.importengine;
++
++public interface ImportContract {
++    
++    void doImport();
++
++}
+
+Added: trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportEngine.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/ImportEngine.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,24 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.importengine;
++
++public class ImportEngine {
++
++}
+
+Added: trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/JFindMyFilesDB.java
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/JFindMyFilesDB.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/JFindMyFilesDB.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,28 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.importengine;
++
++public class JFindMyFilesDB extends Thread implements ImportContract {
++
++    public void doImport() {
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++}
+
+Added: trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/SQL.java
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/SQL.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/SQL.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,28 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.importengine;
++
++public class SQL extends Thread implements ImportContract {
++
++    public void doImport() {
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++}
+
+Added: trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/XML.java
+===================================================================
+--- trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/XML.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/ImportEngine/src/de/berlios/jfindmyfiles/importengine/XML.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,28 @@
++/**
++ *  Copyright (C) 2008  Patr&#195;&#173;cia Monteiro e S&#195;&#169;rgio Lopes
++ *
++ *  This file is part of JFindMyFiles.
++ *
++ *  JFindMyFiles is free software: you can redistribute it and/or modify
++ *  it under the terms of the GNU General Public License as published by
++ *  the Free Software Foundation, either version 2 of the License, or
++ *  (at your option) any later version.
++ *
++ *  JFindMyFiles is distributed in the hope that it will be useful,
++ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
++ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
++ *  GNU General Public License for more details.
++ *
++ *  You should have received a copy of the GNU General Public License
++ *  along with JFindMyFiles.  If not, see 
++ * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
++ */
++package de.berlios.jfindmyfiles.importengine;
++
++public class XML extends Thread implements ImportContract {
++
++    public void doImport() {
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++}
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-06-06 01:32:53 UTC (rev 132)
+@@ -19,7 +19,7 @@
+  ##
+ NewDiskDlg.jchkShowAgain.text=Show this dialog again
+ NewDiskDlg.jchkAskDescription.text=Ask for disk description in the end
+-NewDiskDlg.jchkCalculateCRC.text=Calculate CRC for files
++NewDiskDlg.jchkCalculateCRC.text=Calculate SHA-1 for files
+ NewDiskDlg.jlblCatalog.text=Disk Group:
+ NewDiskDlg.jlblDiskName.text=Disk Name:
+ NewDiskDlg.jlblDiskNumber.text=Nr.:
+@@ -90,12 +90,6 @@
+ ExportDlg.jLabel1.text=jLabel1
+ ExportDlg.jLabel2.text=jLabel2
+ StatisticsDlg.jButton1.text=Close
+-ExportDlg.jPanel3.border.title=Type
+-ExportDlg.jButton1.text=Cancel
+-ExportDlg.jButton2.text=Export ...
+-ExportDlg.jLabel3.text=jLabel3
+-ExportDlg.jLabel4.text=jLabel4
+-ExportDlg.jButton3.text=Help
+ ImportDlg.jButton1.text=Help
+ ImportDlg.jButton2.text=Cancel
+ ImportDlg.jButton3.text=Import
+@@ -110,3 +104,9 @@
+ StatisticsDlg.jButton3.text=jButton3
+ StatisticsDlg.jButton4.text=jButton4
+ SearchDlg.jpbProgress.string=searching...
++ExportDlg.jpExportType.border.title=Type
++ExportDlg.jbtnCancel.text=Cancel
++ExportDlg.jbtnExport.text=Export
++ExportDlg.jbtnHelp.text=Help
++ExportDlg.jpTemplateExport.border.title=Template Export
++ExportDlg.jpFileExport.border.title=Export to 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-06-06 01:32:53 UTC (rev 132)
+@@ -91,16 +91,16 @@
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;Component id=&quot;jPanel3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jpExportType&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jPanel4&quot; pref=&quot;408&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jpExportOptions&quot; pref=&quot;408&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;Component id=&quot;jButton2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jbtnExport&quot; linkSize=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jbtnCancel&quot; linkSize=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jButton3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jbtnHelp&quot; linkSize=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+               &lt;/Group&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -112,14 +112,14 @@
+           &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jPanel4&quot; pref=&quot;426&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
+-                  &lt;Component id=&quot;jPanel3&quot; alignment=&quot;1&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                  &lt;Component id=&quot;jpExportOptions&quot; pref=&quot;426&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                  &lt;Component id=&quot;jpExportType&quot; alignment=&quot;1&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
+               &lt;/Group&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jButton3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jButton2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jbtnHelp&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jbtnCancel&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jbtnExport&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+               &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+@@ -127,12 +127,12 @@
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
+   &lt;SubComponents&gt;
+-    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel3&quot;&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jpExportType&quot;&gt;
+       &lt;Properties&gt;
+         &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
+           &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
+             &lt;TitledBorder title=&quot;Type&quot;&gt;
+-              &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jPanel3.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++              &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jpExportType.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+             &lt;/TitledBorder&gt;
+           &lt;/Border&gt;
+         &lt;/Property&gt;
+@@ -188,11 +188,20 @@
+         &lt;/Container&gt;
+       &lt;/SubComponents&gt;
+     &lt;/Container&gt;
+-    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel4&quot;&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jpExportOptions&quot;&gt;
+ 
+       &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout&quot;/&gt;
+       &lt;SubComponents&gt;
+-        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel5&quot;&gt;
++        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jpFileExport&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++              &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++                &lt;TitledBorder title=&quot;Export to &quot;&gt;
++                  &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jpFileExport.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++                &lt;/TitledBorder&gt;
++              &lt;/Border&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
+           &lt;Constraints&gt;
+             &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription&quot;&gt;
+               &lt;CardConstraints cardName=&quot;card2&quot;/&gt;
+@@ -202,34 +211,26 @@
+           &lt;Layout&gt;
+             &lt;DimensionLayout dim=&quot;0&quot;&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;124&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jLabel3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;EmptySpace pref=&quot;250&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;/Group&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;392&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+             &lt;DimensionLayout dim=&quot;1&quot;&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;170&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jLabel3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;EmptySpace pref=&quot;242&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;/Group&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;396&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+           &lt;/Layout&gt;
+-          &lt;SubComponents&gt;
+-            &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel3&quot;&gt;
+-              &lt;Properties&gt;
+-                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-                  &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jLabel3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+-                &lt;/Property&gt;
+-              &lt;/Properties&gt;
+-            &lt;/Component&gt;
+-          &lt;/SubComponents&gt;
+         &lt;/Container&gt;
+-        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel6&quot;&gt;
++        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jpTemplateExport&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++              &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++                &lt;TitledBorder title=&quot;Template Export&quot;&gt;
++                  &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jpTemplateExport.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++                &lt;/TitledBorder&gt;
++              &lt;/Border&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
+           &lt;Constraints&gt;
+             &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription&quot;&gt;
+               &lt;CardConstraints cardName=&quot;card3&quot;/&gt;
+@@ -239,63 +240,46 @@
+           &lt;Layout&gt;
+             &lt;DimensionLayout dim=&quot;0&quot;&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;122&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jLabel4&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;EmptySpace pref=&quot;252&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;/Group&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;392&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+             &lt;DimensionLayout dim=&quot;1&quot;&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;166&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jLabel4&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;EmptySpace pref=&quot;246&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;/Group&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;396&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+           &lt;/Layout&gt;
+-          &lt;SubComponents&gt;
+-            &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel4&quot;&gt;
+-              &lt;Properties&gt;
+-                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-                  &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jLabel4.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+-                &lt;/Property&gt;
+-              &lt;/Properties&gt;
+-            &lt;/Component&gt;
+-          &lt;/SubComponents&gt;
+         &lt;/Container&gt;
+       &lt;/SubComponents&gt;
+     &lt;/Container&gt;
+-    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton1&quot;&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnCancel&quot;&gt;
+       &lt;Properties&gt;
+         &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jButton1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jbtnCancel.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
+       &lt;Events&gt;
+-        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jButton1ActionPerformed&quot;/&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnCancelActionPerformed&quot;/&gt;
+       &lt;/Events&gt;
+     &lt;/Component&gt;
+-    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton2&quot;&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnExport&quot;&gt;
+       &lt;Properties&gt;
+         &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jButton2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jbtnExport.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
+       &lt;Events&gt;
+-        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jButton2ActionPerformed&quot;/&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnExportActionPerformed&quot;/&gt;
+       &lt;/Events&gt;
+     &lt;/Component&gt;
+-    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton3&quot;&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnHelp&quot;&gt;
+       &lt;Properties&gt;
+         &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jButton3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jbtnHelp.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
+       &lt;Events&gt;
+-        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jButton3ActionPerformed&quot;/&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnHelpActionPerformed&quot;/&gt;
+       &lt;/Events&gt;
+     &lt;/Component&gt;
+   &lt;/SubComponents&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -74,17 +74,15 @@
+         jLabel2 = new javax.swing.JLabel();
+         jPanel1 = new javax.swing.JPanel();
+         jLabel1 = new javax.swing.JLabel();
+-        jPanel3 = new javax.swing.JPanel();
++        jpExportType = new javax.swing.JPanel();
+         jScrollPane1 = new javax.swing.JScrollPane();
+         jlstExportTypes = new JList(values);
+-        jPanel4 = new javax.swing.JPanel();
+-        jPanel5 = new javax.swing.JPanel();
+-        jLabel3 = new javax.swing.JLabel();
+-        jPanel6 = new javax.swing.JPanel();
+-        jLabel4 = new javax.swing.JLabel();
+-        jButton1 = new javax.swing.JButton();
+-        jButton2 = new javax.swing.JButton();
+-        jButton3 = new javax.swing.JButton();
++        jpExportOptions = new javax.swing.JPanel();
++        jpFileExport = new javax.swing.JPanel();
++        jpTemplateExport = new javax.swing.JPanel();
++        jbtnCancel = new javax.swing.JButton();
++        jbtnExport = new javax.swing.JButton();
++        jbtnHelp = new javax.swing.JButton();
+ 
+         jLabel2.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jLabel2.text&quot;)); // NOI18N
+ 
+@@ -126,7 +124,7 @@
+ 
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
+-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jPanel3.border.title&quot;))); // NOI18N
++        jpExportType.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jpExportType.border.title&quot;))); // NOI18N
+ 
+         jlstExportTypes.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+         jlstExportTypes.setCellRenderer(new Renderer());
+@@ -139,84 +137,72 @@
+         });
+         jScrollPane1.setViewportView(jlstExportTypes);
+ 
+-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+-        jPanel3.setLayout(jPanel3Layout);
+-        jPanel3Layout.setHorizontalGroup(
+-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel3Layout.createSequentialGroup()
++        javax.swing.GroupLayout jpExportTypeLayout = new javax.swing.GroupLayout(jpExportType);
++        jpExportType.setLayout(jpExportTypeLayout);
++        jpExportTypeLayout.setHorizontalGroup(
++            jpExportTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jpExportTypeLayout.createSequentialGroup()
+                 .addContainerGap()
+                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+         );
+-        jPanel3Layout.setVerticalGroup(
+-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel3Layout.createSequentialGroup()
++        jpExportTypeLayout.setVerticalGroup(
++            jpExportTypeLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jpExportTypeLayout.createSequentialGroup()
+                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 385, Short.MAX_VALUE)
+                 .addContainerGap())
+         );
+ 
+-        jPanel4.setLayout(new java.awt.CardLayout());
++        jpExportOptions.setLayout(new java.awt.CardLayout());
+ 
+-        jLabel3.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jLabel3.text&quot;)); // NOI18N
++        jpFileExport.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jpFileExport.border.title&quot;))); // NOI18N
+ 
+-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+-        jPanel5.setLayout(jPanel5Layout);
+-        jPanel5Layout.setHorizontalGroup(
+-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel5Layout.createSequentialGroup()
+-                .addGap(124, 124, 124)
+-                .addComponent(jLabel3)
+-                .addContainerGap(250, Short.MAX_VALUE))
++        javax.swing.GroupLayout jpFileExportLayout = new javax.swing.GroupLayout(jpFileExport);
++        jpFileExport.setLayout(jpFileExportLayout);
++        jpFileExportLayout.setHorizontalGroup(
++            jpFileExportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 392, Short.MAX_VALUE)
+         );
+-        jPanel5Layout.setVerticalGroup(
+-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel5Layout.createSequentialGroup()
+-                .addGap(170, 170, 170)
+-                .addComponent(jLabel3)
+-                .addContainerGap(242, Short.MAX_VALUE))
++        jpFileExportLayout.setVerticalGroup(
++            jpFileExportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 396, Short.MAX_VALUE)
+         );
+ 
+-        jPanel4.add(jPanel5, &quot;card2&quot;);
++        jpExportOptions.add(jpFileExport, &quot;card2&quot;);
+ 
+-        jLabel4.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jLabel4.text&quot;)); // NOI18N
++        jpTemplateExport.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jpTemplateExport.border.title&quot;))); // NOI18N
+ 
+-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+-        jPanel6.setLayout(jPanel6Layout);
+-        jPanel6Layout.setHorizontalGroup(
+-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel6Layout.createSequentialGroup()
+-                .addGap(122, 122, 122)
+-                .addComponent(jLabel4)
+-                .addContainerGap(252, Short.MAX_VALUE))
++        javax.swing.GroupLayout jpTemplateExportLayout = new javax.swing.GroupLayout(jpTemplateExport);
++        jpTemplateExport.setLayout(jpTemplateExportLayout);
++        jpTemplateExportLayout.setHorizontalGroup(
++            jpTemplateExportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 392, Short.MAX_VALUE)
+         );
+-        jPanel6Layout.setVerticalGroup(
+-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGroup(jPanel6Layout.createSequentialGroup()
+-                .addGap(166, 166, 166)
+-                .addComponent(jLabel4)
+-                .addContainerGap(246, Short.MAX_VALUE))
++        jpTemplateExportLayout.setVerticalGroup(
++            jpTemplateExportLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 396, Short.MAX_VALUE)
+         );
+ 
+-        jPanel4.add(jPanel6, &quot;card3&quot;);
++        jpExportOptions.add(jpTemplateExport, &quot;card3&quot;);
+ 
+-        jButton1.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jButton1.text&quot;)); // NOI18N
+-        jButton1.addActionListener(new java.awt.event.ActionListener() {
++        jbtnCancel.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jbtnCancel.text&quot;)); // NOI18N
++        jbtnCancel.addActionListener(new java.awt.event.ActionListener() {
+             public void actionPerformed(java.awt.event.ActionEvent evt) {
+-                jButton1ActionPerformed(evt);
++                jbtnCancelActionPerformed(evt);
+             }
+         });
+ 
+-        jButton2.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jButton2.text&quot;)); // NOI18N
+-        jButton2.addActionListener(new java.awt.event.ActionListener() {
++        jbtnExport.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jbtnExport.text&quot;)); // NOI18N
++        jbtnExport.addActionListener(new java.awt.event.ActionListener() {
+             public void actionPerformed(java.awt.event.ActionEvent evt) {
+-                jButton2ActionPerformed(evt);
++                jbtnExportActionPerformed(evt);
+             }
+         });
+ 
+-        jButton3.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jButton3.text&quot;)); // NOI18N
+-        jButton3.addActionListener(new java.awt.event.ActionListener() {
++        jbtnHelp.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jbtnHelp.text&quot;)); // NOI18N
++        jbtnHelp.addActionListener(new java.awt.event.ActionListener() {
+             public void actionPerformed(java.awt.event.ActionEvent evt) {
+-                jButton3ActionPerformed(evt);
++                jbtnHelpActionPerformed(evt);
+             }
+         });
+ 
+@@ -228,29 +214,32 @@
+                 .addContainerGap()
+                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addGroup(layout.createSequentialGroup()
+-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                        .addComponent(jpExportType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE))
++                        .addComponent(jpExportOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE))
+                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                        .addComponent(jButton2)
++                        .addComponent(jbtnExport)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jButton1)
++                        .addComponent(jbtnCancel)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jButton3)))
++                        .addComponent(jbtnHelp)))
+                 .addContainerGap())
+         );
++
++        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jbtnCancel, jbtnExport, jbtnHelp});
++
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                 .addContainerGap()
+                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
+-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++                    .addComponent(jpExportOptions, javax.swing.GroupLayout.DEFAULT_SIZE, 426, Short.MAX_VALUE)
++                    .addComponent(jpExportType, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+-                    .addComponent(jButton3)
+-                    .addComponent(jButton1)
+-                    .addComponent(jButton2))
++                    .addComponent(jbtnHelp)
++                    .addComponent(jbtnCancel)
++                    .addComponent(jbtnExport))
+                 .addContainerGap())
+         );
+ 
+@@ -259,41 +248,39 @@
+ 
+ private void jlstExportTypesValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jlstExportTypesValueChanged
+     if (jlstExportTypes.getSelectedIndex() == 0) {
+-        CardLayout lay = (CardLayout) jPanel4.getLayout();
+-        lay.first(jPanel4);
++        CardLayout lay = (CardLayout) jpExportOptions.getLayout();
++        lay.first(jpExportOptions);
+     } else {
+-        CardLayout lay = (CardLayout) jPanel4.getLayout();
+-        lay.last(jPanel4);
++        CardLayout lay = (CardLayout) jpExportOptions.getLayout();
++        lay.last(jpExportOptions);
+     }
+ }//GEN-LAST:event_jlstExportTypesValueChanged
+ 
+-private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
++private void jbtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCancelActionPerformed
+     dispose();
+-}//GEN-LAST:event_jButton1ActionPerformed
++}//GEN-LAST:event_jbtnCancelActionPerformed
+ 
+-private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
++private void jbtnExportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnExportActionPerformed
+ // TODO add your handling code here:
+-}//GEN-LAST:event_jButton2ActionPerformed
++}//GEN-LAST:event_jbtnExportActionPerformed
+ 
+-private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
++private void jbtnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnHelpActionPerformed
+ // TODO add your handling code here:
+-}//GEN-LAST:event_jButton3ActionPerformed
++}//GEN-LAST:event_jbtnHelpActionPerformed
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+-    private javax.swing.JButton jButton1;
+-    private javax.swing.JButton jButton2;
+-    private javax.swing.JButton jButton3;
+     private javax.swing.JLabel jLabel1;
+     private javax.swing.JLabel jLabel2;
+-    private javax.swing.JLabel jLabel3;
+-    private javax.swing.JLabel jLabel4;
+     private javax.swing.JPanel jPanel1;
+     private javax.swing.JPanel jPanel2;
+-    private javax.swing.JPanel jPanel3;
+-    private javax.swing.JPanel jPanel4;
+-    private javax.swing.JPanel jPanel5;
+-    private javax.swing.JPanel jPanel6;
+     private javax.swing.JScrollPane jScrollPane1;
++    private javax.swing.JButton jbtnCancel;
++    private javax.swing.JButton jbtnExport;
++    private javax.swing.JButton jbtnHelp;
+     private javax.swing.JList jlstExportTypes;
++    private javax.swing.JPanel jpExportOptions;
++    private javax.swing.JPanel jpExportType;
++    private javax.swing.JPanel jpFileExport;
++    private javax.swing.JPanel jpTemplateExport;
+     // End of variables declaration//GEN-END:variables
+     
+     /**
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-06-06 01:32:53 UTC (rev 132)
+@@ -105,7 +105,7 @@
+                           &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jlblCatalog&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jcbxCatalog&quot; alignment=&quot;0&quot; pref=&quot;131&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jcbxCatalog&quot; alignment=&quot;0&quot; pref=&quot;143&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+                       &lt;/Group&gt;
+                   &lt;/Group&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -248,7 +248,7 @@
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                             .addComponent(jlblCatalog)
+-                            .addComponent(jcbxCatalog, 0, 131, Short.MAX_VALUE))))
++                            .addComponent(jcbxCatalog, 0, 143, Short.MAX_VALUE))))
+                 .addContainerGap())
+         );
+         jPanel1Layout.setVerticalGroup(
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form	2008-06-06 01:32:53 UTC (rev 132)
+@@ -327,9 +327,6 @@
+                   &lt;Connection code=&quot;listModel = new DefaultListModel()&quot; type=&quot;code&quot;/&gt;
+                 &lt;/Property&gt;
+               &lt;/Properties&gt;
+-              &lt;Events&gt;
+-                &lt;EventHandler event=&quot;propertyChange&quot; listener=&quot;java.beans.PropertyChangeListener&quot; parameters=&quot;java.beans.PropertyChangeEvent&quot; handler=&quot;jlstResultsPropertyChange&quot;/&gt;
+-              &lt;/Events&gt;
+             &lt;/Component&gt;
+           &lt;/SubComponents&gt;
+         &lt;/Container&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -22,9 +22,6 @@
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
+ import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
+-import java.util.Iterator;
+-import java.util.LinkedList;
+-import java.util.List;
+ import java.util.Vector;
+ import javax.swing.DefaultListModel;
+ import javax.swing.JComboBox;
+@@ -84,16 +81,33 @@
+     @SuppressWarnings(&quot;unchecked&quot;)
+     private void search() {
+         listModel.clear();
+-        boolean inDescriptions = jchkSearchInDesc.isSelected();
+-        boolean caseSensitive = jchkCaseSensitive.isSelected();
+-        boolean useRegular = jchkUseReGex.isSelected();
+-        boolean scopeAll = jrdbEntireCatalog.isSelected();
+ 
+-        //TODO: add other properties
++        boolean inDescription = jchkSearchInDesc.isSelected();
++        boolean casein = jchkCaseSensitive.isSelected();
++        String sText = jtfSearchText.getText().trim();
+         Session s = eng.sessionFactory.getCurrentSession();
+         s.beginTransaction();
+-        Criteria c = s.createCriteria(FileWrapper.class).add(Restrictions.ilike(&quot;name&quot;, jtfSearchText.getText().trim(), MatchMode.ANYWHERE));
+-        for (Object o : c.list()) {
++        Criteria crit = s.createCriteria(FileWrapper.class);
++
++        if (casein &amp;&amp; inDescription) {//Case insensitive and in description
++            crit.add(Restrictions.or(Restrictions.ilike(&quot;name&quot;, sText, MatchMode.ANYWHERE),
++                    Restrictions.ilike(&quot;description&quot;, sText, MatchMode.ANYWHERE)));
++        } else if (casein) { //only case insensitive
++            crit.add(Restrictions.ilike(&quot;name&quot;, sText, MatchMode.ANYWHERE));
++        } else { //only in description
++            crit.add(Restrictions.ilike(&quot;description&quot;, sText, MatchMode.ANYWHERE));
++        }
++
++        if (jchkUseReGex.isSelected()) {//NOTE: don't really know if this is necessary.
++            sText = sText.replaceAll(&quot;*&quot;, &quot;%&quot;);
++        }
++
++        /*if (jrdbEntireCatalog.isSelected()) {
++            DiskGroup dg = (DiskGroup) jcbxDiskGroups.getSelectedItem();
++            crit.add(Restrictions.eq(&quot;disk.group&quot;, &quot;&quot; + dg));
++        }*/
++
++        for (Object o : crit.list()) {
+             listModel.addElement(o);
+         }
+         s.getTransaction().commit();
+@@ -256,11 +270,6 @@
+         jpResults.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(SearchDlg.class, &quot;SearchDlg.jpResults.border.title&quot;))); // NOI18N
+ 
+         jlstResults.setModel(listModel = new DefaultListModel());
+-        jlstResults.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+-                jlstResultsPropertyChange(evt);
+-            }
+-        });
+         jscrResults.setViewportView(jlstResults);
+ 
+         javax.swing.GroupLayout jpResultsLayout = new javax.swing.GroupLayout(jpResults);
+@@ -328,26 +337,18 @@
+ 
+ private void jbtnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnSearchActionPerformed
+     jpbProgress.setVisible(true);
+-    new Thread(new  
++    new Thread(new Runnable() {
+ 
+-          Runnable() {
+-
+-            
+-        
+-    
+-public void run() {
+-                search();
+-            }
+-        }).start();
++        public void run() {
++            search();
++        }
++    }).start();
+ }//GEN-LAST:event_jbtnSearchActionPerformed
+ 
+ private void jbtnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCloseActionPerformed
+     dispose();
+ }//GEN-LAST:event_jbtnCloseActionPerformed
+ 
+-private void jlstResultsPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jlstResultsPropertyChange
+-    System.err.println(&quot;SOME PROPERTY CHANGED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&quot; + evt.getPropertyName());
+-}//GEN-LAST:event_jlstResultsPropertyChange
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.ButtonGroup btngrpScope;
+     private javax.swing.JButton jbtnClose;
+@@ -368,4 +369,4 @@
+     private javax.swing.JScrollPane jscrResults;
+     private javax.swing.JTextField jtfSearchText;
+     // End of variables declaration//GEN-END:variables
+-}
++    }
+
+Modified: trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties	2008-06-06 01:32:53 UTC (rev 132)
+@@ -1,8 +1,9 @@
+-currentVersion=JFindMyFiles {0}
+-LBL_splash_window_title=Starting JFindMyFiles
+-SPLASH_HEIGHT=252
+-SPLASH_WIDTH=259
+-SplashProgressBarBounds=0,131,259,6
+-SplashProgressBarColor=0xFF0000
+-SplashRunningTextBounds=53,224,87,6
+-SplashRunningTextFontSize=9
++currentVersion=JFindMyFiles {0}
++LBL_splash_window_title=Starting JFindMyFiles
++SPLASH_HEIGHT=355
++SPLASH_WIDTH=473
++SplashProgressBarBounds=0,286,400,5
++SplashProgressBarColor=0xFFFFFF
++SplashRunningTextBounds=30,272,158,10
++SplashRunningTextColor=0x0
++SplashRunningTextFontSize=12
+
+Modified: trunk/project/JFindMyFiles/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/nbproject/project.properties	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/project/JFindMyFiles/nbproject/project.properties	2008-06-06 01:32:53 UTC (rev 132)
+@@ -1,21 +1,23 @@
+-app.icon=branding/core/core.jar/org/netbeans/core/startup/frame48.gif
+-app.name=jfindmyfiles
+-app.title=JFindMyFiles
+-branding.token=${app.name}
+-modules=\
+-    ${project.de.berlios.jfindmyfiles.readingfiles}:\
+-    ${project.de.berlios.jfindmyfiles.catalog}:\
+-    ${project.de.berlios.jfindmyfiles.jfindmyfilesgui}:\
+-    ${project.de.berlios.jfindmyfiles.exportengine}:\
+-    ${project.de.berlios.jfindmyfiles.persistence}:\
+-    ${project.de.berlios.jfindmyfiles.jdbcdrivers}:\
+-    ${project.de.berlios.jfindmyfiles.hsqldb}:\
+-    ${project.com.toedter.plaf}
+-project.com.toedter.plaf=JCalendar
+-project.de.berlios.jfindmyfiles.catalog=Catalog
+-project.de.berlios.jfindmyfiles.exportengine=ExportEngine
+-project.de.berlios.jfindmyfiles.hsqldb=HSQLDB
+-project.de.berlios.jfindmyfiles.jdbcdrivers=JDBCDrivers
+-project.de.berlios.jfindmyfiles.jfindmyfilesgui=JFindMyFilesGui
+-project.de.berlios.jfindmyfiles.persistence=Persistence
+-project.de.berlios.jfindmyfiles.readingfiles=ReadingFiles
++app.icon=branding/core/core.jar/org/netbeans/core/startup/frame48.gif
++app.name=jfindmyfiles
++app.title=JFindMyFiles
++branding.token=${app.name}
++modules=\
++    ${project.de.berlios.jfindmyfiles.readingfiles}:\
++    ${project.de.berlios.jfindmyfiles.catalog}:\
++    ${project.de.berlios.jfindmyfiles.jfindmyfilesgui}:\
++    ${project.de.berlios.jfindmyfiles.exportengine}:\
++    ${project.de.berlios.jfindmyfiles.persistence}:\
++    ${project.de.berlios.jfindmyfiles.jdbcdrivers}:\
++    ${project.de.berlios.jfindmyfiles.hsqldb}:\
++    ${project.com.toedter.plaf}:\
++    ${project.de.berlios.jfindmyfiles.importengine}
++project.com.toedter.plaf=JCalendar
++project.de.berlios.jfindmyfiles.catalog=Catalog
++project.de.berlios.jfindmyfiles.exportengine=ExportEngine
++project.de.berlios.jfindmyfiles.hsqldb=HSQLDB
++project.de.berlios.jfindmyfiles.importengine=ImportEngine
++project.de.berlios.jfindmyfiles.jdbcdrivers=JDBCDrivers
++project.de.berlios.jfindmyfiles.jfindmyfilesgui=JFindMyFilesGui
++project.de.berlios.jfindmyfiles.persistence=Persistence
++project.de.berlios.jfindmyfiles.readingfiles=ReadingFiles
+
+Added: trunk/spikes/CRC/fastmd5/com/twmacinta/io/NullOutputStream.class
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/CRC/fastmd5/com/twmacinta/io/NullOutputStream.class
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5.class
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5.class
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5InputStream.class
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5InputStream.class
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5OutputStream.class
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5OutputStream.class
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5State.class
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/CRC/fastmd5/com/twmacinta/util/MD5State.class
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/CRC/fastmd5/com/twmacinta/util/test/MD5OutputStreamTest.class
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/CRC/fastmd5/com/twmacinta/util/test/MD5OutputStreamTest.class
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/CRC/fastmd5/lib/arch/darwin_ppc/MD5.jnilib
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/CRC/fastmd5/lib/arch/darwin_ppc/MD5.jnilib
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/CRC/fastmd5/lib/arch/linux_x86/MD5.so
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/CRC/fastmd5/lib/arch/linux_x86/MD5.so
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/CRC/fastmd5/lib/arch/win32_x86/MD5.dll
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/CRC/fastmd5/lib/arch/win32_x86/MD5.dll
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/CRC/jacksum.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/spikes/CRC/jacksum.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/spikes/CRC/manifest.mf
+===================================================================
+--- trunk/spikes/CRC/manifest.mf	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/spikes/CRC/manifest.mf	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,3 @@
++Manifest-Version: 1.0
++X-COMMENT: Main-Class will be added automatically by build
++
+
+Added: trunk/spikes/CRC/nbproject/build-impl.xml
+===================================================================
+--- trunk/spikes/CRC/nbproject/build-impl.xml	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/spikes/CRC/nbproject/build-impl.xml	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,629 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++
++For the purpose of easier reading the script
++is divided into following sections:
++
++  - initialization
++  - compilation
++  - jar
++  - execution
++  - debugging
++  - javadoc
++  - junit compilation
++  - junit execution
++  - junit debugging
++  - applet
++  - cleanup
++
++        --&gt;
++&lt;project xmlns:j2seproject1=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/1">http://www.netbeans.org/ns/j2se-project/1</A>&quot; xmlns:j2seproject3=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/3">http://www.netbeans.org/ns/j2se-project/3</A>&quot; xmlns:jaxrpc=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/jax-rpc">http://www.netbeans.org/ns/j2se-project/jax-rpc</A>&quot; basedir=&quot;..&quot; default=&quot;default&quot; name=&quot;CRC-impl&quot;&gt;
++    &lt;target depends=&quot;test,jar,javadoc&quot; description=&quot;Build and test whole project.&quot; name=&quot;default&quot;/&gt;
++    &lt;!-- 
++                ======================
++                INITIALIZATION SECTION 
++                ======================
++            --&gt;
++    &lt;target name=&quot;-pre-init&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;-pre-init&quot; name=&quot;-init-private&quot;&gt;
++        &lt;property file=&quot;nbproject/private/config.properties&quot;/&gt;
++        &lt;property file=&quot;nbproject/private/configs/${config}.properties&quot;/&gt;
++        &lt;property file=&quot;nbproject/private/private.properties&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;-pre-init,-init-private&quot; name=&quot;-init-user&quot;&gt;
++        &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++        &lt;!-- The two properties below are usually overridden --&gt;
++        &lt;!-- by the active platform. Just a fallback. --&gt;
++        &lt;property name=&quot;default.javac.source&quot; value=&quot;1.4&quot;/&gt;
++        &lt;property name=&quot;default.javac.target&quot; value=&quot;1.4&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;-pre-init,-init-private,-init-user&quot; name=&quot;-init-project&quot;&gt;
++        &lt;property file=&quot;nbproject/configs/${config}.properties&quot;/&gt;
++        &lt;property file=&quot;nbproject/project.properties&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;-pre-init,-init-private,-init-user,-init-project,-init-macrodef-property&quot; name=&quot;-do-init&quot;&gt;
++        &lt;available file=&quot;${manifest.file}&quot; property=&quot;manifest.available&quot;/&gt;
++        &lt;condition property=&quot;manifest.available+main.class&quot;&gt;
++            &lt;and&gt;
++                &lt;isset property=&quot;manifest.available&quot;/&gt;
++                &lt;isset property=&quot;main.class&quot;/&gt;
++                &lt;not&gt;
++                    &lt;equals arg1=&quot;${main.class}&quot; arg2=&quot;&quot; trim=&quot;true&quot;/&gt;
++                &lt;/not&gt;
++            &lt;/and&gt;
++        &lt;/condition&gt;
++        &lt;condition property=&quot;manifest.available+main.class+mkdist.available&quot;&gt;
++            &lt;and&gt;
++                &lt;istrue value=&quot;${manifest.available+main.class}&quot;/&gt;
++                &lt;isset property=&quot;libs.CopyLibs.classpath&quot;/&gt;
++            &lt;/and&gt;
++        &lt;/condition&gt;
++        &lt;condition property=&quot;have.tests&quot;&gt;
++            &lt;or&gt;
++                &lt;available file=&quot;${test.src.dir}&quot;/&gt;
++            &lt;/or&gt;
++        &lt;/condition&gt;
++        &lt;condition property=&quot;have.sources&quot;&gt;
++            &lt;or&gt;
++                &lt;available file=&quot;${src.dir}&quot;/&gt;
++            &lt;/or&gt;
++        &lt;/condition&gt;
++        &lt;condition property=&quot;netbeans.home+have.tests&quot;&gt;
++            &lt;and&gt;
++                &lt;isset property=&quot;netbeans.home&quot;/&gt;
++                &lt;isset property=&quot;have.tests&quot;/&gt;
++            &lt;/and&gt;
++        &lt;/condition&gt;
++        &lt;condition property=&quot;no.javadoc.preview&quot;&gt;
++            &lt;and&gt;
++                &lt;isset property=&quot;javadoc.preview&quot;/&gt;
++                &lt;isfalse value=&quot;${javadoc.preview}&quot;/&gt;
++            &lt;/and&gt;
++        &lt;/condition&gt;
++        &lt;property name=&quot;run.jvmargs&quot; value=&quot;&quot;/&gt;
++        &lt;property name=&quot;javac.compilerargs&quot; value=&quot;&quot;/&gt;
++        &lt;property name=&quot;work.dir&quot; value=&quot;${basedir}&quot;/&gt;
++        &lt;condition property=&quot;no.deps&quot;&gt;
++            &lt;and&gt;
++                &lt;istrue value=&quot;${no.dependencies}&quot;/&gt;
++            &lt;/and&gt;
++        &lt;/condition&gt;
++        &lt;property name=&quot;javac.debug&quot; value=&quot;true&quot;/&gt;
++        &lt;property name=&quot;javadoc.preview&quot; value=&quot;true&quot;/&gt;
++        &lt;property name=&quot;application.args&quot; value=&quot;&quot;/&gt;
++        &lt;property name=&quot;source.encoding&quot; value=&quot;${file.encoding}&quot;/&gt;
++        &lt;condition property=&quot;javadoc.encoding.used&quot; value=&quot;${javadoc.encoding}&quot;&gt;
++            &lt;and&gt;
++                &lt;isset property=&quot;javadoc.encoding&quot;/&gt;
++                &lt;not&gt;
++                    &lt;equals arg1=&quot;${javadoc.encoding}&quot; arg2=&quot;&quot;/&gt;
++                &lt;/not&gt;
++            &lt;/and&gt;
++        &lt;/condition&gt;
++        &lt;property name=&quot;javadoc.encoding.used&quot; value=&quot;${source.encoding}&quot;/&gt;
++        &lt;property name=&quot;includes&quot; value=&quot;**&quot;/&gt;
++        &lt;property name=&quot;excludes&quot; value=&quot;&quot;/&gt;
++        &lt;property name=&quot;do.depend&quot; value=&quot;false&quot;/&gt;
++        &lt;condition property=&quot;do.depend.true&quot;&gt;
++            &lt;istrue value=&quot;${do.depend}&quot;/&gt;
++        &lt;/condition&gt;
++        &lt;condition else=&quot;&quot; property=&quot;javac.compilerargs.jaxws&quot; value=&quot;-Djava.endorsed.dirs='${jaxws.endorsed.dir}'&quot;&gt;
++            &lt;and&gt;
++                &lt;isset property=&quot;jaxws.endorsed.dir&quot;/&gt;
++                &lt;available file=&quot;nbproject/jaxws-build.xml&quot;/&gt;
++            &lt;/and&gt;
++        &lt;/condition&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-post-init&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;-pre-init,-init-private,-init-user,-init-project,-do-init&quot; name=&quot;-init-check&quot;&gt;
++        &lt;fail unless=&quot;src.dir&quot;&gt;Must set src.dir&lt;/fail&gt;
++        &lt;fail unless=&quot;test.src.dir&quot;&gt;Must set test.src.dir&lt;/fail&gt;
++        &lt;fail unless=&quot;build.dir&quot;&gt;Must set build.dir&lt;/fail&gt;
++        &lt;fail unless=&quot;dist.dir&quot;&gt;Must set dist.dir&lt;/fail&gt;
++        &lt;fail unless=&quot;build.classes.dir&quot;&gt;Must set build.classes.dir&lt;/fail&gt;
++        &lt;fail unless=&quot;dist.javadoc.dir&quot;&gt;Must set dist.javadoc.dir&lt;/fail&gt;
++        &lt;fail unless=&quot;build.test.classes.dir&quot;&gt;Must set build.test.classes.dir&lt;/fail&gt;
++        &lt;fail unless=&quot;build.test.results.dir&quot;&gt;Must set build.test.results.dir&lt;/fail&gt;
++        &lt;fail unless=&quot;build.classes.excludes&quot;&gt;Must set build.classes.excludes&lt;/fail&gt;
++        &lt;fail unless=&quot;dist.jar&quot;&gt;Must set dist.jar&lt;/fail&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-init-macrodef-property&quot;&gt;
++        &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/1">http://www.netbeans.org/ns/j2se-project/1</A>&quot;&gt;
++            &lt;attribute name=&quot;name&quot;/&gt;
++            &lt;attribute name=&quot;value&quot;/&gt;
++            &lt;sequential&gt;
++                &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
++            &lt;/sequential&gt;
++        &lt;/macrodef&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-init-macrodef-javac&quot;&gt;
++        &lt;macrodef name=&quot;javac&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/3">http://www.netbeans.org/ns/j2se-project/3</A>&quot;&gt;
++            &lt;attribute default=&quot;${src.dir}&quot; name=&quot;srcdir&quot;/&gt;
++            &lt;attribute default=&quot;${build.classes.dir}&quot; name=&quot;destdir&quot;/&gt;
++            &lt;attribute default=&quot;${javac.classpath}&quot; name=&quot;classpath&quot;/&gt;
++            &lt;attribute default=&quot;${includes}&quot; name=&quot;includes&quot;/&gt;
++            &lt;attribute default=&quot;${excludes}&quot; name=&quot;excludes&quot;/&gt;
++            &lt;attribute default=&quot;${javac.debug}&quot; name=&quot;debug&quot;/&gt;
++            &lt;attribute default=&quot;&quot; name=&quot;sourcepath&quot;/&gt;
++            &lt;element name=&quot;customize&quot; optional=&quot;true&quot;/&gt;
++            &lt;sequential&gt;
++                &lt;javac debug=&quot;@{debug}&quot; deprecation=&quot;${javac.deprecation}&quot; destdir=&quot;@{destdir}&quot; encoding=&quot;${source.encoding}&quot; excludes=&quot;@{excludes}&quot; includeantruntime=&quot;false&quot; includes=&quot;@{includes}&quot; source=&quot;${javac.source}&quot; sourcepath=&quot;@{sourcepath}&quot; srcdir=&quot;@{srcdir}&quot; target=&quot;${javac.target}&quot;&gt;
++                    &lt;classpath&gt;
++                        &lt;path path=&quot;@{classpath}&quot;/&gt;
++                    &lt;/classpath&gt;
++                    &lt;compilerarg line=&quot;${javac.compilerargs} ${javac.compilerargs.jaxws}&quot;/&gt;
++                    &lt;customize/&gt;
++                &lt;/javac&gt;
++            &lt;/sequential&gt;
++        &lt;/macrodef&gt;
++        &lt;macrodef name=&quot;depend&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/3">http://www.netbeans.org/ns/j2se-project/3</A>&quot;&gt;
++            &lt;attribute default=&quot;${src.dir}&quot; name=&quot;srcdir&quot;/&gt;
++            &lt;attribute default=&quot;${build.classes.dir}&quot; name=&quot;destdir&quot;/&gt;
++            &lt;attribute default=&quot;${javac.classpath}&quot; name=&quot;classpath&quot;/&gt;
++            &lt;sequential&gt;
++                &lt;depend cache=&quot;${build.dir}/depcache&quot; destdir=&quot;@{destdir}&quot; excludes=&quot;${excludes}&quot; includes=&quot;${includes}&quot; srcdir=&quot;@{srcdir}&quot;&gt;
++                    &lt;classpath&gt;
++                        &lt;path path=&quot;@{classpath}&quot;/&gt;
++                    &lt;/classpath&gt;
++                &lt;/depend&gt;
++            &lt;/sequential&gt;
++        &lt;/macrodef&gt;
++        &lt;macrodef name=&quot;force-recompile&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/3">http://www.netbeans.org/ns/j2se-project/3</A>&quot;&gt;
++            &lt;attribute default=&quot;${build.classes.dir}&quot; name=&quot;destdir&quot;/&gt;
++            &lt;sequential&gt;
++                &lt;fail unless=&quot;javac.includes&quot;&gt;Must set javac.includes&lt;/fail&gt;
++                &lt;pathconvert pathsep=&quot;,&quot; property=&quot;javac.includes.binary&quot;&gt;
++                    &lt;path&gt;
++                        &lt;filelist dir=&quot;@{destdir}&quot; files=&quot;${javac.includes}&quot;/&gt;
++                    &lt;/path&gt;
++                    &lt;globmapper from=&quot;*.java&quot; to=&quot;*.class&quot;/&gt;
++                &lt;/pathconvert&gt;
++                &lt;delete&gt;
++                    &lt;files includes=&quot;${javac.includes.binary}&quot;/&gt;
++                &lt;/delete&gt;
++            &lt;/sequential&gt;
++        &lt;/macrodef&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-init-macrodef-junit&quot;&gt;
++        &lt;macrodef name=&quot;junit&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/3">http://www.netbeans.org/ns/j2se-project/3</A>&quot;&gt;
++            &lt;attribute default=&quot;${includes}&quot; name=&quot;includes&quot;/&gt;
++            &lt;attribute default=&quot;${excludes}&quot; name=&quot;excludes&quot;/&gt;
++            &lt;attribute default=&quot;**&quot; name=&quot;testincludes&quot;/&gt;
++            &lt;sequential&gt;
++                &lt;junit dir=&quot;${work.dir}&quot; errorproperty=&quot;tests.failed&quot; failureproperty=&quot;tests.failed&quot; fork=&quot;true&quot; showoutput=&quot;true&quot;&gt;
++                    &lt;batchtest todir=&quot;${build.test.results.dir}&quot;&gt;
++                        &lt;fileset dir=&quot;${test.src.dir}&quot; excludes=&quot;@{excludes},${excludes}&quot; includes=&quot;@{includes}&quot;&gt;
++                            &lt;filename name=&quot;@{testincludes}&quot;/&gt;
++                        &lt;/fileset&gt;
++                    &lt;/batchtest&gt;
++                    &lt;classpath&gt;
++                        &lt;path path=&quot;${run.test.classpath}&quot;/&gt;
++                    &lt;/classpath&gt;
++                    &lt;syspropertyset&gt;
++                        &lt;propertyref prefix=&quot;test-sys-prop.&quot;/&gt;
++                        &lt;mapper from=&quot;test-sys-prop.*&quot; to=&quot;*&quot; type=&quot;glob&quot;/&gt;
++                    &lt;/syspropertyset&gt;
++                    &lt;formatter type=&quot;brief&quot; usefile=&quot;false&quot;/&gt;
++                    &lt;formatter type=&quot;xml&quot;/&gt;
++                    &lt;jvmarg line=&quot;${run.jvmargs}&quot;/&gt;
++                &lt;/junit&gt;
++            &lt;/sequential&gt;
++        &lt;/macrodef&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-init-macrodef-nbjpda&quot;&gt;
++        &lt;macrodef name=&quot;nbjpdastart&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/1">http://www.netbeans.org/ns/j2se-project/1</A>&quot;&gt;
++            &lt;attribute default=&quot;${main.class}&quot; name=&quot;name&quot;/&gt;
++            &lt;attribute default=&quot;${debug.classpath}&quot; name=&quot;classpath&quot;/&gt;
++            &lt;attribute default=&quot;&quot; name=&quot;stopclassname&quot;/&gt;
++            &lt;sequential&gt;
++                &lt;nbjpdastart addressproperty=&quot;jpda.address&quot; name=&quot;@{name}&quot; stopclassname=&quot;@{stopclassname}&quot; transport=&quot;dt_socket&quot;&gt;
++                    &lt;classpath&gt;
++                        &lt;path path=&quot;@{classpath}&quot;/&gt;
++                    &lt;/classpath&gt;
++                &lt;/nbjpdastart&gt;
++            &lt;/sequential&gt;
++        &lt;/macrodef&gt;
++        &lt;macrodef name=&quot;nbjpdareload&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/1">http://www.netbeans.org/ns/j2se-project/1</A>&quot;&gt;
++            &lt;attribute default=&quot;${build.classes.dir}&quot; name=&quot;dir&quot;/&gt;
++            &lt;sequential&gt;
++                &lt;nbjpdareload&gt;
++                    &lt;fileset dir=&quot;@{dir}&quot; includes=&quot;${fix.classes}&quot;&gt;
++                        &lt;include name=&quot;${fix.includes}*.class&quot;/&gt;
++                    &lt;/fileset&gt;
++                &lt;/nbjpdareload&gt;
++            &lt;/sequential&gt;
++        &lt;/macrodef&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-init-debug-args&quot;&gt;
++        &lt;property name=&quot;version-output&quot; value=&quot;java version &quot;${ant.java.version}&quot;/&gt;
++        &lt;condition property=&quot;have-jdk-older-than-1.4&quot;&gt;
++            &lt;or&gt;
++                &lt;contains string=&quot;${version-output}&quot; substring=&quot;java version &quot;1.0&quot;/&gt;
++                &lt;contains string=&quot;${version-output}&quot; substring=&quot;java version &quot;1.1&quot;/&gt;
++                &lt;contains string=&quot;${version-output}&quot; substring=&quot;java version &quot;1.2&quot;/&gt;
++                &lt;contains string=&quot;${version-output}&quot; substring=&quot;java version &quot;1.3&quot;/&gt;
++            &lt;/or&gt;
++        &lt;/condition&gt;
++        &lt;condition else=&quot;-Xdebug&quot; property=&quot;debug-args-line&quot; value=&quot;-Xdebug -Xnoagent -Djava.compiler=none&quot;&gt;
++            &lt;istrue value=&quot;${have-jdk-older-than-1.4}&quot;/&gt;
++        &lt;/condition&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;-init-debug-args&quot; name=&quot;-init-macrodef-debug&quot;&gt;
++        &lt;macrodef name=&quot;debug&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/3">http://www.netbeans.org/ns/j2se-project/3</A>&quot;&gt;
++            &lt;attribute default=&quot;${main.class}&quot; name=&quot;classname&quot;/&gt;
++            &lt;attribute default=&quot;${debug.classpath}&quot; name=&quot;classpath&quot;/&gt;
++            &lt;element name=&quot;customize&quot; optional=&quot;true&quot;/&gt;
++            &lt;sequential&gt;
++                &lt;java classname=&quot;@{classname}&quot; dir=&quot;${work.dir}&quot; fork=&quot;true&quot;&gt;
++                    &lt;jvmarg line=&quot;${debug-args-line}&quot;/&gt;
++                    &lt;jvmarg value=&quot;-Xrunjdwp:transport=dt_socket,address=${jpda.address}&quot;/&gt;
++                    &lt;jvmarg line=&quot;${run.jvmargs}&quot;/&gt;
++                    &lt;classpath&gt;
++                        &lt;path path=&quot;@{classpath}&quot;/&gt;
++                    &lt;/classpath&gt;
++                    &lt;syspropertyset&gt;
++                        &lt;propertyref prefix=&quot;run-sys-prop.&quot;/&gt;
++                        &lt;mapper from=&quot;run-sys-prop.*&quot; to=&quot;*&quot; type=&quot;glob&quot;/&gt;
++                    &lt;/syspropertyset&gt;
++                    &lt;customize/&gt;
++                &lt;/java&gt;
++            &lt;/sequential&gt;
++        &lt;/macrodef&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-init-macrodef-java&quot;&gt;
++        &lt;macrodef name=&quot;java&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/1">http://www.netbeans.org/ns/j2se-project/1</A>&quot;&gt;
++            &lt;attribute default=&quot;${main.class}&quot; name=&quot;classname&quot;/&gt;
++            &lt;element name=&quot;customize&quot; optional=&quot;true&quot;/&gt;
++            &lt;sequential&gt;
++                &lt;java classname=&quot;@{classname}&quot; dir=&quot;${work.dir}&quot; fork=&quot;true&quot;&gt;
++                    &lt;jvmarg line=&quot;${run.jvmargs}&quot;/&gt;
++                    &lt;classpath&gt;
++                        &lt;path path=&quot;${run.classpath}&quot;/&gt;
++                    &lt;/classpath&gt;
++                    &lt;syspropertyset&gt;
++                        &lt;propertyref prefix=&quot;run-sys-prop.&quot;/&gt;
++                        &lt;mapper from=&quot;run-sys-prop.*&quot; to=&quot;*&quot; type=&quot;glob&quot;/&gt;
++                    &lt;/syspropertyset&gt;
++                    &lt;customize/&gt;
++                &lt;/java&gt;
++            &lt;/sequential&gt;
++        &lt;/macrodef&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-init-presetdef-jar&quot;&gt;
++        &lt;presetdef name=&quot;jar&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/1">http://www.netbeans.org/ns/j2se-project/1</A>&quot;&gt;
++            &lt;jar compress=&quot;${jar.compress}&quot; jarfile=&quot;${dist.jar}&quot;&gt;
++                &lt;j2seproject1:fileset dir=&quot;${build.classes.dir}&quot;/&gt;
++            &lt;/jar&gt;
++        &lt;/presetdef&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;-pre-init,-init-private,-init-user,-init-project,-do-init,-post-init,-init-check,-init-macrodef-property,-init-macrodef-javac,-init-macrodef-junit,-init-macrodef-nbjpda,-init-macrodef-debug,-init-macrodef-java,-init-presetdef-jar&quot; name=&quot;init&quot;/&gt;
++    &lt;!--
++                ===================
++                COMPILATION SECTION
++                ===================
++            --&gt;
++    &lt;target depends=&quot;init&quot; name=&quot;deps-jar&quot; unless=&quot;no.deps&quot;/&gt;
++    &lt;target depends=&quot;init,deps-jar&quot; name=&quot;-pre-pre-compile&quot;&gt;
++        &lt;mkdir dir=&quot;${build.classes.dir}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-pre-compile&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target if=&quot;do.depend.true&quot; name=&quot;-compile-depend&quot;&gt;
++        &lt;j2seproject3:depend/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,deps-jar,-pre-pre-compile,-pre-compile,-compile-depend&quot; if=&quot;have.sources&quot; name=&quot;-do-compile&quot;&gt;
++        &lt;j2seproject3:javac/&gt;
++        &lt;copy todir=&quot;${build.classes.dir}&quot;&gt;
++            &lt;fileset dir=&quot;${src.dir}&quot; excludes=&quot;${build.classes.excludes},${excludes}&quot; includes=&quot;${includes}&quot;/&gt;
++        &lt;/copy&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-post-compile&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,deps-jar,-pre-pre-compile,-pre-compile,-do-compile,-post-compile&quot; description=&quot;Compile project.&quot; name=&quot;compile&quot;/&gt;
++    &lt;target name=&quot;-pre-compile-single&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,deps-jar,-pre-pre-compile&quot; name=&quot;-do-compile-single&quot;&gt;
++        &lt;fail unless=&quot;javac.includes&quot;&gt;Must select some files in the IDE or set javac.includes&lt;/fail&gt;
++        &lt;j2seproject3:force-recompile/&gt;
++        &lt;j2seproject3:javac excludes=&quot;&quot; includes=&quot;${javac.includes}&quot; sourcepath=&quot;${src.dir}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-post-compile-single&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,deps-jar,-pre-pre-compile,-pre-compile-single,-do-compile-single,-post-compile-single&quot; name=&quot;compile-single&quot;/&gt;
++    &lt;!--
++                ====================
++                JAR BUILDING SECTION
++                ====================
++            --&gt;
++    &lt;target depends=&quot;init&quot; name=&quot;-pre-pre-jar&quot;&gt;
++        &lt;dirname file=&quot;${dist.jar}&quot; property=&quot;dist.jar.dir&quot;/&gt;
++        &lt;mkdir dir=&quot;${dist.jar.dir}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-pre-jar&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile,-pre-pre-jar,-pre-jar&quot; name=&quot;-do-jar-without-manifest&quot; unless=&quot;manifest.available&quot;&gt;
++        &lt;j2seproject1:jar/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile,-pre-pre-jar,-pre-jar&quot; if=&quot;manifest.available&quot; name=&quot;-do-jar-with-manifest&quot; unless=&quot;manifest.available+main.class&quot;&gt;
++        &lt;j2seproject1:jar manifest=&quot;${manifest.file}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile,-pre-pre-jar,-pre-jar&quot; if=&quot;manifest.available+main.class&quot; name=&quot;-do-jar-with-mainclass&quot; unless=&quot;manifest.available+main.class+mkdist.available&quot;&gt;
++        &lt;j2seproject1:jar manifest=&quot;${manifest.file}&quot;&gt;
++            &lt;j2seproject1:manifest&gt;
++                &lt;j2seproject1:attribute name=&quot;Main-Class&quot; value=&quot;${main.class}&quot;/&gt;
++            &lt;/j2seproject1:manifest&gt;
++        &lt;/j2seproject1:jar&gt;
++        &lt;echo&gt;To run this application from the command line without Ant, try:&lt;/echo&gt;
++        &lt;property location=&quot;${build.classes.dir}&quot; name=&quot;build.classes.dir.resolved&quot;/&gt;
++        &lt;property location=&quot;${dist.jar}&quot; name=&quot;dist.jar.resolved&quot;/&gt;
++        &lt;pathconvert property=&quot;run.classpath.with.dist.jar&quot;&gt;
++            &lt;path path=&quot;${run.classpath}&quot;/&gt;
++            &lt;map from=&quot;${build.classes.dir.resolved}&quot; to=&quot;${dist.jar.resolved}&quot;/&gt;
++        &lt;/pathconvert&gt;
++        &lt;echo&gt;java -cp &quot;${run.classpath.with.dist.jar}&quot; ${main.class}&lt;/echo&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile,-pre-pre-jar,-pre-jar&quot; if=&quot;manifest.available+main.class+mkdist.available&quot; name=&quot;-do-jar-with-libraries&quot;&gt;
++        &lt;property location=&quot;${build.classes.dir}&quot; name=&quot;build.classes.dir.resolved&quot;/&gt;
++        &lt;pathconvert property=&quot;run.classpath.without.build.classes.dir&quot;&gt;
++            &lt;path path=&quot;${run.classpath}&quot;/&gt;
++            &lt;map from=&quot;${build.classes.dir.resolved}&quot; to=&quot;&quot;/&gt;
++        &lt;/pathconvert&gt;
++        &lt;pathconvert pathsep=&quot; &quot; property=&quot;jar.classpath&quot;&gt;
++            &lt;path path=&quot;${run.classpath.without.build.classes.dir}&quot;/&gt;
++            &lt;chainedmapper&gt;
++                &lt;flattenmapper/&gt;
++                &lt;globmapper from=&quot;*&quot; to=&quot;lib/*&quot;/&gt;
++            &lt;/chainedmapper&gt;
++        &lt;/pathconvert&gt;
++        &lt;taskdef classname=&quot;org.netbeans.modules.java.j2seproject.copylibstask.CopyLibs&quot; classpath=&quot;${libs.CopyLibs.classpath}&quot; name=&quot;copylibs&quot;/&gt;
++        &lt;copylibs compress=&quot;${jar.compress}&quot; jarfile=&quot;${dist.jar}&quot; manifest=&quot;${manifest.file}&quot; runtimeclasspath=&quot;${run.classpath.without.build.classes.dir}&quot;&gt;
++            &lt;fileset dir=&quot;${build.classes.dir}&quot;/&gt;
++            &lt;manifest&gt;
++                &lt;attribute name=&quot;Main-Class&quot; value=&quot;${main.class}&quot;/&gt;
++                &lt;attribute name=&quot;Class-Path&quot; value=&quot;${jar.classpath}&quot;/&gt;
++            &lt;/manifest&gt;
++        &lt;/copylibs&gt;
++        &lt;echo&gt;To run this application from the command line without Ant, try:&lt;/echo&gt;
++        &lt;property location=&quot;${dist.jar}&quot; name=&quot;dist.jar.resolved&quot;/&gt;
++        &lt;echo&gt;java -jar &quot;${dist.jar.resolved}&quot;&lt;/echo&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-post-jar&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile,-pre-jar,-do-jar-with-manifest,-do-jar-without-manifest,-do-jar-with-mainclass,-do-jar-with-libraries,-post-jar&quot; description=&quot;Build JAR.&quot; name=&quot;jar&quot;/&gt;
++    &lt;!--
++                =================
++                EXECUTION SECTION
++                =================
++            --&gt;
++    &lt;target depends=&quot;init,compile&quot; description=&quot;Run a main class.&quot; name=&quot;run&quot;&gt;
++        &lt;j2seproject1:java&gt;
++            &lt;customize&gt;
++                &lt;arg line=&quot;${application.args}&quot;/&gt;
++            &lt;/customize&gt;
++        &lt;/j2seproject1:java&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-do-not-recompile&quot;&gt;
++        &lt;property name=&quot;javac.includes.binary&quot; value=&quot;&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,-do-not-recompile,compile-single&quot; name=&quot;run-single&quot;&gt;
++        &lt;fail unless=&quot;run.class&quot;&gt;Must select one file in the IDE or set run.class&lt;/fail&gt;
++        &lt;j2seproject1:java classname=&quot;${run.class}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;!--
++                =================
++                DEBUGGING SECTION
++                =================
++            --&gt;
++    &lt;target depends=&quot;init&quot; if=&quot;netbeans.home&quot; name=&quot;-debug-start-debugger&quot;&gt;
++        &lt;j2seproject1:nbjpdastart name=&quot;${debug.class}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile&quot; name=&quot;-debug-start-debuggee&quot;&gt;
++        &lt;j2seproject3:debug&gt;
++            &lt;customize&gt;
++                &lt;arg line=&quot;${application.args}&quot;/&gt;
++            &lt;/customize&gt;
++        &lt;/j2seproject3:debug&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile,-debug-start-debugger,-debug-start-debuggee&quot; description=&quot;Debug project in IDE.&quot; if=&quot;netbeans.home&quot; name=&quot;debug&quot;/&gt;
++    &lt;target depends=&quot;init&quot; if=&quot;netbeans.home&quot; name=&quot;-debug-start-debugger-stepinto&quot;&gt;
++        &lt;j2seproject1:nbjpdastart stopclassname=&quot;${main.class}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile,-debug-start-debugger-stepinto,-debug-start-debuggee&quot; if=&quot;netbeans.home&quot; name=&quot;debug-stepinto&quot;/&gt;
++    &lt;target depends=&quot;init,compile-single&quot; if=&quot;netbeans.home&quot; name=&quot;-debug-start-debuggee-single&quot;&gt;
++        &lt;fail unless=&quot;debug.class&quot;&gt;Must select one file in the IDE or set debug.class&lt;/fail&gt;
++        &lt;j2seproject3:debug classname=&quot;${debug.class}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,-do-not-recompile,compile-single,-debug-start-debugger,-debug-start-debuggee-single&quot; if=&quot;netbeans.home&quot; name=&quot;debug-single&quot;/&gt;
++    &lt;target depends=&quot;init&quot; name=&quot;-pre-debug-fix&quot;&gt;
++        &lt;fail unless=&quot;fix.includes&quot;&gt;Must set fix.includes&lt;/fail&gt;
++        &lt;property name=&quot;javac.includes&quot; value=&quot;${fix.includes}.java&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,-pre-debug-fix,compile-single&quot; if=&quot;netbeans.home&quot; name=&quot;-do-debug-fix&quot;&gt;
++        &lt;j2seproject1:nbjpdareload/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,-pre-debug-fix,-do-debug-fix&quot; if=&quot;netbeans.home&quot; name=&quot;debug-fix&quot;/&gt;
++    &lt;!--
++                ===============
++                JAVADOC SECTION
++                ===============
++            --&gt;
++    &lt;target depends=&quot;init&quot; name=&quot;-javadoc-build&quot;&gt;
++        &lt;mkdir dir=&quot;${dist.javadoc.dir}&quot;/&gt;
++        &lt;javadoc additionalparam=&quot;${javadoc.additionalparam}&quot; author=&quot;${javadoc.author}&quot; charset=&quot;UTF-8&quot; destdir=&quot;${dist.javadoc.dir}&quot; docencoding=&quot;UTF-8&quot; encoding=&quot;${javadoc.encoding.used}&quot; failonerror=&quot;true&quot; noindex=&quot;${javadoc.noindex}&quot; nonavbar=&quot;${javadoc.nonavbar}&quot; notree=&quot;${javadoc.notree}&quot; private=&quot;${javadoc.private}&quot; source=&quot;${javac.source}&quot; splitindex=&quot;${javadoc.splitindex}&quot; use=&quot;${javadoc.use}&quot; useexternalfile=&quot;true&quot; version=&quot;${javadoc.version}&quot; windowtitle=&quot;${javadoc.windowtitle}&quot;&gt;
++            &lt;classpath&gt;
++                &lt;path path=&quot;${javac.classpath}&quot;/&gt;
++            &lt;/classpath&gt;
++            &lt;fileset dir=&quot;${src.dir}&quot; excludes=&quot;${excludes}&quot; includes=&quot;${includes}&quot;&gt;
++                &lt;filename name=&quot;**/*.java&quot;/&gt;
++            &lt;/fileset&gt;
++        &lt;/javadoc&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,-javadoc-build&quot; if=&quot;netbeans.home&quot; name=&quot;-javadoc-browse&quot; unless=&quot;no.javadoc.preview&quot;&gt;
++        &lt;nbbrowse file=&quot;${dist.javadoc.dir}/index.html&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,-javadoc-build,-javadoc-browse&quot; description=&quot;Build Javadoc.&quot; name=&quot;javadoc&quot;/&gt;
++    &lt;!--
++                =========================
++                JUNIT COMPILATION SECTION
++                =========================
++            --&gt;
++    &lt;target depends=&quot;init,compile&quot; if=&quot;have.tests&quot; name=&quot;-pre-pre-compile-test&quot;&gt;
++        &lt;mkdir dir=&quot;${build.test.classes.dir}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-pre-compile-test&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target if=&quot;do.depend.true&quot; name=&quot;-compile-test-depend&quot;&gt;
++        &lt;j2seproject3:depend classpath=&quot;${javac.test.classpath}&quot; destdir=&quot;${build.test.classes.dir}&quot; srcdir=&quot;${test.src.dir}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile,-pre-pre-compile-test,-pre-compile-test,-compile-test-depend&quot; if=&quot;have.tests&quot; name=&quot;-do-compile-test&quot;&gt;
++        &lt;j2seproject3:javac classpath=&quot;${javac.test.classpath}&quot; debug=&quot;true&quot; destdir=&quot;${build.test.classes.dir}&quot; srcdir=&quot;${test.src.dir}&quot;/&gt;
++        &lt;copy todir=&quot;${build.test.classes.dir}&quot;&gt;
++            &lt;fileset dir=&quot;${test.src.dir}&quot; excludes=&quot;${build.classes.excludes},${excludes}&quot; includes=&quot;${includes}&quot;/&gt;
++        &lt;/copy&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-post-compile-test&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile,-pre-pre-compile-test,-pre-compile-test,-do-compile-test,-post-compile-test&quot; name=&quot;compile-test&quot;/&gt;
++    &lt;target name=&quot;-pre-compile-test-single&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile,-pre-pre-compile-test,-pre-compile-test-single&quot; if=&quot;have.tests&quot; name=&quot;-do-compile-test-single&quot;&gt;
++        &lt;fail unless=&quot;javac.includes&quot;&gt;Must select some files in the IDE or set javac.includes&lt;/fail&gt;
++        &lt;j2seproject3:force-recompile destdir=&quot;${build.test.classes.dir}&quot;/&gt;
++        &lt;j2seproject3:javac classpath=&quot;${javac.test.classpath}&quot; debug=&quot;true&quot; destdir=&quot;${build.test.classes.dir}&quot; excludes=&quot;&quot; includes=&quot;${javac.includes}&quot; sourcepath=&quot;${test.src.dir}&quot; srcdir=&quot;${test.src.dir}&quot;/&gt;
++        &lt;copy todir=&quot;${build.test.classes.dir}&quot;&gt;
++            &lt;fileset dir=&quot;${test.src.dir}&quot; excludes=&quot;${build.classes.excludes},${excludes}&quot; includes=&quot;${includes}&quot;/&gt;
++        &lt;/copy&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-post-compile-test-single&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile,-pre-pre-compile-test,-pre-compile-test-single,-do-compile-test-single,-post-compile-test-single&quot; name=&quot;compile-test-single&quot;/&gt;
++    &lt;!--
++                =======================
++                JUNIT EXECUTION SECTION
++                =======================
++            --&gt;
++    &lt;target depends=&quot;init&quot; if=&quot;have.tests&quot; name=&quot;-pre-test-run&quot;&gt;
++        &lt;mkdir dir=&quot;${build.test.results.dir}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile-test,-pre-test-run&quot; if=&quot;have.tests&quot; name=&quot;-do-test-run&quot;&gt;
++        &lt;j2seproject3:junit testincludes=&quot;**/*Test.java&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile-test,-pre-test-run,-do-test-run&quot; if=&quot;have.tests&quot; name=&quot;-post-test-run&quot;&gt;
++        &lt;fail if=&quot;tests.failed&quot;&gt;Some tests failed; see details above.&lt;/fail&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init&quot; if=&quot;have.tests&quot; name=&quot;test-report&quot;/&gt;
++    &lt;target depends=&quot;init&quot; if=&quot;netbeans.home+have.tests&quot; name=&quot;-test-browse&quot;/&gt;
++    &lt;target depends=&quot;init,compile-test,-pre-test-run,-do-test-run,test-report,-post-test-run,-test-browse&quot; description=&quot;Run unit tests.&quot; name=&quot;test&quot;/&gt;
++    &lt;target depends=&quot;init&quot; if=&quot;have.tests&quot; name=&quot;-pre-test-run-single&quot;&gt;
++        &lt;mkdir dir=&quot;${build.test.results.dir}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile-test-single,-pre-test-run-single&quot; if=&quot;have.tests&quot; name=&quot;-do-test-run-single&quot;&gt;
++        &lt;fail unless=&quot;test.includes&quot;&gt;Must select some files in the IDE or set test.includes&lt;/fail&gt;
++        &lt;j2seproject3:junit excludes=&quot;&quot; includes=&quot;${test.includes}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile-test-single,-pre-test-run-single,-do-test-run-single&quot; if=&quot;have.tests&quot; name=&quot;-post-test-run-single&quot;&gt;
++        &lt;fail if=&quot;tests.failed&quot;&gt;Some tests failed; see details above.&lt;/fail&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,-do-not-recompile,compile-test-single,-pre-test-run-single,-do-test-run-single,-post-test-run-single&quot; description=&quot;Run single unit test.&quot; name=&quot;test-single&quot;/&gt;
++    &lt;!--
++                =======================
++                JUNIT DEBUGGING SECTION
++                =======================
++            --&gt;
++    &lt;target depends=&quot;init,compile-test&quot; if=&quot;have.tests&quot; name=&quot;-debug-start-debuggee-test&quot;&gt;
++        &lt;fail unless=&quot;test.class&quot;&gt;Must select one file in the IDE or set test.class&lt;/fail&gt;
++        &lt;property location=&quot;${build.test.results.dir}/TEST-${test.class}.xml&quot; name=&quot;test.report.file&quot;/&gt;
++        &lt;delete file=&quot;${test.report.file}&quot;/&gt;
++        &lt;mkdir dir=&quot;${build.test.results.dir}&quot;/&gt;
++        &lt;j2seproject3:debug classname=&quot;org.apache.tools.ant.taskdefs.optional.junit.JUnitTestRunner&quot; classpath=&quot;${ant.home}/lib/ant.jar:${ant.home}/lib/ant-junit.jar:${debug.test.classpath}&quot;&gt;
++            &lt;customize&gt;
++                &lt;syspropertyset&gt;
++                    &lt;propertyref prefix=&quot;test-sys-prop.&quot;/&gt;
++                    &lt;mapper from=&quot;test-sys-prop.*&quot; to=&quot;*&quot; type=&quot;glob&quot;/&gt;
++                &lt;/syspropertyset&gt;
++                &lt;arg value=&quot;${test.class}&quot;/&gt;
++                &lt;arg value=&quot;showoutput=true&quot;/&gt;
++                &lt;arg value=&quot;formatter=org.apache.tools.ant.taskdefs.optional.junit.BriefJUnitResultFormatter&quot;/&gt;
++                &lt;arg value=&quot;formatter=org.apache.tools.ant.taskdefs.optional.junit.XMLJUnitResultFormatter,${test.report.file}&quot;/&gt;
++            &lt;/customize&gt;
++        &lt;/j2seproject3:debug&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile-test&quot; if=&quot;netbeans.home+have.tests&quot; name=&quot;-debug-start-debugger-test&quot;&gt;
++        &lt;j2seproject1:nbjpdastart classpath=&quot;${debug.test.classpath}&quot; name=&quot;${test.class}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,-do-not-recompile,compile-test-single,-debug-start-debugger-test,-debug-start-debuggee-test&quot; name=&quot;debug-test&quot;/&gt;
++    &lt;target depends=&quot;init,-pre-debug-fix,compile-test-single&quot; if=&quot;netbeans.home&quot; name=&quot;-do-debug-fix-test&quot;&gt;
++        &lt;j2seproject1:nbjpdareload dir=&quot;${build.test.classes.dir}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,-pre-debug-fix,-do-debug-fix-test&quot; if=&quot;netbeans.home&quot; name=&quot;debug-fix-test&quot;/&gt;
++    &lt;!--
++                =========================
++                APPLET EXECUTION SECTION
++                =========================
++            --&gt;
++    &lt;target depends=&quot;init,compile-single&quot; name=&quot;run-applet&quot;&gt;
++        &lt;fail unless=&quot;applet.url&quot;&gt;Must select one file in the IDE or set applet.url&lt;/fail&gt;
++        &lt;j2seproject1:java classname=&quot;sun.applet.AppletViewer&quot;&gt;
++            &lt;customize&gt;
++                &lt;arg value=&quot;${applet.url}&quot;/&gt;
++            &lt;/customize&gt;
++        &lt;/j2seproject1:java&gt;
++    &lt;/target&gt;
++    &lt;!--
++                =========================
++                APPLET DEBUGGING  SECTION
++                =========================
++            --&gt;
++    &lt;target depends=&quot;init,compile-single&quot; if=&quot;netbeans.home&quot; name=&quot;-debug-start-debuggee-applet&quot;&gt;
++        &lt;fail unless=&quot;applet.url&quot;&gt;Must select one file in the IDE or set applet.url&lt;/fail&gt;
++        &lt;j2seproject3:debug classname=&quot;sun.applet.AppletViewer&quot;&gt;
++            &lt;customize&gt;
++                &lt;arg value=&quot;${applet.url}&quot;/&gt;
++            &lt;/customize&gt;
++        &lt;/j2seproject3:debug&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,compile-single,-debug-start-debugger,-debug-start-debuggee-applet&quot; if=&quot;netbeans.home&quot; name=&quot;debug-applet&quot;/&gt;
++    &lt;!--
++                ===============
++                CLEANUP SECTION
++                ===============
++            --&gt;
++    &lt;target depends=&quot;init&quot; name=&quot;deps-clean&quot; unless=&quot;no.deps&quot;/&gt;
++    &lt;target depends=&quot;init&quot; name=&quot;-do-clean&quot;&gt;
++        &lt;delete dir=&quot;${build.dir}&quot;/&gt;
++        &lt;delete dir=&quot;${dist.dir}&quot;/&gt;
++    &lt;/target&gt;
++    &lt;target name=&quot;-post-clean&quot;&gt;
++        &lt;!-- Empty placeholder for easier customization. --&gt;
++        &lt;!-- You can override this target in the ../build.xml file. --&gt;
++    &lt;/target&gt;
++    &lt;target depends=&quot;init,deps-clean,-do-clean,-post-clean&quot; description=&quot;Clean build products.&quot; name=&quot;clean&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/spikes/CRC/nbproject/genfiles.properties
+===================================================================
+--- trunk/spikes/CRC/nbproject/genfiles.properties	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/spikes/CRC/nbproject/genfiles.properties	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=4cb74541
++build.xml.script.CRC32=3bc26d61
++build.xml.stylesheet.CRC32=be360661
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=4cb74541
++nbproject/build-impl.xml.script.CRC32=f95d325b
++nbproject/build-impl.xml.stylesheet.CRC32=487672f9
+
+Added: trunk/spikes/CRC/nbproject/project.properties
+===================================================================
+--- trunk/spikes/CRC/nbproject/project.properties	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/spikes/CRC/nbproject/project.properties	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,63 @@
++build.classes.dir=${build.dir}/classes
++build.classes.excludes=**/*.java,**/*.form
++# This directory is removed when the project is cleaned:
++build.dir=build
++build.generated.dir=${build.dir}/generated
++# Only compile against the classpath explicitly listed here:
++build.sysclasspath=ignore
++build.test.classes.dir=${build.dir}/test/classes
++build.test.results.dir=${build.dir}/test/results
++debug.classpath=\
++    ${run.classpath}
++debug.test.classpath=\
++    ${run.test.classpath}
++# This directory is removed when the project is cleaned:
++dist.dir=dist
++dist.jar=${dist.dir}/CRC.jar
++dist.javadoc.dir=${dist.dir}/javadoc
++excludes=
++file.reference.CRC-fastmd5=C:\\System\\Working\\MyProjects\\JFindMyFiles\\spikes\\CRC\\fastmd5
++file.reference.jacksum.jar=C:\\System\\Working\\MyProjects\\JFindMyFiles\\spikes\\CRC\\jacksum.jar
++includes=**
++jar.compress=false
++javac.classpath=\
++    ${file.reference.jacksum.jar}:\
++    ${file.reference.CRC-fastmd5}
++# Space-separated list of extra javac options
++javac.compilerargs=
++javac.deprecation=false
++javac.source=1.5
++javac.target=1.5
++javac.test.classpath=\
++    ${javac.classpath}:\
++    ${build.classes.dir}:\
++    ${libs.junit.classpath}:\
++    ${libs.junit_4.classpath}
++javadoc.additionalparam=
++javadoc.author=false
++javadoc.encoding=${source.encoding}
++javadoc.noindex=false
++javadoc.nonavbar=false
++javadoc.notree=false
++javadoc.private=false
++javadoc.splitindex=true
++javadoc.use=true
++javadoc.version=false
++javadoc.windowtitle=
++main.class=
++manifest.file=manifest.mf
++meta.inf.dir=${src.dir}/META-INF
++platform.active=default_platform
++run.classpath=\
++    ${javac.classpath}:\
++    ${build.classes.dir}
++# Space-separated list of JVM arguments used when running the project
++# (you may also define separate properties like run-sys-prop.name=value instead of -Dname=value
++# or test-sys-prop.name=value to set system properties for unit tests):
++run.jvmargs=
++run.test.classpath=\
++    ${javac.test.classpath}:\
++    ${build.test.classes.dir}
++source.encoding=UTF-8
++src.dir=src
++test.src.dir=test
+
+Added: trunk/spikes/CRC/nbproject/project.xml
+===================================================================
+--- trunk/spikes/CRC/nbproject/project.xml	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/spikes/CRC/nbproject/project.xml	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,16 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.java.j2seproject&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/j2se-project/3">http://www.netbeans.org/ns/j2se-project/3</A>&quot;&gt;
++            &lt;name&gt;CRC&lt;/name&gt;
++            &lt;minimum-ant-version&gt;1.6.5&lt;/minimum-ant-version&gt;
++            &lt;source-roots&gt;
++                &lt;root id=&quot;src.dir&quot;/&gt;
++            &lt;/source-roots&gt;
++            &lt;test-roots&gt;
++                &lt;root id=&quot;test.src.dir&quot;/&gt;
++            &lt;/test-roots&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: trunk/spikes/CRC/src/crc/JackSumHashing.java
+===================================================================
+--- trunk/spikes/CRC/src/crc/JackSumHashing.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/spikes/CRC/src/crc/JackSumHashing.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,43 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package crc;
++
++import java.io.IOException;
++import java.security.NoSuchAlgorithmException;
++import jonelo.jacksum.JacksumAPI;
++import jonelo.jacksum.algorithm.AbstractChecksum;
++
++/**
++ *
++ * @author Knitter
++ */
++public class JackSumHashing {
++
++    public static void main(String[] args) {
++        new JackSumHashing().runnMD5();
++    }
++
++    public void runnMD5() {
++        AbstractChecksum checksum = null;
++        try {
++            // select an algorithm (md5 in this case)
++            checksum = JacksumAPI.getChecksumInstance(&quot;md5&quot;);
++        // On some systems you get a better performance for particular
++        // algorithms if you select an alternate algorithm (see also option -A)
++        // checksum = JacksumAPI.getChecksumInstance(&quot;md5&quot;, true);
++        } catch (NoSuchAlgorithmException nsae) {
++            // algorithm doesn't exist
++            nsae.printStackTrace();
++        }
++
++        // updates the checksum with the content of a file
++        try {
++            checksum.readFile(&quot;C:\\System\\Working\\MyProjects\\JFindMyFiles\\docs\\TODO&quot;);
++        } catch (IOException ioe) {
++            ioe.printStackTrace();
++        }
++        System.out.println(checksum);
++    }
++}
+
+Added: trunk/spikes/CRC/src/crc/MD5Hashing.java
+===================================================================
+--- trunk/spikes/CRC/src/crc/MD5Hashing.java	2008-06-05 16:35:06 UTC (rev 131)
++++ trunk/spikes/CRC/src/crc/MD5Hashing.java	2008-06-06 01:32:53 UTC (rev 132)
+@@ -0,0 +1,31 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package crc;
++
++import com.twmacinta.util.MD5;
++import java.io.File;
++import java.io.IOException;
++import java.util.logging.Level;
++import java.util.logging.Logger;
++
++/**
++ *
++ * @author Knitter
++ */
++public class MD5Hashing {
++    
++    public static void main(String[] args) {
++        new MD5Hashing().runnMD5();
++    }
++
++    public void runnMD5() {
++        try {
++            System.out.println(MD5.asHex(MD5.getHash(new File(&quot;C:\\System\\Working\\MyProjects\\JFindMyFiles\\docs\\TODO&quot;))));
++            //System.out.println(MD5.getHash(new File(&quot;C:\\System\\Working\\MyProjects\\JFindMyFiles\\docs\\TODO&quot;)));
++        } catch (IOException ex) {
++            Logger.getLogger(MD5Hashing.class.getName()).log(Level.SEVERE, null, ex);
++        }
++    }
++}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000126.html">[Jfindmyfiles-commits] r131 - in trunk: docs	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes
+</A></li>
+	<LI>Next message: <A HREF="000128.html">[Jfindmyfiles-commits] r133 - in trunk: media	project/JFindMyFiles/ImportEngine	project/JFindMyFiles/ImportEngine/nbproject	project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup	spikes/CRC spikes/CRC/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#127">[ date ]</a>
+              <a href="thread.html#127">[ thread ]</a>
+              <a href="subject.html#127">[ subject ]</a>
+              <a href="author.html#127">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r241 -	trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r241%20-%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils&In-Reply-To=%3C200807211741.m6LHfB3S004837%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000235.html">
+   <LINK REL="Next"  HREF="000237.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r241 -	trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils</H1>
+    <B>tica at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r241%20-%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils&In-Reply-To=%3C200807211741.m6LHfB3S004837%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r241 -	trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils">tica at mail.berlios.de
+       </A><BR>
+    <I>Mon Jul 21 19:41:11 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000235.html">[Jfindmyfiles-commits] r240 - in trunk/project/JFindMyFiles:	JFindMyFilesGui/test/unit/src JFindMyFilesGui/test/unit/src/de	JFindMyFilesGui/test/unit/src/de/berlios	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	ReadingFiles/test/unit/src ReadingFiles/test/unit/src/de	ReadingFiles/test/unit/src/de/berlios	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils
+</A></li>
+        <LI>Next message: <A HREF="000237.html">[Jfindmyfiles-commits] r242 -	trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#236">[ date ]</a>
+              <a href="thread.html#236">[ thread ]</a>
+              <a href="subject.html#236">[ subject ]</a>
+              <a href="author.html#236">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: tica
+Date: 2008-07-21 19:41:06 +0200 (Mon, 21 Jul 2008)
+New Revision: 241
+
+Modified:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtilsTest.java
+Log:
+elaborado teste ao GuiUtils 
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtilsTest.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtilsTest.java	2008-07-21 17:34:09 UTC (rev 240)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils/GuiUtilsTest.java	2008-07-21 17:41:06 UTC (rev 241)
+@@ -43,12 +43,12 @@
+     @Test
+     public void testFindIconForType() {
+         System.out.println(&quot;findIconForType&quot;);
+-        int type = 0;
+-        String expResult = &quot;&quot;;
++        int type = 2;
++        String expResult = &quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/icons/nodes/media-drive-optical.png&quot;;
+         String result = GuiUtils.findIconForType(type);
+         assertEquals(expResult, result);
+         // TODO review the generated test code and remove the default call to fail.
+-        fail(&quot;The test case is a prototype.&quot;);
++        //fail(&quot;The test case is a prototype.&quot;);
+     }
+ 
+ }
+\ No newline at end of file
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000235.html">[Jfindmyfiles-commits] r240 - in trunk/project/JFindMyFiles:	JFindMyFilesGui/test/unit/src JFindMyFilesGui/test/unit/src/de	JFindMyFilesGui/test/unit/src/de/berlios	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui	JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	ReadingFiles/test/unit/src ReadingFiles/test/unit/src/de	ReadingFiles/test/unit/src/de/berlios	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles	ReadingFiles/test/unit/src/de/berlios/jfindmyfiles/readingfiles/utils
+</A></li>
+	<LI>Next message: <A HREF="000237.html">[Jfindmyfiles-commits] r242 -	trunk/project/JFindMyFiles/JFindMyFilesGui/test/unit/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#236">[ date ]</a>
+              <a href="thread.html#236">[ thread ]</a>
+              <a href="subject.html#236">[ subject ]</a>
+              <a href="author.html#236">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

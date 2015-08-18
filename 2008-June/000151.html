@@ -1,0 +1,203 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r156 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-June/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r156%20-%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes&In-Reply-To=%3C200806191750.m5JHogm9024113%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000150.html">
+   <LINK REL="Next"  HREF="000152.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r156 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r156%20-%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes&In-Reply-To=%3C200806191750.m5JHogm9024113%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r156 -	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu Jun 19 19:50:42 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000150.html">[Jfindmyfiles-commits] r155 - in trunk/docs: . Documentos Externos	Iteracao3-CB03
+</A></li>
+        <LI>Next message: <A HREF="000152.html">[Jfindmyfiles-commits] r157 - in trunk: docs docs/Base de Dados de	Teste media media/icons/x16 media/temp/x16	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#151">[ date ]</a>
+              <a href="thread.html#151">[ thread ]</a>
+              <a href="subject.html#151">[ subject ]</a>
+              <a href="author.html#151">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-06-19 19:50:37 +0200 (Thu, 19 Jun 2008)
+New Revision: 156
+
+Added:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskChildren.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java
+Modified:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+Log:
+Criadas classes e c?\195?\179digo para permitir ver na ?\195?\161rvore de navega?\195?\167?\195?\163o as pastas que existem nos projectos.
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskChildren.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskChildren.java	2008-06-19 17:46:02 UTC (rev 155)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskChildren.java	2008-06-19 17:50:37 UTC (rev 156)
+@@ -0,0 +1,65 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
++
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
++import java.util.LinkedList;
++import java.util.List;
++import org.hibernate.Session;
++import org.openide.nodes.Children;
++import org.openide.nodes.Node;
++import org.openide.util.Lookup;
++
++/**
++ *
++ * @author Knitter
++ */
++public class DiskChildren extends Children.Keys {
++
++    private Long parentId;
++    private List items;
++    private CatalogEngine eng;
++    private boolean isBase;
++
++    @SuppressWarnings(&quot;unchecked&quot;)
++    public DiskChildren(Long parentId, boolean isBase) {
++        this.parentId = parentId;
++        items = new LinkedList();
++        this.isBase = isBase;
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
++        Session s = eng.sessionFactory.getCurrentSession();
++        s.beginTransaction();
++        if (isBase) {
++            items.addAll(s.createQuery(&quot;from FileWrapper file where file.folder = ? and file.disk.id = ? and file.parent is null&quot;).setBoolean(0, true).setLong(1, parentId).list());
++        } else {
++            items.addAll(s.createQuery(&quot;from FileWrapper file where file.folder = ? and file.parent.id = ?&quot;).setBoolean(0, true).setLong(1, parentId).list());
++        }
++        s.getTransaction().commit();
++    }
++
++    @Override
++    @SuppressWarnings(&quot;unchecked&quot;)
++    protected void addNotify() {
++        List keys = items;
++        setKeys(keys);
++    }
++
++    @Override
++    @SuppressWarnings(&quot;unchecked&quot;)
++    protected Node[] createNodes(Object key) {
++        FileWrapper f = (FileWrapper) key;
++        Session s = eng.sessionFactory.getCurrentSession();
++        List rs = null;
++        s.beginTransaction();
++        if (f.isFolder()) {
++            rs = s.createQuery(&quot;from FileWrapper file where file.folder = ? and file.parent.id = ?&quot;).setBoolean(0, true).setLong(1, f.getId()).list();
++        }        
++        s.getTransaction().commit();
++
++        FileWrapperNode fwn = new FileWrapperNode((FileWrapper) key, rs.isEmpty());
++        return new Node[]{fwn};
++    }
++}
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-06-19 17:46:02 UTC (rev 155)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-06-19 17:50:37 UTC (rev 156)
+@@ -42,7 +42,7 @@
+     private Media media;
+ 
+     public DiskNode(Media media) {
+-        super(Children.LEAF);
++        super(new DiskChildren(media.getId(), true));
+         this.media = media;
+         setName(media.getName());
+ 
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java	2008-06-19 17:46:02 UTC (rev 155)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/FileWrapperNode.java	2008-06-19 17:50:37 UTC (rev 156)
+@@ -0,0 +1,39 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
++
++import de.berlios.jfindmyfiles.catalog.CatalogConstants;
++import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.utils.GuiUtils;
++import java.awt.Image;
++import org.openide.nodes.AbstractNode;
++import org.openide.nodes.Children;
++import org.openide.util.Utilities;
++
++/**
++ *
++ * @author Knitter
++ */
++public class FileWrapperNode extends AbstractNode {
++
++    private FileWrapper folder;
++    
++    public FileWrapperNode(FileWrapper folder, boolean leaf) {
++        super(leaf ? Children.LEAF : new DiskChildren(folder.getId(), false));
++        this.folder = folder;
++        setName(folder.getName());
++    }
++
++    @Override
++    public Image getIcon(int type) {
++        //return Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-media-drive-optical.png&quot;); // NOI18N
++        return Utilities.loadImage(GuiUtils.findIconForType(CatalogConstants.FOLDER)); // NOI18N
++    }
++
++    @Override
++    public Image getOpenedIcon(int type) {
++        return getIcon(type);
++    }    
++}
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000150.html">[Jfindmyfiles-commits] r155 - in trunk/docs: . Documentos Externos	Iteracao3-CB03
+</A></li>
+	<LI>Next message: <A HREF="000152.html">[Jfindmyfiles-commits] r157 - in trunk: docs docs/Base de Dados de	Teste media media/icons/x16 media/temp/x16	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/utils	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#151">[ date ]</a>
+              <a href="thread.html#151">[ thread ]</a>
+              <a href="subject.html#151">[ subject ]</a>
+              <a href="author.html#151">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

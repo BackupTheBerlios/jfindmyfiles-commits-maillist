@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r91 - in trunk/project/JFindMyFiles: .	HSQLDB HSQLDB/nbproject HSQLDB/release HSQLDB/release/modules	HSQLDB/release/modules/ext HSQLDB/src HSQLDB/src/de	HSQLDB/src/de/berlios HSQLDB/src/de/berlios/jfindmyfiles	HSQLDB/src/de/berlios/jfindmyfiles/hsqldb
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r91%20-%20in%20trunk/project/JFindMyFiles%3A%20.%0A%09HSQLDB%20HSQLDB/nbproject%20HSQLDB/release%20HSQLDB/release/modules%0A%09HSQLDB/release/modules/ext%20HSQLDB/src%20HSQLDB/src/de%0A%09HSQLDB/src/de/berlios%20HSQLDB/src/de/berlios/jfindmyfiles%0A%09HSQLDB/src/de/berlios/jfindmyfiles/hsqldb&In-Reply-To=%3C200805080043.m480hTXd032271%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000085.html">
+   <LINK REL="Next"  HREF="000087.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r91 - in trunk/project/JFindMyFiles: .	HSQLDB HSQLDB/nbproject HSQLDB/release HSQLDB/release/modules	HSQLDB/release/modules/ext HSQLDB/src HSQLDB/src/de	HSQLDB/src/de/berlios HSQLDB/src/de/berlios/jfindmyfiles	HSQLDB/src/de/berlios/jfindmyfiles/hsqldb</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r91%20-%20in%20trunk/project/JFindMyFiles%3A%20.%0A%09HSQLDB%20HSQLDB/nbproject%20HSQLDB/release%20HSQLDB/release/modules%0A%09HSQLDB/release/modules/ext%20HSQLDB/src%20HSQLDB/src/de%0A%09HSQLDB/src/de/berlios%20HSQLDB/src/de/berlios/jfindmyfiles%0A%09HSQLDB/src/de/berlios/jfindmyfiles/hsqldb&In-Reply-To=%3C200805080043.m480hTXd032271%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r91 - in trunk/project/JFindMyFiles: .	HSQLDB HSQLDB/nbproject HSQLDB/release HSQLDB/release/modules	HSQLDB/release/modules/ext HSQLDB/src HSQLDB/src/de	HSQLDB/src/de/berlios HSQLDB/src/de/berlios/jfindmyfiles	HSQLDB/src/de/berlios/jfindmyfiles/hsqldb">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu May  8 02:43:29 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000085.html">[Jfindmyfiles-commits] r90 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	. utils
+</A></li>
+        <LI>Next message: <A HREF="000087.html">[Jfindmyfiles-commits] r92 -	trunk/project/JFindMyFiles/Persistence/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#86">[ date ]</a>
+              <a href="thread.html#86">[ thread ]</a>
+              <a href="subject.html#86">[ subject ]</a>
+              <a href="author.html#86">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-08 02:43:23 +0200 (Thu, 08 May 2008)
+New Revision: 91
+
+Added:
+   trunk/project/JFindMyFiles/HSQLDB/
+   trunk/project/JFindMyFiles/HSQLDB/build.xml
+   trunk/project/JFindMyFiles/HSQLDB/manifest.mf
+   trunk/project/JFindMyFiles/HSQLDB/nbproject/
+   trunk/project/JFindMyFiles/HSQLDB/nbproject/build-impl.xml
+   trunk/project/JFindMyFiles/HSQLDB/nbproject/genfiles.properties
+   trunk/project/JFindMyFiles/HSQLDB/nbproject/project.properties
+   trunk/project/JFindMyFiles/HSQLDB/nbproject/project.xml
+   trunk/project/JFindMyFiles/HSQLDB/nbproject/suite.properties
+   trunk/project/JFindMyFiles/HSQLDB/release/
+   trunk/project/JFindMyFiles/HSQLDB/release/modules/
+   trunk/project/JFindMyFiles/HSQLDB/release/modules/ext/
+   trunk/project/JFindMyFiles/HSQLDB/release/modules/ext/hsqldb.jar
+   trunk/project/JFindMyFiles/HSQLDB/src/
+   trunk/project/JFindMyFiles/HSQLDB/src/de/
+   trunk/project/JFindMyFiles/HSQLDB/src/de/berlios/
+   trunk/project/JFindMyFiles/HSQLDB/src/de/berlios/jfindmyfiles/
+   trunk/project/JFindMyFiles/HSQLDB/src/de/berlios/jfindmyfiles/hsqldb/
+   trunk/project/JFindMyFiles/HSQLDB/src/de/berlios/jfindmyfiles/hsqldb/Bundle.properties
+Log:
+Novo m?\195?\179dulo com a biblioteca do HSQLDB.
+
+Added: trunk/project/JFindMyFiles/HSQLDB/build.xml
+===================================================================
+--- trunk/project/JFindMyFiles/HSQLDB/build.xml	2008-05-08 00:42:13 UTC (rev 90)
++++ trunk/project/JFindMyFiles/HSQLDB/build.xml	2008-05-08 00:43:23 UTC (rev 91)
+@@ -0,0 +1,8 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!-- You may freely edit this file. See harness/README in the NetBeans platform --&gt;
++&lt;!-- for some information on what you could do (e.g. targets to override). --&gt;
++&lt;!-- If you delete this file and reopen the project it will be recreated. --&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.hsqldb&quot; default=&quot;netbeans&quot; basedir=&quot;.&quot;&gt;
++    &lt;description&gt;Builds, tests, and runs the project de.berlios.jfindmyfiles.hsqldb.&lt;/description&gt;
++    &lt;import file=&quot;nbproject/build-impl.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/HSQLDB/manifest.mf
+===================================================================
+--- trunk/project/JFindMyFiles/HSQLDB/manifest.mf	2008-05-08 00:42:13 UTC (rev 90)
++++ trunk/project/JFindMyFiles/HSQLDB/manifest.mf	2008-05-08 00:43:23 UTC (rev 91)
+@@ -0,0 +1,5 @@
++Manifest-Version: 1.0
++OpenIDE-Module: de.berlios.jfindmyfiles.hsqldb
++OpenIDE-Module-Localizing-Bundle: de/berlios/jfindmyfiles/hsqldb/Bundle.properties
++OpenIDE-Module-Specification-Version: 1.0
++
+
+Added: trunk/project/JFindMyFiles/HSQLDB/nbproject/build-impl.xml
+===================================================================
+--- trunk/project/JFindMyFiles/HSQLDB/nbproject/build-impl.xml	2008-05-08 00:42:13 UTC (rev 90)
++++ trunk/project/JFindMyFiles/HSQLDB/nbproject/build-impl.xml	2008-05-08 00:43:23 UTC (rev 91)
+@@ -0,0 +1,30 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++*** GENERATED FROM project.xml - DO NOT EDIT  ***
++***         EDIT ../build.xml INSTEAD         ***
++--&gt;
++&lt;project name=&quot;de.berlios.jfindmyfiles.hsqldb-impl&quot; basedir=&quot;..&quot;&gt;
++    &lt;property file=&quot;nbproject/private/suite-private.properties&quot;/&gt;
++    &lt;property file=&quot;nbproject/suite.properties&quot;/&gt;
++    &lt;fail unless=&quot;suite.dir&quot;&gt;You must set 'suite.dir' to point to your containing module suite&lt;/fail&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/private/platform-private.properties&quot;/&gt;
++    &lt;property file=&quot;${suite.dir}/nbproject/platform.properties&quot;/&gt;
++    &lt;macrodef name=&quot;property&quot; uri=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;&gt;
++        &lt;attribute name=&quot;name&quot;/&gt;
++        &lt;attribute name=&quot;value&quot;/&gt;
++        &lt;sequential&gt;
++            &lt;property name=&quot;@{name}&quot; value=&quot;${@{value}}&quot;/&gt;
++        &lt;/sequential&gt;
++    &lt;/macrodef&gt;
++    &lt;property file=&quot;${user.properties.file}&quot;/&gt;
++    &lt;nbmproject2:property name=&quot;harness.dir&quot; value=&quot;nbplatform.${nbplatform.active}.harness.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
++    &lt;nbmproject2:property name=&quot;netbeans.dest.dir&quot; value=&quot;nbplatform.${nbplatform.active}.netbeans.dest.dir&quot; xmlns:nbmproject2=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/2">http://www.netbeans.org/ns/nb-module-project/2</A>&quot;/&gt;
++    &lt;fail message=&quot;You must define 'nbplatform.${nbplatform.active}.harness.dir'&quot;&gt;
++        &lt;condition&gt;
++            &lt;not&gt;
++                &lt;available file=&quot;${harness.dir}&quot; type=&quot;dir&quot;/&gt;
++            &lt;/not&gt;
++        &lt;/condition&gt;
++    &lt;/fail&gt;
++    &lt;import file=&quot;${harness.dir}/build.xml&quot;/&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/HSQLDB/nbproject/genfiles.properties
+===================================================================
+--- trunk/project/JFindMyFiles/HSQLDB/nbproject/genfiles.properties	2008-05-08 00:42:13 UTC (rev 90)
++++ trunk/project/JFindMyFiles/HSQLDB/nbproject/genfiles.properties	2008-05-08 00:43:23 UTC (rev 91)
+@@ -0,0 +1,8 @@
++build.xml.data.CRC32=47a92399
++build.xml.script.CRC32=222a7daa
++build.xml.stylesheet.CRC32=79c3b980
++# This file is used by a NetBeans-based IDE to track changes in generated files such as build-impl.xml.
++# Do not edit this file. You may delete it but then the IDE will never regenerate such files for you.
++nbproject/build-impl.xml.data.CRC32=47a92399
++nbproject/build-impl.xml.script.CRC32=48fbd900
++nbproject/build-impl.xml.stylesheet.CRC32=deb65f65
+
+Added: trunk/project/JFindMyFiles/HSQLDB/nbproject/project.properties
+===================================================================
+--- trunk/project/JFindMyFiles/HSQLDB/nbproject/project.properties	2008-05-08 00:42:13 UTC (rev 90)
++++ trunk/project/JFindMyFiles/HSQLDB/nbproject/project.properties	2008-05-08 00:43:23 UTC (rev 91)
+@@ -0,0 +1 @@
++is.autoload=true
+
+Added: trunk/project/JFindMyFiles/HSQLDB/nbproject/project.xml
+===================================================================
+--- trunk/project/JFindMyFiles/HSQLDB/nbproject/project.xml	2008-05-08 00:42:13 UTC (rev 90)
++++ trunk/project/JFindMyFiles/HSQLDB/nbproject/project.xml	2008-05-08 00:43:23 UTC (rev 91)
+@@ -0,0 +1,29 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;project xmlns=&quot;<A HREF="http://www.netbeans.org/ns/project/1">http://www.netbeans.org/ns/project/1</A>&quot;&gt;
++    &lt;type&gt;org.netbeans.modules.apisupport.project&lt;/type&gt;
++    &lt;configuration&gt;
++        &lt;data xmlns=&quot;<A HREF="http://www.netbeans.org/ns/nb-module-project/3">http://www.netbeans.org/ns/nb-module-project/3</A>&quot;&gt;
++            &lt;code-name-base&gt;de.berlios.jfindmyfiles.hsqldb&lt;/code-name-base&gt;
++            &lt;suite-component/&gt;
++            &lt;module-dependencies/&gt;
++            &lt;public-packages&gt;
++                &lt;package&gt;org.hsqldb&lt;/package&gt;
++                &lt;package&gt;org.hsqldb.index&lt;/package&gt;
++                &lt;package&gt;org.hsqldb.jdbc&lt;/package&gt;
++                &lt;package&gt;org.hsqldb.lib&lt;/package&gt;
++                &lt;package&gt;org.hsqldb.lib.java&lt;/package&gt;
++                &lt;package&gt;org.hsqldb.persist&lt;/package&gt;
++                &lt;package&gt;org.hsqldb.resources&lt;/package&gt;
++                &lt;package&gt;org.hsqldb.rowio&lt;/package&gt;
++                &lt;package&gt;org.hsqldb.scriptio&lt;/package&gt;
++                &lt;package&gt;org.hsqldb.store&lt;/package&gt;
++                &lt;package&gt;org.hsqldb.types&lt;/package&gt;
++                &lt;package&gt;org.hsqldb.util&lt;/package&gt;
++            &lt;/public-packages&gt;
++            &lt;class-path-extension&gt;
++                &lt;runtime-relative-path&gt;ext/hsqldb.jar&lt;/runtime-relative-path&gt;
++                &lt;binary-origin&gt;release/modules/ext/hsqldb.jar&lt;/binary-origin&gt;
++            &lt;/class-path-extension&gt;
++        &lt;/data&gt;
++    &lt;/configuration&gt;
++&lt;/project&gt;
+
+Added: trunk/project/JFindMyFiles/HSQLDB/nbproject/suite.properties
+===================================================================
+--- trunk/project/JFindMyFiles/HSQLDB/nbproject/suite.properties	2008-05-08 00:42:13 UTC (rev 90)
++++ trunk/project/JFindMyFiles/HSQLDB/nbproject/suite.properties	2008-05-08 00:43:23 UTC (rev 91)
+@@ -0,0 +1 @@
++suite.dir=${basedir}/..
+
+Added: trunk/project/JFindMyFiles/HSQLDB/release/modules/ext/hsqldb.jar
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/HSQLDB/release/modules/ext/hsqldb.jar
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Added: trunk/project/JFindMyFiles/HSQLDB/src/de/berlios/jfindmyfiles/hsqldb/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/HSQLDB/src/de/berlios/jfindmyfiles/hsqldb/Bundle.properties	2008-05-08 00:42:13 UTC (rev 90)
++++ trunk/project/JFindMyFiles/HSQLDB/src/de/berlios/jfindmyfiles/hsqldb/Bundle.properties	2008-05-08 00:43:23 UTC (rev 91)
+@@ -0,0 +1 @@
++OpenIDE-Module-Name=HSQLDB
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000085.html">[Jfindmyfiles-commits] r90 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	. utils
+</A></li>
+	<LI>Next message: <A HREF="000087.html">[Jfindmyfiles-commits] r92 -	trunk/project/JFindMyFiles/Persistence/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#86">[ date ]</a>
+              <a href="thread.html#86">[ thread ]</a>
+              <a href="subject.html#86">[ subject ]</a>
+              <a href="author.html#86">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

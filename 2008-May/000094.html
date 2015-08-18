@@ -1,0 +1,1878 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r99 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r99%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles&In-Reply-To=%3C200805081733.m48HXo3W027924%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000093.html">
+   <LINK REL="Next"  HREF="000095.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r99 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r99%20-%20in%20trunk/project/JFindMyFiles%3A%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09Catalog/src/de/berlios/jfindmyfiles/catalog/entities%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions%0A%09JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles&In-Reply-To=%3C200805081733.m48HXo3W027924%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r99 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu May  8 19:33:50 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000093.html">[Jfindmyfiles-commits] r98 - in trunk: media/icons media/icons/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	spikes/SPKlerDados/nbproject
+</A></li>
+        <LI>Next message: <A HREF="000095.html">[Jfindmyfiles-commits] r100 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	entitymanagers utils
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#94">[ date ]</a>
+              <a href="thread.html#94">[ thread ]</a>
+              <a href="subject.html#94">[ subject ]</a>
+              <a href="author.html#94">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-08 19:33:35 +0200 (Thu, 08 May 2008)
+New Revision: 99
+
+Removed:
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Ficheiro.java
+Modified:
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java
+Log:
+Implementados m?\195?\169todos equals, hashcode e toString de acordo com as recomenda?\195?\167?\195?\181es para o uso de Hibernate.
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -7,9 +7,8 @@
+ import de.berlios.jfindmyfiles.catalog.entities.*;
+ import de.berlios.jfindmyfiles.catalog.utils.ConnectionManager;
+ import java.io.File;
+-import java.util.Set;
++import java.util.List;
+ import java.util.Stack;
+-import java.util.zip.CRC32;
+ import org.hibernate.Session;
+ 
+ /**
+@@ -17,127 +16,148 @@
+  * @author ei10635
+  */
+ public class CatalogEngine {
+-    
+-    private static int count = 0;
+ 
++    Session hSession;
++
++    public CatalogEngine() {
++        //hSession = ConnectionManager.getSessionFactory().getCurrentSession();
++    }
++
+     public void runtest(boolean store) {
+-        Session session = ConnectionManager.getSessionFactory().getCurrentSession();
+-        session.beginTransaction();
++        hSession = ConnectionManager.getSessionFactory().getCurrentSession();
++        hSession.beginTransaction();
+ 
+-        Label l = new Label();
+-        l.setName(&quot;uma label&quot; + ++count);
+-        session.save(l);
++        User u1 = new User();
++        u1.setFirstname(&quot;user&quot;);
++        u1.setSurname(&quot;1&quot;);
++        hSession.save(u1);
+ 
+-        session.getTransaction().commit();
+-        ConnectionManager.getSessionFactory().close();
++        User u2 = new User();
++        u2.setFirstname(&quot;user&quot;);
++        u2.setSurname(&quot;2&quot;);
++        hSession.save(u2);
++
++        User u3 = new User();
++        u3.setFirstname(&quot;user&quot;);
++        u3.setSurname(&quot;3&quot;);
++        hSession.save(u3);
++
++
++        User u4 = new User();
++        u4.setFirstname(&quot;user&quot;);
++        u4.setSurname(&quot;4&quot;);
++        hSession.save(u4);
++
++        User u5 = new User();
++        u5.setFirstname(&quot;user&quot;);
++        u5.setSurname(&quot;5&quot;);
++        hSession.save(u5);
++        hSession.getTransaction().commit();
+     }
+-    
+-    public void addDiskGroup(String name, String description, DiskGroup parent) {      
++
++    public void addDiskGroup(String name, String description, DiskGroup parent) {
+     }
+-    
+-    public void addLabel(String name) {        
++
++    public void addLabel(String name) {
+     }
+-    
+-    public void removeLabel(Label label) {        
++
++    public void removeLabel(Label label) {
+     }
+-    
+-    public void addUser(String firstname, String surname) {        
++
++    public void addUser(String firstname, String surname) {
+     }
+-    
+-    public void removeUser(User user) {        
++
++    public void removeUser(User user) {
+     }
+-    
+-    public Set getLabels() {
+-        return null;
++
++    public List getLabels() {//TODO: validate session states
++        hSession = ConnectionManager.getSessionFactory().getCurrentSession();
++        hSession.beginTransaction();
++        List rs = hSession.createQuery(&quot;from User&quot;).list();
++        hSession.getTransaction().commit();
++        return rs;
+     }
+-    
+-    public Set getUsers() {
+-        return null;
++
++    public List getUsers() {//TODO: validate session states
++        hSession = ConnectionManager.getSessionFactory().getCurrentSession();
++        hSession.beginTransaction();
++        List rs = hSession.createQuery(&quot;from User&quot;).list();
++        hSession.getTransaction().commit();
++        return rs;
+     }
+-    
+-    public Set getDiskGroups() {
+-        return null;
++
++    public List getDiskGroups() {//TODO: validate session states
++        hSession = ConnectionManager.getSessionFactory().getCurrentSession();
++        hSession.beginTransaction();
++        List rs = hSession.createQuery(&quot;from DiskGRoup&quot;).list();
++        hSession.getTransaction().commit();
++        return rs;
+     }
+-    
+-    public void readDisk(File file) {
+-    }
+-    
+-    private long calculateFileSize(File f) {
+-        Stack&lt;File&gt; dados = new Stack&lt;File&gt;();
+-        File temp;
+-        long size = 0L;
+-        dados.push(f);
+-        while (!dados.empty()) {
+-            temp = dados.pop();
+-            if (temp.isDirectory()) {
+-                File[] list = temp.listFiles();
+-                if (list != null) {
+-                    for (int i = list.length; i-- &gt; 0;) {
+-                        if (list[i].isDirectory()) {
+-                            dados.push(list[i]);
++
++    public void readDisk(File file, Media container) {
++        Stack&lt;File&gt; directories = new Stack&lt;File&gt;();
++        File current, listing[];
++        long totalSize = 0L, childSize = 0L;
++        FileWrapper fw, child;
++        int z;
++
++        if (file.isDirectory()) {//NOTE: this protections may be dropped
++            fw = new FileWrapper(file.getName(),
++                    file.getAbsolutePath(), 0, file.isFile(), file.isHidden(),
++                    file.lastModified(), container, null);
++
++            if ((listing = file.listFiles()) != null) {
++                for (z = listing.length; z-- &gt; 0;) {
++                    if (listing[z].isDirectory()) {
++                        directories.push(listing[z]);
++                    } else {
++                        totalSize += listing[z].length();
++                        fw.addChild(new FileWrapper(listing[z].getName(),
++                                listing[z].getAbsolutePath(),
++                                listing[z].length(), listing[z].isFile(),
++                                listing[z].isHidden(),
++                                listing[z].lastModified(), container, fw));
++                    }
++                }
++            }
++
++            while (!directories.empty()) {
++                current = directories.pop();
++                childSize = 0;
++                child = new FileWrapper(current.getName(),
++                        current.getAbsolutePath(), 0, current.isFile(),
++                        current.isHidden(), current.lastModified(),
++                        container, null);
++
++                if ((listing = current.listFiles()) != null) {
++                    for (z = listing.length; z-- &gt; 0;) {
++                        if (listing[z].isDirectory()) {
++                            directories.push(listing[z]);
+                         } else {
+-                            size += list[i].length();
++                            childSize += listing[z].length();
++                            child.addChild(new FileWrapper(listing[z].getName(),
++                                    listing[z].getAbsolutePath(),
++                                    listing[z].length(), listing[z].isFile(),
++                                    listing[z].isHidden(),
++                                    listing[z].lastModified(), container, fw));
+                         }
+                     }
+                 }
++                child.setSize(childSize);
+             }
++            fw.setSize(totalSize);
+         }
+-        return size;
+     }
+-    /*    
+-    private void pesquisar(String origem) {
+-        File f = new File(origem);
+-        long totalSize = 0L;
+-        StringBuffer aux = new StringBuffer(700);
+-        String tempo;
+-        long tmp6 = 0L, tmp7 = 0L;
+-        if (jchkListFirst.isSelected()) {
+-            long tmp1 = System.currentTimeMillis();
+-            totalSize = calculateFolderSizeListFirst(f);
+-            long tmp2 = System.currentTimeMillis();
+-            tempo = &quot;Tempo 1: &quot; + tmp1 + &quot;/&quot; + tmp2 + &quot;: &quot; + (tmp2 - tmp1);
+-        } else {
+-            long tmp1 = System.currentTimeMillis();
+-            totalSize = calculateFolderSize(f);
+-            long tmp2 = System.currentTimeMillis();
+-            tempo = &quot;Tempo 1: &quot; + tmp1 + &quot;/&quot; + tmp2 + &quot;: &quot; + (tmp2 - tmp1);
+-        }
+ 
+-
+-        aux.append(&quot;Nome: &quot; + f.getName() + &quot;\n&quot;);
+-        aux.append(&quot;Caminho: &quot; + f.getPath() + &quot;\n&quot;);
+-        aux.append(&quot;Caminho absoluto: &quot; + f.getAbsolutePath() + &quot;\n&quot;);
+-        aux.append(&quot;Tamanho: &quot; + totalSize + &quot; bytes\n&quot;);
+-        aux.append(&quot;Modificado em: &quot; + f.lastModified() + &quot;\n&quot;);
+-        aux.append(&quot;--------------------------\n\n&quot;);
+-
+-        if (!jchkSizeOnly.isSelected()) {
+-            Vector&lt;File&gt; list = new Vector&lt;File&gt;(100);
+-
+-            tmp6 = System.currentTimeMillis();
+-            listAllFiles(f, list);
+-            for (File f2 : list) {
+-                aux.append(&quot;Nome: &quot; + f2.getName() + &quot;\n&quot;);
+-                aux.append(&quot;Caminho: &quot; + f2.getPath() + &quot;\n&quot;);
+-                aux.append(&quot;Caminho absoluto: &quot; + f2.getAbsolutePath() + &quot;\n&quot;);
+-                if (!f2.isDirectory()) {
+-                    aux.append(&quot;Tamanho: &quot; + f2.length() + &quot; bytes\n&quot;);
+-                    aux.append(&quot;Extens&#227;o: &quot; + findExtension(f2) + &quot;\n&quot;);
+-                }
+-                aux.append(&quot;Modificado em: &quot; + f2.lastModified() + &quot;\n&quot;);
+-                aux.append(&quot;Oculto: &quot; + (f2.isHidden() ? &quot;Sim&quot; : &quot;N&#227;o&quot;) + &quot;\n&quot;);
+-                aux.append(&quot;--------------------------\n\n&quot;);
+-            }
+-            tmp7 = System.currentTimeMillis();
++    /**
++     * In overriding the finalize method we try to garantee that data is 
++     * flushed and all resources are released.
++     */
++    @Override
++    public void finalize() {
++        if (hSession != null &amp;&amp; hSession.isOpen()) {
++            //hSession.flush();hSession.clear();
++            hSession.close();
+         }
+-        aux.append(&quot;Tempos:\n&quot;);
+-        aux.append(tempo + &quot;\n&quot;);
+-        aux.append(&quot;Tempo 2: &quot; + tmp6 + &quot;-&quot; + tmp7 + &quot;: &quot; + (tmp7 - tmp6) + &quot;\n&quot;);
+-
+-        //Get user info:
+-        aux.append(&quot;Java: &quot; + System.getProperty(&quot;java.vendor&quot;) + &quot; &quot; + System.getProperty(&quot;java.vm.name&quot;) + &quot; &quot; + System.getProperty(&quot;java.specification.version&quot;) + &quot;(&quot; + System.getProperty(&quot;java.version&quot;) + &quot; &quot; + System.getProperty(&quot;java.vm.version&quot;) + &quot;)\n&quot;);
+-        aux.append(&quot;SO: &quot; + System.getProperty(&quot;os.name&quot;) + &quot; &quot; + System.getProperty(&quot;os.arch&quot;) + &quot; &quot; + System.getProperty(&quot;os.version&quot;) + &quot;\n&quot;);
+-        jtaresults.setText(aux.toString());
+-
+-    }*/    
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/AudioData.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -2,7 +2,6 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
+ /**
+@@ -10,11 +9,11 @@
+  * @author ei10635
+  */
+ public class AudioData {
+-    
++
+     private Long id;
+     private FileWrapper owner;
+     private byte[] data;
+-    
++
+     public Long getId() {
+         return id;
+     }
+@@ -30,13 +29,55 @@
+     public void setOwner(FileWrapper owner) {
+         this.owner = owner;
+     }
+-    
++
+     public byte[] getData() {
+         return data;
+     }
+-    
++
+     public void setData(byte[] data) {
+         this.data = data;
+     }
+ 
++    /**
++     * Equals method doesn't take into account the id of the object. Hibernate 
++     * only gives an id to a new object when that object is persisted, it is 
++     * therefor not possible to use the id attribute.
++     * 
++     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
++     * @param obj the object to compare
++     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
++     */
++    @Override
++    public boolean equals(Object obj) {
++        if(this == obj) {
++            return true;
++        }
++        
++        if (!(obj instanceof AudioData)) {
++            return false;
++        }
++
++        AudioData other = (AudioData) obj;
++        return owner.equals(other.owner) &amp;&amp; data.length == other.data.length &amp;&amp; data == other.data;
++    }
++
++    //TODO: link for the equals method
++    /**
++     * HashCode for this object, excluding the id field.
++     * @return integer representing the hashcode
++     * 
++     * @see equals
++     */
++    @Override
++    public int hashCode() {
++        int hash = 5;
++        hash = 83 * hash + (this.owner != null ? this.owner.hashCode() : 0);
++        hash = 83 * hash + (this.data != null ? this.data.hashCode() : 0);
++        return hash;
++    }
++    
++    @Override
++    public String toString() {
++        return super.toString() + &quot; &quot; + data.length;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/DiskGroup.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -4,6 +4,7 @@
+  */
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
++import java.security.acl.Owner;
+ import java.util.Set;
+ 
+ /**
+@@ -17,7 +18,7 @@
+     private String description;
+     private Set groups;
+     private DiskGroup parent;
+-    
++
+     public String getDescription() {
+         return description;
+     }
+@@ -49,12 +50,58 @@
+     public void setName(String name) {
+         this.name = name;
+     }
+-    
++
+     public DiskGroup getParent() {
+         return parent;
+     }
+-    
++
+     public void setParent(DiskGroup parent) {
+         this.parent = parent;
+     }
++
++    /**
++     * Equals method doesn't take into account the id of the object. Hibernate 
++     * only gives an id to a new object when that object is persisted, it is 
++     * therefor not possible to use the id attribute.
++     * 
++     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
++     * @param obj the object to compare
++     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
++     */
++    @Override
++    public boolean equals(Object obj) {
++        if(this == obj) {
++            return true;
++        }
++        
++        if (!(obj instanceof DiskGroup)) {
++            return false;
++        }
++
++        DiskGroup other = (DiskGroup) obj;
++        return name.equals(other.name) &amp;&amp; description.equals(other.description) &amp;&amp; parent.equals(other.parent);
++    }
++
++    //TODO: link for the equals method
++    /**
++     * HashCode for this object, excluding the id field.
++     * @return integer representing the hashcode
++     * 
++     * @see equals
++     */
++    @Override
++    public int hashCode() {
++        int hash = 3;
++        hash = 83 * hash + (this.name != null ? this.name.hashCode() : 0);
++        hash = 83 * hash + (this.description != null ? this.description.hashCode()
++                : 0);
++        hash = 83 * hash + (this.parent != null ? this.parent.hashCode() : 0);
++        return hash;
++    }
++
++    @Override
++    public String toString() {
++        return super.toString() + &quot; &quot; + name + &quot; &quot; + description + &quot; &quot; +
++                parent.toString();
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/FileWrapper.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -2,9 +2,9 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
++import java.util.LinkedHashSet;
+ import java.util.Set;
+ 
+ /**
+@@ -12,7 +12,7 @@
+  * @author ei10635
+  */
+ public class FileWrapper {
+-    
++
+     private Long id;
+     private Media disk;
+     private long size;
+@@ -22,13 +22,45 @@
+     private String absolutePath;
+     private boolean hidden;
+     private long lastModified;
+-    private Set children;
++    private Set children = new LinkedHashSet();
+     private FileWrapper parent;
+     private String description;
+     private ImageData image;
+     private VideoData video;
+     private AudioData audio;
+ 
++    public FileWrapper() {
++        //do nothing
++    }
++
++    public FileWrapper(String name, String absolutePath, long size,
++            boolean file, boolean hidden, long lastModified, Media disk,
++            FileWrapper parent) {
++        this.name = name;
++        this.absolutePath = absolutePath;
++        this.size = size;
++        this.folder = !(this.file = file);
++        this.hidden = hidden;
++        this.lastModified = lastModified;
++        this.disk = disk;
++        this.parent = parent;
++    }
++
++    public void addChild(FileWrapper child) {
++        if (children == null) {
++            children = new LinkedHashSet();
++        }
++
++        children.add(child);
++
++    }
++
++    public void removeChild(FileWrapper child) {
++        if (children != null) {
++            children.remove(child);
++        }
++    }
++
+     public String getAbsolutePath() {
+         return absolutePath;
+     }
+@@ -36,11 +68,11 @@
+     public void setAbsolutePath(String absolutePath) {
+         this.absolutePath = absolutePath;
+     }
+-    
++
+     public AudioData getAudio() {
+         return audio;
+     }
+-    
++
+     public void setAudio(AudioData audio) {
+         this.audio = audio;
+     }
+@@ -100,7 +132,7 @@
+     private void setId(Long id) {
+         this.id = id;
+     }
+-    
++
+     public ImageData getImage() {
+         return image;
+     }
+@@ -108,7 +140,7 @@
+     public void setImage(ImageData image) {
+         this.image = image;
+     }
+-    
++
+     public long getLastModified() {
+         return lastModified;
+     }
+@@ -140,12 +172,56 @@
+     public void setSize(long size) {
+         this.size = size;
+     }
+-    
++
+     public VideoData getVideo() {
+         return video;
+     }
+-    
++
+     public void setVideo(VideoData video) {
+         this.video = video;
+     }
++
++    /**
++     * Equals method doesn't take into account the id of the object. Hibernate 
++     * only gives an id to a new object when that object is persisted, it is 
++     * therefor not possible to use the id attribute.
++     * 
++     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
++     * @param obj the object to compare
++     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
++     */
++    @Override
++    public boolean equals(Object obj) {
++        if(this == obj) {
++            return true;
++        }
++        
++        if (!(obj instanceof FileWrapper)) {
++            return false;
++        }
++
++        FileWrapper other = (FileWrapper) obj;
++        return size == other.size &amp;&amp; name.equals(other.name) &amp;&amp; absolutePath.equals(other.absolutePath);
++    }
++    
++    //TODO: link for the equals method
++    /**
++     * HashCode for this object, excluding the id field.
++     * @return integer representing the hashcode
++     * 
++     * @see equals
++     */
++    @Override
++    public int hashCode() {
++        int hash = 5;
++        hash = 11 * hash + (int) (this.size ^ (this.size &gt;&gt;&gt; 32));
++        hash = 11 * hash + (this.name != null ? this.name.hashCode() : 0);
++        hash = 11 * hash + (this.absolutePath != null ? this.absolutePath.hashCode() : 0);
++        return hash;
++    }
++    
++    @Override
++    public String toString() {
++        return super.toString() + &quot; &quot; + absolutePath;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/ImageData.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -2,7 +2,6 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
+ /**
+@@ -10,11 +9,11 @@
+  * @author ei10635
+  */
+ public class ImageData {
+-    
++
+     private Long id;
+     private FileWrapper owner;
+     private byte[] data;
+-    
++
+     public Long getId() {
+         return id;
+     }
+@@ -30,11 +29,55 @@
+     public void setOwner(FileWrapper owner) {
+         this.owner = owner;
+     }
++
+     public byte[] getData() {
+         return data;
+     }
+-    
++
+     public void setData(byte[] data) {
+         this.data = data;
+-    }    
++    }
++
++    /**
++     * Equals method doesn't take into account the id of the object. Hibernate 
++     * only gives an id to a new object when that object is persisted, it is 
++     * therefor not possible to use the id attribute.
++     * 
++     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
++     * @param obj the object to compare
++     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
++     */
++    @Override
++    public boolean equals(Object obj) {
++        if(this == obj) {
++            return true;
++        }
++        
++        if (!(obj instanceof ImageData)) {
++            return false;
++        }
++
++        ImageData other = (ImageData) obj;
++        return owner.equals(other.owner) &amp;&amp; data.length == other.data.length &amp;&amp; data == data;
++    }
++
++    //TODO: link for the equals method
++    /**
++     * HashCode for this object, excluding the id field.
++     * @return integer representing the hashcode
++     * 
++     * @see equals
++     */
++    @Override
++    public int hashCode() {
++        int hash = 5;
++        hash = 97 * hash + (this.owner != null ? this.owner.hashCode() : 0);
++        hash = 97 * hash + (this.data != null ? this.data.hashCode() : 0);
++        return hash;
++    }
++
++    @Override
++    public String toString() {
++        return super.toString() + &quot; &quot; + data.length;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Label.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -23,11 +23,11 @@
+     private void setId(Long id) {
+         this.id = id;
+     }
+-    
++
+     private Set getMedia() {
+         return media;
+     }
+-    
++
+     private void setMedia(Set media) {
+         this.media = media;
+     }
+@@ -39,8 +39,46 @@
+     public void setName(String name) {
+         this.name = name;
+     }
+-    
++
++    /**
++     * Equals method doesn't take into account the id of the object. Hibernate 
++     * only gives an id to a new object when that object is persisted, it is 
++     * therefor not possible to use the id attribute.
++     * 
++     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
++     * @param obj the object to compare
++     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
++     */
++    @Override
++    public boolean equals(Object obj) {
++        if(this == obj) {
++            return true;
++        }
++        
++        if (!(obj instanceof Label)) {
++            return false;
++        }
++
++        Label other = (Label) obj;
++        return name.equals(other.name);
++    }
++
++    //TODO: link for the equals method
++    /**
++     * HashCode for this object, excluding the id field.
++     * @return integer representing the hashcode
++     * 
++     * @see equals
++     */
++    @Override
++    public int hashCode() {
++        int hash = 5;
++        hash = 37 * hash + (this.name != null ? this.name.hashCode() : 0);
++        return hash;
++    }
++
++    @Override
+     public String toString() {
+-        return id + &quot; &quot; + name;
++        return super.toString() + &quot; &quot; + id + &quot; &quot; + name;
+     }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Loan.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -2,7 +2,6 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
+ import java.util.Date;
+@@ -12,13 +11,13 @@
+  * @author ei10635
+  */
+ public class Loan {
+-    
++
+     private Long id;
+     private Date loaned;
+     private Date returned;
+     private User loanee;
+     private Media media;
+-    
++
+     public Long getId() {
+         return id;
+     }
+@@ -58,10 +57,53 @@
+     public void setReturned(Date returned) {
+         this.returned = returned;
+     }
+-    
++
++    /**
++     * Equals method doesn't take into account the id of the object. Hibernate 
++     * only gives an id to a new object when that object is persisted, it is 
++     * therefor not possible to use the id attribute.
++     * 
++     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
++     * @param obj the object to compare
++     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
++     */
++    @Override
+     public boolean equals(Object obj) {
+-        //TODO: implement equals into all objects
+-        return false;
++        if (this == obj) {
++            return true;
++        }
++
++        if (!(obj instanceof Loan)) {
++            return false;
++        }
++
++        Loan other = (Loan) obj;
++        return loaned.equals(other.loaned) &amp;&amp; loanee.equals(other.loaned) 
++                &amp;&amp; media.equals(other.media) 
++                &amp;&amp; (returned != null ? returned.equals(other.returned) 
++                : (other.returned != null ? false : true));
+     }
++    
++    //TODO: link for the equals method
++    /**
++     * HashCode for this object, excluding the id field.
++     * @return integer representing the hashcode
++     * 
++     * @see equals
++     */    
++    @Override
++    public int hashCode() {
++        int hash = 7;
++        hash = 59 * hash + (this.loaned != null ? this.loaned.hashCode() : 0);
++        hash = 59 * hash + (this.returned != null ? this.returned.hashCode() : 0);
++        hash = 59 * hash + (this.loanee != null ? this.loanee.hashCode() : 0);
++        hash = 59 * hash + (this.media != null ? this.media.hashCode() : 0);
++        return hash;
++    }
+ 
++    @Override
++    public String toString() {
++        return super.toString() + &quot; &quot; + id + &quot; &quot; + loaned.toString() + &quot; &quot; 
++                + loanee.toString();
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.hbm.xml	2008-05-08 17:33:35 UTC (rev 99)
+@@ -18,6 +18,7 @@
+             &lt;generator class=&quot;native&quot;/&gt;
+         &lt;/id&gt;
+         
++        &lt;property name=&quot;name&quot;/&gt;
+         &lt;property name=&quot;description&quot;/&gt;
+         
+         &lt;set name=&quot;labels&quot; table=&quot;TBL_MEDIA_LABEL&quot;&gt;
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Media.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -2,7 +2,6 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
+ import java.util.Set;
+@@ -12,13 +11,14 @@
+  * @author ei10635
+  */
+ public class Media {
+-    
++
+     private Long id;
++    private String name;
+     private Set files;
+     private String description;
+     private Set labels;
+     private Type type;
+-    
++
+     public String getDescription() {
+         return description;
+     }
+@@ -42,21 +42,73 @@
+     private void setId(Long id) {
+         this.id = id;
+     }
+-    
++
+     private Set getLabels() {
+         return labels;
+     }
+-    
++
+     private void setLabels(Set labels) {
+         this.labels = labels;
+     }
+-    
++
++    public String getName() {
++        return name;
++    }
++
++    public void setName(String name) {
++        this.name = name;
++    }
++
+     public Type getType() {
+         return type;
+     }
+-    
++
+     public void setType(Type type) {
+         this.type = type;
+     }
+ 
++    /**
++     * Equals method doesn't take into account the id of the object. Hibernate 
++     * only gives an id to a new object when that object is persisted, it is 
++     * therefor not possible to use the id attribute.
++     * 
++     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
++     * @param obj the object to compare
++     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
++     */
++    @Override
++    public boolean equals(Object obj) {
++        if(this == obj) {
++            return true;
++        }
++        
++        if (!(obj instanceof Media)) {
++            return false;
++        }
++
++        Media other = (Media) obj;
++        return name.equals(other.name) &amp;&amp; description.equals(other.description) 
++                &amp;&amp; type.equals(other.type);
++    }
++    
++    //TODO: link for the equals method
++    /**
++     * HashCode for this object, excluding the id field.
++     * @return integer representing the hashcode
++     * 
++     * @see equals
++     */
++    @Override
++    public int hashCode() {
++        int hash = 7;
++        hash = 31 * hash + (this.name != null ? this.name.hashCode() : 0);
++        hash = 31 * hash + (this.description != null ? this.description.hashCode() : 0);
++        hash = 31 * hash + (this.type != null ? this.type.hashCode() : 0);
++        return hash;
++    }
++    
++    @Override
++    public String toString() {
++        return super.toString() + &quot; &quot; + id + &quot; &quot; + name;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/Type.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -2,7 +2,6 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
+ import java.util.Set;
+@@ -24,14 +23,14 @@
+     private void setId(long id) {
+         this.id = id;
+     }
+-    
++
+     private Set getMedia() {
+         return media;
+     }
+-    
++
+     private void setMedia(Set media) {
+         this.media = media;
+-    } 
++    }
+ 
+     public String getName() {
+         return name;
+@@ -41,4 +40,44 @@
+         this.name = name;
+     }
+ 
++    /**
++     * Equals method doesn't take into account the id of the object. Hibernate 
++     * only gives an id to a new object when that object is persisted, it is 
++     * therefor not possible to use the id attribute.
++     * 
++     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
++     * @param obj the object to compare
++     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
++     */
++    @Override
++    public boolean equals(Object obj) {
++        if (this == obj) {
++            return true;
++        }
++
++        if (!(obj instanceof Type)) {
++            return false;
++        }
++
++        Type other = (Type) obj;
++        return name.equals(other.name);
++    }
++    
++    //TODO: link for the equals method
++    /**
++     * HashCode for this object, excluding the id field.
++     * @return integer representing the hashcode
++     * 
++     * @see equals
++     */
++    @Override
++    public int hashCode() {
++        int hash = 7;
++        hash = 61 * hash + (this.name != null ? this.name.hashCode() : 0);
++        return hash;
++    }
++    
++    public String toString() {
++        return super.toString() + &quot; &quot; + id + &quot; &quot; + name;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/User.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -2,7 +2,6 @@
+  * To change this template, choose Tools | Templates
+  * and open the template in the editor.
+  */
+-
+ package de.berlios.jfindmyfiles.catalog.entities;
+ 
+ import java.util.Set;
+@@ -12,7 +11,7 @@
+  * @author ei10635
+  */
+ public class User {
+-    
++
+     private Long id;
+     private String firstname;
+     private String surname;
+@@ -50,4 +49,41 @@
+         this.surname = surname;
+     }
+ 
++    /**
++     * Equals method doesn't take into account the id of the object. Hibernate 
++     * only gives an id to a new object when that object is persisted, it is 
++     * therefor not possible to use the id attribute.
++     * 
++     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
++     * @param obj the object to compare
++     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
++     */
++    @Override
++    public boolean equals(Object obj) {
++        if (this == obj) {
++            return true;
++        }
++
++        if (!(obj instanceof User)) {
++            return false;
++        }
++
++        User other = (User) obj;
++        return firstname.equals(other.firstname) &amp;&amp; surname.equals(other.surname);
++    }
++
++    //TODO: link for the equals method
++    /**
++     * HashCode for this object, excluding the id field.
++     * @return integer representing the hashcode
++     * 
++     * @see equals
++     */
++    @Override
++    public int hashCode() {
++        int hash = 3;
++        hash = 11 * hash + (this.firstname != null ? this.firstname.hashCode() : 0);
++        hash = 11 * hash + (this.surname != null ? this.surname.hashCode() : 0);
++        return hash;
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities/VideoData.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -37,4 +37,48 @@
+     public void setData(byte[] data) {
+         this.data = data;
+     }
++    
++    /**
++     * Equals method doesn't take into account the id of the object. Hibernate 
++     * only gives an id to a new object when that object is persisted, it is 
++     * therefor not possible to use the id attribute.
++     * 
++     * A &lt;em&gt;Bussines Key&lt;/em&gt; is used instead.
++     * @param obj the object to compare
++     * @return true if both objects are equal under the &lt;em&gt;Bussines Key&lt;/em&gt;
++     */
++    @Override
++    public boolean equals(Object obj) {
++        if(this == obj) {
++            return true;
++        }
++        
++        if(!(obj instanceof VideoData)) {
++            return false;
++        }
++        VideoData other = (VideoData)obj;
++        return owner.equals(other.owner) &amp;&amp; data.length == other.data.length 
++                &amp;&amp; data == other.data;
++                
++    }
++
++    //TODO: link for the equals method
++    /**
++     * HashCode for this object, excluding the id field.
++     * @return integer representing the hashcode
++     * 
++     * @see equals
++     */
++    @Override
++    public int hashCode() {
++        int hash = 5;
++        hash = 89 * hash + (this.owner != null ? this.owner.hashCode() : 0);
++        hash = 89 * hash + (this.data != null ? this.data.hashCode() : 0);
++        return hash;
++    }
++    
++    @Override
++    public String toString() {
++        return super.toString() + &quot; &quot; + id + &quot; &quot; + data.length;
++    }    
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions/ActionAddNewDiskGroup.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -14,6 +14,10 @@
+     public void performAction() {
+         CatalogEngine engine = new CatalogEngine();
+         engine.runtest(true);
++        
++        for(Object u : engine.getUsers()) {
++            System.out.println(&quot;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&quot; + u);
++        }
+     }
+ 
+     public String getName() {
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-05-08 17:33:35 UTC (rev 99)
+@@ -1,8 +1,3 @@
+-NewCatalogDlg.jLabel6.text=Database:
+-NewCatalogDlg.jLabel5.text=Password:
+-NewCatalogDlg.jLabel4.text=Port:
+-NewCatalogDlg.jLabel3.text=Username:
+-NewCatalogDlg.jLabel2.text=Hostname:
+ NewDiskDlg.jchkShowAgain.text=Show this dialog again
+ NewDiskDlg.jchkAskDescription.text=Ask for disk description in the end
+ NewDiskDlg.jchkCalculateCRC.text=Calculate CRC for files
+@@ -24,3 +19,8 @@
+ NewCatalogDlg.jtfDestination.text=
+ NewCatalogDlg.jpDatabaseSettings.border.title= Server 
+ NewDiskDlg.jtbSelectedPlugins.text=Selected Plugins
++NewCatalogDlg.jlblHostname.text=Hostname:
++NewCatalogDlg.jlblUsername.text=Username:
++NewCatalogDlg.jlblPort.text=Port:
++NewCatalogDlg.jlblPassword.text=Password:
++NewCatalogDlg.jlblDatabase.text=Database:
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form	2008-05-08 17:33:35 UTC (rev 99)
+@@ -96,7 +96,7 @@
+       &lt;Properties&gt;
+         &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
+           &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
+-            &lt;TitledBorder title=&quot; Server &quot;&gt;
++            &lt;TitledBorder title=&quot;Server &quot;&gt;
+               &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jpDatabaseSettings.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+             &lt;/TitledBorder&gt;
+           &lt;/Border&gt;
+@@ -111,29 +111,29 @@
+                   &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                              &lt;Component id=&quot;jLabel5&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jLabel2&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jLabel3&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jlblPassword&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jlblHostname&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jlblUsername&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+                           &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                              &lt;Component id=&quot;jTextField2&quot; alignment=&quot;1&quot; pref=&quot;278&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jtfHostname&quot; alignment=&quot;1&quot; pref=&quot;278&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Group type=&quot;103&quot; alignment=&quot;0&quot; groupAlignment=&quot;1&quot; max=&quot;-2&quot; attributes=&quot;0&quot;&gt;
+-                                  &lt;Component id=&quot;jPasswordField1&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
+-                                  &lt;Component id=&quot;jTextField3&quot; alignment=&quot;0&quot; pref=&quot;141&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                                  &lt;Component id=&quot;jpfPassword&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                                  &lt;Component id=&quot;jtfUsername&quot; alignment=&quot;0&quot; pref=&quot;141&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
+                                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;1&quot;&gt;
+                                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                                      &lt;Component id=&quot;jComboBox1&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                                      &lt;Component id=&quot;jcbxDatabase&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
+                                   &lt;/Group&gt;
+                               &lt;/Group&gt;
+                           &lt;/Group&gt;
+                       &lt;/Group&gt;
+-                      &lt;Component id=&quot;jLabel6&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jlblDatabase&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;EmptySpace type=&quot;unrelated&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jLabel4&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jlblPort&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jFormattedTextField1&quot; min=&quot;-2&quot; pref=&quot;42&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jffPort&quot; min=&quot;-2&quot; pref=&quot;42&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+@@ -142,25 +142,25 @@
+           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+               &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                   &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;Component id=&quot;jLabel2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jFormattedTextField1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jLabel4&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jTextField2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jlblHostname&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jffPort&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jlblPort&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jtfHostname&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;Component id=&quot;jLabel3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jTextField3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jlblUsername&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jtfUsername&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;Component id=&quot;jLabel5&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jPasswordField1&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jlblPassword&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jpfPassword&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;Component id=&quot;jLabel6&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jComboBox1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jlblDatabase&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jcbxDatabase&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+@@ -168,53 +168,53 @@
+         &lt;/DimensionLayout&gt;
+       &lt;/Layout&gt;
+       &lt;SubComponents&gt;
+-        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel2&quot;&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jlblHostname&quot;&gt;
+           &lt;Properties&gt;
+             &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jLabel2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jlblHostname.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
+         &lt;/Component&gt;
+-        &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jTextField2&quot;&gt;
++        &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jtfHostname&quot;&gt;
+         &lt;/Component&gt;
+-        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel3&quot;&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jlblUsername&quot;&gt;
+           &lt;Properties&gt;
+             &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jLabel3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jlblUsername.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
+         &lt;/Component&gt;
+-        &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jTextField3&quot;&gt;
++        &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jtfUsername&quot;&gt;
+         &lt;/Component&gt;
+-        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel4&quot;&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jlblPort&quot;&gt;
+           &lt;Properties&gt;
+             &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jLabel4.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jlblPort.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
+         &lt;/Component&gt;
+-        &lt;Component class=&quot;javax.swing.JFormattedTextField&quot; name=&quot;jFormattedTextField1&quot;&gt;
++        &lt;Component class=&quot;javax.swing.JFormattedTextField&quot; name=&quot;jffPort&quot;&gt;
+           &lt;Properties&gt;
+             &lt;Property name=&quot;formatterFactory&quot; type=&quot;javax.swing.JFormattedTextField$AbstractFormatterFactory&quot; editor=&quot;org.netbeans.modules.form.editors.AbstractFormatterFactoryEditor&quot; preCode=&quot;try {&quot; postCode=&quot;} catch (java.text.ParseException ex) {&amp;#xa;ex.printStackTrace();&amp;#xa;}&quot;&gt;
+               &lt;Format format=&quot;#####&quot; subtype=&quot;-1&quot; type=&quot;5&quot;/&gt;
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
+         &lt;/Component&gt;
+-        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel5&quot;&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jlblPassword&quot;&gt;
+           &lt;Properties&gt;
+             &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jLabel5.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jlblPassword.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
+         &lt;/Component&gt;
+-        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel6&quot;&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jlblDatabase&quot;&gt;
+           &lt;Properties&gt;
+             &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+-              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jLabel6.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jlblDatabase.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
+         &lt;/Component&gt;
+-        &lt;Component class=&quot;javax.swing.JComboBox&quot; name=&quot;jComboBox1&quot;&gt;
++        &lt;Component class=&quot;javax.swing.JComboBox&quot; name=&quot;jcbxDatabase&quot;&gt;
+           &lt;Properties&gt;
+             &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ComboBoxModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ComboBoxModelEditor&quot;&gt;
+               &lt;StringArray count=&quot;4&quot;&gt;
+@@ -226,7 +226,7 @@
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
+         &lt;/Component&gt;
+-        &lt;Component class=&quot;javax.swing.JPasswordField&quot; name=&quot;jPasswordField1&quot;&gt;
++        &lt;Component class=&quot;javax.swing.JPasswordField&quot; name=&quot;jpfPassword&quot;&gt;
+         &lt;/Component&gt;
+       &lt;/SubComponents&gt;
+     &lt;/Container&gt;
+@@ -236,6 +236,9 @@
+           &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jbtnHelp.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnHelpActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
+     &lt;/Component&gt;
+     &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnCancel&quot;&gt;
+       &lt;Properties&gt;
+@@ -243,6 +246,9 @@
+           &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jbtnCancel.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnCancelActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
+     &lt;/Component&gt;
+     &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnCreate&quot;&gt;
+       &lt;Properties&gt;
+@@ -250,6 +256,9 @@
+           &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewCatalogDlg.jbtnCreate.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnCreateActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
+     &lt;/Component&gt;
+     &lt;Component class=&quot;javax.swing.JCheckBox&quot; name=&quot;jCheckBox1&quot;&gt;
+       &lt;Properties&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -33,16 +33,16 @@
+     private void initComponents() {
+ 
+         jpDatabaseSettings = new javax.swing.JPanel();
+-        jLabel2 = new javax.swing.JLabel();
+-        jTextField2 = new javax.swing.JTextField();
+-        jLabel3 = new javax.swing.JLabel();
+-        jTextField3 = new javax.swing.JTextField();
+-        jLabel4 = new javax.swing.JLabel();
+-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+-        jLabel5 = new javax.swing.JLabel();
+-        jLabel6 = new javax.swing.JLabel();
+-        jComboBox1 = new javax.swing.JComboBox();
+-        jPasswordField1 = new javax.swing.JPasswordField();
++        jlblHostname = new javax.swing.JLabel();
++        jtfHostname = new javax.swing.JTextField();
++        jlblUsername = new javax.swing.JLabel();
++        jtfUsername = new javax.swing.JTextField();
++        jlblPort = new javax.swing.JLabel();
++        jffPort = new javax.swing.JFormattedTextField();
++        jlblPassword = new javax.swing.JLabel();
++        jlblDatabase = new javax.swing.JLabel();
++        jcbxDatabase = new javax.swing.JComboBox();
++        jpfPassword = new javax.swing.JPasswordField();
+         jbtnHelp = new javax.swing.JButton();
+         jbtnCancel = new javax.swing.JButton();
+         jbtnCreate = new javax.swing.JButton();
+@@ -58,23 +58,23 @@
+ 
+         jpDatabaseSettings.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jpDatabaseSettings.border.title&quot;))); // NOI18N
+ 
+-        jLabel2.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jLabel2.text&quot;)); // NOI18N
++        jlblHostname.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jlblHostname.text&quot;)); // NOI18N
+ 
+-        jLabel3.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jLabel3.text&quot;)); // NOI18N
++        jlblUsername.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jlblUsername.text&quot;)); // NOI18N
+ 
+-        jLabel4.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jLabel4.text&quot;)); // NOI18N
++        jlblPort.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jlblPort.text&quot;)); // NOI18N
+ 
+         try {
+-            jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter(&quot;#####&quot;)));
++            jffPort.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter(&quot;#####&quot;)));
+         } catch (java.text.ParseException ex) {
+             ex.printStackTrace();
+         }
+ 
+-        jLabel5.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jLabel5.text&quot;)); // NOI18N
++        jlblPassword.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jlblPassword.text&quot;)); // NOI18N
+ 
+-        jLabel6.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jLabel6.text&quot;)); // NOI18N
++        jlblDatabase.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jlblDatabase.text&quot;)); // NOI18N
+ 
+-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { &quot;Firebird&quot;, &quot;PostgreSQL&quot;, &quot;MsSQL&quot;, &quot;MySQL&quot; }));
++        jcbxDatabase.setModel(new javax.swing.DefaultComboBoxModel(new String[] { &quot;Firebird&quot;, &quot;PostgreSQL&quot;, &quot;MsSQL&quot;, &quot;MySQL&quot; }));
+ 
+         javax.swing.GroupLayout jpDatabaseSettingsLayout = new javax.swing.GroupLayout(jpDatabaseSettings);
+         jpDatabaseSettings.setLayout(jpDatabaseSettingsLayout);
+@@ -85,53 +85,68 @@
+                 .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                     .addGroup(jpDatabaseSettingsLayout.createSequentialGroup()
+                         .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-                            .addComponent(jLabel5)
+-                            .addComponent(jLabel2)
+-                            .addComponent(jLabel3))
++                            .addComponent(jlblPassword)
++                            .addComponent(jlblHostname)
++                            .addComponent(jlblUsername))
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                         .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
++                            .addComponent(jtfHostname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
+                             .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+-                                .addComponent(jPasswordField1, javax.swing.GroupLayout.Alignment.LEADING)
+-                                .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
++                                .addComponent(jpfPassword, javax.swing.GroupLayout.Alignment.LEADING)
++                                .addComponent(jtfUsername, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jpDatabaseSettingsLayout.createSequentialGroup()
+                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+-                    .addComponent(jLabel6))
++                                    .addComponent(jcbxDatabase, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
++                    .addComponent(jlblDatabase))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+-                .addComponent(jLabel4)
++                .addComponent(jlblPort)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addComponent(jffPort, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                 .addContainerGap())
+         );
+         jpDatabaseSettingsLayout.setVerticalGroup(
+             jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(jpDatabaseSettingsLayout.createSequentialGroup()
+                 .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+-                    .addComponent(jLabel2)
+-                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+-                    .addComponent(jLabel4)
+-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                    .addComponent(jlblHostname)
++                    .addComponent(jffPort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                    .addComponent(jlblPort)
++                    .addComponent(jtfHostname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+-                    .addComponent(jLabel3)
+-                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                    .addComponent(jlblUsername)
++                    .addComponent(jtfUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-                    .addComponent(jLabel5)
+-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                    .addComponent(jlblPassword)
++                    .addComponent(jpfPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+-                    .addComponent(jLabel6)
+-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                    .addComponent(jlblDatabase)
++                    .addComponent(jcbxDatabase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+         );
+ 
+         jbtnHelp.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jbtnHelp.text&quot;)); // NOI18N
++        jbtnHelp.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbtnHelpActionPerformed(evt);
++            }
++        });
+ 
+         jbtnCancel.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jbtnCancel.text&quot;)); // NOI18N
++        jbtnCancel.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbtnCancelActionPerformed(evt);
++            }
++        });
+ 
+         jbtnCreate.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jbtnCreate.text&quot;)); // NOI18N
++        jbtnCreate.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbtnCreateActionPerformed(evt);
++            }
++        });
+ 
+         jCheckBox1.setSelected(true);
+         jCheckBox1.setText(org.openide.util.NbBundle.getMessage(NewCatalogDlg.class, &quot;NewCatalogDlg.jCheckBox1.text&quot;)); // NOI18N
+@@ -205,29 +220,42 @@
+ 
+         pack();
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
++
++private void jbtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCancelActionPerformed
++    //TODO: clear fields
++    dispose();
++}//GEN-LAST:event_jbtnCancelActionPerformed
++
++private void jbtnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCreateActionPerformed
++// TODO add your handling code here:
++}//GEN-LAST:event_jbtnCreateActionPerformed
++
++private void jbtnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnHelpActionPerformed
++// TODO add your handling code here:
++}//GEN-LAST:event_jbtnHelpActionPerformed
+         
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JCheckBox jCheckBox1;
+-    private javax.swing.JComboBox jComboBox1;
+-    private javax.swing.JFormattedTextField jFormattedTextField1;
+-    private javax.swing.JLabel jLabel2;
+-    private javax.swing.JLabel jLabel3;
+-    private javax.swing.JLabel jLabel4;
+-    private javax.swing.JLabel jLabel5;
+-    private javax.swing.JLabel jLabel6;
+-    private javax.swing.JPasswordField jPasswordField1;
+     private javax.swing.JSeparator jSeparator1;
+-    private javax.swing.JTextField jTextField2;
+-    private javax.swing.JTextField jTextField3;
+     private javax.swing.JButton jbtnBrowse;
+     private javax.swing.JButton jbtnCancel;
+     private javax.swing.JButton jbtnCreate;
+     private javax.swing.JButton jbtnHelp;
++    private javax.swing.JComboBox jcbxDatabase;
++    private javax.swing.JFormattedTextField jffPort;
++    private javax.swing.JLabel jlblDatabase;
+     private javax.swing.JLabel jlblDestination;
++    private javax.swing.JLabel jlblHostname;
+     private javax.swing.JLabel jlblName;
++    private javax.swing.JLabel jlblPassword;
++    private javax.swing.JLabel jlblPort;
++    private javax.swing.JLabel jlblUsername;
+     private javax.swing.JPanel jpDatabaseSettings;
++    private javax.swing.JPasswordField jpfPassword;
+     private javax.swing.JTextField jtfDestination;
++    private javax.swing.JTextField jtfHostname;
+     private javax.swing.JTextField jtfName;
++    private javax.swing.JTextField jtfUsername;
+     // End of variables declaration//GEN-END:variables
+     
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-05-08 17:33:35 UTC (rev 99)
+@@ -52,7 +52,7 @@
+                   &lt;Component id=&quot;jbtnCancel&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Component id=&quot;jbtnScan&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+-              &lt;EmptySpace pref=&quot;14&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+           &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+@@ -107,7 +107,7 @@
+                       &lt;Component id=&quot;jcbxCatalog&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jpScanningOptions&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jpScanningOptions&quot; min=&quot;-2&quot; pref=&quot;180&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+         &lt;/DimensionLayout&gt;
+@@ -200,7 +200,7 @@
+                       &lt;Component id=&quot;jSeparator1&quot; min=&quot;-2&quot; pref=&quot;10&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jtbSelectedPlugins&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;EmptySpace pref=&quot;12&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+               &lt;/Group&gt;
+             &lt;/DimensionLayout&gt;
+@@ -239,6 +239,9 @@
+                 &lt;/Property&gt;
+                 &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
+               &lt;/Properties&gt;
++              &lt;Events&gt;
++                &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jtbSelectedPluginsActionPerformed&quot;/&gt;
++              &lt;/Events&gt;
+             &lt;/Component&gt;
+           &lt;/SubComponents&gt;
+         &lt;/Container&gt;
+@@ -250,6 +253,9 @@
+           &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewDiskDlg.jbtnHelp.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnHelpActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
+     &lt;/Component&gt;
+     &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnCancel&quot;&gt;
+       &lt;Properties&gt;
+@@ -257,6 +263,9 @@
+           &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewDiskDlg.jbtnCancel.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnCancelActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
+     &lt;/Component&gt;
+     &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jbtnScan&quot;&gt;
+       &lt;Properties&gt;
+@@ -264,6 +273,9 @@
+           &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewDiskDlg.jbtnScan.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+         &lt;/Property&gt;
+       &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jbtnScanActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
+     &lt;/Component&gt;
+   &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -129,6 +129,11 @@
+         jtbSelectedPlugins.setIcon(new javax.swing.ImageIcon(getClass().getResource(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/show-plugins.png&quot;))); // NOI18N
+         jtbSelectedPlugins.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jtbSelectedPlugins.text&quot;)); // NOI18N
+         jtbSelectedPlugins.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
++        jtbSelectedPlugins.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jtbSelectedPluginsActionPerformed(evt);
++            }
++        });
+ 
+         javax.swing.GroupLayout jpScanningOptionsLayout = new javax.swing.GroupLayout(jpScanningOptions);
+         jpScanningOptions.setLayout(jpScanningOptionsLayout);
+@@ -157,7 +162,7 @@
+                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addComponent(jtbSelectedPlugins)
+-                .addContainerGap(12, Short.MAX_VALUE))
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+         );
+ 
+         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+@@ -199,14 +204,29 @@
+                     .addComponent(jtfDiskName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(jcbxCatalog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addComponent(jpScanningOptions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addComponent(jpScanningOptions, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+         );
+ 
+         jbtnHelp.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jbtnHelp.text&quot;)); // NOI18N
++        jbtnHelp.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbtnHelpActionPerformed(evt);
++            }
++        });
+ 
+         jbtnCancel.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jbtnCancel.text&quot;)); // NOI18N
++        jbtnCancel.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbtnCancelActionPerformed(evt);
++            }
++        });
+ 
+         jbtnScan.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jbtnScan.text&quot;)); // NOI18N
++        jbtnScan.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jbtnScanActionPerformed(evt);
++            }
++        });
+ 
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+@@ -234,11 +254,27 @@
+                     .addComponent(jbtnHelp)
+                     .addComponent(jbtnCancel)
+                     .addComponent(jbtnScan))
+-                .addContainerGap(14, Short.MAX_VALUE))
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+         );
+ 
+         pack();
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
++
++private void jtbSelectedPluginsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbSelectedPluginsActionPerformed
++    //TODO:
++}//GEN-LAST:event_jtbSelectedPluginsActionPerformed
++
++private void jbtnScanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnScanActionPerformed
++// TODO add your handling code here:
++}//GEN-LAST:event_jbtnScanActionPerformed
++
++private void jbtnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnCancelActionPerformed
++// TODO add your handling code here:
++}//GEN-LAST:event_jbtnCancelActionPerformed
++
++private void jbtnHelpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnHelpActionPerformed
++// TODO add your handling code here:
++}//GEN-LAST:event_jbtnHelpActionPerformed
+     
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JPanel jPanel1;
+
+Deleted: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Ficheiro.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Ficheiro.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Ficheiro.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -1,14 +0,0 @@
+-/*
+- * To change this template, choose Tools | Templates
+- * and open the template in the editor.
+- */
+-
+-package de.berlios.jfindmyfiles.readingfiles;
+-
+-/**
+- *
+- * @author ei10635
+- */
+-class Ficheiro {
+-
+-}
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java	2008-05-08 13:12:03 UTC (rev 98)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java	2008-05-08 17:33:35 UTC (rev 99)
+@@ -28,10 +28,10 @@
+         return reader;
+     }
+     
+-    public List&lt;Ficheiro&gt; read(File parent) {
++    public List&lt;File&gt; read(File parent) {
+         //TODO: correctly read folders and file info.
+         Stack&lt;File&gt; dados = new Stack&lt;File&gt;();
+-        ArrayList&lt;Ficheiro&gt; fileList = new ArrayList&lt;Ficheiro&gt;();
++        ArrayList&lt;File&gt; fileList = new ArrayList&lt;File&gt;();
+         File f2 = parent;
+         long size = 0L;
+         do {
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000093.html">[Jfindmyfiles-commits] r98 - in trunk: media/icons media/icons/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	spikes/SPKlerDados/nbproject
+</A></li>
+	<LI>Next message: <A HREF="000095.html">[Jfindmyfiles-commits] r100 - in	trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog:	entitymanagers utils
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#94">[ date ]</a>
+              <a href="thread.html#94">[ thread ]</a>
+              <a href="subject.html#94">[ subject ]</a>
+              <a href="author.html#94">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

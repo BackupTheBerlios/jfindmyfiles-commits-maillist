@@ -1,0 +1,2731 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r116 - in trunk: docs docs/Iteracao2-CB05	docs/Iteracao3-CB03 docs/Iteracao5-CB02 media	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images	project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r116%20-%20in%20trunk%3A%20docs%20docs/Iteracao2-CB05%0A%09docs/Iteracao3-CB03%20docs/Iteracao5-CB02%20media%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images%0A%09project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup&In-Reply-To=%3C200805210032.m4L0WrfQ025486%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000110.html">
+   <LINK REL="Next"  HREF="000112.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r116 - in trunk: docs docs/Iteracao2-CB05	docs/Iteracao3-CB03 docs/Iteracao5-CB02 media	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images	project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r116%20-%20in%20trunk%3A%20docs%20docs/Iteracao2-CB05%0A%09docs/Iteracao3-CB03%20docs/Iteracao5-CB02%20media%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog%0A%09project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes%0A%09project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images%0A%09project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup&In-Reply-To=%3C200805210032.m4L0WrfQ025486%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r116 - in trunk: docs docs/Iteracao2-CB05	docs/Iteracao3-CB03 docs/Iteracao5-CB02 media	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images	project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup">knitter at mail.berlios.de
+       </A><BR>
+    <I>Wed May 21 02:32:53 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000110.html">[Jfindmyfiles-commits] r115 - in trunk: docs docs/Iteracao5-CB02	project/JFindMyFiles/Catalog/src	project/JFindMyFiles/Catalog/src/META-INF	project/JFindMyFiles/Catalog/src/META-INF/services	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+        <LI>Next message: <A HREF="000112.html">[Jfindmyfiles-commits] r117 - trunk/docs/Documentos Externos
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111">[ date ]</a>
+              <a href="thread.html#111">[ thread ]</a>
+              <a href="subject.html#111">[ subject ]</a>
+              <a href="author.html#111">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-21 02:32:22 +0200 (Wed, 21 May 2008)
+New Revision: 116
+
+Added:
+   trunk/media/splash.png
+   trunk/media/temp/
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/splash.png
+   trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/splash.gif
+Modified:
+   trunk/docs/Iteracao2-CB05/Iteracao 2.txt
+   trunk/docs/Iteracao3-CB03/Iteracao 3.txt
+   trunk/docs/Iteracao5-CB02/Iteracao5.txt
+   trunk/docs/[XPDoc] User Stories Combinadas.txt
+   trunk/docs/[XPDoc] User Stories.txt
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+   trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/LoanDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/LoanDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ManageUsersDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ManageUsersDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/StatisticsDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/StatisticsDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+   trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties
+Log:
+Adicionado splash screen
+Continua?\195?\167?\195?\163o da liga?\195?\167?\195?\163o do modelo ?\195?\160 vista.
+
+Modified: trunk/docs/Iteracao2-CB05/Iteracao 2.txt
+===================================================================
+--- trunk/docs/Iteracao2-CB05/Iteracao 2.txt	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/docs/Iteracao2-CB05/Iteracao 2.txt	2008-05-21 00:32:22 UTC (rev 116)
+@@ -85,5 +85,24 @@
+ O uso de casos de uso prende-se com o que estes podem oferecer como guias no 
+ desenvolvimento, n&#227;o ser&#227;o consideradas descri&#231;&#245;es elaboradas dos casos de uso 
+ e apenas ser&#227;o valorizados os diagramas para que seja mais f&#225;cil manter um 
+-registo das tarefas a executar.
++registo das tarefas a executar.
++
++Ser&#225; necess&#225;rio desenhar interfaces que permitam gerir cat&#225;logos - criar, 
++abrir, manter registo de cat&#225;logos recentes, fechar e guardar cat&#225;logos.
++&#201; necess&#225;rio criar os seguintes elementes de intera&#231;&#227;o com o utilizador:
++- Janelas de Di&#225;logo:
++	- NewDiskDlg - Janela de di&#225;logo que permite ler novos suportes.
++	- NewCatalogDlg - Janela de di&#225;logo que permite criar novos cat&#225;logos
++	- OpenCatalogDlg - Janela de di&#225;logo que permite abrir cat&#225;logos 
++		existentes.
++	- CatalogPropertiesDlg - Janela de di&#225;logo que permite ver as 
++		propriedades do cat&#225;logo e editar a data de cria&#231;&#227;o e a 
++		descri&#231;&#227;o.
++- Menus:
++- Paineis a integrar no sistema de janelas da plataforma:
++	- CatalogOptionsPanel - Painel com as ap&#231;&#245;es a usar na cria&#231;&#227;o de novos 
++		cat&#225;logos e abertura de cat&#225;logos existentes.
++	- NavigationTreeTopComponent - Componente que permite navegar nos 
++		elementos que compoem um cat&#225;logo. Mostra os dados existentes 
++		num cat&#225;logo na forma de uma &#225;rvore.
+ &lt;==== Avalia&#231;&#227;o ===============================================================&gt;
+
+Modified: trunk/docs/Iteracao3-CB03/Iteracao 3.txt
+===================================================================
+--- trunk/docs/Iteracao3-CB03/Iteracao 3.txt	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/docs/Iteracao3-CB03/Iteracao 3.txt	2008-05-21 00:32:22 UTC (rev 116)
+@@ -13,4 +13,5 @@
+ informa&#231;&#227;o a ficheiros j&#225; conhecidos ou fornecer informa&#231;&#227;o de novos tipos de 
+ ficheiros.
+ 
++
+ &lt;==== Avalia&#231;&#227;o ===============================================================&gt;
+
+Modified: trunk/docs/Iteracao5-CB02/Iteracao5.txt
+===================================================================
+--- trunk/docs/Iteracao5-CB02/Iteracao5.txt	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/docs/Iteracao5-CB02/Iteracao5.txt	2008-05-21 00:32:22 UTC (rev 116)
+@@ -1,9 +1,7 @@
+ &lt;==== Objectivos ==============================================================&gt;
+-CB02: ST14, ST15
+-- Quero que as op&#195;&#167;&#195;&#181;es mais comuns apare&#195;&#167;am numa barra acima da lista de ficheiros.
+-- Deve existir um menu na &#195;&#161;rvore com a lista de categorias/grupo de discos/etiquetas 
+-com op&#195;&#167;&#195;&#181;es de pesquisa, introdu&#195;&#167;&#195;&#163;o de descri&#195;&#167;&#195;&#181;es, altera&#195;&#167;&#195;&#163;o do nome, 
+-exporta&#195;&#167;&#195;&#163;o e importa&#195;&#167;&#195;&#163;o.
++Alterar a interface com o utilizador de forma a tornar a interac&#195;&#167;&#195;&#163;o mais f&#195;&#161;cil. 
++Criar menus de contexto a serem usados nos n&#195;&#179;s que representam os dados e que 
++contenham op&#195;&#167;&#195;&#181;es significativas consoante o estado da aplica&#195;&#167;&#195;&#163;o.
+ &lt;==== Documentos produzidos ===================================================&gt;
+ 
+ Spikes:
+
+Modified: trunk/docs/[XPDoc] User Stories Combinadas.txt
+===================================================================
+--- trunk/docs/[XPDoc] User Stories Combinadas.txt	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/docs/[XPDoc] User Stories Combinadas.txt	2008-05-21 00:32:22 UTC (rev 116)
+@@ -1,24 +1,21 @@
+-CB01: ST22, ST23:
++CB01: ST21, ST22:
+ - O programa deve oferecer um sistema de gest&#227;o de sa&#237;das. Deve permitir gerir um 
+ conjunto de utilizadores e os empr&#233;stimos feitos a esses utilizadores.
+ - Deve ser poss&#237;vel adicionar, remover e editar os dados de utilizadores, bem como 
+ ver os empr&#233;stimos actuais e passados feitos a esse utilizador.
+ 
+-CB02: ST14, ST15
++CB02: ST13, ST14
+ - Quero que as op&#231;&#245;es mais comuns apare&#231;am numa barra acima da lista de ficheiros.
+ - Deve existir um menu na &#225;rvore com a lista de categorias/grupo de discos/etiquetas 
+ com op&#231;&#245;es de pesquisa, introdu&#231;&#227;o de descri&#231;&#245;es, altera&#231;&#227;o do nome, 
+ exporta&#231;&#227;o e importa&#231;&#227;o.
+ 
+-CB03: ST17
++CB03: ST16
+ - O sistema de leitura de informa&#231;&#245;es de ficheiro tem de permitir ser expandido 
+ para ler ficheiros desconhecidos ou para que a forma como as informa&#231;&#245;es s&#227;o 
+ lidas seja alterada.
+ 
+-CB04: ST3, ST4, ST13, ST16, ST7, ST19, ST20
+-- As pastas lidas devem poder ser organizadas por categorias, devem tamb&#233;m poder 
+-ser agrupadas em grupos de discos.
+-- Quando se trata de um disco amov&#237;vel deve existir a possibilidade de guardar a 
++CB04: ST3, ST12, ST15, ST6, ST18, ST19- Quando se trata de um disco amov&#237;vel deve existir a possibilidade de guardar a 
+ localiza&#231;&#227;o f&#237;sica do disco.
+ - Preciso encontrar um ficheiro no cat&#225;logo, para isso quero escolher a categoria, 
+ grupo de discos, ou todo o cat&#225;logo para restringir a pesquisa.
+@@ -29,7 +26,7 @@
+ ficar preso a apenas um tipo de base de dados.
+ - Deve ser poss&#237;vel procurar ficheiros duplicados, o nome n&#227;o deve ser limita&#231;&#227;o.
+ 
+-CB05: ST5, ST6, ST8
++CB05: ST4, ST5, ST7
+ - O programa tem de permitir criar cat&#225;logos, abrir cat&#225;logos, manter um registo 
+ de cat&#225;logos recentes, fechar e guardar cat&#225;logos.
+ - Os discos e pastas podem ser catalogados usando etiquetas, o sistema deve ser 
+@@ -38,25 +35,25 @@
+ - A aplica&#231;&#227;o deve permitir ser distribuida em mais que uma l&#237;ngua, deve ser 
+ internacionaliz&#225;vel.
+ 
+-CB06: ST12
++CB06: ST11
+ - Quero exportar um cat&#225;logo completo ou um subconjunto para um conjunto de 
+ ficheiros HTML que possam ser colocados on-line ou distribu&#237;dos livremente.
+ Devem existir personaliza&#231;&#245;es de aspecto que se possam aplicar aos ficheiros 
+ criados.
+ 
+-CB07: ST10, ST11
++CB07: ST9, ST10
+ - Op&#231;&#245;es para permitir exportar os dados existentes para outros formatos, 
+ principalmente para formatos port&#225;veis como XML e CSV.
+ - Op&#231;&#245;es para importar dados de outras bases de dados criadas anteriormente com o 
+ programa e de outros formatos providenciados por programas  concorrentes.
+ 
+-CB08: ST9
++CB08: ST8
+ - Sistema de estat&#237;sticas que mostre dados relevantes sobre os ficheiros 
+ existentes como o n&#250;mero de ficheiros de determinado tipo, o tamanho m&#233;dio dos 
+ ficheiros catalogados, o tamanho total ocupado, etc..
+ 
+-CB09: ST1, ST21
++CB09: ST1, ST20
+ - O programa tem de permitir que se possa indicar a pasta a ler e tem de ler o 
+ conte&#250;do dessa pasta e guardar as informa&#231;&#245;es dos ficheiros.
+ - Deve ser poss&#237;vel comparar a informa&#231;&#227;o guardada de um disco ou pasta com o seu 
+-conte&#250;do actual, caso o disco ou pasta estejam dispon&#237;veis ao programa.
+\ No newline at end of file
++conte&#250;do actual, caso o disco ou pasta estejam dispon&#237;veis ao programa.
+
+Modified: trunk/docs/[XPDoc] User Stories.txt
+===================================================================
+--- trunk/docs/[XPDoc] User Stories.txt	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/docs/[XPDoc] User Stories.txt	2008-05-21 00:32:22 UTC (rev 116)
+@@ -7,92 +7,88 @@
+ janela que mostre as propriedades do ficheiro.
+ 
+ ST3:
+-As pastas lidas devem poder ser organizadas por categorias, devem tamb&#233;m poder 
+-ser agrupadas em grupos de discos.
+-
+-ST4:
+ Quando se trata de um disco amov&#237;vel deve existir a possibilidade de guardar a 
+ localiza&#231;&#227;o f&#237;sica do disco.
+ 
+-ST5:
++ST4:
+ O programa tem de permitir criar cat&#225;logos, abrir cat&#225;logos, manter um registo 
+ de cat&#225;logos recentes, fechar e guardar cat&#225;logos.
+ 
+-ST6:
++ST5:
+ Os discos e pastas podem ser catalogados usando etiquetas, o sistema deve ser 
+ independente das categorias e grupos de discos e permitir que o mesmo disco 
+ tenha mais que uma categoria.
+ 
+-ST7:
++ST6:
+ Preciso encontrar um ficheiro no cat&#225;logo, para isso quero escolher a categoria, 
+ grupo de discos, ou todo o cat&#225;logo para restringir a pesquisa.
+ 
+-ST8:
++ST7:
+ A aplica&#231;&#227;o deve permitir ser distribuida em mais que uma l&#237;ngua, deve ser 
+ internacionaliz&#225;vel.
+ 
+-ST9:
++ST8:
+ Sistema de estat&#237;sticas que mostre dados relevantes sobre os ficheiros 
+ existentes como o n&#250;mero de ficheiros de determinado tipo, o tamanho m&#233;dio dos 
+ ficheiros catalogados, o tamanho total ocupado, etc..
+ 
+-ST10:
++ST9:
+ Op&#231;&#245;es para permitir exportar os dados existentes para outros formatos, 
+ principalmente para formatos port&#225;veis como XML e CSV.
+ 
+-ST11:
++ST10:
+ Op&#231;&#245;es para importar dados de outras bases de dados criadas anteriormente com o 
+ programa e de outros formatos providenciados por programas  concorrentes.
+ 
+-ST12:
++ST11:
+ Quero exportar um cat&#225;logo completo ou um subconjunto para um conjunto de 
+ ficheiros HTML que possam ser colocados on-line ou distribu&#237;dos livremente.
+ Devem existir personaliza&#231;&#245;es de aspecto que se possam aplicar aos ficheiros 
+ criados.
+ 
+-ST13:
++ST12:
+ A pesquisa de ficheiros deve conter op&#231;&#245;es para pesquisar usando express&#245;es 
+ regulares.
+ 
+-ST14:
++ST13:
+ Quero que as op&#231;&#245;es mais comuns apare&#231;am numa barra acima da lista de ficheiros.
+ 
+-ST15:
++ST14:
+ Deve existir um menu na &#225;rvore com a lista de categorias/grupo de discos/etiquetas 
+ com op&#231;&#245;es de pesquisa, introdu&#231;&#227;o de descri&#231;&#245;es, altera&#231;&#227;o do nome, 
+ exporta&#231;&#227;o e importa&#231;&#227;o.
+  
+-ST16:
++ST15:
+ Se a localiza&#231;&#227;o do ficheiro estiver acess&#237;vel deve ser poss&#237;vel abri-la.
+ 
+-ST17:
++ST16:
+ O sistema de leitura de informa&#231;&#245;es de ficheiro tem de permitir ser expandido 
+ para ler ficheiros desconhecidos ou para que a forma como as informa&#231;&#245;es s&#227;o 
+ lidas seja alterada.
+ 
+-ST18:
++ST17:
+ Deve ser poss&#237;vel configurar os plugins que est&#227;o activos, tanto numa janela de 
+ op&#231;&#245;es como na altura em que se vai ler os discos ou pastas.
+ 
+-ST19:
++ST18:
+ Deve ser poss&#237;vel usar base de dados local ou remota, e o programa n&#227;o pode 
+ ficar preso a apenas um tipo de base de dados.
+ 
+-ST20:
++ST19:
+ Deve ser poss&#237;vel procurar ficheiros duplicados, o nome n&#227;o deve ser limita&#231;&#227;o.
+ 
+-ST21:
++ST20:
+ Deve ser poss&#237;vel comparar a informa&#231;&#227;o guardada de um disco ou pasta com o seu 
+ conte&#250;do actual, caso o disco ou pasta estejam dispon&#237;veis ao programa.
+ 
+-ST22:
++ST21:
+ O programa deve oferecer um sistema de gest&#227;o de sa&#237;das. Deve permitir gerir um 
+ conjunto de utilizadores e os empr&#233;stimos feitos a esses utilizadores.
+ 
+-ST23:
++ST22:
+ Deve ser poss&#237;vel adicionar, remover e editar os dados de utilizadores, bem como 
+ ver os empr&#233;stimos actuais e passados feitos a esse utilizador.
+ 
+-ST24:
++ST23:
+ A aplica&#231;&#227;o dever&#225; correr em qualquer sistema operativo, desde Windows XP/Vista, 
+-Linux a Mac OS X.
+\ No newline at end of file
++Linux a Mac OS X.
+
+Added: trunk/media/splash.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/splash.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngine.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -23,6 +23,7 @@
+ import java.io.File;
+ import java.util.Date;
+ import java.util.List;
++import java.util.Vector;
+ import org.hibernate.Session;
+ import org.hibernate.SessionFactory;
+ import org.hibernate.cfg.Configuration;
+@@ -37,6 +38,8 @@
+     public static final int LOCAL = 4;
+     private SessionFactory sessionFactory;
+     private CatalogProperties properties;
++    
++    private Vector&lt;CatalogEngineListener&gt; listeners;
+ 
+     /**
+      * Empty construtor so that this class can be instanciated using reflection 
+@@ -47,33 +50,21 @@
+ 
+     //TODO: error management
+     private void recreateConnection(String dbname, String dburl, String port,
+-            String username, String password, int dbType) {
++            String username, String password, int dbType, boolean open) {
+ 
+-        //closeCatalog();
++        //TODO: closeCatalog();
++        
++        String strategy = &quot;create&quot;;
+         try {
+-            /*Configuration cfg = new Configuration().configure(&quot;de/berlios&quot; +
+-            &quot;/jfindmyfiles/catalog/utils/hibernate.hsqldb.cfg.xml&quot;);*/
++            Configuration hConfig = new Configuration().configure(&quot;de/berlios&quot; +
++            &quot;/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml&quot;);
++            
++            if(open) {
++                strategy = &quot;update&quot;;
++            }
++            //Creation strategy
++            hConfig.setProperty(&quot;hibernate.hbm2ddl.auto&quot;, strategy);
+ 
+-            Configuration hConfig = new Configuration()//Configuration object
+-                    .addClass(de.berlios.jfindmyfiles.catalog.entities.AudioData.class)//Add AudioData class
+-                    .addClass(de.berlios.jfindmyfiles.catalog.entities.DiskGroup.class)//Add DiskGroup class
+-                    .addClass(de.berlios.jfindmyfiles.catalog.entities.FileWrapper.class)//Add FileWrapper class
+-                    .addClass(de.berlios.jfindmyfiles.catalog.entities.ImageData.class)//Add ImageData class
+-                    .addClass(de.berlios.jfindmyfiles.catalog.entities.Label.class)//Add Label class
+-                    .addClass(de.berlios.jfindmyfiles.catalog.entities.Loan.class)//Add Loan class
+-                    .addClass(de.berlios.jfindmyfiles.catalog.entities.Media.class)//Add Media class
+-                    .addClass(de.berlios.jfindmyfiles.catalog.entities.Type.class)//Add Type class
+-                    .addClass(de.berlios.jfindmyfiles.catalog.entities.User.class)//Add User class
+-                    .addClass(de.berlios.jfindmyfiles.catalog.entities.VideoData.class)//Add VideoData class
+-                    .addClass(de.berlios.jfindmyfiles.catalog.entities.CatalogProperties.class)//Add CatalogProperties class
+-                    .setProperty(&quot;hibernate.connection.pool_size&quot;, &quot;1&quot;)//JDBC connection pool (use the built-in)
+-                    .setProperty(&quot;hibernate.current_session_context_class&quot;, &quot;thread&quot;)//Enable Hibernate's automatic session context management
+-                    .setProperty(&quot;hibernate.transaction.factory_class&quot;, &quot;org.hibernate.transaction.JDBCTransactionFactory&quot;)//Who manages the transaction
+-                    .setProperty(&quot;hibernate.cache.provider_class&quot;, &quot;org.hibernate.cache.NoCacheProvider&quot;)//Disable the second-level cache
+-                    .setProperty(&quot;hibernate.show_sql&quot;, &quot;true&quot;)//Echo all executed SQL to stdout
+-                    .setProperty(&quot;hibernate.hbm2ddl.auto&quot;, &quot;create&quot;)//TODO: remove this line and replace with proper one
+-                    .setProperty(&quot;hibernate.connection.autocommit&quot;, &quot;false&quot;);//Setting autocommit to false
+-
+             switch (dbType) {
+                 case <A HREF="FIREBIRD://TODO:">FIREBIRD://TODO:</A> change for FIREBIRD database engine
+ 
+@@ -130,8 +121,6 @@
+             sessionFactory = hConfig.buildSessionFactory();
+ 
+         } catch (Throwable ex) {//TODO: proper logging
+-            // Make sure you log the exception, as it might be swallowed
+-
+             System.err.println(&quot;HIBERNATE: Initial SessionFactory creation failed.&quot; + ex);
+             throw new ExceptionInInitializerError(ex);
+         }
+@@ -150,7 +139,7 @@
+     public void openCatalog(String dbname, String dburl, String port, int dbType,
+             String username, String password) {
+ 
+-        recreateConnection(dbname, dburl, port, username, password, dbType);
++        recreateConnection(dbname, dburl, port, username, password, dbType, true);
+ 
+         //Reading catalog properties
+         Session cSession = sessionFactory.getCurrentSession();
+@@ -171,7 +160,7 @@
+     public void createCatalog(String dbname, String dburl, String port, int dbType,
+             String username, String password) {
+ 
+-        recreateConnection(dbname, dburl, port, username, password, dbType);
++        recreateConnection(dbname, dburl, port, username, password, dbType, false);
+ 
+         //Create and save catalog properties
+         Session cSession = sessionFactory.getCurrentSession();
+@@ -181,7 +170,8 @@
+         properties.setCreationDate(new Date());
+         cSession.save(properties);
+         cSession.getTransaction().commit();
+-    //TODO: notify listeners
++        //TODO: notify listeners
++        fireCatalogCreated();
+     }
+ 
+     /**
+@@ -345,6 +335,21 @@
+         }*/
+     }
+ 
++    //NOTE: TEMP CODE!
++    public void addListener(CatalogEngineListener l) {
++        if(listeners == null) {
++            listeners = new Vector&lt;CatalogEngineListener&gt;();
++        }
++        listeners.add(l);
++    }
++    
++    private void fireCatalogCreated() {
++        if(listeners != null) {
++            for(CatalogEngineListener l : listeners) {
++                l.catalogCreated();
++            }
++        }
++    }
+     /**
+      * In overriding the finalize method we try to garantee that data is 
+      * flushed and all resources are released.
+
+Added: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -0,0 +1,21 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.catalog;
++
++/**
++ *
++ * @author knitter
++ */
++public interface CatalogEngineListener {
++    
++    void catalogCreated();
++    void catalogOpened();
++    void diskGroupAdded();
++    void diskGroupRemoved();
++    void diskGroupRenamed();
++    void diskAdded();
++    void diskRemoved();
++}
+
+
+Property changes on: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/CatalogEngineListener.java
+___________________________________________________________________
+Name: svn:eol-style
+   + native
+
+Modified: trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml
+===================================================================
+--- trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/utils/hibernate.general.cfg.xml	2008-05-21 00:32:22 UTC (rev 116)
+@@ -30,15 +30,21 @@
+ 
+         &lt;!-- Enable Hibernate's automatic session context management --&gt;
+         &lt;property name=&quot;current_session_context_class&quot;&gt;thread&lt;/property&gt;
++        
++        &lt;!-- Who manages the transaction --&gt;
++        &lt;property name=&quot;transaction.factory_class&quot;&gt;org.hibernate.transaction.JDBCTransactionFactory&lt;/property&gt;
+ 
+         &lt;!-- Disable the second-level cache  --&gt;
+         &lt;property name=&quot;cache.provider_class&quot;&gt;org.hibernate.cache.NoCacheProvider&lt;/property&gt;
+ 
+         &lt;!-- Echo all executed SQL to stdout --&gt;
+         &lt;property name=&quot;show_sql&quot;&gt;true&lt;/property&gt;
++
++        &lt;!-- Setting autocommit to false --&gt;
++        &lt;property name=&quot;connection.autocommit&quot;&gt;false&lt;/property&gt;
+         
+         &lt;!-- //TODO: remove this line and replace with proper one --&gt;
+-        &lt;property name=&quot;hbm2ddl.auto&quot;&gt;create&lt;/property&gt;
++        &lt;!-- &lt;property name=&quot;hbm2ddl.auto&quot;&gt;create&lt;/property&gt; --&gt;
+ 
+         &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/AudioData.hbm.xml&quot;/&gt;
+         &lt;mapping resource=&quot;de/berlios/jfindmyfiles/catalog/entities/DiskGroup.hbm.xml&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/NavigationTreeTopComponent.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -20,6 +20,7 @@
+ package de.berlios.jfindmyfiles.jfindmyfilesgui;
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
++import de.berlios.jfindmyfiles.catalog.CatalogEngineListener;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.CatalogNode;
+ import de.berlios.jfindmyfiles.jfindmyfilesgui.nodes.DiskNode;
+ import java.awt.BorderLayout;
+@@ -38,7 +39,7 @@
+  * Top component which displays an explorer like tree with currently opened 
+  * catalogs and all stored information.
+  */
+-final class NavigationTreeTopComponent extends TopComponent implements ExplorerManager.Provider {
++final class NavigationTreeTopComponent extends TopComponent implements ExplorerManager.Provider, CatalogEngineListener {
+ 
+     /* Components added to show nodes */
+     private final ExplorerManager manager = new ExplorerManager();
+@@ -47,6 +48,9 @@
+     /** path to the icon used by the component and its open action */
+ //    static final String ICON_PATH = &quot;SET/PATH/TO/ICON/HERE&quot;;
+     private static final String PREFERRED_ID = &quot;NavigationTreeTopComponent&quot;;
++    
++    //
++    private CatalogEngine eng;
+ 
+     private NavigationTreeTopComponent() {
+         //initComponents();
+@@ -54,16 +58,15 @@
+         setName(NbBundle.getMessage(NavigationTreeTopComponent.class, &quot;CTL_NavigationTreeTopComponent&quot;));
+         setToolTipText(NbBundle.getMessage(NavigationTreeTopComponent.class, &quot;HINT_NavigationTreeTopComponent&quot;));
+ //        setIcon(Utilities.loadImage(ICON_PATH, true));
+-        //Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;);
+-        //CatalogEngine en = lu.lookup(CatalogEngine.class);
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
++        eng.addListener(this);
+     }
+ 
+     private void myInitComponents() {
+         setLayout(new BorderLayout());
+         add(view, BorderLayout.CENTER);
+         view.setRootVisible(true);
+-
+-        //manager.setRootContext(new CatalogNode());
++      //manager.setRootContext(new CatalogNode());
+     //Code from the feed reader example, needs to be rewritten
+         /*try {
+     //manager.setRootContext(new RssNode.RootRssNode());
+@@ -167,4 +170,32 @@
+     public ExplorerManager getExplorerManager() {
+         return manager;
+     }
++
++    public void catalogCreated() {
++        manager.setRootContext(new CatalogNode());
++    }
++
++    public void catalogOpened() {
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void diskGroupAdded() {
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void diskGroupRemoved() {
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void diskGroupRenamed() {
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void diskAdded() {
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
++
++    public void diskRemoved() {
++        throw new UnsupportedOperationException(&quot;Not supported yet.&quot;);
++    }
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties	2008-05-21 00:32:22 UTC (rev 116)
+@@ -59,18 +59,18 @@
+ OpenCatalogDlg.jlblPassword.text=Password:
+ OpenCatalogDlg.jlblDatabase.text=Database:
+ OpenCatalogDlg.jlblPort.text=Port:
+-SearchDlg.jpTopPanel.border.title=Pesquisar
++SearchDlg.jpTopPanel.border.title=Search
+ SearchDlg.jlbText.text=Text:
+ SearchDlg.jtfSearchText.text=
+ SearchDlg.jbtnSearch.text=Search
+-SearchDlg.jpOptionsPanel.border.title=Op\u00E7\u00F5es
++SearchDlg.jpOptionsPanel.border.title=Options
+ SearchDlg.jchkSearchInDesc.text=Search in descriptions
+ SearchDlg.jchkCaseSensitive.text=Case sensitive
+ SearchDlg.jchkUseReGex.text=Use Regular Expressions
+-SearchDlg.jpScopePanel.border.title=Ambito
++SearchDlg.jpScopePanel.border.title=Scope
+ SearchDlg.jrdbEntireCatalog.text=Entire Catalog
+ SearchDlg.jrdbDiskGroupOnly.text=Disk Group
+-SearchDlg.jpResults.border.title=Resultados
++SearchDlg.jpResults.border.title=Results
+ SearchDlg.jbtnClose.text=Close
+ NewCatalogDlg.jlbError.text=* - 
+ CatalogPropertiesDlg.jpCatalogData.border.title=Catalog
+@@ -89,3 +89,25 @@
+ CatalogPropertiesDlg.jlblNrFilesValue.text=&lt;insert&gt;
+ CatalogPropertiesDlg.jlblTotalSizeValue.text=&lt;insert&gt;
+ CatalogPropertiesDlg.jlblNrDisksValue.text=&lt;insert&gt;
++ExportDlg.jLabel1.text=jLabel1
++ExportDlg.jLabel2.text=jLabel2
++StatisticsDlg.jButton1.text=Close
++ExportDlg.jPanel3.border.title=Type
++ExportDlg.jButton1.text=Cancel
++ExportDlg.jButton2.text=Export ...
++ExportDlg.jLabel3.text=jLabel3
++ExportDlg.jLabel4.text=jLabel4
++ExportDlg.jButton3.text=Help
++ImportDlg.jButton1.text=Help
++ImportDlg.jButton2.text=Cancel
++ImportDlg.jButton3.text=Import
++ManageUsersDlg.jButton1.text=Close
++ManageUsersDlg.jButton2.text=jButton2
++ManageUsersDlg.jButton3.text=jButton3
++ManageUsersDlg.jButton4.text=jButton4
++LoanDlg.jButton1.text=jButton1
++LoanDlg.jButton2.text=jButton2
++LoanDlg.jButton3.text=Close
++StatisticsDlg.jButton2.text=jButton2
++StatisticsDlg.jButton3.text=jButton3
++StatisticsDlg.jButton4.text=jButton4
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.form	2008-05-21 00:32:22 UTC (rev 116)
+@@ -150,7 +150,7 @@
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Component id=&quot;jlblDescription&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jscrDescription&quot; pref=&quot;132&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jscrDescription&quot; pref=&quot;128&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+@@ -179,7 +179,7 @@
+             &lt;/Property&gt;
+           &lt;/Properties&gt;
+           &lt;AuxValues&gt;
+-            &lt;AuxValue name=&quot;JavaCodeGenerator_CreateCodePost&quot; type=&quot;java.lang.String&quot; value=&quot;jlblIcon.setIcon(new ImageIcon(Utilities.loadImage(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32/icon-catalog.png&quot;))); // NOI18N&quot;/&gt;
++            &lt;AuxValue name=&quot;JavaCodeGenerator_CreateCodePost&quot; type=&quot;java.lang.String&quot; value=&quot;jlblIcon.setIcon(new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32/icon-catalog.png&quot;))); // NOI18N&quot;/&gt;
+           &lt;/AuxValues&gt;
+         &lt;/Component&gt;
+         &lt;Component class=&quot;javax.swing.JSeparator&quot; name=&quot;jSeparator2&quot;&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/CatalogPropertiesDlg.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -82,7 +82,7 @@
+         jlblCatalogName = new javax.swing.JLabel();
+         jlblCreatedOn = new javax.swing.JLabel();
+         jlblIcon = new javax.swing.JLabel();
+-        jlblIcon.setIcon(new ImageIcon(Utilities.loadImage(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32/icon-catalog.png&quot;))); // NOI18N
++        jlblIcon.setIcon(new ImageIcon(Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32/icon-catalog.png&quot;))); // NOI18N
+         jSeparator2 = new javax.swing.JSeparator();
+         jdcCreatedOn = new com.toedter.calendar.JDateChooser();
+         jSeparator1 = new javax.swing.JSeparator();
+@@ -216,7 +216,7 @@
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addComponent(jlblDescription)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addComponent(jscrDescription, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE)
++                .addComponent(jscrDescription, javax.swing.GroupLayout.DEFAULT_SIZE, 128, Short.MAX_VALUE)
+                 .addContainerGap())
+         );
+ 
+@@ -288,7 +288,7 @@
+ 
+ private void jdcCreatedOnPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jdcCreatedOnPropertyChange
+     //NOTE: jcalenar component does no provide events for listning to date 
+-    // changes.    
++    // changes  
+     if (evt.getPropertyName().equals(&quot;date&quot;)) {
+         alterado = true;
+     }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.form	2008-05-21 00:32:22 UTC (rev 116)
+@@ -1,6 +1,72 @@
+ &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+ 
+ &lt;Form version=&quot;1.5&quot; maxVersion=&quot;1.6&quot; type=&quot;org.netbeans.modules.form.forminfo.JDialogFormInfo&quot;&gt;
++  &lt;NonVisualComponents&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel2&quot;&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; pref=&quot;187&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jLabel2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace pref=&quot;213&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; pref=&quot;142&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jLabel2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace pref=&quot;280&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel2&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jLabel2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel1&quot;&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; pref=&quot;146&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jLabel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace pref=&quot;254&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;-2&quot; pref=&quot;170&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jLabel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace pref=&quot;252&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel1&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jLabel1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++  &lt;/NonVisualComponents&gt;
+   &lt;Properties&gt;
+     &lt;Property name=&quot;defaultCloseOperation&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
+   &lt;/Properties&gt;
+@@ -21,13 +87,213 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jPanel3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jPanel4&quot; pref=&quot;357&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jButton2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jButton3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jPanel4&quot; pref=&quot;389&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                  &lt;Component id=&quot;jPanel3&quot; alignment=&quot;1&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jButton3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel3&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++            &lt;TitledBorder title=&quot;Type&quot;&gt;
++              &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jPanel3.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/TitledBorder&gt;
++          &lt;/Border&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jScrollPane1&quot; min=&quot;-2&quot; pref=&quot;114&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jScrollPane1&quot; pref=&quot;348&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Container class=&quot;javax.swing.JScrollPane&quot; name=&quot;jScrollPane1&quot;&gt;
++          &lt;AuxValues&gt;
++            &lt;AuxValue name=&quot;autoScrollPane&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
++          &lt;/AuxValues&gt;
++
++          &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout&quot;/&gt;
++          &lt;SubComponents&gt;
++            &lt;Component class=&quot;javax.swing.JList&quot; name=&quot;jList1&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ListModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ListModelEditor&quot;&gt;
++                  &lt;StringArray count=&quot;5&quot;&gt;
++                    &lt;StringItem index=&quot;0&quot; value=&quot;Item 1&quot;/&gt;
++                    &lt;StringItem index=&quot;1&quot; value=&quot;Item 2&quot;/&gt;
++                    &lt;StringItem index=&quot;2&quot; value=&quot;Item 3&quot;/&gt;
++                    &lt;StringItem index=&quot;3&quot; value=&quot;Item 4&quot;/&gt;
++                    &lt;StringItem index=&quot;4&quot; value=&quot;Item 5&quot;/&gt;
++                  &lt;/StringArray&gt;
++                &lt;/Property&gt;
++              &lt;/Properties&gt;
++              &lt;Events&gt;
++                &lt;EventHandler event=&quot;valueChanged&quot; listener=&quot;javax.swing.event.ListSelectionListener&quot; parameters=&quot;javax.swing.event.ListSelectionEvent&quot; handler=&quot;jList1ValueChanged&quot;/&gt;
++              &lt;/Events&gt;
++            &lt;/Component&gt;
++          &lt;/SubComponents&gt;
++        &lt;/Container&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel4&quot;&gt;
++
++      &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout&quot;/&gt;
++      &lt;SubComponents&gt;
++        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel5&quot;&gt;
++          &lt;Constraints&gt;
++            &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription&quot;&gt;
++              &lt;CardConstraints cardName=&quot;card2&quot;/&gt;
++            &lt;/Constraint&gt;
++          &lt;/Constraints&gt;
++
++          &lt;Layout&gt;
++            &lt;DimensionLayout dim=&quot;0&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;124&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jLabel3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;188&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++            &lt;DimensionLayout dim=&quot;1&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;170&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jLabel3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;202&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++          &lt;/Layout&gt;
++          &lt;SubComponents&gt;
++            &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel3&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++                  &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jLabel3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++                &lt;/Property&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++          &lt;/SubComponents&gt;
++        &lt;/Container&gt;
++        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel6&quot;&gt;
++          &lt;Constraints&gt;
++            &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription&quot;&gt;
++              &lt;CardConstraints cardName=&quot;card3&quot;/&gt;
++            &lt;/Constraint&gt;
++          &lt;/Constraints&gt;
++
++          &lt;Layout&gt;
++            &lt;DimensionLayout dim=&quot;0&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;122&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jLabel4&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;190&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++            &lt;DimensionLayout dim=&quot;1&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;EmptySpace min=&quot;-2&quot; pref=&quot;166&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jLabel4&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace pref=&quot;206&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++          &lt;/Layout&gt;
++          &lt;SubComponents&gt;
++            &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jLabel4&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++                  &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jLabel4.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++                &lt;/Property&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++          &lt;/SubComponents&gt;
++        &lt;/Container&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jButton1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jButton1ActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton2&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jButton2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jButton2ActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton3&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ExportDlg.jButton3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++      &lt;Events&gt;
++        &lt;EventHandler event=&quot;actionPerformed&quot; listener=&quot;java.awt.event.ActionListener&quot; parameters=&quot;java.awt.event.ActionEvent&quot; handler=&quot;jButton3ActionPerformed&quot;/&gt;
++      &lt;/Events&gt;
++    &lt;/Component&gt;
++  &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ExportDlg.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -17,9 +17,11 @@
+  *  along with JFindMyFiles.  If not, see 
+  * &lt;<A HREF="http://www.gnu.org/licenses/gpl.html">http://www.gnu.org/licenses/gpl.html</A>&gt;.
+  */
+-
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.dialogs;
+ 
++import java.awt.BorderLayout;
++import java.awt.CardLayout;
++
+ /**
+  *
+  * @author  knitter
+@@ -30,14 +32,18 @@
+     public ExportDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
+         initComponents();
++        jPanel1.setVisible(true);
++        jPanel2.setVisible(false);
++        this.add(jPanel2, BorderLayout.CENTER);
++        this.add(jPanel1, BorderLayout.CENTER);
+     }
+ 
+     public void showCentered() {
+         setLocation(getParent().getX() + (getParent().getWidth() / 2) - (getWidth() / 2),
+                 getParent().getY() + (getParent().getHeight() / 2) - (getHeight() / 2));
+         setVisible(true);
+-    }  
+-    
++    }
++
+     /** This method is called from within the constructor to
+      * initialize the form.
+      * WARNING: Do NOT modify this code. The content of this method is
+@@ -47,23 +53,231 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jPanel2 = new javax.swing.JPanel();
++        jLabel2 = new javax.swing.JLabel();
++        jPanel1 = new javax.swing.JPanel();
++        jLabel1 = new javax.swing.JLabel();
++        jPanel3 = new javax.swing.JPanel();
++        jScrollPane1 = new javax.swing.JScrollPane();
++        jList1 = new javax.swing.JList();
++        jPanel4 = new javax.swing.JPanel();
++        jPanel5 = new javax.swing.JPanel();
++        jLabel3 = new javax.swing.JLabel();
++        jPanel6 = new javax.swing.JPanel();
++        jLabel4 = new javax.swing.JLabel();
++        jButton1 = new javax.swing.JButton();
++        jButton2 = new javax.swing.JButton();
++        jButton3 = new javax.swing.JButton();
++
++        jLabel2.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jLabel2.text&quot;)); // NOI18N
++
++        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
++        jPanel2.setLayout(jPanel2Layout);
++        jPanel2Layout.setHorizontalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel2Layout.createSequentialGroup()
++                .addGap(187, 187, 187)
++                .addComponent(jLabel2)
++                .addContainerGap(213, Short.MAX_VALUE))
++        );
++        jPanel2Layout.setVerticalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel2Layout.createSequentialGroup()
++                .addGap(142, 142, 142)
++                .addComponent(jLabel2)
++                .addContainerGap(280, Short.MAX_VALUE))
++        );
++
++        jLabel1.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jLabel1.text&quot;)); // NOI18N
++
++        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addGap(146, 146, 146)
++                .addComponent(jLabel1)
++                .addContainerGap(254, Short.MAX_VALUE))
++        );
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addGap(170, 170, 170)
++                .addComponent(jLabel1)
++                .addContainerGap(252, Short.MAX_VALUE))
++        );
++
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
++        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jPanel3.border.title&quot;))); // NOI18N
++
++        jList1.setModel(new javax.swing.AbstractListModel() {
++            String[] strings = { &quot;Item 1&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;, &quot;Item 4&quot;, &quot;Item 5&quot; };
++            public int getSize() { return strings.length; }
++            public Object getElementAt(int i) { return strings[i]; }
++        });
++        jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
++            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
++                jList1ValueChanged(evt);
++            }
++        });
++        jScrollPane1.setViewportView(jList1);
++
++        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
++        jPanel3.setLayout(jPanel3Layout);
++        jPanel3Layout.setHorizontalGroup(
++            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel3Layout.createSequentialGroup()
++                .addContainerGap()
++                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++        );
++        jPanel3Layout.setVerticalGroup(
++            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel3Layout.createSequentialGroup()
++                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 348, Short.MAX_VALUE)
++                .addContainerGap())
++        );
++
++        jPanel4.setLayout(new java.awt.CardLayout());
++
++        jLabel3.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jLabel3.text&quot;)); // NOI18N
++
++        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
++        jPanel5.setLayout(jPanel5Layout);
++        jPanel5Layout.setHorizontalGroup(
++            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel5Layout.createSequentialGroup()
++                .addGap(124, 124, 124)
++                .addComponent(jLabel3)
++                .addContainerGap(188, Short.MAX_VALUE))
++        );
++        jPanel5Layout.setVerticalGroup(
++            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel5Layout.createSequentialGroup()
++                .addGap(170, 170, 170)
++                .addComponent(jLabel3)
++                .addContainerGap(202, Short.MAX_VALUE))
++        );
++
++        jPanel4.add(jPanel5, &quot;card2&quot;);
++
++        jLabel4.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jLabel4.text&quot;)); // NOI18N
++
++        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
++        jPanel6.setLayout(jPanel6Layout);
++        jPanel6Layout.setHorizontalGroup(
++            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel6Layout.createSequentialGroup()
++                .addGap(122, 122, 122)
++                .addComponent(jLabel4)
++                .addContainerGap(190, Short.MAX_VALUE))
++        );
++        jPanel6Layout.setVerticalGroup(
++            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel6Layout.createSequentialGroup()
++                .addGap(166, 166, 166)
++                .addComponent(jLabel4)
++                .addContainerGap(206, Short.MAX_VALUE))
++        );
++
++        jPanel4.add(jPanel6, &quot;card3&quot;);
++
++        jButton1.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jButton1.text&quot;)); // NOI18N
++        jButton1.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jButton1ActionPerformed(evt);
++            }
++        });
++
++        jButton2.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jButton2.text&quot;)); // NOI18N
++        jButton2.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jButton2ActionPerformed(evt);
++            }
++        });
++
++        jButton3.setText(org.openide.util.NbBundle.getMessage(ExportDlg.class, &quot;ExportDlg.jButton3.text&quot;)); // NOI18N
++        jButton3.addActionListener(new java.awt.event.ActionListener() {
++            public void actionPerformed(java.awt.event.ActionEvent evt) {
++                jButton3ActionPerformed(evt);
++            }
++        });
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 400, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addGroup(layout.createSequentialGroup()
++                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE))
++                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                        .addComponent(jButton2)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                        .addComponent(jButton1)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                        .addComponent(jButton3)))
++                .addContainerGap())
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 300, Short.MAX_VALUE)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
++                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
++                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jButton3)
++                    .addComponent(jButton1)
++                    .addComponent(jButton2))
++                .addContainerGap())
+         );
+ 
+         pack();
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+ 
++private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
++    if(jList1.getSelectedIndex() == 0) {
++        CardLayout lay = (CardLayout)jPanel4.getLayout();
++        lay.first(jPanel4);
++    } else {
++        CardLayout lay = (CardLayout)jPanel4.getLayout();
++        lay.last(jPanel4);        
++    }
++}//GEN-LAST:event_jList1ValueChanged
++
++private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
++    dispose();
++}//GEN-LAST:event_jButton1ActionPerformed
++
++private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
++// TODO add your handling code here:
++}//GEN-LAST:event_jButton2ActionPerformed
++
++private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
++// TODO add your handling code here:
++}//GEN-LAST:event_jButton3ActionPerformed
++
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JButton jButton2;
++    private javax.swing.JButton jButton3;
++    private javax.swing.JLabel jLabel1;
++    private javax.swing.JLabel jLabel2;
++    private javax.swing.JLabel jLabel3;
++    private javax.swing.JLabel jLabel4;
++    private javax.swing.JList jList1;
++    private javax.swing.JPanel jPanel1;
++    private javax.swing.JPanel jPanel2;
++    private javax.swing.JPanel jPanel3;
++    private javax.swing.JPanel jPanel4;
++    private javax.swing.JPanel jPanel5;
++    private javax.swing.JPanel jPanel6;
++    private javax.swing.JScrollPane jScrollPane1;
+     // End of variables declaration//GEN-END:variables
+-
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.form	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.form	2008-05-21 00:32:22 UTC (rev 116)
+@@ -21,13 +21,186 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jButton3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jButton2&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jPanel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jPanel2&quot; pref=&quot;342&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jPanel2&quot; pref=&quot;401&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jPanel1&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;3&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton2&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jButton3&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ImportDlg.jButton1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton2&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ImportDlg.jButton2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton3&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ImportDlg.jButton3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++            &lt;TitledBorder/&gt;
++          &lt;/Border&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jScrollPane1&quot; pref=&quot;118&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jScrollPane1&quot; pref=&quot;365&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Container class=&quot;javax.swing.JScrollPane&quot; name=&quot;jScrollPane1&quot;&gt;
++          &lt;AuxValues&gt;
++            &lt;AuxValue name=&quot;autoScrollPane&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
++          &lt;/AuxValues&gt;
++
++          &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout&quot;/&gt;
++          &lt;SubComponents&gt;
++            &lt;Component class=&quot;javax.swing.JList&quot; name=&quot;jList1&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ListModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ListModelEditor&quot;&gt;
++                  &lt;StringArray count=&quot;5&quot;&gt;
++                    &lt;StringItem index=&quot;0&quot; value=&quot;Item 1&quot;/&gt;
++                    &lt;StringItem index=&quot;1&quot; value=&quot;Item 2&quot;/&gt;
++                    &lt;StringItem index=&quot;2&quot; value=&quot;Item 3&quot;/&gt;
++                    &lt;StringItem index=&quot;3&quot; value=&quot;Item 4&quot;/&gt;
++                    &lt;StringItem index=&quot;4&quot; value=&quot;Item 5&quot;/&gt;
++                  &lt;/StringArray&gt;
++                &lt;/Property&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++          &lt;/SubComponents&gt;
++        &lt;/Container&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel2&quot;&gt;
++
++      &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout&quot;/&gt;
++      &lt;SubComponents&gt;
++        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel3&quot;&gt;
++          &lt;Constraints&gt;
++            &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription&quot;&gt;
++              &lt;CardConstraints cardName=&quot;card2&quot;/&gt;
++            &lt;/Constraint&gt;
++          &lt;/Constraints&gt;
++
++          &lt;Layout&gt;
++            &lt;DimensionLayout dim=&quot;0&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;342&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++            &lt;DimensionLayout dim=&quot;1&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;401&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++          &lt;/Layout&gt;
++        &lt;/Container&gt;
++        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel4&quot;&gt;
++          &lt;Constraints&gt;
++            &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription&quot;&gt;
++              &lt;CardConstraints cardName=&quot;card3&quot;/&gt;
++            &lt;/Constraint&gt;
++          &lt;/Constraints&gt;
++
++          &lt;Layout&gt;
++            &lt;DimensionLayout dim=&quot;0&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;342&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++            &lt;DimensionLayout dim=&quot;1&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;401&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++          &lt;/Layout&gt;
++        &lt;/Container&gt;
++        &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel5&quot;&gt;
++          &lt;Constraints&gt;
++            &lt;Constraint layoutClass=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout&quot; value=&quot;org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription&quot;&gt;
++              &lt;CardConstraints cardName=&quot;card4&quot;/&gt;
++            &lt;/Constraint&gt;
++          &lt;/Constraints&gt;
++
++          &lt;Layout&gt;
++            &lt;DimensionLayout dim=&quot;0&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;342&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++            &lt;DimensionLayout dim=&quot;1&quot;&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;EmptySpace min=&quot;0&quot; pref=&quot;401&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;/Group&gt;
++            &lt;/DimensionLayout&gt;
++          &lt;/Layout&gt;
++        &lt;/Container&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++  &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ImportDlg.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -47,23 +47,140 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jButton1 = new javax.swing.JButton();
++        jButton2 = new javax.swing.JButton();
++        jButton3 = new javax.swing.JButton();
++        jPanel1 = new javax.swing.JPanel();
++        jScrollPane1 = new javax.swing.JScrollPane();
++        jList1 = new javax.swing.JList();
++        jPanel2 = new javax.swing.JPanel();
++        jPanel3 = new javax.swing.JPanel();
++        jPanel4 = new javax.swing.JPanel();
++        jPanel5 = new javax.swing.JPanel();
++
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
++        jButton1.setText(org.openide.util.NbBundle.getMessage(ImportDlg.class, &quot;ImportDlg.jButton1.text&quot;)); // NOI18N
++
++        jButton2.setText(org.openide.util.NbBundle.getMessage(ImportDlg.class, &quot;ImportDlg.jButton2.text&quot;)); // NOI18N
++
++        jButton3.setText(org.openide.util.NbBundle.getMessage(ImportDlg.class, &quot;ImportDlg.jButton3.text&quot;)); // NOI18N
++
++        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(&quot;&quot;));
++
++        jList1.setModel(new javax.swing.AbstractListModel() {
++            String[] strings = { &quot;Item 1&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;, &quot;Item 4&quot;, &quot;Item 5&quot; };
++            public int getSize() { return strings.length; }
++            public Object getElementAt(int i) { return strings[i]; }
++        });
++        jScrollPane1.setViewportView(jList1);
++
++        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addContainerGap()
++                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 118, Short.MAX_VALUE)
++                .addContainerGap())
++        );
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGroup(jPanel1Layout.createSequentialGroup()
++                .addContainerGap()
++                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 365, Short.MAX_VALUE)
++                .addContainerGap())
++        );
++
++        jPanel2.setLayout(new java.awt.CardLayout());
++
++        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
++        jPanel3.setLayout(jPanel3Layout);
++        jPanel3Layout.setHorizontalGroup(
++            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 342, Short.MAX_VALUE)
++        );
++        jPanel3Layout.setVerticalGroup(
++            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 401, Short.MAX_VALUE)
++        );
++
++        jPanel2.add(jPanel3, &quot;card2&quot;);
++
++        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
++        jPanel4.setLayout(jPanel4Layout);
++        jPanel4Layout.setHorizontalGroup(
++            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 342, Short.MAX_VALUE)
++        );
++        jPanel4Layout.setVerticalGroup(
++            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 401, Short.MAX_VALUE)
++        );
++
++        jPanel2.add(jPanel4, &quot;card3&quot;);
++
++        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
++        jPanel5.setLayout(jPanel5Layout);
++        jPanel5Layout.setHorizontalGroup(
++            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 342, Short.MAX_VALUE)
++        );
++        jPanel5Layout.setVerticalGroup(
++            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 401, Short.MAX_VALUE)
++        );
++
++        jPanel2.add(jPanel5, &quot;card4&quot;);
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 400, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                        .addComponent(jButton3)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                        .addComponent(jButton2)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                        .addComponent(jButton1))
++                    .addGroup(layout.createSequentialGroup()
++                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 342, Short.MAX_VALUE)))
++                .addContainerGap())
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 300, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 401, Short.MAX_VALUE)
++                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
++                    .addComponent(jButton1)
++                    .addComponent(jButton2)
++                    .addComponent(jButton3))
++                .addContainerGap())
+         );
+ 
+         pack();
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+ 
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JButton jButton2;
++    private javax.swing.JButton jButton3;
++    private javax.swing.JList jList1;
++    private javax.swing.JPanel jPanel1;
++    private javax.swing.JPanel jPanel2;
++    private javax.swing.JPanel jPanel3;
++    private javax.swing.JPanel jPanel4;
++    private javax.swing.JPanel jPanel5;
++    private javax.swing.JScrollPane jScrollPane1;
+     // End of variables declaration//GEN-END:variables
+ 
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/LoanDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/LoanDlg.form	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/LoanDlg.form	2008-05-21 00:32:22 UTC (rev 116)
+@@ -21,13 +21,85 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Component id=&quot;jToolBar1&quot; alignment=&quot;0&quot; pref=&quot;485&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace pref=&quot;426&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++          &lt;Component id=&quot;jScrollPane1&quot; alignment=&quot;0&quot; pref=&quot;485&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Component id=&quot;jToolBar1&quot; min=&quot;-2&quot; pref=&quot;25&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jScrollPane1&quot; pref=&quot;317&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Container class=&quot;javax.swing.JToolBar&quot; name=&quot;jToolBar1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;rollover&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.DesignBoxLayout&quot;/&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton1&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;LoanDlg.jButton1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;focusable&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++            &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;0&quot;/&gt;
++            &lt;Property name=&quot;verticalTextPosition&quot; type=&quot;int&quot; value=&quot;3&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton2&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;LoanDlg.jButton2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;focusable&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++            &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;0&quot;/&gt;
++            &lt;Property name=&quot;verticalTextPosition&quot; type=&quot;int&quot; value=&quot;3&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Container class=&quot;javax.swing.JScrollPane&quot; name=&quot;jScrollPane1&quot;&gt;
++      &lt;AuxValues&gt;
++        &lt;AuxValue name=&quot;autoScrollPane&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
++      &lt;/AuxValues&gt;
++
++      &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout&quot;/&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JTable&quot; name=&quot;jTable1&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;model&quot; type=&quot;javax.swing.table.TableModel&quot; editor=&quot;org.netbeans.modules.form.editors2.TableModelEditor&quot;&gt;
++              &lt;Table columnCount=&quot;4&quot; rowCount=&quot;4&quot;&gt;
++                &lt;Column editable=&quot;true&quot; title=&quot;Title 1&quot; type=&quot;java.lang.Object&quot;/&gt;
++                &lt;Column editable=&quot;true&quot; title=&quot;Title 2&quot; type=&quot;java.lang.Object&quot;/&gt;
++                &lt;Column editable=&quot;true&quot; title=&quot;Title 3&quot; type=&quot;java.lang.Object&quot;/&gt;
++                &lt;Column editable=&quot;true&quot; title=&quot;Title 4&quot; type=&quot;java.lang.Object&quot;/&gt;
++              &lt;/Table&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton3&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;LoanDlg.jButton3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++  &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/LoanDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/LoanDlg.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/LoanDlg.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -46,17 +46,64 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jToolBar1 = new javax.swing.JToolBar();
++        jButton1 = new javax.swing.JButton();
++        jButton2 = new javax.swing.JButton();
++        jScrollPane1 = new javax.swing.JScrollPane();
++        jTable1 = new javax.swing.JTable();
++        jButton3 = new javax.swing.JButton();
++
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
++        jToolBar1.setRollover(true);
++
++        jButton1.setText(org.openide.util.NbBundle.getMessage(LoanDlg.class, &quot;LoanDlg.jButton1.text&quot;)); // NOI18N
++        jButton1.setFocusable(false);
++        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
++        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
++        jToolBar1.add(jButton1);
++
++        jButton2.setText(org.openide.util.NbBundle.getMessage(LoanDlg.class, &quot;LoanDlg.jButton2.text&quot;)); // NOI18N
++        jButton2.setFocusable(false);
++        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
++        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
++        jToolBar1.add(jButton2);
++
++        jTable1.setModel(new javax.swing.table.DefaultTableModel(
++            new Object [][] {
++                {null, null, null, null},
++                {null, null, null, null},
++                {null, null, null, null},
++                {null, null, null, null}
++            },
++            new String [] {
++                &quot;Title 1&quot;, &quot;Title 2&quot;, &quot;Title 3&quot;, &quot;Title 4&quot;
++            }
++        ));
++        jScrollPane1.setViewportView(jTable1);
++
++        jButton3.setText(org.openide.util.NbBundle.getMessage(LoanDlg.class, &quot;LoanDlg.jButton3.text&quot;)); // NOI18N
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 400, Short.MAX_VALUE)
++            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap(426, Short.MAX_VALUE)
++                .addComponent(jButton3)
++                .addContainerGap())
++            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 485, Short.MAX_VALUE)
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 300, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 317, Short.MAX_VALUE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jButton3)
++                .addContainerGap())
+         );
+ 
+         pack();
+@@ -64,6 +111,12 @@
+ 
+ 
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JButton jButton2;
++    private javax.swing.JButton jButton3;
++    private javax.swing.JScrollPane jScrollPane1;
++    private javax.swing.JTable jTable1;
++    private javax.swing.JToolBar jToolBar1;
+     // End of variables declaration//GEN-END:variables
+ 
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ManageUsersDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ManageUsersDlg.form	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ManageUsersDlg.form	2008-05-21 00:32:22 UTC (rev 116)
+@@ -21,13 +21,96 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Component id=&quot;jToolBar1&quot; alignment=&quot;0&quot; pref=&quot;492&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace pref=&quot;433&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++          &lt;Component id=&quot;jScrollPane1&quot; alignment=&quot;0&quot; pref=&quot;492&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Component id=&quot;jToolBar1&quot; min=&quot;-2&quot; pref=&quot;25&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jScrollPane1&quot; pref=&quot;313&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Container class=&quot;javax.swing.JToolBar&quot; name=&quot;jToolBar1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;rollover&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.DesignBoxLayout&quot;/&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton2&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ManageUsersDlg.jButton2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;focusable&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++            &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;0&quot;/&gt;
++            &lt;Property name=&quot;verticalTextPosition&quot; type=&quot;int&quot; value=&quot;3&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton3&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ManageUsersDlg.jButton3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;focusable&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++            &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;0&quot;/&gt;
++            &lt;Property name=&quot;verticalTextPosition&quot; type=&quot;int&quot; value=&quot;3&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton4&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ManageUsersDlg.jButton4.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;focusable&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++            &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;0&quot;/&gt;
++            &lt;Property name=&quot;verticalTextPosition&quot; type=&quot;int&quot; value=&quot;3&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Container class=&quot;javax.swing.JScrollPane&quot; name=&quot;jScrollPane1&quot;&gt;
++      &lt;AuxValues&gt;
++        &lt;AuxValue name=&quot;autoScrollPane&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
++      &lt;/AuxValues&gt;
++
++      &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout&quot;/&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JList&quot; name=&quot;jList1&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ListModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ListModelEditor&quot;&gt;
++              &lt;StringArray count=&quot;5&quot;&gt;
++                &lt;StringItem index=&quot;0&quot; value=&quot;Item 1&quot;/&gt;
++                &lt;StringItem index=&quot;1&quot; value=&quot;Item 2&quot;/&gt;
++                &lt;StringItem index=&quot;2&quot; value=&quot;Item 3&quot;/&gt;
++                &lt;StringItem index=&quot;3&quot; value=&quot;Item 4&quot;/&gt;
++                &lt;StringItem index=&quot;4&quot; value=&quot;Item 5&quot;/&gt;
++              &lt;/StringArray&gt;
++            &lt;/Property&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;ManageUsersDlg.jButton1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++  &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ManageUsersDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ManageUsersDlg.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/ManageUsersDlg.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -47,23 +47,78 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jToolBar1 = new javax.swing.JToolBar();
++        jButton2 = new javax.swing.JButton();
++        jButton3 = new javax.swing.JButton();
++        jButton4 = new javax.swing.JButton();
++        jScrollPane1 = new javax.swing.JScrollPane();
++        jList1 = new javax.swing.JList();
++        jButton1 = new javax.swing.JButton();
++
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
++        jToolBar1.setRollover(true);
++
++        jButton2.setText(org.openide.util.NbBundle.getMessage(ManageUsersDlg.class, &quot;ManageUsersDlg.jButton2.text&quot;)); // NOI18N
++        jButton2.setFocusable(false);
++        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
++        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
++        jToolBar1.add(jButton2);
++
++        jButton3.setText(org.openide.util.NbBundle.getMessage(ManageUsersDlg.class, &quot;ManageUsersDlg.jButton3.text&quot;)); // NOI18N
++        jButton3.setFocusable(false);
++        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
++        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
++        jToolBar1.add(jButton3);
++
++        jButton4.setText(org.openide.util.NbBundle.getMessage(ManageUsersDlg.class, &quot;ManageUsersDlg.jButton4.text&quot;)); // NOI18N
++        jButton4.setFocusable(false);
++        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
++        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
++        jToolBar1.add(jButton4);
++
++        jList1.setModel(new javax.swing.AbstractListModel() {
++            String[] strings = { &quot;Item 1&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;, &quot;Item 4&quot;, &quot;Item 5&quot; };
++            public int getSize() { return strings.length; }
++            public Object getElementAt(int i) { return strings[i]; }
++        });
++        jScrollPane1.setViewportView(jList1);
++
++        jButton1.setText(org.openide.util.NbBundle.getMessage(ManageUsersDlg.class, &quot;ManageUsersDlg.jButton1.text&quot;)); // NOI18N
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 400, Short.MAX_VALUE)
++            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 492, Short.MAX_VALUE)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap(433, Short.MAX_VALUE)
++                .addComponent(jButton1)
++                .addContainerGap())
++            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 492, Short.MAX_VALUE)
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 300, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 313, Short.MAX_VALUE)
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jButton1)
++                .addContainerGap())
+         );
+ 
+         pack();
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+ 
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JButton jButton2;
++    private javax.swing.JButton jButton3;
++    private javax.swing.JButton jButton4;
++    private javax.swing.JList jList1;
++    private javax.swing.JScrollPane jScrollPane1;
++    private javax.swing.JToolBar jToolBar1;
+     // End of variables declaration//GEN-END:variables
+ 
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -360,17 +360,16 @@
+         // the corresponding value.
+         final int dbtype = (jchkUserinternalDB.isSelected() ? CatalogEngine.LOCAL : (selectedname.equals(&quot;Firebird&quot;) ? CatalogEngine.FIREBIRD : (selectedname.equals(&quot;PostgreSQL&quot;) ? CatalogEngine.POSTGRESQL : (selectedname.equals(&quot;MsSQL&quot;) ? CatalogEngine.MSSQL : CatalogEngine.MYSQL))));
+ 
+-        //TODO: could a thread be used? If not, the final from above must be removed.
+-        //new Thread(new Runnable() {
++        new Thread(new Runnable() {
+ 
+-        // public void run() {
+-        eng.createCatalog(jtfName.getText().trim(),
+-                (jchkUserinternalDB.isSelected() ? jtfDestination.getText().trim() : jtfHostname.getText().trim()),
+-                jffPort.getText().trim(), dbtype,
+-                jtfUsername.getText().trim(),
+-                jpfPassword.getPassword().toString());
+-        //}
+-        // }).start();
++            public void run() {
++                eng.createCatalog(jtfName.getText().trim(),
++                        (jchkUserinternalDB.isSelected() ? jtfDestination.getText().trim() : jtfHostname.getText().trim()),
++                        jffPort.getText().trim(), dbtype,
++                        jtfUsername.getText().trim(),
++                        jpfPassword.getPassword().toString());
++            }
++        }).start();
+         dispose();
+     }
+ }//GEN-LAST:event_jbtnCreateActionPerformed
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-05-21 00:32:22 UTC (rev 116)
+@@ -131,7 +131,7 @@
+                       &lt;Component id=&quot;jcbxCatalog&quot; alignment=&quot;3&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                  &lt;Component id=&quot;jpScanningOptions&quot; min=&quot;-2&quot; pref=&quot;180&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jpScanningOptions&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;/Group&gt;
+           &lt;/Group&gt;
+         &lt;/DimensionLayout&gt;
+@@ -258,6 +258,7 @@
+                 &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
+                   &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;NewDiskDlg.jtbSelectedPlugins.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+                 &lt;/Property&gt;
++                &lt;Property name=&quot;enabled&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
+                 &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;2&quot;/&gt;
+               &lt;/Properties&gt;
+               &lt;Events&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -189,6 +189,7 @@
+ 
+         jtbSelectedPlugins.setIcon(new ImageIcon(Utilities.loadImage(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/button-show-plugins.png&quot;)));
+         jtbSelectedPlugins.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jtbSelectedPlugins.text&quot;)); // NOI18N
++        jtbSelectedPlugins.setEnabled(false);
+         jtbSelectedPlugins.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
+         jtbSelectedPlugins.addActionListener(new java.awt.event.ActionListener() {
+             public void actionPerformed(java.awt.event.ActionEvent evt) {
+@@ -265,7 +266,7 @@
+                     .addComponent(jtfDiskName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                     .addComponent(jcbxCatalog, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                .addComponent(jpScanningOptions, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
++                .addComponent(jpScanningOptions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+         );
+ 
+         jbtnHelp.setText(org.openide.util.NbBundle.getMessage(NewDiskDlg.class, &quot;NewDiskDlg.jbtnHelp.text&quot;)); // NOI18N
+@@ -322,7 +323,7 @@
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+ 
+ private void jtbSelectedPluginsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbSelectedPluginsActionPerformed
+-    //TODO:
++    //TODO: show plugin panel
+     if (jtbSelectedPlugins.isSelected()) {
+         jpopPlugins.setLocation(getParent().getX() + this.getX() + jtbSelectedPlugins.getX() + jtbSelectedPlugins.getWidth(),
+                 getParent().getY() + this.getY() + jtbSelectedPlugins.getY() + jtbSelectedPlugins.getHeight() + 48);
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form	2008-05-21 00:32:22 UTC (rev 116)
+@@ -296,9 +296,6 @@
+       &lt;/Events&gt;
+     &lt;/Component&gt;
+     &lt;Component class=&quot;javax.swing.JTextField&quot; name=&quot;jtfName&quot;&gt;
+-      &lt;Properties&gt;
+-        &lt;Property name=&quot;enabled&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
+-      &lt;/Properties&gt;
+     &lt;/Component&gt;
+     &lt;Component class=&quot;javax.swing.JLabel&quot; name=&quot;jlblName&quot;&gt;
+       &lt;Properties&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -23,7 +23,6 @@
+ import java.io.File;
+ import javax.swing.JFileChooser;
+ import org.openide.util.Lookup;
+-import org.openide.util.lookup.Lookups;
+ 
+ public class OpenCatalogDlg extends javax.swing.JDialog {
+ 
+@@ -33,11 +32,8 @@
+     /** Creates new form NewCatalogDlg */
+     public OpenCatalogDlg(java.awt.Frame parent, boolean modal) {
+         super(parent, modal);
++        eng = Lookup.getDefault().lookup(CatalogEngine.class);
+         initComponents();
+-        /*Lookup lu = Lookups.forPath(&quot;/CatalogEngine&quot;); // NOI18N
+-        
+-        eng = lu.lookup(CatalogEngine.class);*/
+-        initComponents();
+         jlbError.setVisible(false);
+     }
+ 
+@@ -47,6 +43,16 @@
+         setVisible(true);
+     }
+ 
++    private String findCatalogName(File folder) {
++        File[] list = folder.listFiles();
++        for (File f : list) {
++            if (f.getName().contains(&quot;.log&quot;)) {
++                return f.getName().substring(0, f.getName().lastIndexOf(&quot;.&quot;));
++            }
++        }
++        return &quot;&quot;;
++    }
++
+     private boolean validateWihtMessages() {
+         if (!jchkUserinternalDB.isSelected() &amp;&amp; jtfName.getText().isEmpty()) {
+             jlbError.setText(&quot;* - Nome n&#195;&#163;o pode ser vazio&quot;); //TODO: i18n
+@@ -110,7 +116,6 @@
+ 
+         //Inputs
+         jtfHostname.setEnabled(state);
+-        jtfName.setEnabled(state);
+         jtfUsername.setEnabled(state);
+         jpfPassword.setEnabled(state);
+         jffPort.setEnabled(state);
+@@ -265,8 +270,6 @@
+             }
+         });
+ 
+-        jtfName.setEnabled(false);
+-
+         jlblName.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.jlblName.text&quot;)); // NOI18N
+ 
+         jlblDestination.setText(org.openide.util.NbBundle.getMessage(OpenCatalogDlg.class, &quot;OpenCatalogDlg.jlblDestination.text&quot;)); // NOI18N
+@@ -362,13 +365,20 @@
+         // if dbtype is selected to local return the CatalogEngine.LOCAL, if not 
+         // check to see what the selected value of the combobox is and return 
+         // the corresponding value.
+-        int dbtype = (jchkUserinternalDB.isSelected() ? CatalogEngine.LOCAL : (selectedname.equals(&quot;Firebird&quot;) ? CatalogEngine.FIREBIRD : (selectedname.equals(&quot;PostgreSQL&quot;) ? CatalogEngine.POSTGRESQL : (selectedname.equals(&quot;MsSQL&quot;) ? CatalogEngine.MSSQL : CatalogEngine.MYSQL))));
++        final int dbtype = (jchkUserinternalDB.isSelected() ? CatalogEngine.LOCAL : (selectedname.equals(&quot;Firebird&quot;) ? CatalogEngine.FIREBIRD : (selectedname.equals(&quot;PostgreSQL&quot;) ? CatalogEngine.POSTGRESQL : (selectedname.equals(&quot;MsSQL&quot;) ? CatalogEngine.MSSQL : CatalogEngine.MYSQL))));
+ 
+-        eng.openCatalog(jtfName.getText().trim(),
+-                (jchkUserinternalDB.isSelected() ? jtfDestination.getText().trim() : jtfHostname.getText().trim()),
+-                jffPort.getText().trim(), dbtype,
+-                jtfUsername.getText().trim(),
+-                jpfPassword.getPassword().toString());
++
++        //TODO: event notification
++        new Thread(new Runnable() {
++
++            public void run() {
++                eng.openCatalog(jtfName.getText().trim(),
++                        (jchkUserinternalDB.isSelected() ? jtfDestination.getText().trim() : jtfHostname.getText().trim()),
++                        jffPort.getText().trim(), dbtype,
++                        jtfUsername.getText().trim(),
++                        jpfPassword.getPassword().toString());
++            }
++        }).start();
+         dispose();
+     }
+ }//GEN-LAST:event_jbtnOpenActionPerformed
+@@ -393,8 +403,8 @@
+     jfc.setMultiSelectionEnabled(false);
+     if (jfc.showOpenDialog(me) == JFileChooser.APPROVE_OPTION) {
+         jtfDestination.setText(jfc.getSelectedFile().getAbsolutePath());
++        jtfName.setText(findCatalogName(jfc.getSelectedFile()));
+     }
+-    //TODO: open file based on containnig folder
+ }//GEN-LAST:event_jbtnBrowseActionPerformed
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     private javax.swing.JSeparator jSeparator1;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.form	2008-05-21 00:32:22 UTC (rev 116)
+@@ -40,7 +40,7 @@
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-              &lt;Component id=&quot;jpTopPanel&quot; min=&quot;-2&quot; pref=&quot;203&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jpTopPanel&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Component id=&quot;jpResults&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -55,7 +55,7 @@
+       &lt;Properties&gt;
+         &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
+           &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
+-            &lt;TitledBorder title=&quot;Pesquisar&quot;&gt;
++            &lt;TitledBorder title=&quot;Search&quot;&gt;
+               &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;SearchDlg.jpTopPanel.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+             &lt;/TitledBorder&gt;
+           &lt;/Border&gt;
+@@ -132,7 +132,7 @@
+           &lt;Properties&gt;
+             &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
+               &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
+-                &lt;TitledBorder title=&quot;Op&amp;#xe7;&amp;#xf5;es&quot;&gt;
++                &lt;TitledBorder title=&quot;Options&quot;&gt;
+                   &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;SearchDlg.jpOptionsPanel.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+                 &lt;/TitledBorder&gt;
+               &lt;/Border&gt;
+@@ -194,7 +194,7 @@
+           &lt;Properties&gt;
+             &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
+               &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
+-                &lt;TitledBorder title=&quot;Ambito&quot;&gt;
++                &lt;TitledBorder title=&quot;Scope&quot;&gt;
+                   &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;SearchDlg.jpScopePanel.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+                 &lt;/TitledBorder&gt;
+               &lt;/Border&gt;
+@@ -282,7 +282,7 @@
+       &lt;Properties&gt;
+         &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
+           &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
+-            &lt;TitledBorder title=&quot;Resultados&quot;&gt;
++            &lt;TitledBorder title=&quot;Results&quot;&gt;
+               &lt;ResourceString PropertyName=&quot;titleX&quot; bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;SearchDlg.jpResults.border.title&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
+             &lt;/TitledBorder&gt;
+           &lt;/Border&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/SearchDlg.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -122,7 +122,7 @@
+                 .addComponent(jchkCaseSensitive)
+                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                 .addComponent(jchkUseReGex)
+-                .addContainerGap(15, Short.MAX_VALUE))
++                .addContainerGap(17, Short.MAX_VALUE))
+         );
+ 
+         jpScopePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(org.openide.util.NbBundle.getMessage(SearchDlg.class, &quot;SearchDlg.jpScopePanel.border.title&quot;))); // NOI18N
+@@ -221,7 +221,7 @@
+         jpResultsLayout.setVerticalGroup(
+             jpResultsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(jpResultsLayout.createSequentialGroup()
+-                .addComponent(jscrResults, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
++                .addComponent(jscrResults, javax.swing.GroupLayout.DEFAULT_SIZE, 239, Short.MAX_VALUE)
+                 .addContainerGap())
+         );
+ 
+@@ -238,14 +238,11 @@
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+             .addGroup(layout.createSequentialGroup()
+                 .addContainerGap()
+-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+-                    .addComponent(jpTopPanel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+-                    .addComponent(jpResults, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jpTopPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                    .addComponent(jpResults, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                    .addComponent(jbtnClose, javax.swing.GroupLayout.Alignment.TRAILING))
+                 .addContainerGap())
+-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                .addContainerGap(499, Short.MAX_VALUE)
+-                .addComponent(jbtnClose)
+-                .addContainerGap())
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/StatisticsDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/StatisticsDlg.form	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/StatisticsDlg.form	2008-05-21 00:32:22 UTC (rev 116)
+@@ -21,13 +21,157 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jButton1&quot; alignment=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jPanel1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++                          &lt;Component id=&quot;jPanel2&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jToolBar1&quot; alignment=&quot;0&quot; pref=&quot;352&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;/Group&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                  &lt;Component id=&quot;jPanel1&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                  &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
++                      &lt;Component id=&quot;jToolBar1&quot; min=&quot;-2&quot; pref=&quot;25&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jPanel2&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
++                  &lt;/Group&gt;
++              &lt;/Group&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;Component id=&quot;jButton1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++              &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
++  &lt;SubComponents&gt;
++    &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++          &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;StatisticsDlg.jButton1.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++    &lt;/Component&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++            &lt;TitledBorder/&gt;
++          &lt;/Border&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Component id=&quot;jScrollPane1&quot; alignment=&quot;0&quot; pref=&quot;159&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;Component id=&quot;jScrollPane1&quot; alignment=&quot;0&quot; pref=&quot;379&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++      &lt;SubComponents&gt;
++        &lt;Container class=&quot;javax.swing.JScrollPane&quot; name=&quot;jScrollPane1&quot;&gt;
++          &lt;AuxValues&gt;
++            &lt;AuxValue name=&quot;autoScrollPane&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
++          &lt;/AuxValues&gt;
++
++          &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout&quot;/&gt;
++          &lt;SubComponents&gt;
++            &lt;Component class=&quot;javax.swing.JList&quot; name=&quot;jList1&quot;&gt;
++              &lt;Properties&gt;
++                &lt;Property name=&quot;model&quot; type=&quot;javax.swing.ListModel&quot; editor=&quot;org.netbeans.modules.form.editors2.ListModelEditor&quot;&gt;
++                  &lt;StringArray count=&quot;5&quot;&gt;
++                    &lt;StringItem index=&quot;0&quot; value=&quot;Item 1&quot;/&gt;
++                    &lt;StringItem index=&quot;1&quot; value=&quot;Item 2&quot;/&gt;
++                    &lt;StringItem index=&quot;2&quot; value=&quot;Item 3&quot;/&gt;
++                    &lt;StringItem index=&quot;3&quot; value=&quot;Item 4&quot;/&gt;
++                    &lt;StringItem index=&quot;4&quot; value=&quot;Item 5&quot;/&gt;
++                  &lt;/StringArray&gt;
++                &lt;/Property&gt;
++              &lt;/Properties&gt;
++            &lt;/Component&gt;
++          &lt;/SubComponents&gt;
++        &lt;/Container&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++    &lt;Container class=&quot;javax.swing.JPanel&quot; name=&quot;jPanel2&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;border&quot; type=&quot;javax.swing.border.Border&quot; editor=&quot;org.netbeans.modules.form.editors2.BorderEditor&quot;&gt;
++          &lt;Border info=&quot;org.netbeans.modules.form.compat2.border.TitledBorderInfo&quot;&gt;
++            &lt;TitledBorder/&gt;
++          &lt;/Border&gt;
++        &lt;/Property&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout&gt;
++        &lt;DimensionLayout dim=&quot;0&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace min=&quot;0&quot; pref=&quot;340&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++        &lt;DimensionLayout dim=&quot;1&quot;&gt;
++          &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++              &lt;EmptySpace min=&quot;0&quot; pref=&quot;348&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;/Group&gt;
++        &lt;/DimensionLayout&gt;
++      &lt;/Layout&gt;
++    &lt;/Container&gt;
++    &lt;Container class=&quot;javax.swing.JToolBar&quot; name=&quot;jToolBar1&quot;&gt;
++      &lt;Properties&gt;
++        &lt;Property name=&quot;floatable&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++        &lt;Property name=&quot;rollover&quot; type=&quot;boolean&quot; value=&quot;true&quot;/&gt;
++      &lt;/Properties&gt;
++
++      &lt;Layout class=&quot;org.netbeans.modules.form.compat2.layouts.DesignBoxLayout&quot;/&gt;
++      &lt;SubComponents&gt;
++        &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton2&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;StatisticsDlg.jButton2.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;focusable&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++            &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;0&quot;/&gt;
++            &lt;Property name=&quot;verticalTextPosition&quot; type=&quot;int&quot; value=&quot;3&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton3&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;StatisticsDlg.jButton3.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;focusable&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++            &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;0&quot;/&gt;
++            &lt;Property name=&quot;verticalTextPosition&quot; type=&quot;int&quot; value=&quot;3&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++        &lt;Component class=&quot;javax.swing.JButton&quot; name=&quot;jButton4&quot;&gt;
++          &lt;Properties&gt;
++            &lt;Property name=&quot;text&quot; type=&quot;java.lang.String&quot; editor=&quot;org.netbeans.modules.i18n.form.FormI18nStringEditor&quot;&gt;
++              &lt;ResourceString bundle=&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/Bundle.properties&quot; key=&quot;StatisticsDlg.jButton4.text&quot; replaceFormat=&quot;org.openide.util.NbBundle.getMessage({sourceFileName}.class, &quot;{key}&quot;)&quot;/&gt;
++            &lt;/Property&gt;
++            &lt;Property name=&quot;focusable&quot; type=&quot;boolean&quot; value=&quot;false&quot;/&gt;
++            &lt;Property name=&quot;horizontalTextPosition&quot; type=&quot;int&quot; value=&quot;0&quot;/&gt;
++            &lt;Property name=&quot;verticalTextPosition&quot; type=&quot;int&quot; value=&quot;3&quot;/&gt;
++          &lt;/Properties&gt;
++        &lt;/Component&gt;
++      &lt;/SubComponents&gt;
++    &lt;/Container&gt;
++  &lt;/SubComponents&gt;
+ &lt;/Form&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/StatisticsDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/StatisticsDlg.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/StatisticsDlg.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -47,23 +47,118 @@
+     // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
+     private void initComponents() {
+ 
++        jButton1 = new javax.swing.JButton();
++        jPanel1 = new javax.swing.JPanel();
++        jScrollPane1 = new javax.swing.JScrollPane();
++        jList1 = new javax.swing.JList();
++        jPanel2 = new javax.swing.JPanel();
++        jToolBar1 = new javax.swing.JToolBar();
++        jButton2 = new javax.swing.JButton();
++        jButton3 = new javax.swing.JButton();
++        jButton4 = new javax.swing.JButton();
++
+         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+ 
++        jButton1.setText(org.openide.util.NbBundle.getMessage(StatisticsDlg.class, &quot;StatisticsDlg.jButton1.text&quot;)); // NOI18N
++
++        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(&quot;&quot;));
++
++        jList1.setModel(new javax.swing.AbstractListModel() {
++            String[] strings = { &quot;Item 1&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;, &quot;Item 4&quot;, &quot;Item 5&quot; };
++            public int getSize() { return strings.length; }
++            public Object getElementAt(int i) { return strings[i]; }
++        });
++        jScrollPane1.setViewportView(jList1);
++
++        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
++        jPanel1.setLayout(jPanel1Layout);
++        jPanel1Layout.setHorizontalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 159, Short.MAX_VALUE)
++        );
++        jPanel1Layout.setVerticalGroup(
++            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
++        );
++
++        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(&quot;&quot;));
++
++        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
++        jPanel2.setLayout(jPanel2Layout);
++        jPanel2Layout.setHorizontalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 340, Short.MAX_VALUE)
++        );
++        jPanel2Layout.setVerticalGroup(
++            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 348, Short.MAX_VALUE)
++        );
++
++        jToolBar1.setFloatable(false);
++        jToolBar1.setRollover(true);
++
++        jButton2.setText(org.openide.util.NbBundle.getMessage(StatisticsDlg.class, &quot;StatisticsDlg.jButton2.text&quot;)); // NOI18N
++        jButton2.setFocusable(false);
++        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
++        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
++        jToolBar1.add(jButton2);
++
++        jButton3.setText(org.openide.util.NbBundle.getMessage(StatisticsDlg.class, &quot;StatisticsDlg.jButton3.text&quot;)); // NOI18N
++        jButton3.setFocusable(false);
++        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
++        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
++        jToolBar1.add(jButton3);
++
++        jButton4.setText(org.openide.util.NbBundle.getMessage(StatisticsDlg.class, &quot;StatisticsDlg.jButton4.text&quot;)); // NOI18N
++        jButton4.setFocusable(false);
++        jButton4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
++        jButton4.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
++        jToolBar1.add(jButton4);
++
+         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+         getContentPane().setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 400, Short.MAX_VALUE)
++            .addGroup(layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING)
++                    .addGroup(layout.createSequentialGroup()
++                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                            .addComponent(jToolBar1, javax.swing.GroupLayout.DEFAULT_SIZE, 352, Short.MAX_VALUE))))
++                .addContainerGap())
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-            .addGap(0, 300, Short.MAX_VALUE)
++            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
++                .addContainerGap()
++                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
++                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
++                    .addGroup(layout.createSequentialGroup()
++                        .addComponent(jToolBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
++                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
++                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
++                .addComponent(jButton1)
++                .addContainerGap())
+         );
+ 
+         pack();
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+ 
+     // Variables declaration - do not modify//GEN-BEGIN:variables
++    private javax.swing.JButton jButton1;
++    private javax.swing.JButton jButton2;
++    private javax.swing.JButton jButton3;
++    private javax.swing.JButton jButton4;
++    private javax.swing.JList jList1;
++    private javax.swing.JPanel jPanel1;
++    private javax.swing.JPanel jPanel2;
++    private javax.swing.JScrollPane jScrollPane1;
++    private javax.swing.JToolBar jToolBar1;
+     // End of variables declaration//GEN-END:variables
+ 
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/CatalogNode.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -19,10 +19,15 @@
+  */
+ package de.berlios.jfindmyfiles.jfindmyfilesgui.nodes;
+ 
++import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import java.awt.Image;
++import java.util.List;
+ import org.openide.nodes.AbstractNode;
++import org.openide.nodes.ChildFactory;
+ import org.openide.nodes.Children;
++import org.openide.util.Lookup;
+ import org.openide.util.Utilities;
++import org.openide.util.actions.SystemAction;
+ 
+ /**
+  *
+@@ -30,18 +35,26 @@
+  */
+ public class CatalogNode extends AbstractNode {
+     
+-    public CatalogNode() {
+-        super(Children.LEAF);
++    public CatalogNode() {              
++        //super(Children.create(new CatalogChildNodesFactory(), true));
++        super(Children.LEAF);//TODO: populate child nodes
++        CatalogEngine eng = Lookup.getDefault().lookup(CatalogEngine.class);
++        setName(eng.getProperties().getName());
+     }
+     
+     @Override
+     public Image getIcon(int type) {
+-        return Utilities.loadImage(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-catalog.png&quot;); // NOI18N
++        return Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-catalog.png&quot;); // NOI18N
+     }
+     
+     @Override
+     public Image getOpenedIcon(int type) {
+         return getIcon(type);
+     }
+-
++    
++    @Override
++    public SystemAction[] getActions(boolean bool) {
++        return null;
++    }
++    
+ }
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskGroupNode.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -37,7 +37,7 @@
+     
+     @Override
+     public Image getIcon(int type) {
+-        return Utilities.loadImage(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-disk-group.png&quot;); // NOI18N
++        return Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-disk-group.png&quot;); // NOI18N
+     }
+     
+     @Override
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes/DiskNode.java	2008-05-21 00:32:22 UTC (rev 116)
+@@ -38,7 +38,7 @@
+     @Override
+     public Image getIcon(int type) {
+         //TODO: depending on the  type of media give the right icon
+-        return Utilities.loadImage(&quot;/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-media-drive-optical.png&quot;); // NOI18N
++        return Utilities.loadImage(&quot;de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16/icon-media-drive-optical.png&quot;); // NOI18N
+     }
+     
+     @Override
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/splash.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/splash.png
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties	2008-05-19 23:55:16 UTC (rev 115)
++++ trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/Bundle.properties	2008-05-21 00:32:22 UTC (rev 116)
+@@ -1,4 +1,8 @@
+-currentVersion=JFindMyFiles {0}
+-LBL_splash_window_title=Starting JFindMyFiles
+-SplashProgressBarBounds=0,249,473,3
+-SplashRunningTextBounds=23,260,160,12
++currentVersion=JFindMyFiles {0}
++LBL_splash_window_title=Starting JFindMyFiles
++SPLASH_HEIGHT=252
++SPLASH_WIDTH=259
++SplashProgressBarBounds=0,131,259,6
++SplashProgressBarColor=0xFF0000
++SplashRunningTextBounds=53,224,87,6
++SplashRunningTextFontSize=9
+
+Added: trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/splash.gif
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/project/JFindMyFiles/branding/core/core.jar/org/netbeans/core/startup/splash.gif
+___________________________________________________________________
+Name: svn:mime-type
+   + application/octet-stream
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000110.html">[Jfindmyfiles-commits] r115 - in trunk: docs docs/Iteracao5-CB02	project/JFindMyFiles/Catalog/src	project/JFindMyFiles/Catalog/src/META-INF	project/JFindMyFiles/Catalog/src/META-INF/services	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs
+</A></li>
+	<LI>Next message: <A HREF="000112.html">[Jfindmyfiles-commits] r117 - trunk/docs/Documentos Externos
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#111">[ date ]</a>
+              <a href="thread.html#111">[ thread ]</a>
+              <a href="subject.html#111">[ subject ]</a>
+              <a href="author.html#111">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

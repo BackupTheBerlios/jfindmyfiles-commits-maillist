@@ -1,0 +1,601 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r271 - in trunk: media/site-images site	site/sys
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-September/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r271%20-%20in%20trunk%3A%20media/site-images%20site%0A%09site/sys&In-Reply-To=%3C200809172320.m8HNKaEg003024%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000263.html">
+   
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r271 - in trunk: media/site-images site	site/sys</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r271%20-%20in%20trunk%3A%20media/site-images%20site%0A%09site/sys&In-Reply-To=%3C200809172320.m8HNKaEg003024%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r271 - in trunk: media/site-images site	site/sys">knitter at mail.berlios.de
+       </A><BR>
+    <I>Thu Sep 18 01:20:36 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000263.html">[Jfindmyfiles-commits] r270 - in trunk: docs media	media/site-images media/xcfs site site/sys site/sys/images
+</A></li>
+        
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#264">[ date ]</a>
+              <a href="thread.html#264">[ thread ]</a>
+              <a href="subject.html#264">[ subject ]</a>
+              <a href="author.html#264">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-09-18 01:19:06 +0200 (Thu, 18 Sep 2008)
+New Revision: 271
+
+Added:
+   trunk/media/site-images/credits.png
+   trunk/site/credits.html
+Modified:
+   trunk/site/bugs.html
+   trunk/site/contact.html
+   trunk/site/download.html
+   trunk/site/features.html
+   trunk/site/index.html
+   trunk/site/screenshots.html
+   trunk/site/sys/css.css
+Log:
+Completed the new site.
+
+Added: trunk/media/site-images/credits.png
+===================================================================
+(Binary files differ)
+
+
+Property changes on: trunk/media/site-images/credits.png
+___________________________________________________________________
+Name: svn:executable
+   + *
+Name: svn:mime-type
+   + application/octet-stream
+
+Modified: trunk/site/bugs.html
+===================================================================
+--- trunk/site/bugs.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/bugs.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -17,7 +17,7 @@
+                     &lt;li&gt;&lt;img src=&quot;sys/images/one.png&quot;/&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/two.png&quot;/&gt;&lt;a href=&quot;features.html&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/three.png&quot;/&gt;&lt;a href=&quot;download.html&quot;&gt;Download&lt;/a&gt;&lt;/li&gt;
+-                    &lt;li&gt;&lt;img src=&quot;sys/images/four.png&quot;/&gt;&lt;a href=&quot;screenshots.html&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
++                    &lt;li&gt;&lt;img src=&quot;sys/images/four.png&quot;/&gt;&lt;a href=&quot;<A HREF="http://developer.berlios.de/screenshots/?group_id=9315">http://developer.berlios.de/screenshots/?group_id=9315</A>&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/five.png&quot;/&gt;&lt;a href=&quot;bugs.html&quot;&gt;Bugs&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/six.png&quot;/&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                 &lt;/ul&gt;
+@@ -28,33 +28,22 @@
+ 
+         &lt;/div&gt;
+         &lt;div class=&quot;clear&quot;&gt;
+-        &lt;div id=&quot;search&quot;&gt;&lt;form&gt;&lt;label&gt;search:&lt;/label&gt; &lt;input type=&quot;text&quot;/&gt; &lt;input type=&quot;submit&quot; value=&quot;&gt;&gt;&quot;/&gt;&lt;/form&gt;&lt;/div&gt;
+         &lt;div id=&quot;content&quot;&gt;
+-            &lt;h1 id=&quot;bugs-title&quot;&gt;Bugs&lt;/h1&gt;
+-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec faucibus volutpat lectus. Integer egestas porta nunc. Cras hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean consectetuer. Cras pharetra. Duis lobortis gravida lorem. Mauris convallis dui sit amet urna. Fusce lacinia erat at tortor. Nulla eget ipsum ac neque dignissim aliquet. Aliquam id purus. Nulla at odio id purus posuere viverra. Vivamus magna tellus, bibendum et, lobortis sed, facilisis et, lacus. Nam eros orci, semper nec, sagittis eu, pretium vel, sapien. Suspendisse dapibus, quam ut pharetra eleifend, metus ante euismod pede, nec scelerisque nibh urna id ligula. Aliquam facilisis porttitor purus. Nulla facilisi. Suspendisse dapibus ligula non nunc. Praesent at odio. Donec eget libero.&lt;/p&gt;
++            &lt;h1 id=&quot;bugs&quot; class=&quot;title&quot;&gt;Bugs&lt;/h1&gt;
++            &lt;div id=&quot;text&quot;&gt;
++                &lt;p&gt;Identifying and submitting bugs is one of the most helpful and useful tasks a user can undertake to contribute to this project. While developing JFindMyFiles, even with all the testing, some problems go unnoticed.&lt;/p&gt;
+ 
+-&lt;p&gt;Ut id elit. Integer commodo porttitor diam. Ut interdum mauris et elit. Vestibulum augue. Etiam ligula. Proin ultrices. Curabitur blandit. Quisque dapibus mi vel mi mattis accumsan. Cras id mi. Mauris egestas sapien sit amet turpis. Donec id sem eget tellus dapibus mollis. Nam vel orci facilisis felis fermentum imperdiet.&lt;/p&gt;
+-
+-&lt;p&gt;Phasellus vehicula. Vestibulum a neque vel mi gravida lobortis. Sed ac diam. Integer vehicula ornare elit. Nullam leo. Donec rhoncus vehicula metus. Integer ac odio. Aliquam eros est, auctor nec, luctus at, facilisis eget, felis. Sed quis quam. Cras molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam quis sapien. Ut urna. Nunc at ligula. Duis bibendum erat sed tellus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis eget nisi. Nunc laoreet. Proin odio. In bibendum auctor nibh.&lt;/p&gt;
+-
+-&lt;p&gt;Submitting a bug is something very important for developers. They are often in need of feedback on their projects. You can in BerliOS submit a bug for any project. For this, you just need to be logged in.
+-
+-Submitting a bug
+-
+-Just go on the Bug Tracking system for a project, and then click on Submit.
+-
+-First, you must choose a category and a group for the bug you will submit. Categories and groups are set up by a project administrator. Categories are equivalent to project parts (i.e : Server, Graphics, Engine , ...), and Bug groups define types of bugs (i.e : Unreproducible, Missing Feature ...). If no categories or bug groups are defined, just let &quot;none&quot; and a project administrator will classify the bug himself.
+-
+-After that, enter a quick description of the bug in the summary field. This description must be as clear as possible.
+-
+-Then enter the details in the details Box. And click on the Submit button to end this bug report. You'll be noticed when the bug will be closed. &lt;/p&gt;
++                &lt;p&gt;&lt;h2&gt;Submitting a bug&lt;/h2&gt;
++                To submit a bug you need to be registered in &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot;&gt;berliOS&lt;/a&gt; so that you can use the report system page available to every project.&lt;/p&gt;
++                
++                &lt;p&gt;After you have registered and logged in please follow &lt;a href=&quot;<A HREF="http://developer.berlios.de/bugs/?group_id=9315">http://developer.berlios.de/bugs/?group_id=9315</A>&quot;&gt;this link&lt;/a&gt; and place you bug if it's not already there.&lt;/p&gt;
++            &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;bslogo&quot;&gt;
+-            &lt;img id=&quot;hidden-berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=0">http://developer.berlios.de/bslogo.php?group_id=0</A>&quot; border=&quot;0&quot; alt=&quot;BerliOS Logo&quot; /&gt;
+-            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot; &gt;&lt;img src=&quot;sys/images/bslogo.png&quot; alt=&quot;BerliOS Logo&quot;/&gt;&lt;/a&gt;
++            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot;&gt;&lt;img id=&quot;berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=9315">http://developer.berlios.de/bslogo.php?group_id=9315</A>&quot; alt=&quot;BerliOS Logo&quot; /&gt;&lt;/a&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;footer&quot;&gt;
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;#&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;credits.html&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;amp;warning=2&amp;amp;profile=css2&amp;amp;usermedium=all">http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all</A>&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/bugs.html">http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/bugs.html</A>&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
+         &lt;/div&gt;
+ &lt;/div&gt;
+     &lt;/body&gt;
+
+Modified: trunk/site/contact.html
+===================================================================
+--- trunk/site/contact.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/contact.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -17,7 +17,7 @@
+                     &lt;li&gt;&lt;img src=&quot;sys/images/one.png&quot;/&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/two.png&quot;/&gt;&lt;a href=&quot;features.html&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/three.png&quot;/&gt;&lt;a href=&quot;download.html&quot;&gt;Download&lt;/a&gt;&lt;/li&gt;
+-                    &lt;li&gt;&lt;img src=&quot;sys/images/four.png&quot;/&gt;&lt;a href=&quot;screenshots.html&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
++                    &lt;li&gt;&lt;img src=&quot;sys/images/four.png&quot;/&gt;&lt;a href=&quot;<A HREF="http://developer.berlios.de/screenshots/?group_id=9315">http://developer.berlios.de/screenshots/?group_id=9315</A>&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/five.png&quot;/&gt;&lt;a href=&quot;bugs.html&quot;&gt;Bugs&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/six.png&quot;/&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                 &lt;/ul&gt;
+@@ -28,23 +28,18 @@
+ 
+         &lt;/div&gt;
+         &lt;div class=&quot;clear&quot;&gt;
+-        &lt;div id=&quot;search&quot;&gt;&lt;form&gt;&lt;label&gt;search:&lt;/label&gt; &lt;input type=&quot;text&quot;/&gt; &lt;input type=&quot;submit&quot; value=&quot;&gt;&gt;&quot;/&gt;&lt;/form&gt;&lt;/div&gt;
+         &lt;div id=&quot;content&quot;&gt;
+-            &lt;h1 id=&quot;contact-title&quot;&gt;Contact us&lt;/h1&gt;
+-            &lt;p&gt;&lt;form method=&quot;post&quot; action=&quot;contactus.php&quot;&gt;
+-                &lt;label for=&quot;name&quot;&gt;Your Name: &lt;/label&gt;&lt;input id=&quot;name&quot; name=&quot;name&quot; type=&quot;text&quot; /&gt;&lt;span class=&quot;required&quot;&gt;*&lt;/span&gt;&lt;br /&gt;
+-                &lt;label for=&quot;email&quot;&gt;Your Email: &lt;/label&gt;&lt;input id=&quot;email&quot; name=&quot;email&quot; type=&quot;text&quot; /&gt;&lt;span class=&quot;required&quot;&gt;*&lt;/span&gt;&lt;br /&gt;
+-                &lt;label for=&quot;subject&quot;&gt;Message Subject: &lt;/label&gt;&lt;input id=&quot;subject&quot; name=&quot;subject&quot; type=&quot;text&quot; /&gt;&lt;br /&gt;
+-                &lt;label for=&quot;message&quot;&gt;Message:&lt;/label&gt;&lt;textarea id=&quot;message&quot; name=&quot;messagem&quot;&gt;&lt;/textarea&gt;&lt;span class=&quot;required&quot;&gt;*&lt;/span&gt;&lt;br /&gt;
+-                &lt;input id=&quot;send&quot; name=&quot;send&quot; type=&quot;submit&quot; value=&quot;Send Message&quot; /&gt; &lt;input id=&quot;clear&quot; name=&quot;clear&quot; type=&quot;reset&quot; /&gt;
+-            &lt;/form&gt;&lt;/p&gt;
++            &lt;h1 id=&quot;contact&quot; class=&quot;title&quot;&gt;Contact us&lt;/h1&gt;
++            &lt;div id=&quot;text&quot;&gt;
++                &lt;p&gt;There is a &lt;a href=&quot;<A HREF="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-users">https://lists.berlios.de/mailman/listinfo/jfindmyfiles-users</A>&quot;&gt;mailing list for users&lt;/a&gt;, where you can ask questions and provide any feedback you want. This is the preferred way to get help.&lt;/p&gt;
++                &lt;p&gt;Besides the mailing list you can send me a message using the &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot;&gt;berliOS&lt;/a&gt; system, you just need to be a registered user to be able to send me e-mails. I'll try to reply to you as soon as possible, but please understand that replying to every e-mail I get takes some time.&lt;/p&gt;
++            &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;bslogo&quot;&gt;
+-            &lt;img id=&quot;hidden-berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=0">http://developer.berlios.de/bslogo.php?group_id=0</A>&quot; border=&quot;0&quot; alt=&quot;BerliOS Logo&quot; /&gt;
+-            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot; title=&quot;BerliOS Developer&quot;&gt;&lt;img src=&quot;sys/images/bslogo.png&quot; alt=&quot;BerliOS Logo&quot;/&gt;&lt;/a&gt;
++            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot;&gt;&lt;img id=&quot;berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=9315">http://developer.berlios.de/bslogo.php?group_id=9315</A>&quot; alt=&quot;BerliOS Logo&quot; /&gt;&lt;/a&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;footer&quot;&gt;
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;#&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;credits.html&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;amp;warning=2&amp;amp;profile=css2&amp;amp;usermedium=all">http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all</A>&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/contact.html">http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/contact.html</A>&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
+         &lt;/div&gt;
+ &lt;/div&gt;
+     &lt;/body&gt;
+
+Added: trunk/site/credits.html
+===================================================================
+--- trunk/site/credits.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/credits.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -0,0 +1,47 @@
++&lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;<A HREF="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd</A>&quot;&gt;
++&lt;html&gt;
++    &lt;head&gt;
++        &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=iso-8859-1&quot; /&gt;
++        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;sys/css.css&quot; /&gt;
++        &lt;title&gt;JFindMyFiles :: Credits&lt;/title&gt;
++    &lt;/head&gt;
++    &lt;body&gt;
++&lt;div id=&quot;container&quot;&gt;
++        &lt;div id=&quot;top&quot;&gt;
++            &lt;div id=&quot;top-left&quot;&gt;&lt;/div&gt;
++
++            &lt;div id=&quot;empty-left&quot;&gt;&lt;/div&gt;
++
++            &lt;div id=&quot;menu&quot;&gt;
++                &lt;ul&gt;
++                    &lt;li&gt;&lt;img src=&quot;sys/images/one.png&quot;/&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
++                    &lt;li&gt;&lt;img src=&quot;sys/images/two.png&quot;/&gt;&lt;a href=&quot;features.html&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
++                    &lt;li&gt;&lt;img src=&quot;sys/images/three.png&quot;/&gt;&lt;a href=&quot;download.html&quot;&gt;Download&lt;/a&gt;&lt;/li&gt;
++                    &lt;li&gt;&lt;img src=&quot;sys/images/four.png&quot;/&gt;&lt;a href=&quot;<A HREF="http://developer.berlios.de/screenshots/?group_id=9315">http://developer.berlios.de/screenshots/?group_id=9315</A>&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
++                    &lt;li&gt;&lt;img src=&quot;sys/images/five.png&quot;/&gt;&lt;a href=&quot;bugs.html&quot;&gt;Bugs&lt;/a&gt;&lt;/li&gt;
++                    &lt;li&gt;&lt;img src=&quot;sys/images/six.png&quot;/&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
++                &lt;/ul&gt;
++            &lt;/div&gt;
++
++           &lt;div id=&quot;empty-right&quot;&gt;&lt;/div&gt;
++           &lt;div id=&quot;top-right&quot;&gt;&lt;/div&gt;
++
++        &lt;/div&gt;
++        &lt;div class=&quot;clear&quot;&gt;
++        &lt;div id=&quot;content&quot;&gt;
++            &lt;h1 id=&quot;credits&quot; class=&quot;title&quot;&gt;Due Credits&lt;/h1&gt;
++            &lt;div id=&quot;text&quot;&gt;
++                &lt;p&gt;This site uses icons from the &lt;a href=&quot;<A HREF="http://gnome-look.org/content/show.php/Desert?content=87416">http://gnome-look.org/content/show.php/Desert?content=87416</A>&quot;&gt;Desert III&lt;/a&gt; icon pack created by &lt;a href=&quot;<A HREF="http://rodolphe.bachelart1.free.fr/">http://rodolphe.bachelart1.free.fr/</A>&quot;&gt;Rodolphe&lt;/a&gt;&lt;/p&gt;
++
++                &lt;p&gt;Current JFindMyFiles icons are taken from the official &lt;a href=&quot;<A HREF="http://www.gnome.org/">http://www.gnome.org/</A>&quot;&gt;Gnome&lt;/a&gt; Theme.&lt;/p&gt;
++            &lt;/div&gt;
++        &lt;/div&gt;
++        &lt;div id=&quot;bslogo&quot;&gt;
++            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot;&gt;&lt;img id=&quot;berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=9315">http://developer.berlios.de/bslogo.php?group_id=9315</A>&quot; alt=&quot;BerliOS Logo&quot; /&gt;&lt;/a&gt;
++        &lt;/div&gt;
++        &lt;div id=&quot;footer&quot;&gt;
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;credits.html&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;amp;warning=2&amp;amp;profile=css2&amp;amp;usermedium=all">http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all</A>&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/credits.html">http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/credits.html</A>&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
++        &lt;/div&gt;
++&lt;/div&gt;
++    &lt;/body&gt;
++&lt;/html&gt;
+
+Modified: trunk/site/download.html
+===================================================================
+--- trunk/site/download.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/download.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -17,7 +17,7 @@
+                     &lt;li&gt;&lt;img src=&quot;sys/images/one.png&quot;/&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/two.png&quot;/&gt;&lt;a href=&quot;features.html&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/three.png&quot;/&gt;&lt;a href=&quot;download.html&quot;&gt;Download&lt;/a&gt;&lt;/li&gt;
+-                    &lt;li&gt;&lt;img src=&quot;sys/images/four.png&quot;/&gt;&lt;a href=&quot;screenshots.html&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
++                    &lt;li&gt;&lt;img src=&quot;sys/images/four.png&quot;/&gt;&lt;a href=&quot;<A HREF="http://developer.berlios.de/screenshots/?group_id=9315">http://developer.berlios.de/screenshots/?group_id=9315</A>&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/five.png&quot;/&gt;&lt;a href=&quot;bugs.html&quot;&gt;Bugs&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/six.png&quot;/&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                 &lt;/ul&gt;
+@@ -28,16 +28,29 @@
+ 
+         &lt;/div&gt;
+         &lt;div class=&quot;clear&quot;&gt;
+-        &lt;div id=&quot;search&quot;&gt;&lt;form&gt;&lt;label&gt;search:&lt;/label&gt; &lt;input type=&quot;text&quot;/&gt; &lt;input type=&quot;submit&quot; value=&quot;&gt;&gt;&quot;/&gt;&lt;/form&gt;&lt;/div&gt;
+         &lt;div id=&quot;content&quot;&gt;
+-            &lt;h1 id=&quot;download-title&quot;&gt;Download JFindMyFiles&lt;/h1&gt;
++            &lt;h1 id=&quot;download&quot; class=&quot;title&quot;&gt;Download JFindMyFiles&lt;/h1&gt;
++            &lt;div id=&quot;text&quot;&gt;
++                &lt;p&gt;The current version of JFindMyFiles, 0.5.254, is a developer version, this means it's a release that has testing purposes and is not suitable for end users.&lt;/p&gt;
++                &lt;p&gt;You can download the lastest developer version as a:
++                    &lt;ul&gt;
++                        &lt;li&gt;&lt;a href=&quot;<A HREF="http://prdownload.berlios.de/jfindmyfiles/jfindmyfiles.0.5.254_installer.jar">http://prdownload.berlios.de/jfindmyfiles/jfindmyfiles.0.5.254_installer.jar</A>&quot;&gt;installer jar&lt;/a&gt;&lt;/li&gt;
++                        &lt;li&gt;&lt;a href=&quot;<A HREF="http://prdownload.berlios.de/jfindmyfiles/jfindmyfiles.0.5.254.zip">http://prdownload.berlios.de/jfindmyfiles/jfindmyfiles.0.5.254.zip</A>&quot;&gt;zip file&lt;/a&gt;&lt;/li&gt;
++                    &lt;/ul&gt;
++                    A list of all available files can be found &lt;a href=&quot;<A HREF="http://developer.berlios.de/project/showfiles.php?group_id=9315">http://developer.berlios.de/project/showfiles.php?group_id=9315</A>&quot;&gt;here&lt;/a&gt;.
++                &lt;/p&gt;
++                &lt;p&gt;If you're interested in the code you'll need an SVN client. Windows users should try &lt;a href=&quot;<A HREF="http://tortoisesvn.tigris.org/">http://tortoisesvn.tigris.org/</A>&quot;&gt;TortoiseSVN&lt;/a&gt;, a graphical client that integrates with Windows' shell, for Linux and Mac OS, a graphical choice can be &lt;a href=&quot;<A HREF="http://www.syntevo.com/smartsvn/index.html">http://www.syntevo.com/smartsvn/index.html</A>&quot;&gt;SmartSVN&lt;/a&gt;.&lt;/p&gt;
++                &lt;p&gt;Anonymous SVN access can be achieved using the SVN protocol,&lt;br /&gt;
++                &lt;code&gt;svn checkout <A HREF="svn://svn.berlios.de/jfindmyfiles/trunk&lt;/code">svn://svn.berlios.de/jfindmyfiles/trunk&lt;/code</A>&gt; &lt;br /&gt;&lt;br /&gt;or through HTTP, &lt;br /&gt; &lt;code&gt;<A HREF="http://svn.berlios.de/svnroot/repos/jfindmyfiles/trunk&lt;/code">http://svn.berlios.de/svnroot/repos/jfindmyfiles/trunk&lt;/code</A>&gt;
++                &lt;/p&gt;
++                &lt;p&gt;If you only want to browse the source, and not download it, you can use &lt;a href=&quot;<A HREF="http://svn.berlios.de/wsvn/jfindmyfiles">http://svn.berlios.de/wsvn/jfindmyfiles</A>&quot;&gt;WebSVN&lt;/a&gt;, &lt;a href=&quot;<A HREF="http://svn.berlios.de/viewcvs/jfindmyfiles/">http://svn.berlios.de/viewcvs/jfindmyfiles/</A>&quot;&gt;ViewCVS&lt;/a&gt; or simply &lt;a href=&quot;<A HREF="http://svn.berlios.de/svnroot/repos/jfindmyfiles/">http://svn.berlios.de/svnroot/repos/jfindmyfiles/</A>&quot;&gt;HTTP&lt;/a&gt;&lt;/p&gt;
++            &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;bslogo&quot;&gt;
+-            &lt;img id=&quot;hidden-berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=0">http://developer.berlios.de/bslogo.php?group_id=0</A>&quot; border=&quot;0&quot; alt=&quot;Hidden BerliOS Logo&quot; /&gt;
+-            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot; title=&quot;BerliOS Developer&quot;&gt;&lt;img src=&quot;sys/images/bslogo.png&quot; alt=&quot;BerliOS Logo&quot;/&gt;&lt;/a&gt;
++            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot;&gt;&lt;img id=&quot;berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=9315">http://developer.berlios.de/bslogo.php?group_id=9315</A>&quot; alt=&quot;BerliOS Logo&quot; /&gt;&lt;/a&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;footer&quot;&gt;
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;#&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;credits.html&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;amp;warning=2&amp;amp;profile=css2&amp;amp;usermedium=all">http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all</A>&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/download.html">http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/download.html</A>&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
+         &lt;/div&gt;
+ &lt;/div&gt;
+     &lt;/body&gt;
+
+Modified: trunk/site/features.html
+===================================================================
+--- trunk/site/features.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/features.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -17,7 +17,7 @@
+                     &lt;li&gt;&lt;img src=&quot;sys/images/one.png&quot;/&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/two.png&quot;/&gt;&lt;a href=&quot;features.html&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/three.png&quot;/&gt;&lt;a href=&quot;download.html&quot;&gt;Download&lt;/a&gt;&lt;/li&gt;
+-                    &lt;li&gt;&lt;img src=&quot;sys/images/four.png&quot;/&gt;&lt;a href=&quot;screenshots.html&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
++                    &lt;li&gt;&lt;img src=&quot;sys/images/four.png&quot;/&gt;&lt;a href=&quot;<A HREF="http://developer.berlios.de/screenshots/?group_id=9315">http://developer.berlios.de/screenshots/?group_id=9315</A>&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/five.png&quot;/&gt;&lt;a href=&quot;bugs.html&quot;&gt;Bugs&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/six.png&quot;/&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                 &lt;/ul&gt;
+@@ -28,27 +28,24 @@
+ 
+         &lt;/div&gt;
+         &lt;div class=&quot;clear&quot;&gt;
+-        &lt;div id=&quot;search&quot;&gt;&lt;form&gt;&lt;label&gt;search:&lt;/label&gt; &lt;input type=&quot;text&quot;/&gt; &lt;input type=&quot;submit&quot; value=&quot;&gt;&gt;&quot;/&gt;&lt;/form&gt;&lt;/div&gt;
+         &lt;div id=&quot;content&quot;&gt;
+-            &lt;h1 id=&quot;features-title&quot;&gt;JFindMyFiles Feature List&lt;/h1&gt;
+-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec faucibus volutpat lectus. Integer egestas porta nunc. Cras hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean consectetuer. Cras pharetra. Duis lobortis gravida lorem. Mauris convallis dui sit amet urna. Fusce lacinia erat at tortor. Nulla eget ipsum ac neque dignissim aliquet. Aliquam id purus. Nulla at odio id purus posuere viverra. Vivamus magna tellus, bibendum et, lobortis sed, facilisis et, lacus. Nam eros orci, semper nec, sagittis eu, pretium vel, sapien. Suspendisse dapibus, quam ut pharetra eleifend, metus ante euismod pede, nec scelerisque nibh urna id ligula. Aliquam facilisis porttitor purus. Nulla facilisi. Suspendisse dapibus ligula non nunc. Praesent at odio. Donec eget libero.&lt;/p&gt;
+-
+-            &lt;ul&gt;
+-                &lt;li&gt;Platform independent software allowing you to use any operation system for which a Java is available;&lt;/li&gt;
+-                &lt;li&gt;Can catalog you hard drives, CD-ROM drives, floppies, mapped and normal network folders;&lt;/li&gt;
+-                &lt;li&gt;Allows for simple search or using regular expressions;&lt;/li&gt;
+-                &lt;li&gt;Allows exporting of data to XML and CSV formats and export using HTML templates that you can create;&lt;/li&gt;
+-                &lt;li&gt;Using the plugin API you can add new file types or provide information from different sources to known types.&lt;/li&gt;
+-            &lt;/ul&gt;
+-
+-&lt;p&gt;Phasellus vehicula. Vestibulum a neque vel mi gravida lobortis. Sed ac diam. Integer vehicula ornare elit. Nullam leo. Donec rhoncus vehicula metus. Integer ac odio. Aliquam eros est, auctor nec, luctus at, facilisis eget, felis. Sed quis quam. Cras molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam quis sapien. Ut urna. Nunc at ligula. Duis bibendum erat sed tellus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis eget nisi. Nunc laoreet. Proin odio. In bibendum auctor nibh.&lt;/p&gt;
++            &lt;h1 id=&quot;features&quot; class=&quot;title&quot;&gt;JFindMyFiles Feature List&lt;/h1&gt;
++            &lt;div id=&quot;text&quot;&gt;
++                &lt;p&gt;The listed features are those I intend to provide in the software and not those already available, as stated in the &lt;a href=&quot;index.html&quot;&gt;home page&lt;/a&gt;, I'm having a break from the development, until then, you can at leat see what the software will have.&lt;/p&gt;
++                &lt;ul&gt;
++                    &lt;li&gt;Platform independent software allowing you to use any operation system for which a Java is available;&lt;/li&gt;
++                    &lt;li&gt;Can catalog you hard drives, CD-ROM drives, floppies, mapped and normal network folders;&lt;/li&gt;
++                    &lt;li&gt;Allows for simple search or using regular expressions;&lt;/li&gt;
++                    &lt;li&gt;Allows exporting of data to XML and CSV formats and export using HTML templates that you can create;&lt;/li&gt;
++                    &lt;li&gt;Using the Plugin API you can add new file types or provide information from different sources to known types.&lt;/li&gt;
++                &lt;/ul&gt;
++            &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;bslogo&quot;&gt;
+-            &lt;img id=&quot;hidden-berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=0">http://developer.berlios.de/bslogo.php?group_id=0</A>&quot; border=&quot;0&quot; alt=&quot;BerliOS Logo&quot; /&gt;
+-            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot; title=&quot;BerliOS Developer&quot;&gt;&lt;img src=&quot;sys/images/bslogo.png&quot; alt=&quot;BerliOS Logo&quot;/&gt;&lt;/a&gt;
++            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot;&gt;&lt;img id=&quot;berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=9315">http://developer.berlios.de/bslogo.php?group_id=9315</A>&quot; alt=&quot;BerliOS Logo&quot; /&gt;&lt;/a&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;footer&quot;&gt;
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;#&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;credits.html&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;amp;warning=2&amp;amp;profile=css2&amp;amp;usermedium=all">http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all</A>&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/features.html">http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de/features.html</A>&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
+         &lt;/div&gt;
+ &lt;/div&gt;
+     &lt;/body&gt;
+
+Modified: trunk/site/index.html
+===================================================================
+--- trunk/site/index.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/index.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -17,7 +17,7 @@
+                     &lt;li&gt;&lt;img src=&quot;sys/images/one.png&quot;/&gt;&lt;a href=&quot;index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/two.png&quot;/&gt;&lt;a href=&quot;features.html&quot;&gt;Features&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/three.png&quot;/&gt;&lt;a href=&quot;download.html&quot;&gt;Download&lt;/a&gt;&lt;/li&gt;
+-                    &lt;li&gt;&lt;img src=&quot;sys/images/four.png&quot;/&gt;&lt;a href=&quot;screenshots.html&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
++                    &lt;li&gt;&lt;img src=&quot;sys/images/four.png&quot;/&gt;&lt;a href=&quot;<A HREF="http://developer.berlios.de/screenshots/?group_id=9315">http://developer.berlios.de/screenshots/?group_id=9315</A>&quot;&gt;Screenshots&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/five.png&quot;/&gt;&lt;a href=&quot;bugs.html&quot;&gt;Bugs&lt;/a&gt;&lt;/li&gt;
+                     &lt;li&gt;&lt;img src=&quot;sys/images/six.png&quot;/&gt;&lt;a href=&quot;contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                 &lt;/ul&gt;
+@@ -28,25 +28,26 @@
+ 
+         &lt;/div&gt;
+         &lt;div class=&quot;clear&quot;&gt;
+-        &lt;div id=&quot;search&quot;&gt;&lt;form&gt;&lt;label&gt;search:&lt;/label&gt; &lt;input type=&quot;text&quot;/&gt; &lt;input type=&quot;submit&quot; value=&quot;&gt;&gt;&quot;/&gt;&lt;/form&gt;&lt;/div&gt;
+         &lt;div id=&quot;content&quot;&gt;
+-            &lt;h1 id=&quot;home-title&quot;&gt;News&lt;/h1&gt;
+-&lt;p&gt;Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec faucibus volutpat lectus. Integer egestas porta nunc. Cras hendrerit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean consectetuer. Cras pharetra. Duis lobortis gravida lorem. Mauris convallis dui sit amet urna. Fusce lacinia erat at tortor. Nulla eget ipsum ac neque dignissim aliquet. Aliquam id purus. Nulla at odio id purus posuere viverra. Vivamus magna tellus, bibendum et, lobortis sed, facilisis et, lacus. Nam eros orci, semper nec, sagittis eu, pretium vel, sapien. Suspendisse dapibus, quam ut pharetra eleifend, metus ante euismod pede, nec scelerisque nibh urna id ligula. Aliquam facilisis porttitor purus. Nulla facilisi. Suspendisse dapibus ligula non nunc. Praesent at odio. Donec eget libero.&lt;/p&gt;
++            &lt;h1 id=&quot;home&quot; class=&quot;title&quot;&gt;News&lt;/h1&gt;
++            &lt;div id=&quot;text&quot;&gt;
++                &lt;h3&gt;JfindMyFiles is released!&lt;/h3&gt;
++                &lt;p&gt;After about 4 months of development the first official release is here. Not much of a release I must admit, but with the end of my course's project, and my graduation, I plan to improve the existing code and work hard on the software so that all objectives are achieved.&lt;/p&gt;
+ 
+-&lt;p&gt;Ut id elit. Integer commodo porttitor diam. Ut interdum mauris et elit. Vestibulum augue. Etiam ligula. Proin ultrices. Curabitur blandit. Quisque dapibus mi vel mi mattis accumsan. Cras id mi. Mauris egestas sapien sit amet turpis. Donec id sem eget tellus dapibus mollis. Nam vel orci facilisis felis fermentum imperdiet.&lt;/p&gt;
++                &lt;p&gt;The current release targets developers and not end users as the software is not yet usable, though much of what were the objectives set forth in the beginning are implemented, there are lots of usability and stability issues to consider this software usable.&lt;/p&gt;
+ 
+-&lt;p&gt;Phasellus vehicula. Vestibulum a neque vel mi gravida lobortis. Sed ac diam. Integer vehicula ornare elit. Nullam leo. Donec rhoncus vehicula metus. Integer ac odio. Aliquam eros est, auctor nec, luctus at, facilisis eget, felis. Sed quis quam. Cras molestie. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam quis sapien. Ut urna. Nunc at ligula. Duis bibendum erat sed tellus. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis eget nisi. Nunc laoreet. Proin odio. In bibendum auctor nibh.&lt;/p&gt;
++                &lt;p&gt;Along with the release comes the new site, the HTML pages that were here before had no information, just a bunch or ranting on what I wanted to create.&lt;/p&gt;
+ 
+-&lt;p&gt;Vestibulum aliquet pede. Proin nec diam. Vestibulum non metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer laoreet. Cras lacinia. Nullam fringilla, arcu ullamcorper commodo molestie, tellus neque tempor dolor, non feugiat diam felis nec purus. Proin nisl arcu, viverra a, fringilla eget, hendrerit id, lorem. Nulla feugiat eros id sapien. Curabitur consequat tincidunt ante. Praesent vitae orci. Vivamus feugiat viverra arcu. Sed nec enim a mauris ullamcorper auctor. Aenean semper tempor nulla. Morbi lectus. Aenean malesuada mi ac orci. Aliquam turpis sapien, molestie facilisis, imperdiet vitae, hendrerit eu, dui. Quisque scelerisque malesuada tortor. Donec augue neque, tempor a, placerat ac, condimentum ac, metus.&lt;/p&gt;
++                &lt;p&gt;Now I'm going to take a brake from all my projects, JFindMyFiles included, and after a period in which I intend to recharge my batteries, I'll come back to update the software to a new platform, correct many of the existing bugs and release the 1.0 version. See you soon.&lt;/p&gt;
+ 
+-&lt;p&gt;In hendrerit cursus purus. Donec nibh. Proin condimentum. Aliquam erat volutpat. Fusce id massa at nunc sodales porttitor. Nullam non justo sed ante imperdiet malesuada. In pretium suscipit mi. In leo pede, tempor mollis, tristique suscipit, luctus et, est. Quisque ipsum. In hac habitasse platea dictumst. Donec volutpat. Ut est. Suspendisse sem. Nullam justo. Nunc nulla metus, egestas ac, pharetra sit amet, aliquam vitae, lectus.&lt;/p&gt;
++                &lt;p&gt;&lt;/p&gt;
++            &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;bslogo&quot;&gt;
+-            &lt;img id=&quot;hidden-berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=0">http://developer.berlios.de/bslogo.php?group_id=0</A>&quot; border=&quot;0&quot; alt=&quot;BerliOS Logo&quot; /&gt;
+-            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot; title=&quot;BerliOS Developer&quot;&gt;&lt;img src=&quot;sys/images/bslogo.png&quot; alt=&quot;BerliOS Logo&quot;/&gt;&lt;/a&gt;
++            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot;&gt;&lt;img id=&quot;berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=9315">http://developer.berlios.de/bslogo.php?group_id=9315</A>&quot; alt=&quot;BerliOS Logo&quot; /&gt;&lt;/a&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;footer&quot;&gt;
+-            &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;#&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
++            &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;credits.html&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;amp;warning=2&amp;amp;profile=css2&amp;amp;usermedium=all">http://jigsaw.w3.org/css-validator/validator?uri=http://jfindmyfiles.berlios.de/sys/css.css&amp;warning=2&amp;profile=css2&amp;usermedium=all</A>&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;<A HREF="http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de">http://validator.w3.org/check?uri=http://jfindmyfiles.berlios.de</A>&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
+         &lt;/div&gt;
+ &lt;/div&gt;
+     &lt;/body&gt;
+
+Modified: trunk/site/screenshots.html
+===================================================================
+--- trunk/site/screenshots.html	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/screenshots.html	2008-09-17 23:19:06 UTC (rev 271)
+@@ -28,13 +28,14 @@
+ 
+         &lt;/div&gt;
+         &lt;div class=&quot;clear&quot;&gt;
+-        &lt;div id=&quot;search&quot;&gt;&lt;form&gt;&lt;label&gt;search:&lt;/label&gt; &lt;input type=&quot;text&quot;/&gt; &lt;input type=&quot;submit&quot; value=&quot;&gt;&gt;&quot;/&gt;&lt;/form&gt;&lt;/div&gt;
+         &lt;div id=&quot;content&quot;&gt;
+-            &lt;h1 id=&quot;screenshots-title&quot;&gt;See the Screenshots&lt;/h1&gt;
++            &lt;h1 id=&quot;screenshots&quot; class=&quot;title&quot;&gt;See the Screenshots&lt;/h1&gt;
++            &lt;div id=&quot;text&quot;&gt;
++                &lt;p&gt;Screenshots are avalable through the project page at berliOS, please &lt;a href=&quot;<A HREF="http://developer.berlios.de/screenshots/?group_id=9315">http://developer.berlios.de/screenshots/?group_id=9315</A>&quot;&gt;see them here&lt;/a&gt;&lt;/p&gt;
++            &lt;/div&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;bslogo&quot;&gt;
+-            &lt;img id=&quot;hidden-berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=0">http://developer.berlios.de/bslogo.php?group_id=0</A>&quot; border=&quot;0&quot; alt=&quot;BerliOS Logo&quot; /&gt;
+-            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot; title=&quot;BerliOS Developer&quot;&gt;&lt;img src=&quot;sys/images/bslogo.png&quot; alt=&quot;BerliOS Logo&quot;/&gt;&lt;/a&gt;
++            &lt;a href=&quot;<A HREF="http://developer.berlios.de">http://developer.berlios.de</A>&quot;&gt;&lt;img id=&quot;berlioslogo&quot; src=&quot;<A HREF="http://developer.berlios.de/bslogo.php?group_id=0">http://developer.berlios.de/bslogo.php?group_id=0</A>&quot; alt=&quot;BerliOS Logo&quot; /&gt;&lt;/a&gt;
+         &lt;/div&gt;
+         &lt;div id=&quot;footer&quot;&gt;
+             &copy; 2008 JFindMyFiles Team. All rights reserved :: &lt;a href=&quot;#&quot;&gt;Credits&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;Valid CSS&lt;/a&gt; :: &lt;a href=&quot;#&quot;&gt;XHTML 1.0 Strict&lt;/a&gt;
+
+Modified: trunk/site/sys/css.css
+===================================================================
+--- trunk/site/sys/css.css	2008-08-31 22:25:03 UTC (rev 270)
++++ trunk/site/sys/css.css	2008-09-17 23:19:06 UTC (rev 271)
+@@ -31,27 +31,27 @@
+ #empty-left {
+     background-color: #2f4090;
+     float: left;
+-    width: 190px;
++    width: 200px;
+     height: 100%;
+ }
+ 
+ #empty-right {
+     background-color: #2f4090;
+     float: left;
+-    width: 101px;
++    width: 141px;
+     height: 100%;
+ }
+ 
+ #menu {
+     background-color: white;
+-    width: 220px;
++    width: 170px;
+     height: 100%;
+     float:left;
+ }
+ 
+ #menu ul {
+-    margin-right: 1em;
+-    margin-top: 0;
++    margin: 0;
++    padding: 0;
+ }
+ 
+ #menu ul li {
+@@ -64,6 +64,7 @@
+ 
+ #menu li img {
+     margin-right: 1em;
++    margin-left: 1em;
+     margin-bottom: 0;
+ }
+ 
+@@ -78,6 +79,11 @@
+     width: 100%;
+ }
+ 
++#text {
++    margin: 0 auto;
++    width: 95%;
++}
++
+ #footer {
+     margin: 2em auto;
+     background-color: inherit;
+@@ -92,97 +98,47 @@
+     border: none;
+ }
+ 
+-a, a:visited{
++a, a:visited {
+     text-decoration: none;
+     color: blue;
+ }
+ 
++a:hover {
++    text-decoration: underline;
++}
++
+ .clear {
+     clear: both;
+ }
+ 
+-#home-title {
+-    background: transparent url(images/home.png) no-repeat;
++.title {
+     border-bottom-style: solid;
+     border-bottom-color: blue;
+     border-bottom-width: 1px;
+     height: 128px;
+     padding-left: 128px;
+     line-height: 128px;
++    text-align: right;
+ }
+ 
+-#features-title {
+-    background: transparent url(images/text.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
++#home {background: transparent url(images/home.png) no-repeat;}
++#features {background: transparent url(images/text.png) no-repeat;}
++#download {background: transparent url(images/download.png) no-repeat;}
++#screenshots {background: transparent url(images/screenshots.png) no-repeat;}
++#bugs {background: transparent url(images/dialog-warning.png) no-repeat;}
++#contact {background: transparent url(images/contact.png) no-repeat;}
++#credits {background: transparent url(images/credits.png) no-repeat;}
+ 
+-#download-title {
+-    background: transparent url(images/download.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
+-
+-#screenshots-title {
+-    background: transparent url(images/screenshots.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
+-
+-#bugs-title {
+-    background: transparent url(images/dialog-warning.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
+-
+-#contact-title {
+-    background: transparent url(images/contact.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
+-
+-#credits-title {
+-    background: transparent url(images/emblem-note.png) no-repeat;
+-    border-bottom-style: solid;
+-    border-bottom-color: blue;
+-    border-bottom-width: 1px;
+-    height: 128px;
+-    padding-left: 128px;
+-    line-height: 128px;
+-}
+-
+-#hidden-berlioslogo {
+-    width:0;
+-    height:0;
+-    display:none;
+-}
+-
+ #bslogo {
+     text-align: right;
+     height: 32px;
+     width: 100%;
+ }
+ 
+-.required {
+-    color: red;
++h1 {
++    color: #42515e;
++}
++
++h3 {
++    color: green;
+ }
+\ No newline at end of file
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000263.html">[Jfindmyfiles-commits] r270 - in trunk: docs media	media/site-images media/xcfs site site/sys site/sys/images
+</A></li>
+	
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#264">[ date ]</a>
+              <a href="thread.html#264">[ thread ]</a>
+              <a href="subject.html#264">[ subject ]</a>
+              <a href="author.html#264">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

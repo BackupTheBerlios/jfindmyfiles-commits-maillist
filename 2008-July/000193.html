@@ -1,0 +1,798 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r198 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. dialogs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r198%20-%20in%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%3A%0A%09.%20dialogs&In-Reply-To=%3C200807121919.m6CJJ4rR003867%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000192.html">
+   <LINK REL="Next"  HREF="000194.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r198 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. dialogs</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r198%20-%20in%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%3A%0A%09.%20dialogs&In-Reply-To=%3C200807121919.m6CJJ4rR003867%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r198 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. dialogs">knitter at mail.berlios.de
+       </A><BR>
+    <I>Sat Jul 12 21:19:04 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000192.html">[Jfindmyfiles-commits] r197 - in trunk: docs media/icons/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins
+</A></li>
+        <LI>Next message: <A HREF="000194.html">[Jfindmyfiles-commits] r199 - trunk/project/JFindMyFiles/JDBCDrivers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#193">[ date ]</a>
+              <a href="thread.html#193">[ thread ]</a>
+              <a href="subject.html#193">[ subject ]</a>
+              <a href="author.html#193">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-07-12 21:18:53 +0200 (Sat, 12 Jul 2008)
+New Revision: 198
+
+Added:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewAction.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponent.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponentSettings.xml
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponentWstcref.xml
+Modified:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+Log:
+Actualiza?\195?\167?\195?\163o ?\195?\160 interface gr?\195?\161fica.
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/Bundle.properties	2008-07-12 19:18:53 UTC (rev 198)
+@@ -31,6 +31,8 @@
+ CTL_ManageUsersTopComponent=ManageUsers Window
+ CTL_SearchWindowAction=SearchWindow
+ CTL_SearchWindowTopComponent=SearchWindow Window
++CTL_SingleViewAction=SingleView
++CTL_SingleViewTopComponent=SingleView Window
+ CTL_StatisticsAction=Statistics
+ CTL_StatisticsTopComponent=Statistics Window
+ CTL_WindowTestingAction=WindowTesting
+@@ -41,6 +43,7 @@
+ HINT_LoanTopComponent=This is a Loan window
+ HINT_ManageUsersTopComponent=This is a ManageUsers window
+ HINT_SearchWindowTopComponent=This is a SearchWindow window
++HINT_SingleViewTopComponent=This is a SingleView window
+ HINT_StatisticsTopComponent=This is a Statistics window
+ HINT_WindowTestingTopComponent=This is a WindowTesting window
+ Installer.ClosingMessage=Exit JFindMyFiles?\n\nYou can change this behavior in the options panel.
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.form	2008-07-12 19:18:53 UTC (rev 198)
+@@ -15,12 +15,12 @@
+   &lt;Layout&gt;
+     &lt;DimensionLayout dim=&quot;0&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;468&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;EmptySpace min=&quot;0&quot; pref=&quot;358&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+     &lt;DimensionLayout dim=&quot;1&quot;&gt;
+       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-          &lt;EmptySpace min=&quot;0&quot; pref=&quot;342&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++          &lt;EmptySpace min=&quot;0&quot; pref=&quot;92&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+       &lt;/Group&gt;
+     &lt;/DimensionLayout&gt;
+   &lt;/Layout&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/DetailsViewTopComponent.java	2008-07-12 19:18:53 UTC (rev 198)
+@@ -24,13 +24,18 @@
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
+ import de.berlios.jfindmyfiles.catalog.entities.FileWrapper;
+ import de.berlios.jfindmyfiles.catalog.entities.Media;
++import java.awt.BorderLayout;
+ import java.io.Serializable;
+ import java.util.ArrayList;
+ import java.util.Collection;
+ import java.util.List;
+ import java.util.logging.Logger;
++import javax.swing.JFrame;
+ import javax.swing.table.AbstractTableModel;
+ import org.hibernate.Session;
++import org.openide.explorer.ExplorerManager;
++import org.openide.explorer.view.ListView;
++import org.openide.nodes.Node;
+ import org.openide.util.Lookup;
+ import org.openide.util.LookupEvent;
+ import org.openide.util.LookupListener;
+@@ -43,20 +48,32 @@
+ /**
+  * Top component which displays something.
+  */
+-final class DetailsViewTopComponent extends TopComponent {
++final class DetailsViewTopComponent extends TopComponent implements ExplorerManager.Provider, LookupListener {
+ 
+     private static DetailsViewTopComponent instance;
+     private static final String PREFERRED_ID = &quot;DetailsViewTopComponent&quot;;
+-    private CatalogEngine eng;
++    private ExplorerManager manager;
++    private ListView view;
++    private Lookup.Result engineLookup;
++    private Lookup.Result mediaLookup;
++    private Lookup.Result fileLookup;
++    private Lookup.Result groupLookup;
+ 
+-
+     private DetailsViewTopComponent() {
+-        eng = Lookup.getDefault().lookup(CatalogEngine.class);
+-        initComponents();
++        myInitComponents();
++        addLookupListeners();
+         setName(NbBundle.getMessage(DetailsViewTopComponent.class, &quot;CTL_DetailsViewTopComponent&quot;));
+         setToolTipText(NbBundle.getMessage(DetailsViewTopComponent.class, &quot;HINT_DetailsViewTopComponent&quot;));
++
+     }
+ 
++    private void myInitComponents() {
++        manager = new ExplorerManager();
++        setLayout(new BorderLayout());
++        view = new ListView();
++        add(view, BorderLayout.CENTER);
++    }
++
+     /** This method is called from within the constructor to
+      * initialize the form.
+      * WARNING: Do NOT modify this code. The content of this method is
+@@ -69,15 +86,16 @@
+         this.setLayout(layout);
+         layout.setHorizontalGroup(
+             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+-            .add(0, 468, Short.MAX_VALUE)
++            .add(0, 358, Short.MAX_VALUE)
+         );
+         layout.setVerticalGroup(
+             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
+-            .add(0, 342, Short.MAX_VALUE)
++            .add(0, 92, Short.MAX_VALUE)
+         );
+     }// &lt;/editor-fold&gt;//GEN-END:initComponents
+     // Variables declaration - do not modify//GEN-BEGIN:variables
+     // End of variables declaration//GEN-END:variables
++
+     /**
+      * Gets default instance. Do not use directly: reserved for *.settings files only,
+      * i.e. deserialization routines; otherwise you could get a non-deserialized instance.
+@@ -117,12 +135,40 @@
+     @Override
+     @SuppressWarnings(&quot;unchecked&quot;)
+     public void componentOpened() {
+-
++        addLookupListeners();
+     }
+ 
+     @Override
+     public void componentClosed() {
++        engineLookup.removeLookupListener(this);
++        engineLookup = null;
++        groupLookup.removeLookupListener(this);
++        groupLookup = null;
++        mediaLookup.removeLookupListener(this);
++        mediaLookup = null;
++        fileLookup.removeLookupListener(this);
++        fileLookup = null;
++    }
+ 
++    private void addLookupListeners() {
++        if (engineLookup == null) {
++            engineLookup = Utilities.actionsGlobalContext().lookup(new Lookup.Template&lt;CatalogEngine&gt;(CatalogEngine.class));
++            engineLookup.addLookupListener(this);
++        }
++        if (groupLookup == null) {
++            groupLookup = Utilities.actionsGlobalContext().lookup(new Lookup.Template&lt;DiskGroup&gt;(DiskGroup.class));
++            groupLookup.addLookupListener(this);
++        }
++        if (mediaLookup == null) {
++
++
++            mediaLookup = Utilities.actionsGlobalContext().lookup(new Lookup.Template&lt;Media&gt;(Media.class));
++            mediaLookup.addLookupListener(this);
++        }
++        if (fileLookup == null) {
++            fileLookup = Utilities.actionsGlobalContext().lookup(new Lookup.Template&lt;FileWrapper&gt;(FileWrapper.class));
++            fileLookup.addLookupListener(this);
++        }
+     }
+ 
+     /** replaces this in object stream */
+@@ -144,4 +190,19 @@
+             return DetailsViewTopComponent.getDefault();
+         }
+     }
++
++    public ExplorerManager getExplorerManager() {
++        return manager;
++    }
++
++    public void resultChanged(LookupEvent arg0) {
++        //NOTE: Why is this always on step behind?
++        //TODO: BUG! When one expands more than one node wihtout making a selections
++        //the node is always one node behind the current selection.
++        TopComponent.Registry registry = TopComponent.getRegistry();
++        Node[] act = registry.getActivatedNodes();
++        if (act.length &gt; 0) {
++            manager.setRootContext(act[0]);
++        }
++    }
+ }
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewAction.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewAction.java	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewAction.java	2008-07-12 19:18:53 UTC (rev 198)
+@@ -0,0 +1,29 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++package de.berlios.jfindmyfiles.jfindmyfilesgui;
++
++import java.awt.event.ActionEvent;
++import javax.swing.AbstractAction;
++import javax.swing.ImageIcon;
++import org.openide.util.NbBundle;
++import org.openide.util.Utilities;
++import org.openide.windows.TopComponent;
++
++/**
++ * Action which shows SingleView component.
++ */
++public class SingleViewAction extends AbstractAction {
++
++    public SingleViewAction() {
++        super(NbBundle.getMessage(SingleViewAction.class, &quot;CTL_SingleViewAction&quot;));
++//        putValue(SMALL_ICON, new ImageIcon(Utilities.loadImage(SingleViewTopComponent.ICON_PATH, true)));
++    }
++
++    public void actionPerformed(ActionEvent evt) {
++        TopComponent win = SingleViewTopComponent.findInstance();
++        win.open();
++        win.requestActive();
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponent.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponent.form	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponent.form	2008-07-12 19:18:53 UTC (rev 198)
+@@ -0,0 +1,27 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
++
++&lt;Form version=&quot;1.3&quot; maxVersion=&quot;1.6&quot; type=&quot;org.netbeans.modules.form.forminfo.JPanelFormInfo&quot;&gt;
++  &lt;AuxValues&gt;
++    &lt;AuxValue name=&quot;FormSettings_autoResourcing&quot; type=&quot;java.lang.Integer&quot; value=&quot;1&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_autoSetComponentName&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_generateMnemonicsCode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_i18nAutoMode&quot; type=&quot;java.lang.Boolean&quot; value=&quot;true&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_layoutCodeTarget&quot; type=&quot;java.lang.Integer&quot; value=&quot;1&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_listenerGenerationStyle&quot; type=&quot;java.lang.Integer&quot; value=&quot;0&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_variablesLocal&quot; type=&quot;java.lang.Boolean&quot; value=&quot;false&quot;/&gt;
++    &lt;AuxValue name=&quot;FormSettings_variablesModifier&quot; type=&quot;java.lang.Integer&quot; value=&quot;2&quot;/&gt;
++  &lt;/AuxValues&gt;
++
++  &lt;Layout&gt;
++    &lt;DimensionLayout dim=&quot;0&quot;&gt;
++      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++          &lt;EmptySpace min=&quot;0&quot; pref=&quot;400&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++      &lt;/Group&gt;
++    &lt;/DimensionLayout&gt;
++    &lt;DimensionLayout dim=&quot;1&quot;&gt;
++      &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
++          &lt;EmptySpace min=&quot;0&quot; pref=&quot;300&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++      &lt;/Group&gt;
++    &lt;/DimensionLayout&gt;
++  &lt;/Layout&gt;
++&lt;/Form&gt;
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponent.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponent.java	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponent.java	2008-07-12 19:18:53 UTC (rev 198)
+@@ -0,0 +1,121 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.jfindmyfilesgui;
++
++import java.io.Serializable;
++import java.util.logging.Logger;
++import org.openide.util.NbBundle;
++import org.openide.windows.TopComponent;
++import org.openide.windows.WindowManager;
++//import org.openide.util.Utilities;
++
++/**
++ * Top component which displays something.
++ */
++final class SingleViewTopComponent extends TopComponent {
++
++    private static SingleViewTopComponent instance;
++    /** path to the icon used by the component and its open action */
++//    static final String ICON_PATH = &quot;SET/PATH/TO/ICON/HERE&quot;;
++
++    private static final String PREFERRED_ID = &quot;SingleViewTopComponent&quot;;
++
++    private SingleViewTopComponent() {
++        initComponents();
++        setName(NbBundle.getMessage(SingleViewTopComponent.class, &quot;CTL_SingleViewTopComponent&quot;));
++        setToolTipText(NbBundle.getMessage(SingleViewTopComponent.class, &quot;HINT_SingleViewTopComponent&quot;));
++//        setIcon(Utilities.loadImage(ICON_PATH, true));
++    }
++
++    /** This method is called from within the constructor to
++     * initialize the form.
++     * WARNING: Do NOT modify this code. The content of this method is
++     * always regenerated by the Form Editor.
++     */
++    // &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents
++    private void initComponents() {
++
++        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
++        this.setLayout(layout);
++        layout.setHorizontalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 400, Short.MAX_VALUE)
++        );
++        layout.setVerticalGroup(
++            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
++            .addGap(0, 300, Short.MAX_VALUE)
++        );
++    }// &lt;/editor-fold&gt;//GEN-END:initComponents
++
++
++    // Variables declaration - do not modify//GEN-BEGIN:variables
++    // End of variables declaration//GEN-END:variables
++    /**
++     * Gets default instance. Do not use directly: reserved for *.settings files only,
++     * i.e. deserialization routines; otherwise you could get a non-deserialized instance.
++     * To obtain the singleton instance, use {@link findInstance}.
++     */
++    public static synchronized SingleViewTopComponent getDefault() {
++        if (instance == null) {
++            instance = new SingleViewTopComponent();
++        }
++        return instance;
++    }
++
++    /**
++     * Obtain the SingleViewTopComponent instance. Never call {@link #getDefault} directly!
++     */
++    public static synchronized SingleViewTopComponent findInstance() {
++        TopComponent win = WindowManager.getDefault().findTopComponent(PREFERRED_ID);
++        if (win == null) {
++            Logger.getLogger(SingleViewTopComponent.class.getName()).warning(
++                    &quot;Cannot find &quot; + PREFERRED_ID + &quot; component. It will not be located properly in the window system.&quot;);
++            return getDefault();
++        }
++        if (win instanceof SingleViewTopComponent) {
++            return (SingleViewTopComponent) win;
++        }
++        Logger.getLogger(SingleViewTopComponent.class.getName()).warning(
++                &quot;There seem to be multiple components with the '&quot; + PREFERRED_ID +
++                &quot;' ID. That is a potential source of errors and unexpected behavior.&quot;);
++        return getDefault();
++    }
++
++    @Override
++    public int getPersistenceType() {
++        return TopComponent.PERSISTENCE_ALWAYS;
++    }
++
++    @Override
++    public void componentOpened() {
++        // TODO add custom code on component opening
++    }
++
++    @Override
++    public void componentClosed() {
++        // TODO add custom code on component closing
++    }
++
++    /** replaces this in object stream */
++    @Override
++    public Object writeReplace() {
++        return new ResolvableHelper();
++    }
++
++    @Override
++    protected String preferredID() {
++        return PREFERRED_ID;
++    }
++
++    final static class ResolvableHelper implements Serializable {
++
++        private static final long serialVersionUID = 1L;
++
++        public Object readResolve() {
++            return SingleViewTopComponent.getDefault();
++        }
++    }
++}
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponentSettings.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponentSettings.xml	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponentSettings.xml	2008-07-12 19:18:53 UTC (rev 198)
+@@ -0,0 +1,12 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++To change this template, choose Tools | Templates
++and open the template in the editor.
++--&gt;
++&lt;!DOCTYPE settings PUBLIC &quot;-//NetBeans//DTD Session settings 1.0//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/sessionsettings-1_0.dtd">http://www.netbeans.org/dtds/sessionsettings-1_0.dtd</A>&quot;&gt;
++&lt;settings version=&quot;1.0&quot;&gt;
++    &lt;module name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui&quot; spec=&quot;1.0&quot;/&gt;
++    &lt;instanceof class=&quot;org.openide.windows.TopComponent&quot;/&gt;
++    &lt;instanceof class=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui.SingleViewTopComponent&quot;/&gt;
++    &lt;instance class=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui.SingleViewTopComponent&quot; method=&quot;getDefault&quot;/&gt;
++&lt;/settings&gt;
+
+Added: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponentWstcref.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponentWstcref.xml	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/SingleViewTopComponentWstcref.xml	2008-07-12 19:18:53 UTC (rev 198)
+@@ -0,0 +1,11 @@
++&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
++&lt;!--
++To change this template, choose Tools | Templates
++and open the template in the editor.
++--&gt;
++&lt;!DOCTYPE tc-ref PUBLIC &quot;-//NetBeans//DTD Top Component in Mode Properties 2.0//EN&quot; &quot;<A HREF="http://www.netbeans.org/dtds/tc-ref2_0.dtd">http://www.netbeans.org/dtds/tc-ref2_0.dtd</A>&quot;&gt;
++&lt;tc-ref version=&quot;2.0&quot; &gt;
++    &lt;module name=&quot;de.berlios.jfindmyfiles.jfindmyfilesgui&quot; spec=&quot;1.0&quot;/&gt;
++    &lt;tc-id id=&quot;SingleViewTopComponent&quot;/&gt;
++    &lt;state opened=&quot;false&quot;/&gt;
++&lt;/tc-ref&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.form	2008-07-12 19:18:53 UTC (rev 198)
+@@ -30,18 +30,18 @@
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jlblName&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jtfName&quot; pref=&quot;557&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jtfName&quot; pref=&quot;442&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jchkUserinternalDB&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jSeparator1&quot; pref=&quot;459&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jSeparator1&quot; pref=&quot;344&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;EmptySpace min=&quot;12&quot; pref=&quot;12&quot; max=&quot;12&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                           &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                              &lt;Component id=&quot;jlbError&quot; pref=&quot;369&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jlbError&quot; pref=&quot;254&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Component id=&quot;jbtnCreate&quot; linkSize=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -53,7 +53,7 @@
+                           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jlblDestination&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jtfDestination&quot; pref=&quot;459&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jtfDestination&quot; pref=&quot;344&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Component id=&quot;jbtnBrowse&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+@@ -124,7 +124,7 @@
+                           &lt;/Group&gt;
+                           &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                              &lt;Component id=&quot;jtfHostname&quot; alignment=&quot;1&quot; pref=&quot;408&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jtfHostname&quot; alignment=&quot;1&quot; pref=&quot;293&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Group type=&quot;103&quot; alignment=&quot;0&quot; groupAlignment=&quot;1&quot; max=&quot;-2&quot; attributes=&quot;0&quot;&gt;
+                                   &lt;Component id=&quot;jpfPassword&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
+                                   &lt;Component id=&quot;jtfUsername&quot; alignment=&quot;0&quot; pref=&quot;141&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewCatalogDlg.java	2008-07-12 19:18:53 UTC (rev 198)
+@@ -197,7 +197,7 @@
+                             .addComponent(jlblUsername))
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                         .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-                            .addComponent(jtfHostname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
++                            .addComponent(jtfHostname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 293, Short.MAX_VALUE)
+                             .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                 .addComponent(jpfPassword, javax.swing.GroupLayout.Alignment.LEADING)
+                                 .addComponent(jtfUsername, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+@@ -289,16 +289,16 @@
+                     .addGroup(layout.createSequentialGroup()
+                         .addComponent(jlblName)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jtfName, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE))
++                        .addComponent(jtfName, javax.swing.GroupLayout.DEFAULT_SIZE, 442, Short.MAX_VALUE))
+                     .addGroup(layout.createSequentialGroup()
+                         .addComponent(jchkUserinternalDB)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE))
++                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE))
+                     .addGroup(layout.createSequentialGroup()
+                         .addGap(12, 12, 12)
+                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                                .addComponent(jlbError, javax.swing.GroupLayout.DEFAULT_SIZE, 369, Short.MAX_VALUE)
++                                .addComponent(jlbError, javax.swing.GroupLayout.DEFAULT_SIZE, 254, Short.MAX_VALUE)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                 .addComponent(jbtnCreate)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+@@ -309,7 +309,7 @@
+                             .addGroup(layout.createSequentialGroup()
+                                 .addComponent(jlblDestination)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                                .addComponent(jtfDestination, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE)
++                                .addComponent(jtfDestination, javax.swing.GroupLayout.DEFAULT_SIZE, 344, Short.MAX_VALUE)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                 .addComponent(jbtnBrowse)))))
+                 .addContainerGap())
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.form	2008-07-12 19:18:53 UTC (rev 198)
+@@ -30,12 +30,12 @@
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jlblName&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jtfName&quot; pref=&quot;557&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jtfName&quot; pref=&quot;439&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jchkUserinternalDB&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jSeparator1&quot; pref=&quot;459&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jSeparator1&quot; pref=&quot;341&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;EmptySpace min=&quot;12&quot; pref=&quot;12&quot; max=&quot;12&quot; attributes=&quot;0&quot;/&gt;
+@@ -44,14 +44,14 @@
+                           &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jlblDestination&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jtfDestination&quot; pref=&quot;459&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jtfDestination&quot; pref=&quot;341&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Component id=&quot;jbtnBrowse&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+                       &lt;/Group&gt;
+                   &lt;/Group&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+-                      &lt;Component id=&quot;jlbError&quot; pref=&quot;381&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jlbError&quot; pref=&quot;263&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Component id=&quot;jbtnOpen&quot; linkSize=&quot;1&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -124,7 +124,7 @@
+                           &lt;/Group&gt;
+                           &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                              &lt;Component id=&quot;jtfHostname&quot; alignment=&quot;1&quot; pref=&quot;408&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jtfHostname&quot; alignment=&quot;1&quot; pref=&quot;290&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;Group type=&quot;103&quot; alignment=&quot;0&quot; groupAlignment=&quot;1&quot; max=&quot;-2&quot; attributes=&quot;0&quot;&gt;
+                                   &lt;Component id=&quot;jpfPassword&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
+                                   &lt;Component id=&quot;jtfUsername&quot; alignment=&quot;0&quot; pref=&quot;141&quot; max=&quot;32767&quot; attributes=&quot;1&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/OpenCatalogDlg.java	2008-07-12 19:18:53 UTC (rev 198)
+@@ -206,7 +206,7 @@
+                             .addComponent(jlblUsername))
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                         .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+-                            .addComponent(jtfHostname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 408, Short.MAX_VALUE)
++                            .addComponent(jtfHostname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 290, Short.MAX_VALUE)
+                             .addGroup(jpDatabaseSettingsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                 .addComponent(jpfPassword, javax.swing.GroupLayout.Alignment.LEADING)
+                                 .addComponent(jtfUsername, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+@@ -298,11 +298,11 @@
+                     .addGroup(layout.createSequentialGroup()
+                         .addComponent(jlblName)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jtfName, javax.swing.GroupLayout.DEFAULT_SIZE, 557, Short.MAX_VALUE))
++                        .addComponent(jtfName, javax.swing.GroupLayout.DEFAULT_SIZE, 439, Short.MAX_VALUE))
+                     .addGroup(layout.createSequentialGroup()
+                         .addComponent(jchkUserinternalDB)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE))
++                        .addComponent(jSeparator1, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE))
+                     .addGroup(layout.createSequentialGroup()
+                         .addGap(12, 12, 12)
+                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+@@ -310,11 +310,11 @@
+                             .addGroup(layout.createSequentialGroup()
+                                 .addComponent(jlblDestination)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+-                                .addComponent(jtfDestination, javax.swing.GroupLayout.DEFAULT_SIZE, 459, Short.MAX_VALUE)
++                                .addComponent(jtfDestination, javax.swing.GroupLayout.DEFAULT_SIZE, 341, Short.MAX_VALUE)
+                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                 .addComponent(jbtnBrowse))))
+                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+-                        .addComponent(jlbError, javax.swing.GroupLayout.DEFAULT_SIZE, 381, Short.MAX_VALUE)
++                        .addComponent(jlbError, javax.swing.GroupLayout.DEFAULT_SIZE, 263, Short.MAX_VALUE)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                         .addComponent(jbtnOpen)
+                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-07-11 21:00:25 UTC (rev 197)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/layer.xml	2008-07-12 19:18:53 UTC (rev 198)
+@@ -38,7 +38,7 @@
+         &lt;folder name=&quot;Search&quot;&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionFindInThisDiskGroup.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionScanForDuplicates.instance&quot;/&gt;
+-                &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionSearch.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionSearch.instance&quot;/&gt;
+         &lt;/folder&gt;
+         &lt;folder name=&quot;View&quot;&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionCatalogProperties.instance&quot;/&gt;
+@@ -50,6 +50,7 @@
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-ManageUsersAction.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-NavigationTreeAction.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-SearchWindowAction.instance&quot;/&gt;
++            &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-SingleViewAction.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-StatisticsAction.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-WindowTestingAction.instance&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDescriptionWindow.instance&quot;/&gt;
+@@ -60,7 +61,7 @@
+         &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionProperties.instance&quot;/&gt;
+         &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRemoveFromCatalog.instance&quot;/&gt;
+         &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenameDisk.instance&quot;/&gt;
+-      &lt;/folder&gt;
++    &lt;/folder&gt;
+     &lt;folder name=&quot;Menu&quot;&gt;
+         &lt;folder name=&quot;Actions&quot;&gt;
+             &lt;attr name=&quot;position&quot; intvalue=&quot;700&quot;/&gt;
+@@ -84,7 +85,7 @@
+                 &lt;attr name=&quot;instanceClass&quot; stringvalue=&quot;javax.swing.JSeparator&quot;/&gt;
+                 &lt;attr name=&quot;position&quot; intvalue=&quot;500&quot;/&gt;
+             &lt;/file&gt;
+-            &lt;/folder&gt;
++        &lt;/folder&gt;
+         &lt;folder name=&quot;Edit&quot;&gt;
+             &lt;file name=&quot;Separator2.instance_hidden&quot;/&gt;
+             &lt;file name=&quot;de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDisk.shadow&quot;&gt;
+@@ -187,12 +188,6 @@
+             &lt;file name=&quot;DuplicateResultsAction.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-DuplicateResultsAction.instance&quot;/&gt;
+             &lt;/file&gt;
+-            &lt;file name=&quot;FileListAction.shadow&quot;&gt;
+-                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-FileListAction.instance&quot;/&gt;
+-            &lt;/file&gt;
+-            &lt;file name=&quot;FilePropertiesAction.shadow&quot;&gt;
+-                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-FilePropertiesAction.instance&quot;/&gt;
+-            &lt;/file&gt;
+             &lt;file name=&quot;LoanAction.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-LoanAction.instance&quot;/&gt;
+             &lt;/file&gt;
+@@ -207,6 +202,9 @@
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-SearchWindowAction.instance&quot;/&gt;
+             &lt;/file&gt;
+             &lt;file name=&quot;Separator4.instance_hidden&quot;/&gt;
++            &lt;file name=&quot;SingleViewAction.shadow&quot;&gt;
++                &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-SingleViewAction.instance&quot;/&gt;
++            &lt;/file&gt;
+             &lt;file name=&quot;StatisticsAction.shadow&quot;&gt;
+                 &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Actions/Window/de-berlios-jfindmyfiles-jfindmyfilesgui-StatisticsAction.instance&quot;/&gt;
+             &lt;/file&gt;
+@@ -249,10 +247,40 @@
+         &lt;/file&gt;
+     &lt;/folder&gt;
+     &lt;folder name=&quot;Toolbars&quot;&gt;
+-        &lt;folder name=&quot;Edit&quot;&gt;
+-            &lt;file name=&quot;org-openide-actions-CopyAction.instance_hidden&quot;/&gt;
+-            &lt;file name=&quot;org-openide-actions-CutAction.instance_hidden&quot;/&gt;
+-            &lt;file name=&quot;org-openide-actions-PasteAction.instance_hidden&quot;/&gt;
++        &lt;folder name=&quot;JFindMyFiles&quot;&gt;
++            &lt;file name=&quot;NewDisk.shadow&quot;&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDisk.instance&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;NewDiskGroup.shadow&quot;&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionAddNewDiskGroup.instance&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;RenumberDisks.shadow&quot;&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/Edit/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenumberDisks.instance&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;NewCatalog.shadow&quot;&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionNewCatalog.instance&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;OpenCatalog.shadow&quot;&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/File/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionOpenCatalog.instance&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;Delete.shadow&quot;&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionDelete.instance&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;Description.shadow&quot;&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionEditDescription.instance&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;LaunchFile.shadow&quot;&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionLaunchFile.instance&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;Properties.shadow&quot;&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionProperties.instance&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;RemoveFromCatalog.shadow&quot;&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRemoveFromCatalog.instance&quot;/&gt;
++            &lt;/file&gt;
++            &lt;file name=&quot;RenameDisk.shadow&quot;&gt;
++                    &lt;attr name=&quot;originalFile&quot; stringvalue=&quot;Action/de-berlios-jfindmyfiles-jfindmyfilesgui-actions-ActionRenameDisk.instance&quot;/&gt;
++            &lt;/file&gt;
+         &lt;/folder&gt;
+     &lt;/folder&gt;
+     &lt;folder name=&quot;Windows2&quot;&gt;
+@@ -265,6 +293,7 @@
+             &lt;file name=&quot;ManageUsersTopComponent.settings&quot; url=&quot;ManageUsersTopComponentSettings.xml&quot;/&gt;
+             &lt;file name=&quot;NavigationTreeTopComponent.settings&quot; url=&quot;NavigationTreeTopComponentSettings.xml&quot;/&gt;
+             &lt;file name=&quot;SearchWindowTopComponent.settings&quot; url=&quot;SearchWindowTopComponentSettings.xml&quot;/&gt;
++            &lt;file name=&quot;SingleViewTopComponent.settings&quot; url=&quot;SingleViewTopComponentSettings.xml&quot;/&gt;
+             &lt;file name=&quot;StatisticsTopComponent.settings&quot; url=&quot;StatisticsTopComponentSettings.xml&quot;/&gt;
+             &lt;file name=&quot;WindowTestingTopComponent.settings&quot; url=&quot;WindowTestingTopComponentSettings.xml&quot;/&gt;
+         &lt;/folder&gt;
+@@ -275,6 +304,7 @@
+                 &lt;file name=&quot;LoanTopComponent.wstcref&quot; url=&quot;LoanTopComponentWstcref.xml&quot;/&gt;
+                 &lt;file name=&quot;ManageUsersTopComponent.wstcref&quot; url=&quot;ManageUsersTopComponentWstcref.xml&quot;/&gt;
+                 &lt;file name=&quot;SearchWindowTopComponent.wstcref&quot; url=&quot;SearchWindowTopComponentWstcref.xml&quot;/&gt;
++                &lt;file name=&quot;SingleViewTopComponent.wstcref&quot; url=&quot;SingleViewTopComponentWstcref.xml&quot;/&gt;
+                 &lt;file name=&quot;StatisticsTopComponent.wstcref&quot; url=&quot;StatisticsTopComponentWstcref.xml&quot;/&gt;
+                 &lt;file name=&quot;WindowTestingTopComponent.wstcref&quot; url=&quot;WindowTestingTopComponentWstcref.xml&quot;/&gt;
+             &lt;/folder&gt;
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000192.html">[Jfindmyfiles-commits] r197 - in trunk: docs media/icons/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/pluginapi	project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/plugins
+</A></li>
+	<LI>Next message: <A HREF="000194.html">[Jfindmyfiles-commits] r199 - trunk/project/JFindMyFiles/JDBCDrivers
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#193">[ date ]</a>
+              <a href="thread.html#193">[ thread ]</a>
+              <a href="subject.html#193">[ subject ]</a>
+              <a href="author.html#193">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

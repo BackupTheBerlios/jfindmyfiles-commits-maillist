@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r260 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. dialogs
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-July/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r260%20-%20in%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%3A%0A%09.%20dialogs&In-Reply-To=%3C200807271919.m6RJJUwM001073%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000254.html">
+   <LINK REL="Next"  HREF="000256.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r260 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. dialogs</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r260%20-%20in%0A%09trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui%3A%0A%09.%20dialogs&In-Reply-To=%3C200807271919.m6RJJUwM001073%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r260 - in	trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui:	. dialogs">knitter at mail.berlios.de
+       </A><BR>
+    <I>Sun Jul 27 21:19:30 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000254.html">[Jfindmyfiles-commits] r259 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes
+</A></li>
+        <LI>Next message: <A HREF="000256.html">[Jfindmyfiles-commits] r261 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#255">[ date ]</a>
+              <a href="thread.html#255">[ thread ]</a>
+              <a href="subject.html#255">[ subject ]</a>
+              <a href="author.html#255">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-07-27 21:19:27 +0200 (Sun, 27 Jul 2008)
+New Revision: 260
+
+Modified:
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/LinuxPanel.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/LinuxPanel.java
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+   trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+Log:
+Activado c?\195?\179digo para criar bot?\195?\181es na janela de di?\195?\161logo de adi?\195?\167?\195?\163o de novo disco em ambientes linux.
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/LinuxPanel.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/LinuxPanel.form	2008-07-27 19:01:06 UTC (rev 259)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/LinuxPanel.form	2008-07-27 19:19:27 UTC (rev 260)
+@@ -18,16 +18,16 @@
+           &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
+               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+               &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+-                  &lt;Component id=&quot;jSeparator1&quot; alignment=&quot;0&quot; pref=&quot;475&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                  &lt;Component id=&quot;jSeparator1&quot; alignment=&quot;0&quot; pref=&quot;544&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Component id=&quot;jchkScanMedia&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Group type=&quot;102&quot; alignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                           &lt;Group type=&quot;102&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jlblMountFolder&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                               &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                              &lt;Component id=&quot;jtfMountFolder&quot; pref=&quot;329&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                              &lt;Component id=&quot;jtfMountFolder&quot; pref=&quot;378&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;/Group&gt;
+-                          &lt;Component id=&quot;jscpFolders&quot; pref=&quot;398&quot; max=&quot;32767&quot; attributes=&quot;2&quot;/&gt;
++                          &lt;Component id=&quot;jscpFolders&quot; pref=&quot;474&quot; max=&quot;32767&quot; attributes=&quot;2&quot;/&gt;
+                       &lt;/Group&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/LinuxPanel.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/LinuxPanel.java	2008-07-27 19:01:06 UTC (rev 259)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/LinuxPanel.java	2008-07-27 19:19:27 UTC (rev 260)
+@@ -8,7 +8,7 @@
+ import javax.swing.JFileChooser;
+ import org.openide.util.NbPreferences;
+ 
+-final class LinuxPanel extends javax.swing.JPanel {
++public final class LinuxPanel extends javax.swing.JPanel {
+ 
+     private final LinuxOptionsPanelController controller;
+     private DefaultListModel model;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-07-27 19:01:06 UTC (rev 259)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.form	2008-07-27 19:19:27 UTC (rev 260)
+@@ -95,7 +95,7 @@
+                   &lt;EmptySpace min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                   &lt;Group type=&quot;103&quot; groupAlignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+                       &lt;Component id=&quot;jpScanningOptions&quot; alignment=&quot;0&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+-                      &lt;Component id=&quot;jpButtons&quot; alignment=&quot;0&quot; pref=&quot;491&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                      &lt;Component id=&quot;jpButtons&quot; alignment=&quot;0&quot; pref=&quot;503&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;Group type=&quot;102&quot; alignment=&quot;1&quot; attributes=&quot;0&quot;&gt;
+                           &lt;Group type=&quot;103&quot; groupAlignment=&quot;0&quot; attributes=&quot;0&quot;&gt;
+                               &lt;Component id=&quot;jffDiskNumber&quot; alignment=&quot;0&quot; min=&quot;-2&quot; pref=&quot;42&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+@@ -206,7 +206,7 @@
+                           &lt;Component id=&quot;jchkCalculateHash&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Component id=&quot;jchkAskDescription&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Component id=&quot;jchkShowAgain&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+-                          &lt;Component id=&quot;jSeparator1&quot; alignment=&quot;0&quot; pref=&quot;455&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
++                          &lt;Component id=&quot;jSeparator1&quot; alignment=&quot;0&quot; pref=&quot;467&quot; max=&quot;32767&quot; attributes=&quot;0&quot;/&gt;
+                           &lt;Component id=&quot;jtbSelectedPlugins&quot; alignment=&quot;0&quot; min=&quot;-2&quot; max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+                       &lt;/Group&gt;
+                       &lt;EmptySpace max=&quot;-2&quot; attributes=&quot;0&quot;/&gt;
+
+Modified: trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java
+===================================================================
+--- trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-07-27 19:01:06 UTC (rev 259)
++++ trunk/project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs/NewDiskDlg.java	2008-07-27 19:19:27 UTC (rev 260)
+@@ -21,14 +21,13 @@
+ 
+ import de.berlios.jfindmyfiles.catalog.CatalogEngine;
+ import de.berlios.jfindmyfiles.catalog.entities.DiskGroup;
++import de.berlios.jfindmyfiles.jfindmyfilesgui.LinuxPanel;
+ import de.berlios.jfindmyfiles.readingfiles.MediaReader;
+-import java.awt.Dimension;
+ import java.awt.event.ActionEvent;
+ import java.awt.event.ActionListener;
+ import java.io.File;
+ import java.util.ArrayList;
+ import java.util.List;
+-import javax.swing.ImageIcon;
+ import javax.swing.JComboBox;
+ import javax.swing.JFileChooser;
+ import javax.swing.JToggleButton;
+@@ -36,7 +35,7 @@
+ import javax.swing.SwingUtilities;
+ import javax.swing.filechooser.FileSystemView;
+ import org.openide.util.Lookup;
+-import org.openide.util.Utilities;
++import org.openide.util.NbPreferences;
+ import org.openide.windows.WindowManager;
+ 
+ /**
+@@ -98,6 +97,27 @@
+             jbtngrpDrives.add(toggle);
+             jpButtons.add(toggle);
+         }
++
++        if (System.getProperty(&quot;os.name&quot;).contains(&quot;Linux&quot;)) {//TODO: create a better solution
++            int count = NbPreferences.forModule(LinuxPanel.class).getInt(&quot;moutnumber&quot;, 0);
++            for (int z = 0; z &lt; count; z++) {
++                toggle = new JToggleButton(NbPreferences.forModule(LinuxPanel.class).get(&quot;mountfolder-&quot; + z, &quot;&quot;), fsv.getSystemIcon(new File(NbPreferences.forModule(LinuxPanel.class).get(&quot;mountfolder-&quot; + z, &quot;&quot;))));
++                toggle.setHorizontalTextPosition(SwingConstants.CENTER);
++                toggle.setVerticalTextPosition(SwingConstants.BOTTOM);
++                toggle.setSize(toggle.getWidth(), 24);
++                toggle.addActionListener(new ActionListener() {
++
++                    public void actionPerformed(ActionEvent e) {
++                        currentSelectedPath = ((JToggleButton) e.getSource()).getText();
++                        jtfDiskName.setText(currentSelectedPath);
++                        isMedia = true;
++                    }
++                });
++                jbtngrpDrives.add(toggle);
++                jpButtons.add(toggle);
++            }
++        }
++
+         toggle = new JToggleButton(&quot;Browse&quot;); //TODO: i18n
+         toggle.setIcon(fsv.getSystemIcon(new File(System.getProperty(&quot;user.dir&quot;))));
+         toggle.setSize(toggle.getWidth(), 24);
+@@ -123,7 +143,7 @@
+             }
+         });
+         jpButtons.add(toggle);
+-
++        jbtngrpDrives.add(toggle);
+         jpButtons.validate();
+     }
+ 
+@@ -380,7 +400,7 @@
+                 scanningDlg.showCentered(ask4Description, showAgain);
+             }
+         });
+-        DiskGroup g = jcbxCatalog.getSelectedItem().toString().equals(&quot;---&quot;) ? null : (DiskGroup)jcbxCatalog.getSelectedItem();
++        DiskGroup g = jcbxCatalog.getSelectedItem().toString().equals(&quot;---&quot;) ? null : (DiskGroup) jcbxCatalog.getSelectedItem();
+         System.err.println(&quot;GGGGG::::::::::::::::::::::::::::::::::::::::::::: &quot; + g);
+         r.read(new File(currentSelectedPath), calculateHash, isMedia, jtfDiskName.getText().trim(), g);
+     }
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000254.html">[Jfindmyfiles-commits] r259 - in trunk/project/JFindMyFiles:	Catalog/src/de/berlios/jfindmyfiles/catalog	Catalog/src/de/berlios/jfindmyfiles/catalog/entities	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes
+</A></li>
+	<LI>Next message: <A HREF="000256.html">[Jfindmyfiles-commits] r261 - trunk/docs
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#255">[ date ]</a>
+              <a href="thread.html#255">[ thread ]</a>
+              <a href="subject.html#255">[ subject ]</a>
+              <a href="author.html#255">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>

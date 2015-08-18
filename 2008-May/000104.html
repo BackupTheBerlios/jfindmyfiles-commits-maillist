@@ -1,0 +1,161 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Jfindmyfiles-commits] r109 -	trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/jfindmyfiles-commits/2008-May/index.html" >
+   <LINK REL="made" HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r109%20-%0A%09trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles&In-Reply-To=%3C200805161733.m4GHXHKE000329%40sheep.berlios.de%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000103.html">
+   <LINK REL="Next"  HREF="000105.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Jfindmyfiles-commits] r109 -	trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles</H1>
+    <B>knitter at mail.berlios.de</B> 
+    <A HREF="mailto:jfindmyfiles-commits%40lists.berlios.de?Subject=Re%3A%20%5BJfindmyfiles-commits%5D%20r109%20-%0A%09trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles&In-Reply-To=%3C200805161733.m4GHXHKE000329%40sheep.berlios.de%3E"
+       TITLE="[Jfindmyfiles-commits] r109 -	trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles">knitter at mail.berlios.de
+       </A><BR>
+    <I>Fri May 16 19:33:17 CEST 2008</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000103.html">[Jfindmyfiles-commits] r108 - in trunk: docs/Iteracao1-CB09	docs/Iteracao2-CB05 docs/Iteracao3-CB03 libs project/JFindMyFiles	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JCalendar	project/JFindMyFiles/JCalendar/nbproject	project/JFindMyFiles/JCalendar/release	project/JFindMyFiles/JCalendar/release/modules	project/JFindMyFiles/JCalendar/release/modules/ext	project/JFindMyFiles/JCalendar/src	project/JFindMyFiles/JCalendar/src/com	project/JFindMyFiles/JCalendar/src/com/toedter	project/JFindMyFiles/JCalendar/src/com/toedter/plaf	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/nbproject
+</A></li>
+        <LI>Next message: <A HREF="000105.html">[Jfindmyfiles-commits] r110 - in trunk: media/icons/x16	media/icons/x32	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JCalendar	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32	project/JFindMyFiles/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#104">[ date ]</a>
+              <a href="thread.html#104">[ thread ]</a>
+              <a href="subject.html#104">[ subject ]</a>
+              <a href="author.html#104">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Author: knitter
+Date: 2008-05-16 19:33:15 +0200 (Fri, 16 May 2008)
+New Revision: 109
+
+Added:
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java
+Modified:
+   trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java
+Log:
+Enviado primeiro esbo?\195?\167o de API.
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java	2008-05-15 22:47:15 UTC (rev 108)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Controller.java	2008-05-16 17:33:15 UTC (rev 109)
+@@ -0,0 +1,16 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.readingfiles;
++
++/**
++ *
++ * @author ei10635
++ */
++public interface Controller {
++    
++    void sendDescriptionValues(DescriptionValues values);
++
++}
+
+Added: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java	2008-05-15 22:47:15 UTC (rev 108)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/DescriptionValues.java	2008-05-16 17:33:15 UTC (rev 109)
+@@ -0,0 +1,24 @@
++/*
++ * To change this template, choose Tools | Templates
++ * and open the template in the editor.
++ */
++
++package de.berlios.jfindmyfiles.readingfiles;
++
++import de.berlios.jfindmyfiles.catalog.entities.AudioData;
++import de.berlios.jfindmyfiles.catalog.entities.ImageData;
++import de.berlios.jfindmyfiles.catalog.entities.VideoData;
++import javax.swing.ImageIcon;
++
++/**
++ *
++ * @author ei10635
++ */
++public interface DescriptionValues {
++    
++    String getTextDescription();
++    ImageIcon getIcon();
++    AudioData getAudioData();
++    VideoData getVideoData();
++    ImageData getThumbnail();
++}
+
+Modified: trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java
+===================================================================
+--- trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java	2008-05-15 22:47:15 UTC (rev 108)
++++ trunk/project/JFindMyFiles/ReadingFiles/src/de/berlios/jfindmyfiles/readingfiles/Reader.java	2008-05-16 17:33:15 UTC (rev 109)
+@@ -20,25 +20,12 @@
+ 
+ package de.berlios.jfindmyfiles.readingfiles;
+ 
+-import de.berlios.jfindmyfiles.catalog.entities.AudioData;
+-import de.berlios.jfindmyfiles.catalog.entities.ImageData;
+-import de.berlios.jfindmyfiles.catalog.entities.VideoData;
++import java.io.File;
+ 
+-
+-/**
+- *
+- * @author ei10635
+- */
+ public interface Reader {
+     
+-    AudioData importAudioClip();
+-    ImageData importImageThumb();
+-    VideoData importVideoPreview();
+-    String importTextDescription();
+-    String importCustomExtension();
+-    
+-    void register(/*TODO:something*/);
+-    void init();
+-
+-
++    String getName();
++    int getType();
++    void setController(Controller controller);
++    void read(File file);   
+ }
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000103.html">[Jfindmyfiles-commits] r108 - in trunk: docs/Iteracao1-CB09	docs/Iteracao2-CB05 docs/Iteracao3-CB03 libs project/JFindMyFiles	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog/entities	project/JFindMyFiles/JCalendar	project/JFindMyFiles/JCalendar/nbproject	project/JFindMyFiles/JCalendar/release	project/JFindMyFiles/JCalendar/release/modules	project/JFindMyFiles/JCalendar/release/modules/ext	project/JFindMyFiles/JCalendar/src	project/JFindMyFiles/JCalendar/src/com	project/JFindMyFiles/JCalendar/src/com/toedter	project/JFindMyFiles/JCalendar/src/com/toedter/plaf	project/JFindMyFiles/JFindMyFilesGui/nbproject	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/nbproject
+</A></li>
+	<LI>Next message: <A HREF="000105.html">[Jfindmyfiles-commits] r110 - in trunk: media/icons/x16	media/icons/x32	project/JFindMyFiles/Catalog/src/de/berlios/jfindmyfiles/catalog	project/JFindMyFiles/JCalendar	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/actions	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/dialogs	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/nodes	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x16	project/JFindMyFiles/JFindMyFilesGui/src/de/berlios/jfindmyfiles/jfindmyfilesgui/resources/images/x32	project/JFindMyFiles/nbproject
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#104">[ date ]</a>
+              <a href="thread.html#104">[ thread ]</a>
+              <a href="subject.html#104">[ subject ]</a>
+              <a href="author.html#104">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/jfindmyfiles-commits">More information about the Jfindmyfiles-commits
+mailing list</a><br>
+</body></html>
